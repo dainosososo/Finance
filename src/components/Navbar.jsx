@@ -113,8 +113,31 @@ export default function Navbar({
           </form>
         </div>
 
-        {/* Auto Refresh & Controls */}
+        {/* Nav Links & Controls */}
         <div className="flex items-center space-x-2">
+          {/* Quick Section Links */}
+          <div className="hidden lg:flex items-center space-x-1 mr-2 text-xs font-medium text-gray-300">
+            <a href="#rankings-section" className="px-2.5 py-1 rounded-lg hover:text-white hover:bg-gray-800 transition">
+              三大排行
+            </a>
+            <a href="#industry-news-section" className="px-2.5 py-1 rounded-lg hover:text-white hover:bg-gray-800 transition">
+              產業時事
+            </a>
+            <a href="#daily-section" className="px-2.5 py-1 rounded-lg hover:text-white hover:bg-gray-800 transition">
+              個股收盤
+            </a>
+          </div>
+
+          {/* 13:30 Daily Report Modal Trigger */}
+          <button
+            onClick={onOpenReportModal}
+            className="flex items-center space-x-1.5 bg-gradient-to-r from-red-600/90 to-pink-600/90 hover:from-red-500 hover:to-pink-500 text-white text-xs px-3 py-2 rounded-lg font-bold transition shadow-lg shadow-red-500/20 active:scale-95"
+            title="開啟 13:30 盤後精簡報告"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+            <span>13:30 盤後日報</span>
+          </button>
+
           {/* Refresh Toggle */}
           <div className="hidden sm:flex items-center bg-dark-800 rounded-lg p-1 border border-gray-700/80">
             <button
@@ -150,7 +173,7 @@ export default function Navbar({
             title="手動抓取最新證交所資料"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin' : ''}`} />
-            <span className="hidden sm:inline">重新刷新</span>
+            <span className="hidden sm:inline">即時刷新</span>
           </button>
         </div>
       </div>

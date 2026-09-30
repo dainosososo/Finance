@@ -5,6 +5,9 @@ import RealtimeTicker from './components/RealtimeTicker';
 import DailyClosingTable from './components/DailyClosingTable';
 import FscNewsFeed from './components/FscNewsFeed';
 import StockDetailModal from './components/StockDetailModal';
+import PostMarketRankings from './components/PostMarketRankings';
+import IndustryNewsFeed from './components/IndustryNewsFeed';
+import DailyReportModal from './components/DailyReportModal';
 import { 
   fetchDailyClosingPrices, 
   fetchRealtimeQuotes, 
@@ -12,6 +15,10 @@ import {
   fetchFscAnnouncements,
   DEFAULT_WATCHLIST 
 } from './services/twseApi';
+import {
+  getMarketReportData,
+  getIndustryNews
+} from './services/marketReportService';
 
 export default function App() {
   const [dailyStocks, setDailyStocks] = useState([]);
@@ -19,27 +26,34 @@ export default function App() {
   const [quotes, setQuotes] = useState([]);
   const [taiexData, setTaiexData] = useState(null);
   const [fscNews, setFscNews] = useState([]);
+  const [postMarketData, setPostMarketData] = useState(null);
+  const [industryNews, setIndustryNews] = useState([]);
+  const [showDailyReportModal, setShowDailyReportModal] = useState(false);
   const [selectedStockModal, setSelectedStockModal] = useState(null);
   const [autoRefresh, setAutoRefresh] = useState(true);
   const [refreshInterval, setRefreshInterval] = useState(10000); // 10s default
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [activeTab, setActiveTab] = useState('ALL'); // ALL, REALTIME, DAILY, NEWS
 
-  // Initial load
-  const loadData = useCallback(async () => {
+  // Initial and on-demand load
+  const loadData = useCallback(async (forceLive = false) => {
     setIsRefreshing(true);
     try {
-      const [daily, realtime, taiex, news] = await Promise.all([
+      const [daily, realtime, taiex, news, postMarket, indNews] = await Promise.all([
         fetchDailyClosingPrices(),
         fetchRealtimeQuotes(watchlist),
         fetchTaiexIndex(),
-        fetchFscAnnouncements()
+        fetchFscAnnouncements(),
+        getMarketReportData({ forceLive }),
+        getIndustryNews()
       ]);
 
       if (daily && daily.length > 0) setDailyStocks(daily);
       if (realtime && realtime.length > 0) setQuotes(realtime);
       if (taiex) setTaiexData(taiex);
       if (news) setFscNews(news);
+      if (postMarket) setPostMarketData(postMarket);
+      if (indNews) setIndustryNews(indNews);
     } catch (err) {
       console.error('Error fetching TWSE data:', err);
     } finally {
@@ -51,12 +65,16 @@ export default function App() {
     loadData();
   }, [loadData]);
 
-  // Auto-refresh interval polling for live stock quotes
+  // Auto-refresh interval polling for live stock quotes & intraday market data
   useEffect(() => {
     if (!autoRefresh) return;
     const interval = setInterval(async () => {
-      const realtime = await fetchRealtimeQuotes(watchlist);
-      if (realtime && realtime.length > 0) setQuotes(realtime);
+      try {
+        const realtime = await fetchRealtimeQuotes(watchlist);
+        if (realtime && realtime.length > 0) setQuotes(realtime);
+      } catch (e) {
+        console.warn('Realtime polling error:', e);
+      }
     }, refreshInterval);
 
     return () => clearInterval(interval);
@@ -99,18 +117,37 @@ export default function App() {
         setAutoRefresh={setAutoRefresh}
         refreshInterval={refreshInterval}
         setRefreshInterval={setRefreshInterval}
-        onManualRefresh={loadData}
+        onManualRefresh={() => loadData(true)}
         isRefreshing={isRefreshing}
         taiexData={taiexData}
+        onOpenReportModal={() => setShowDailyReportModal(true)}
       />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
         {/* Market Overview & Metrics */}
         <MarketSummary 
           taiexData={taiexData}
           topStocks={dailyStocks.slice(0, 10)}
         />
+
+        {/* TWSE 13:30 Post-Market & Live Rankings (Volume, Foreign & Trust, Institutional Flows) */}
+        <section id="rankings-section">
+          <PostMarketRankings 
+            reportData={postMarketData}
+            onRefresh={() => loadData(true)}
+            isRefreshing={isRefreshing}
+            onSelectStock={(st) => setSelectedStockModal(st)}
+          />
+        </section>
+
+        {/* Multi-Source Financial News by Industry Structure (MoneyDJ, Anue, MacroMicro, StockFeel, Stock-Ai) */}
+        <section id="industry-news-section">
+          <IndustryNewsFeed 
+            newsList={industryNews}
+            onSelectStock={(st) => setSelectedStockModal(st)}
+          />
+        </section>
 
         {/* Real-time Ticker & Order Book */}
         <section id="realtime-section">
@@ -135,6 +172,19 @@ export default function App() {
           <FscNewsFeed newsList={fscNews} />
         </section>
       </main>
+
+      {/* 13:30 Daily Market Report Modal */}
+      {showDailyReportModal && (
+        <DailyReportModal 
+          reportData={postMarketData}
+          taiexData={taiexData}
+          onClose={() => setShowDailyReportModal(false)}
+          onSelectStock={(st) => {
+            setShowDailyReportModal(false);
+            setSelectedStockModal(st);
+          }}
+        />
+      )}
 
       {/* Stock Detail Modal */}
       {selectedStockModal && (
