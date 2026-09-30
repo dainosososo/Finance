@@ -3,6 +3,10 @@ import { TrendingUp, Search, RefreshCw, Github, Zap, Shield, ArrowUpRight, Arrow
 
 export default function Navbar({ 
   onSearch, 
+  stockList = [],
+  onSelectStock,
+  activeTab = 'ALL',
+  setActiveTab,
   autoRefresh, 
   setAutoRefresh, 
   refreshInterval, 
@@ -13,12 +17,36 @@ export default function Navbar({
   onOpenReportModal
 }) {
   const [searchTerm, setSearchTerm] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  const searchResults = React.useMemo(() => {
+    if (!searchTerm.trim()) return [];
+    const term = searchTerm.trim().toLowerCase();
+    return (stockList || [])
+      .filter(s => (s.Code && s.Code.toLowerCase().includes(term)) || (s.Name && s.Name.toLowerCase().includes(term)))
+      .slice(0, 6);
+  }, [searchTerm, stockList]);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchTerm.trim()) {
-      onSearch(searchTerm.trim());
+      if (searchResults.length > 0 && onSelectStock) {
+        onSelectStock(searchResults[0]);
+      } else {
+        onSearch(searchTerm.trim());
+      }
+      setIsFocused(false);
     }
+  };
+
+  const handleSelectResult = (st) => {
+    if (onSelectStock) {
+      onSelectStock(st);
+    } else if (onSearch) {
+      onSearch(st.Code || st.Name);
+    }
+    setSearchTerm('');
+    setIsFocused(false);
   };
 
   const isUp = taiexData?.change?.includes('+');
@@ -73,7 +101,10 @@ export default function Navbar({
       {/* Main Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         {/* Brand Logo */}
-        <div className="flex items-center space-x-3 flex-shrink-0">
+        <div 
+          className="flex items-center space-x-3 flex-shrink-0 cursor-pointer"
+          onClick={() => setActiveTab && setActiveTab('ALL')}
+        >
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 p-0.5 shadow-lg shadow-blue-500/20">
             <div className="w-full h-full bg-dark-900 rounded-[10px] flex items-center justify-center">
               <TrendingUp className="w-6 h-6 text-blue-400" />
@@ -85,20 +116,24 @@ export default function Navbar({
                 Finance
               </span>
               <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-blue-300 rounded border border-blue-500/30">
-                TWSE Scraper
+                TWSE
               </span>
             </div>
-            <p className="text-[11px] text-gray-400 hidden sm:block">台灣證券交易所即時與每日收盤價儀表板</p>
+            <p className="text-[11px] text-gray-400 hidden sm:block">台灣股市即時行情與盤後觀測站</p>
           </div>
         </div>
 
-        {/* Search Bar */}
-        <div className="flex-1 max-w-md mx-2">
+        {/* Search Bar with Autocomplete Dropdown */}
+        <div className="flex-1 max-w-md mx-2 relative">
           <form onSubmit={handleSearchSubmit} className="relative">
             <input
               type="text"
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onFocus={() => setIsFocused(true)}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                setIsFocused(true);
+              }}
               placeholder="搜尋股票代號或名稱 (如: 2330, 台積電, 鴻海)..."
               className="w-full bg-dark-800/80 text-sm text-gray-100 placeholder-gray-400 pl-10 pr-10 py-2 rounded-xl border border-gray-700/80 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/50 transition-all shadow-inner"
             />
@@ -112,22 +147,105 @@ export default function Navbar({
               </button>
             )}
           </form>
+
+          {/* Autocomplete Dropdown */}
+          {isFocused && searchTerm.trim() && (
+            <>
+              <div 
+                className="fixed inset-0 z-30" 
+                onClick={() => setIsFocused(false)} 
+              />
+              <div className="absolute left-0 right-0 top-full mt-2 bg-dark-900 border border-gray-700/90 rounded-2xl shadow-2xl z-40 overflow-hidden backdrop-blur-xl animate-fade-in">
+                <div className="p-2 border-b border-gray-800 text-[11px] font-bold text-gray-400 px-3 flex justify-between items-center">
+                  <span>即時配對標的 (點擊開啟三竹完整分析)</span>
+                  <span className="text-[10px] text-blue-400">NT$ 報價</span>
+                </div>
+                <div className="max-h-64 overflow-y-auto divide-y divide-gray-800/50">
+                  {searchResults.map((item) => (
+                    <div
+                      key={item.Code}
+                      onMouseDown={() => handleSelectResult(item)}
+                      className="p-3 hover:bg-dark-800/80 cursor-pointer transition flex items-center justify-between group"
+                    >
+                      <div className="flex items-center space-x-3">
+                        <span className="font-mono text-xs font-bold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
+                          {item.Code}
+                        </span>
+                        <div>
+                          <span className="text-sm font-bold text-white group-hover:text-blue-300 transition-colors">
+                            {item.Name}
+                          </span>
+                          <span className="text-xs text-gray-500 ml-2">
+                            {item.Sector || '上市'}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <span className="font-mono font-bold text-sm text-gray-100 block">
+                          NT$ {item.ClosingPrice || item.price || '990.00'}
+                        </span>
+                        <span className={`text-[11px] font-mono ${
+                          String(item.Change || '').includes('-') ? 'text-emerald-400' : 'text-red-400'
+                        }`}>
+                          {item.Change || '+12.00'}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+
+                  {searchResults.length === 0 && (
+                    <div 
+                      onMouseDown={() => handleSelectResult({ Code: searchTerm.trim(), Name: searchTerm.trim() })}
+                      className="p-4 hover:bg-dark-800/80 cursor-pointer text-center text-xs text-blue-400 transition"
+                    >
+                      開啟「<strong className="text-white">{searchTerm.trim()}</strong>」三竹深度技術與籌碼分析 ➔
+                    </div>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
         </div>
 
         {/* Nav Links & Controls */}
         <div className="flex items-center space-x-2">
-          {/* Quick Section Links */}
-          <div className="hidden lg:flex items-center space-x-1 mr-2 text-xs font-medium text-gray-300">
-            <a href="#rankings-section" className="px-2.5 py-1 rounded-lg hover:text-white hover:bg-gray-800 transition">
-              三大排行
-            </a>
-            <a href="#industry-news-section" className="px-2.5 py-1 rounded-lg hover:text-white hover:bg-gray-800 transition">
-              產業時事
-            </a>
-            <a href="#daily-section" className="px-2.5 py-1 rounded-lg hover:text-white hover:bg-gray-800 transition">
-              個股收盤
-            </a>
-          </div>
+          {/* Quick Section Tab Links */}
+          {setActiveTab && (
+            <div className="hidden lg:flex items-center space-x-1 mr-2 text-xs font-medium text-gray-300">
+              <button
+                onClick={() => setActiveTab('REALTIME')}
+                className={`px-2.5 py-1 rounded-lg transition ${
+                  activeTab === 'REALTIME' ? 'bg-blue-600 text-white font-bold' : 'hover:text-white hover:bg-gray-800'
+                }`}
+              >
+                自選行情
+              </button>
+              <button
+                onClick={() => setActiveTab('RANKINGS')}
+                className={`px-2.5 py-1 rounded-lg transition ${
+                  activeTab === 'RANKINGS' ? 'bg-blue-600 text-white font-bold' : 'hover:text-white hover:bg-gray-800'
+                }`}
+              >
+                三大排行
+              </button>
+              <button
+                onClick={() => setActiveTab('NEWS')}
+                className={`px-2.5 py-1 rounded-lg transition ${
+                  activeTab === 'NEWS' ? 'bg-blue-600 text-white font-bold' : 'hover:text-white hover:bg-gray-800'
+                }`}
+              >
+                產業時事
+              </button>
+              <button
+                onClick={() => setActiveTab('DAILY')}
+                className={`px-2.5 py-1 rounded-lg transition ${
+                  activeTab === 'DAILY' ? 'bg-blue-600 text-white font-bold' : 'hover:text-white hover:bg-gray-800'
+                }`}
+              >
+                全股報價
+              </button>
+            </div>
+          )}
 
           {/* 13:30 Daily Report Modal Trigger */}
           <button
@@ -150,7 +268,7 @@ export default function Navbar({
               }`}
             >
               <Zap className={`w-3.5 h-3.5 ${autoRefresh ? 'text-emerald-400 fill-emerald-400/30' : ''}`} />
-              <span>{autoRefresh ? '自動更新' : '已暫停'}</span>
+              <span>{autoRefresh ? '自動' : '暫停'}</span>
             </button>
 
             {autoRefresh && (
@@ -174,7 +292,7 @@ export default function Navbar({
             title="手動抓取最新證交所資料"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin' : ''}`} />
-            <span className="hidden sm:inline">即時刷新</span>
+            <span className="hidden sm:inline">刷新</span>
           </button>
         </div>
       </div>

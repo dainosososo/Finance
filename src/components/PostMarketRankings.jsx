@@ -244,7 +244,7 @@ export default function PostMarketRankings({
                       {item.turnover}
                     </td>
                     <td className="py-3 px-3 text-right font-mono font-bold text-white">
-                      ${item.price}
+                      NT$ {item.price}
                     </td>
                     <td className={`py-3 px-3 text-right font-mono font-semibold ${
                       isUp ? 'text-red-400' : isFlat ? 'text-gray-400' : 'text-emerald-400'
@@ -303,7 +303,7 @@ export default function PostMarketRankings({
                     </span>
                   </td>
                   <td className="py-3 px-3 text-right font-mono font-bold text-white">
-                    ${item.price}
+                    NT$ {item.price}
                   </td>
                   <td className={`py-3 px-3 text-right font-mono font-bold ${
                     subTab === 'BUY' ? 'text-red-400' : 'text-emerald-400'
@@ -358,7 +358,7 @@ export default function PostMarketRankings({
                     </span>
                   </td>
                   <td className="py-3 px-3 text-right font-mono font-bold text-white">
-                    ${item.price}
+                    NT$ {item.price}
                   </td>
                   <td className={`py-3 px-3 text-right font-mono font-bold ${
                     subTab === 'BUY' ? 'text-red-400' : 'text-emerald-400'

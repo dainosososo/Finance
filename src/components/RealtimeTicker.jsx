@@ -90,7 +90,7 @@ export default function RealtimeTicker({
                   {/* Price change badge */}
                   <div className={`flex flex-col items-end`}>
                     <span className={`text-xl font-extrabold font-mono ${isUp ? 'text-red-400' : 'text-emerald-400'}`}>
-                      ${st.price}
+                      NT$ {st.price}
                     </span>
                     <span className={`inline-flex items-center text-xs font-bold font-mono px-1.5 py-0.5 rounded mt-0.5 ${
                       isUp ? 'bg-red-500/15 text-red-400' : 'bg-emerald-500/15 text-emerald-400'
@@ -105,11 +105,11 @@ export default function RealtimeTicker({
                 <div className="grid grid-cols-3 gap-2 mt-4 pt-3 border-t border-gray-800 text-xs font-mono">
                   <div>
                     <span className="text-gray-500 block text-[10px]">最高 (High)</span>
-                    <span className="text-gray-200 font-medium">${st.high || st.price}</span>
+                    <span className="text-gray-200 font-medium">NT$ {st.high || st.price}</span>
                   </div>
                   <div>
                     <span className="text-gray-500 block text-[10px]">最低 (Low)</span>
-                    <span className="text-gray-200 font-medium">${st.low || st.price}</span>
+                    <span className="text-gray-200 font-medium">NT$ {st.low || st.price}</span>
                   </div>
                   <div>
                     <span className="text-gray-500 block text-[10px]">成交量 (Vol)</span>
@@ -180,12 +180,12 @@ export default function RealtimeTicker({
               <div>
                 <span className="text-xs text-gray-400 block">最新成交價</span>
                 <span className={`text-xl font-extrabold ${parseFloat(activeQuote.change || 0) >= 0 ? 'text-red-400' : 'text-emerald-400'}`}>
-                  ${activeQuote.price}
+                  NT$ {activeQuote.price}
                 </span>
               </div>
               <div className="text-right">
                 <span className="text-xs text-gray-400 block">昨收 (Prev)</span>
-                <span className="text-gray-200 font-bold">${activeQuote.prevClose}</span>
+                <span className="text-gray-200 font-bold">NT$ {activeQuote.prevClose}</span>
               </div>
             </div>
 
@@ -206,8 +206,8 @@ export default function RealtimeTicker({
                 return (
                   <div key={i} className="grid grid-cols-4 py-1.5 px-2 rounded hover:bg-dark-800/80 transition-colors items-center">
                     <span className="text-emerald-400 font-medium">{bid.vol}</span>
-                    <span className="text-emerald-400 font-bold">${bid.price}</span>
-                    <span className="text-red-400 font-bold text-right">${ask.price}</span>
+                    <span className="text-emerald-400 font-bold">NT$ {bid.price}</span>
+                    <span className="text-red-400 font-bold text-right">NT$ {ask.price}</span>
                     <span className="text-red-400 font-medium text-right">{ask.vol}</span>
                   </div>
                 );
@@ -217,11 +217,11 @@ export default function RealtimeTicker({
             {/* Trading tips */}
             <div className="text-[11px] text-gray-400 bg-dark-900/60 p-3 rounded-xl border border-gray-800 space-y-1">
               <div className="flex justify-between">
-                <span>開盤價: <strong className="text-gray-200">${activeQuote.open}</strong></span>
-                <span>最高價: <strong className="text-red-400">${activeQuote.high}</strong></span>
+                <span>開盤價: <strong className="text-gray-200">NT$ {activeQuote.open}</strong></span>
+                <span>最高價: <strong className="text-red-400">NT$ {activeQuote.high}</strong></span>
               </div>
               <div className="flex justify-between">
-                <span>最低價: <strong className="text-emerald-400">${activeQuote.low}</strong></span>
+                <span>最低價: <strong className="text-emerald-400">NT$ {activeQuote.low}</strong></span>
                 <span>總成交: <strong className="text-gray-200">{activeQuote.volume} 張</strong></span>
               </div>
             </div>

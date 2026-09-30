@@ -192,7 +192,7 @@ export default function DailyClosingTable({ dailyStocks = [], onSelectStock }) {
 
                     {/* Closing Price */}
                     <td className="py-3 px-3 font-bold text-gray-100">
-                      ${stock.ClosingPrice}
+                      NT$ {stock.ClosingPrice}
                     </td>
 
                     {/* Change */}
@@ -210,8 +210,8 @@ export default function DailyClosingTable({ dailyStocks = [], onSelectStock }) {
                     </td>
 
                     {/* High & Low */}
-                    <td className="py-3 px-3 text-gray-300">${stock.HighestPrice || stock.ClosingPrice}</td>
-                    <td className="py-3 px-3 text-gray-300">${stock.LowestPrice || stock.ClosingPrice}</td>
+                    <td className="py-3 px-3 text-gray-300">NT$ {stock.HighestPrice || stock.ClosingPrice}</td>
+                    <td className="py-3 px-3 text-gray-300">NT$ {stock.LowestPrice || stock.ClosingPrice}</td>
 
                     {/* Trade Volume */}
                     <td className="py-3 px-3 text-gray-300">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { TrendingUp, TrendingDown, Activity, BarChart2, Zap, Flame, Award } from 'lucide-react';
 
-export default function MarketSummary({ taiexData, topStocks = [] }) {
+export default function MarketSummary({ taiexData, topStocks = [], onSelectStock }) {
   const isTaiexUp = taiexData?.change?.includes('+');
 
   // Top gainers from top stocks
@@ -117,11 +117,12 @@ export default function MarketSummary({ taiexData, topStocks = [] }) {
           {sortedGainers.map((st, idx) => (
             <div 
               key={idx} 
+              onClick={() => onSelectStock && onSelectStock(st)}
               className="flex items-center space-x-2 bg-dark-800/90 border border-gray-700/80 px-3 py-1.5 rounded-xl hover:border-blue-500/50 transition-all flex-shrink-0 cursor-pointer"
             >
               <span className="text-xs font-bold text-gray-200">{st.name || st.Name}</span>
               <span className="text-xs font-mono text-gray-400">({st.symbol || st.Code})</span>
-              <span className="text-xs font-mono font-bold text-white">${st.price || st.ClosingPrice}</span>
+              <span className="text-xs font-mono font-bold text-white">NT$ {st.price || st.ClosingPrice}</span>
               <span className="text-xs font-mono font-bold text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded">
                 +{st.pctChange || st.PctChange || '2.5'}%
               </span>
