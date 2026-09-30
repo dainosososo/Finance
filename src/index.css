@@ -3,70 +3,69 @@
 @tailwind utilities;
 
 body {
-  background-color: #0B0F19;
-  color: #F3F4F6;
+  background-color: #F8FAFC; /* Slate-50: Crisp light minimalist background */
+  color: #0F172A; /* Slate-900: High-contrast legible text */
   overflow-x: hidden;
 }
 
-/* Custom scrollbars */
+/* Custom scrollbars for light theme */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #111827;
+  background: #F1F5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #374151;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #4B5563;
+  background: #94A3B8;
 }
 
-/* Glassmorphism Styles */
+/* Glassmorphism & Card Styles for Light Minimalist Theme */
 .glass-panel {
-  background: rgba(17, 24, 39, 0.75);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.9);
 }
 
 .glass-card {
-  background: rgba(31, 41, 55, 0.6);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all 0.25s ease-in-out;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
 }
 
 .glass-card:hover {
-  border-color: rgba(59, 130, 246, 0.3);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  border-color: #93C5FD;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -3px rgba(0, 0, 0, 0.07);
 }
 
-/* Taiwan Stock Price Indicators */
+/* Taiwan Stock Price Indicators (Taiwan convention: Red = Up, Green = Down) */
 .stock-up {
-  color: #EF4444;
+  color: #DC2626; /* Red-600 */
 }
 .stock-down {
-  color: #10B981;
+  color: #16A34A; /* Emerald-600 */
 }
 .stock-flat {
-  color: #9CA3AF;
+  color: #64748B; /* Slate-500 */
 }
 
 .bg-stock-up-badge {
-  background-color: rgba(239, 68, 68, 0.15);
-  color: #F87171;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  background-color: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
 }
 
 .bg-stock-down-badge {
-  background-color: rgba(16, 185, 129, 0.15);
-  color: #34D399;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background-color: #ECFDF5;
+  color: #16A34A;
+  border: 1px solid #A7F3D0;
 }
 
 @keyframes shimmer {
@@ -75,7 +74,7 @@ body {
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%);
+  background: linear-gradient(90deg, rgba(0,0,0,0.02) 25%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0.02) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.8s infinite;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Database, Filter, ArrowUpDown, ChevronLeft, ChevronRight, Search, BarChart, ExternalLink } from 'lucide-react';
+import { Database, Filter, ArrowUpDown, ChevronLeft, ChevronRight, Search, BarChart } from 'lucide-react';
 
 export default function DailyClosingTable({ dailyStocks = [], onSelectStock }) {
   const [selectedSector, setSelectedSector] = useState('ALL');
@@ -57,21 +57,21 @@ export default function DailyClosingTable({ dailyStocks = [], onSelectStock }) {
   };
 
   return (
-    <div className="glass-panel p-6 rounded-2xl border border-gray-800 space-y-6">
-      {/* Table Header & Controls */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-800 pb-5">
+    <div className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+      {/* Table Header & Controls (Light Theme) */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-4">
         <div className="flex items-center space-x-3">
-          <div className="p-2.5 bg-blue-500/10 text-blue-400 rounded-xl border border-blue-500/20">
+          <div className="p-2.5 bg-blue-50 text-blue-600 rounded-xl border border-blue-200">
             <Database className="w-6 h-6" />
           </div>
           <div>
-            <h2 className="text-xl font-extrabold text-white flex items-center gap-2">
-              台灣證交所 每日收盤價數據庫
-              <span className="text-xs font-mono font-normal px-2.5 py-0.5 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">
+            <h2 className="text-xl font-extrabold text-slate-900 flex items-center gap-2">
+              臺灣證券交易所 全股每日收盤數據庫
+              <span className="text-xs font-mono font-bold px-2.5 py-0.5 bg-blue-50 text-blue-700 rounded-full border border-blue-200">
                 共 {dailyStocks.length} 檔標的
               </span>
             </h2>
-            <p className="text-xs text-gray-400 mt-0.5">每日即時彙整成交股數、最高價、最低價與收盤漲跌數據</p>
+            <p className="text-xs text-slate-500 mt-0.5">每日即時彙整成交股數、最高價、最低價與收盤漲跌數據 (新台幣計價)</p>
           </div>
         </div>
 
@@ -87,25 +87,25 @@ export default function DailyClosingTable({ dailyStocks = [], onSelectStock }) {
                 setCurrentPage(1);
               }}
               placeholder="搜尋代號/名稱..."
-              className="bg-dark-900 text-xs text-white placeholder-gray-500 pl-8 pr-3 py-2 rounded-xl border border-gray-700 focus:outline-none focus:border-blue-500 w-44"
+              className="bg-slate-100 text-xs text-slate-900 placeholder-slate-400 pl-8 pr-3 py-2 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 focus:bg-white w-44"
             />
-            <Search className="w-3.5 h-3.5 text-gray-400 absolute left-2.5 top-2.5" />
+            <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
           </div>
 
           {/* Sector Dropdown */}
-          <div className="flex items-center space-x-1.5 bg-dark-900 border border-gray-700 rounded-xl px-3 py-1.5">
-            <Filter className="w-3.5 h-3.5 text-gray-400" />
+          <div className="flex items-center space-x-1.5 bg-slate-100 border border-slate-200 rounded-xl px-3 py-1.5">
+            <Filter className="w-3.5 h-3.5 text-slate-500" />
             <select
               value={selectedSector}
               onChange={(e) => {
                 setSelectedSector(e.target.value);
                 setCurrentPage(1);
               }}
-              className="bg-transparent text-xs text-gray-200 focus:outline-none cursor-pointer"
+              className="bg-transparent text-xs text-slate-800 focus:outline-none cursor-pointer font-medium"
             >
-              <option value="ALL" className="bg-dark-800">全部產業類別</option>
+              <option value="ALL">全部產業類別</option>
               {sectors.filter(s => s !== 'ALL').map(sec => (
-                <option key={sec} value={sec} className="bg-dark-800">{sec}</option>
+                <option key={sec} value={sec}>{sec}</option>
               ))}
             </select>
           </div>
@@ -113,51 +113,51 @@ export default function DailyClosingTable({ dailyStocks = [], onSelectStock }) {
       </div>
 
       {/* Main Stock Table */}
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto border border-slate-200 rounded-xl">
         <table className="w-full text-left text-sm font-sans">
           <thead>
-            <tr className="bg-dark-900/90 text-gray-400 text-xs uppercase tracking-wider border-b border-gray-800 font-mono">
-              <th className="py-3.5 px-4 font-semibold">股票代碼 / 名稱</th>
-              <th className="py-3.5 px-3 font-semibold cursor-pointer hover:text-white" onClick={() => handleSort('ClosingPrice')}>
+            <tr className="bg-slate-50 text-slate-600 text-xs uppercase tracking-wider border-b border-slate-200 font-medium">
+              <th className="py-3 px-4">股票代碼 / 名稱</th>
+              <th className="py-3 px-3 cursor-pointer hover:text-slate-900" onClick={() => handleSort('ClosingPrice')}>
                 <div className="flex items-center gap-1">
                   <span>收盤價</span>
-                  <ArrowUpDown className="w-3 h-3 text-gray-500" />
+                  <ArrowUpDown className="w-3 h-3 text-slate-400" />
                 </div>
               </th>
-              <th className="py-3.5 px-3 font-semibold cursor-pointer hover:text-white" onClick={() => handleSort('Change')}>
+              <th className="py-3 px-3 cursor-pointer hover:text-slate-900" onClick={() => handleSort('Change')}>
                 <div className="flex items-center gap-1">
                   <span>漲跌</span>
-                  <ArrowUpDown className="w-3 h-3 text-gray-500" />
+                  <ArrowUpDown className="w-3 h-3 text-slate-400" />
                 </div>
               </th>
-              <th className="py-3.5 px-3 font-semibold cursor-pointer hover:text-white" onClick={() => handleSort('PctChange')}>
+              <th className="py-3 px-3 cursor-pointer hover:text-slate-900" onClick={() => handleSort('PctChange')}>
                 <div className="flex items-center gap-1">
                   <span>漲跌幅</span>
-                  <ArrowUpDown className="w-3 h-3 text-gray-500" />
+                  <ArrowUpDown className="w-3 h-3 text-slate-400" />
                 </div>
               </th>
-              <th className="py-3.5 px-3 font-semibold cursor-pointer hover:text-white" onClick={() => handleSort('HighestPrice')}>
+              <th className="py-3 px-3 cursor-pointer hover:text-slate-900" onClick={() => handleSort('HighestPrice')}>
                 <div className="flex items-center gap-1">
                   <span>最高價</span>
-                  <ArrowUpDown className="w-3 h-3 text-gray-500" />
+                  <ArrowUpDown className="w-3 h-3 text-slate-400" />
                 </div>
               </th>
-              <th className="py-3.5 px-3 font-semibold cursor-pointer hover:text-white" onClick={() => handleSort('LowestPrice')}>
+              <th className="py-3 px-3 cursor-pointer hover:text-slate-900" onClick={() => handleSort('LowestPrice')}>
                 <div className="flex items-center gap-1">
                   <span>最低價</span>
-                  <ArrowUpDown className="w-3 h-3 text-gray-500" />
+                  <ArrowUpDown className="w-3 h-3 text-slate-400" />
                 </div>
               </th>
-              <th className="py-3.5 px-3 font-semibold cursor-pointer hover:text-white" onClick={() => handleSort('TradeVolume')}>
+              <th className="py-3 px-3 cursor-pointer hover:text-slate-900" onClick={() => handleSort('TradeVolume')}>
                 <div className="flex items-center gap-1">
                   <span>成交股數</span>
-                  <ArrowUpDown className="w-3 h-3 text-gray-500" />
+                  <ArrowUpDown className="w-3 h-3 text-slate-400" />
                 </div>
               </th>
-              <th className="py-3.5 px-4 text-right font-semibold">分析線圖</th>
+              <th className="py-3 px-4 text-right">三竹分析</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-800/60 font-mono">
+          <tbody className="divide-y divide-slate-100 font-mono">
             {currentStocks.length > 0 ? (
               currentStocks.map((stock) => {
                 const changeVal = parseFloat(stock.Change || 0);
@@ -168,22 +168,22 @@ export default function DailyClosingTable({ dailyStocks = [], onSelectStock }) {
                   <tr
                     key={stock.Code}
                     onClick={() => onSelectStock(stock)}
-                    className="hover:bg-blue-900/10 cursor-pointer transition-colors group"
+                    className="hover:bg-blue-50/40 cursor-pointer transition-colors group"
                   >
                     {/* Symbol & Name */}
                     <td className="py-3 px-4 font-sans">
                       <div className="flex items-center space-x-2.5">
-                        <span className="font-mono text-xs font-bold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
+                        <span className="font-mono text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
                           {stock.Code}
                         </span>
                         <div>
-                          <span className="font-bold text-gray-100 group-hover:text-blue-400 transition-colors">
+                          <span className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                             {stock.Name}
                           </span>
-                          <span className="text-[10px] text-gray-500 block">{stock.Sector || '台股'}</span>
+                          <span className="text-[10px] text-slate-400 block">{stock.Sector || '台股'}</span>
                         </div>
                         {isLimitUp && (
-                          <span className="text-[10px] font-bold bg-red-500 text-white px-1.5 py-0.2 rounded animate-pulse">
+                          <span className="text-[10px] font-bold bg-red-600 text-white px-1.5 py-0.2 rounded animate-pulse">
                             漲停
                           </span>
                         )}
@@ -191,38 +191,38 @@ export default function DailyClosingTable({ dailyStocks = [], onSelectStock }) {
                     </td>
 
                     {/* Closing Price */}
-                    <td className="py-3 px-3 font-bold text-gray-100">
+                    <td className="py-3 px-3 font-bold text-slate-900">
                       NT$ {stock.ClosingPrice}
                     </td>
 
                     {/* Change */}
-                    <td className={`py-3 px-3 font-bold ${isUp ? 'text-red-400' : 'text-emerald-400'}`}>
+                    <td className={`py-3 px-3 font-bold ${isUp ? 'text-red-600' : 'text-emerald-600'}`}>
                       {isUp ? `+${stock.Change}` : stock.Change}
                     </td>
 
                     {/* Pct Change */}
                     <td className="py-3 px-3">
                       <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-bold ${
-                        isUp ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
+                        isUp ? 'bg-red-50 text-red-600 border border-red-200' : 'bg-emerald-50 text-emerald-600 border border-emerald-200'
                       }`}>
                         {isUp ? `+${stock.PctChange}%` : `${stock.PctChange}%`}
                       </span>
                     </td>
 
                     {/* High & Low */}
-                    <td className="py-3 px-3 text-gray-300">NT$ {stock.HighestPrice || stock.ClosingPrice}</td>
-                    <td className="py-3 px-3 text-gray-300">NT$ {stock.LowestPrice || stock.ClosingPrice}</td>
+                    <td className="py-3 px-3 text-slate-700">NT$ {stock.HighestPrice || stock.ClosingPrice}</td>
+                    <td className="py-3 px-3 text-slate-700">NT$ {stock.LowestPrice || stock.ClosingPrice}</td>
 
                     {/* Trade Volume */}
-                    <td className="py-3 px-3 text-gray-300">
+                    <td className="py-3 px-3 text-slate-600">
                       {Number(stock.TradeVolume).toLocaleString()} 股
                     </td>
 
                     {/* Inspect Link */}
                     <td className="py-3 px-4 text-right">
-                      <button className="text-xs text-blue-400 hover:text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 px-2.5 py-1 rounded-lg transition-all border border-blue-500/30 inline-flex items-center gap-1 font-sans">
+                      <button className="text-xs text-blue-700 hover:text-blue-800 bg-blue-50 hover:bg-blue-100 px-2.5 py-1 rounded-lg transition-all border border-blue-200 inline-flex items-center gap-1 font-sans font-semibold">
                         <BarChart className="w-3.5 h-3.5" />
-                        <span>K線走勢</span>
+                        <span>K線蠟燭圖</span>
                       </button>
                     </td>
                   </tr>
@@ -230,7 +230,7 @@ export default function DailyClosingTable({ dailyStocks = [], onSelectStock }) {
               })
             ) : (
               <tr>
-                <td colSpan="8" className="py-10 text-center text-gray-500 text-xs">
+                <td colSpan="8" className="py-10 text-center text-slate-400 text-xs">
                   未找到符合「{searchTerm}」的股票資料
                 </td>
               </tr>
@@ -240,28 +240,28 @@ export default function DailyClosingTable({ dailyStocks = [], onSelectStock }) {
       </div>
 
       {/* Pagination Footer */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-gray-800 text-xs font-mono">
-        <span className="text-gray-400">
-          顯示第 <strong className="text-white">{(currentPage - 1) * itemsPerPage + 1}</strong> 至 <strong className="text-white">{Math.min(currentPage * itemsPerPage, filteredStocks.length)}</strong> 筆標的 (共 {filteredStocks.length} 筆)
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-xs font-mono">
+        <span className="text-slate-500">
+          顯示第 <strong className="text-slate-800">{(currentPage - 1) * itemsPerPage + 1}</strong> 至 <strong className="text-slate-800">{Math.min(currentPage * itemsPerPage, filteredStocks.length)}</strong> 筆標的 (共 {filteredStocks.length} 筆)
         </span>
 
         <div className="flex items-center space-x-2">
           <button
             onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
-            className="p-1.5 bg-dark-900 border border-gray-700 text-gray-300 rounded-lg hover:bg-gray-800 disabled:opacity-40"
+            className="p-1.5 bg-slate-100 border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-200 disabled:opacity-40"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
           
-          <span className="px-3 py-1 bg-dark-900 border border-gray-700 text-gray-200 rounded-lg">
+          <span className="px-3 py-1 bg-slate-100 border border-slate-200 text-slate-800 font-semibold rounded-lg">
             頁數 {currentPage} / {totalPages}
           </span>
 
           <button
             onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
             disabled={currentPage === totalPages}
-            className="p-1.5 bg-dark-900 border border-gray-700 text-gray-300 rounded-lg hover:bg-gray-800 disabled:opacity-40"
+            className="p-1.5 bg-slate-100 border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-200 disabled:opacity-40"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
