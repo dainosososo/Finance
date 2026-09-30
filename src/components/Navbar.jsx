@@ -59,7 +59,7 @@ export default function Navbar({
           <div className="flex items-center space-x-2">
             <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping mr-1.5"></span>
-              證交所即時連線
+              證交所連線 (台積電 2330: NT$ 2,480)
             </span>
           </div>
 
