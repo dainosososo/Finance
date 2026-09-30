@@ -35,20 +35,21 @@ export default function PostMarketRankings({
   const { volumeRankings = [], foreignRankings = { buy: [], sell: [] }, trustRankings = { buy: [], sell: [] }, institutionalFlows = {} } = reportData;
 
   // Filter lists based on search
-  const filterList = (list) => {
+  const filterList = (list = []) => {
+    if (!Array.isArray(list)) return [];
     if (!searchTerm.trim()) return list;
     const term = searchTerm.toLowerCase();
     return list.filter(item => 
-      (item.name && item.name.toLowerCase().includes(term)) || 
-      (item.code && item.code.includes(term)) ||
-      (item.sector && item.sector.includes(term))
+      (item?.name && item.name.toLowerCase().includes(term)) || 
+      (item?.code && item.code.includes(term)) ||
+      (item?.sector && item.sector.includes(term))
     );
   };
 
-  const filteredVolume = filterList(volumeRankings);
-  const currentForeign = subTab === 'BUY' ? foreignRankings.buy : foreignRankings.sell;
+  const filteredVolume = filterList(volumeRankings || []);
+  const currentForeign = (subTab === 'BUY' ? foreignRankings?.buy : foreignRankings?.sell) || [];
   const filteredForeign = filterList(currentForeign);
-  const currentTrust = subTab === 'BUY' ? trustRankings.buy : trustRankings.sell;
+  const currentTrust = (subTab === 'BUY' ? trustRankings?.buy : trustRankings?.sell) || [];
   const filteredTrust = filterList(currentTrust);
 
   return (
@@ -237,7 +238,7 @@ export default function PostMarketRankings({
                       </span>
                     </td>
                     <td className="py-3 px-3 text-right font-mono font-semibold text-gray-200">
-                      {item.volume.toLocaleString()}
+                      {item.volume != null ? Number(item.volume).toLocaleString() : '--'}
                     </td>
                     <td className="py-3 px-3 text-right font-mono text-gray-400 text-xs">
                       {item.turnover}
@@ -307,7 +308,7 @@ export default function PostMarketRankings({
                   <td className={`py-3 px-3 text-right font-mono font-bold ${
                     subTab === 'BUY' ? 'text-red-400' : 'text-emerald-400'
                   }`}>
-                    {subTab === 'BUY' ? '+' : ''}{item.netShares.toLocaleString()} 張
+                    {subTab === 'BUY' ? '+' : ''}{item.netShares != null ? Math.abs(Number(item.netShares)).toLocaleString() : '--'} 張
                   </td>
                   <td className="py-3 px-2 text-center">
                     <button className="p-1 rounded hover:bg-gray-700 text-gray-400 hover:text-white transition">
@@ -362,7 +363,7 @@ export default function PostMarketRankings({
                   <td className={`py-3 px-3 text-right font-mono font-bold ${
                     subTab === 'BUY' ? 'text-red-400' : 'text-emerald-400'
                   }`}>
-                    {subTab === 'BUY' ? '+' : ''}{item.netShares.toLocaleString()} 張
+                    {subTab === 'BUY' ? '+' : ''}{item.netShares != null ? Math.abs(Number(item.netShares)).toLocaleString() : '--'} 張
                   </td>
                   <td className="py-3 px-2 text-center">
                     <button className="p-1 rounded hover:bg-gray-700 text-gray-400 hover:text-white transition">

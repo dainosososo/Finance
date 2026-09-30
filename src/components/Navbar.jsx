@@ -9,7 +9,8 @@ export default function Navbar({
   setRefreshInterval,
   onManualRefresh,
   isRefreshing,
-  taiexData
+  taiexData,
+  onOpenReportModal
 }) {
   const [searchTerm, setSearchTerm] = useState('');
 

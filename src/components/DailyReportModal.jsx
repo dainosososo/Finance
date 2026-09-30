@@ -26,7 +26,7 @@ export default function DailyReportModal({
   if (!reportData) return null;
 
   const summaryText = generateDailySummaryText(reportData, taiexData);
-  const flows = reportData.institutionalFlows;
+  const flows = reportData.institutionalFlows || {};
   const topVolumes = (reportData.volumeRankings || []).slice(0, 5);
   const foreignBuys = (reportData.foreignRankings?.buy || []).slice(0, 5);
   const trustBuys = (reportData.trustRankings?.buy || []).slice(0, 5);
