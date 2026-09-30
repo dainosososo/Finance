@@ -1,0 +1,581 @@
+{
+  "date": "2026-09-30",
+  "timestamp": "18:04:56",
+  "isClosed": true,
+  "source": "twse_official_crawler",
+  "institutionalFlows": {
+    "foreign": {
+      "name": "外資及陸資(不含外資自營商)",
+      "buy": 3846.84,
+      "sell": 3550.48,
+      "net": 296.36,
+      "direction": "buy"
+    },
+    "investmentTrust": {
+      "name": "投信",
+      "buy": 208.08,
+      "sell": 130.27,
+      "net": 77.81,
+      "direction": "buy"
+    },
+    "total": {
+      "name": "合計",
+      "buy": 4389.29,
+      "sell": 4002.71,
+      "net": 386.57,
+      "direction": "buy"
+    }
+  },
+  "volumeRankings": [
+    {
+      "rank": 1,
+      "code": "3481",
+      "name": "群創",
+      "volume": 486059149,
+      "turnover": "0.0 億",
+      "price": "54.70",
+      "change": "4.95",
+      "pctChange": "9.05%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 2,
+      "code": "2409",
+      "name": "友達",
+      "volume": 432086519,
+      "turnover": "0.0 億",
+      "price": "38.55",
+      "change": "3.50",
+      "pctChange": "9.08%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 3,
+      "code": "00406A",
+      "name": "主動中信台灣收益",
+      "volume": 343691070,
+      "turnover": "0.0 億",
+      "price": "9.91",
+      "change": "0.06",
+      "pctChange": "0.61%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 4,
+      "code": "00685L",
+      "name": "群益臺灣加權正2",
+      "volume": 176435813,
+      "turnover": "0.0 億",
+      "price": "12.91",
+      "change": "0.27",
+      "pctChange": "2.09%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 5,
+      "code": "6116",
+      "name": "彩晶",
+      "volume": 154482312,
+      "turnover": "0.0 億",
+      "price": "16.35",
+      "change": "1.45",
+      "pctChange": "8.87%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 6,
+      "code": "00403A",
+      "name": "主動統一升級50",
+      "volume": 144635371,
+      "turnover": "0.0 億",
+      "price": "10.79",
+      "change": "0.09",
+      "pctChange": "0.83%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 7,
+      "code": "00631L",
+      "name": "元大台灣50正2",
+      "volume": 137367770,
+      "turnover": "0.0 億",
+      "price": "38.99",
+      "change": "0.71",
+      "pctChange": "1.82%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 8,
+      "code": "6770",
+      "name": "力積電",
+      "volume": 137017155,
+      "turnover": "0.0 億",
+      "price": "75.30",
+      "change": "3.00",
+      "pctChange": "3.98%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 9,
+      "code": "1303",
+      "name": "南亞",
+      "volume": 123417554,
+      "turnover": "0.0 億",
+      "price": "255.50",
+      "change": "8.50",
+      "pctChange": "3.33%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 10,
+      "code": "1101",
+      "name": "台泥",
+      "volume": 104957435,
+      "turnover": "0.0 億",
+      "price": "26.30",
+      "change": "1.00",
+      "pctChange": "3.8%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 11,
+      "code": "2303",
+      "name": "聯電",
+      "volume": 102405360,
+      "turnover": "0.0 億",
+      "price": "154.50",
+      "change": "1.00",
+      "pctChange": "0.65%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 12,
+      "code": "00981A",
+      "name": "主動統一台股增長",
+      "volume": 98951609,
+      "turnover": "0.0 億",
+      "price": "30.54",
+      "change": "0.23",
+      "pctChange": "0.75%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 13,
+      "code": "00632R",
+      "name": "元大台灣50反1",
+      "volume": 92757064,
+      "turnover": "0.0 億",
+      "price": "9.47",
+      "change": "0.10",
+      "pctChange": "1.06%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 14,
+      "code": "2002",
+      "name": "中鋼",
+      "volume": 90608564,
+      "turnover": "0.0 億",
+      "price": "19.20",
+      "change": "0.40",
+      "pctChange": "2.08%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 15,
+      "code": "3576",
+      "name": "聯合再生",
+      "volume": 86571378,
+      "turnover": "0.0 億",
+      "price": "19.70",
+      "change": "1.75",
+      "pctChange": "8.88%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 16,
+      "code": "1314",
+      "name": "中石化",
+      "volume": 85223275,
+      "turnover": "0.0 億",
+      "price": "9.00",
+      "change": "0.26",
+      "pctChange": "2.89%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 17,
+      "code": "2344",
+      "name": "華邦電",
+      "volume": 85028121,
+      "turnover": "0.0 億",
+      "price": "179.50",
+      "change": "5.50",
+      "pctChange": "3.06%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 18,
+      "code": "009816",
+      "name": "凱基台灣TOP50",
+      "volume": 81829044,
+      "turnover": "0.0 億",
+      "price": "16.49",
+      "change": "0.09",
+      "pctChange": "0.55%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 19,
+      "code": "8150",
+      "name": "南茂",
+      "volume": 78992086,
+      "turnover": "0.0 億",
+      "price": "114.50",
+      "change": "10.00",
+      "pctChange": "8.73%",
+      "sector": "一般產業"
+    },
+    {
+      "rank": 20,
+      "code": "00712",
+      "name": "復華富時不動產",
+      "volume": 72962505,
+      "turnover": "0.0 億",
+      "price": "7.54",
+      "change": "0.02",
+      "pctChange": "0.27%",
+      "sector": "一般產業"
+    }
+  ],
+  "foreignRankings": {
+    "buy": [
+      {
+        "code": "3481",
+        "name": "群創",
+        "netShares": 99099,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 1
+      },
+      {
+        "code": "2409",
+        "name": "友達",
+        "netShares": 67780,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 2
+      },
+      {
+        "code": "6770",
+        "name": "力積電",
+        "netShares": 58591,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 3
+      },
+      {
+        "code": "2002",
+        "name": "中鋼",
+        "netShares": 54063,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 4
+      },
+      {
+        "code": "1101",
+        "name": "台泥",
+        "netShares": 52829,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 5
+      },
+      {
+        "code": "1314",
+        "name": "中石化",
+        "netShares": 41405,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 6
+      },
+      {
+        "code": "2344",
+        "name": "華邦電",
+        "netShares": 37711,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 7
+      },
+      {
+        "code": "1301",
+        "name": "台塑",
+        "netShares": 29049,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 8
+      },
+      {
+        "code": "00403A",
+        "name": "主動統一升級50",
+        "netShares": 25012,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 9
+      },
+      {
+        "code": "00981A",
+        "name": "主動統一台股增長",
+        "netShares": 24314,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 10
+      },
+      {
+        "code": "009828",
+        "name": "中信台日韓PCB",
+        "netShares": 23868,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 11
+      },
+      {
+        "code": "8150",
+        "name": "南茂",
+        "netShares": 21838,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 12
+      },
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "netShares": 19129,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 13
+      },
+      {
+        "code": "1605",
+        "name": "華新",
+        "netShares": 19092,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 14
+      },
+      {
+        "code": "00991A",
+        "name": "主動復華未來50",
+        "netShares": 16038,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 15
+      },
+      {
+        "code": "00712",
+        "name": "復華富時不動產",
+        "netShares": 15790,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 16
+      },
+      {
+        "code": "6116",
+        "name": "彩晶",
+        "netShares": 13194,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 17
+      },
+      {
+        "code": "3576",
+        "name": "聯合再生",
+        "netShares": 12758,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 18
+      },
+      {
+        "code": "2618",
+        "name": "長榮航",
+        "netShares": 12172,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 19
+      },
+      {
+        "code": "2408",
+        "name": "南亞科",
+        "netShares": 11753,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 20
+      }
+    ],
+    "sell": [
+      {
+        "code": "1727",
+        "name": "中華化",
+        "netShares": -8651,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 1
+      },
+      {
+        "code": "2884",
+        "name": "玉山金",
+        "netShares": -6295,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 2
+      },
+      {
+        "code": "0050",
+        "name": "元大台灣50",
+        "netShares": -5339,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 3
+      },
+      {
+        "code": "2891",
+        "name": "中信金",
+        "netShares": -5215,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 4
+      },
+      {
+        "code": "3149",
+        "name": "正達",
+        "netShares": -4099,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 5
+      },
+      {
+        "code": "2301",
+        "name": "光寶科",
+        "netShares": -4040,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 6
+      },
+      {
+        "code": "2492",
+        "name": "華新科",
+        "netShares": -3930,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 7
+      },
+      {
+        "code": "2812",
+        "name": "台中銀",
+        "netShares": -3837,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 8
+      },
+      {
+        "code": "3673",
+        "name": "TPK-KY",
+        "netShares": -3788,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 9
+      },
+      {
+        "code": "4938",
+        "name": "和碩",
+        "netShares": -3739,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 10
+      },
+      {
+        "code": "00953B",
+        "name": "群益優選非投等債",
+        "netShares": -3675,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 11
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "netShares": -3673,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 12
+      },
+      {
+        "code": "2368",
+        "name": "金像電",
+        "netShares": -3602,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 13
+      },
+      {
+        "code": "00632R",
+        "name": "元大台灣50反1",
+        "netShares": -3600,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 14
+      },
+      {
+        "code": "2481",
+        "name": "強茂",
+        "netShares": -3564,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 15
+      },
+      {
+        "code": "4956",
+        "name": "光鋐",
+        "netShares": -3304,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 16
+      },
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "netShares": -3290,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 17
+      },
+      {
+        "code": "8028",
+        "name": "昇陽半導體",
+        "netShares": -3241,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 18
+      },
+      {
+        "code": "065705",
+        "name": "貿聯永豐63購01",
+        "netShares": -3144,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 19
+      },
+      {
+        "code": "3036",
+        "name": "文曄",
+        "netShares": -3078,
+        "price": "市價",
+        "sector": "一般產業",
+        "rank": 20
+      }
+    ]
+  },
+  "trustRankings": {
+    "buy": [],
+    "sell": []
+  }
+}
