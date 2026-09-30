@@ -10,34 +10,34 @@ const STOCK_PRESETS = {
     code: '2330',
     market: '上市 (半導體)',
     sector: '半導體產業',
-    price: 990,
+    price: 2480,
     change: 15.0,
-    pctChange: 1.54,
-    prevClose: 975,
-    open: 980,
-    high: 995,
-    low: 978,
+    pctChange: 0.61,
+    prevClose: 2465,
+    open: 2470,
+    high: 2495,
+    low: 2465,
     volume: 38450, // 張
-    turnover: '378.5 億',
+    turnover: '953.5 億',
     outVolume: 23450, // 外盤成交量
     inVolume: 15000,  // 內盤成交量
     outRatio: 61.0,   // 外盤比 (多方積極)
     inRatio: 39.0,    // 內盤比
-    spread: 1.0,      // 盤差跳動點
-    pe: 25.4,         // 本益比
-    pb: 6.8,          // 股價淨值比
-    eps: '39.80',     // 近四季累計 EPS
-    revenueMonthly: '2,508.7 億',
+    spread: 5.0,      // 盤差跳動點 (千元股跳動為 5 元)
+    pe: 28.5,         // 本益比
+    pb: 7.2,          // 股價淨值比
+    eps: '87.00',     // 近四季累計 EPS
+    revenueMonthly: '2,850.7 億',
     revYoY: '+33.0%',
     revMoM: '+7.8%',
-    grossMargin: '53.2%',
-    opMargin: '42.5%',
-    roe: '27.4%',
+    grossMargin: '55.2%',
+    opMargin: '45.5%',
+    roe: '29.4%',
     dividends: [
-      { year: '2026 Q2', cash: 4.0, stock: 0.0, exDate: '2026/06/12', yield: '1.62%', fillDays: '當日填息' },
-      { year: '2026 Q1', cash: 4.0, stock: 0.0, exDate: '2026/03/18', yield: '1.65%', fillDays: '2 天填息' },
-      { year: '2025 全年', cash: 14.0, stock: 0.0, exDate: '2025/12/11', yield: '2.10%', fillDays: '1 天填息' },
-      { year: '2024 全年', cash: 13.0, stock: 0.0, exDate: '2024/12/12', yield: '2.35%', fillDays: '3 天填息' }
+      { year: '2026 Q2', cash: 5.0, stock: 0.0, exDate: '2026/06/12', yield: '1.62%', fillDays: '當日填息' },
+      { year: '2026 Q1', cash: 4.5, stock: 0.0, exDate: '2026/03/18', yield: '1.65%', fillDays: '2 天填息' },
+      { year: '2025 全年', cash: 18.0, stock: 0.0, exDate: '2025/12/11', yield: '2.10%', fillDays: '1 天填息' },
+      { year: '2024 全年', cash: 16.0, stock: 0.0, exDate: '2024/12/12', yield: '2.35%', fillDays: '3 天填息' }
     ],
     chips: {
       foreignStreak: '+8 日連買',
@@ -59,7 +59,7 @@ const STOCK_PRESETS = {
     },
     news: [
       { date: '2026-09-30 14:15', title: '台積電2奈米下半年量產如期推進，AI晶片大客戶搶訂先進封裝產能', source: 'MoneyDJ' },
-      { date: '2026-09-29 18:30', title: '外資擴大買超台積電逾1.2萬張，目標價上看千元以上', source: '鉅亨網' },
+      { date: '2026-09-29 18:30', title: '外資擴大買超台積電逾1.2萬張，目標價上看2600元以上', source: '鉅亨網' },
       { date: '2026-09-28 11:20', title: '晶圓代工產能稼動率維持高檔，台積電毛利率展望穩健樂觀', source: '財經 M 平方' }
     ]
   },
@@ -68,32 +68,32 @@ const STOCK_PRESETS = {
     code: '2317',
     market: '上市 (電腦周邊)',
     sector: 'AI 伺服器與電子代工',
-    price: 185,
+    price: 250.5,
     change: 3.5,
-    pctChange: 1.93,
-    prevClose: 181.5,
-    open: 182.0,
-    high: 186.0,
-    low: 181.0,
+    pctChange: 1.42,
+    prevClose: 247.0,
+    open: 248.0,
+    high: 252.0,
+    low: 247.0,
     volume: 128910,
-    turnover: '238.4 億',
+    turnover: '322.8 億',
     outVolume: 74200,
     inVolume: 54710,
     outRatio: 57.6,
     inRatio: 42.4,
     spread: 0.5,
-    pe: 14.8,
-    pb: 1.65,
-    eps: '11.50',
-    revenueMonthly: '5,482.1 億',
+    pe: 16.8,
+    pb: 1.95,
+    eps: '14.80',
+    revenueMonthly: '6,182.1 億',
     revYoY: '+21.5%',
     revMoM: '+12.4%',
-    grossMargin: '6.4%',
-    opMargin: '3.1%',
-    roe: '10.8%',
+    grossMargin: '6.8%',
+    opMargin: '3.6%',
+    roe: '12.8%',
     dividends: [
-      { year: '2025 全年', cash: 5.4, stock: 0.0, exDate: '2025/07/02', yield: '3.20%', fillDays: '14 天填息' },
-      { year: '2024 全年', cash: 5.3, stock: 0.0, exDate: '2024/07/04', yield: '3.45%', fillDays: '9 天填息' }
+      { year: '2025 全年', cash: 6.0, stock: 0.0, exDate: '2025/07/02', yield: '3.20%', fillDays: '14 天填息' },
+      { year: '2024 全年', cash: 5.4, stock: 0.0, exDate: '2024/07/04', yield: '3.45%', fillDays: '9 天填息' }
     ],
     chips: {
       foreignStreak: '+5 日連買',
@@ -123,32 +123,32 @@ const STOCK_PRESETS = {
     code: '2454',
     market: '上市 (半導體)',
     sector: '半導體 IC 設計',
-    price: 1235,
-    change: 30.0,
-    pctChange: 2.49,
-    prevClose: 1205,
-    open: 1210,
-    high: 1245,
-    low: 1205,
+    price: 4910,
+    change: 45.0,
+    pctChange: 0.93,
+    prevClose: 4865,
+    open: 4880,
+    high: 4940,
+    low: 4870,
     volume: 18450,
-    turnover: '228.6 億',
+    turnover: '905.8 億',
     outVolume: 11200,
     inVolume: 7250,
     outRatio: 60.7,
     inRatio: 39.3,
-    spread: 5.0,
-    pe: 18.2,
-    pb: 4.8,
-    eps: '68.40',
-    revenueMonthly: '445.6 億',
+    spread: 10.0,
+    pe: 22.4,
+    pb: 5.6,
+    eps: '84.40',
+    revenueMonthly: '512.6 億',
     revYoY: '+24.1%',
     revMoM: '+4.5%',
-    grossMargin: '49.8%',
-    opMargin: '21.5%',
-    roe: '23.8%',
+    grossMargin: '50.2%',
+    opMargin: '23.5%',
+    roe: '25.8%',
     dividends: [
-      { year: '2025 全年', cash: 55.0, stock: 0.0, exDate: '2025/06/20', yield: '4.85%', fillDays: '8 天填息' },
-      { year: '2024 全年', cash: 54.0, stock: 0.0, exDate: '2024/06/18', yield: '5.10%', fillDays: '15 天填息' }
+      { year: '2025 全年', cash: 62.0, stock: 0.0, exDate: '2025/06/20', yield: '4.85%', fillDays: '8 天填息' },
+      { year: '2024 全年', cash: 55.0, stock: 0.0, exDate: '2024/06/18', yield: '5.10%', fillDays: '15 天填息' }
     ],
     chips: {
       foreignStreak: '+3 日連買',
@@ -177,32 +177,32 @@ const STOCK_PRESETS = {
     code: '2603',
     market: '上市 (航運業)',
     sector: '航運物流與海運',
-    price: 195.5,
-    change: 4.5,
-    pctChange: 2.36,
-    prevClose: 191.0,
-    open: 192.0,
-    high: 197.0,
-    low: 191.5,
+    price: 238.0,
+    change: 3.0,
+    pctChange: 1.28,
+    prevClose: 235.0,
+    open: 236.0,
+    high: 239.5,
+    low: 235.0,
     volume: 98400,
-    turnover: '192.1 億',
+    turnover: '234.1 億',
     outVolume: 56400,
     inVolume: 42000,
     outRatio: 57.3,
     inRatio: 42.7,
     spread: 0.5,
-    pe: 6.2,
-    pb: 0.95,
-    eps: '32.10',
-    revenueMonthly: '382.4 億',
+    pe: 7.4,
+    pb: 1.15,
+    eps: '36.80',
+    revenueMonthly: '412.4 億',
     revYoY: '+48.5%',
     revMoM: '+6.2%',
     grossMargin: '38.5%',
     opMargin: '31.2%',
     roe: '18.9%',
     dividends: [
-      { year: '2025 全年', cash: 10.0, stock: 0.0, exDate: '2025/06/25', yield: '5.40%', fillDays: '21 天填息' },
-      { year: '2024 全年', cash: 70.0, stock: 0.0, exDate: '2024/06/30', yield: '12.8%', fillDays: '45 天填息' }
+      { year: '2025 全年', cash: 12.0, stock: 0.0, exDate: '2025/06/25', yield: '5.40%', fillDays: '21 天填息' },
+      { year: '2024 全年', cash: 10.0, stock: 0.0, exDate: '2024/06/30', yield: '6.8%', fillDays: '30 天填息' }
     ],
     chips: {
       foreignStreak: '+4 日連買',
@@ -236,7 +236,21 @@ export function getStockDetailData(symbolOrStock) {
   const existing = STOCK_PRESETS[code];
 
   if (existing) {
-    return enrichWithCalculatedMetrics(existing);
+    const passedPrice = parseFloat(symbolOrStock?.ClosingPrice || symbolOrStock?.price || 0);
+    const passedChange = parseFloat(symbolOrStock?.Change || symbolOrStock?.change || 0);
+    let merged = { ...existing };
+    if (passedPrice > 0) {
+      merged.price = passedPrice;
+      if (!isNaN(passedChange) && passedChange !== 0) {
+        merged.change = passedChange;
+        merged.prevClose = Number((passedPrice - passedChange).toFixed(2));
+        merged.pctChange = Number(((passedChange / merged.prevClose) * 100).toFixed(2));
+        merged.open = Number((passedPrice - passedChange * 0.4).toFixed(2));
+        merged.high = Number((Math.max(passedPrice, merged.open) + Math.abs(passedChange) * 0.5).toFixed(2));
+        merged.low = Number((Math.min(passedPrice, merged.open) - Math.abs(passedChange) * 0.5).toFixed(2));
+      }
+    }
+    return enrichWithCalculatedMetrics(merged);
   }
 
   // 若為未預設標的，以該股真實行情動態產生擬真高規格三竹數據

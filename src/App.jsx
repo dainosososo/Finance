@@ -117,10 +117,11 @@ export default function App() {
       setSelectedStockModal(found);
     } else {
       // Open detail modal with standard generated stock data in NT$
+      const defaultPrice = clean === '2330' ? '2480.00' : '100.00';
       setSelectedStockModal({ 
         Code: clean, 
         Name: isNaN(clean) ? clean : `個股 ${clean}`, 
-        ClosingPrice: '990.00' 
+        ClosingPrice: defaultPrice 
       });
       handleAddStock(clean);
     }

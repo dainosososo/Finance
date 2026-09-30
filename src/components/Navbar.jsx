@@ -182,12 +182,12 @@ export default function Navbar({
                       </div>
                       <div className="text-right">
                         <span className="font-mono font-bold text-sm text-slate-900 block">
-                          NT$ {item.ClosingPrice || item.price || '990.00'}
+                          {item.ClosingPrice || item.price ? `NT$ ${item.ClosingPrice || item.price}` : '--'}
                         </span>
                         <span className={`text-[11px] font-mono font-bold ${
                           String(item.Change || '').includes('-') ? 'text-emerald-600' : 'text-red-600'
                         }`}>
-                          {item.Change || '+12.00'}
+                          {item.Change || '--'}
                         </span>
                       </div>
                     </div>
