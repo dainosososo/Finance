@@ -230,12 +230,15 @@ export default function StockDetailModal({ stock, onClose }) {
               </div>
             </div>
 
-            {/* CHART RENDER: Candlestick (含自由縮放與平移) vs Line */}
+            {/* CHART RENDER: Candlestick (含自由縮放、支撐壓力線、副圖指標與畫線工具) vs Line */}
             {chartMode === 'CANDLE' ? (
               <CandlestickChart 
                 data={currentChartData}
-                height={320}
+                height={340}
                 isUp={isUp}
+                stock={detail}
+                supportPrice={detail.supportPrice || Number((detail.price * 0.97).toFixed(2))}
+                resistancePrice={detail.resistancePrice || Number((detail.price * 1.03).toFixed(2))}
               />
             ) : (
               <div className="space-y-2">

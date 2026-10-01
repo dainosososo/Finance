@@ -394,6 +394,9 @@ function enrichWithCalculatedMetrics(stock) {
   const TOTAL_DAILY_BARS = 180;
   const tradingDays = getTradingDaysUntilToday(TOTAL_DAILY_BARS, now);
   
+  const resistancePrice = Number((base * 1.03).toFixed(2));
+  const supportPrice = Number((base * 0.97).toFixed(2));
+  
   let chart1M = [];
   
   if (realStockHistory && realStockHistory.length >= 5) {
@@ -415,6 +418,7 @@ function enrichWithCalculatedMetrics(stock) {
       const low = Number((Math.min(open, close) - Math.random() * (base * 0.012)).toFixed(2));
       const vol = Math.floor((stock.volume || 25000) * (0.6 + Math.random() * 0.8));
       
+      const isUpDay = close >= open;
       prependedBars.push({
         time: dayInfo.time,
         fullDate: dayInfo.fullDate,
@@ -423,7 +427,13 @@ function enrichWithCalculatedMetrics(stock) {
         low,
         close,
         price: close,
-        volume: vol
+        volume: vol,
+        foreignNet: Math.floor((isUpDay ? 1 : -1) * (vol * (0.12 + Math.random() * 0.15))),
+        trustNet: Math.floor((isUpDay ? 1 : -0.6) * (vol * (0.05 + Math.random() * 0.08))),
+        dealerNet: Math.floor((Math.random() - 0.48) * (vol * 0.05)),
+        revMonthly: Number(((base * 1.5) + Math.sin(i * 0.3) * 20).toFixed(1)),
+        revMoM: Number((Math.sin(i * 0.7) * 7.5).toFixed(1)),
+        revYoY: Number((15.2 + Math.sin(i * 0.25) * 12).toFixed(1))
       });
     }
 
@@ -441,6 +451,14 @@ function enrichWithCalculatedMetrics(stock) {
         if (stock.low) item.low = Math.min(item.low, Number(stock.low), item.close);
         if (stock.volume) item.volume = Number(stock.volume);
       }
+      const isUpDay = item.close >= item.open;
+      const vol = item.volume || 25000;
+      item.foreignNet = Math.floor((isUpDay ? 1 : -1) * (vol * (0.14 + Math.random() * 0.12)));
+      item.trustNet = Math.floor((isUpDay ? 1 : -0.5) * (vol * (0.06 + Math.random() * 0.06)));
+      item.dealerNet = Math.floor((Math.random() - 0.45) * (vol * 0.04));
+      item.revMonthly = Number(((base * 1.5) + Math.sin((needPrepend + idx) * 0.3) * 20).toFixed(1));
+      item.revMoM = Number((Math.sin((needPrepend + idx) * 0.7) * 7.5).toFixed(1));
+      item.revYoY = Number((15.2 + Math.sin((needPrepend + idx) * 0.25) * 12).toFixed(1));
       return item;
     });
 
@@ -467,6 +485,7 @@ function enrichWithCalculatedMetrics(stock) {
         vol = Math.floor((stock.volume || 25000) * (0.65 + Math.random() * 0.7));
       }
 
+      const isUpDay = dayClose >= dayOpen;
       return {
         time: dayInfo.time,
         fullDate: dayInfo.fullDate,
@@ -475,7 +494,13 @@ function enrichWithCalculatedMetrics(stock) {
         low: dayLow,
         close: dayClose,
         price: dayClose,
-        volume: vol
+        volume: vol,
+        foreignNet: Math.floor((isUpDay ? 1 : -1) * (vol * (0.13 + Math.random() * 0.12))),
+        trustNet: Math.floor((isUpDay ? 1 : -0.5) * (vol * (0.05 + Math.random() * 0.07))),
+        dealerNet: Math.floor((Math.random() - 0.45) * (vol * 0.04)),
+        revMonthly: Number(((base * 1.5) + Math.sin(idx * 0.3) * 20).toFixed(1)),
+        revMoM: Number((Math.sin(idx * 0.7) * 7.5).toFixed(1)),
+        revYoY: Number((15.2 + Math.sin(idx * 0.25) * 12).toFixed(1))
       };
     });
   }
@@ -621,6 +646,8 @@ function enrichWithCalculatedMetrics(stock) {
 
   return {
     ...stock,
+    supportPrice,
+    resistancePrice,
     charts: {
       '1D': chart1D,
       '5D': chart5D,
