@@ -14,18 +14,19 @@ import {
   FileText,
   BarChart3,
   Globe2,
-  Sparkles
+  Sparkles,
+  Trophy
 } from 'lucide-react';
 
 /**
  * 螢幕左側可收闔側欄 (Collapsible Sidebar) - 櫻花粉風格
  * 包含功能:
  * 1. 即時成交與產業熱力圖 (網頁中心總覽)
- * 2. 產業結構分類焦點新聞時事 (跳轉至 NEWS)
- * 3. 臺灣證交所即時排行與三大法人動向 (跳轉至 RANKINGS)
+ * 2. 大盤加權指數與市場總覽 (TWSE)
+ * 3. 強勢股追蹤 (漲停連板庫 - 漲停、連續漲停1天、2天、3天+)
  * 4. 即時自選 (跳轉至 REALTIME)
- * 5. 三大排行 (跳轉至 RANKINGS)
- * 6. 產業時事 (跳轉至 NEWS)
+ * 5. 臺灣證交所即時排行與三大法人動向 (跳轉至 RANKINGS)
+ * 6. 產業結構分類焦點新聞時事 (跳轉至 NEWS)
  * 7. 全股報價庫 (跳轉至 DAILY)
  */
 export default function Sidebar({
@@ -53,6 +54,15 @@ export default function Sidebar({
       icon: Layers,
       color: 'text-rose-600',
       badge: '大盤'
+    },
+    {
+      id: 'STRONG_STOCKS',
+      tabTarget: 'STRONG_STOCKS',
+      label: '強勢股追蹤 (漲停連板庫)',
+      sublabel: '首板、2連板、3連板+強勢標的',
+      icon: Trophy,
+      color: 'text-amber-500',
+      badge: '強勢'
     },
     {
       id: 'REALTIME',

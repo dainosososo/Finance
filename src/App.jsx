@@ -10,6 +10,7 @@ import StockDetailModal from './components/StockDetailModal';
 import PostMarketRankings from './components/PostMarketRankings';
 import IndustryNewsFeed from './components/IndustryNewsFeed';
 import DailyReportModal from './components/DailyReportModal';
+import StrongStocksTracker from './components/StrongStocksTracker';
 import { 
   TrendingUp, 
   Layers, 
@@ -275,6 +276,17 @@ export default function App() {
                   </table>
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* 2.5 TAB: STRONG_STOCKS (強勢股追蹤 - 漲停、連續漲停1天、2天、3天+庫) */}
+          {activeTab === 'STRONG_STOCKS' && (
+            <div className="space-y-6 animate-fade-in">
+              <StrongStocksTracker 
+                onSelectStock={(st) => setSelectedStockModal(st)}
+                onAddWatchlist={handleAddStock}
+                watchlist={watchlist}
+              />
             </div>
           )}
 

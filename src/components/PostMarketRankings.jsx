@@ -21,6 +21,7 @@ export default function PostMarketRankings({
   const [activeTab, setActiveTab] = useState('VOLUME'); // VOLUME, FOREIGN, TRUST, FLOWS
   const [subTab, setSubTab] = useState('BUY'); // BUY, SELL for Foreign & Trust
   const [searchTerm, setSearchTerm] = useState('');
+  const [volumeLimit, setVolumeLimit] = useState(100);
 
   if (!reportData) {
     return (
@@ -116,7 +117,7 @@ export default function PostMarketRankings({
           }`}
         >
           <Flame className="w-4 h-4 text-orange-400" />
-          <span>成交量排行 (Top 20)</span>
+          <span>成交量排行 (Top 100)</span>
         </button>
 
         <button
@@ -187,78 +188,112 @@ export default function PostMarketRankings({
         </div>
       )}
 
-      {/* CONTENT TAB 1: VOLUME RANKING (Light Theme) */}
+      {/* CONTENT TAB 1: VOLUME RANKING (Light Theme - Top 100) */}
       {activeTab === 'VOLUME' && (
-        <div className="overflow-x-auto border border-slate-200 rounded-xl">
-          <table className="w-full text-left text-xs sm:text-sm">
-            <thead>
-              <tr className="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold text-xs">
-                <th className="py-2.5 px-3">排名</th>
-                <th className="py-2.5 px-3">代號 / 名稱</th>
-                <th className="py-2.5 px-3">產業族群</th>
-                <th className="py-2.5 px-3 text-right">成交量 (張)</th>
-                <th className="py-2.5 px-3 text-right">成交金額</th>
-                <th className="py-2.5 px-3 text-right">收盤價</th>
-                <th className="py-2.5 px-3 text-right">漲跌幅</th>
-                <th className="py-2.5 px-2 text-center">分析</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100">
-              {filteredVolume.map((item) => {
-                const isUp = item.change && item.change.includes('+');
-                const isFlat = !item.change || item.change === '0.00';
-                return (
-                  <tr 
-                    key={item.code} 
-                    className="hover:bg-blue-50/50 transition group cursor-pointer"
-                    onClick={() => onSelectStock && onSelectStock({ Code: item.code, Name: item.name, ClosingPrice: item.price, Change: item.change })}
-                  >
-                    <td className="py-2.5 px-3">
-                      <span className={`inline-flex items-center justify-center w-6 h-6 rounded-md font-bold text-xs ${
-                        item.rank === 1 ? 'bg-amber-100 text-amber-700 border border-amber-300' :
-                        item.rank === 2 ? 'bg-slate-200 text-slate-700 border border-slate-300' :
-                        item.rank === 3 ? 'bg-amber-50 text-amber-800 border border-amber-200' :
-                        'text-slate-400 font-mono'
+        <div className="space-y-3">
+          {/* Quick Filter Bar for Top 100 / 50 / 20 */}
+          <div className="flex flex-wrap items-center justify-between gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs">
+            <div className="flex items-center space-x-1.5">
+              <span className="font-extrabold text-slate-700 text-xs">顯示數量:</span>
+              {[
+                { label: 'Top 100 全部', val: 100 },
+                { label: 'Top 50', val: 50 },
+                { label: 'Top 20', val: 20 }
+              ].map(opt => (
+                <button
+                  key={opt.val}
+                  onClick={() => setVolumeLimit(opt.val)}
+                  className={`px-3 py-1 rounded-lg text-xs font-bold transition cursor-pointer ${
+                    volumeLimit === opt.val
+                      ? 'bg-blue-600 text-white shadow-2xs'
+                      : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                  }`}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+
+            <div className="flex items-center space-x-2 text-[11px] text-slate-500 font-mono">
+              <span className="bg-white px-2 py-0.5 rounded border border-slate-200 font-bold text-blue-700">
+                收錄 {volumeRankings.length} 檔標的
+              </span>
+              <span>•</span>
+              <span>已載入前 {Math.min(volumeLimit, filteredVolume.length)} 檔</span>
+            </div>
+          </div>
+
+          <div className="overflow-x-auto border border-slate-200 rounded-xl">
+            <table className="w-full text-left text-xs sm:text-sm">
+              <thead>
+                <tr className="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold text-xs">
+                  <th className="py-2.5 px-3">排名</th>
+                  <th className="py-2.5 px-3">代號 / 名稱</th>
+                  <th className="py-2.5 px-3">產業族群</th>
+                  <th className="py-2.5 px-3 text-right">成交量 (張)</th>
+                  <th className="py-2.5 px-3 text-right">成交金額</th>
+                  <th className="py-2.5 px-3 text-right">收盤價</th>
+                  <th className="py-2.5 px-3 text-right">漲跌幅</th>
+                  <th className="py-2.5 px-2 text-center">分析</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {filteredVolume.slice(0, volumeLimit).map((item) => {
+                  const isUp = item.change && item.change.includes('+');
+                  const isFlat = !item.change || item.change === '0.00';
+                  return (
+                    <tr 
+                      key={item.code} 
+                      className="hover:bg-blue-50/50 transition group cursor-pointer"
+                      onClick={() => onSelectStock && onSelectStock({ Code: item.code, Name: item.name, ClosingPrice: item.price, Change: item.change })}
+                    >
+                      <td className="py-2.5 px-3">
+                        <span className={`inline-flex items-center justify-center w-6 h-6 rounded-md font-bold text-xs ${
+                          item.rank === 1 ? 'bg-amber-100 text-amber-700 border border-amber-300' :
+                          item.rank === 2 ? 'bg-slate-200 text-slate-700 border border-slate-300' :
+                          item.rank === 3 ? 'bg-amber-50 text-amber-800 border border-amber-200' :
+                          'text-slate-400 font-mono'
+                        }`}>
+                          {item.rank}
+                        </span>
+                      </td>
+                      <td className="py-2.5 px-3">
+                        <div className="font-bold text-slate-900 group-hover:text-blue-600 transition">{item.name}</div>
+                        <div className="text-[11px] text-slate-400 font-mono">{item.code}</div>
+                      </td>
+                      <td className="py-2.5 px-3">
+                        <span className="px-2 py-0.5 rounded-md text-[11px] bg-slate-100 text-slate-700 border border-slate-200 font-medium">
+                          {item.sector}
+                        </span>
+                      </td>
+                      <td className="py-2.5 px-3 text-right font-mono font-bold text-slate-900">
+                        {item.volume != null ? Number(item.volume).toLocaleString() : '--'}
+                      </td>
+                      <td className="py-2.5 px-3 text-right font-mono text-slate-500 text-xs">
+                        {item.turnover}
+                      </td>
+                      <td className="py-2.5 px-3 text-right font-mono font-bold text-slate-900">
+                        NT$ {item.price}
+                      </td>
+                      <td className={`py-2.5 px-3 text-right font-mono font-bold ${
+                        isUp ? 'text-red-600' : isFlat ? 'text-slate-400' : 'text-emerald-600'
                       }`}>
-                        {item.rank}
-                      </span>
-                    </td>
-                    <td className="py-2.5 px-3">
-                      <div className="font-bold text-slate-900 group-hover:text-blue-600 transition">{item.name}</div>
-                      <div className="text-[11px] text-slate-400 font-mono">{item.code}</div>
-                    </td>
-                    <td className="py-2.5 px-3">
-                      <span className="px-2 py-0.5 rounded-md text-[11px] bg-slate-100 text-slate-700 border border-slate-200 font-medium">
-                        {item.sector}
-                      </span>
-                    </td>
-                    <td className="py-2.5 px-3 text-right font-mono font-bold text-slate-900">
-                      {item.volume != null ? Number(item.volume).toLocaleString() : '--'}
-                    </td>
-                    <td className="py-2.5 px-3 text-right font-mono text-slate-500 text-xs">
-                      {item.turnover}
-                    </td>
-                    <td className="py-2.5 px-3 text-right font-mono font-bold text-slate-900">
-                      NT$ {item.price}
-                    </td>
-                    <td className={`py-2.5 px-3 text-right font-mono font-bold ${
-                      isUp ? 'text-red-600' : isFlat ? 'text-slate-400' : 'text-emerald-600'
-                    }`}>
-                      {item.pctChange}
-                    </td>
-                    <td className="py-2.5 px-2 text-center">
-                      <button 
-                        className="p-1 rounded hover:bg-slate-200 text-slate-400 hover:text-slate-700 transition"
-                        title="查看三竹K線走勢"
-                      >
-                        <ChevronRight className="w-4 h-4" />
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+                        {item.pctChange}
+                      </td>
+                      <td className="py-2.5 px-2 text-center">
+                        <button 
+                          className="p-1 rounded hover:bg-slate-200 text-slate-400 hover:text-slate-700 transition"
+                          title="查看三竹K線走勢"
+                        >
+                          <ChevronRight className="w-4 h-4" />
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 
