@@ -14,7 +14,9 @@ export default function Navbar({
   onManualRefresh,
   isRefreshing,
   taiexData,
-  onOpenReportModal
+  onOpenReportModal,
+  onToggleSidebar,
+  isSidebarCollapsed
 }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [isFocused, setIsFocused] = useState(false);
@@ -49,41 +51,18 @@ export default function Navbar({
     setIsFocused(false);
   };
 
-  const isUp = taiexData?.change?.includes('+');
-
   return (
     <header className="sticky top-0 z-40 w-full glass-panel border-b border-slate-200/90 shadow-xs backdrop-blur-md bg-white/95">
-      {/* Top Announcement & TAIEX Ticker Bar (Light Theme) */}
+      {/* Top System Status Bar */}
       <div className="bg-slate-50 border-b border-slate-200 py-1.5 px-4 text-xs font-mono flex items-center justify-between overflow-hidden">
-        <div className="flex items-center space-x-6 overflow-x-auto whitespace-nowrap scrollbar-none">
-          <div className="flex items-center space-x-2">
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping mr-1.5"></span>
-              證交所即時連線 (含當日即時K線 • 2330: NT$ 2,480~2,510)
-            </span>
-          </div>
-
-          <div className="flex items-center space-x-2">
-            <span className="text-slate-500 font-sans">加權指數 (TAIEX):</span>
-            <span className="font-bold text-slate-900">{taiexData?.taiex || '23,125.80'}</span>
-            <span className={`inline-flex items-center font-bold px-1.5 py-0.2 rounded text-[11px] ${
-              isUp ? 'text-red-600 bg-red-50 border border-red-200' : 'text-emerald-600 bg-emerald-50 border border-emerald-200'
-            }`}>
-              {isUp ? <ArrowUpRight className="w-3 h-3 mr-0.5" /> : <ArrowDownRight className="w-3 h-3 mr-0.5" />}
-              {taiexData?.change || '+245.60'} ({taiexData?.pctChange || '+1.07%'})
-            </span>
-          </div>
-
-          <div className="flex items-center space-x-2 text-slate-500 font-sans">
-            <span>成交金額:</span>
-            <span className="text-slate-800 font-bold">{taiexData?.volume || '4,125.80 億'}</span>
-          </div>
-
-          <div className="flex items-center space-x-3 text-[11px]">
-            <span className="text-red-600 font-sans font-medium">漲: {taiexData?.upCount || 689}</span>
-            <span className="text-emerald-600 font-sans font-medium">跌: {taiexData?.downCount || 231}</span>
-            <span className="text-slate-500 font-sans">平: {taiexData?.flatCount || 98}</span>
-          </div>
+        <div className="flex items-center space-x-4">
+          <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping mr-1.5"></span>
+            臺灣證券交易所 (TWSE) 即時連線 • 當日即時行情中心
+          </span>
+          <span className="hidden md:inline text-[11px] text-slate-500 font-sans">
+            含雙熱力圖多區塊觀測 • 三竹選股深度分析
+          </span>
         </div>
 
         {/* GitHub Repository Link */}
@@ -99,27 +78,42 @@ export default function Navbar({
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-        {/* Brand Logo */}
-        <div 
-          className="flex items-center space-x-3 flex-shrink-0 cursor-pointer"
-          onClick={() => setActiveTab && setActiveTab('ALL')}
-        >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 p-0.5 shadow-md shadow-blue-500/10">
-            <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
-              <TrendingUp className="w-6 h-6 text-blue-600" />
+      <div className="w-full px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        {/* Sidebar Toggle & Brand Logo */}
+        <div className="flex items-center space-x-3 flex-shrink-0">
+          {onToggleSidebar && (
+            <button
+              onClick={onToggleSidebar}
+              className="p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition border border-slate-200 shadow-2xs"
+              title="展開/收起側欄選單"
+              aria-label="展開/收起側欄選單"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          )}
+
+          <div 
+            className="flex items-center space-x-2.5 cursor-pointer"
+            onClick={() => setActiveTab && setActiveTab('ALL')}
+          >
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 p-0.5 shadow-md shadow-blue-500/10">
+              <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
+                <TrendingUp className="w-6 h-6 text-blue-600" />
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="flex items-center space-x-2">
-              <span className="font-extrabold text-xl tracking-tight text-slate-900 font-sans">
-                Finance
-              </span>
-              <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-blue-50 text-blue-700 rounded border border-blue-200">
-                TWSE
-              </span>
+            <div>
+              <div className="flex items-center space-x-2">
+                <span className="font-extrabold text-xl tracking-tight text-slate-900 font-sans">
+                  Finance
+                </span>
+                <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-blue-50 text-blue-700 rounded border border-blue-200">
+                  TWSE
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-500 hidden sm:block">台灣股市雙熱力圖與盤後觀測站</p>
             </div>
-            <p className="text-[11px] text-slate-500 hidden sm:block">台灣股市即時行情與盤後觀測站</p>
           </div>
         </div>
 
