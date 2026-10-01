@@ -2,6 +2,7 @@
  * Stock Detail Analysis Service (三竹股市 / 三竹選股標竿資料庫)
  * 提供個股深度多週期技術面、盤差、籌碼面、基本面、股利政策、產業鏈與專屬個股時事
  */
+import { PRELOADED_KLINE_HISTORY } from './stockHistoryData.js';
 
 // 常用權值股與焦點股的深度基本資料庫
 const STOCK_PRESETS = {
@@ -320,105 +321,227 @@ export function getStockDetailData(symbolOrStock) {
 }
 
 /**
+ * 產生截至當日 (今日) 的最近 N 個真實台股交易日清單
+ * 自動跳過週末（週六、週日），並將最後一天標註為「當日 / 今日」
+ */
+export function getTradingDaysUntilToday(count = 20, referenceDate = new Date()) {
+  const result = [];
+  let d = new Date(referenceDate);
+
+  // 若為週末，先回退至上一個週五
+  if (d.getDay() === 6) {
+    d.setDate(d.getDate() - 1);
+  } else if (d.getDay() === 0) {
+    d.setDate(d.getDate() - 2);
+  }
+
+  while (result.length < count) {
+    const dayOfWeek = d.getDay();
+    if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const dd = String(d.getDate()).padStart(2, '0');
+      const isToday = result.length === 0;
+      result.unshift({
+        time: isToday ? `${mm}/${dd} (今)` : `${mm}/${dd}`,
+        rawDate: `${mm}/${dd}`,
+        fullDate: d.toISOString().split('T')[0]
+      });
+    }
+    d.setDate(d.getDate() - 1);
+  }
+  return result;
+}
+
+/**
  * 計算多週期技術線圖數據 (1D, 5D, 1M, 3M, 1Y 以及 分時, 日K, 週K, 月K, 60分K, 還原K)
  * 完整產生開盤 (open)、最高 (high)、最低 (low)、收盤 (close) 蠟燭線 OHLC 數值
+ * 嚴格依據真實交易日曆 (包含當日) 動態排列與即時更新
  */
 function enrichWithCalculatedMetrics(stock) {
-  const base = stock.price;
-  const isUp = stock.change >= 0;
+  const code = String(stock.code || stock.Code || stock.symbol || '2330');
+  const base = parseFloat(stock.price || stock.ClosingPrice || 2480);
+  const change = parseFloat(stock.change || stock.Change || 0);
+  const isUp = change >= 0;
+  const now = new Date();
 
-  // 1. 1D: 盤中分時分鐘走勢 (09:00 ~ 13:30)
-  const chart1D = [
-    { time: '09:00', open: Number((base - stock.change).toFixed(2)), high: Number((base - stock.change * 0.7).toFixed(2)), low: Number((base - stock.change * 1.1).toFixed(2)), close: Number((base - stock.change * 0.9).toFixed(2)), price: Number((base - stock.change * 0.9).toFixed(2)), volume: Math.floor(stock.volume * 0.16), ma: Number((base - stock.change).toFixed(2)) },
-    { time: '09:30', open: Number((base - stock.change * 0.9).toFixed(2)), high: Number((base - stock.change * 0.4).toFixed(2)), low: Number((base - stock.change * 1.0).toFixed(2)), close: Number((base - stock.change * 0.5).toFixed(2)), price: Number((base - stock.change * 0.5).toFixed(2)), volume: Math.floor(stock.volume * 0.14), ma: Number((base - stock.change * 0.7).toFixed(2)) },
-    { time: '10:00', open: Number((base - stock.change * 0.5).toFixed(2)), high: Number((base - stock.change * 0.1).toFixed(2)), low: Number((base - stock.change * 0.6).toFixed(2)), close: Number((base - stock.change * 0.2).toFixed(2)), price: Number((base - stock.change * 0.2).toFixed(2)), volume: Math.floor(stock.volume * 0.12), ma: Number((base - stock.change * 0.4).toFixed(2)) },
-    { time: '10:30', open: Number((base - stock.change * 0.2).toFixed(2)), high: Number((base + (isUp ? 1.5 : -1.0)).toFixed(2)), low: Number((base - stock.change * 0.3).toFixed(2)), close: Number((base + (isUp ? 0.8 : -1.2)).toFixed(2)), price: Number((base + (isUp ? 0.8 : -1.2)).toFixed(2)), volume: Math.floor(stock.volume * 0.10), ma: Number(base.toFixed(2)) },
-    { time: '11:00', open: Number((base + (isUp ? 0.8 : -1.2)).toFixed(2)), high: Number((base + (isUp ? 2.5 : -0.5)).toFixed(2)), low: Number((base - (isUp ? 0.5 : 2.5)).toFixed(2)), close: Number((base + (isUp ? 1.8 : -1.8)).toFixed(2)), price: Number((base + (isUp ? 1.8 : -1.8)).toFixed(2)), volume: Math.floor(stock.volume * 0.11), ma: Number(base.toFixed(2)) },
-    { time: '11:30', open: Number((base + (isUp ? 1.8 : -1.8)).toFixed(2)), high: Number((base + (isUp ? 2.0 : -1.0)).toFixed(2)), low: Number((base + (isUp ? 0.5 : -2.2)).toFixed(2)), close: Number((base + (isUp ? 1.0 : -1.5)).toFixed(2)), price: Number((base + (isUp ? 1.0 : -1.5)).toFixed(2)), volume: Math.floor(stock.volume * 0.09), ma: Number(base.toFixed(2)) },
-    { time: '12:00', open: Number((base + (isUp ? 1.0 : -1.5)).toFixed(2)), high: Number((base + (isUp ? 1.6 : -0.8)).toFixed(2)), low: Number((base - (isUp ? 0.2 : 2.0)).toFixed(2)), close: Number((base + (isUp ? 0.5 : -1.0)).toFixed(2)), price: Number((base + (isUp ? 0.5 : -1.0)).toFixed(2)), volume: Math.floor(stock.volume * 0.08), ma: Number(base.toFixed(2)) },
-    { time: '12:30', open: Number((base + (isUp ? 0.5 : -1.0)).toFixed(2)), high: Number((base + (isUp ? 2.0 : -0.5)).toFixed(2)), low: Number((base + (isUp ? 0.2 : -1.8)).toFixed(2)), close: Number((base + (isUp ? 1.2 : -1.2)).toFixed(2)), price: Number((base + (isUp ? 1.2 : -1.2)).toFixed(2)), volume: Math.floor(stock.volume * 0.10), ma: Number(base.toFixed(2)) },
-    { time: '13:00', open: Number((base + (isUp ? 1.2 : -1.2)).toFixed(2)), high: Number((base + (isUp ? 2.8 : -0.2)).toFixed(2)), low: Number((base + (isUp ? 0.8 : -1.5)).toFixed(2)), close: Number((base + (isUp ? 2.0 : -1.0)).toFixed(2)), price: Number((base + (isUp ? 2.0 : -1.0)).toFixed(2)), volume: Math.floor(stock.volume * 0.13), ma: Number(base.toFixed(2)) },
-    { time: '13:30', open: Number((base + (isUp ? 2.0 : -1.0)).toFixed(2)), high: Number(stock.high.toFixed(2)), low: Number(stock.low.toFixed(2)), close: Number(base.toFixed(2)), price: Number(base.toFixed(2)), volume: Math.floor(stock.volume * 0.17), ma: Number(base.toFixed(2)) }
-  ];
+  // 1. 1D: 盤中分時走勢 (09:00 ~ 13:30，以當日開盤、盤中跳動與最新成交價為基準)
+  const isTradingHours = now.getHours() >= 9 && (now.getHours() < 13 || (now.getHours() === 13 && now.getMinutes() <= 30));
+  const timeSteps = ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30'];
+  const chart1D = timeSteps.map((t, idx) => {
+    const isLast = idx === timeSteps.length - 1;
+    const timeLabel = isLast ? (isTradingHours ? `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')} (即時)` : '13:30 (收盤)') : t;
+    const progress = idx / (timeSteps.length - 1);
+    const tickPrice = isLast ? base : Number((base - change * (1 - progress * 0.8) + (Math.sin(idx) * Math.abs(change) * 0.2)).toFixed(2));
+    const tickOpen = idx === 0 ? Number((stock.open || base - change).toFixed(2)) : tickPrice;
+    const tickHigh = Math.max(tickOpen, tickPrice) + Math.abs(change) * 0.15;
+    const tickLow = Math.min(tickOpen, tickPrice) - Math.abs(change) * 0.15;
+    const vol = Math.floor((stock.volume || 25000) * (0.08 + Math.random() * 0.08));
 
-  // 2. 5D: 近五日走勢
-  const chart5D = [
-    { time: '09/24', open: Number((base * 0.96).toFixed(2)), high: Number((base * 0.972).toFixed(2)), low: Number((base * 0.955).toFixed(2)), close: Number((base * 0.968).toFixed(2)), price: Number((base * 0.968).toFixed(2)), volume: Math.floor(stock.volume * 0.92), ma5: Number((base * 0.965).toFixed(2)) },
-    { time: '09/25', open: Number((base * 0.968).toFixed(2)), high: Number((base * 0.982).toFixed(2)), low: Number((base * 0.964).toFixed(2)), close: Number((base * 0.976).toFixed(2)), price: Number((base * 0.976).toFixed(2)), volume: Math.floor(stock.volume * 1.05), ma5: Number((base * 0.970).toFixed(2)) },
-    { time: '09/26', open: Number((base * 0.976).toFixed(2)), high: Number((base * 0.990).toFixed(2)), low: Number((base * 0.972).toFixed(2)), close: Number((base * 0.982).toFixed(2)), price: Number((base * 0.982).toFixed(2)), volume: Math.floor(stock.volume * 0.88), ma5: Number((base * 0.975).toFixed(2)) },
-    { time: '09/29', open: Number((base * 0.982).toFixed(2)), high: Number((base * 0.992).toFixed(2)), low: Number((base * 0.978).toFixed(2)), close: Number((base - stock.change).toFixed(2)), price: Number((base - stock.change).toFixed(2)), volume: Math.floor(stock.volume * 1.12), ma5: Number((base * 0.982).toFixed(2)) },
-    { time: '09/30 (今)', open: Number(stock.open.toFixed(2)), high: Number(stock.high.toFixed(2)), low: Number(stock.low.toFixed(2)), close: Number(base.toFixed(2)), price: Number(base.toFixed(2)), volume: stock.volume, ma5: Number((base * 0.988).toFixed(2)) }
-  ];
-
-  // 3. 1M: 近一個月日 K 線走勢 (20 交易日燭線)
-  const chart1M = [];
-  const days1M = 20;
-  let currClose = base * 0.90;
-  for (let i = 1; i <= days1M; i++) {
-    const dayDelta = (Math.random() - 0.44) * (base * 0.025);
-    const dayOpen = currClose;
-    currClose = (i === days1M) ? base : Math.max(base * 0.82, currClose + dayDelta);
-    const dayHigh = Math.max(dayOpen, currClose) + Math.random() * (base * 0.012);
-    const dayLow = Math.min(dayOpen, currClose) - Math.random() * (base * 0.012);
-    const vol = Math.floor(stock.volume * (0.65 + Math.random() * 0.7));
-
-    chart1M.push({
-      time: `09/${String(i).padStart(2, '0')}`,
-      open: Number(dayOpen.toFixed(2)),
-      high: Number(dayHigh.toFixed(2)),
-      low: Number(dayLow.toFixed(2)),
-      close: Number(currClose.toFixed(2)),
-      price: Number(currClose.toFixed(2)),
+    return {
+      time: timeLabel,
+      open: Number(tickOpen.toFixed(2)),
+      high: Number(tickHigh.toFixed(2)),
+      low: Number(tickLow.toFixed(2)),
+      close: Number(tickPrice.toFixed(2)),
+      price: Number(tickPrice.toFixed(2)),
       volume: vol,
-      ma5: Number((currClose * (0.98 + (i / days1M) * 0.02)).toFixed(2)),
-      ma20: Number((base * 0.94).toFixed(2))
+      ma: Number(base.toFixed(2))
+    };
+  });
+
+  // 2. 1M (日K): 近一個月 20 交易日燭線 (包含當日，真實日期順序排列)
+  const realStockHistory = PRELOADED_KLINE_HISTORY[code]?.days;
+  let chart1M = [];
+
+  if (realStockHistory && realStockHistory.length >= 5) {
+    // 優先採用真實臺灣證交所歷史成交數據 (例如 09/01 ~ 10/01)
+    const sliceDays = realStockHistory.slice(-20);
+    chart1M = sliceDays.map((d, idx) => {
+      const isLast = idx === sliceDays.length - 1;
+      const item = { ...d };
+      if (isLast) {
+        // 當日標記與動態校正為最新成交價
+        item.time = `${d.time} (今)`;
+        if (stock.price) {
+          item.close = Number(stock.price);
+          item.price = Number(stock.price);
+        }
+        if (stock.open) item.open = Number(stock.open);
+        if (stock.high) item.high = Math.max(item.high, Number(stock.high), item.close);
+        if (stock.low) item.low = Math.min(item.low, Number(stock.low), item.close);
+        if (stock.volume) item.volume = Number(stock.volume);
+      }
+      return item;
+    });
+  } else {
+    // 未預收錄之股票，基於真實交易日日曆 (包含當日) 動態產生擬真行情
+    const tradingDays = getTradingDaysUntilToday(20, now);
+    let currClose = Number((base * 0.92).toFixed(2));
+    chart1M = tradingDays.map((dayInfo, idx) => {
+      const isLast = idx === tradingDays.length - 1;
+      let dayOpen, dayClose, dayHigh, dayLow, vol;
+      if (isLast) {
+        dayOpen = Number((stock.open || base - change * 0.4).toFixed(2));
+        dayClose = Number(base.toFixed(2));
+        dayHigh = Number((stock.high || Math.max(dayOpen, dayClose) + Math.abs(change) * 0.5).toFixed(2));
+        dayLow = Number((stock.low || Math.min(dayOpen, dayClose) - Math.abs(change) * 0.5).toFixed(2));
+        vol = stock.volume || 25000;
+      } else {
+        const dayDelta = (Math.random() - 0.44) * (base * 0.025);
+        dayOpen = currClose;
+        currClose = Math.max(base * 0.82, Number((currClose + dayDelta).toFixed(2)));
+        dayClose = currClose;
+        dayHigh = Number((Math.max(dayOpen, dayClose) + Math.random() * (base * 0.012)).toFixed(2));
+        dayLow = Number((Math.min(dayOpen, dayClose) - Math.random() * (base * 0.012)).toFixed(2));
+        vol = Math.floor((stock.volume || 25000) * (0.65 + Math.random() * 0.7));
+      }
+
+      return {
+        time: dayInfo.time,
+        fullDate: dayInfo.fullDate,
+        open: dayOpen,
+        high: dayHigh,
+        low: dayLow,
+        close: dayClose,
+        price: dayClose,
+        volume: vol
+      };
     });
   }
 
-  // 4. 3M: 近一季週 K 走勢 (12 根週 K 燭線)
+  // 計算 MA5 與 MA20 動態均線
+  for (let i = 0; i < chart1M.length; i++) {
+    const ma5Slice = chart1M.slice(Math.max(0, i - 4), i + 1);
+    const ma5Avg = ma5Slice.reduce((sum, d) => sum + d.close, 0) / ma5Slice.length;
+    chart1M[i].ma5 = Number(ma5Avg.toFixed(2));
+
+    const ma20Slice = chart1M.slice(Math.max(0, i - 19), i + 1);
+    const ma20Avg = ma20Slice.reduce((sum, d) => sum + d.close, 0) / ma20Slice.length;
+    chart1M[i].ma20 = Number(ma20Avg.toFixed(2));
+  }
+
+  // 3. 5D: 近五日走勢 (取 1M 的最後 5 個交易日，百分之百同源吻合，最後一天必為今天)
+  const chart5D = chart1M.slice(-5).map((d, idx) => ({
+    ...d,
+    time: idx === 4 && !d.time.includes('今') ? `${d.time} (今)` : d.time
+  }));
+
+  // 4. 3M: 近一季週 K 走勢 (12 根週 K，動態計算至當週)
   const chart3M = [];
   const weeks3M = 12;
-  let wClose = base * 0.82;
-  for (let w = 1; w <= weeks3M; w++) {
-    const wDelta = (base * 0.018) + (Math.random() - 0.42) * (base * 0.03);
-    const wOpen = wClose;
-    wClose = (w === weeks3M) ? base : (wClose + wDelta);
-    const wHigh = Math.max(wOpen, wClose) + Math.random() * (base * 0.025);
-    const wLow = Math.min(wOpen, wClose) - Math.random() * (base * 0.02);
-    const vol = Math.floor(stock.volume * (3.5 + Math.random() * 2.0));
+  let wClose = Number((base * 0.84).toFixed(2));
+  for (let w = 0; w < weeks3M; w++) {
+    const isLast = w === weeks3M - 1;
+    const weekAgo = weeks3M - 1 - w;
+    const weekDate = new Date(now.getTime() - weekAgo * 7 * 86400000);
+    const wMonth = String(weekDate.getMonth() + 1).padStart(2, '0');
+    const wDay = String(weekDate.getDate()).padStart(2, '0');
+    const timeLabel = isLast ? `${wMonth}/${wDay} (本週)` : `${wMonth}/${wDay}週`;
+
+    let wOpen, wHigh, wLow, vol;
+    if (isLast) {
+      wOpen = Number((base * 0.98).toFixed(2));
+      wClose = Number(base.toFixed(2));
+      wHigh = Number(Math.max(wOpen, wClose, stock.high || base).toFixed(2));
+      wLow = Number(Math.min(wOpen, wClose, stock.low || base).toFixed(2));
+      vol = Math.floor((stock.volume || 25000) * 4.2);
+    } else {
+      const wDelta = (base * 0.018) + (Math.random() - 0.42) * (base * 0.03);
+      wOpen = wClose;
+      wClose = Number((wClose + wDelta).toFixed(2));
+      wHigh = Number((Math.max(wOpen, wClose) + Math.random() * (base * 0.025)).toFixed(2));
+      wLow = Number((Math.min(wOpen, wClose) - Math.random() * (base * 0.02)).toFixed(2));
+      vol = Math.floor((stock.volume || 25000) * (3.5 + Math.random() * 2.0));
+    }
 
     chart3M.push({
-      time: `第${w}週`,
-      open: Number(wOpen.toFixed(2)),
-      high: Number(wHigh.toFixed(2)),
-      low: Number(wLow.toFixed(2)),
-      close: Number(wClose.toFixed(2)),
-      price: Number(wClose.toFixed(2)),
+      time: timeLabel,
+      open: wOpen,
+      high: wHigh,
+      low: wLow,
+      close: wClose,
+      price: wClose,
       volume: vol,
       ma20: Number((wClose * 0.97).toFixed(2)),
       ma60: Number((base * 0.88).toFixed(2))
     });
   }
 
-  // 5. 1Y: 近一年月 K 走勢 (12 根月 K 燭線)
+  // 5. 1Y: 近一年月 K 走勢 (12 根月 K，動態計算至當月)
   const chart1Y = [];
   const months1Y = 12;
-  let mClose = base * 0.72;
-  for (let m = 1; m <= months1Y; m++) {
-    const mOpen = mClose;
-    const mDelta = (base * 0.025) + (Math.random() - 0.4) * (base * 0.04);
-    mClose = (m === months1Y) ? base : (mClose + mDelta);
-    const mHigh = Math.max(mOpen, mClose) + Math.random() * (base * 0.035);
-    const mLow = Math.min(mOpen, mClose) - Math.random() * (base * 0.03);
-    const vol = Math.floor(stock.volume * (14 + Math.random() * 8));
+  let mClose = Number((base * 0.72).toFixed(2));
+  for (let m = 0; m < months1Y; m++) {
+    const isLast = m === months1Y - 1;
+    const monthAgo = months1Y - 1 - m;
+    const mDate = new Date(now.getFullYear(), now.getMonth() - monthAgo, 1);
+    const yr = String(mDate.getFullYear()).slice(-2);
+    const mm = String(mDate.getMonth() + 1).padStart(2, '0');
+    const timeLabel = isLast ? `${yr}/${mm}月 (本月)` : `${yr}/${mm}月`;
+
+    let mOpen, mHigh, mLow, vol;
+    if (isLast) {
+      mOpen = Number((base * 0.95).toFixed(2));
+      mClose = Number(base.toFixed(2));
+      mHigh = Number(Math.max(mOpen, mClose, stock.high || base).toFixed(2));
+      mLow = Number(Math.min(mOpen, mClose, stock.low || base).toFixed(2));
+      vol = Math.floor((stock.volume || 25000) * 18);
+    } else {
+      const mDelta = (base * 0.025) + (Math.random() - 0.4) * (base * 0.04);
+      mOpen = mClose;
+      mClose = Number((mClose + mDelta).toFixed(2));
+      mHigh = Number((Math.max(mOpen, mClose) + Math.random() * (base * 0.035)).toFixed(2));
+      mLow = Number((Math.min(mOpen, mClose) - Math.random() * (base * 0.03)).toFixed(2));
+      vol = Math.floor((stock.volume || 25000) * (14 + Math.random() * 8));
+    }
 
     chart1Y.push({
-      time: `${25 + Math.floor(m / 10)}/${String((m % 12) + 1).padStart(2, '0')}月`,
-      open: Number(mOpen.toFixed(2)),
-      high: Number(mHigh.toFixed(2)),
-      low: Number(mLow.toFixed(2)),
-      close: Number(mClose.toFixed(2)),
-      price: Number(mClose.toFixed(2)),
+      time: timeLabel,
+      open: mOpen,
+      high: mHigh,
+      low: mLow,
+      close: mClose,
+      price: mClose,
       volume: vol,
       ma60: Number((mClose * 0.93).toFixed(2)),
       ma240: Number((base * 0.78).toFixed(2))

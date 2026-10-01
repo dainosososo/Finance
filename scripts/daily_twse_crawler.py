@@ -180,5 +180,90 @@ def run_crawler():
             json.dump(cleaned_stocks, f, ensure_ascii=False, indent=2)
         print(f"[SUCCESS] Saved {len(cleaned_stocks)} daily closing stocks to {stocks_file}")
 
+    # 5. Fetch Key Stocks K-Line History (STOCK_DAY) for genuine daily candlestick data
+    fetch_key_stocks_kline()
+
+def fetch_key_stocks_kline():
+    import time
+    key_stocks = [
+        {"code": "2330", "name": "台積電"},
+        {"code": "2317", "name": "鴻海"},
+        {"code": "2454", "name": "聯發科"},
+        {"code": "2603", "name": "長榮"},
+        {"code": "0050", "name": "元大台灣50"},
+        {"code": "2308", "name": "台達電"},
+        {"code": "2881", "name": "富邦金"},
+        {"code": "2882", "name": "國泰金"},
+        {"code": "3231", "name": "緯創"},
+        {"code": "2382", "name": "廣達"}
+    ]
+    
+    now = datetime.now()
+    # Query current month and previous month
+    curr_ym = now.strftime("%Y%m01")
+    if now.month == 1:
+        prev_ym = f"{now.year - 1}1201"
+    else:
+        prev_ym = f"{now.year}{now.month - 1:02d}01"
+        
+    months_to_fetch = [prev_ym, curr_ym]
+    kline_result = {}
+
+    print(f"[INFO] Fetching historical K-line candlestick data for key stocks across {months_to_fetch}...")
+    for item in key_stocks:
+        code = item["code"]
+        name = item["name"]
+        kline_result[code] = {
+            "code": code,
+            "name": name,
+            "days": []
+        }
+        seen_dates = set()
+
+        for ym in months_to_fetch:
+            url = f"https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date={ym}&stockNo={code}&response=json"
+            data = fetch_json(url, timeout=8)
+            if data and data.get("stat") == "OK" and data.get("data"):
+                for row in data["data"]:
+                    date_str = str(row[0]).strip()
+                    if date_str in seen_dates:
+                        continue
+                    seen_dates.add(date_str)
+                    
+                    try:
+                        parts = date_str.split('/')
+                        roc_yr = int(parts[0])
+                        ad_yr = roc_yr + 1911
+                        mm = parts[1].zfill(2)
+                        dd = parts[2].zfill(2)
+                        
+                        vol = int(int(str(row[1]).replace(',', '')) / 1000) # 轉為張數
+                        open_p = float(str(row[3]).replace(',', ''))
+                        high_p = float(str(row[4]).replace(',', ''))
+                        low_p = float(str(row[5]).replace(',', ''))
+                        close_p = float(str(row[6]).replace(',', ''))
+                        chg_str = str(row[7]).replace(',', '')
+                        chg_val = float(chg_str) if chg_str else 0.0
+
+                        kline_result[code]["days"].append({
+                            "time": f"{mm}/{dd}",
+                            "fullDate": f"{ad_yr}-{mm}-{dd}",
+                            "open": open_p,
+                            "high": high_p,
+                            "low": low_p,
+                            "close": close_p,
+                            "price": close_p,
+                            "volume": vol,
+                            "change": chg_val
+                        })
+                    except Exception as parse_err:
+                        continue
+            time.sleep(0.1)
+
+    kline_file = os.path.join(OUTPUT_DIR, "stock_kline_history.json")
+    with open(kline_file, "w", encoding="utf-8") as f:
+        json.dump(kline_result, f, ensure_ascii=False, indent=2)
+    print(f"[SUCCESS] Saved historical K-line data for {len(kline_result)} stocks to {kline_file}")
+
 if __name__ == "__main__":
     run_crawler()

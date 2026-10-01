@@ -290,13 +290,16 @@ export default function CandlestickChart({
                 />
 
                 {/* X-axis Date/Time Labels for selected key intervals */}
-                {(i === 0 || i === Math.floor(data.length / 2) || i === data.length - 1) && (
+                {(data.length <= 6 
+                  ? true 
+                  : (i === 0 || i === Math.floor(data.length * 0.25) || i === Math.floor(data.length * 0.5) || i === Math.floor(data.length * 0.75) || i === data.length - 1)
+                ) && (
                   <text 
                     x={x} 
                     y={svgHeight - 8} 
                     fill="#64748B" 
                     fontSize="10" 
-                    textAnchor="middle"
+                    textAnchor={i === data.length - 1 ? 'end' : (i === 0 ? 'start' : 'middle')}
                     fontFamily="monospace"
                   >
                     {d.time}
