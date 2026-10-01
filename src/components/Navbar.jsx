@@ -53,58 +53,6 @@ export default function Navbar({
 
   return (
     <header className="sticky top-0 z-40 w-full glass-panel border-b border-pink-200 shadow-xs backdrop-blur-md bg-[#fff8fa]/95">
-      {/* Top System Status Bar (櫻花粉主題) */}
-      <div className="bg-[#fff0f3] border-b border-pink-200 py-1.5 px-4 text-xs font-mono flex items-center justify-between overflow-hidden">
-        <div className="flex items-center space-x-4">
-          <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800 border border-pink-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping mr-1.5"></span>
-            臺灣證券交易所 (TWSE) 即時連線 • 當日即時行情中心
-          </span>
-          <span className="hidden md:inline text-[11px] text-rose-900/70 font-sans">
-            含雙熱力圖多區塊觀測 • 自由縮放K線與三竹深度分析
-          </span>
-        </div>
-
-        <div className="flex items-center space-x-3">
-          {/* Subtle Refresh Controls in Top Bar */}
-          <div className="flex items-center space-x-2 text-xs">
-            <button
-              onClick={() => setAutoRefresh && setAutoRefresh(!autoRefresh)}
-              className={`flex items-center space-x-1 px-2.5 py-0.5 rounded-md text-[11px] font-medium transition ${
-                autoRefresh 
-                  ? 'bg-emerald-100/80 text-emerald-800 border border-emerald-300 font-bold' 
-                  : 'bg-white text-slate-600 border border-pink-200'
-              }`}
-              title="切換定時自動抓取最新報價"
-            >
-              <Zap className={`w-3 h-3 ${autoRefresh ? 'text-emerald-600 fill-emerald-600/30' : ''}`} />
-              <span>{autoRefresh ? `自動 (${refreshInterval/1000}s)` : '暫停更新'}</span>
-            </button>
-
-            <button
-              onClick={onManualRefresh}
-              disabled={isRefreshing}
-              className="flex items-center space-x-1 text-[11px] text-rose-800 hover:text-rose-950 px-2 py-0.5 rounded-md bg-white border border-pink-200 hover:bg-rose-50 transition active:scale-95 disabled:opacity-50"
-              title="立即抓取最新證交所盤後與即時資料"
-            >
-              <RefreshCw className={`w-3 h-3 ${isRefreshing ? 'animate-spin' : ''}`} />
-              <span className="font-semibold">刷新</span>
-            </button>
-          </div>
-
-          {/* GitHub Repository Link */}
-          <a
-            href="https://github.com/dainosososo/Finance"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:flex items-center space-x-1.5 text-xs text-rose-800 hover:text-rose-950 transition-colors bg-white/90 hover:bg-rose-50 px-2.5 py-1 rounded-md border border-pink-200 shadow-2xs"
-          >
-            <Github className="w-3.5 h-3.5" />
-            <span>dainosososo/Finance</span>
-          </a>
-        </div>
-      </div>
-
       {/* Main Navigation Bar - 搜尋框占用整個橫幅空間 */}
       <div className="w-full px-4 sm:px-6 lg:px-8 h-16 flex items-center gap-4">
         {/* Sidebar Toggle & Brand Logo */}

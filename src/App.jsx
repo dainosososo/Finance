@@ -130,15 +130,6 @@ export default function App() {
     }
   };
 
-  const TABS = [
-    { id: 'ALL', name: '雙熱力圖中心', icon: Flame },
-    { id: 'MARKET', name: '大盤與市場總覽', icon: Layers },
-    { id: 'REALTIME', name: '即時自選', icon: Zap },
-    { id: 'RANKINGS', name: '三大排行', icon: Coins },
-    { id: 'NEWS', name: '產業時事', icon: Newspaper },
-    { id: 'DAILY', name: '全股報價庫', icon: Database },
-  ];
-
   return (
     <div className="min-h-screen bg-[#fff8fa] text-slate-900 font-sans flex flex-col selection:bg-rose-500 selection:text-white">
       {/* Top Navbar */}
@@ -174,35 +165,6 @@ export default function App() {
 
         {/* Center Main View Area */}
         <main className="flex-1 overflow-y-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
-          
-          {/* Minimalist Tab Navigation Bar (櫻花粉精緻主題) */}
-          <div className="flex items-center justify-between gap-3 bg-[#fff0f3] p-2 sm:p-2.5 rounded-2xl border border-pink-200/90 shadow-xs backdrop-blur-md">
-            <div className="flex items-center space-x-1.5 overflow-x-auto scrollbar-none pb-1 sm:pb-0">
-              {TABS.map((tab) => {
-                const Icon = tab.icon;
-                const isActive = activeTab === tab.id;
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`flex items-center space-x-2 px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
-                      isActive
-                        ? 'bg-rose-600 text-white shadow-xs'
-                        : 'text-rose-900/80 hover:text-rose-950 hover:bg-rose-100/70'
-                    }`}
-                  >
-                    <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-white' : 'text-rose-600'}`} />
-                    <span>{tab.name}</span>
-                  </button>
-                );
-              })}
-            </div>
-
-            <div className="text-xs text-rose-800 font-mono hidden md:flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>台灣證券交易所 即時數據連線中</span>
-            </div>
-          </div>
 
           {/* 1. TAB: ALL (首頁中心雙熱力圖: 即時成交值、產業結構板塊) */}
           {activeTab === 'ALL' && (

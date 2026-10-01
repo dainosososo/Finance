@@ -81,12 +81,17 @@ export default function CandlestickChart({
   const [activeIndicators, setActiveIndicators] = useState(['MACD', 'KD']);
   const [currentIndicatorCategory, setCurrentIndicatorCategory] = useState('COMMON');
 
-  // 4. 畫圖功能狀態
+  // 4. 畫圖功能與移動線條狀態 (支援任意繪製線條選中與滑鼠拖曳移動)
   const [drawingTool, setDrawingTool] = useState('POINTER'); 
   const [lineColor, setLineColor] = useState('#E11D48'); // 預設櫻花紅
   const [drawnLines, setDrawnLines] = useState([]); // [{ id, type, x1, y1, x2, y2, price, color }]
   const [activeDrawPoint, setActiveDrawPoint] = useState(null); // 拖曳中起點 {x, y}
   const [currentMousePos, setCurrentMousePos] = useState(null); // 當前游標座標 {x, y}
+
+  // 移動線條狀態 (Movable lines)
+  const [hoveredLineId, setHoveredLineId] = useState(null);
+  const [selectedLineId, setSelectedLineId] = useState(null);
+  const [draggedLineInfo, setDraggedLineInfo] = useState(null); // { id, startMouseX, startMouseY, initialLine }
 
   // 綁定非被動滾輪事件 (完全阻擋視窗垂直滾動，轉為平滑K棒縮放)
   useEffect(() => {
@@ -279,13 +284,29 @@ export default function CandlestickChart({
   const svgWidth = 720;
   const paddingLeft = 10;
   const paddingRight = 68; // 右側價格與指標標籤
-  const paddingTop = 22;
-  const klineHeight = 180; // 主圖 K 線高度
-  const subChartHeight = 74; // 每個副圖列高度
-  const subChartGap = 16; // 副圖列間距
+  const paddingTop = 20;
 
-  const totalSubHeight = activeIndicators.length * (subChartHeight + subChartGap);
-  const svgHeight = paddingTop + klineHeight + (activeIndicators.length > 0 ? totalSubHeight + 10 : 0) + 24;
+  // 動態分配主圖與副圖高度，確保在任何副圖數量下整體高度恆定在 ~330px 內，絕不溢出
+  const numSub = activeIndicators.length;
+  let klineHeight = 220;
+  let subChartHeight = 65;
+  const subChartGap = 14;
+
+  if (numSub === 0) {
+    klineHeight = 260;
+  } else if (numSub === 1) {
+    klineHeight = 180;
+    subChartHeight = 80;
+  } else if (numSub === 2) {
+    klineHeight = 150;
+    subChartHeight = 62;
+  } else {
+    klineHeight = 120;
+    subChartHeight = 48;
+  }
+
+  const totalSubHeight = numSub * (subChartHeight + subChartGap);
+  const svgHeight = paddingTop + klineHeight + (numSub > 0 ? totalSubHeight + 6 : 0) + 22;
 
   const chartAreaWidth = svgWidth - paddingLeft - paddingRight;
   const barSpacing = chartAreaWidth / currentWindow.length;
@@ -340,12 +361,63 @@ export default function CandlestickChart({
     return { x, y };
   };
 
-  // 滑鼠移動處理 (支援十字準星、畫線預覽與滑鼠拖曳平移)
+  // 抓取移動線條起點處理 (Movable Drawn Line)
+  const handleLineMouseDown = (e, line) => {
+    e.stopPropagation();
+    setSelectedLineId(line.id);
+    const { x, y } = getSvgCoordinates(e);
+    setDraggedLineInfo({
+      id: line.id,
+      startMouseX: x,
+      startMouseY: y,
+      initialLine: { ...line }
+    });
+  };
+
+  // 滑鼠移動處理 (支援十字準星、移動已畫線條、畫線預覽與畫布拖曳平移)
   const handleMouseMove = (e) => {
     const { x, y } = getSvgCoordinates(e);
     setCurrentMousePos({ x, y });
 
-    // 拖曳平移處理 (Drag-to-Pan)
+    // 1. 拖曳移動已繪製線條 (Movable Line Moving)
+    if (draggedLineInfo) {
+      const dx = x - draggedLineInfo.startMouseX;
+      const dy = y - draggedLineInfo.startMouseY;
+      setDrawnLines(prev => prev.map(l => {
+        if (l.id !== draggedLineInfo.id) return l;
+        const init = draggedLineInfo.initialLine;
+        if (init.type === 'HORIZONTAL') {
+          const newY = Math.max(paddingTop, Math.min(paddingTop + klineHeight, init.y1 + dy));
+          return {
+            ...l,
+            y1: newY,
+            y2: newY,
+            price: getPriceFromY(newY)
+          };
+        } else if (init.type === 'VERTICAL') {
+          const newX = Math.max(paddingLeft, Math.min(svgWidth - paddingRight, init.x1 + dx));
+          return {
+            ...l,
+            x1: newX,
+            x2: newX
+          };
+        } else if (init.type === 'TRENDLINE' || init.type === 'RAY') {
+          return {
+            ...l,
+            x1: init.x1 + dx,
+            y1: init.y1 + dy,
+            x2: init.x2 + dx,
+            y2: init.y2 + dy,
+            startPrice: getPriceFromY(init.y1 + dy),
+            endPrice: getPriceFromY(init.y2 + dy)
+          };
+        }
+        return l;
+      }));
+      return;
+    }
+
+    // 2. 拖曳平移畫布歷史處理 (Drag-to-Pan)
     if (isDragging && drawingTool === 'POINTER') {
       const deltaPixels = e.clientX - dragStartX;
       const deltaBars = Math.round(deltaPixels / Math.max(1, (containerRef.current?.clientWidth || 700) / currentWindow.length));
@@ -367,11 +439,16 @@ export default function CandlestickChart({
     setHoverIndex(null);
     setCurrentMousePos(null);
     setIsDragging(false);
+    setHoveredLineId(null);
+    setDraggedLineInfo(null);
   };
 
   // 畫圖與拖曳平移點擊事件處理
   const handleMouseDown = (e) => {
-    // 若為游標模式，啟動滑鼠拖曳平移
+    // 點擊空白處時取消選中線條
+    setSelectedLineId(null);
+
+    // 若為游標模式，啟動滑鼠拖曳平移畫布
     if (drawingTool === 'POINTER') {
       setIsDragging(true);
       setDragStartX(e.clientX);
@@ -399,6 +476,11 @@ export default function CandlestickChart({
   };
 
   const handleMouseUp = (e) => {
+    if (draggedLineInfo) {
+      setDraggedLineInfo(null);
+      return;
+    }
+
     if (isDragging) {
       setIsDragging(false);
     }
@@ -425,6 +507,79 @@ export default function CandlestickChart({
     }
     setActiveDrawPoint(null);
   };
+
+  // 全域滑鼠拖曳已繪製線條監聽 (避免鼠標移出 SVG 時斷觸)
+  useEffect(() => {
+    if (!draggedLineInfo) return;
+    const onWindowMouseMove = (e) => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * svgWidth;
+      const y = ((e.clientY - rect.top) / rect.height) * svgHeight;
+      const dx = x - draggedLineInfo.startMouseX;
+      const dy = y - draggedLineInfo.startMouseY;
+
+      setDrawnLines(prev => prev.map(l => {
+        if (l.id !== draggedLineInfo.id) return l;
+        const init = draggedLineInfo.initialLine;
+        if (init.type === 'HORIZONTAL') {
+          const newY = Math.max(paddingTop, Math.min(paddingTop + klineHeight, init.y1 + dy));
+          return {
+            ...l,
+            y1: newY,
+            y2: newY,
+            price: getPriceFromY(newY)
+          };
+        } else if (init.type === 'VERTICAL') {
+          const newX = Math.max(paddingLeft, Math.min(svgWidth - paddingRight, init.x1 + dx));
+          return {
+            ...l,
+            x1: newX,
+            x2: newX
+          };
+        } else if (init.type === 'TRENDLINE' || init.type === 'RAY') {
+          return {
+            ...l,
+            x1: init.x1 + dx,
+            y1: init.y1 + dy,
+            x2: init.x2 + dx,
+            y2: init.y2 + dy,
+            startPrice: getPriceFromY(init.y1 + dy),
+            endPrice: getPriceFromY(init.y2 + dy)
+          };
+        }
+        return l;
+      }));
+    };
+
+    const onWindowMouseUp = () => {
+      setDraggedLineInfo(null);
+    };
+
+    window.addEventListener('mousemove', onWindowMouseMove);
+    window.addEventListener('mouseup', onWindowMouseUp);
+    return () => {
+      window.removeEventListener('mousemove', onWindowMouseMove);
+      window.removeEventListener('mouseup', onWindowMouseUp);
+    };
+  }, [draggedLineInfo, svgWidth, svgHeight, paddingTop, klineHeight, paddingLeft, paddingRight, minPrice, maxPrice]);
+
+  // 全域鍵盤刪除或取消選中手繪線
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Delete' || e.key === 'Backspace') {
+        if (selectedLineId) {
+          setDrawnLines(prev => prev.filter(l => l.id !== selectedLineId));
+          setSelectedLineId(null);
+        }
+      } else if (e.key === 'Escape') {
+        setSelectedLineId(null);
+        setActiveDrawPoint(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedLineId]);
 
   // 多副圖指標開關切換 (Toggle Indicator)
   const toggleIndicator = (id) => {
@@ -466,33 +621,97 @@ export default function CandlestickChart({
   const dateLabelIndices = [0, dateStep, dateStep * 2, dateStep * 3, currentWindow.length - 1];
 
   return (
-    <div className="w-full flex flex-col select-none space-y-3">
+    <div className="w-full h-full flex flex-col select-none space-y-1.5 min-h-0 justify-between">
       {/* ========================================================= */}
-      {/* 0. 標的上市櫃里程碑與全歷史成交 K 棒概況                   */}
+      {/* 0. 置頂副圖指標即時切換列 (Image 1 Style - 100% 可見即時點擊) */}
       {/* ========================================================= */}
-      <div className="bg-[#fff0f3] px-3.5 py-1.5 rounded-xl border border-pink-200 flex flex-wrap items-center justify-between text-xs text-rose-900/90 gap-2">
-        <div className="flex items-center space-x-2 font-mono">
-          <Calendar className="w-3.5 h-3.5 text-rose-600" />
-          <span>上市櫃日期: <strong className="text-slate-900">{stock?.listingDate || '1994-09-05'}</strong></span>
-          <span>•</span>
-          <span>掛牌價: <strong className="text-slate-900">NT$ {stock?.ipoPrice || '10.0'}</strong></span>
-          <span>•</span>
-          <span className="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-            全歷史收錄 {data.length} 根 K 棒
+      <div className="bg-[#fff0f3] px-2.5 py-1.5 rounded-xl border border-pink-200 flex flex-wrap items-center justify-between gap-1.5 text-xs shrink-0 shadow-2xs">
+        <div className="flex items-center space-x-1 overflow-x-auto scrollbar-none py-0.5">
+          <span className="font-extrabold text-[11px] text-rose-900 shrink-0 flex items-center gap-1">
+            <Activity className="w-3.5 h-3.5 text-rose-600" />
+            副圖指標:
           </span>
+          {SUBCHART_CATALOG.map(item => {
+            const isSelected = activeIndicators.includes(item.id);
+            return (
+              <button
+                key={item.id}
+                onClick={() => toggleIndicator(item.id)}
+                className={`px-2 py-0.5 rounded-md text-[11px] font-bold transition whitespace-nowrap cursor-pointer ${
+                  isSelected
+                    ? 'bg-rose-600 text-white shadow-2xs'
+                    : 'bg-white text-rose-800 hover:bg-rose-100 border border-pink-200'
+                }`}
+                title={item.desc}
+              >
+                {item.name}
+              </button>
+            );
+          })}
         </div>
 
-        <div className="text-[11px] text-rose-700 font-sans flex items-center gap-1 font-semibold">
-          <span>支援滑鼠按住畫布平移</span>
-          <span>•</span>
-          <span>一鍵全覽上市至今</span>
+        {/* 常用組合一鍵切換快捷鍵 */}
+        <div className="flex items-center space-x-1 shrink-0 text-[10px]">
+          <button
+            onClick={() => setActiveIndicators(['MACD'])}
+            className={`px-2 py-0.5 rounded font-bold border transition cursor-pointer ${
+              activeIndicators.length === 1 && activeIndicators[0] === 'MACD'
+                ? 'bg-rose-600 text-white border-rose-600'
+                : 'bg-white hover:bg-rose-50 border-pink-200 text-rose-800'
+            }`}
+            title="單圖 MACD"
+          >
+            單(MACD)
+          </button>
+          <button
+            onClick={() => setActiveIndicators(['KD'])}
+            className={`px-2 py-0.5 rounded font-bold border transition cursor-pointer ${
+              activeIndicators.length === 1 && activeIndicators[0] === 'KD'
+                ? 'bg-rose-600 text-white border-rose-600'
+                : 'bg-white hover:bg-rose-50 border-pink-200 text-rose-800'
+            }`}
+            title="單圖 KD"
+          >
+            單(KD)
+          </button>
+          <button
+            onClick={() => setActiveIndicators(['MACD', 'KD'])}
+            className={`px-2 py-0.5 rounded font-bold border transition cursor-pointer ${
+              activeIndicators.includes('MACD') && activeIndicators.includes('KD') && activeIndicators.length === 2
+                ? 'bg-rose-600 text-white border-rose-600'
+                : 'bg-white hover:bg-rose-50 border-pink-200 text-rose-800'
+            }`}
+            title="一鍵雙指標 (MACD + KD)"
+          >
+            雙(MACD+KD)
+          </button>
+          <button
+            onClick={() => setActiveIndicators(['MACD', 'KD', 'VOL'])}
+            className={`px-2 py-0.5 rounded font-bold border transition cursor-pointer ${
+              activeIndicators.length === 3
+                ? 'bg-rose-600 text-white border-rose-600'
+                : 'bg-white hover:bg-rose-50 border-pink-200 text-rose-800'
+            }`}
+            title="三指標 (MACD + KD + VOL)"
+          >
+            三(+VOL)
+          </button>
+          {activeIndicators.length > 0 && (
+            <button
+              onClick={() => setActiveIndicators([])}
+              className="px-1.5 py-0.5 bg-white hover:bg-rose-50 border border-pink-200 text-slate-500 rounded font-bold cursor-pointer"
+              title="隱藏所有副圖指標"
+            >
+              隱藏副圖
+            </button>
+          )}
         </div>
       </div>
 
       {/* ========================================================= */}
-      {/* 1. 專業畫圖工具列 (Drawing Toolbar)                     */}
+      {/* 1. 專業畫圖工具列 (Drawing Toolbar - 支援移動已畫線條)        */}
       {/* ========================================================= */}
-      <div className="bg-[#fff0f3] px-3 py-2 rounded-2xl border border-pink-200/90 flex flex-wrap items-center justify-between gap-2 text-xs shadow-xs">
+      <div className="bg-[#fff0f3] px-2.5 py-1.5 rounded-xl border border-pink-200 flex flex-wrap items-center justify-between gap-1.5 text-xs shrink-0 shadow-2xs">
         <div className="flex items-center space-x-1.5 flex-wrap">
           <span className="text-[11px] font-bold text-rose-800 flex items-center gap-1">
             <PenTool className="w-3.5 h-3.5 text-rose-600" />
@@ -500,7 +719,7 @@ export default function CandlestickChart({
           </span>
 
           {[
-            { id: 'POINTER', label: '游標/平移', icon: '🖱' },
+            { id: 'POINTER', label: '游標/平移/移動線', icon: '🖱' },
             { id: 'TRENDLINE', label: '趨勢線', icon: '📈' },
             { id: 'HORIZONTAL', label: '水平線', icon: '➖' },
             { id: 'VERTICAL', label: '垂直線', icon: '⏐' },
@@ -509,10 +728,10 @@ export default function CandlestickChart({
             <button
               key={tool.id}
               onClick={() => setDrawingTool(tool.id)}
-              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1 ${
+              className={`px-2 py-0.5 rounded-lg text-xs font-bold transition flex items-center gap-1 cursor-pointer ${
                 drawingTool === tool.id 
                   ? 'bg-rose-600 text-white shadow-2xs' 
-                  : 'bg-white/90 text-rose-800 hover:bg-rose-100 border border-pink-200'
+                  : 'bg-white text-rose-800 hover:bg-rose-100 border border-pink-200'
               }`}
             >
               <span>{tool.icon}</span>
@@ -527,30 +746,48 @@ export default function CandlestickChart({
                 key={c}
                 onClick={() => setLineColor(c)}
                 style={{ backgroundColor: c }}
-                className={`w-4 h-4 rounded-full transition-transform ${
+                className={`w-3.5 h-3.5 rounded-full transition-transform cursor-pointer ${
                   lineColor === c ? 'scale-125 ring-2 ring-rose-400' : 'opacity-80 hover:opacity-100'
                 }`}
                 title={`選擇顏色 ${c}`}
               />
             ))}
           </div>
+
+          <span className="text-[10px] text-rose-600/90 font-medium hidden md:inline ml-1">
+            💡 已畫好的線可直接點擊拖曳移動
+          </span>
         </div>
 
-        {/* 畫線控制: 復原、清除全部、支撐壓力線開關 */}
-        <div className="flex items-center space-x-2">
+        {/* 畫線控制: 選中刪除、復原、清除全部、支撐壓力線開關 */}
+        <div className="flex items-center space-x-1.5">
+          {selectedLineId && (
+            <button
+              onClick={() => {
+                setDrawnLines(prev => prev.filter(l => l.id !== selectedLineId));
+                setSelectedLineId(null);
+              }}
+              className="px-2 py-0.5 text-[11px] bg-rose-600 text-white hover:bg-rose-700 rounded-lg font-bold flex items-center gap-1 shadow-2xs cursor-pointer animate-pulse"
+              title="刪除選中的手繪線 (也可按鍵盤 Delete 鍵)"
+            >
+              <Trash2 className="w-3 h-3" />
+              <span>刪除選中線</span>
+            </button>
+          )}
+
           {drawnLines.length > 0 && (
             <>
               <button
                 onClick={() => setDrawnLines(prev => prev.slice(0, -1))}
-                className="px-2 py-1 text-[11px] bg-white border border-pink-200 text-rose-700 hover:bg-rose-50 rounded-lg font-bold flex items-center gap-1 shadow-2xs"
+                className="px-1.5 py-0.5 text-[11px] bg-white border border-pink-200 text-rose-700 hover:bg-rose-50 rounded-lg font-bold flex items-center gap-1 shadow-2xs cursor-pointer"
                 title="復原上一條線"
               >
                 <RotateCcw className="w-3 h-3" />
                 <span>復原</span>
               </button>
               <button
-                onClick={() => setDrawnLines([])}
-                className="px-2 py-1 text-[11px] bg-white border border-pink-200 text-rose-700 hover:bg-rose-50 rounded-lg font-bold flex items-center gap-1 shadow-2xs"
+                onClick={() => { setDrawnLines([]); setSelectedLineId(null); }}
+                className="px-1.5 py-0.5 text-[11px] bg-white border border-pink-200 text-rose-700 hover:bg-rose-50 rounded-lg font-bold flex items-center gap-1 shadow-2xs cursor-pointer"
                 title="清除所有繪製線條"
               >
                 <Trash2 className="w-3 h-3" />
@@ -561,7 +798,7 @@ export default function CandlestickChart({
 
           <button
             onClick={() => setShowSupportResistance(!showSupportResistance)}
-            className={`px-2.5 py-1 rounded-lg text-[11px] font-bold transition flex items-center gap-1 border ${
+            className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition flex items-center gap-1 border cursor-pointer ${
               showSupportResistance 
                 ? 'bg-rose-100 text-rose-800 border-pink-300' 
                 : 'bg-white text-slate-500 border-pink-200'
@@ -569,7 +806,7 @@ export default function CandlestickChart({
             title="開啟或隱藏圖表關鍵支撐與壓力輔助線"
           >
             {showSupportResistance ? <Eye className="w-3 h-3 text-rose-600" /> : <EyeOff className="w-3 h-3" />}
-            <span>支撐壓力線: {showSupportResistance ? '開' : '關'}</span>
+            <span>支撐壓力: {showSupportResistance ? '開' : '關'}</span>
           </button>
         </div>
       </div>
@@ -633,16 +870,19 @@ export default function CandlestickChart({
         onMouseLeave={handleMouseLeave}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
-        className={`relative w-full overflow-hidden bg-white rounded-2xl border border-pink-200/90 p-2 shadow-xs transition-all ${
-          drawingTool === 'POINTER' 
-            ? (isDragging ? 'cursor-grabbing' : 'cursor-grab') 
-            : 'cursor-crosshair'
+        className={`relative w-full flex-1 min-h-[220px] max-h-[50vh] overflow-hidden bg-white rounded-xl border border-pink-200/90 p-1.5 shadow-2xs flex items-center justify-center transition-all ${
+          draggedLineInfo 
+            ? 'cursor-grabbing' 
+            : (drawingTool === 'POINTER' 
+                ? (isDragging ? 'cursor-grabbing' : 'cursor-grab') 
+                : 'cursor-crosshair')
         }`}
-        title="游標模式下可按住滑鼠直接左右拖曳平移歷史"
+        title="游標模式下可按住滑鼠直接左右拖曳平移歷史，手繪線條可直接按住拖曳移動"
       >
         <svg 
           viewBox={`0 0 ${svgWidth} ${svgHeight}`} 
-          className="w-full h-auto overflow-visible select-none"
+          className="w-full h-full max-h-full select-none"
+          preserveAspectRatio="none"
         >
           {/* 主圖網格刻度線 (Grid lines) */}
           {priceTicks.map((price, idx) => {
@@ -829,26 +1069,66 @@ export default function CandlestickChart({
             );
           })}
 
-          {/* 使用者手繪線條渲染 */}
+          {/* 使用者手繪線條渲染 (支援點選與滑鼠拖曳移動 Movable Drawn Lines) */}
           {drawnLines.map(line => {
+            const isSelected = selectedLineId === line.id;
+            const isHovered = hoveredLineId === line.id;
+
             if (line.type === 'HORIZONTAL') {
               return (
-                <g key={line.id}>
+                <g 
+                  key={line.id} 
+                  style={{ cursor: draggedLineInfo?.id === line.id ? 'grabbing' : 'grab' }}
+                  onMouseDown={(e) => handleLineMouseDown(e, line)}
+                  onMouseEnter={() => setHoveredLineId(line.id)}
+                  onMouseLeave={() => setHoveredLineId(null)}
+                >
+                  {/* 寬透明抓取熱區 (Hitbox 方便滑鼠點擊選取拖曳) */}
+                  <line 
+                    x1={paddingLeft} 
+                    y1={line.y1} 
+                    x2={svgWidth - paddingRight} 
+                    y2={line.y1} 
+                    stroke="transparent" 
+                    strokeWidth="20" 
+                    style={{ pointerEvents: 'stroke' }}
+                  />
+                  {/* 選中或懸停時的高亮外圍光暈 */}
+                  {(isSelected || isHovered) && (
+                    <line 
+                      x1={paddingLeft} 
+                      y1={line.y1} 
+                      x2={svgWidth - paddingRight} 
+                      y2={line.y1} 
+                      stroke="#EC4899" 
+                      strokeWidth="6" 
+                      strokeOpacity="0.45"
+                    />
+                  )}
+                  {/* 實體手繪線 */}
                   <line 
                     x1={paddingLeft} 
                     y1={line.y1} 
                     x2={svgWidth - paddingRight} 
                     y2={line.y1} 
                     stroke={line.color} 
-                    strokeWidth="2" 
-                    strokeDasharray="4 2"
+                    strokeWidth={isSelected ? 2.8 : 2} 
+                    strokeDasharray={isSelected ? undefined : "4 2"}
                   />
+                  {/* 移動把手 (Handles) */}
+                  {isSelected && (
+                    <>
+                      <circle cx={paddingLeft + 12} cy={line.y1} r="4.5" fill="#FFFFFF" stroke={line.color} strokeWidth="2" />
+                      <circle cx={(paddingLeft + svgWidth - paddingRight) / 2} cy={line.y1} r="4.5" fill="#FFFFFF" stroke={line.color} strokeWidth="2" />
+                    </>
+                  )}
+                  {/* 價格標籤 */}
                   <rect 
                     x={svgWidth - paddingRight + 2} 
                     y={line.y1 - 7} 
                     width="62" 
                     height="14" 
-                    fill={line.color} 
+                    fill={isSelected ? '#BE185D' : line.color} 
                     rx="2"
                   />
                   <text 
@@ -865,31 +1145,96 @@ export default function CandlestickChart({
               );
             } else if (line.type === 'VERTICAL') {
               return (
-                <line 
+                <g 
                   key={line.id} 
-                  x1={line.x1} 
-                  y1={paddingTop} 
-                  x2={line.x1} 
-                  y2={svgHeight - 25} 
-                  stroke={line.color} 
-                  strokeWidth="2" 
-                  strokeDasharray="4 2"
-                />
+                  style={{ cursor: draggedLineInfo?.id === line.id ? 'grabbing' : 'grab' }}
+                  onMouseDown={(e) => handleLineMouseDown(e, line)}
+                  onMouseEnter={() => setHoveredLineId(line.id)}
+                  onMouseLeave={() => setHoveredLineId(null)}
+                >
+                  <line 
+                    x1={line.x1} 
+                    y1={paddingTop} 
+                    x2={line.x1} 
+                    y2={svgHeight - 25} 
+                    stroke="transparent" 
+                    strokeWidth="20" 
+                    style={{ pointerEvents: 'stroke' }}
+                  />
+                  {(isSelected || isHovered) && (
+                    <line 
+                      x1={line.x1} 
+                      y1={paddingTop} 
+                      x2={line.x1} 
+                      y2={svgHeight - 25} 
+                      stroke="#EC4899" 
+                      strokeWidth="6" 
+                      strokeOpacity="0.45"
+                    />
+                  )}
+                  <line 
+                    x1={line.x1} 
+                    y1={paddingTop} 
+                    x2={line.x1} 
+                    y2={svgHeight - 25} 
+                    stroke={line.color} 
+                    strokeWidth={isSelected ? 2.8 : 2} 
+                    strokeDasharray={isSelected ? undefined : "4 2"}
+                  />
+                  {isSelected && (
+                    <circle cx={line.x1} cy={(paddingTop + svgHeight - 25) / 2} r="4.5" fill="#FFFFFF" stroke={line.color} strokeWidth="2" />
+                  )}
+                </g>
               );
             } else if (line.type === 'TRENDLINE' || line.type === 'RAY') {
+              const endX = line.type === 'RAY' ? line.x2 + (line.x2 - line.x1) * 3 : line.x2;
+              const endY = line.type === 'RAY' ? line.y2 + (line.y2 - line.y1) * 3 : line.y2;
+              const midX = (line.x1 + line.x2) / 2;
+              const midY = (line.y1 + line.y2) / 2;
+
               return (
-                <g key={line.id}>
+                <g 
+                  key={line.id} 
+                  style={{ cursor: draggedLineInfo?.id === line.id ? 'grabbing' : 'grab' }}
+                  onMouseDown={(e) => handleLineMouseDown(e, line)}
+                  onMouseEnter={() => setHoveredLineId(line.id)}
+                  onMouseLeave={() => setHoveredLineId(null)}
+                >
                   <line 
                     x1={line.x1} 
                     y1={line.y1} 
-                    x2={line.type === 'RAY' ? line.x2 + (line.x2 - line.x1) * 3 : line.x2} 
-                    y2={line.type === 'RAY' ? line.y2 + (line.y2 - line.y1) * 3 : line.y2} 
+                    x2={endX} 
+                    y2={endY} 
+                    stroke="transparent" 
+                    strokeWidth="20" 
+                    style={{ pointerEvents: 'stroke' }}
+                  />
+                  {(isSelected || isHovered) && (
+                    <line 
+                      x1={line.x1} 
+                      y1={line.y1} 
+                      x2={endX} 
+                      y2={endY} 
+                      stroke="#EC4899" 
+                      strokeWidth="6" 
+                      strokeOpacity="0.45"
+                      strokeLinecap="round"
+                    />
+                  )}
+                  <line 
+                    x1={line.x1} 
+                    y1={line.y1} 
+                    x2={endX} 
+                    y2={endY} 
                     stroke={line.color} 
-                    strokeWidth="2.2" 
+                    strokeWidth={isSelected ? 2.8 : 2.2} 
                     strokeLinecap="round"
                   />
-                  <circle cx={line.x1} cy={line.y1} r="3" fill={line.color} />
-                  <circle cx={line.x2} cy={line.y2} r="3" fill={line.color} />
+                  <circle cx={line.x1} cy={line.y1} r={isSelected ? 5 : 3.5} fill={isSelected ? '#FFFFFF' : line.color} stroke={line.color} strokeWidth="2" />
+                  <circle cx={line.x2} cy={line.y2} r={isSelected ? 5 : 3.5} fill={isSelected ? '#FFFFFF' : line.color} stroke={line.color} strokeWidth="2" />
+                  {isSelected && (
+                    <circle cx={midX} cy={midY} r="4.5" fill="#FFFFFF" stroke={line.color} strokeWidth="2" />
+                  )}
                 </g>
               );
             }
@@ -1225,47 +1570,6 @@ export default function CandlestickChart({
         </svg>
       </div>
 
-      {/* ========================================================= */}
-      {/* 三竹智選股風格副圖指標切換列 (Image 1 Style)               */}
-      {/* ========================================================= */}
-      <div className="bg-[#fff0f3] px-3 py-1.5 rounded-xl border border-pink-200 flex items-center justify-between gap-2 text-xs shrink-0">
-        <div className="flex items-center space-x-1.5 overflow-x-auto scrollbar-none py-0.5">
-          <span className="font-extrabold text-[11px] text-slate-800 shrink-0">副圖指標:</span>
-          {SUBCHART_CATALOG.map(item => {
-            const isSelected = activeIndicators.includes(item.id);
-            return (
-              <button
-                key={item.id}
-                onClick={() => toggleIndicator(item.id)}
-                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition whitespace-nowrap ${
-                  isSelected
-                    ? 'bg-rose-600 text-white shadow-xs'
-                    : 'bg-white text-rose-800 hover:bg-rose-100 border border-pink-200'
-                }`}
-                title={item.desc}
-              >
-                {item.name}
-              </button>
-            );
-          })}
-        </div>
-        <div className="flex items-center space-x-1 shrink-0 text-[11px]">
-          <button
-            onClick={() => setActiveIndicators(['MACD', 'KD'])}
-            className="px-2 py-0.5 bg-white hover:bg-rose-100 border border-pink-200 text-rose-800 rounded font-bold"
-            title="一鍵切換為三竹經典雙指標並列"
-          >
-            雙標(MACD+KD)
-          </button>
-          <button
-            onClick={() => setActiveIndicators(['MACD', 'KD', 'VOL'])}
-            className="px-2 py-0.5 bg-white hover:bg-rose-100 border border-pink-200 text-rose-800 rounded font-bold"
-            title="三指標(+VOL)"
-          >
-            三標(+VOL)
-          </button>
-        </div>
-      </div>
 
       {/* ========================================================= */}
       {/* 緊湊時間軸歷史平移滑桿與週期快捷列                          */}

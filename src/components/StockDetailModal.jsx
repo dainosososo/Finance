@@ -525,21 +525,6 @@ export default function StockDetailModal({ stock, onClose }) {
             )}
           </div>
         )}
-
-        {/* ========================================================= */}
-        {/* 5. 模態底部狀態欄 (Modal Footer)                           */}
-        {/* ========================================================= */}
-        <div className="px-4 py-2 bg-[#fff0f3] border-t border-pink-200 flex items-center justify-between text-xs text-rose-800 shrink-0">
-          <span className="font-mono text-[11px]">
-            臺灣證券交易所 (TWSE) • 三竹智選股規格深度技術指標模組 (無滑動鎖定視窗)
-          </span>
-          <button
-            onClick={onClose}
-            className="px-4 py-1 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-bold transition shadow-xs text-xs"
-          >
-            完成檢視
-          </button>
-        </div>
       </div>
     </div>
   );
