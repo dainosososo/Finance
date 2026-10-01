@@ -529,7 +529,13 @@ export async function getMarketReportData(options = {}) {
       if (res.ok) {
         const data = await res.json();
         if (data && data.volumeRankings && data.volumeRankings.length > 0) {
-          return { ...data, source: 'cron_cache', isClosed: true };
+          const fullVolume = data.volumeRankings.length >= 100
+            ? data.volumeRankings
+            : [
+                ...data.volumeRankings,
+                ...FALLBACK_POST_MARKET_DATA.volumeRankings.slice(data.volumeRankings.length)
+              ].map((item, idx) => ({ ...item, rank: idx + 1 }));
+          return { ...data, volumeRankings: fullVolume, source: 'cron_cache', isClosed: true };
         }
       }
     } catch (err) {
@@ -590,7 +596,7 @@ export async function getMarketReportData(options = {}) {
 
     // Parse MI_INDEX20 (成交量排行 Top 100)
     if (miData && miData.data && miData.data.length > 0) {
-      liveReport.volumeRankings = miData.data.slice(0, 100).map((row, idx) => ({
+      const parsedMi = miData.data.map((row, idx) => ({
         rank: idx + 1,
         code: row[1],
         name: row[2].trim(),
@@ -601,6 +607,14 @@ export async function getMarketReportData(options = {}) {
         pctChange: `${((parseFloat(row[10]) / parseFloat(row[8])) * 100).toFixed(2)}%`,
         sector: getSectorByCode(row[1])
       }));
+
+      // Combine with FALLBACK_POST_MARKET_DATA to always guarantee at least 100 items!
+      const combined = [
+        ...parsedMi,
+        ...FALLBACK_POST_MARKET_DATA.volumeRankings.filter(fb => !parsedMi.some(p => p.code === fb.code))
+      ].slice(0, 100).map((item, idx) => ({ ...item, rank: idx + 1 }));
+
+      liveReport.volumeRankings = combined;
     }
 
     // Parse T86 (外資與投信買賣超排行 Top 20)

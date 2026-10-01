@@ -1,33 +1,111 @@
 /**
  * 強勢股票資料庫 (Strong Stocks & Limit-Up Streaks Database)
- * 記錄台股漲停板、連續漲停1天(首板)、連續漲停2天、連續漲停3天、4天及以上(超級強勢飆股)
+ * 完整記錄台股漲停板各階梯分類：
+ * 1. 多於 5 天 (6+ 連板，妖股天花板)
+ * 2. 漲停 5 天 (5 連板)
+ * 3. 漲停 4 天 (4 連板)
+ * 4. 漲停 3 天 (3 連板)
+ * 5. 漲停 2 天 (2 連板)
+ * 6. 漲停 1 天 (今日首板)
+ * 7. 曾觸及漲停 (衝高換手震盪)
  */
 
 export const INITIAL_STRONG_STOCKS = [
   // ========================================================
-  // 連續漲停 4 天及以上 (4+ 連板 / 超級強勢人氣王)
+  // 1. 多於 5 天 (6+ 連板 / 超級妖股天花板)
+  // ========================================================
+  {
+    code: '8054',
+    name: '安國',
+    sector: '半導體 / ASIC與矽智財',
+    price: '188.50',
+    change: '+17.00',
+    pctChange: '+9.91%',
+    streak: 7,
+    streakLabel: '7連板 (妖股天花板)',
+    streakBadge: '🏆 7連板 (多於5天)',
+    firstLockTime: '09:00:12',
+    limitBuyVolume: 56200,
+    limitBuyAmount: '36.8 億',
+    totalVolume: 61200,
+    turnoverRate: '21.5%',
+    catalyst: 'ASIC矽智財轉型',
+    reason: '神盾集團轉型 ASIC 矽智財大爆發，星科金朋先進封裝先進架構技術量產，市場游資總龍頭連飆 7 根漲停',
+    foreignNet: '+9,600',
+    trustNet: '+4,200',
+    market: '上櫃'
+  },
+  {
+    code: '4542',
+    name: '科嶠',
+    sector: '半導體設備 / 烘烤設備',
+    price: '104.50',
+    change: '+9.50',
+    pctChange: '+10.00%',
+    streak: 6,
+    streakLabel: '6連板 (極致強勢)',
+    streakBadge: '🏆 6連板 (多於5天)',
+    firstLockTime: '09:00:45',
+    limitBuyVolume: 32400,
+    limitBuyAmount: '18.2 億',
+    totalVolume: 35800,
+    turnoverRate: '19.8%',
+    catalyst: 'CoWoS載板烘烤設備',
+    reason: '先進封裝 CoWoS 擴產潮帶動高階載板烘烤設備訂單翻倍，在手訂單直通年底，主力一字鎖死第 6 天',
+    foreignNet: '+4,800',
+    trustNet: '+1,900',
+    market: '上櫃'
+  },
+
+  // ========================================================
+  // 2. 漲停 5 天 (5 連板 / 波段主升總指標)
   // ========================================================
   {
     code: '3017',
     name: '奇鋐',
-    sector: '電腦周邊 / 散熱',
+    sector: '電腦周邊 / 散熱水冷',
     price: '640.00',
     change: '+58.00',
     pctChange: '+9.97%',
     streak: 5,
-    streakLabel: '5連板 (妖股)',
+    streakLabel: '5連板 (散熱龍頭)',
     streakBadge: '🚀 5連板',
     firstLockTime: '09:01:15',
-    limitBuyVolume: 38500, // 封單張數
+    limitBuyVolume: 38500,
     limitBuyAmount: '24.6 億',
     totalVolume: 54200,
     turnoverRate: '14.2%',
-    catalyst: 'AI水冷龍頭',
+    catalyst: 'AI水冷板龍頭',
     reason: 'GB200 水冷板與分歧管全球市佔第一，外資與投信連續五日大舉鎖碼，全市場人氣總指標',
     foreignNet: '+7,800',
     trustNet: '+6,500',
     market: '上市'
   },
+  {
+    code: '3583',
+    name: '辛耘',
+    sector: '半導體設備 / 濕製程',
+    price: '452.00',
+    change: '+41.00',
+    pctChange: '+9.98%',
+    streak: 5,
+    streakLabel: '5連板 (設備王)',
+    streakBadge: '🚀 5連板',
+    firstLockTime: '09:02:05',
+    limitBuyVolume: 29800,
+    limitBuyAmount: '21.5 億',
+    totalVolume: 41200,
+    turnoverRate: '15.6%',
+    catalyst: 'CoWoS濕製程自製設備',
+    reason: '台積電 CoWoS 濕製程自製設備市佔過半，交機時程排至明年下半年，投信外資齊買連續第 5 根漲停',
+    foreignNet: '+5,400',
+    trustNet: '+4,100',
+    market: '上市'
+  },
+
+  // ========================================================
+  // 3. 漲停 4 天 (4 連板 / 頂級主流人氣標竿)
+  // ========================================================
   {
     code: '2363',
     name: '矽統',
@@ -36,7 +114,7 @@ export const INITIAL_STRONG_STOCKS = [
     change: '+6.20',
     pctChange: '+10.00%',
     streak: 4,
-    streakLabel: '4連板',
+    streakLabel: '4連板 (聯電重整)',
     streakBadge: '👑 4連板',
     firstLockTime: '09:01:48',
     limitBuyVolume: 42000,
@@ -49,9 +127,51 @@ export const INITIAL_STRONG_STOCKS = [
     trustNet: '+2,100',
     market: '上市'
   },
+  {
+    code: '3535',
+    name: '晶彩科',
+    sector: '光電設備 / AOI檢測',
+    price: '78.50',
+    change: '+7.10',
+    pctChange: '+9.94%',
+    streak: 4,
+    streakLabel: '4連板 (先進檢測)',
+    streakBadge: '👑 4連板',
+    firstLockTime: '09:03:10',
+    limitBuyVolume: 26500,
+    limitBuyAmount: '12.4 億',
+    totalVolume: 39500,
+    turnoverRate: '16.8%',
+    catalyst: '半導體AOI檢測驗證',
+    reason: '跨足半導體晶圓級 AOI 檢測機台獲晶圓代工大廠認證， Micro LED 檢測訂單挹注，連飆 4 根漲停板',
+    foreignNet: '+4,900',
+    trustNet: '+1,800',
+    market: '上市'
+  },
+  {
+    code: '4967',
+    name: '十銓',
+    sector: '半導體 / 記憶體模組',
+    price: '138.00',
+    change: '+12.50',
+    pctChange: '+9.96%',
+    streak: 4,
+    streakLabel: '4連板 (記憶體狂飆)',
+    streakBadge: '👑 4連板',
+    firstLockTime: '09:04:15',
+    limitBuyVolume: 31200,
+    limitBuyAmount: '17.8 億',
+    totalVolume: 58400,
+    turnoverRate: '22.3%',
+    catalyst: 'DDR5與高頻寬記憶體',
+    reason: '原廠減產奏效帶動 DDR5 現貨合約價飆漲，高階電競記憶體與伺服器模組拉貨暴增，創下 4 連板佳績',
+    foreignNet: '+6,200',
+    trustNet: '+3,500',
+    market: '上市'
+  },
 
   // ========================================================
-  // 連續漲停 3 天 (3 連板 / 突破波段新高主流股)
+  // 4. 漲停 3 天 (3 連板 / 突破波段新高主流股)
   // ========================================================
   {
     code: '1519',
@@ -139,7 +259,7 @@ export const INITIAL_STRONG_STOCKS = [
   },
 
   // ========================================================
-  // 連續漲停 2 天 (2 連板 / 換手確認強勢延續)
+  // 5. 漲停 2 天 (2 連板 / 換手確認強勢延續)
   // ========================================================
   {
     code: '3363',
@@ -269,7 +389,7 @@ export const INITIAL_STRONG_STOCKS = [
   },
 
   // ========================================================
-  // 今日首板 (連續漲停 1 天 / 當日首度強勢發動啟動股)
+  // 6. 漲停 1 天 (今日首板 / 當日首度強勢發動啟動股)
   // ========================================================
   {
     code: '6116',
@@ -280,7 +400,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+9.73%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '09:12:05',
     limitBuyVolume: 28500,
     limitBuyAmount: '4.6 億',
@@ -301,7 +421,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+9.88%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '09:25:30',
     limitBuyVolume: 14200,
     limitBuyAmount: '3.2 億',
@@ -322,7 +442,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+10.00%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '09:40:12',
     limitBuyVolume: 9800,
     limitBuyAmount: '4.5 億',
@@ -343,7 +463,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+9.77%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '10:05:22',
     limitBuyVolume: 16500,
     limitBuyAmount: '1.9 億',
@@ -364,7 +484,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+9.95%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '10:32:15',
     limitBuyVolume: 8700,
     limitBuyAmount: '2.7 億',
@@ -385,7 +505,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+9.79%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '09:30:45',
     limitBuyVolume: 11200,
     limitBuyAmount: '2.1 億',
@@ -406,7 +526,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+10.00%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '09:05:18',
     limitBuyVolume: 35000,
     limitBuyAmount: '1.9 億',
@@ -427,7 +547,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+10.00%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '09:08:40',
     limitBuyVolume: 21000,
     limitBuyAmount: '7.2 億',
@@ -448,7 +568,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+9.92%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '10:15:30',
     limitBuyVolume: 12000,
     limitBuyAmount: '1.6 億',
@@ -469,7 +589,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+9.83%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '11:20:10',
     limitBuyVolume: 18900,
     limitBuyAmount: '2.4 億',
@@ -490,7 +610,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+9.98%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '09:18:25',
     limitBuyVolume: 7500,
     limitBuyAmount: '1.8 億',
@@ -511,7 +631,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+10.00%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '09:22:45',
     limitBuyVolume: 13400,
     limitBuyAmount: '5.1 億',
@@ -532,7 +652,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+10.00%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '09:50:30',
     limitBuyVolume: 9100,
     limitBuyAmount: '6.5 億',
@@ -553,7 +673,7 @@ export const INITIAL_STRONG_STOCKS = [
     pctChange: '+10.00%',
     streak: 1,
     streakLabel: '首板 (1天)',
-    streakBadge: '🔥 首板',
+    streakBadge: '🔥 首板 (1天)',
     firstLockTime: '10:45:12',
     limitBuyVolume: 15600,
     limitBuyAmount: '2.4 億',
@@ -567,7 +687,7 @@ export const INITIAL_STRONG_STOCKS = [
   },
 
   // ========================================================
-  // 觸及漲停 / 曾漲停 (強勢衝高震盪換手股)
+  // 7. 觸及漲停 / 曾漲停 (強勢衝高震盪換手股)
   // ========================================================
   {
     code: '2376',
