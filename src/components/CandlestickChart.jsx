@@ -77,9 +77,8 @@ export default function CandlestickChart({
   // 2. 支撐壓力線顯示開關
   const [showSupportResistance, setShowSupportResistance] = useState(true);
 
-  // 3. 【核心升級 1】: 多副圖指標陣列 (支援同時顯示多個副圖列)
-  // 預設同時顯示常用三指標: MACD、KD、VOL
-  const [activeIndicators, setActiveIndicators] = useState(['MACD', 'KD', 'VOL']);
+  // 3. 【核心升級 1】: 多副圖指標陣列 (預設比照三竹智選股同時並列 MACD + KD)
+  const [activeIndicators, setActiveIndicators] = useState(['MACD', 'KD']);
   const [currentIndicatorCategory, setCurrentIndicatorCategory] = useState('COMMON');
 
   // 4. 畫圖功能狀態
@@ -88,6 +87,25 @@ export default function CandlestickChart({
   const [drawnLines, setDrawnLines] = useState([]); // [{ id, type, x1, y1, x2, y2, price, color }]
   const [activeDrawPoint, setActiveDrawPoint] = useState(null); // 拖曳中起點 {x, y}
   const [currentMousePos, setCurrentMousePos] = useState(null); // 當前游標座標 {x, y}
+
+  // 綁定非被動滾輪事件 (完全阻擋視窗垂直滾動，轉為平滑K棒縮放)
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const handleWheel = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (e.deltaY < 0) {
+        setZoomCount(prev => Math.max(15, prev - 4));
+      } else {
+        setZoomCount(prev => Math.min(data.length, prev + 4));
+      }
+    };
+    el.addEventListener('wheel', handleWheel, { passive: false });
+    return () => {
+      el.removeEventListener('wheel', handleWheel);
+    };
+  }, [data.length]);
 
   // 自動適配縮放上限
   useEffect(() => {
@@ -260,14 +278,14 @@ export default function CandlestickChart({
   // SVG 尺寸配置 (多副圖自適應高度)
   const svgWidth = 720;
   const paddingLeft = 10;
-  const paddingRight = 72; // 右側價格與指標標籤
-  const paddingTop = 25;
-  const klineHeight = 220; // 主圖 K 線高度
-  const subChartHeight = 85; // 每個副圖列高度
+  const paddingRight = 68; // 右側價格與指標標籤
+  const paddingTop = 22;
+  const klineHeight = 180; // 主圖 K 線高度
+  const subChartHeight = 74; // 每個副圖列高度
   const subChartGap = 16; // 副圖列間距
 
   const totalSubHeight = activeIndicators.length * (subChartHeight + subChartGap);
-  const svgHeight = paddingTop + klineHeight + (activeIndicators.length > 0 ? totalSubHeight + 15 : 0) + 30;
+  const svgHeight = paddingTop + klineHeight + (activeIndicators.length > 0 ? totalSubHeight + 10 : 0) + 24;
 
   const chartAreaWidth = svgWidth - paddingLeft - paddingRight;
   const barSpacing = chartAreaWidth / currentWindow.length;
@@ -654,7 +672,21 @@ export default function CandlestickChart({
             );
           })}
 
-          {/* 關鍵短線壓力線 (Resistance Line) */}
+          {/* 三竹 Image 1 格式 MA 均線標頭: MA > 5T: ... 10T: ... 20T: ... */}
+          <text x={paddingLeft + 4} y={paddingTop - 7} fill="#475569" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+            MA &gt;
+          </text>
+          <text x={paddingLeft + 36} y={paddingTop - 7} fill="#2563EB" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+            5T:{activeItem?.ma5 ?? '--'}
+          </text>
+          <text x={paddingLeft + 102} y={paddingTop - 7} fill="#D97706" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+            20T:{activeItem?.ma20 ?? '--'}
+          </text>
+          <text x={paddingLeft + 172} y={paddingTop - 7} fill="#7C3AED" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+            60T:{activeItem?.ma60 ?? '--'}
+          </text>
+
+          {/* 關鍵短線壓力線 (三竹青藍色 Resistance Line) */}
           {showSupportResistance && activeResistancePrice && (
             <g>
               <line 
@@ -662,24 +694,24 @@ export default function CandlestickChart({
                 y1={getY(activeResistancePrice)} 
                 x2={svgWidth - paddingRight} 
                 y2={getY(activeResistancePrice)} 
-                stroke="#BE123C" 
-                strokeWidth="1.6" 
+                stroke="#0891B2" 
+                strokeWidth="1.4" 
                 strokeDasharray="6 3" 
               />
               <rect 
                 x={svgWidth - paddingRight + 4} 
                 y={getY(activeResistancePrice) - 8} 
-                width="64" 
-                height="16" 
-                fill="#BE123C" 
-                rx="4" 
+                width="62" 
+                height="15" 
+                fill="#0891B2" 
+                rx="3" 
               />
               <text 
-                x={svgWidth - paddingRight + 8} 
+                x={svgWidth - paddingRight + 7} 
                 y={getY(activeResistancePrice) + 3.5} 
                 fill="#FFFFFF" 
-                fontSize="9.5" 
-                fontFamily="monospace"
+                fontSize="9" 
+                fontFamily="monospace" 
                 fontWeight="bold"
               >
                 壓 NT${activeResistancePrice}
@@ -687,7 +719,7 @@ export default function CandlestickChart({
             </g>
           )}
 
-          {/* 關鍵回檔支撐線 (Support Line) */}
+          {/* 關鍵回檔支撐線 (三竹青藍色 Support Line) */}
           {showSupportResistance && activeSupportPrice && (
             <g>
               <line 
@@ -695,24 +727,24 @@ export default function CandlestickChart({
                 y1={getY(activeSupportPrice)} 
                 x2={svgWidth - paddingRight} 
                 y2={getY(activeSupportPrice)} 
-                stroke="#047857" 
-                strokeWidth="1.6" 
+                stroke="#0284C7" 
+                strokeWidth="1.4" 
                 strokeDasharray="6 3" 
               />
               <rect 
                 x={svgWidth - paddingRight + 4} 
                 y={getY(activeSupportPrice) - 8} 
-                width="64" 
-                height="16" 
-                fill="#047857" 
-                rx="4" 
+                width="62" 
+                height="15" 
+                fill="#0284C7" 
+                rx="3" 
               />
               <text 
-                x={svgWidth - paddingRight + 8} 
+                x={svgWidth - paddingRight + 7} 
                 y={getY(activeSupportPrice) + 3.5} 
                 fill="#FFFFFF" 
-                fontSize="9.5" 
-                fontFamily="monospace"
+                fontSize="9" 
+                fontFamily="monospace" 
                 fontWeight="bold"
               >
                 撐 NT${activeSupportPrice}
@@ -724,6 +756,36 @@ export default function CandlestickChart({
           {ma5Points && <polyline fill="none" stroke="#2563EB" strokeWidth="1.6" points={ma5Points} />}
           {ma20Points && <polyline fill="none" stroke="#D97706" strokeWidth="1.6" points={ma20Points} />}
           {ma60Points && <polyline fill="none" stroke="#7C3AED" strokeWidth="1.4" points={ma60Points} />}
+
+          {/* 最高價標籤 (三竹 Image 1: 紅色數字) */}
+          {(() => {
+            const highIdx = currentWindow.findIndex(d => (d.high ?? d.price) === maxPrice);
+            if (highIdx >= 0) {
+              const x = paddingLeft + (highIdx + 0.5) * barSpacing;
+              const y = getY(maxPrice);
+              return (
+                <text x={x} y={Math.max(paddingTop + 8, y - 4)} textAnchor="middle" fill="#DC2626" fontSize="9" fontFamily="monospace" fontWeight="bold">
+                  {maxPrice.toFixed(maxPrice > 500 ? 0 : 1)} ▲
+                </text>
+              );
+            }
+            return null;
+          })()}
+
+          {/* 最低價標籤 (三竹 Image 1: 綠色數字) */}
+          {(() => {
+            const lowIdx = currentWindow.findIndex(d => (d.low ?? d.price) === minPrice);
+            if (lowIdx >= 0) {
+              const x = paddingLeft + (lowIdx + 0.5) * barSpacing;
+              const y = getY(minPrice);
+              return (
+                <text x={x} y={Math.min(paddingTop + klineHeight - 2, y + 12)} textAnchor="middle" fill="#16A34A" fontSize="9" fontFamily="monospace" fontWeight="bold">
+                  {minPrice.toFixed(minPrice > 500 ? 0 : 1)} ▼
+                </text>
+              );
+            }
+            return null;
+          })()}
 
           {/* K 棒燭線本體 (Candlestick Bars) */}
           {currentWindow.map((d, idx) => {
@@ -891,29 +953,7 @@ export default function CandlestickChart({
                   strokeWidth="1.2"
                 />
 
-                {/* 副圖面板標籤背景與名稱 */}
-                <rect 
-                  x={paddingLeft + 4} 
-                  y={panelTop - 4} 
-                  width={catalogItem.name.length * 9 + 40} 
-                  height="16" 
-                  fill="#FFF0F3" 
-                  stroke="#F472B6" 
-                  strokeWidth="0.8" 
-                  rx="4" 
-                />
-                <text 
-                  x={paddingLeft + 8} 
-                  y={panelTop + 8} 
-                  fill="#9F1239" 
-                  fontSize="9.5" 
-                  fontFamily="sans-serif"
-                  fontWeight="bold"
-                >
-                  【{indIdx + 1}】{catalogItem.name}
-                </text>
-
-                {/* 1. MACD 副圖面板 */}
+                {/* 1. MACD 副圖面板 (三竹智選股 Image 1 格式: MACD > DIF12-26:0.68 MACD9:0.16 OSC:0.52) */}
                 {indKey === 'MACD' && indicatorsData && (() => {
                   const oscValues = indicatorsData.macdList.map(m => m.osc);
                   const difValues = indicatorsData.macdList.map(m => m.dif);
@@ -932,6 +972,20 @@ export default function CandlestickChart({
 
                   return (
                     <g>
+                      {/* 三竹 Image 1 標題列 */}
+                      <text x={paddingLeft + 4} y={panelTop + 8} fill="#475569" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                        MACD &gt;
+                      </text>
+                      <text x={paddingLeft + 52} y={panelTop + 8} fill="#D97706" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                        DIF12-26:{curMacd?.dif}
+                      </text>
+                      <text x={paddingLeft + 146} y={panelTop + 8} fill="#0284C7" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                        MACD9:{curMacd?.dem}
+                      </text>
+                      <text x={paddingLeft + 228} y={panelTop + 8} fill={curMacd?.osc >= 0 ? '#DC2626' : '#16A34A'} fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                        OSC:{curMacd?.osc > 0 ? `+${curMacd?.osc}` : curMacd?.osc}
+                      </text>
+
                       <line x1={paddingLeft} y1={zeroY} x2={svgWidth - paddingRight} y2={zeroY} stroke="#CBD5E1" strokeWidth="1" strokeDasharray="3 3" />
                       {indicatorsData.macdList.map((m, i) => {
                         const x = paddingLeft + (i + 0.5) * barSpacing;
@@ -950,24 +1004,24 @@ export default function CandlestickChart({
                           />
                         );
                       })}
-                      <polyline fill="none" stroke="#2563EB" strokeWidth="1.5" points={difPoints} />
-                      <polyline fill="none" stroke="#D97706" strokeWidth="1.5" points={demPoints} />
+                      <polyline fill="none" stroke="#D97706" strokeWidth="1.5" points={difPoints} />
+                      <polyline fill="none" stroke="#0284C7" strokeWidth="1.5" points={demPoints} />
                       
-                      {/* 當前即時指標數值 */}
-                      <text x={svgWidth - paddingRight + 5} y={panelTop + 14} fill="#2563EB" fontSize="9" fontFamily="monospace" fontWeight="bold">
-                        DIF:{curMacd?.dif}
+                      {/* 右側刻度數值 (7, 4, 0, -4, -7) */}
+                      <text x={svgWidth - paddingRight + 5} y={panelTop + 14} fill="#64748B" fontSize="8.5" fontFamily="monospace">
+                        +{maxMacd.toFixed(1)}
                       </text>
-                      <text x={svgWidth - paddingRight + 5} y={panelTop + 26} fill="#D97706" fontSize="9" fontFamily="monospace" fontWeight="bold">
-                        DEM:{curMacd?.dem}
+                      <text x={svgWidth - paddingRight + 5} y={zeroY + 3} fill="#94A3B8" fontSize="8.5" fontFamily="monospace">
+                        0
                       </text>
-                      <text x={svgWidth - paddingRight + 5} y={panelTop + 38} fill={curMacd?.osc >= 0 ? '#DC2626' : '#16A34A'} fontSize="9" fontFamily="monospace" fontWeight="bold">
-                        OSC:{curMacd?.osc > 0 ? `+${curMacd?.osc}` : curMacd?.osc}
+                      <text x={svgWidth - paddingRight + 5} y={panelBottom - 2} fill="#64748B" fontSize="8.5" fontFamily="monospace">
+                        -{maxMacd.toFixed(1)}
                       </text>
                     </g>
                   );
                 })()}
 
-                {/* 2. KD 副圖面板 */}
+                {/* 2. KD 副圖面板 (三竹智選股 Image 1 格式: KD > 9K:65.61 9D:61.07) */}
                 {indKey === 'KD' && indicatorsData && (() => {
                   const y80 = getSubYInPanel(80, 0, 100, panelTop);
                   const y50 = getSubYInPanel(50, 0, 100, panelTop);
@@ -984,20 +1038,27 @@ export default function CandlestickChart({
 
                   return (
                     <g>
-                      <line x1={paddingLeft} y1={y80} x2={svgWidth - paddingRight} y2={y80} stroke="#FCA5A5" strokeDasharray="2 2" />
-                      <line x1={paddingLeft} y1={y50} x2={svgWidth - paddingRight} y2={y50} stroke="#E2E8F0" strokeDasharray="2 2" />
-                      <line x1={paddingLeft} y1={y20} x2={svgWidth - paddingRight} y2={y20} stroke="#86EFAC" strokeDasharray="2 2" />
-                      <polyline fill="none" stroke="#E11D48" strokeWidth="1.6" points={kPoints} />
-                      <polyline fill="none" stroke="#2563EB" strokeWidth="1.6" points={dPoints} />
+                      {/* 三竹 Image 1 標題列 */}
+                      <text x={paddingLeft + 4} y={panelTop + 8} fill="#475569" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                        KD &gt;
+                      </text>
+                      <text x={paddingLeft + 36} y={panelTop + 8} fill="#D97706" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                        9K:{curKd?.k}
+                      </text>
+                      <text x={paddingLeft + 102} y={panelTop + 8} fill="#0284C7" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
+                        9D:{curKd?.d}
+                      </text>
 
-                      <text x={svgWidth - paddingRight + 5} y={panelTop + 16} fill="#E11D48" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
-                        K:{curKd?.k}
-                      </text>
-                      <text x={svgWidth - paddingRight + 5} y={panelTop + 28} fill="#2563EB" fontSize="9.5" fontFamily="monospace" fontWeight="bold">
-                        D:{curKd?.d}
-                      </text>
-                      <text x={svgWidth - paddingRight + 5} y={y80 + 3} fill="#EF4444" fontSize="8" fontFamily="monospace">80</text>
-                      <text x={svgWidth - paddingRight + 5} y={y20 + 3} fill="#10B981" fontSize="8" fontFamily="monospace">20</text>
+                      <line x1={paddingLeft} y1={y80} x2={svgWidth - paddingRight} y2={y80} stroke="#FCA5A5" strokeDasharray="2 2" strokeWidth="0.8" />
+                      <line x1={paddingLeft} y1={y50} x2={svgWidth - paddingRight} y2={y50} stroke="#E2E8F0" strokeDasharray="2 2" strokeWidth="0.8" />
+                      <line x1={paddingLeft} y1={y20} x2={svgWidth - paddingRight} y2={y20} stroke="#86EFAC" strokeDasharray="2 2" strokeWidth="0.8" />
+                      <polyline fill="none" stroke="#D97706" strokeWidth="1.5" points={kPoints} />
+                      <polyline fill="none" stroke="#0284C7" strokeWidth="1.5" points={dPoints} />
+
+                      {/* 右側刻度數值 (80, 50, 20) */}
+                      <text x={svgWidth - paddingRight + 5} y={y80 + 3} fill="#EF4444" fontSize="8.5" fontFamily="monospace" fontWeight="bold">80</text>
+                      <text x={svgWidth - paddingRight + 5} y={y50 + 3} fill="#94A3B8" fontSize="8" fontFamily="monospace">50</text>
+                      <text x={svgWidth - paddingRight + 5} y={y20 + 3} fill="#10B981" fontSize="8.5" fontFamily="monospace" fontWeight="bold">20</text>
                     </g>
                   );
                 })()}
@@ -1165,211 +1226,115 @@ export default function CandlestickChart({
       </div>
 
       {/* ========================================================= */}
-      {/* 【核心升級 2】: 全新非滾輪時間軸雙向滑桿與導航控制器      */}
+      {/* 三竹智選股風格副圖指標切換列 (Image 1 Style)               */}
       {/* ========================================================= */}
-      <div className="bg-[#fff0f3] p-3 sm:p-4 rounded-2xl border border-pink-200/90 space-y-3 shadow-xs">
-        {/* 滑桿控制 1: 縮放 (可見 K 棒數) */}
-        <div className="space-y-1">
-          <div className="flex justify-between items-center text-xs">
-            <span className="font-bold text-rose-900 flex items-center gap-1.5">
-              <Sliders className="w-3.5 h-3.5 text-rose-600" />
-              <span>縮放程度 (可見 K 棒數)</span>
-            </span>
-            <span className="font-mono text-xs font-bold text-rose-800 bg-white px-2 py-0.5 rounded-md border border-pink-200">
-              可見 {currentWindow.length} 棒 / 全歷史 {data.length} 棒
-            </span>
-          </div>
-          <input 
-            type="range"
-            min="15"
-            max={data.length}
-            value={zoomCount}
-            onChange={(e) => setZoomCount(Number(e.target.value))}
-            className="w-full h-2 bg-pink-200 rounded-lg appearance-none cursor-pointer accent-rose-600"
-            title="滑動調整可見K棒天數"
-          />
-        </div>
-
-        {/* 滑桿控制 2: 時間軸歷史平移 (回溯至上市首日) */}
-        {maxPan > 0 && (
-          <div className="space-y-1">
-            <div className="flex justify-between items-center text-xs">
-              <span className="font-bold text-rose-900 flex items-center gap-1.5">
-                <MoveHorizontal className="w-3.5 h-3.5 text-rose-600" />
-                <span>時間軸歷史平移 (左右回溯)</span>
-              </span>
-              <span className="font-mono text-[11px] text-rose-800 bg-white px-2 py-0.5 rounded-md border border-pink-200">
-                區間: {currentWindow[0]?.time} ~ {currentWindow[currentWindow.length - 1]?.time}
-              </span>
-            </div>
-            <input 
-              type="range"
-              min="0"
-              max={maxPan}
-              value={panOffset}
-              onChange={(e) => setPanOffset(Number(e.target.value))}
-              className="w-full h-2 bg-pink-200 rounded-lg appearance-none cursor-pointer accent-rose-600"
-              title="往右滑動回溯至上市首日"
-            />
-          </div>
-        )}
-
-        {/* 快速週期按鈕群 (一鍵全覽上市至今或指定週期) */}
-        <div className="flex items-center justify-between gap-2 flex-wrap pt-1 border-t border-pink-200/80 text-xs">
-          <div className="flex items-center space-x-1.5 flex-wrap">
-            <span className="text-[11px] font-bold text-rose-800">快速週期:</span>
-            {[
-              { label: `全部 (上市~今)`, count: data.length },
-              { label: '5年 (1200棒)', count: 1200 },
-              { label: '3年 (720棒)', count: 720 },
-              { label: '1年 (240棒)', count: 240 },
-              { label: '半年 (120棒)', count: 120 },
-              { label: '1季 (60棒)', count: 60 },
-              { label: '1月 (20棒)', count: 20 },
-            ].map(p => (
+      <div className="bg-[#fff0f3] px-3 py-1.5 rounded-xl border border-pink-200 flex items-center justify-between gap-2 text-xs shrink-0">
+        <div className="flex items-center space-x-1.5 overflow-x-auto scrollbar-none py-0.5">
+          <span className="font-extrabold text-[11px] text-slate-800 shrink-0">副圖指標:</span>
+          {SUBCHART_CATALOG.map(item => {
+            const isSelected = activeIndicators.includes(item.id);
+            return (
               <button
-                key={p.label}
-                onClick={() => setPresetBars(p.count)}
-                className={`px-2 py-0.5 rounded-lg text-xs font-mono font-bold transition ${
-                  zoomCount === Math.min(p.count, data.length) && panOffset === 0
-                    ? 'bg-rose-600 text-white shadow-2xs'
+                key={item.id}
+                onClick={() => toggleIndicator(item.id)}
+                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition whitespace-nowrap ${
+                  isSelected
+                    ? 'bg-rose-600 text-white shadow-xs'
                     : 'bg-white text-rose-800 hover:bg-rose-100 border border-pink-200'
                 }`}
+                title={item.desc}
               >
-                {p.label}
+                {item.name}
               </button>
-            ))}
-          </div>
-
-          {/* 步進式微調按鈕 */}
-          <div className="flex items-center space-x-1.5">
-            <button
-              onClick={zoomIn}
-              className="px-2 py-1 bg-white border border-pink-200 text-rose-800 hover:bg-rose-100 rounded-lg font-bold flex items-center gap-1 shadow-2xs"
-              title="放大"
-            >
-              <ZoomIn className="w-3 h-3" />
-              <span>放大</span>
-            </button>
-            <button
-              onClick={zoomOut}
-              className="px-2 py-1 bg-white border border-pink-200 text-rose-800 hover:bg-rose-100 rounded-lg font-bold flex items-center gap-1 shadow-2xs"
-              title="縮小"
-            >
-              <ZoomOut className="w-3 h-3" />
-              <span>縮小</span>
-            </button>
-            {panOffset > 0 && (
-              <button
-                onClick={resetToLatest}
-                className="px-2.5 py-1 bg-rose-600 text-white hover:bg-rose-700 rounded-lg font-bold shadow-2xs"
-              >
-                返回最新
-              </button>
-            )}
-          </div>
+            );
+          })}
+        </div>
+        <div className="flex items-center space-x-1 shrink-0 text-[11px]">
+          <button
+            onClick={() => setActiveIndicators(['MACD', 'KD'])}
+            className="px-2 py-0.5 bg-white hover:bg-rose-100 border border-pink-200 text-rose-800 rounded font-bold"
+            title="一鍵切換為三竹經典雙指標並列"
+          >
+            雙標(MACD+KD)
+          </button>
+          <button
+            onClick={() => setActiveIndicators(['MACD', 'KD', 'VOL'])}
+            className="px-2 py-0.5 bg-white hover:bg-rose-100 border border-pink-200 text-rose-800 rounded font-bold"
+            title="三指標(+VOL)"
+          >
+            三標(+VOL)
+          </button>
         </div>
       </div>
 
       {/* ========================================================= */}
-      {/* 【核心升級 1】: 多指標副圖選單 (Multi-select Indicators)    */}
+      {/* 緊湊時間軸歷史平移滑桿與週期快捷列                          */}
       {/* ========================================================= */}
-      <div className="bg-[#fff0f3] p-3 sm:p-4 rounded-2xl border border-pink-200 space-y-3 shadow-xs">
-        {/* 分類切換與快捷組合按鈕 */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-pink-200/80 pb-2">
-          <div className="flex items-center space-x-2">
-            <Activity className="w-4 h-4 text-rose-600" />
-            <span className="font-extrabold text-xs text-slate-900">
-              多指標圖 (列) 自由組合:
-            </span>
-            <span className="text-[11px] text-rose-800/80 font-mono">
-              (已開啓 {activeIndicators.length} 個指標列)
-            </span>
-          </div>
-
-          {/* 常用組合一鍵切換 */}
-          <div className="flex items-center space-x-1.5 flex-wrap text-xs">
-            <span className="text-[11px] font-bold text-rose-800">推薦組合:</span>
-            {[
-              { label: '常用雙標 (MACD+KD)', list: ['MACD', 'KD'] },
-              { label: '經典三標 (MACD+KD+VOL)', list: ['MACD', 'KD', 'VOL'] },
-              { label: '價量籌碼 (VOL+法人)', list: ['VOL', 'INST_ALL'] },
-              { label: '全面觀測 (5列)', list: ['MACD', 'KD', 'VOL', 'INST_ALL', 'REV'] },
-              { label: '清空副圖', list: [] }
-            ].map(preset => (
-              <button
-                key={preset.label}
-                onClick={() => setActiveIndicators(preset.list)}
-                className="px-2 py-0.5 text-[11px] bg-white text-rose-800 hover:bg-rose-100 rounded-lg font-bold border border-pink-200 shadow-2xs transition"
-              >
-                {preset.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* 4 大維度指標分類標籤 */}
-        <div className="flex items-center space-x-2 text-xs overflow-x-auto pb-1">
+      <div className="bg-[#fff0f3] px-3 py-1.5 rounded-xl border border-pink-200 flex flex-wrap items-center justify-between gap-2 text-xs shrink-0">
+        <div className="flex items-center space-x-1 overflow-x-auto scrollbar-none py-0.5 text-xs">
+          <span className="text-[11px] font-bold text-rose-800 shrink-0">週期:</span>
           {[
-            { id: 'COMMON', label: '常用指標 (MACD / KD / DMI)' },
-            { id: 'VOL_PRICE', label: '價量指標 (VOL / AD / ARBR / BBI)' },
-            { id: 'CHIPS', label: '籌碼指標 (三大法人 / 外資 / 投信)' },
-            { id: 'FINANCIAL', label: '財務指標 (月營收 / YoY & MoM)' }
-          ].map(cat => (
+            { label: '全部', count: data.length },
+            { label: '5年', count: 1200 },
+            { label: '1年', count: 240 },
+            { label: '半年', count: 120 },
+            { label: '季(60)', count: 60 },
+            { label: '月(20)', count: 20 },
+          ].map(p => (
             <button
-              key={cat.id}
-              onClick={() => setCurrentIndicatorCategory(cat.id)}
-              className={`px-3 py-1.5 rounded-xl font-bold whitespace-nowrap transition ${
-                currentIndicatorCategory === cat.id 
-                  ? 'bg-rose-600 text-white shadow-xs' 
+              key={p.label}
+              onClick={() => setPresetBars(p.count)}
+              className={`px-2 py-0.5 rounded-lg text-xs font-mono font-bold transition ${
+                zoomCount === Math.min(p.count, data.length) && panOffset === 0
+                  ? 'bg-rose-600 text-white shadow-2xs'
                   : 'bg-white text-rose-800 hover:bg-rose-100 border border-pink-200'
               }`}
             >
-              {cat.label}
+              {p.label}
             </button>
           ))}
         </div>
 
-        {/* 該分類下各項指標的多選開關 (Multi-select check pills) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pt-1">
-          {SUBCHART_CATALOG
-            .filter(item => item.category === currentIndicatorCategory)
-            .map(item => {
-              const isSelected = activeIndicators.includes(item.id);
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => toggleIndicator(item.id)}
-                  className={`p-2.5 rounded-xl text-left transition-all border flex items-center justify-between ${
-                    isSelected 
-                      ? 'bg-white border-rose-500 shadow-xs ring-2 ring-rose-300/60' 
-                      : 'bg-white/80 border-pink-200 hover:border-pink-300 hover:bg-white'
-                  }`}
-                >
-                  <div className="min-w-0 pr-2">
-                    <div className="flex items-center space-x-1.5">
-                      <span className={`w-3.5 h-3.5 rounded flex items-center justify-center text-[10px] font-bold ${
-                        isSelected ? 'bg-rose-600 text-white' : 'border border-pink-300 bg-rose-50'
-                      }`}>
-                        {isSelected ? <Check className="w-2.5 h-2.5 stroke-[3]" /> : null}
-                      </span>
-                      <span className="font-extrabold text-xs text-slate-900 truncate">
-                        {item.label}
-                      </span>
-                    </div>
-                    <p className="text-[10px] text-slate-500 mt-1 truncate pl-5">
-                      {item.desc}
-                    </p>
-                  </div>
+        {/* 歷史平移滑桿與區間 */}
+        <div className="flex items-center space-x-2 flex-1 max-w-xs min-w-[180px]">
+          <span className="font-mono text-[10px] text-rose-800 bg-white px-1.5 py-0.5 rounded border border-pink-200 shrink-0">
+            {currentWindow[0]?.time} ~ {currentWindow[currentWindow.length - 1]?.time}
+          </span>
+          <input 
+            type="range"
+            min="0"
+            max={maxPan}
+            value={panOffset}
+            onChange={(e) => setPanOffset(Number(e.target.value))}
+            className="w-full h-1.5 bg-pink-200 rounded-lg appearance-none cursor-pointer accent-rose-600"
+            title="滑動回溯至上市櫃首日"
+          />
+        </div>
 
-                  <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded flex-shrink-0 ${
-                    isSelected ? 'bg-rose-100 text-rose-800' : 'bg-slate-100 text-slate-500'
-                  }`}>
-                    {isSelected ? '已顯示' : '點擊加入'}
-                  </span>
-                </button>
-              );
-            })}
+        {/* 步進與返回 */}
+        <div className="flex items-center space-x-1 shrink-0">
+          <button
+            onClick={zoomIn}
+            className="px-1.5 py-0.5 bg-white border border-pink-200 text-rose-800 hover:bg-rose-100 rounded text-xs font-bold"
+            title="放大"
+          >
+            <ZoomIn className="w-3 h-3" />
+          </button>
+          <button
+            onClick={zoomOut}
+            className="px-1.5 py-0.5 bg-white border border-pink-200 text-rose-800 hover:bg-rose-100 rounded text-xs font-bold"
+            title="縮小"
+          >
+            <ZoomOut className="w-3 h-3" />
+          </button>
+          {panOffset > 0 && (
+            <button
+              onClick={resetToLatest}
+              className="px-2 py-0.5 bg-rose-600 text-white hover:bg-rose-700 rounded text-xs font-bold shadow-2xs"
+            >
+              返回最新
+            </button>
+          )}
         </div>
       </div>
     </div>

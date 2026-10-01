@@ -355,6 +355,31 @@ export function getStockDetailData(symbolOrStock) {
 }
 
 /**
+ * 產生指定日期之前的 N 個真實台股交易日清單 (嚴格排在 beforeDate 之前，杜絕日期倒退或重疊)
+ */
+export function getTradingDaysBeforeDate(count = 200, beforeDate = new Date('2026-09-01')) {
+  const result = [];
+  let d = new Date(beforeDate);
+  d.setDate(d.getDate() - 1); // 嚴格從指定日期的前一天開始往前回溯
+
+  while (result.length < count) {
+    const dayOfWeek = d.getDay();
+    if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const dd = String(d.getDate()).padStart(2, '0');
+      result.unshift({
+        time: `${mm}/${dd}`,
+        rawDate: `${mm}/${dd}`,
+        fullDate: `${yyyy}-${mm}-${dd}`
+      });
+    }
+    d.setDate(d.getDate() - 1);
+  }
+  return result;
+}
+
+/**
  * 產生截至當日 (今日) 的最近 N 個真實台股交易日清單
  * 自動跳過週末（週六、週日），並將最後一天標註為「當日 / 今日」
  */
@@ -431,10 +456,9 @@ function enrichWithCalculatedMetrics(stock) {
     };
   });
 
-  // 2. 日K (完整豐富歷史，涵蓋上市掛牌里程碑至今日最新真實行情)
+  // 2. 日K (嚴格時間序列，徹底杜絕日期跳回與價格斷層)
   const realStockHistory = PRELOADED_KLINE_HISTORY[code]?.days || [];
-  const TOTAL_DAILY_BARS = 1250; // 涵蓋逾 5 年真實交易日規模
-  const tradingDays = getTradingDaysUntilToday(TOTAL_DAILY_BARS, now);
+  const TOTAL_DAILY_BARS = 600; // 涵蓋約 2.5 年歷史成交日 (週K/月K則收錄上市至今全歷史)
   
   const resistancePrice = Number((base * 1.03).toFixed(2));
   const supportPrice = Number((base * 0.97).toFixed(2));
@@ -444,38 +468,42 @@ function enrichWithCalculatedMetrics(stock) {
   if (realStockHistory && realStockHistory.length >= 5) {
     const knownCount = realStockHistory.length;
     const needPrepend = Math.max(0, TOTAL_DAILY_BARS - knownCount);
-    const earliestKnown = realStockHistory[0];
-    let simPrice = earliestKnown.close || base * 0.9;
+    const firstRealDate = new Date(realStockHistory[0].fullDate || '2026-09-01');
     
-    const prependedBars = [];
-    for (let i = 0; i < needPrepend; i++) {
-      const isFirst = i === 0;
-      const dayInfo = tradingDays[i];
-      const delta = (Math.random() - 0.47) * (simPrice * 0.022);
-      const open = isFirst ? ipoInfo.ipoPrice : simPrice;
-      simPrice = isFirst ? ipoInfo.ipoPrice : Math.max(base * 0.35, Number((simPrice + delta).toFixed(2)));
-      const close = simPrice;
-      const high = Number((Math.max(open, close) + Math.random() * (base * 0.012)).toFixed(2));
-      const low = Number((Math.min(open, close) - Math.random() * (base * 0.012)).toFixed(2));
-      const vol = Math.floor((stock.volume || 25000) * (0.5 + Math.random() * 0.8));
-      
+    // 嚴格取得 2026-09-01 之前的交易日 (最後一天為 2026-08-31)
+    const prependedDays = getTradingDaysBeforeDate(needPrepend, firstRealDate);
+    
+    // 從第一筆真實價格 (例如 09/01 開盤價 2395) 往前回溯生成無縫連續價格
+    let currentPrice = realStockHistory[0].open || base;
+    const prependedBars = new Array(needPrepend);
+    
+    for (let i = needPrepend - 1; i >= 0; i--) {
+      const dayInfo = prependedDays[i];
+      const dailyReturn = (Math.random() - 0.495) * 0.016;
+      const close = Number(currentPrice.toFixed(2));
+      const open = Number((close / (1 + dailyReturn)).toFixed(2));
+      const high = Number((Math.max(open, close) + Math.random() * (close * 0.008)).toFixed(2));
+      const low = Number((Math.min(open, close) - Math.random() * (close * 0.008)).toFixed(2));
+      const vol = Math.floor((stock.volume || 25000) * (0.6 + Math.random() * 0.7));
       const isUpDay = close >= open;
-      prependedBars.push({
-        time: isFirst ? `${ipoInfo.listingDate} (掛牌首日)` : dayInfo.time,
-        fullDate: isFirst ? ipoInfo.listingDate : dayInfo.fullDate,
+
+      prependedBars[i] = {
+        time: dayInfo.time,
+        fullDate: dayInfo.fullDate,
         open,
         high,
         low,
         close,
         price: close,
         volume: vol,
-        foreignNet: Math.floor((isUpDay ? 1 : -1) * (vol * (0.12 + Math.random() * 0.15))),
-        trustNet: Math.floor((isUpDay ? 1 : -0.6) * (vol * (0.05 + Math.random() * 0.08))),
-        dealerNet: Math.floor((Math.random() - 0.48) * (vol * 0.05)),
+        foreignNet: Math.floor((isUpDay ? 1 : -1) * (vol * (0.12 + Math.random() * 0.12))),
+        trustNet: Math.floor((isUpDay ? 1 : -0.6) * (vol * (0.05 + Math.random() * 0.06))),
+        dealerNet: Math.floor((Math.random() - 0.48) * (vol * 0.04)),
         revMonthly: Number(((base * 1.5) + Math.sin(i * 0.3) * 20).toFixed(1)),
         revMoM: Number((Math.sin(i * 0.7) * 7.5).toFixed(1)),
         revYoY: Number((15.2 + Math.sin(i * 0.25) * 12).toFixed(1))
-      });
+      };
+      currentPrice = open;
     }
 
     const realBars = realStockHistory.map((d, idx) => {
@@ -503,54 +531,71 @@ function enrichWithCalculatedMetrics(stock) {
       return item;
     });
 
+    // 嚴格拼接: 8月以前交易日 + 9月至今日真實證交所數據，完全按時間遞增！
     chart1M = [...prependedBars, ...realBars];
   } else {
-    // 一般個股: 動態產生全歷史 K 棒
-    let currClose = Number((base * 0.45).toFixed(2));
-    chart1M = tradingDays.map((dayInfo, idx) => {
-      const isFirst = idx === 0;
-      const isLast = idx === tradingDays.length - 1;
-      let dayOpen, dayClose, dayHigh, dayLow, vol;
+    // 一般個股: 從今日即時價格平穩往前回溯
+    const tradingDays = getTradingDaysUntilToday(TOTAL_DAILY_BARS, now);
+    let currentPrice = base;
+    chart1M = new Array(TOTAL_DAILY_BARS);
+    
+    for (let i = TOTAL_DAILY_BARS - 1; i >= 0; i--) {
+      const isFirst = i === 0;
+      const isLast = i === TOTAL_DAILY_BARS - 1;
+      const dayInfo = tradingDays[i];
+      
       if (isLast) {
-        dayOpen = Number((stock.open || base - change * 0.4).toFixed(2));
-        dayClose = Number(base.toFixed(2));
-        dayHigh = Number((stock.high || Math.max(dayOpen, dayClose) + Math.abs(change) * 0.5).toFixed(2));
-        dayLow = Number((stock.low || Math.min(dayOpen, dayClose) - Math.abs(change) * 0.5).toFixed(2));
-        vol = stock.volume || 25000;
-      } else if (isFirst) {
-        dayOpen = ipoInfo.ipoPrice;
-        dayClose = ipoInfo.ipoPrice;
-        dayHigh = Number((ipoInfo.ipoPrice * 1.05).toFixed(2));
-        dayLow = Number((ipoInfo.ipoPrice * 0.95).toFixed(2));
-        vol = Math.floor((stock.volume || 25000) * 0.4);
+        const dayOpen = Number((stock.open || base - change * 0.4).toFixed(2));
+        const dayClose = Number(base.toFixed(2));
+        const dayHigh = Number((stock.high || Math.max(dayOpen, dayClose) + Math.abs(change) * 0.5).toFixed(2));
+        const dayLow = Number((stock.low || Math.min(dayOpen, dayClose) - Math.abs(change) * 0.5).toFixed(2));
+        const vol = stock.volume || 25000;
+        const isUpDay = dayClose >= dayOpen;
+        chart1M[i] = {
+          time: `${dayInfo.time} (今)`,
+          fullDate: dayInfo.fullDate,
+          open: dayOpen,
+          high: dayHigh,
+          low: dayLow,
+          close: dayClose,
+          price: dayClose,
+          volume: vol,
+          foreignNet: Math.floor((isUpDay ? 1 : -1) * (vol * 0.14)),
+          trustNet: Math.floor((isUpDay ? 1 : -0.5) * (vol * 0.06)),
+          dealerNet: Math.floor((Math.random() - 0.45) * (vol * 0.04)),
+          revMonthly: Number((base * 1.5).toFixed(1)),
+          revMoM: 5.2,
+          revYoY: 18.5
+        };
+        currentPrice = dayOpen;
       } else {
-        const dayDelta = (Math.random() - 0.46) * (base * 0.024);
-        dayOpen = currClose;
-        currClose = Math.max(base * 0.25, Number((currClose + dayDelta).toFixed(2)));
-        dayClose = currClose;
-        dayHigh = Number((Math.max(dayOpen, dayClose) + Math.random() * (base * 0.012)).toFixed(2));
-        dayLow = Number((Math.min(dayOpen, dayClose) - Math.random() * (base * 0.012)).toFixed(2));
-        vol = Math.floor((stock.volume || 25000) * (0.65 + Math.random() * 0.7));
-      }
+        const dailyReturn = (Math.random() - 0.495) * 0.018;
+        const close = Number(currentPrice.toFixed(2));
+        const open = Number((close / (1 + dailyReturn)).toFixed(2));
+        const high = Number((Math.max(open, close) + Math.random() * (close * 0.009)).toFixed(2));
+        const low = Number((Math.min(open, close) - Math.random() * (close * 0.009)).toFixed(2));
+        const vol = Math.floor((stock.volume || 25000) * (0.6 + Math.random() * 0.7));
+        const isUpDay = close >= open;
 
-      const isUpDay = dayClose >= dayOpen;
-      return {
-        time: isFirst ? `${ipoInfo.listingDate} (掛牌首日)` : dayInfo.time,
-        fullDate: isFirst ? ipoInfo.listingDate : dayInfo.fullDate,
-        open: dayOpen,
-        high: dayHigh,
-        low: dayLow,
-        close: dayClose,
-        price: dayClose,
-        volume: vol,
-        foreignNet: Math.floor((isUpDay ? 1 : -1) * (vol * (0.13 + Math.random() * 0.12))),
-        trustNet: Math.floor((isUpDay ? 1 : -0.5) * (vol * (0.05 + Math.random() * 0.07))),
-        dealerNet: Math.floor((Math.random() - 0.45) * (vol * 0.04)),
-        revMonthly: Number(((base * 1.5) + Math.sin(idx * 0.3) * 20).toFixed(1)),
-        revMoM: Number((Math.sin(idx * 0.7) * 7.5).toFixed(1)),
-        revYoY: Number((15.2 + Math.sin(idx * 0.25) * 12).toFixed(1))
-      };
-    });
+        chart1M[i] = {
+          time: dayInfo.time,
+          fullDate: dayInfo.fullDate,
+          open,
+          high,
+          low,
+          close,
+          price: close,
+          volume: vol,
+          foreignNet: Math.floor((isUpDay ? 1 : -1) * (vol * 0.12)),
+          trustNet: Math.floor((isUpDay ? 1 : -0.5) * (vol * 0.05)),
+          dealerNet: Math.floor((Math.random() - 0.48) * (vol * 0.04)),
+          revMonthly: Number(((base * 1.5) + Math.sin(i * 0.3) * 20).toFixed(1)),
+          revMoM: Number((Math.sin(i * 0.7) * 7.5).toFixed(1)),
+          revYoY: Number((15.2 + Math.sin(i * 0.25) * 12).toFixed(1))
+        };
+        currentPrice = open;
+      }
+    }
   }
 
   // 計算全週期 MA5, MA20, MA60 動態均線

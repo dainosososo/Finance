@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { 
   X, 
   TrendingUp, 
@@ -32,15 +32,25 @@ import CandlestickChart from './CandlestickChart';
 import { getStockDetailData } from '../services/stockDetailService';
 
 /**
- * 三竹選股風格深度分析彈窗 (Mitake-Style Stock Detail Modal)
- * - 移除了多餘的 1D/5D/1M/3M/1Y 重複欄位，保留直觀的分時、日K、週K、月K、60分K、還原K
- * - 搭配 CandlestickChart 自由縮放與平移回溯
- * - 全面採用【淺粉色、櫻花粉】資訊區塊上色設計，提升辨識度與質感
+ * 三竹智選股風格深度分析彈窗 (Mitake-Style Stock Detail Modal)
+ * 解決三大核心訴求:
+ * 1. 【無滑動鎖定全螢幕視窗】: 徹底移除任何垂直滾動誤觸，鎖定背景與彈窗本體 (overflow-hidden)
+ * 2. 【雙指標/多指標並列 K 線技術圖】: 主圖下方同時並列 MACD 與 KD 兩組副圖指標 (嚴格時間軸對齊)
+ * 3. 【嚴格時間序列與全歷史上市櫃成交 K 棒】: 杜絕任何日期倒退與價格斷層
  */
 export default function StockDetailModal({ stock, onClose }) {
   const [activeTab, setActiveTab] = useState('TECH'); // TECH, CHIPS, FUNDAMENTALS, DIVIDENDS, CHAIN, NEWS
   const [klineType, setKlineType] = useState('日K'); // 分時, 日K, 週K, 月K, 60分K, 還原K
   const [chartMode, setChartMode] = useState('CANDLE'); // CANDLE (蠟燭圖), LINE (折線圖)
+
+  // 鎖定外層 body 滾動條，徹底防止看盤時頁面滑動誤觸
+  useEffect(() => {
+    const origOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = origOverflow;
+    };
+  }, []);
 
   // 獲取該股票完整三竹規格數據資料
   const detail = useMemo(() => {
@@ -71,34 +81,36 @@ export default function StockDetailModal({ stock, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-900/60 backdrop-blur-sm animate-fade-in overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-900/65 backdrop-blur-sm animate-fade-in overflow-hidden select-none">
       <div 
-        className="bg-[#fff8fa] text-slate-900 border border-pink-200 rounded-3xl w-full max-w-4xl shadow-2xl overflow-hidden relative my-auto max-h-[92vh] flex flex-col"
+        className="bg-[#fff8fa] text-slate-900 border border-pink-200 rounded-2xl sm:rounded-3xl w-full max-w-6xl h-[95vh] shadow-2xl overflow-hidden relative flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* 1. Modal Top Header (櫻花粉精緻主題) */}
-        <div className="p-4 sm:p-5 bg-[#fff0f3] border-b border-pink-200 flex items-center justify-between shrink-0">
+        {/* ========================================================= */}
+        {/* 1. 緊湊頂部股票抬頭欄 (Stock Header)                        */}
+        {/* ========================================================= */}
+        <div className="px-4 py-2.5 sm:px-5 sm:py-3 bg-[#fff0f3] border-b border-pink-200 flex items-center justify-between shrink-0">
           <div className="flex items-center space-x-3">
-            <div className="w-11 h-11 rounded-2xl bg-rose-100/90 border border-pink-300 flex items-center justify-center text-rose-700 font-extrabold text-base font-mono shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-rose-100/90 border border-pink-300 flex items-center justify-center text-rose-700 font-extrabold text-sm font-mono shadow-2xs">
               {detail.code}
             </div>
             <div>
-              <div className="flex items-center space-x-2.5 flex-wrap">
-                <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">{detail.name}</h2>
-                <span className="font-mono text-xs font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-pink-200">
+              <div className="flex items-center space-x-2 flex-wrap">
+                <h2 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight">{detail.name}</h2>
+                <span className="font-mono text-xs font-bold text-rose-700 bg-white px-2 py-0.5 rounded border border-pink-200">
                   {detail.code}
                 </span>
-                <span className="text-xs bg-rose-100/70 text-rose-800 px-2 py-0.5 rounded font-medium border border-pink-200">
+                <span className="text-[11px] bg-rose-100/80 text-rose-800 px-2 py-0.5 rounded font-bold border border-pink-200">
                   {detail.market}
                 </span>
               </div>
-              <div className="flex items-center space-x-2 mt-0.5 text-xs text-rose-900/80 font-sans flex-wrap">
-                <span>上市櫃日期: <strong className="font-mono text-slate-800">{detail.listingDate || '1994-09-05'}</strong> ({detail.yearsListed || 32} 年)</span>
+              <div className="flex items-center space-x-2 text-[11px] text-rose-900/80 font-sans flex-wrap">
+                <span>上市櫃: <strong className="font-mono text-slate-800">{detail.listingDate || '1994-09-05'}</strong> ({detail.yearsListed || 32} 年)</span>
                 <span>•</span>
                 <span>掛牌價: <strong className="font-mono text-slate-800">NT$ {detail.ipoPrice || '10.0'}</strong></span>
                 <span>•</span>
-                <span className="text-emerald-700 font-bold bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200 text-[11px]">
-                  全歷史成交K棒完整收錄
+                <span className="text-emerald-700 font-bold bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200 text-[10px]">
+                  全歷史K棒完整收錄
                 </span>
               </div>
             </div>
@@ -106,100 +118,157 @@ export default function StockDetailModal({ stock, onClose }) {
 
           <button
             onClick={onClose}
-            className="p-2 text-rose-400 hover:text-rose-700 bg-white hover:bg-rose-50 border border-pink-200 rounded-xl transition-colors shadow-2xs"
-            title="關閉視窗"
+            className="p-1.5 sm:p-2 text-rose-400 hover:text-rose-700 bg-white hover:bg-rose-50 border border-pink-200 rounded-xl transition-colors shadow-2xs"
+            title="關閉視窗 (Esc)"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* 2. Scrollable Modal Body */}
-        <div className="p-4 sm:p-6 space-y-5 overflow-y-auto flex-1 bg-[#fff8fa]">
-          {/* Main Price & Order Depth (盤差) Card (櫻花粉資訊區塊) */}
-          <div className="bg-[#fff0f3] border border-pink-200/90 rounded-2xl p-4 sm:p-5 shadow-xs">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <span className="text-xs text-rose-700/80 block font-medium">最新成交價 (新台幣計價)</span>
-                <div className="flex items-baseline space-x-3 mt-0.5">
-                  <span className={`text-3xl sm:text-4xl font-black font-mono tracking-tight ${isUp ? 'text-red-600' : 'text-emerald-600'}`}>
-                    NT$ {detail.price?.toLocaleString()}
-                  </span>
-                  <span className={`inline-flex items-center text-sm font-bold font-mono px-2 py-0.5 rounded ${
-                    isUp ? 'bg-red-50 text-red-600 border border-red-200' : 'bg-emerald-50 text-emerald-600 border border-emerald-200'
-                  }`}>
-                    {isUp ? <ArrowUpRight className="w-4 h-4 mr-0.5" /> : <ArrowDownRight className="w-4 h-4 mr-0.5" />}
-                    {isUp ? `+${detail.change}` : detail.change} ({isUp ? `+${detail.pctChange}` : detail.pctChange}%)
-                  </span>
-                </div>
-              </div>
-
-              {/* 盤差與內外盤比 (SanZhu Core Feature) */}
-              <div className="bg-white/95 p-3 rounded-xl border border-pink-200 min-w-[240px] shadow-2xs">
-                <div className="flex items-center justify-between text-xs mb-1.5">
-                  <span className="text-slate-800 flex items-center gap-1 font-bold">
-                    <Scale className="w-3.5 h-3.5 text-rose-600" />
-                    盤差分析 (內外盤比)
-                  </span>
-                  <span className="font-mono text-[11px] text-rose-800 font-semibold">跳動差: NT$ {detail.spread}</span>
-                </div>
-
-                {/* Outer vs Inner Ratio Progress Bar */}
-                <div className="space-y-1">
-                  <div className="flex justify-between text-[11px] font-mono">
-                    <span className="text-red-600 font-bold">外盤: {detail.outRatio}% (買進)</span>
-                    <span className="text-emerald-600 font-bold">內盤: {detail.inRatio}% (賣出)</span>
-                  </div>
-                  <div className="w-full h-2.5 bg-slate-200 rounded-full overflow-hidden flex border border-slate-300/60">
-                    <div style={{ width: `${detail.outRatio}%` }} className="bg-red-500 h-full"></div>
-                    <div style={{ width: `${detail.inRatio}%` }} className="bg-emerald-500 h-full"></div>
-                  </div>
-                  <div className="flex justify-between text-[10px] text-slate-500 font-mono pt-0.5">
-                    <span>外盤量: {detail.outVolume?.toLocaleString()} 張</span>
-                    <span>內盤量: {detail.inVolume?.toLocaleString()} 張</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Metrics Bar: Open, High, Low, Vol with explicit NT$ */}
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mt-4 pt-4 border-t border-pink-200/80 text-xs">
-              <div>
-                <span className="text-rose-900/70 block text-[11px]">開盤價</span>
-                <span className="font-mono font-bold text-slate-800">NT$ {detail.open}</span>
-              </div>
-              <div>
-                <span className="text-rose-900/70 block text-[11px]">最高價</span>
-                <span className="font-mono font-bold text-red-600">NT$ {detail.high}</span>
-              </div>
-              <div>
-                <span className="text-rose-900/70 block text-[11px]">最低價</span>
-                <span className="font-mono font-bold text-emerald-600">NT$ {detail.low}</span>
-              </div>
-              <div>
-                <span className="text-rose-900/70 block text-[11px]">昨收價</span>
-                <span className="font-mono font-bold text-slate-600">NT$ {detail.prevClose}</span>
-              </div>
-              <div>
-                <span className="text-rose-900/70 block text-[11px]">成交量 / 金額</span>
-                <span className="font-mono font-bold text-slate-900">{detail.volume?.toLocaleString()} 張 ({detail.turnover})</span>
-              </div>
-            </div>
+        {/* ========================================================= */}
+        {/* 2. 緊湊報價與即時盤差橫條 (Price & Market Metrics Strip)    */}
+        {/* ========================================================= */}
+        <div className="px-4 py-2 bg-white/95 border-b border-pink-100 flex flex-wrap items-center justify-between gap-y-2 text-xs shrink-0">
+          {/* 最新價格與漲跌 */}
+          <div className="flex items-baseline space-x-3">
+            <span className={`text-2xl sm:text-3xl font-black font-mono tracking-tight ${isUp ? 'text-red-600' : 'text-emerald-600'}`}>
+              NT$ {detail.price?.toLocaleString()}
+            </span>
+            <span className={`inline-flex items-center text-xs font-bold font-mono px-2 py-0.5 rounded ${
+              isUp ? 'bg-red-50 text-red-600 border border-red-200' : 'bg-emerald-50 text-emerald-600 border border-emerald-200'
+            }`}>
+              {isUp ? <ArrowUpRight className="w-3.5 h-3.5 mr-0.5" /> : <ArrowDownRight className="w-3.5 h-3.5 mr-0.5" />}
+              {isUp ? `+${detail.change}` : detail.change} ({isUp ? `+${detail.pctChange}` : detail.pctChange}%)
+            </span>
           </div>
 
-          {/* 3. Interactive Candlestick (K線蠟燭圖) & Technical Chart (白色高對比卡片配櫻花粉工具列) */}
-          <div className="bg-white border border-pink-200 rounded-2xl p-4 sm:p-5 shadow-xs space-y-4">
-            {/* Chart Toolbar: 僅保留分時、日K、週K、月K、60分K、還原K，以及蠟燭/折線切換 */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-pink-100 pb-3">
-              {/* K-Line Granularity Selector (分時, 日K, 週K, 月K, 60分K, 還原K) */}
-              <div className="flex items-center space-x-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none text-xs bg-[#fff0f3] p-1 rounded-xl border border-pink-200">
+          {/* 開高低昨收量盤差 (行內高密度佈局) */}
+          <div className="flex items-center space-x-3 sm:space-x-4 text-[11px] font-mono flex-wrap">
+            <div>
+              <span className="text-slate-400 mr-1">開</span>
+              <strong className="text-slate-800">NT${detail.open}</strong>
+            </div>
+            <div>
+              <span className="text-slate-400 mr-1">高</span>
+              <strong className="text-red-600">NT${detail.high}</strong>
+            </div>
+            <div>
+              <span className="text-slate-400 mr-1">低</span>
+              <strong className="text-emerald-600">NT${detail.low}</strong>
+            </div>
+            <div>
+              <span className="text-slate-400 mr-1">昨收</span>
+              <strong className="text-slate-600">NT${detail.prevClose}</strong>
+            </div>
+            <div>
+              <span className="text-slate-400 mr-1">成交量</span>
+              <strong className="text-slate-900">{detail.volume?.toLocaleString()}張</strong>
+              <span className="text-slate-500 text-[10px] ml-1">({detail.turnover})</span>
+            </div>
+
+            {/* 盤差比 (外盤/內盤比) */}
+            <div className="hidden md:flex items-center space-x-1.5 pl-2 border-l border-pink-200">
+              <span className="text-red-600 font-bold text-[10px]">外{detail.outRatio}%</span>
+              <div className="w-14 h-2 bg-slate-200 rounded-full overflow-hidden flex border border-slate-300">
+                <div style={{ width: `${detail.outRatio}%` }} className="bg-red-500 h-full"></div>
+                <div style={{ width: `${detail.inRatio}%` }} className="bg-emerald-500 h-full"></div>
+              </div>
+              <span className="text-emerald-600 font-bold text-[10px]">內{detail.inRatio}%</span>
+            </div>
+          </div>
+        </div>
+
+        {/* ========================================================= */}
+        {/* 3. 模態分頁與 K 線週期切換列 (Tabs & Granularity Switcher)   */}
+        {/* ========================================================= */}
+        <div className="px-3 py-1.5 bg-[#fff0f3] border-b border-pink-200 flex flex-wrap items-center justify-between gap-2 shrink-0">
+          {/* 六大分析維度按鈕群 */}
+          <div className="flex items-center space-x-1 overflow-x-auto scrollbar-none py-0.5 text-xs">
+            <button
+              onClick={() => setActiveTab('TECH')}
+              className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                activeTab === 'TECH'
+                  ? 'bg-rose-600 text-white shadow-xs'
+                  : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
+              }`}
+            >
+              <Activity className="w-3.5 h-3.5" />
+              <span>技術面 (雙指標並列)</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('CHIPS')}
+              className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                activeTab === 'CHIPS'
+                  ? 'bg-rose-600 text-white shadow-xs'
+                  : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
+              }`}
+            >
+              <Coins className="w-3.5 h-3.5" />
+              <span>籌碼面</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('FUNDAMENTALS')}
+              className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                activeTab === 'FUNDAMENTALS'
+                  ? 'bg-rose-600 text-white shadow-xs'
+                  : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
+              }`}
+            >
+              <BarChart2 className="w-3.5 h-3.5" />
+              <span>基本面</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('DIVIDENDS')}
+              className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                activeTab === 'DIVIDENDS'
+                  ? 'bg-rose-600 text-white shadow-xs'
+                  : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
+              }`}
+            >
+              <Gift className="w-3.5 h-3.5" />
+              <span>股利政策</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('CHAIN')}
+              className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                activeTab === 'CHAIN'
+                  ? 'bg-rose-600 text-white shadow-xs'
+                  : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
+              }`}
+            >
+              <Layers className="w-3.5 h-3.5" />
+              <span>產業鏈</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('NEWS')}
+              className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                activeTab === 'NEWS'
+                  ? 'bg-rose-600 text-white shadow-xs'
+                  : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
+              }`}
+            >
+              <Newspaper className="w-3.5 h-3.5" />
+              <span>時事</span>
+            </button>
+          </div>
+
+          {/* 當前為技術面時，顯示 K 線週期切換按鈕群 */}
+          {activeTab === 'TECH' && (
+            <div className="flex items-center space-x-1 text-xs">
+              <div className="flex items-center space-x-1 bg-white p-0.5 rounded-lg border border-pink-200">
                 {['分時', '日K', '週K', '月K', '60分K', '還原K'].map((k) => (
                   <button
                     key={k}
                     onClick={() => handleKlineChange(k)}
-                    className={`px-3 py-1.5 rounded-lg text-xs transition font-bold ${
+                    className={`px-2 py-0.5 rounded-md text-[11px] font-bold transition ${
                       klineType === k
-                        ? 'bg-rose-600 text-white shadow-xs'
-                        : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/70'
+                        ? 'bg-rose-600 text-white shadow-2xs'
+                        : 'text-rose-800 hover:bg-rose-50'
                     }`}
                   >
                     {k}
@@ -207,47 +276,42 @@ export default function StockDetailModal({ stock, onClose }) {
                 ))}
               </div>
 
-              {/* Chart Mode Toggle: Candlestick vs Line */}
-              <div className="flex items-center space-x-1 bg-[#fff0f3] p-1 rounded-xl border border-pink-200">
+              {/* 蠟燭/折線切換 */}
+              <div className="flex items-center space-x-0.5 bg-white p-0.5 rounded-lg border border-pink-200">
                 <button
                   onClick={() => setChartMode('CANDLE')}
-                  className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
-                    chartMode === 'CANDLE'
-                      ? 'bg-white text-rose-700 shadow-xs border border-pink-200'
-                      : 'text-rose-800 hover:text-rose-950'
-                  }`}
-                  title="切換為 K 線蠟燭圖 (Candlestick)"
+                  className={`p-1 rounded-md transition ${chartMode === 'CANDLE' ? 'bg-rose-100 text-rose-800' : 'text-slate-400'}`}
+                  title="蠟燭圖"
                 >
                   <CandleIcon className="w-3.5 h-3.5" />
-                  <span>K棒蠟燭</span>
                 </button>
                 <button
                   onClick={() => setChartMode('LINE')}
-                  className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
-                    chartMode === 'LINE'
-                      ? 'bg-white text-rose-700 shadow-xs border border-pink-200'
-                      : 'text-rose-800 hover:text-rose-950'
-                  }`}
-                  title="切換為分時折線圖"
+                  className={`p-1 rounded-md transition ${chartMode === 'LINE' ? 'bg-rose-100 text-rose-800' : 'text-slate-400'}`}
+                  title="折線圖"
                 >
                   <LineIcon className="w-3.5 h-3.5" />
-                  <span>折線</span>
                 </button>
               </div>
             </div>
+          )}
+        </div>
 
-            {/* CHART RENDER: Candlestick (含自由縮放、支撐壓力線、副圖指標與畫線工具) vs Line */}
+        {/* ========================================================= */}
+        {/* 4. 模態主體內容區 (Main Content - Non-scrollable in TECH)    */}
+        {/* ========================================================= */}
+        {activeTab === 'TECH' ? (
+          <div className="flex-1 min-h-0 overflow-hidden flex flex-col p-2 sm:p-2.5 bg-[#fff8fa]">
             {chartMode === 'CANDLE' ? (
               <CandlestickChart 
                 data={currentChartData}
-                height={340}
                 isUp={isUp}
                 stock={detail}
                 supportPrice={detail.supportPrice || Number((detail.price * 0.97).toFixed(2))}
                 resistancePrice={detail.resistancePrice || Number((detail.price * 1.03).toFixed(2))}
               />
             ) : (
-              <div className="space-y-2">
+              <div className="flex-1 min-h-0 bg-white rounded-2xl border border-pink-200 p-3 flex flex-col">
                 <div className="h-64 sm:h-72 w-full">
                   <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={currentChartData} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
@@ -267,7 +331,7 @@ export default function StockDetailModal({ stock, onClose }) {
                         tickFormatter={(v) => `NT$${v}`}
                       />
                       <Tooltip 
-                        contentStyle={{ backgroundColor: '#FFFFFF', borderColor: '#FBCFE8', borderRadius: '12px', fontSize: '12px', boxShadow: '0 4px 12px rgba(244,114,182,0.1)' }}
+                        contentStyle={{ backgroundColor: '#FFFFFF', borderColor: '#FBCFE8', borderRadius: '12px', fontSize: '12px' }}
                         labelStyle={{ color: '#0F172A', fontWeight: 'bold' }}
                         formatter={(val, name) => [`NT$ ${Number(val).toLocaleString()}`, name === 'price' ? '最新價格' : name]}
                       />
@@ -288,8 +352,7 @@ export default function StockDetailModal({ stock, onClose }) {
                     </AreaChart>
                   </ResponsiveContainer>
                 </div>
-
-                {/* Sub-bar Volume */}
+                {/* 成交量副圖 */}
                 <div className="h-16 w-full pt-1 border-t border-pink-100">
                   <span className="text-[10px] text-rose-700/80 font-mono block mb-1">成交量 (Volume)</span>
                   <ResponsiveContainer width="100%" height="100%">
@@ -303,120 +366,9 @@ export default function StockDetailModal({ stock, onClose }) {
               </div>
             )}
           </div>
-
-          {/* 4. SanZhu 6 Core Dimension Tabs (技術面、籌碼面、基本面、股利、產業鏈、時事) */}
-          <div className="space-y-4">
-            {/* Tabs Header */}
-            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none border-b border-pink-200">
-              <button
-                onClick={() => setActiveTab('TECH')}
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap ${
-                  activeTab === 'TECH'
-                    ? 'bg-rose-600 text-white shadow-xs'
-                    : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
-                }`}
-              >
-                <Activity className="w-3.5 h-3.5" />
-                <span>技術面</span>
-              </button>
-
-              <button
-                onClick={() => setActiveTab('CHIPS')}
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap ${
-                  activeTab === 'CHIPS'
-                    ? 'bg-rose-600 text-white shadow-xs'
-                    : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
-                }`}
-              >
-                <Coins className="w-3.5 h-3.5" />
-                <span>籌碼面</span>
-              </button>
-
-              <button
-                onClick={() => setActiveTab('FUNDAMENTALS')}
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap ${
-                  activeTab === 'FUNDAMENTALS'
-                    ? 'bg-rose-600 text-white shadow-xs'
-                    : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
-                }`}
-              >
-                <BarChart2 className="w-3.5 h-3.5" />
-                <span>基本面</span>
-              </button>
-
-              <button
-                onClick={() => setActiveTab('DIVIDENDS')}
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap ${
-                  activeTab === 'DIVIDENDS'
-                    ? 'bg-rose-600 text-white shadow-xs'
-                    : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
-                }`}
-              >
-                <Gift className="w-3.5 h-3.5" />
-                <span>股利政策</span>
-              </button>
-
-              <button
-                onClick={() => setActiveTab('CHAIN')}
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap ${
-                  activeTab === 'CHAIN'
-                    ? 'bg-rose-600 text-white shadow-xs'
-                    : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
-                }`}
-              >
-                <Layers className="w-3.5 h-3.5" />
-                <span>產業鏈位置</span>
-              </button>
-
-              <button
-                onClick={() => setActiveTab('NEWS')}
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap ${
-                  activeTab === 'NEWS'
-                    ? 'bg-rose-600 text-white shadow-xs'
-                    : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
-                }`}
-              >
-                <Newspaper className="w-3.5 h-3.5" />
-                <span>個股時事</span>
-              </button>
-            </div>
-
-            {/* TAB CONTENT: 1. 技術面 (TECH) */}
-            {activeTab === 'TECH' && (
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-                <div className="bg-[#fff0f3] p-4 rounded-xl border border-pink-200">
-                  <span className="text-rose-800/80 block mb-1 font-semibold">均線排列結構</span>
-                  <div className="text-sm font-bold text-slate-900 mb-2">多頭排列 (MA5 &gt; MA20 &gt; MA60)</div>
-                  <div className="space-y-1 font-mono text-[11px] text-slate-700">
-                    <div>MA5 (5日線): NT$ {(detail.price * 0.99).toFixed(2)}</div>
-                    <div>MA20 (月線): NT$ {(detail.price * 0.96).toFixed(2)}</div>
-                    <div>MA60 (季線): NT$ {(detail.price * 0.91).toFixed(2)}</div>
-                  </div>
-                </div>
-
-                <div className="bg-[#fff0f3] p-4 rounded-xl border border-pink-200">
-                  <span className="text-rose-800/80 block mb-1 font-semibold">關鍵支撐與壓力</span>
-                  <div className="text-sm font-bold text-slate-900 mb-2">短線突破壓力點位</div>
-                  <div className="space-y-1 font-mono text-[11px] text-slate-700">
-                    <div>短線壓力: NT$ {(detail.price * 1.03).toFixed(2)}</div>
-                    <div>回檔支撐: NT$ {(detail.price * 0.97).toFixed(2)}</div>
-                    <div>乖離率 (BIAS): +2.45% (偏多)</div>
-                  </div>
-                </div>
-
-                <div className="bg-[#fff0f3] p-4 rounded-xl border border-pink-200">
-                  <span className="text-rose-800/80 block mb-1 font-semibold">震盪技術指標</span>
-                  <div className="text-sm font-bold text-emerald-600 mb-2">多方動能主導</div>
-                  <div className="space-y-1 font-mono text-[11px] text-slate-700">
-                    <div>RSI (14日): 64.2 (強勢區)</div>
-                    <div>KD (9,3,3): K 72 / D 68 (黃金交叉)</div>
-                    <div>MACD: 正向翻紅擴大</div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* TAB CONTENT: 2. 籌碼面 (CHIPS) */}
+        ) : (
+          <div className="flex-1 min-h-0 overflow-y-auto p-4 sm:p-5 space-y-4 bg-[#fff8fa]">
+            {/* 籌碼面 */}
             {activeTab === 'CHIPS' && (
               <div className="space-y-3 text-xs">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -452,7 +404,7 @@ export default function StockDetailModal({ stock, onClose }) {
               </div>
             )}
 
-            {/* TAB CONTENT: 3. 基本面 (FUNDAMENTALS) */}
+            {/* 基本面 */}
             {activeTab === 'FUNDAMENTALS' && (
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
                 <div className="bg-[#fff0f3] p-3.5 rounded-xl border border-pink-200">
@@ -478,105 +430,75 @@ export default function StockDetailModal({ stock, onClose }) {
                   <span className="text-base font-bold text-slate-900">{detail.revenueMonthly}</span>
                   <span className="text-[10px] text-red-600 block font-mono mt-0.5">YoY {detail.revYoY} (月增 {detail.revMoM})</span>
                 </div>
-
-                <div className="bg-[#fff0f3] p-3.5 rounded-xl border border-pink-200">
-                  <span className="text-rose-800/80 block font-sans text-[11px] font-semibold">營業毛利率 (Gross Margin)</span>
-                  <span className="text-base font-bold text-slate-900">{detail.grossMargin}</span>
-                </div>
-
-                <div className="bg-[#fff0f3] p-3.5 rounded-xl border border-pink-200">
-                  <span className="text-rose-800/80 block font-sans text-[11px] font-semibold">營業利益率 (OP Margin)</span>
-                  <span className="text-base font-bold text-slate-900">{detail.opMargin}</span>
-                </div>
-
-                <div className="bg-[#fff0f3] p-3.5 rounded-xl border border-pink-200 sm:col-span-2">
-                  <span className="text-rose-800/80 block font-sans text-[11px] font-semibold">股東權益報酬率 (ROE)</span>
-                  <span className="text-base font-bold text-emerald-600">{detail.roe}</span>
-                  <span className="text-[10px] text-slate-500 block font-sans mt-0.5">獲利回報率穩健</span>
-                </div>
               </div>
             )}
 
-            {/* TAB CONTENT: 4. 股利政策 (DIVIDENDS) */}
+            {/* 股利政策 */}
             {activeTab === 'DIVIDENDS' && (
               <div className="space-y-3 text-xs">
-                <div className="overflow-x-auto rounded-xl border border-pink-200 shadow-2xs">
-                  <table className="w-full text-left font-mono">
-                    <thead className="bg-[#fff0f3] text-rose-800 border-b border-pink-200 font-sans text-[11px]">
-                      <tr>
-                        <th className="p-3">股利發放年度</th>
-                        <th className="p-3">現金股利 (NT$)</th>
-                        <th className="p-3">股票股利</th>
+                <div className="overflow-x-auto rounded-xl border border-pink-200 bg-white">
+                  <table className="w-full text-left border-collapse">
+                    <thead>
+                      <tr className="bg-[#fff0f3] text-rose-900 border-b border-pink-200 text-[11px]">
+                        <th className="p-3">發放年度/季度</th>
+                        <th className="p-3">現金股利 (元)</th>
+                        <th className="p-3">股票股利 (元)</th>
                         <th className="p-3">除息交易日</th>
-                        <th className="p-3">殖利率 (Yield)</th>
+                        <th className="p-3">現金殖利率</th>
                         <th className="p-3">填息天數</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-pink-100 bg-white">
+                    <tbody className="divide-y divide-pink-100 font-mono text-[11px]">
                       {detail.dividends.map((div, i) => (
                         <tr key={i} className="hover:bg-rose-50/50 transition">
-                          <td className="p-3 font-bold text-slate-900 font-sans">{div.year}</td>
-                          <td className="p-3 text-red-600 font-bold">NT$ {div.cash}</td>
-                          <td className="p-3 text-slate-600">{div.stock} 股</td>
-                          <td className="p-3 text-slate-500">{div.exDate}</td>
-                          <td className="p-3 text-emerald-600 font-bold">{div.yield}</td>
-                          <td className="p-3 text-slate-700 font-sans">{div.fillDays}</td>
+                          <td className="p-3 font-bold font-sans text-slate-900">{div.year}</td>
+                          <td className="p-3 font-bold text-red-600">NT$ {div.cash.toFixed(2)}</td>
+                          <td className="p-3 text-slate-600">{div.stock.toFixed(2)}</td>
+                          <td className="p-3 text-slate-700">{div.exDate}</td>
+                          <td className="p-3 font-bold text-emerald-600">{div.yield}</td>
+                          <td className="p-3 font-sans text-slate-700">{div.fillDays}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-                <p className="text-[11px] text-rose-800/80 font-mono">
-                  * 殖利率依發放時股價推算，歷史平均 10~15 天完成填息。
-                </p>
               </div>
             )}
 
-            {/* TAB CONTENT: 5. 產業鏈位置 (CHAIN) */}
+            {/* 產業鏈 */}
             {activeTab === 'CHAIN' && (
-              <div className="bg-[#fff0f3] p-4 rounded-xl border border-pink-200 space-y-4 text-xs">
-                <div>
-                  <span className="text-[11px] font-bold text-rose-700 block mb-1">產業戰略核心定位</span>
-                  <div className="text-sm font-bold text-slate-900 bg-white p-2.5 rounded-lg border border-pink-200">
-                    {detail.supplyChain.position}
-                  </div>
+              <div className="space-y-3 text-xs">
+                <div className="bg-[#fff0f3] p-4 rounded-xl border border-pink-200">
+                  <span className="text-rose-800 font-bold block mb-1">產業戰略定位</span>
+                  <div className="text-sm font-extrabold text-slate-900">{detail.supplyChain.position}</div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <div className="bg-white p-3 rounded-lg border border-pink-200 space-y-1.5">
-                    <span className="font-bold text-rose-700 block border-b border-pink-100 pb-1">上游供應廠商</span>
-                    {detail.supplyChain.upstream.map((up, i) => (
-                      <div key={i} className="text-slate-700 text-[11px] flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
-                        {up}
-                      </div>
-                    ))}
+                  <div className="bg-white p-3.5 rounded-xl border border-pink-200">
+                    <span className="text-rose-700 font-bold block mb-2">上游供應鏈 (原材料與設備)</span>
+                    <ul className="space-y-1 text-slate-700 list-disc list-inside">
+                      {detail.supplyChain.upstream.map((u, i) => <li key={i}>{u}</li>)}
+                    </ul>
                   </div>
 
-                  <div className="bg-white p-3 rounded-lg border border-pink-200 space-y-1.5">
-                    <span className="font-bold text-purple-700 block border-b border-pink-100 pb-1">中游製造與同業</span>
-                    {detail.supplyChain.midstream.map((mid, i) => (
-                      <div key={i} className="text-slate-700 text-[11px] flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
-                        {mid}
-                      </div>
-                    ))}
+                  <div className="bg-white p-3.5 rounded-xl border border-pink-200">
+                    <span className="text-rose-700 font-bold block mb-2">中游核心 (本公司與同業)</span>
+                    <ul className="space-y-1 text-slate-700 list-disc list-inside">
+                      {detail.supplyChain.midstream.map((m, i) => <li key={i}>{m}</li>)}
+                    </ul>
                   </div>
 
-                  <div className="bg-white p-3 rounded-lg border border-pink-200 space-y-1.5">
-                    <span className="font-bold text-emerald-700 block border-b border-pink-100 pb-1">下游出貨客戶群</span>
-                    {detail.supplyChain.downstream.map((down, i) => (
-                      <div key={i} className="text-slate-700 text-[11px] flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                        {down}
-                      </div>
-                    ))}
+                  <div className="bg-white p-3.5 rounded-xl border border-pink-200">
+                    <span className="text-rose-700 font-bold block mb-2">下游應用 (終端客戶)</span>
+                    <ul className="space-y-1 text-slate-700 list-disc list-inside">
+                      {detail.supplyChain.downstream.map((d, i) => <li key={i}>{d}</li>)}
+                    </ul>
                   </div>
                 </div>
               </div>
             )}
 
-            {/* TAB CONTENT: 6. 個股時事 (NEWS) */}
+            {/* 個股時事 */}
             {activeTab === 'NEWS' && (
               <div className="space-y-2 text-xs">
                 {detail.news.map((n, i) => (
@@ -602,16 +524,18 @@ export default function StockDetailModal({ stock, onClose }) {
               </div>
             )}
           </div>
-        </div>
+        )}
 
-        {/* 5. Modal Footer Action */}
-        <div className="p-3 bg-[#fff0f3] border-t border-pink-200 flex items-center justify-between text-xs text-rose-800">
+        {/* ========================================================= */}
+        {/* 5. 模態底部狀態欄 (Modal Footer)                           */}
+        {/* ========================================================= */}
+        <div className="px-4 py-2 bg-[#fff0f3] border-t border-pink-200 flex items-center justify-between text-xs text-rose-800 shrink-0">
           <span className="font-mono text-[11px]">
-            臺灣證券交易所 (TWSE) • 三竹股市規格深度診斷模組
+            臺灣證券交易所 (TWSE) • 三竹智選股規格深度技術指標模組 (無滑動鎖定視窗)
           </span>
           <button
             onClick={onClose}
-            className="px-4 py-1.5 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-bold transition shadow-xs"
+            className="px-4 py-1 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-bold transition shadow-xs text-xs"
           >
             完成檢視
           </button>
