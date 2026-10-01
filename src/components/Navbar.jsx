@@ -65,20 +65,48 @@ export default function Navbar({
           </span>
         </div>
 
-        {/* GitHub Repository Link */}
-        <a
-          href="https://github.com/dainosososo/Finance"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:flex items-center space-x-1.5 text-xs text-rose-800 hover:text-rose-950 transition-colors bg-white/90 hover:bg-rose-50 px-2.5 py-1 rounded-md border border-pink-200 shadow-2xs"
-        >
-          <Github className="w-3.5 h-3.5" />
-          <span>dainosososo/Finance</span>
-        </a>
+        <div className="flex items-center space-x-3">
+          {/* Subtle Refresh Controls in Top Bar */}
+          <div className="flex items-center space-x-2 text-xs">
+            <button
+              onClick={() => setAutoRefresh && setAutoRefresh(!autoRefresh)}
+              className={`flex items-center space-x-1 px-2.5 py-0.5 rounded-md text-[11px] font-medium transition ${
+                autoRefresh 
+                  ? 'bg-emerald-100/80 text-emerald-800 border border-emerald-300 font-bold' 
+                  : 'bg-white text-slate-600 border border-pink-200'
+              }`}
+              title="切換定時自動抓取最新報價"
+            >
+              <Zap className={`w-3 h-3 ${autoRefresh ? 'text-emerald-600 fill-emerald-600/30' : ''}`} />
+              <span>{autoRefresh ? `自動 (${refreshInterval/1000}s)` : '暫停更新'}</span>
+            </button>
+
+            <button
+              onClick={onManualRefresh}
+              disabled={isRefreshing}
+              className="flex items-center space-x-1 text-[11px] text-rose-800 hover:text-rose-950 px-2 py-0.5 rounded-md bg-white border border-pink-200 hover:bg-rose-50 transition active:scale-95 disabled:opacity-50"
+              title="立即抓取最新證交所盤後與即時資料"
+            >
+              <RefreshCw className={`w-3 h-3 ${isRefreshing ? 'animate-spin' : ''}`} />
+              <span className="font-semibold">刷新</span>
+            </button>
+          </div>
+
+          {/* GitHub Repository Link */}
+          <a
+            href="https://github.com/dainosososo/Finance"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex items-center space-x-1.5 text-xs text-rose-800 hover:text-rose-950 transition-colors bg-white/90 hover:bg-rose-50 px-2.5 py-1 rounded-md border border-pink-200 shadow-2xs"
+          >
+            <Github className="w-3.5 h-3.5" />
+            <span>dainosososo/Finance</span>
+          </a>
+        </div>
       </div>
 
-      {/* Main Navigation Bar */}
-      <div className="w-full px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      {/* Main Navigation Bar - 搜尋框占用整個橫幅空間 */}
+      <div className="w-full px-4 sm:px-6 lg:px-8 h-16 flex items-center gap-4">
         {/* Sidebar Toggle & Brand Logo */}
         <div className="flex items-center space-x-3 flex-shrink-0">
           {onToggleSidebar && (
@@ -117,9 +145,9 @@ export default function Navbar({
           </div>
         </div>
 
-        {/* Search Bar with Autocomplete Dropdown (櫻花粉主題) */}
-        <div className="flex-1 max-w-md mx-2 relative">
-          <form onSubmit={handleSearchSubmit} className="relative">
+        {/* Search Bar with Autocomplete Dropdown - 占用整個橫幅空間 */}
+        <div className="flex-1 min-w-0 relative">
+          <form onSubmit={handleSearchSubmit} className="relative w-full">
             <input
               type="text"
               value={searchTerm}
@@ -128,18 +156,24 @@ export default function Navbar({
                 setSearchTerm(e.target.value);
                 setIsFocused(true);
               }}
-              placeholder="搜尋股票代號或名稱 (如: 2330, 台積電, 聯發科)..."
-              className="w-full bg-white/95 text-sm text-slate-900 placeholder-rose-300 pl-10 pr-10 py-2 rounded-xl border border-pink-200 focus:outline-none focus:border-rose-500 focus:bg-white focus:ring-1 focus:ring-rose-400 transition-all shadow-inner"
+              placeholder="搜尋股票代號或名稱 (如: 2330, 台積電, 聯發科, 鴻海, 0050)..."
+              className="w-full bg-white text-sm text-slate-900 placeholder-rose-300 pl-11 pr-24 py-2.5 rounded-2xl border border-pink-200 focus:outline-none focus:border-rose-500 focus:bg-white focus:ring-2 focus:ring-rose-200 transition-all shadow-xs"
             />
-            <Search className="absolute left-3.5 top-2.5 w-4 h-4 text-rose-400" />
-            {searchTerm && (
-              <button
-                type="submit"
-                className="absolute right-2 top-1.5 text-xs bg-rose-600 text-white hover:bg-rose-700 px-2.5 py-1 rounded-lg transition-colors font-medium shadow-xs"
-              >
-                搜尋
-              </button>
-            )}
+            <Search className="absolute left-4 top-3 w-4 h-4 text-rose-400" />
+            <div className="absolute right-2.5 top-1.5 flex items-center space-x-1.5">
+              {searchTerm ? (
+                <button
+                  type="submit"
+                  className="text-xs bg-rose-600 text-white hover:bg-rose-700 px-3.5 py-1.5 rounded-xl transition-colors font-bold shadow-xs"
+                >
+                  搜尋
+                </button>
+              ) : (
+                <span className="text-[11px] font-mono font-medium text-rose-800/70 bg-[#fff5f7] border border-pink-200 px-2 py-1 rounded-lg hidden sm:inline-block">
+                  新台幣 NT$ 計價
+                </span>
+              )}
+            </div>
           </form>
 
           {/* Autocomplete Dropdown */}
@@ -150,23 +184,25 @@ export default function Navbar({
                 onClick={() => setIsFocused(false)} 
               />
               <div className="absolute left-0 right-0 top-full mt-2 bg-white border border-slate-200 rounded-2xl shadow-2xl z-40 overflow-hidden backdrop-blur-xl animate-fade-in">
-                <div className="p-2 border-b border-slate-200 text-[11px] font-bold text-slate-500 px-3 flex justify-between items-center bg-slate-50">
+                <div className="p-2.5 border-b border-slate-200 text-[11px] font-bold text-slate-500 px-4 flex justify-between items-center bg-slate-50">
                   <span>即時配對標的 (點擊開啟三竹完整分析)</span>
-                  <span className="text-[10px] text-blue-700 font-bold">新台幣 NT$ 計價</span>
+                  <span className="text-[10px] text-rose-700 font-bold bg-rose-50 px-2 py-0.5 rounded border border-pink-200">
+                    新台幣 NT$ 計價
+                  </span>
                 </div>
-                <div className="max-h-64 overflow-y-auto divide-y divide-slate-100">
+                <div className="max-h-80 overflow-y-auto divide-y divide-slate-100">
                   {searchResults.map((item) => (
                     <div
                       key={item.Code}
                       onMouseDown={() => handleSelectResult(item)}
-                      className="p-3 hover:bg-slate-50 cursor-pointer transition flex items-center justify-between group"
+                      className="p-3 hover:bg-rose-50/40 cursor-pointer transition flex items-center justify-between group"
                     >
                       <div className="flex items-center space-x-3">
-                        <span className="font-mono text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
+                        <span className="font-mono text-xs font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-pink-200">
                           {item.Code}
                         </span>
                         <div>
-                          <span className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                          <span className="text-sm font-bold text-slate-900 group-hover:text-rose-600 transition-colors">
                             {item.Name}
                           </span>
                           <span className="text-xs text-slate-400 ml-2">
@@ -190,7 +226,7 @@ export default function Navbar({
                   {searchResults.length === 0 && (
                     <div 
                       onMouseDown={() => handleSelectResult({ Code: searchTerm.trim(), Name: searchTerm.trim() })}
-                      className="p-4 hover:bg-slate-50 cursor-pointer text-center text-xs text-blue-600 transition"
+                      className="p-4 hover:bg-slate-50 cursor-pointer text-center text-xs text-rose-600 transition"
                     >
                       開啟「<strong className="text-slate-900">{searchTerm.trim()}</strong>」三竹深度技術與籌碼分析 ➔
                     </div>
@@ -199,95 +235,6 @@ export default function Navbar({
               </div>
             </>
           )}
-        </div>
-
-        {/* Nav Links & Controls */}
-        <div className="flex items-center space-x-2">
-          {/* Quick Section Tab Links (櫻花粉主題) */}
-          {setActiveTab && (
-            <div className="hidden lg:flex items-center space-x-1 mr-2 text-xs font-medium text-rose-800">
-              <button
-                onClick={() => setActiveTab('REALTIME')}
-                className={`px-2.5 py-1 rounded-lg transition ${
-                  activeTab === 'REALTIME' ? 'bg-rose-600 text-white font-bold shadow-xs' : 'hover:text-rose-950 hover:bg-rose-100/60'
-                }`}
-              >
-                自選行情
-              </button>
-              <button
-                onClick={() => setActiveTab('RANKINGS')}
-                className={`px-2.5 py-1 rounded-lg transition ${
-                  activeTab === 'RANKINGS' ? 'bg-rose-600 text-white font-bold shadow-xs' : 'hover:text-rose-950 hover:bg-rose-100/60'
-                }`}
-              >
-                三大排行
-              </button>
-              <button
-                onClick={() => setActiveTab('NEWS')}
-                className={`px-2.5 py-1 rounded-lg transition ${
-                  activeTab === 'NEWS' ? 'bg-rose-600 text-white font-bold shadow-xs' : 'hover:text-rose-950 hover:bg-rose-100/60'
-                }`}
-              >
-                產業時事
-              </button>
-              <button
-                onClick={() => setActiveTab('DAILY')}
-                className={`px-2.5 py-1 rounded-lg transition ${
-                  activeTab === 'DAILY' ? 'bg-rose-600 text-white font-bold shadow-xs' : 'hover:text-rose-950 hover:bg-rose-100/60'
-                }`}
-              >
-                全股報價
-              </button>
-            </div>
-          )}
-
-          {/* 13:30 Daily Report Modal Trigger */}
-          <button
-            onClick={onOpenReportModal}
-            className="flex items-center space-x-1.5 bg-rose-600 hover:bg-rose-700 text-white text-xs px-3 py-2 rounded-xl font-bold transition shadow-xs active:scale-95"
-            title="開啟 13:30 盤後精簡報告"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-            <span>13:30 盤後日報</span>
-          </button>
-
-          {/* Refresh Toggle (櫻花粉精緻主題) */}
-          <div className="hidden sm:flex items-center bg-[#fff0f3] rounded-xl p-1 border border-pink-200">
-            <button
-              onClick={() => setAutoRefresh(!autoRefresh)}
-              className={`flex items-center space-x-1.5 text-xs px-2.5 py-1 rounded-lg transition-all font-medium ${
-                autoRefresh 
-                  ? 'bg-white text-rose-700 border border-pink-200 shadow-2xs font-bold' 
-                  : 'text-rose-800 hover:text-rose-950'
-              }`}
-            >
-              <Zap className={`w-3.5 h-3.5 ${autoRefresh ? 'text-rose-600 fill-rose-600/20' : ''}`} />
-              <span>{autoRefresh ? '自動' : '暫停'}</span>
-            </button>
-
-            {autoRefresh && (
-              <select
-                value={refreshInterval}
-                onChange={(e) => setRefreshInterval(Number(e.target.value))}
-                className="bg-transparent text-xs text-rose-900 font-mono focus:outline-none px-1 py-0.5 cursor-pointer"
-              >
-                <option value={5000}>5s</option>
-                <option value={10000}>10s</option>
-                <option value={30000}>30s</option>
-              </select>
-            )}
-          </div>
-
-          {/* Manual Refresh Button */}
-          <button
-            onClick={onManualRefresh}
-            disabled={isRefreshing}
-            className="flex items-center space-x-1.5 bg-rose-600 hover:bg-rose-700 text-white text-xs px-3 py-2 rounded-xl font-medium transition-all shadow-xs active:scale-95 disabled:opacity-50"
-            title="手動抓取最新證交所資料"
-          >
-            <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin' : ''}`} />
-            <span className="hidden sm:inline font-bold">刷新</span>
-          </button>
         </div>
       </div>
     </header>

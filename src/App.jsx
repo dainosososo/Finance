@@ -132,6 +132,7 @@ export default function App() {
 
   const TABS = [
     { id: 'ALL', name: '雙熱力圖中心', icon: Flame },
+    { id: 'MARKET', name: '大盤與市場總覽', icon: Layers },
     { id: 'REALTIME', name: '即時自選', icon: Zap },
     { id: 'RANKINGS', name: '三大排行', icon: Coins },
     { id: 'NEWS', name: '產業時事', icon: Newspaper },
@@ -203,39 +204,119 @@ export default function App() {
             </div>
           </div>
 
-          {/* 1. TAB: ALL (首頁中心僅保留 2 張熱力圖 + 底部 4 大大盤指標) */}
+          {/* 1. TAB: ALL (首頁中心雙熱力圖: 即時成交值、產業結構板塊) */}
           {activeTab === 'ALL' && (
             <div className="space-y-6 animate-fade-in">
-              {/* CENTER: 2 張熱力圖 (多區塊顯示: 即時成交值、產業結構板塊) */}
               <MarketHeatmap 
                 dailyStocks={dailyStocks}
                 onSelectStock={(st) => setSelectedStockModal(st)}
               />
+            </div>
+          )}
 
-              {/* BOTTOM: 大盤加權指數 TAIEX、櫃買指數 OTC Index、市場成交總金額、大盤多空漲跌比 */}
-              <div className="pt-6 border-t border-pink-200/90 space-y-3 bg-[#fff0f3] p-5 rounded-3xl border border-pink-200 shadow-xs">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <Layers className="w-4 h-4 text-rose-600" />
-                    <h3 className="text-sm font-extrabold text-slate-900">
-                      大盤加權指數與市場總覽關鍵指標 (TWSE)
-                    </h3>
+          {/* 2. TAB: MARKET (獨立大盤加權指數與市場總覽關鍵指標 TWSE) */}
+          {activeTab === 'MARKET' && (
+            <div className="space-y-6 animate-fade-in">
+              <div className="bg-[#fff0f3] p-5 sm:p-6 rounded-3xl border border-pink-200 shadow-xs space-y-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-pink-200/80 pb-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="p-2.5 bg-rose-600 text-white rounded-2xl shadow-xs">
+                      <Layers className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+                        大盤加權指數與市場總覽關鍵指標 (TWSE)
+                        <span className="text-[11px] font-bold px-2 py-0.5 bg-rose-100 text-rose-800 rounded-md border border-pink-300">
+                          全市場核心看板
+                        </span>
+                      </h2>
+                      <p className="text-xs text-rose-900/70 mt-0.5">
+                        整合臺灣證交所加權指數 (TAIEX)、櫃買指數 (OTC)、市場總成交額與多空漲跌家數
+                      </p>
+                    </div>
                   </div>
-                  <span className="text-[11px] text-rose-800/80 font-mono">
-                    全市場核心觀測 • 移至網頁最下方
-                  </span>
+
+                  <div className="flex items-center space-x-2 text-xs font-mono text-rose-800 bg-white/90 px-3 py-1.5 rounded-xl border border-pink-200 shadow-2xs">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>臺灣證券交易所連線撮合</span>
+                  </div>
                 </div>
 
+                {/* 4 Financial Metric Cards + Top Gainers */}
                 <MarketSummary 
                   taiexData={taiexData}
                   topStocks={dailyStocks.slice(0, 10)}
                   onSelectStock={(st) => setSelectedStockModal(st)}
                 />
               </div>
+
+              {/* Major Weighted Stock Summary Table */}
+              <div className="bg-white/95 p-5 sm:p-6 rounded-3xl border border-pink-200 shadow-xs space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <TrendingUp className="w-4 h-4 text-rose-600" />
+                    <h3 className="text-sm font-extrabold text-slate-900">
+                      大盤權值核心標的即時報價總覽
+                    </h3>
+                  </div>
+                  <span className="text-xs text-rose-800/80 font-mono">
+                    點擊標的直接開啟三竹深度分析
+                  </span>
+                </div>
+
+                <div className="overflow-x-auto">
+                  <table className="w-full text-xs text-left">
+                    <thead className="bg-[#fff0f3] text-rose-900 font-bold border-b border-pink-200">
+                      <tr>
+                        <th className="py-2.5 px-3">代號 / 標的</th>
+                        <th className="py-2.5 px-3">產業類別</th>
+                        <th className="py-2.5 px-3 text-right">成交價 (NT$)</th>
+                        <th className="py-2.5 px-3 text-right">漲跌</th>
+                        <th className="py-2.5 px-3 text-right">漲跌幅</th>
+                        <th className="py-2.5 px-3 text-right">成交量 (張)</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-pink-100 font-mono">
+                      {dailyStocks.slice(0, 10).map((st) => {
+                        const isUp = !String(st.Change || st.change || '').includes('-');
+                        return (
+                          <tr 
+                            key={st.Code || st.symbol} 
+                            onClick={() => setSelectedStockModal(st)}
+                            className="hover:bg-rose-50/50 cursor-pointer transition"
+                          >
+                            <td className="py-2.5 px-3 font-sans font-bold text-slate-900 flex items-center space-x-2">
+                              <span className="text-rose-700 bg-rose-50 px-1.5 py-0.5 rounded border border-pink-200 font-mono text-[11px]">
+                                {st.Code || st.symbol}
+                              </span>
+                              <span>{st.Name || st.name}</span>
+                            </td>
+                            <td className="py-2.5 px-3 font-sans text-slate-500">
+                              {st.Sector || st.sector || '上市核心'}
+                            </td>
+                            <td className="py-2.5 px-3 text-right font-bold text-slate-900">
+                              NT$ {st.ClosingPrice || st.price}
+                            </td>
+                            <td className={`py-2.5 px-3 text-right font-bold ${isUp ? 'text-red-600' : 'text-emerald-600'}`}>
+                              {st.Change || st.change || '--'}
+                            </td>
+                            <td className={`py-2.5 px-3 text-right font-bold ${isUp ? 'text-red-600' : 'text-emerald-600'}`}>
+                              {st.pctChange || (st.PctChange ? `${st.PctChange}%` : '--')}
+                            </td>
+                            <td className="py-2.5 px-3 text-right text-slate-700">
+                              {st.TradeVolume ? Number(st.TradeVolume).toLocaleString() : (st.volume || '--')}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           )}
 
-          {/* 2. TAB: REALTIME (即時自選與五檔) */}
+          {/* 3. TAB: REALTIME (即時自選) */}
           {activeTab === 'REALTIME' && (
             <div className="space-y-6 animate-fade-in">
               <RealtimeTicker 
@@ -244,19 +325,10 @@ export default function App() {
                 onAddStock={handleAddStock}
                 onRemoveStock={handleRemoveStock}
               />
-
-              {/* BOTTOM: 大盤指標 */}
-              <div className="pt-6 border-t border-pink-200/90 space-y-3 bg-[#fff0f3] p-5 rounded-3xl border border-pink-200">
-                <MarketSummary 
-                  taiexData={taiexData}
-                  topStocks={dailyStocks.slice(0, 10)}
-                  onSelectStock={(st) => setSelectedStockModal(st)}
-                />
-              </div>
             </div>
           )}
 
-          {/* 3. TAB: RANKINGS (三大法人與成交量排行，點擊側欄項目跳轉至此) */}
+          {/* 4. TAB: RANKINGS (三大法人與成交量排行，點擊側欄項目跳轉至此) */}
           {activeTab === 'RANKINGS' && (
             <div className="space-y-6 animate-fade-in">
               <PostMarketRankings 
@@ -265,19 +337,10 @@ export default function App() {
                 isRefreshing={isRefreshing}
                 onSelectStock={(st) => setSelectedStockModal(st)}
               />
-
-              {/* BOTTOM: 大盤指標 */}
-              <div className="pt-6 border-t border-pink-200/90 space-y-3 bg-[#fff0f3] p-5 rounded-3xl border border-pink-200">
-                <MarketSummary 
-                  taiexData={taiexData}
-                  topStocks={dailyStocks.slice(0, 10)}
-                  onSelectStock={(st) => setSelectedStockModal(st)}
-                />
-              </div>
             </div>
           )}
 
-          {/* 4. TAB: NEWS (焦點產業結構時事與金管會公文，點擊側欄項目跳轉至此) */}
+          {/* 5. TAB: NEWS (焦點產業結構時事與金管會公文，點擊側欄項目跳轉至此) */}
           {activeTab === 'NEWS' && (
             <div className="space-y-6 animate-fade-in">
               <IndustryNewsFeed 
@@ -285,34 +348,16 @@ export default function App() {
                 onSelectStock={(st) => setSelectedStockModal(st)}
               />
               <FscNewsFeed newsList={fscNews} />
-
-              {/* BOTTOM: 大盤指標 */}
-              <div className="pt-6 border-t border-pink-200/90 space-y-3 bg-[#fff0f3] p-5 rounded-3xl border border-pink-200">
-                <MarketSummary 
-                  taiexData={taiexData}
-                  topStocks={dailyStocks.slice(0, 10)}
-                  onSelectStock={(st) => setSelectedStockModal(st)}
-                />
-              </div>
             </div>
           )}
 
-          {/* 5. TAB: DAILY (全股每日收盤價數據庫) */}
+          {/* 6. TAB: DAILY (全股每日收盤價數據庫) */}
           {activeTab === 'DAILY' && (
             <div className="space-y-6 animate-fade-in">
               <DailyClosingTable 
                 dailyStocks={dailyStocks}
                 onSelectStock={(st) => setSelectedStockModal(st)}
               />
-
-              {/* BOTTOM: 大盤指標 */}
-              <div className="pt-6 border-t border-pink-200/90 space-y-3 bg-[#fff0f3] p-5 rounded-3xl border border-pink-200">
-                <MarketSummary 
-                  taiexData={taiexData}
-                  topStocks={dailyStocks.slice(0, 10)}
-                  onSelectStock={(st) => setSelectedStockModal(st)}
-                />
-              </div>
             </div>
           )}
         </main>

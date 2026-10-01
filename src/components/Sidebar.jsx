@@ -46,13 +46,22 @@ export default function Sidebar({
       badge: '首頁'
     },
     {
-      id: 'NEWS_SECTOR',
-      tabTarget: 'NEWS',
-      label: '產業結構分類焦點新聞時事',
-      sublabel: '五大焦點板塊剖析',
-      icon: Building2,
-      color: 'text-purple-600',
-      badge: '時事'
+      id: 'MARKET',
+      tabTarget: 'MARKET',
+      label: '大盤加權指數與市場總覽 (TWSE)',
+      sublabel: 'TAIEX、櫃買、總成交值與多空比',
+      icon: Layers,
+      color: 'text-rose-600',
+      badge: '大盤'
+    },
+    {
+      id: 'REALTIME',
+      tabTarget: 'REALTIME',
+      label: '即時自選',
+      sublabel: '自選監控與三竹深度分析',
+      icon: Zap,
+      color: 'text-emerald-600',
+      badge: '即時'
     },
     {
       id: 'RANKINGS_INST',
@@ -64,31 +73,13 @@ export default function Sidebar({
       badge: '法人'
     },
     {
-      id: 'REALTIME',
-      tabTarget: 'REALTIME',
-      label: '即時自選',
-      sublabel: '五檔即時盤況與監控',
-      icon: Zap,
-      color: 'text-emerald-600',
-      badge: '即時'
-    },
-    {
-      id: 'RANKINGS',
-      tabTarget: 'RANKINGS',
-      label: '三大排行',
-      sublabel: '漲跌幅、成交值、成交量',
-      icon: Coins,
-      color: 'text-amber-600',
-      badge: '排行'
-    },
-    {
-      id: 'NEWS',
+      id: 'NEWS_SECTOR',
       tabTarget: 'NEWS',
-      label: '產業時事',
-      sublabel: '證券交易所與金管會即時公文',
-      icon: Newspaper,
-      color: 'text-indigo-600',
-      badge: '公告'
+      label: '產業結構分類焦點新聞時事',
+      sublabel: '五大焦點板塊剖析',
+      icon: Building2,
+      color: 'text-purple-600',
+      badge: '時事'
     },
     {
       id: 'DAILY',
@@ -154,7 +145,11 @@ export default function Sidebar({
 
       {/* Quick Status / Market Indicator when collapsed/expanded */}
       {!isCollapsed ? (
-        <div className="p-3 mx-2 my-2 bg-white/90 rounded-xl border border-pink-200 shadow-2xs">
+        <div 
+          onClick={() => setActiveTab('MARKET')}
+          className="p-3 mx-2 my-2 bg-white/90 rounded-xl border border-pink-200 shadow-2xs cursor-pointer hover:border-pink-400 hover:bg-white transition"
+          title="點擊查看完整大盤加權與市場總覽"
+        >
           <div className="flex items-center justify-between text-[11px] mb-1">
             <span className="text-rose-800 font-semibold">大盤加權指數</span>
             <span className="font-mono font-bold text-slate-900">{taiexData?.taiex || '23,125.80'}</span>
@@ -167,7 +162,11 @@ export default function Sidebar({
           </div>
         </div>
       ) : (
-        <div className="py-2 flex justify-center" title="加權指數 23,125.80">
+        <div 
+          onClick={() => setActiveTab('MARKET')}
+          className="py-2 flex justify-center cursor-pointer" 
+          title="加權指數 23,125.80 (點擊查看市場總覽)"
+        >
           <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
         </div>
       )}
