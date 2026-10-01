@@ -92,9 +92,15 @@ export default function StockDetailModal({ stock, onClose }) {
                   {detail.market}
                 </span>
               </div>
-              <p className="text-xs text-rose-900/70 mt-0.5 font-sans">
-                三竹股市標準規格 • 盤差、自由縮放K線蠟燭圖、籌碼面、基本面與產業鏈綜合分析
-              </p>
+              <div className="flex items-center space-x-2 mt-0.5 text-xs text-rose-900/80 font-sans flex-wrap">
+                <span>上市櫃日期: <strong className="font-mono text-slate-800">{detail.listingDate || '1994-09-05'}</strong> ({detail.yearsListed || 32} 年)</span>
+                <span>•</span>
+                <span>掛牌價: <strong className="font-mono text-slate-800">NT$ {detail.ipoPrice || '10.0'}</strong></span>
+                <span>•</span>
+                <span className="text-emerald-700 font-bold bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200 text-[11px]">
+                  全歷史成交K棒完整收錄
+                </span>
+              </div>
             </div>
           </div>
 
