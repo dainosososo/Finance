@@ -1,6 +1,14 @@
 import React from 'react';
 import { TrendingUp, TrendingDown, Activity, BarChart2, Zap, Flame, Award } from 'lucide-react';
 
+/**
+ * 大盤關鍵指標觀測卡片 (移至網頁最下方) - 櫻花粉主題
+ * 1. 大盤加權指數 TAIEX
+ * 2. 櫃買指數 OTC Index
+ * 3. 市場成交總金額
+ * 4. 大盤多空漲跌比
+ * 5. 今日強勢焦點
+ */
 export default function MarketSummary({ taiexData, topStocks = [], onSelectStock }) {
   const isTaiexUp = taiexData?.change?.includes('+');
 
@@ -9,13 +17,13 @@ export default function MarketSummary({ taiexData, topStocks = [], onSelectStock
 
   return (
     <div className="space-y-4">
-      {/* 4 Key Financial Metric Cards (Light Minimalist Theme) */}
+      {/* 4 Key Financial Metric Cards (櫻花粉精緻卡片) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* TAIEX Card */}
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden group hover:border-blue-300 transition-all">
+        <div className="bg-white/95 p-5 rounded-2xl border border-pink-200 shadow-xs relative overflow-hidden group hover:border-pink-300 transition-all">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">大盤加權指數 TAIEX</span>
-            <span className="p-2 bg-blue-50 text-blue-600 rounded-xl">
+            <span className="text-xs font-bold uppercase tracking-wider text-rose-800/80">大盤加權指數 TAIEX</span>
+            <span className="p-2 bg-[#fff0f3] text-rose-600 rounded-xl border border-pink-200">
               <Activity className="w-4 h-4" />
             </span>
           </div>
@@ -28,17 +36,17 @@ export default function MarketSummary({ taiexData, topStocks = [], onSelectStock
               {taiexData?.change || '+245.60'} ({taiexData?.pctChange || '+1.07%'})
             </span>
           </div>
-          <p className="text-xs text-slate-500 mt-2 flex items-center justify-between">
+          <p className="text-xs text-rose-900/70 mt-2 flex items-center justify-between">
             <span>證券交易所即時運算</span>
-            <span className="text-blue-600 font-mono text-[11px] font-semibold">盤中連線</span>
+            <span className="text-rose-700 font-mono text-[11px] font-semibold">盤後連線</span>
           </p>
         </div>
 
         {/* OTC Index Card */}
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden group hover:border-purple-300 transition-all">
+        <div className="bg-white/95 p-5 rounded-2xl border border-pink-200 shadow-xs relative overflow-hidden group hover:border-pink-300 transition-all">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">櫃買指數 OTC Index</span>
-            <span className="p-2 bg-purple-50 text-purple-600 rounded-xl">
+            <span className="text-xs font-bold uppercase tracking-wider text-rose-800/80">櫃買指數 OTC Index</span>
+            <span className="p-2 bg-[#fff0f3] text-purple-600 rounded-xl border border-pink-200">
               <BarChart2 className="w-4 h-4" />
             </span>
           </div>
@@ -49,17 +57,17 @@ export default function MarketSummary({ taiexData, topStocks = [], onSelectStock
               +2.15 (+0.80%)
             </span>
           </div>
-          <p className="text-xs text-slate-500 mt-2 flex items-center justify-between">
+          <p className="text-xs text-rose-900/70 mt-2 flex items-center justify-between">
             <span>上櫃中小型股表現</span>
-            <span className="text-purple-600 font-mono text-[11px] font-semibold">強勢反彈</span>
+            <span className="text-purple-700 font-mono text-[11px] font-semibold">強勢反彈</span>
           </p>
         </div>
 
         {/* Total Market Volume Card */}
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden group hover:border-emerald-300 transition-all">
+        <div className="bg-white/95 p-5 rounded-2xl border border-pink-200 shadow-xs relative overflow-hidden group hover:border-pink-300 transition-all">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">市場成交總金額</span>
-            <span className="p-2 bg-emerald-50 text-emerald-600 rounded-xl">
+            <span className="text-xs font-bold uppercase tracking-wider text-rose-800/80">市場成交總金額</span>
+            <span className="p-2 bg-[#fff0f3] text-emerald-600 rounded-xl border border-pink-200">
               <Zap className="w-4 h-4" />
             </span>
           </div>
@@ -69,17 +77,17 @@ export default function MarketSummary({ taiexData, topStocks = [], onSelectStock
               量增 12.4%
             </span>
           </div>
-          <p className="text-xs text-slate-500 mt-2 flex items-center justify-between">
-            <span>全日預估成交金額</span>
-            <span className="text-slate-700 font-mono text-[11px] font-medium">資金活絡</span>
+          <p className="text-xs text-rose-900/70 mt-2 flex items-center justify-between">
+            <span>全日成交金額</span>
+            <span className="text-slate-800 font-mono text-[11px] font-medium">資金活絡</span>
           </p>
         </div>
 
         {/* Market Breadth & Sentiment */}
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden group hover:border-amber-300 transition-all">
+        <div className="bg-white/95 p-5 rounded-2xl border border-pink-200 shadow-xs relative overflow-hidden group hover:border-pink-300 transition-all">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">大盤多空漲跌比</span>
-            <span className="p-2 bg-amber-50 text-amber-600 rounded-xl">
+            <span className="text-xs font-bold uppercase tracking-wider text-rose-800/80">大盤多空漲跌比</span>
+            <span className="p-2 bg-[#fff0f3] text-amber-600 rounded-xl border border-pink-200">
               <Flame className="w-4 h-4" />
             </span>
           </div>
@@ -90,23 +98,23 @@ export default function MarketSummary({ taiexData, topStocks = [], onSelectStock
               <span className="text-slate-500">平: {taiexData?.flatCount || 98}</span>
               <span className="text-emerald-600">跌: {taiexData?.downCount || 231}</span>
             </div>
-            <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden flex border border-slate-200">
+            <div className="w-full h-2.5 bg-slate-200 rounded-full overflow-hidden flex border border-slate-300/60">
               <div style={{ width: '68%' }} className="bg-red-500 h-full"></div>
               <div style={{ width: '10%' }} className="bg-slate-300 h-full"></div>
               <div style={{ width: '22%' }} className="bg-emerald-500 h-full"></div>
             </div>
           </div>
-          <p className="text-[11px] text-slate-500 mt-2 flex justify-between items-center">
+          <p className="text-[11px] text-rose-900/70 mt-2 flex justify-between items-center">
             <span>多方氣勢佔優</span>
             <span className="text-red-600 font-bold">偏多 68%</span>
           </p>
         </div>
       </div>
 
-      {/* Top Gainers Quick Bar (Light Theme) */}
-      <div className="bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between gap-4 overflow-x-auto">
-        <div className="flex items-center space-x-2 flex-shrink-0 text-amber-700 font-bold text-xs uppercase tracking-wider">
-          <Award className="w-4 h-4 text-amber-600" />
+      {/* Top Gainers Quick Bar (櫻花粉底色) */}
+      <div className="bg-white/95 p-3.5 rounded-2xl border border-pink-200 shadow-xs flex items-center justify-between gap-4 overflow-x-auto">
+        <div className="flex items-center space-x-2 flex-shrink-0 text-rose-800 font-bold text-xs uppercase tracking-wider">
+          <Award className="w-4 h-4 text-rose-600" />
           <span>今日強勢焦點:</span>
         </div>
         <div className="flex items-center space-x-2.5 overflow-x-auto py-0.5 scrollbar-none">
@@ -114,10 +122,10 @@ export default function MarketSummary({ taiexData, topStocks = [], onSelectStock
             <div 
               key={idx} 
               onClick={() => onSelectStock && onSelectStock(st)}
-              className="flex items-center space-x-2 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl hover:border-blue-400 hover:bg-white transition-all flex-shrink-0 cursor-pointer shadow-2xs"
+              className="flex items-center space-x-2 bg-[#fff5f7] border border-pink-200 px-3 py-1.5 rounded-xl hover:border-pink-400 hover:bg-white transition-all flex-shrink-0 cursor-pointer shadow-2xs"
             >
               <span className="text-xs font-bold text-slate-900">{st.name || st.Name}</span>
-              <span className="text-xs font-mono text-slate-500">({st.symbol || st.Code})</span>
+              <span className="text-xs font-mono text-rose-700/80">({st.symbol || st.Code})</span>
               <span className="text-xs font-mono font-bold text-slate-900">NT$ {st.price || st.ClosingPrice}</span>
               <span className="text-xs font-mono font-bold text-red-600 bg-red-50 border border-red-200 px-1.5 py-0.2 rounded">
                 +{st.pctChange || st.PctChange || '2.5'}%

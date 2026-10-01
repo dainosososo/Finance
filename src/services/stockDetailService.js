@@ -389,18 +389,48 @@ function enrichWithCalculatedMetrics(stock) {
     };
   });
 
-  // 2. 1M (日K): 近一個月 20 交易日燭線 (包含當日，真實日期順序排列)
-  const realStockHistory = PRELOADED_KLINE_HISTORY[code]?.days;
+  // 2. 日K (180 交易日燭線，涵蓋近一年，支援自由縮放看更久之前的歷史)
+  const realStockHistory = PRELOADED_KLINE_HISTORY[code]?.days || [];
+  const TOTAL_DAILY_BARS = 180;
+  const tradingDays = getTradingDaysUntilToday(TOTAL_DAILY_BARS, now);
+  
   let chart1M = [];
-
+  
   if (realStockHistory && realStockHistory.length >= 5) {
-    // 優先採用真實臺灣證交所歷史成交數據 (例如 09/01 ~ 10/01)
-    const sliceDays = realStockHistory.slice(-20);
-    chart1M = sliceDays.map((d, idx) => {
-      const isLast = idx === sliceDays.length - 1;
+    // 預收錄之股票 (如 2330, 2454, 2317 等):
+    // 前半段推算更久遠歷史，後段無縫接軌真實臺灣證交所歷史成交數據 (09/01 ~ 10/01)
+    const knownCount = realStockHistory.length;
+    const needPrepend = Math.max(0, TOTAL_DAILY_BARS - knownCount);
+    const earliestKnown = realStockHistory[0];
+    let simPrice = earliestKnown.close || base * 0.9;
+    
+    const prependedBars = [];
+    for (let i = 0; i < needPrepend; i++) {
+      const dayInfo = tradingDays[i];
+      const delta = (Math.random() - 0.47) * (simPrice * 0.022);
+      const open = simPrice;
+      simPrice = Math.max(base * 0.65, Number((simPrice + delta).toFixed(2)));
+      const close = simPrice;
+      const high = Number((Math.max(open, close) + Math.random() * (base * 0.012)).toFixed(2));
+      const low = Number((Math.min(open, close) - Math.random() * (base * 0.012)).toFixed(2));
+      const vol = Math.floor((stock.volume || 25000) * (0.6 + Math.random() * 0.8));
+      
+      prependedBars.push({
+        time: dayInfo.time,
+        fullDate: dayInfo.fullDate,
+        open,
+        high,
+        low,
+        close,
+        price: close,
+        volume: vol
+      });
+    }
+
+    const realBars = realStockHistory.map((d, idx) => {
+      const isLast = idx === realStockHistory.length - 1;
       const item = { ...d };
       if (isLast) {
-        // 當日標記與動態校正為最新成交價
         item.time = `${d.time} (今)`;
         if (stock.price) {
           item.close = Number(stock.price);
@@ -413,10 +443,11 @@ function enrichWithCalculatedMetrics(stock) {
       }
       return item;
     });
+
+    chart1M = [...prependedBars, ...realBars];
   } else {
-    // 未預收錄之股票，基於真實交易日日曆 (包含當日) 動態產生擬真行情
-    const tradingDays = getTradingDaysUntilToday(20, now);
-    let currClose = Number((base * 0.92).toFixed(2));
+    // 一般個股: 基於真實交易日日曆動態產生 180 根擬真行情
+    let currClose = Number((base * 0.82).toFixed(2));
     chart1M = tradingDays.map((dayInfo, idx) => {
       const isLast = idx === tradingDays.length - 1;
       let dayOpen, dayClose, dayHigh, dayLow, vol;
@@ -427,9 +458,9 @@ function enrichWithCalculatedMetrics(stock) {
         dayLow = Number((stock.low || Math.min(dayOpen, dayClose) - Math.abs(change) * 0.5).toFixed(2));
         vol = stock.volume || 25000;
       } else {
-        const dayDelta = (Math.random() - 0.44) * (base * 0.025);
+        const dayDelta = (Math.random() - 0.46) * (base * 0.024);
         dayOpen = currClose;
-        currClose = Math.max(base * 0.82, Number((currClose + dayDelta).toFixed(2)));
+        currClose = Math.max(base * 0.65, Number((currClose + dayDelta).toFixed(2)));
         dayClose = currClose;
         dayHigh = Number((Math.max(dayOpen, dayClose) + Math.random() * (base * 0.012)).toFixed(2));
         dayLow = Number((Math.min(dayOpen, dayClose) - Math.random() * (base * 0.012)).toFixed(2));
@@ -449,7 +480,7 @@ function enrichWithCalculatedMetrics(stock) {
     });
   }
 
-  // 計算 MA5 與 MA20 動態均線
+  // 計算全週期 MA5, MA20, MA60 動態均線
   for (let i = 0; i < chart1M.length; i++) {
     const ma5Slice = chart1M.slice(Math.max(0, i - 4), i + 1);
     const ma5Avg = ma5Slice.reduce((sum, d) => sum + d.close, 0) / ma5Slice.length;
@@ -458,21 +489,25 @@ function enrichWithCalculatedMetrics(stock) {
     const ma20Slice = chart1M.slice(Math.max(0, i - 19), i + 1);
     const ma20Avg = ma20Slice.reduce((sum, d) => sum + d.close, 0) / ma20Slice.length;
     chart1M[i].ma20 = Number(ma20Avg.toFixed(2));
+
+    const ma60Slice = chart1M.slice(Math.max(0, i - 59), i + 1);
+    const ma60Avg = ma60Slice.reduce((sum, d) => sum + d.close, 0) / ma60Slice.length;
+    chart1M[i].ma60 = Number(ma60Avg.toFixed(2));
   }
 
-  // 3. 5D: 近五日走勢 (取 1M 的最後 5 個交易日，百分之百同源吻合，最後一天必為今天)
+  // 3. 5D: 近五日走勢 (取 1M 的最後 5 個交易日)
   const chart5D = chart1M.slice(-5).map((d, idx) => ({
     ...d,
     time: idx === 4 && !d.time.includes('今') ? `${d.time} (今)` : d.time
   }));
 
-  // 4. 3M: 近一季週 K 走勢 (12 根週 K，動態計算至當週)
+  // 4. 週 K 走勢: 52 根週 K (涵蓋整整一年，支援縮放回溯)
   const chart3M = [];
-  const weeks3M = 12;
-  let wClose = Number((base * 0.84).toFixed(2));
-  for (let w = 0; w < weeks3M; w++) {
-    const isLast = w === weeks3M - 1;
-    const weekAgo = weeks3M - 1 - w;
+  const weeksTotal = 52;
+  let wClose = Number((base * 0.72).toFixed(2));
+  for (let w = 0; w < weeksTotal; w++) {
+    const isLast = w === weeksTotal - 1;
+    const weekAgo = weeksTotal - 1 - w;
     const weekDate = new Date(now.getTime() - weekAgo * 7 * 86400000);
     const wMonth = String(weekDate.getMonth() + 1).padStart(2, '0');
     const wDay = String(weekDate.getDate()).padStart(2, '0');
@@ -486,12 +521,12 @@ function enrichWithCalculatedMetrics(stock) {
       wLow = Number(Math.min(wOpen, wClose, stock.low || base).toFixed(2));
       vol = Math.floor((stock.volume || 25000) * 4.2);
     } else {
-      const wDelta = (base * 0.018) + (Math.random() - 0.42) * (base * 0.03);
+      const wDelta = (base * 0.008) + (Math.random() - 0.48) * (base * 0.035);
       wOpen = wClose;
       wClose = Number((wClose + wDelta).toFixed(2));
       wHigh = Number((Math.max(wOpen, wClose) + Math.random() * (base * 0.025)).toFixed(2));
       wLow = Number((Math.min(wOpen, wClose) - Math.random() * (base * 0.02)).toFixed(2));
-      vol = Math.floor((stock.volume || 25000) * (3.5 + Math.random() * 2.0));
+      vol = Math.floor((stock.volume || 25000) * (3.5 + Math.random() * 2));
     }
 
     chart3M.push({
@@ -501,19 +536,25 @@ function enrichWithCalculatedMetrics(stock) {
       low: wLow,
       close: wClose,
       price: wClose,
-      volume: vol,
-      ma20: Number((wClose * 0.97).toFixed(2)),
-      ma60: Number((base * 0.88).toFixed(2))
+      volume: vol
     });
   }
 
-  // 5. 1Y: 近一年月 K 走勢 (12 根月 K，動態計算至當月)
+  // 計算週K均線 (MA20, MA60)
+  for (let i = 0; i < chart3M.length; i++) {
+    const ma20Slice = chart3M.slice(Math.max(0, i - 19), i + 1);
+    chart3M[i].ma20 = Number((ma20Slice.reduce((s, d) => s + d.close, 0) / ma20Slice.length).toFixed(2));
+    const ma60Slice = chart3M.slice(Math.max(0, i - 59), i + 1);
+    chart3M[i].ma60 = Number((ma60Slice.reduce((s, d) => s + d.close, 0) / ma60Slice.length).toFixed(2));
+  }
+
+  // 5. 月 K 走勢: 36 根月 K (涵蓋整整三年，支援長線縮放)
   const chart1Y = [];
-  const months1Y = 12;
-  let mClose = Number((base * 0.72).toFixed(2));
-  for (let m = 0; m < months1Y; m++) {
-    const isLast = m === months1Y - 1;
-    const monthAgo = months1Y - 1 - m;
+  const monthsTotal = 36;
+  let mClose = Number((base * 0.55).toFixed(2));
+  for (let m = 0; m < monthsTotal; m++) {
+    const isLast = m === monthsTotal - 1;
+    const monthAgo = monthsTotal - 1 - m;
     const mDate = new Date(now.getFullYear(), now.getMonth() - monthAgo, 1);
     const yr = String(mDate.getFullYear()).slice(-2);
     const mm = String(mDate.getMonth() + 1).padStart(2, '0');
@@ -527,7 +568,7 @@ function enrichWithCalculatedMetrics(stock) {
       mLow = Number(Math.min(mOpen, mClose, stock.low || base).toFixed(2));
       vol = Math.floor((stock.volume || 25000) * 18);
     } else {
-      const mDelta = (base * 0.025) + (Math.random() - 0.4) * (base * 0.04);
+      const mDelta = (base * 0.015) + (Math.random() - 0.42) * (base * 0.04);
       mOpen = mClose;
       mClose = Number((mClose + mDelta).toFixed(2));
       mHigh = Number((Math.max(mOpen, mClose) + Math.random() * (base * 0.035)).toFixed(2));
@@ -542,10 +583,16 @@ function enrichWithCalculatedMetrics(stock) {
       low: mLow,
       close: mClose,
       price: mClose,
-      volume: vol,
-      ma60: Number((mClose * 0.93).toFixed(2)),
-      ma240: Number((base * 0.78).toFixed(2))
+      volume: vol
     });
+  }
+
+  // 計算月K均線 (MA20, MA60)
+  for (let i = 0; i < chart1Y.length; i++) {
+    const ma20Slice = chart1Y.slice(Math.max(0, i - 19), i + 1);
+    chart1Y[i].ma20 = Number((ma20Slice.reduce((s, d) => s + d.close, 0) / ma20Slice.length).toFixed(2));
+    const ma60Slice = chart1Y.slice(Math.max(0, i - 59), i + 1);
+    chart1Y[i].ma60 = Number((ma60Slice.reduce((s, d) => s + d.close, 0) / ma60Slice.length).toFixed(2));
   }
 
   // 6. 三竹多週期 K 線專屬數據集合 (分時, 日K, 週K, 月K, 60分K, 還原K)
@@ -554,9 +601,9 @@ function enrichWithCalculatedMetrics(stock) {
     '日K': chart1M,
     '週K': chart3M,
     '月K': chart1Y,
-    '60分K': chart1D.map((p, idx) => ({
+    '60分K': chart1M.slice(-30).map((p, idx) => ({
       ...p,
-      time: `${String(9 + Math.floor(idx * 0.6)).padStart(2, '0')}:00`,
+      time: `${p.time} ${String(9 + (idx % 5)).padStart(2, '0')}:00`,
       ma5: Number((p.close * 0.99).toFixed(2))
     })),
     '還原K': chart1M.map(p => ({
@@ -567,7 +614,8 @@ function enrichWithCalculatedMetrics(stock) {
       close: Number((p.close * 1.04).toFixed(2)),
       price: Number((p.close * 1.04).toFixed(2)),
       ma5: Number((p.ma5 * 1.04).toFixed(2)),
-      ma20: Number((p.ma20 * 1.04).toFixed(2))
+      ma20: Number((p.ma20 * 1.04).toFixed(2)),
+      ma60: Number((p.ma60 * 1.04).toFixed(2))
     }))
   };
 
@@ -583,3 +631,6 @@ function enrichWithCalculatedMetrics(stock) {
     klines
   };
 }
+
+export const getDetailedStockProfile = getStockDetailData;
+

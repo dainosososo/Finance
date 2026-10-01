@@ -183,31 +183,31 @@ export default function MarketHeatmap({
 
   return (
     <div className="space-y-4">
-      {/* Heatmap Top Bar with View Mode Toggle */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-sm">
+      {/* Heatmap Top Bar with View Mode Toggle (櫻花粉主題) */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-[#fff0f3] p-3.5 rounded-2xl border border-pink-200/90 shadow-xs">
         <div className="flex items-center space-x-2.5">
-          <div className="p-2 bg-gradient-to-tr from-amber-500 to-red-500 text-white rounded-xl shadow-xs">
+          <div className="p-2 bg-gradient-to-tr from-rose-500 to-pink-600 text-white rounded-xl shadow-xs">
             <Flame className="w-4 h-4" />
           </div>
           <div>
             <h2 className="text-sm font-extrabold text-slate-900 tracking-tight flex items-center gap-1.5">
               台股雙熱力圖多區塊觀測站
-              <span className="text-[10px] font-mono px-1.5 py-0.2 bg-red-50 text-red-600 rounded border border-red-200 font-semibold">
+              <span className="text-[10px] font-mono px-1.5 py-0.2 bg-rose-100 text-rose-700 rounded border border-pink-300 font-semibold">
                 即時成交值 • 產業板塊
               </span>
             </h2>
-            <p className="text-[11px] text-slate-500 mt-0.5">以成交金額權重決定區塊面積，色溫即時反映個股與產業強弱勢多空動能</p>
+            <p className="text-[11px] text-rose-900/70 mt-0.5">以成交金額權重決定區塊面積，色溫即時反映個股與產業強弱勢多空動能</p>
           </div>
         </div>
 
         {/* View Switch Buttons */}
-        <div className="flex items-center space-x-1 bg-slate-100 p-1 rounded-xl border border-slate-200 self-start sm:self-auto">
+        <div className="flex items-center space-x-1 bg-white/90 p-1 rounded-xl border border-pink-200 self-start sm:self-auto shadow-2xs">
           <button
             onClick={() => setActiveView('SPLIT')}
             className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
               activeView === 'SPLIT' 
-                ? 'bg-blue-600 text-white shadow-sm' 
-                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
+                ? 'bg-rose-600 text-white shadow-xs' 
+                : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
             }`}
           >
             並列雙熱力圖
@@ -216,8 +216,8 @@ export default function MarketHeatmap({
             onClick={() => setActiveView('TURNOVER')}
             className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
               activeView === 'TURNOVER' 
-                ? 'bg-blue-600 text-white shadow-sm' 
-                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
+                ? 'bg-rose-600 text-white shadow-xs' 
+                : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
             }`}
           >
             即時成交值
@@ -226,8 +226,8 @@ export default function MarketHeatmap({
             onClick={() => setActiveView('SECTOR')}
             className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
               activeView === 'SECTOR' 
-                ? 'bg-blue-600 text-white shadow-sm' 
-                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
+                ? 'bg-rose-600 text-white shadow-xs' 
+                : 'text-rose-800 hover:text-rose-950 hover:bg-rose-100/60'
             }`}
           >
             產業結構板塊
@@ -242,19 +242,19 @@ export default function MarketHeatmap({
         {/* HEATMAP 1: 即時成交值熱力圖 (Turnover / Trade Value Heatmap) */}
         {/* ========================================================= */}
         {(activeView === 'SPLIT' || activeView === 'TURNOVER') && (
-          <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 shadow-sm space-y-3.5 flex flex-col justify-between">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
+          <div className="bg-[#fff0f3] rounded-2xl border border-pink-200 p-4 sm:p-5 shadow-xs space-y-3.5 flex flex-col justify-between">
+            <div className="flex items-center justify-between border-b border-pink-200/80 pb-2.5">
               <div className="flex items-center space-x-2">
-                <Coins className="w-4 h-4 text-amber-600" />
+                <Coins className="w-4 h-4 text-rose-600" />
                 <div>
                   <h3 className="text-xs sm:text-sm font-bold text-slate-900">
                     即時成交值熱力圖 (Turnover Treemap)
                   </h3>
-                  <span className="text-[10px] text-slate-400">方塊面積 = 成交金額比重 • 紅漲綠跌</span>
+                  <span className="text-[10px] text-rose-800/80">方塊面積 = 成交金額比重 • 紅漲綠跌</span>
                 </div>
               </div>
-              <span className="text-[11px] font-mono text-slate-500">
-                龍頭: <strong className="text-slate-800">台積電 (853.8億)</strong>
+              <span className="text-[11px] font-mono text-rose-800 bg-white/90 px-2 py-0.5 rounded border border-pink-200">
+                龍頭: <strong className="text-rose-900 font-extrabold">台積電 (853.8億)</strong>
               </span>
             </div>
 
@@ -399,18 +399,18 @@ export default function MarketHeatmap({
         {/* HEATMAP 2: 產業結構板塊熱力圖 (Industry Sector Treemap)   */}
         {/* ========================================================= */}
         {(activeView === 'SPLIT' || activeView === 'SECTOR') && (
-          <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 shadow-sm space-y-3.5 flex flex-col justify-between">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
+          <div className="bg-[#fff0f3] rounded-2xl border border-pink-200 p-4 sm:p-5 shadow-xs space-y-3.5 flex flex-col justify-between">
+            <div className="flex items-center justify-between border-b border-pink-200/80 pb-2.5">
               <div className="flex items-center space-x-2">
-                <Layers className="w-4 h-4 text-blue-600" />
+                <Layers className="w-4 h-4 text-rose-600" />
                 <div>
                   <h3 className="text-xs sm:text-sm font-bold text-slate-900">
                     產業結構板塊熱力圖 (Industry Sectors)
                   </h3>
-                  <span className="text-[10px] text-slate-400">依產業鏈資金成交比重分類 • 族群龍頭股透視</span>
+                  <span className="text-[10px] text-rose-800/80">依產業鏈資金成交比重分類 • 族群龍頭股透視</span>
                 </div>
               </div>
-              <span className="text-[11px] font-mono text-blue-600 font-semibold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
+              <span className="text-[11px] font-mono text-rose-800 font-semibold bg-white/90 px-2 py-0.5 rounded border border-pink-200">
                 半導體 (41.5%) + AI伺服器 (23.8%) 主導
               </span>
             </div>
@@ -425,16 +425,16 @@ export default function MarketHeatmap({
                 return (
                   <div
                     key={sec.id}
-                    className="p-3 rounded-xl border border-slate-200/90 bg-slate-50/70 hover:bg-slate-100/80 transition-colors"
+                    className="p-3 rounded-xl border border-pink-200 bg-white/90 hover:bg-white transition-colors shadow-2xs"
                   >
                     {/* Sector Header */}
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center space-x-2">
-                        <span className="p-1 rounded-md bg-white border border-slate-200 shadow-2xs text-slate-700">
+                        <span className="p-1 rounded-md bg-[#fff0f3] border border-pink-200 text-rose-700">
                           <Icon className="w-3.5 h-3.5" />
                         </span>
                         <span className="text-xs font-bold text-slate-900">{sec.name}</span>
-                        <span className="text-[10px] font-mono text-slate-500 bg-white px-1.5 py-0.2 rounded border border-slate-200">
+                        <span className="text-[10px] font-mono text-rose-800 bg-[#fff5f7] px-1.5 py-0.2 rounded border border-pink-200 font-medium">
                           資金比重 {sec.weight}%
                         </span>
                       </div>
@@ -474,7 +474,7 @@ export default function MarketHeatmap({
             </div>
 
             {/* Bottom Sector Footnote */}
-            <div className="flex items-center justify-between text-[10px] text-slate-500 pt-2 border-t border-slate-100 font-mono">
+            <div className="flex items-center justify-between text-[10px] text-rose-800/80 pt-2 border-t border-pink-200/80 font-mono">
               <span>共涵蓋 7 大產業結構族群</span>
               <span>點擊任何板塊標的即可開啟三竹技術與籌碼分析</span>
             </div>
