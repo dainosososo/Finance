@@ -156,6 +156,11 @@ export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', 
         const change = close - prevClose;
         const pctChange = prevClose > 0 ? (change / prevClose) * 100 : 0;
         
+        // 即時成交金額計算 (張數 * 1000 * 當前均價或現價 / 1億)
+        const rawVolLots = parseFloat(st.v) || 0; // 單位: 張
+        const estTradeValue = close * rawVolLots * 1000; // 總金額 (元)
+        const turnoverYi = estTradeValue > 0 ? Number((estTradeValue / 100000000).toFixed(1)) : 0;
+
         // 解析即時五檔委買委賣價量
         const bids = st.b ? st.b.split('_').filter(Boolean).map((p, i) => ({ 
           price: p, 
@@ -176,6 +181,8 @@ export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', 
           high: st.h || prevClose.toFixed(2),
           low: st.l || prevClose.toFixed(2),
           volume: st.v || '0',
+          turnover: turnoverYi,
+          tradeValue: estTradeValue,
           change: change.toFixed(2),
           pctChange: pctChange.toFixed(2),
           time: st.t || new Date().toLocaleTimeString('zh-TW', { hour12: false }),
@@ -189,7 +196,7 @@ export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', 
     console.warn('Realtime quotes fetch exception:', err.message);
   }
 
-  // Graceful fallback: Read actual prices from daily_closing_stocks instead of random numbers!
+  // Graceful fallback: Read actual prices and trade values from daily_closing_stocks
   try {
     const dailyRes = await fetch('./data/daily_closing_stocks.json');
     if (dailyRes.ok) {
@@ -201,6 +208,8 @@ export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', 
           const chg = parseFloat(found.Change) || 0;
           const prev = cp - chg;
           const pct = prev > 0 ? (chg / prev) * 100 : 0;
+          const tv = parseFloat(found.TradeValue) || 0;
+          const turnoverYi = tv > 0 ? Number((tv / 100000000).toFixed(1)) : 0;
           return {
             symbol: found.Code,
             name: found.Name,
@@ -211,6 +220,8 @@ export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', 
             high: found.HighestPrice || cp.toFixed(2),
             low: found.LowestPrice || cp.toFixed(2),
             volume: found.TradeVolume || '0',
+            turnover: turnoverYi,
+            tradeValue: tv,
             change: chg.toFixed(2),
             pctChange: pct.toFixed(2),
             time: '收盤',

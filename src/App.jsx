@@ -54,17 +54,46 @@ export default function App() {
   const loadData = useCallback(async (forceLive = false) => {
     setIsRefreshing(true);
     try {
+      const HOT_HEATMAP_CODES = [
+        '2330', '2454', '2308', '3231', '2303', '2317', '0050', '3481', 
+        '2382', '1519', '3017', '2409', '3008', '2603', '2881', '2882'
+      ];
+      const pollCodes = Array.from(new Set([...watchlist, ...HOT_HEATMAP_CODES]));
+
       const [daily, realtime, taiex, news, postMarket, indNews] = await Promise.all([
         fetchDailyClosingPrices(),
-        fetchRealtimeQuotes(watchlist),
+        fetchRealtimeQuotes(pollCodes),
         fetchTaiexIndex(),
         fetchFscAnnouncements(),
         getMarketReportData({ forceLive }),
         getIndustryNews()
       ]);
 
-      if (daily && daily.length > 0) setDailyStocks(daily);
-      if (realtime && realtime.length > 0) setQuotes(realtime);
+      if (daily && daily.length > 0) {
+        // Apply realtime updates to daily stocks if available
+        if (realtime && realtime.length > 0) {
+          const liveMap = new Map(realtime.map(r => [r.symbol, r]));
+          const patched = daily.map(st => {
+            const live = liveMap.get(st.Code);
+            if (live && live.isRealtime && live.price !== '-') {
+              return {
+                ...st,
+                ClosingPrice: live.price,
+                Change: live.change,
+                PctChange: live.pctChange,
+                TradeVolume: live.volume || st.TradeVolume,
+                TradeValue: live.tradeValue ? String(live.tradeValue) : st.TradeValue,
+                TurnoverYi: live.turnover ? String(live.turnover) : st.TurnoverYi
+              };
+            }
+            return st;
+          });
+          setDailyStocks(patched);
+        } else {
+          setDailyStocks(daily);
+        }
+      }
+      if (realtime && realtime.length > 0) setQuotes(realtime.filter(q => watchlist.includes(q.symbol)));
       if (taiex) setTaiexData(taiex);
       if (news) setFscNews(news);
       if (postMarket) setPostMarketData(postMarket);
@@ -102,7 +131,7 @@ export default function App() {
           // Update watchlist quotes
           setQuotes(realtime.filter(q => watchlist.includes(q.symbol)));
 
-          // Dynamically patch dailyStocks so MarketHeatmap receives live prices immediately
+          // Dynamically patch dailyStocks so MarketHeatmap receives live prices & turnover immediately
           setDailyStocks(prevDaily => {
             if (!prevDaily || prevDaily.length === 0) return prevDaily;
             const liveMap = new Map(realtime.map(r => [r.symbol, r]));
@@ -114,7 +143,9 @@ export default function App() {
                   ClosingPrice: live.price,
                   Change: live.change,
                   PctChange: live.pctChange,
-                  TradeVolume: live.volume || st.TradeVolume
+                  TradeVolume: live.volume || st.TradeVolume,
+                  TradeValue: live.tradeValue ? String(live.tradeValue) : st.TradeValue,
+                  TurnoverYi: live.turnover ? String(live.turnover) : st.TurnoverYi
                 };
               }
               return st;

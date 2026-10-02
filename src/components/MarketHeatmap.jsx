@@ -125,8 +125,22 @@ export default function MarketHeatmap({
       const chg = parseFloat(found.Change) || st.change;
       const prev = cp - chg;
       const pct = prev > 0 ? Number(((chg / prev) * 100).toFixed(2)) : st.pctChange;
+      
       const tv = parseFloat(found.TradeValue) || 0;
-      const turnoverYi = tv > 0 ? Number((tv / 100000000).toFixed(1)) : st.turnover;
+      const tvFromYi = parseFloat(found.TurnoverYi) || 0;
+      const vol = parseFloat(found.TradeVolume) || 0;
+      
+      let turnoverYi = 0;
+      if (tvFromYi > 0) {
+        turnoverYi = tvFromYi;
+      } else if (tv > 0) {
+        turnoverYi = Number((tv / 100000000).toFixed(1));
+      } else if (cp > 0 && vol > 0) {
+        turnoverYi = Number(((cp * vol * 1000) / 100000000).toFixed(1));
+      } else {
+        turnoverYi = st.turnover;
+      }
+
       return {
         ...st,
         price: cp,
@@ -151,36 +165,81 @@ export default function MarketHeatmap({
     return map;
   }, [dailyStocks]);
 
-  // 1. 處理即時成交值熱力圖標的 (取權值與大成交金額活躍股)
+  // 1. 處理即時成交值熱力圖標的 (取全市場當前成交金額最大的活躍標的)
   const turnoverStocks = useMemo(() => {
-    // 優先整合全股真實行情
-    const baseList = [
-      { code: '2330', name: '台積電', price: 2510.0, change: 30.0, pctChange: 1.21, turnover: 853.8, sector: '半導體' },
-      { code: '2454', name: '聯發科', price: 4980.0, change: 60.0, pctChange: 1.22, turnover: 218.0, sector: '半導體' },
-      { code: '2308', name: '台達電', price: 1905.0, change: 15.0, pctChange: 0.79, turnover: 116.5, sector: '零組件' },
-      { code: '3231', name: '緯創', price: 190.5, change: 6.0, pctChange: 3.25, turnover: 112.6, sector: '電腦周邊' },
-      { code: '2303', name: '聯電', price: 154.5, change: 1.0, pctChange: 0.65, turnover: 95.3, sector: '半導體' },
-      { code: '2317', name: '鴻海', price: 254.0, change: 2.5, pctChange: 0.99, turnover: 77.5, sector: '電腦周邊' },
-      { code: '0050', name: '元大台灣50', price: 112.9, change: 0.85, pctChange: 0.76, turnover: 62.6, sector: 'ETF' },
-      { code: '3481', name: '群創', price: 50.2, change: 0.45, pctChange: 0.90, turnover: 52.1, sector: '光電業' },
-      { code: '2382', name: '廣達', price: 334.0, change: 0.5, pctChange: 0.15, turnover: 49.8, sector: '電腦周邊' },
-      { code: '1519', name: '華城', price: 672.0, change: 27.0, pctChange: 4.19, turnover: 42.6, sector: '電機' },
-      { code: '3017', name: '奇鋐', price: 656.0, change: 16.0, pctChange: 2.50, turnover: 42.8, sector: '電腦周邊' },
-      { code: '2409', name: '友達', price: 35.8, change: 0.75, pctChange: 2.14, turnover: 41.2, sector: '光電業' },
-      { code: '3008', name: '大立光', price: 6010.0, change: -25.0, pctChange: -0.41, turnover: 28.6, sector: '光電業' },
-      { code: '2603', name: '長榮', price: 238.0, change: -1.5, pctChange: -0.63, turnover: 28.5, sector: '航運業' },
-      { code: '2881', name: '富邦金', price: 150.5, change: -0.5, pctChange: -0.33, turnover: 27.5, sector: '金融' },
-      { code: '2882', name: '國泰金', price: 110.5, change: -0.5, pctChange: -0.45, turnover: 22.4, sector: '金融' }
+    const defaultCodes = [
+      '2330', '2454', '2308', '3231', '2303', '2317', '0050', '3481', 
+      '2382', '1519', '3017', '2409', '3008', '2603', '2881', '2882'
     ];
 
-    // Merge real data from dailyStocks
-    const merged = baseList.map(st => mergeRealData(st, dailyMap));
-    
-    // Sort by actual turnover (descending) so the treemap reflects reality
-    merged.sort((a, b) => b.turnover - a.turnover);
-    
-    return merged;
-  }, [dailyMap]);
+    let combined = [];
+
+    // 若 dailyStocks 存在，優先提取成交金額最高的熱門股
+    if (dailyStocks && dailyStocks.length > 0) {
+      const allParsed = dailyStocks.map(d => {
+        const cp = parseFloat(d.ClosingPrice) || 0;
+        const chg = parseFloat(d.Change) || 0;
+        const prev = cp - chg;
+        const pct = prev > 0 ? Number(((chg / prev) * 100).toFixed(2)) : 0;
+        const tv = parseFloat(d.TradeValue) || 0;
+        const tvYi = parseFloat(d.TurnoverYi) || 0;
+        const vol = parseFloat(d.TradeVolume) || 0;
+        
+        let turnoverYi = 0;
+        if (tvYi > 0) turnoverYi = tvYi;
+        else if (tv > 0) turnoverYi = Number((tv / 100000000).toFixed(1));
+        else if (cp > 0 && vol > 0) turnoverYi = Number(((cp * vol * 1000) / 100000000).toFixed(1));
+
+        return {
+          code: d.Code,
+          name: d.Name,
+          price: cp,
+          change: chg,
+          pctChange: pct,
+          isUp: chg >= 0,
+          turnover: turnoverYi,
+          sector: d.Sector || '一般產業',
+          Name: d.Name,
+          Code: d.Code,
+          ClosingPrice: String(cp)
+        };
+      }).filter(s => s.price > 0 && !s.code.startsWith('00') && s.turnover > 0);
+
+      // 依成交金額由大到小排序
+      allParsed.sort((a, b) => b.turnover - a.turnover);
+
+      // 取前 16 檔成交金額最大者
+      if (allParsed.length >= 10) {
+        combined = allParsed.slice(0, 16);
+      }
+    }
+
+    // 若提取數量不足，以預設基礎名單補齊
+    if (combined.length < 10) {
+      const baseList = [
+        { code: '2330', name: '台積電', price: 2510.0, change: 30.0, pctChange: 1.21, turnover: 853.8, sector: '半導體' },
+        { code: '2454', name: '聯發科', price: 4980.0, change: 60.0, pctChange: 1.22, turnover: 218.0, sector: '半導體' },
+        { code: '2308', name: '台達電', price: 1905.0, change: 15.0, pctChange: 0.79, turnover: 116.5, sector: '零組件' },
+        { code: '3231', name: '緯創', price: 190.5, change: 6.0, pctChange: 3.25, turnover: 112.6, sector: '電腦周邊' },
+        { code: '2303', name: '聯電', price: 154.5, change: 1.0, pctChange: 0.65, turnover: 95.3, sector: '半導體' },
+        { code: '2317', name: '鴻海', price: 254.0, change: 2.5, pctChange: 0.99, turnover: 77.5, sector: '電腦周邊' },
+        { code: '0050', name: '元大台灣50', price: 112.9, change: 0.85, pctChange: 0.76, turnover: 62.6, sector: 'ETF' },
+        { code: '3481', name: '群創', price: 50.2, change: 0.45, pctChange: 0.90, turnover: 52.1, sector: '光電業' },
+        { code: '2382', name: '廣達', price: 334.0, change: 0.5, pctChange: 0.15, turnover: 49.8, sector: '電腦周邊' },
+        { code: '1519', name: '華城', price: 672.0, change: 27.0, pctChange: 4.19, turnover: 42.6, sector: '電機' },
+        { code: '3017', name: '奇鋐', price: 656.0, change: 16.0, pctChange: 2.50, turnover: 42.8, sector: '電腦周邊' },
+        { code: '2409', name: '友達', price: 35.8, change: 0.75, pctChange: 2.14, turnover: 41.2, sector: '光電業' },
+        { code: '3008', name: '大立光', price: 6010.0, change: -25.0, pctChange: -0.41, turnover: 28.6, sector: '光電業' },
+        { code: '2603', name: '長榮', price: 238.0, change: -1.5, pctChange: -0.63, turnover: 28.5, sector: '航運業' },
+        { code: '2881', name: '富邦金', price: 150.5, change: -0.5, pctChange: -0.33, turnover: 27.5, sector: '金融' },
+        { code: '2882', name: '國泰金', price: 110.5, change: -0.5, pctChange: -0.45, turnover: 22.4, sector: '金融' }
+      ];
+      combined = baseList.map(st => mergeRealData(st, dailyMap));
+      combined.sort((a, b) => b.turnover - a.turnover);
+    }
+
+    return combined;
+  }, [dailyStocks, dailyMap]);
 
   // 2. Also update SECTOR_GROUPS stocks with real data
   const updatedSectorGroups = useMemo(() => {
@@ -279,70 +338,70 @@ export default function MarketHeatmap({
               </span>
             </div>
 
-            {/* Treemap Multi-block Grid */}
+            {/* Treemap Multi-block Grid (依真實成交金額大小動態排版) */}
             <div className="grid grid-cols-6 sm:grid-cols-8 gap-2 min-h-[380px] select-none">
-              {/* TSMC (2330) - Massive Leader Block (佔 4x4 或 4x3) */}
-              {(() => {
-                const tsmc = turnoverStocks.find(s => s.code === '2330') || turnoverStocks[0];
+              {/* Rank 1: Massive Leader Block (全市場成交金額冠軍) */}
+              {turnoverStocks[0] && (() => {
+                const leader = turnoverStocks[0];
                 return (
                   <div
-                    onClick={() => onSelectStock && onSelectStock(tsmc)}
-                    className={`col-span-3 sm:col-span-4 row-span-3 p-3.5 rounded-xl border flex flex-col justify-between cursor-pointer transition-all hover:scale-[1.01] hover:shadow-md ${getHeatmapColor(tsmc.pctChange)}`}
+                    onClick={() => onSelectStock && onSelectStock(leader)}
+                    className={`col-span-3 sm:col-span-4 row-span-3 p-3.5 rounded-xl border flex flex-col justify-between cursor-pointer transition-all hover:scale-[1.01] hover:shadow-md ${getHeatmapColor(leader.pctChange)}`}
                   >
                     <div className="flex items-start justify-between">
                       <div>
-                        <span className="text-base sm:text-lg font-black block tracking-tight">{tsmc.name}</span>
-                        <span className="text-xs font-mono opacity-90">{tsmc.code}</span>
+                        <span className="text-base sm:text-lg font-black block tracking-tight">{leader.name}</span>
+                        <span className="text-xs font-mono opacity-90">{leader.code}</span>
                       </div>
                       <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-white/20 backdrop-blur-xs font-mono">
-                        {tsmc.pctChange >= 0 ? `+${tsmc.pctChange}%` : `${tsmc.pctChange}%`}
+                        {leader.pctChange >= 0 ? `+${leader.pctChange}%` : `${leader.pctChange}%`}
                       </span>
                     </div>
                     <div className="mt-4">
                       <div className="text-2xl sm:text-3xl font-black font-mono">
-                        NT$ {tsmc.price?.toLocaleString()}
+                        NT$ {leader.price?.toLocaleString()}
                       </div>
                       <div className="text-[11px] opacity-90 font-mono mt-0.5 flex items-center justify-between">
-                        <span>成交值: {tsmc.turnover} 億</span>
-                        <span className="text-[10px] px-1.5 py-0.2 rounded bg-black/15">佔全市場 20.8%</span>
+                        <span>成交值: {leader.turnover} 億</span>
+                        <span className="text-[10px] px-1.5 py-0.2 rounded bg-black/15 font-sans">成交榜首</span>
                       </div>
                     </div>
                   </div>
                 );
               })()}
 
-              {/* MediaTek (2454) - 2nd Largest Block */}
-              {(() => {
-                const mtk = turnoverStocks.find(s => s.code === '2454') || turnoverStocks[1];
+              {/* Rank 2: 2nd Largest Block (全市場成交金額亞軍) */}
+              {turnoverStocks[1] && (() => {
+                const subLeader = turnoverStocks[1];
                 return (
                   <div
-                    onClick={() => onSelectStock && onSelectStock(mtk)}
-                    className={`col-span-3 sm:col-span-4 row-span-2 p-3 rounded-xl border flex flex-col justify-between cursor-pointer transition-all hover:scale-[1.01] hover:shadow-md ${getHeatmapColor(mtk.pctChange)}`}
+                    onClick={() => onSelectStock && onSelectStock(subLeader)}
+                    className={`col-span-3 sm:col-span-4 row-span-2 p-3 rounded-xl border flex flex-col justify-between cursor-pointer transition-all hover:scale-[1.01] hover:shadow-md ${getHeatmapColor(subLeader.pctChange)}`}
                   >
                     <div className="flex items-start justify-between">
                       <div>
-                        <span className="text-sm sm:text-base font-black block">{mtk.name}</span>
-                        <span className="text-xs font-mono opacity-90">{mtk.code}</span>
+                        <span className="text-sm sm:text-base font-black block">{subLeader.name}</span>
+                        <span className="text-xs font-mono opacity-90">{subLeader.code}</span>
                       </div>
                       <span className="text-xs font-bold px-1.5 py-0.5 rounded bg-white/20 font-mono">
-                        {mtk.pctChange >= 0 ? `+${mtk.pctChange}%` : `${mtk.pctChange}%`}
+                        {subLeader.pctChange >= 0 ? `+${subLeader.pctChange}%` : `${subLeader.pctChange}%`}
                       </span>
                     </div>
                     <div className="mt-2">
                       <div className="text-xl sm:text-2xl font-black font-mono">
-                        NT$ {mtk.price?.toLocaleString()}
+                        NT$ {subLeader.price?.toLocaleString()}
                       </div>
                       <div className="text-[10px] opacity-90 font-mono flex items-center justify-between">
-                        <span>成交: {mtk.turnover} 億</span>
-                        <span>高價IC設計</span>
+                        <span>成交: {subLeader.turnover} 億</span>
+                        <span className="text-[9px] px-1 py-0.2 rounded bg-black/15 font-sans">熱門權值</span>
                       </div>
                     </div>
                   </div>
                 );
               })()}
 
-              {/* Delta (2308) & Wistron (3231) - Tier 2 Active Blocks */}
-              {turnoverStocks.filter(s => ['2308', '3231'].includes(s.code)).map((st) => (
+              {/* Rank 3~6: Tier 2 Active Blocks */}
+              {turnoverStocks.slice(2, 6).map((st) => (
                 <div
                   key={st.code}
                   onClick={() => onSelectStock && onSelectStock(st)}
@@ -361,28 +420,8 @@ export default function MarketHeatmap({
                 </div>
               ))}
 
-              {/* Foxconn (2317) & UMC (2303) */}
-              {turnoverStocks.filter(s => ['2317', '2303'].includes(s.code)).map((st) => (
-                <div
-                  key={st.code}
-                  onClick={() => onSelectStock && onSelectStock(st)}
-                  className={`col-span-3 sm:col-span-2 row-span-1 p-2.5 rounded-xl border flex flex-col justify-between cursor-pointer transition-all hover:scale-[1.02] hover:shadow-md ${getHeatmapColor(st.pctChange)}`}
-                >
-                  <div className="flex items-start justify-between">
-                    <span className="text-xs font-extrabold truncate">{st.name}</span>
-                    <span className="text-[10px] font-mono font-bold">
-                      {st.pctChange >= 0 ? `+${st.pctChange}%` : `${st.pctChange}%`}
-                    </span>
-                  </div>
-                  <div className="mt-1 flex items-baseline justify-between">
-                    <span className="text-sm font-black font-mono">NT$ {st.price}</span>
-                    <span className="text-[9px] opacity-80 font-mono">{st.turnover}億</span>
-                  </div>
-                </div>
-              ))}
-
-              {/* Remaining Active Stocks Grid */}
-              {turnoverStocks.filter(s => !['2330', '2454', '2308', '3231', '2317', '2303'].includes(s.code)).slice(0, 8).map((st) => (
+              {/* Rank 7~16: Remaining Active Traded Stocks Grid */}
+              {turnoverStocks.slice(6, 16).map((st) => (
                 <div
                   key={st.code}
                   onClick={() => onSelectStock && onSelectStock(st)}
