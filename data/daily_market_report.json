@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "timestamp": "10:04:04",
+  "timestamp": "13:19:25",
   "isClosed": true,
   "source": "twse_official_crawler",
   "institutionalFlows": {
@@ -1539,12 +1539,12 @@
     "sell": []
   },
   "marketOverview": {
-    "totalVolume": "8,740.46 億",
-    "totalTransactions": "4715278",
-    "taiexClose": "48353.49",
-    "taiexChange": "413.36",
-    "upCount": 586,
-    "downCount": 651,
-    "flatCount": 143
+    "taiexIndex": "48488.32",
+    "taiexClose": "48488.32",
+    "taiexChange": "+134.83",
+    "totalVolume": "4,280.50 億",
+    "upCount": 924,
+    "downCount": 1085,
+    "flatCount": 210
   }
 }

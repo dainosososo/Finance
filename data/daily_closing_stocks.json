@@ -146,14 +146,15 @@
     "Date": "1151001",
     "Code": "0050",
     "Name": "元大台灣50",
-    "TradeVolume": "55443347",
-    "TradeValue": "6223565909",
+    "TradeVolume": "62255000",
+    "TradeValue": "7028589500",
     "OpeningPrice": "112.20",
     "HighestPrice": "112.90",
     "LowestPrice": "111.70",
     "ClosingPrice": "112.90",
-    "Change": "0.8500",
-    "Transaction": "73100"
+    "Change": "0.00",
+    "Transaction": "73100",
+    "TurnoverYi": "70.3"
   },
   {
     "Date": "1151001",
@@ -4852,14 +4853,15 @@
     "Date": "1151001",
     "Code": "1519",
     "Name": "華城",
-    "TradeVolume": "849523",
-    "TradeValue": "585235803",
+    "TradeVolume": "1023000",
+    "TradeValue": "706893000",
     "OpeningPrice": "694.00",
     "HighestPrice": "696.00",
     "LowestPrice": "687.00",
-    "ClosingPrice": "688.00",
-    "Change": "-5.0000",
-    "Transaction": "5315"
+    "ClosingPrice": "691.00",
+    "Change": "3.00",
+    "Transaction": "5315",
+    "TurnoverYi": "7.1"
   },
   {
     "Date": "1151001",
@@ -6880,14 +6882,15 @@
     "Date": "1151001",
     "Code": "2303",
     "Name": "聯電",
-    "TradeVolume": "114242075",
-    "TradeValue": "18128901416",
+    "TradeVolume": "90004000",
+    "TradeValue": "14535646000",
     "OpeningPrice": "156.00",
     "HighestPrice": "161.50",
     "LowestPrice": "155.50",
     "ClosingPrice": "161.50",
-    "Change": "7.0000",
-    "Transaction": "70700"
+    "Change": "0.00",
+    "Transaction": "70700",
+    "TurnoverYi": "145.4"
   },
   {
     "Date": "1151001",
@@ -6906,14 +6909,15 @@
     "Date": "1151001",
     "Code": "2308",
     "Name": "台達電",
-    "TradeVolume": "6119811",
-    "TradeValue": "11586905180",
+    "TradeVolume": "4926000",
+    "TradeValue": "9260880000",
     "OpeningPrice": "1925.00",
     "HighestPrice": "1935.00",
     "LowestPrice": "1860.00",
-    "ClosingPrice": "1905.00",
-    "Change": "15.0000",
-    "Transaction": "26647"
+    "ClosingPrice": "1880.00",
+    "Change": "-25.00",
+    "Transaction": "26647",
+    "TurnoverYi": "92.6"
   },
   {
     "Date": "1151001",
@@ -6971,14 +6975,15 @@
     "Date": "1151001",
     "Code": "2317",
     "Name": "鴻海",
-    "TradeVolume": "30526551",
-    "TradeValue": "7721055751",
+    "TradeVolume": "25196000",
+    "TradeValue": "6399784000",
     "OpeningPrice": "253.00",
     "HighestPrice": "254.00",
     "LowestPrice": "250.50",
     "ClosingPrice": "254.00",
-    "Change": "2.5000",
-    "Transaction": "20339"
+    "Change": "0.00",
+    "Transaction": "20339",
+    "TurnoverYi": "64.0"
   },
   {
     "Date": "1151001",
@@ -7010,14 +7015,15 @@
     "Date": "1151001",
     "Code": "2327",
     "Name": "國巨*",
-    "TradeVolume": "74137455",
-    "TradeValue": "43606168571",
+    "TradeVolume": "99619000",
+    "TradeValue": "59970638000",
     "OpeningPrice": "560.00",
     "HighestPrice": "602.00",
     "LowestPrice": "560.00",
     "ClosingPrice": "602.00",
-    "Change": "54.0000",
-    "Transaction": "107465"
+    "Change": "0.00",
+    "Transaction": "107465",
+    "TurnoverYi": "599.7"
   },
   {
     "Date": "1151001",
@@ -7049,14 +7055,15 @@
     "Date": "1151001",
     "Code": "2330",
     "Name": "台積電",
-    "TradeVolume": "20666092",
-    "TradeValue": "51702445610",
+    "TradeVolume": "11249000",
+    "TradeValue": "28178745000",
     "OpeningPrice": "2490.00",
     "HighestPrice": "2510.00",
     "LowestPrice": "2485.00",
-    "ClosingPrice": "2510.00",
-    "Change": "30.0000",
-    "Transaction": "57634"
+    "ClosingPrice": "2505.00",
+    "Change": "-5.00",
+    "Transaction": "57634",
+    "TurnoverYi": "281.8"
   },
   {
     "Date": "1151001",
@@ -7530,14 +7537,15 @@
     "Date": "1151001",
     "Code": "2382",
     "Name": "廣達",
-    "TradeVolume": "14875737",
-    "TradeValue": "4946633232",
+    "TradeVolume": "8715000",
+    "TradeValue": "2910810000",
     "OpeningPrice": "333.00",
     "HighestPrice": "335.00",
     "LowestPrice": "330.00",
     "ClosingPrice": "334.00",
-    "Change": "0.5000",
-    "Transaction": "15086"
+    "Change": "0.00",
+    "Transaction": "15086",
+    "TurnoverYi": "29.1"
   },
   {
     "Date": "1151001",
@@ -7738,27 +7746,29 @@
     "Date": "1151001",
     "Code": "2408",
     "Name": "南亞科",
-    "TradeVolume": "27085390",
-    "TradeValue": "14010912840",
+    "TradeVolume": "32021000",
+    "TradeValue": "16618899000",
     "OpeningPrice": "515.00",
     "HighestPrice": "522.00",
     "LowestPrice": "510.00",
     "ClosingPrice": "519.00",
-    "Change": "0.0000",
-    "Transaction": "31248"
+    "Change": "0.00",
+    "Transaction": "31248",
+    "TurnoverYi": "166.2"
   },
   {
     "Date": "1151001",
     "Code": "2409",
     "Name": "友達",
-    "TradeVolume": "932903295",
-    "TradeValue": "36277769915",
+    "TradeVolume": "654560000",
+    "TradeValue": "25069648000",
     "OpeningPrice": "39.80",
     "HighestPrice": "40.00",
     "LowestPrice": "37.80",
     "ClosingPrice": "38.30",
-    "Change": "-0.2500",
-    "Transaction": "298222"
+    "Change": "0.00",
+    "Transaction": "298222",
+    "TurnoverYi": "250.7"
   },
   {
     "Date": "1151001",
@@ -8167,14 +8177,15 @@
     "Date": "1151001",
     "Code": "2454",
     "Name": "聯發科",
-    "TradeVolume": "4378234",
-    "TradeValue": "21570795185",
+    "TradeVolume": "3265000",
+    "TradeValue": "16259700000",
     "OpeningPrice": "4875.00",
     "HighestPrice": "4980.00",
     "LowestPrice": "4875.00",
     "ClosingPrice": "4980.00",
-    "Change": "60.0000",
-    "Transaction": "43081"
+    "Change": "0.00",
+    "Transaction": "43081",
+    "TurnoverYi": "162.6"
   },
   {
     "Date": "1151001",
@@ -8544,14 +8555,15 @@
     "Date": "1151001",
     "Code": "2492",
     "Name": "華新科",
-    "TradeVolume": "51670689",
-    "TradeValue": "16462221350",
+    "TradeVolume": "54758000",
+    "TradeValue": "18015382000",
     "OpeningPrice": "302.50",
     "HighestPrice": "329.00",
     "LowestPrice": "302.50",
     "ClosingPrice": "329.00",
-    "Change": "29.5000",
-    "Transaction": "49459"
+    "Change": "0.00",
+    "Transaction": "49459",
+    "TurnoverYi": "180.2"
   },
   {
     "Date": "1151001",
@@ -8986,14 +8998,15 @@
     "Date": "1151001",
     "Code": "2603",
     "Name": "長榮",
-    "TradeVolume": "5955064",
-    "TradeValue": "1413101412",
+    "TradeVolume": "4280000",
+    "TradeValue": "1018640000",
     "OpeningPrice": "238.00",
     "HighestPrice": "239.00",
     "LowestPrice": "235.50",
     "ClosingPrice": "238.00",
-    "Change": "-1.5000",
-    "Transaction": "4702"
+    "Change": "0.00",
+    "Transaction": "4702",
+    "TurnoverYi": "10.2"
   },
   {
     "Date": "1151001",
@@ -9701,14 +9714,15 @@
     "Date": "1151001",
     "Code": "2881",
     "Name": "富邦金",
-    "TradeVolume": "18246085",
-    "TradeValue": "2732706898",
+    "TradeVolume": "8176000",
+    "TradeValue": "1230488000",
     "OpeningPrice": "151.00",
     "HighestPrice": "151.50",
     "LowestPrice": "147.50",
     "ClosingPrice": "150.50",
-    "Change": "-0.5000",
-    "Transaction": "10937"
+    "Change": "0.00",
+    "Transaction": "10937",
+    "TurnoverYi": "12.3"
   },
   {
     "Date": "1151001",
@@ -9753,14 +9767,15 @@
     "Date": "1151001",
     "Code": "2882",
     "Name": "國泰金",
-    "TradeVolume": "20285318",
-    "TradeValue": "2236280498",
+    "TradeVolume": "10082000",
+    "TradeValue": "1114061000",
     "OpeningPrice": "112.00",
     "HighestPrice": "112.00",
     "LowestPrice": "109.00",
     "ClosingPrice": "110.50",
-    "Change": "-0.5000",
-    "Transaction": "7053"
+    "Change": "0.00",
+    "Transaction": "7053",
+    "TurnoverYi": "11.1"
   },
   {
     "Date": "1151001",
@@ -10312,14 +10327,15 @@
     "Date": "1151001",
     "Code": "3008",
     "Name": "大立光",
-    "TradeVolume": "2312558",
-    "TradeValue": "13870448195",
+    "TradeVolume": "1398000",
+    "TradeValue": "8674590000",
     "OpeningPrice": "5950.00",
     "HighestPrice": "6225.00",
     "LowestPrice": "5740.00",
     "ClosingPrice": "6205.00",
-    "Change": "260.0000",
-    "Transaction": "31161"
+    "Change": "0.00",
+    "Transaction": "31161",
+    "TurnoverYi": "86.7"
   },
   {
     "Date": "1151001",
@@ -10403,14 +10419,15 @@
     "Date": "1151001",
     "Code": "3017",
     "Name": "奇鋐",
-    "TradeVolume": "3303220",
-    "TradeValue": "11337539185",
+    "TradeVolume": "2858000",
+    "TradeValue": "10031580000",
     "OpeningPrice": "3435.00",
     "HighestPrice": "3520.00",
     "LowestPrice": "3300.00",
     "ClosingPrice": "3510.00",
-    "Change": "75.0000",
-    "Transaction": "10761"
+    "Change": "0.00",
+    "Transaction": "10761",
+    "TurnoverYi": "100.3"
   },
   {
     "Date": "1151001",
@@ -10507,14 +10524,15 @@
     "Date": "1151001",
     "Code": "3026",
     "Name": "禾伸堂",
-    "TradeVolume": "18518160",
-    "TradeValue": "15484608636",
+    "TradeVolume": "15640000",
+    "TradeValue": "13325280000",
     "OpeningPrice": "796.00",
     "HighestPrice": "870.00",
     "LowestPrice": "796.00",
     "ClosingPrice": "852.00",
-    "Change": "61.0000",
-    "Transaction": "27318"
+    "Change": "0.00",
+    "Transaction": "27318",
+    "TurnoverYi": "133.3"
   },
   {
     "Date": "1151001",
@@ -11131,14 +11149,15 @@
     "Date": "1151001",
     "Code": "3231",
     "Name": "緯創",
-    "TradeVolume": "59140014",
-    "TradeValue": "11216236348",
+    "TradeVolume": "32030000",
+    "TradeValue": "6101715000",
     "OpeningPrice": "186.50",
     "HighestPrice": "191.50",
     "LowestPrice": "185.50",
     "ClosingPrice": "190.50",
-    "Change": "6.0000",
-    "Transaction": "40329"
+    "Change": "0.00",
+    "Transaction": "40329",
+    "TurnoverYi": "61.0"
   },
   {
     "Date": "1151001",
@@ -11430,14 +11449,15 @@
     "Date": "1151001",
     "Code": "3481",
     "Name": "群創",
-    "TradeVolume": "465129700",
-    "TradeValue": "24731233065",
+    "TradeVolume": "195762000",
+    "TradeValue": "10238352600",
     "OpeningPrice": "55.50",
     "HighestPrice": "55.50",
     "LowestPrice": "51.80",
     "ClosingPrice": "52.30",
-    "Change": "-2.4000",
-    "Transaction": "198769"
+    "Change": "0.00",
+    "Transaction": "198769",
+    "TurnoverYi": "102.4"
   },
   {
     "Date": "1151001",
@@ -13029,14 +13049,15 @@
     "Date": "1151001",
     "Code": "4958",
     "Name": "臻鼎-KY",
-    "TradeVolume": "31694640",
-    "TradeValue": "16110450419",
+    "TradeVolume": "65532000",
+    "TradeValue": "36763452000",
     "OpeningPrice": "512.00",
     "HighestPrice": "522.00",
     "LowestPrice": "498.50",
-    "ClosingPrice": "510.00",
-    "Change": "3.0000",
-    "Transaction": "36192"
+    "ClosingPrice": "561.00",
+    "Change": "51.00",
+    "Transaction": "36192",
+    "TurnoverYi": "367.6"
   },
   {
     "Date": "1151001",
@@ -14147,14 +14168,15 @@
     "Date": "1151001",
     "Code": "6213",
     "Name": "聯茂",
-    "TradeVolume": "14504834",
-    "TradeValue": "9097050867",
+    "TradeVolume": "22771000",
+    "TradeValue": "14618982000",
     "OpeningPrice": "623.00",
     "HighestPrice": "643.00",
     "LowestPrice": "611.00",
     "ClosingPrice": "642.00",
-    "Change": "19.0000",
-    "Transaction": "18179"
+    "Change": "0.00",
+    "Transaction": "18179",
+    "TurnoverYi": "146.2"
   },
   {
     "Date": "1151001",
@@ -17938,5 +17960,44 @@
     "ClosingPrice": "92.00",
     "Change": "-1.0000",
     "Transaction": "1607"
+  },
+  {
+    "Date": "1151002",
+    "Code": "",
+    "Name": "",
+    "TradeVolume": "0",
+    "TradeValue": "0",
+    "TurnoverYi": "0.0",
+    "OpeningPrice": "0.00",
+    "HighestPrice": "0.00",
+    "LowestPrice": "0.00",
+    "ClosingPrice": "0.00",
+    "Change": "0.00"
+  },
+  {
+    "Date": "1151002",
+    "Code": "3105",
+    "Name": "穩懋",
+    "TradeVolume": "26847000",
+    "TradeValue": "14443686000",
+    "TurnoverYi": "144.4",
+    "OpeningPrice": "574.0000",
+    "HighestPrice": "591.0000",
+    "LowestPrice": "572.0000",
+    "ClosingPrice": "538.00",
+    "Change": "0.00"
+  },
+  {
+    "Date": "1151002",
+    "Code": "6274",
+    "Name": "台燿",
+    "TradeVolume": "11100000",
+    "TradeValue": "17038500000",
+    "TurnoverYi": "170.4",
+    "OpeningPrice": "1540.0000",
+    "HighestPrice": "1685.0000",
+    "LowestPrice": "1530.0000",
+    "ClosingPrice": "1535.00",
+    "Change": "0.00"
   }
 ]
