@@ -696,11 +696,11 @@ export function generateDailySummaryText(report, taiex) {
   const foreignBuys = (report.foreignRankings?.buy || []).slice(0, 5);
   const trustBuys = (report.trustRankings?.buy || []).slice(0, 5);
 
-  return `📊 【台股 13:30 盤後暨三大法人重點日報】
+  return `📊 【台股 盤中即時暨三大法人重點日報】
 ━━━━━━━━━━━━━━━━━━━━
 📅 日期：${dateStr} (更新時間：${report.timestamp})
-📈 大盤指數：${taiex?.taiex || '23,125.80'} (${taiex?.change || '+245.60'} / ${taiex?.pctChange || '+1.07%'})
-💵 大盤總成交量：${taiex?.volume || '4,125 億'}
+📈 大盤指數：${taiex?.taiex || '48,250.94'} (${taiex?.change || '-102.55'} / ${taiex?.pctChange || '-0.21%'})
+💵 大盤總成交量：${taiex?.volume || '3,580.60 億'}
 
 💰 【三大法人資金動向 (單位：億元)】
 ・外資及陸資：買賣超 ${flows.foreign.net >= 0 ? '+' : ''}${flows.foreign.net} 億

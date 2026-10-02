@@ -83,8 +83,16 @@ export default function DailyReportModal({
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
               <div className="text-xs text-slate-500 mb-1">加權指數</div>
-              <div className="text-base font-black text-slate-900 font-mono">{taiexData?.taiex || '23,125.80'}</div>
-              <div className="text-xs text-red-600 font-bold">{taiexData?.change || '+245.60'} ({taiexData?.pctChange || '+1.07%'})</div>
+              <div className="text-base font-black text-slate-900 font-mono">{taiexData?.taiex || '48,250.94'}</div>
+              {(() => {
+                const chg = taiexData?.change || '-102.55';
+                const isUp = !String(chg).includes('-');
+                return (
+                  <div className={`text-xs font-bold ${isUp ? 'text-red-600' : 'text-emerald-600'}`}>
+                    {chg} ({taiexData?.pctChange || '-0.21%'})
+                  </div>
+                );
+              })()}
             </div>
 
             <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">

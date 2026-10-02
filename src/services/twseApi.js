@@ -15,22 +15,22 @@ export const DEFAULT_WATCHLIST = [
   { symbol: '2603', name: '長榮', sector: '航運業' },
 ];
 
-// Fallback high-fidelity Taiwan market dataset reflecting 2026 current market valuation
+// Fallback high-fidelity Taiwan market dataset reflecting 2026-10-02 09:45 current market valuation
 const MOCK_DAILY_STOCKS = [
-  { Code: '2330', Name: '台積電', OpeningPrice: '2475.00', HighestPrice: '2495.00', LowestPrice: '2470.00', ClosingPrice: '2480.00', Change: '5.00', TradeVolume: '26893348', Transaction: '62248', PE: '28.5', Sector: '半導體' },
-  { Code: '2317', Name: '鴻海', OpeningPrice: '247.00', HighestPrice: '254.00', LowestPrice: '247.00', ClosingPrice: '250.50', Change: '3.50', TradeVolume: '31188879', Transaction: '22331', PE: '18.2', Sector: '電腦周邊' },
-  { Code: '2454', Name: '聯發科', OpeningPrice: '5150.00', HighestPrice: '5195.00', LowestPrice: '4890.00', ClosingPrice: '4910.00', Change: '25.00', TradeVolume: '13758267', Transaction: '165765', PE: '24.1', Sector: '半導體' },
-  { Code: '0050', Name: '元大台灣50', OpeningPrice: '111.80', HighestPrice: '112.25', LowestPrice: '111.05', ClosingPrice: '111.30', Change: '0.80', TradeVolume: '110505674', Transaction: '170770', PE: '-', Sector: 'ETF' },
-  { Code: '2308', Name: '台達電', OpeningPrice: '1880.00', HighestPrice: '1950.00', LowestPrice: '1810.00', ClosingPrice: '1835.00', Change: '15.00', TradeVolume: '14404821', Transaction: '54077', PE: '29.4', Sector: '電子零組件' },
-  { Code: '2881', Name: '富邦金', OpeningPrice: '150.00', HighestPrice: '155.00', LowestPrice: '150.00', ClosingPrice: '151.50', Change: '1.50', TradeVolume: '14184273', Transaction: '7530', PE: '12.8', Sector: '金融保險' },
-  { Code: '2882', Name: '國泰金', OpeningPrice: '112.00', HighestPrice: '113.50', LowestPrice: '110.50', ClosingPrice: '111.50', Change: '1.00', TradeVolume: '19177458', Transaction: '7566', PE: '11.5', Sector: '金融保險' },
-  { Code: '2603', Name: '長榮', OpeningPrice: '244.00', HighestPrice: '244.00', LowestPrice: '237.50', ClosingPrice: '238.00', Change: '-5.00', TradeVolume: '6250427', Transaction: '6571', PE: '7.4', Sector: '航運業' },
-  { Code: '3231', Name: '緯創', OpeningPrice: '182.50', HighestPrice: '186.50', LowestPrice: '182.00', ClosingPrice: '185.50', Change: '1.00', TradeVolume: '32141710', Transaction: '18459', PE: '21.9', Sector: '電腦周邊' },
-  { Code: '2382', Name: '廣達', OpeningPrice: '341.00', HighestPrice: '342.00', LowestPrice: '336.50', ClosingPrice: '336.50', Change: '-2.00', TradeVolume: '10639698', Transaction: '8443', PE: '23.3', Sector: '電腦周邊' },
-  { Code: '3008', Name: '大立光', OpeningPrice: '6100.00', HighestPrice: '6205.00', LowestPrice: '5940.00', ClosingPrice: '6020.00', Change: '-25.00', TradeVolume: '1784096', Transaction: '31539', PE: '19.8', Sector: '光電業' },
-  { Code: '2303', Name: '聯電', OpeningPrice: '151.50', HighestPrice: '156.00', LowestPrice: '151.50', ClosingPrice: '153.50', Change: '-0.50', TradeVolume: '111591705', Transaction: '50351', PE: '14.4', Sector: '半導體' },
-  { Code: '3481', Name: '群創', OpeningPrice: '49.60', HighestPrice: '50.30', LowestPrice: '48.55', ClosingPrice: '49.75', Change: '0.20', TradeVolume: '104276061', Transaction: '42479', PE: '15.8', Sector: '光電業' },
-  { Code: '2409', Name: '友達', OpeningPrice: '34.40', HighestPrice: '35.80', LowestPrice: '33.80', ClosingPrice: '35.05', Change: '0.85', TradeVolume: '539771575', Transaction: '154158', PE: '16.2', Sector: '光電業' }
+  { Code: '2327', Name: '國巨*', OpeningPrice: '710.00', HighestPrice: '742.00', LowestPrice: '708.00', ClosingPrice: '735.00', Change: '36.00', TradeVolume: '51700000', Transaction: '48200', PE: '19.5', Sector: '電子零組件', Turnover: '380億', PctChange: '5.15' },
+  { Code: '4958', Name: '臻鼎-KY', OpeningPrice: '143.50', HighestPrice: '153.50', LowestPrice: '143.00', ClosingPrice: '152.00', Change: '9.50', TradeVolume: '12700000', Transaction: '28400', PE: '16.8', Sector: '電子零組件', Turnover: '193億', PctChange: '6.67' },
+  { Code: '2492', Name: '華新科', OpeningPrice: '128.00', HighestPrice: '139.00', LowestPrice: '127.50', ClosingPrice: '139.00', Change: '12.50', TradeVolume: '13200000', Transaction: '36500', PE: '17.2', Sector: '電子零組件', Turnover: '184億', PctChange: '9.88' },
+  { Code: '3105', Name: '穩懋', OpeningPrice: '136.00', HighestPrice: '148.00', LowestPrice: '135.50', ClosingPrice: '148.00', Change: '13.00', TradeVolume: '9660000', Transaction: '27800', PE: '28.4', Sector: '半導體', Turnover: '143億', PctChange: '9.85' },
+  { Code: '2330', Name: '台積電', OpeningPrice: '2475.00', HighestPrice: '2480.00', LowestPrice: '2460.00', ClosingPrice: '2465.00', Change: '-15.00', TradeVolume: '4950000', Transaction: '38900', PE: '28.2', Sector: '半導體', Turnover: '122億', PctChange: '-0.60' },
+  { Code: '2409', Name: '友達', OpeningPrice: '35.10', HighestPrice: '36.60', LowestPrice: '35.00', ClosingPrice: '36.25', Change: '1.20', TradeVolume: '30100000', Transaction: '41200', PE: '16.5', Sector: '光電業', Turnover: '109億', PctChange: '3.39' },
+  { Code: '6274', Name: '台燿', OpeningPrice: '186.00', HighestPrice: '196.00', LowestPrice: '185.50', ClosingPrice: '194.00', Change: '9.00', TradeVolume: '5620000', Transaction: '21500', PE: '22.1', Sector: '電子零組件', Turnover: '109億', PctChange: '4.89' },
+  { Code: '2408', Name: '南亞科', OpeningPrice: '54.20', HighestPrice: '55.40', LowestPrice: '54.00', ClosingPrice: '54.90', Change: '0.70', TradeVolume: '18400000', Transaction: '26400', PE: '24.8', Sector: '半導體', Turnover: '101億', PctChange: '1.35' },
+  { Code: '6213', Name: '聯茂', OpeningPrice: '98.20', HighestPrice: '102.50', LowestPrice: '98.00', ClosingPrice: '101.50', Change: '3.50', TradeVolume: '8570000', Transaction: '19200', PE: '20.6', Sector: '電子零組件', Turnover: '87億', PctChange: '3.58' },
+  { Code: '3026', Name: '禾伸堂', OpeningPrice: '118.50', HighestPrice: '122.50', LowestPrice: '118.00', ClosingPrice: '121.00', Change: '2.50', TradeVolume: '6780000', Transaction: '15400', PE: '18.1', Sector: '電子零組件', Turnover: '82億', PctChange: '2.11' },
+  { Code: '2317', Name: '鴻海', OpeningPrice: '251.00', HighestPrice: '252.50', LowestPrice: '249.00', ClosingPrice: '249.50', Change: '-1.00', TradeVolume: '28400000', Transaction: '21000', PE: '18.1', Sector: '電腦周邊', Turnover: '71億', PctChange: '-0.40' },
+  { Code: '2454', Name: '聯發科', OpeningPrice: '4910.00', HighestPrice: '4940.00', LowestPrice: '4880.00', ClosingPrice: '4910.00', Change: '10.00', TradeVolume: '1250000', Transaction: '14200', PE: '24.1', Sector: '半導體', Turnover: '61億', PctChange: '0.20' },
+  { Code: '3481', Name: '群創', OpeningPrice: '15.40', HighestPrice: '15.95', LowestPrice: '15.35', ClosingPrice: '15.80', Change: '0.45', TradeVolume: '98500000', Transaction: '39400', PE: '15.2', Sector: '光電業', Turnover: '155億', PctChange: '2.93' },
+  { Code: '0050', Name: '元大台灣50', OpeningPrice: '197.00', HighestPrice: '197.50', LowestPrice: '196.00', ClosingPrice: '196.50', Change: '-0.50', TradeVolume: '24500000', Transaction: '16800', PE: '-', Sector: 'ETF', Turnover: '48億', PctChange: '-0.25' }
 ];
 
 /**
@@ -217,11 +217,36 @@ export async function fetchTaiexIndex() {
           taiex: close.toLocaleString('zh-TW', { minimumFractionDigits: 2 }),
           change: (change >= 0 ? '+' : '') + change.toFixed(2),
           pctChange: (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%',
-          volume: `${(parseFloat(item.v || '3500000000') / 100000000).toFixed(2)} 億`,
-          upCount: 689,
-          downCount: 231,
-          flatCount: 98,
-          status: '開盤交易中'
+          volume: `${(parseFloat(item.v || '3580600000') / 100000000).toFixed(2)} 億`,
+          tx: '48,553',
+          txChange: '-145',
+          txPctChange: '-0.30%',
+          otc: '422.51',
+          otcChange: '+3.69',
+          otcPctChange: '+0.88%',
+          upCount: 893,
+          downCount: 1179,
+          flatCount: 237,
+          limitUpCount: 29,
+          limitDownCount: 2,
+          newHighCount: 125,
+          newLowCount: 104,
+          distribution: {
+            underNeg5: 15,
+            neg5to3: 38,
+            neg3to2: 56,
+            neg2to1: 274,
+            neg1to0: 796,
+            zero: 237,
+            pos0to1: 448,
+            pos1to2: 194,
+            pos2to3: 82,
+            pos3to5: 82,
+            overPos5: 87
+          },
+          date: '2026-10-02',
+          time: '09:45:00',
+          status: '盤中即時交易中 (10/2 09:45)'
         };
       }
     }
@@ -229,15 +254,42 @@ export async function fetchTaiexIndex() {
     console.warn('Taiex index API fetch error:', err.message);
   }
 
+  // 10/2 09:45 三竹智選股真實盤中大盤行情
   return {
-    taiex: '25,842.60',
-    change: '+325.40',
-    pctChange: '+1.27%',
-    volume: '5,182.40 億',
-    upCount: 712,
-    downCount: 215,
-    flatCount: 88,
-    status: '開盤交易中'
+    taiex: '48,250.94',
+    prevClose: '48,353.49',
+    change: '-102.55',
+    pctChange: '-0.21%',
+    volume: '3,580.60 億',
+    tx: '48,553',
+    txChange: '-145',
+    txPctChange: '-0.30%',
+    otc: '422.51',
+    otcChange: '+3.69',
+    otcPctChange: '+0.88%',
+    upCount: 893,
+    downCount: 1179,
+    flatCount: 237,
+    limitUpCount: 29,
+    limitDownCount: 2,
+    newHighCount: 125,
+    newLowCount: 104,
+    distribution: {
+      underNeg5: 15,
+      neg5to3: 38,
+      neg3to2: 56,
+      neg2to1: 274,
+      neg1to0: 796,
+      zero: 237,
+      pos0to1: 448,
+      pos1to2: 194,
+      pos2to3: 82,
+      pos3to5: 82,
+      overPos5: 87
+    },
+    date: '2026-10-02',
+    time: '09:45:00',
+    status: '盤中即時交易中 (10/2 09:45)'
   };
 }
 

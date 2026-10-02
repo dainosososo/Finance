@@ -162,22 +162,32 @@ export default function Sidebar({
         >
           <div className="flex items-center justify-between text-[11px] mb-1">
             <span className="text-rose-800 font-semibold">大盤加權指數</span>
-            <span className="font-mono font-bold text-slate-900">{taiexData?.taiex || '23,125.80'}</span>
+            <span className="font-mono font-bold text-slate-900">{taiexData?.taiex || '48,250.94'}</span>
           </div>
           <div className="flex items-center justify-between text-[11px] font-mono">
             <span className="text-slate-500">漲跌動態</span>
-            <span className="font-bold text-red-600 bg-red-50 px-1.5 py-0.2 rounded border border-red-200">
-              {taiexData?.change || '+245.60'}
-            </span>
+            {(() => {
+              const chg = taiexData?.change || '-102.55';
+              const isUp = !String(chg).includes('-');
+              return (
+                <span className={`font-bold px-1.5 py-0.2 rounded border ${
+                  isUp 
+                    ? 'text-red-600 bg-red-50 border-red-200' 
+                    : 'text-emerald-700 bg-emerald-50 border-emerald-200'
+                }`}>
+                  {chg} ({taiexData?.pctChange || '-0.21%'})
+                </span>
+              );
+            })()}
           </div>
         </div>
       ) : (
         <div 
           onClick={() => setActiveTab('MARKET')}
           className="py-2 flex justify-center cursor-pointer" 
-          title="加權指數 23,125.80 (點擊查看市場總覽)"
+          title="加權指數 48,250.94 (點擊查看市場總覽)"
         >
-          <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
         </div>
       )}
 
