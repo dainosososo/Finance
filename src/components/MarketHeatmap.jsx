@@ -31,10 +31,10 @@ const SECTOR_GROUPS = [
     colorTheme: 'cyan',
     weight: 35.2,
     stocks: [
-      { code: '2327', name: '國巨*', price: 602.0, change: 0.0, pctChange: 0.0, turnover: 599.7, isUp: true },
-      { code: '4958', name: '臻鼎-KY', price: 561.0, change: 51.0, pctChange: 10.0, turnover: 367.6, isUp: true },
-      { code: '2492', name: '華新科', price: 329.0, change: 0.0, pctChange: 0.0, turnover: 180.2, isUp: true },
-      { code: '6274', name: '台燿', price: 1535.0, change: 0.0, pctChange: 0.0, turnover: 170.4, isUp: true }
+      { code: '2327', name: '國巨*', price: 626.0, change: 24.0, pctChange: 3.99, turnover: 644.4, isUp: true },
+      { code: '4958', name: '臻鼎-KY', price: 561.0, change: 51.0, pctChange: 10.0, turnover: 369.1, isUp: true },
+      { code: '2492', name: '華新科', price: 361.5, change: 32.5, pctChange: 9.88, turnover: 198.5, isUp: true },
+      { code: '6274', name: '台燿', price: 1620.0, change: 85.0, pctChange: 5.54, turnover: 190.8, isUp: true }
     ]
   },
   {
@@ -44,10 +44,10 @@ const SECTOR_GROUPS = [
     colorTheme: 'blue',
     weight: 28.5,
     stocks: [
-      { code: '2330', name: '台積電', price: 2505.0, change: -5.0, pctChange: -0.20, turnover: 281.8, isUp: false },
-      { code: '2408', name: '南亞科', price: 519.0, change: 0.0, pctChange: 0.0, turnover: 166.2, isUp: true },
-      { code: '2454', name: '聯發科', price: 4980.0, change: 0.0, pctChange: 0.0, turnover: 162.6, isUp: true },
-      { code: '2303', name: '聯電', price: 161.5, change: 0.0, pctChange: 0.0, turnover: 145.4, isUp: true }
+      { code: '2330', name: '台積電', price: 2500.0, change: -10.0, pctChange: -0.40, turnover: 346.7, isUp: false },
+      { code: '2454', name: '聯發科', price: 4950.0, change: -30.0, pctChange: -0.60, turnover: 189.6, isUp: false },
+      { code: '2408', name: '南亞科', price: 526.0, change: 7.0, pctChange: 1.35, turnover: 185.4, isUp: true },
+      { code: '2303', name: '聯電', price: 161.5, change: 0.0, pctChange: 0.0, turnover: 159.3, isUp: true }
     ]
   },
   {
@@ -57,9 +57,9 @@ const SECTOR_GROUPS = [
     colorTheme: 'amber',
     weight: 15.6,
     stocks: [
-      { code: '2409', name: '友達', price: 38.3, change: 0.0, pctChange: 0.0, turnover: 250.7, isUp: true },
-      { code: '3481', name: '群創', price: 52.3, change: 0.0, pctChange: 0.0, turnover: 102.4, isUp: true },
-      { code: '3008', name: '大立光', price: 2550.0, change: -15.0, pctChange: -0.58, turnover: 32.4, isUp: false }
+      { code: '2409', name: '友達', price: 40.45, change: 2.15, pctChange: 5.61, turnover: 282.1, isUp: true },
+      { code: '3481', name: '群創', price: 52.8, change: 0.5, pctChange: 0.96, turnover: 110.9, isUp: true },
+      { code: '3008', name: '大立光', price: 6290.0, change: 85.0, pctChange: 1.37, turnover: 95.4, isUp: true }
     ]
   },
   {
@@ -69,10 +69,10 @@ const SECTOR_GROUPS = [
     colorTheme: 'indigo',
     weight: 12.8,
     stocks: [
-      { code: '3017', name: '奇鋐', price: 3510.0, change: 0.0, pctChange: 0.0, turnover: 100.3, isUp: true },
-      { code: '2308', name: '台達電', price: 1880.0, change: -25.0, pctChange: -1.31, turnover: 92.6, isUp: false },
-      { code: '2317', name: '鴻海', price: 254.0, change: 0.0, pctChange: 0.0, turnover: 63.9, isUp: true },
-      { code: '2382', name: '廣達', price: 334.0, change: 0.0, pctChange: 0.0, turnover: 49.8, isUp: true }
+      { code: '3017', name: '奇鋐', price: 3440.0, change: -70.0, pctChange: -1.99, turnover: 107.6, isUp: false },
+      { code: '2308', name: '台達電', price: 1885.0, change: -20.0, pctChange: -1.05, turnover: 104.0, isUp: false },
+      { code: '2317', name: '鴻海', price: 251.0, change: -3.0, pctChange: -1.18, turnover: 71.3, isUp: false },
+      { code: '2382', name: '廣達', price: 332.0, change: -2.0, pctChange: -0.60, turnover: 33.0, isUp: false }
     ]
   },
   {
@@ -207,22 +207,22 @@ export default function MarketHeatmap({
     // 若提取數量不足，以 10/2 今日真實熱門成交榜單補齊
     if (combined.length < 10) {
       const baseList = [
-        { code: '2327', name: '國巨*', price: 602.0, change: 0.0, pctChange: 0.0, turnover: 599.7, sector: '零組件' },
-        { code: '4958', name: '臻鼎-KY', price: 561.0, change: 51.0, pctChange: 10.0, turnover: 367.6, sector: '零組件' },
-        { code: '2330', name: '台積電', price: 2505.0, change: -5.0, pctChange: -0.20, turnover: 281.8, sector: '半導體' },
-        { code: '2409', name: '友達', price: 38.3, change: 0.0, pctChange: 0.0, turnover: 250.7, sector: '光電業' },
-        { code: '2492', name: '華新科', price: 329.0, change: 0.0, pctChange: 0.0, turnover: 180.2, sector: '零組件' },
-        { code: '6274', name: '台燿', price: 1535.0, change: 0.0, pctChange: 0.0, turnover: 170.4, sector: '零組件' },
-        { code: '2408', name: '南亞科', price: 519.0, change: 0.0, pctChange: 0.0, turnover: 166.2, sector: '半導體' },
-        { code: '2454', name: '聯發科', price: 4980.0, change: 0.0, pctChange: 0.0, turnover: 162.6, sector: '半導體' },
-        { code: '6213', name: '聯茂', price: 642.0, change: 0.0, pctChange: 0.0, turnover: 146.2, sector: '零組件' },
-        { code: '2303', name: '聯電', price: 161.5, change: 0.0, pctChange: 0.0, turnover: 145.4, sector: '半導體' },
-        { code: '3105', name: '穩懋', price: 538.0, change: 0.0, pctChange: 0.0, turnover: 144.4, sector: '半導體' },
-        { code: '3026', name: '禾伸堂', price: 852.0, change: 0.0, pctChange: 0.0, turnover: 133.3, sector: '零組件' },
-        { code: '3481', name: '群創', price: 52.3, change: 0.0, pctChange: 0.0, turnover: 102.4, sector: '光電業' },
-        { code: '3017', name: '奇鋐', price: 3510.0, change: 0.0, pctChange: 0.0, turnover: 100.3, sector: '電腦周邊' },
-        { code: '2308', name: '台達電', price: 1880.0, change: -25.0, pctChange: -1.31, turnover: 92.6, sector: '零組件' },
-        { code: '2317', name: '鴻海', price: 254.0, change: 0.0, pctChange: 0.0, turnover: 63.9, sector: '電腦周邊' }
+        { code: '2327', name: '國巨*', price: 626.0, change: 24.0, pctChange: 3.99, turnover: 644.4, sector: '零組件' },
+        { code: '4958', name: '臻鼎-KY', price: 561.0, change: 51.0, pctChange: 10.0, turnover: 369.1, sector: '零組件' },
+        { code: '2330', name: '台積電', price: 2500.0, change: -10.0, pctChange: -0.40, turnover: 346.7, sector: '半導體' },
+        { code: '2409', name: '友達', price: 40.45, change: 2.15, pctChange: 5.61, turnover: 282.1, sector: '光電業' },
+        { code: '2492', name: '華新科', price: 361.5, change: 32.5, pctChange: 9.88, turnover: 198.5, sector: '零組件' },
+        { code: '6274', name: '台燿', price: 1620.0, change: 85.0, pctChange: 5.54, turnover: 190.8, sector: '零組件' },
+        { code: '2408', name: '南亞科', price: 526.0, change: 7.0, pctChange: 1.35, turnover: 185.4, sector: '半導體' },
+        { code: '2454', name: '聯發科', price: 4950.0, change: -30.0, pctChange: -0.60, turnover: 189.6, sector: '半導體' },
+        { code: '6213', name: '聯茂', price: 683.0, change: 41.0, pctChange: 6.39, turnover: 163.5, sector: '零組件' },
+        { code: '2303', name: '聯電', price: 161.5, change: 0.0, pctChange: 0.0, turnover: 159.3, sector: '半導體' },
+        { code: '3105', name: '穩懋', price: 591.0, change: 53.0, pctChange: 9.85, turnover: 161.4, sector: '半導體' },
+        { code: '3026', name: '禾伸堂', price: 835.0, change: -17.0, pctChange: -2.00, turnover: 140.4, sector: '零組件' },
+        { code: '3481', name: '群創', price: 52.8, change: 0.5, pctChange: 0.96, turnover: 110.9, sector: '光電業' },
+        { code: '3017', name: '奇鋐', price: 3440.0, change: -70.0, pctChange: -1.99, turnover: 107.6, sector: '電腦周邊' },
+        { code: '2308', name: '台達電', price: 1885.0, change: -20.0, pctChange: -1.05, turnover: 104.0, sector: '零組件' },
+        { code: '2317', name: '鴻海', price: 251.0, change: -3.0, pctChange: -1.18, turnover: 71.3, sector: '電腦周邊' }
       ];
       combined = baseList.map(st => mergeRealData(st, dailyMap));
       combined.sort((a, b) => b.turnover - a.turnover);
