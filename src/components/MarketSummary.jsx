@@ -28,12 +28,12 @@ export default function MarketSummary({ taiexData, topStocks = [], onSelectStock
             </span>
           </div>
           <div className="flex items-baseline justify-between">
-            <h3 className="text-2xl font-black text-slate-900 font-mono">{taiexData?.taiex || '23,125.80'}</h3>
+            <h3 className="text-2xl font-black text-slate-900 font-mono">{taiexData?.taiex || '48,438.06'}</h3>
             <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-xs font-bold font-mono ${
               isTaiexUp ? 'text-red-600 bg-red-50 border border-red-200' : 'text-emerald-600 bg-emerald-50 border border-emerald-200'
             }`}>
               {isTaiexUp ? <TrendingUp className="w-3.5 h-3.5 mr-1" /> : <TrendingDown className="w-3.5 h-3.5 mr-1" />}
-              {taiexData?.change || '+245.60'} ({taiexData?.pctChange || '+1.07%'})
+              {taiexData?.change || '+84.57'} ({taiexData?.pctChange || '+0.17%'})
             </span>
           </div>
           <p className="text-xs text-rose-900/70 mt-2 flex items-center justify-between">
