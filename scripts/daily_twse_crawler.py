@@ -51,6 +51,12 @@ def run_crawler():
     # 4. Fetch STOCK_DAY_ALL (全上市公司每日收盤價)
     stock_day_all = fetch_json("https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL")
 
+    # 5. Fetch FMTQIK (大盤統計資訊 - 每日市場成交資訊)
+    fmtqik_data = fetch_json("https://www.twse.com.tw/rwd/zh/afterTrading/FMTQIK?response=json")
+
+    # 6. Fetch MI_INDEX (大盤每日收盤行情 - 發行量加權股價指數)
+    mi_index_data = fetch_json("https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?response=json")
+
     report_payload = {
         "date": today_str,
         "timestamp": now_time_str,
@@ -150,6 +156,104 @@ def run_crawler():
             "sell": [{**s, "rank": i + 1} for i, s in enumerate(list(reversed(trust_list[-20:])))]
         }
 
+    # Process FMTQIK (大盤每日成交量值)
+    if fmtqik_data and "data" in fmtqik_data and len(fmtqik_data["data"]) > 0:
+        # Last row is the most recent trading day
+        latest = fmtqik_data["data"][-1]
+        try:
+            total_value = float(str(latest[2]).replace(',', '')) / 100000000  # 億
+            report_payload["marketOverview"] = {
+                "totalVolume": f"{total_value:,.2f} 億",
+                "totalTransactions": str(latest[3]).replace(',', '') if len(latest) > 3 else "N/A",
+                "taiexClose": str(latest[4]).replace(',', '') if len(latest) > 4 else "N/A",
+                "taiexChange": str(latest[5]).replace(',', '') if len(latest) > 5 else "N/A"
+            }
+        except Exception as e:
+            print(f"[WARN] Error parsing FMTQIK: {e}")
+
+    # Process MI_INDEX to get TAIEX closing
+    if mi_index_data and "data" in mi_index_data:
+        for row in mi_index_data.get("data", []):
+            if len(row) >= 2 and "發行量加權" in str(row[0]):
+                try:
+                    report_payload.setdefault("marketOverview", {})
+                    report_payload["marketOverview"]["taiexIndex"] = str(row[1]).replace(',', '').strip()
+                except:
+                    pass
+
+    # Compute market breadth from STOCK_DAY_ALL
+    if stock_day_all and isinstance(stock_day_all, list):
+        up_count = 0
+        down_count = 0
+        flat_count = 0
+        for s in stock_day_all:
+            try:
+                chg = float(str(s.get("Change", "0")).replace(',', ''))
+                if chg > 0:
+                    up_count += 1
+                elif chg < 0:
+                    down_count += 1
+                else:
+                    flat_count += 1
+            except:
+                flat_count += 1
+        report_payload.setdefault("marketOverview", {})
+        report_payload["marketOverview"]["upCount"] = up_count
+        report_payload["marketOverview"]["downCount"] = down_count
+        report_payload["marketOverview"]["flatCount"] = flat_count
+
+    # Extend volume rankings from STOCK_DAY_ALL (top 100 by TradeValue)
+    if stock_day_all and isinstance(stock_day_all, list) and len(stock_day_all) > 0:
+        all_ranked = []
+        for s in stock_day_all:
+            try:
+                tv = float(str(s.get("TradeValue", "0")).replace(',', ''))
+                code = s.get("Code", "")
+                # Skip ETFs that start with 00 for volume ranking (optional, keep them)
+                all_ranked.append({
+                    "code": code,
+                    "name": s.get("Name", ""),
+                    "volume": int(str(s.get("TradeVolume", "0")).replace(',', '')),
+                    "tradeValue": tv,
+                    "turnover": f"{round(tv / 100000000, 1)} 億",
+                    "price": s.get("ClosingPrice", "N/A"),
+                    "change": s.get("Change", "0"),
+                    "pctChange": "0.00%",
+                    "sector": "一般產業"
+                })
+            except:
+                continue
+        all_ranked.sort(key=lambda x: x["tradeValue"], reverse=True)
+
+        # Compute pctChange
+        for item in all_ranked[:100]:
+            try:
+                price = float(str(item["price"]).replace(',', ''))
+                chg = float(str(item["change"]).replace(',', ''))
+                prev = price - chg
+                if prev > 0:
+                    item["pctChange"] = f"{round((chg / prev) * 100, 2)}%"
+            except:
+                pass
+            item["rank"] = all_ranked.index(item) + 1
+
+        # Merge with existing MI_INDEX20 rankings — MI_INDEX20 has more detail, so keep those
+        existing_codes = set()
+        if "volumeRankings" in report_payload:
+            existing_codes = {r["code"] for r in report_payload["volumeRankings"]}
+        
+        extended = report_payload.get("volumeRankings", [])
+        rank_offset = len(extended)
+        for item in all_ranked[:100]:
+            if item["code"] not in existing_codes:
+                rank_offset += 1
+                item["rank"] = rank_offset
+                extended.append(item)
+                existing_codes.add(item["code"])
+            if len(extended) >= 100:
+                break
+        report_payload["volumeRankings"] = extended[:100]
+
     # Save market report JSON
     report_file = os.path.join(OUTPUT_DIR, "daily_market_report.json")
     with open(report_file, "w", encoding="utf-8") as f:
@@ -163,16 +267,6 @@ def run_crawler():
             code = s.get("Code", "")
             name = s.get("Name", "")
             close_price = s.get("ClosingPrice", "")
-            
-            # Explicit correction for 2330 台積電 to 2480.00 as confirmed by user
-            if code == "2330":
-                close_price = "2480.00"
-                s["ClosingPrice"] = "2480.00"
-                s["OpeningPrice"] = "2475.00"
-                s["HighestPrice"] = "2495.00"
-                s["LowestPrice"] = "2470.00"
-                s["Change"] = "5.0000"
-
             cleaned_stocks.append(s)
 
         stocks_file = os.path.join(OUTPUT_DIR, "daily_closing_stocks.json")

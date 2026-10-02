@@ -80,13 +80,51 @@ export default function App() {
     loadData();
   }, [loadData]);
 
-  // Auto-refresh interval polling for live stock quotes & intraday market data
+  // Auto-refresh interval polling for live stock quotes, TAIEX, and heatmap constituents
   useEffect(() => {
     if (!autoRefresh) return;
+    
+    // Core heatmap & weight stocks to keep synchronized in real-time
+    const HOT_HEATMAP_CODES = [
+      '2330', '2454', '2308', '3231', '2303', '2317', '0050', '3481', 
+      '2382', '1519', '3017', '2409', '3008', '2603', '2881', '2882'
+    ];
+    const pollCodes = Array.from(new Set([...watchlist, ...HOT_HEATMAP_CODES]));
+
     const interval = setInterval(async () => {
       try {
-        const realtime = await fetchRealtimeQuotes(watchlist);
-        if (realtime && realtime.length > 0) setQuotes(realtime);
+        const [realtime, liveTaiex] = await Promise.all([
+          fetchRealtimeQuotes(pollCodes),
+          fetchTaiexIndex()
+        ]);
+
+        if (realtime && realtime.length > 0) {
+          // Update watchlist quotes
+          setQuotes(realtime.filter(q => watchlist.includes(q.symbol)));
+
+          // Dynamically patch dailyStocks so MarketHeatmap receives live prices immediately
+          setDailyStocks(prevDaily => {
+            if (!prevDaily || prevDaily.length === 0) return prevDaily;
+            const liveMap = new Map(realtime.map(r => [r.symbol, r]));
+            return prevDaily.map(st => {
+              const live = liveMap.get(st.Code);
+              if (live && live.isRealtime && live.price !== '-') {
+                return {
+                  ...st,
+                  ClosingPrice: live.price,
+                  Change: live.change,
+                  PctChange: live.pctChange,
+                  TradeVolume: live.volume || st.TradeVolume
+                };
+              }
+              return st;
+            });
+          });
+        }
+
+        if (liveTaiex && liveTaiex.taiex !== '---') {
+          setTaiexData(liveTaiex);
+        }
       } catch (e) {
         console.warn('Realtime polling error:', e);
       }
