@@ -68,7 +68,7 @@ export default function Sidebar({
       id: 'REALTIME',
       tabTarget: 'REALTIME',
       label: '即時自選',
-      sublabel: '自選監控與三竹深度分析',
+      sublabel: '自選監控',
       icon: Zap,
       color: 'text-emerald-600',
       badge: '即時'

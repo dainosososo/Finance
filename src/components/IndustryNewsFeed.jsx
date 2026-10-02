@@ -13,11 +13,13 @@ import {
   Microscope,
   Layers,
   Sparkles,
-  Flame
+  Flame,
+  Globe
 } from 'lucide-react';
 
 const INDUSTRY_FILTERS = [
   { id: 'ALL', name: '全部產業', icon: Layers },
+  { id: '國際科技巨頭與美股連動', name: '🌐 國際巨頭(美股)', icon: Globe },
   { id: '半導體產業', name: '半導體產業', icon: Cpu },
   { id: 'AI 伺服器與電腦周邊', name: 'AI 伺服器/代工', icon: Server },
   { id: '電子零組件與散熱', name: '電子零組件/散熱', icon: Zap },
@@ -29,6 +31,10 @@ const INDUSTRY_FILTERS = [
 
 const SOURCE_FILTERS = [
   { id: 'ALL', name: '全部來源' },
+  { id: 'CMoney 股市爆料同學會', name: '🔥 CMoney 同學會', color: 'text-orange-700 bg-orange-50 border-orange-200' },
+  { id: '股癌 Gooaye', name: '🎙️ 股癌 觀點', color: 'text-indigo-700 bg-indigo-50 border-indigo-200' },
+  { id: '韭菜畢業班', name: '🌱 韭菜畢業班', color: 'text-emerald-700 bg-emerald-50 border-emerald-200' },
+  { id: '國際巨頭官方快訊', name: '🌐 國際巨頭 (Google/Tesla/NVDA)', color: 'text-violet-700 bg-violet-50 border-violet-200' },
   { id: 'MoneyDJ 理財網', name: 'MoneyDJ 理財網', color: 'text-emerald-700 bg-emerald-50 border-emerald-200' },
   { id: '鉅亨網', name: '鉅亨網 (Anue)', color: 'text-blue-700 bg-blue-50 border-blue-200' },
   { id: '財經 M 平方', name: '財經 M 平方', color: 'text-purple-700 bg-purple-50 border-purple-200' },
@@ -55,6 +61,10 @@ export default function IndustryNewsFeed({ newsList = [], onSelectStock }) {
 
   const getSourceBadgeClass = (source) => {
     switch (source) {
+      case 'CMoney 股市爆料同學會': return 'bg-orange-50 text-orange-700 border-orange-200 font-bold';
+      case '股癌 Gooaye': return 'bg-indigo-50 text-indigo-700 border-indigo-200 font-bold';
+      case '韭菜畢業班': return 'bg-emerald-50 text-emerald-700 border-emerald-200 font-bold';
+      case '國際巨頭官方快訊': return 'bg-violet-50 text-violet-700 border-violet-200 font-bold';
       case 'MoneyDJ 理財網': return 'bg-emerald-50 text-emerald-700 border-emerald-200';
       case '鉅亨網': return 'bg-blue-50 text-blue-700 border-blue-200';
       case '財經 M 平方': return 'bg-purple-50 text-purple-700 border-purple-200';

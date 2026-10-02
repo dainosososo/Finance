@@ -133,7 +133,7 @@ export default function Navbar({
               />
               <div className="absolute left-0 right-0 top-full mt-2 bg-white border border-slate-200 rounded-2xl shadow-2xl z-40 overflow-hidden backdrop-blur-xl animate-fade-in">
                 <div className="p-2.5 border-b border-slate-200 text-[11px] font-bold text-slate-500 px-4 flex justify-between items-center bg-slate-50">
-                  <span>即時配對標的 (點擊開啟三竹完整分析)</span>
+                  <span>即時配對標的 (點擊開啟即時個股分析)</span>
                   <span className="text-[10px] text-rose-700 font-bold bg-rose-50 px-2 py-0.5 rounded border border-pink-200">
                     新台幣 NT$ 計價
                   </span>

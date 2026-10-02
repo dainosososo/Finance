@@ -292,7 +292,7 @@ export default function App() {
                     </h3>
                   </div>
                   <span className="text-xs text-rose-800/80 font-mono">
-                    點擊標的直接開啟三竹深度分析
+                    點擊標的開啟深度技術分析
                   </span>
                 </div>
 

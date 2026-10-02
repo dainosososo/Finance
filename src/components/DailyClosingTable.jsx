@@ -154,7 +154,7 @@ export default function DailyClosingTable({ dailyStocks = [], onSelectStock }) {
                   <ArrowUpDown className="w-3 h-3 text-slate-400" />
                 </div>
               </th>
-              <th className="py-3 px-4 text-right">三竹分析</th>
+              <th className="py-3 px-4 text-right">技術分析</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100 font-mono">

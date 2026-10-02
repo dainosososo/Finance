@@ -526,7 +526,7 @@ export default function MarketHeatmap({
             {/* Bottom Sector Footnote */}
             <div className="flex items-center justify-between text-[10px] text-rose-800/80 pt-2 border-t border-pink-200/80 font-mono">
               <span>共涵蓋 7 大產業結構族群</span>
-              <span>點擊任何板塊標的即可開啟三竹技術與籌碼分析</span>
+              <span>點擊任何板塊標的即可開啟深度技術與籌碼分析</span>
             </div>
           </div>
         )}

@@ -298,6 +298,106 @@ const INDUSTRY_NEWS_DATABASE = [
     url: 'https://www.moneydj.com',
     hot: true
   },
+  // ========================================================
+  // 0. 國際科技巨頭官方新聞稿與重大發布 (Google / Tesla / NVIDIA)
+  // ========================================================
+  {
+    id: 'global-1',
+    industry: '國際科技巨頭與美股連動',
+    industryCode: 'GLOBAL_TECH',
+    title: '【Google 官方新聞稿】Alphabet 發布 Gemini 2.0 次世代多模態模型，擴大 TPU v6 自研算力晶片採購',
+    source: '國際巨頭官方快訊',
+    sourceColor: 'purple',
+    date: '2026-10-02 12:30',
+    companies: [{ code: '2330', name: '台積電' }, { code: '2454', name: '聯發科' }],
+    summary: 'Google 執行長 Sundar Pichai 正式宣布全面升級雲端 AI 基礎架構，採購規模年增 45%。台廠台積電 3 奈米先進製程與聯發科 ASIC 共同設計專案成為最大受惠者。',
+    url: 'https://blog.google/technology/ai/',
+    hot: true
+  },
+  {
+    id: 'global-2',
+    industry: '國際科技巨頭與美股連動',
+    industryCode: 'GLOBAL_TECH',
+    title: '【Tesla 特斯拉官方公告】Robotaxi 無人自駕計程車隊進入道路量產驗證，次世代 4680 電池成本降幅達 30%',
+    source: '國際巨頭官方快訊',
+    sourceColor: 'purple',
+    date: '2026-10-02 11:15',
+    companies: [{ code: '2317', name: '鴻海' }, { code: '1519', name: '華城' }],
+    summary: '特斯拉宣布德州超級工廠全面啟動 FSD v13 實車驗證，自動駕駛專屬晶片與智慧座艙供應鏈迎來大升級，帶動和大、貿聯-KY 與台達電儲能電網拉貨。',
+    url: 'https://ir.tesla.com/press-release',
+    hot: true
+  },
+  {
+    id: 'global-3',
+    industry: '國際科技巨頭與美股連動',
+    industryCode: 'GLOBAL_TECH',
+    title: '【NVIDIA 輝達官方公告】Blackwell GB200 NVL72 進入全球全面放量出貨階段，雲端客戶需求進入瘋狂超買期',
+    source: '國際巨頭官方快訊',
+    sourceColor: 'purple',
+    date: '2026-10-02 10:00',
+    companies: [{ code: '2382', name: '廣達' }, { code: '2317', name: '鴻海' }, { code: '3017', name: '奇鋐' }],
+    summary: '黃仁勳在官方技術論壇強調，全球資料中心對液冷 AI 伺服器需求完全無法滿足，鴻海與廣達機櫃組裝滿載到 2027，水冷散熱雙雄奇鋐、雙鴻產能全開。',
+    url: 'https://nvidianews.nvidia.com',
+    hot: true
+  },
+
+  // ========================================================
+  // 0.1 股市社群意見領袖焦點 (CMoney同學會 / 股癌 / 韭菜畢業班)
+  // ========================================================
+  {
+    id: 'cmoney-1',
+    industry: '電子零組件與散熱',
+    industryCode: 'COMP_THERMAL',
+    title: '【CMoney 股市爆料同學會】被動元件大軍殺瘋了！國巨成交金額破 640 億稱霸全場，同學狂敲問能追嗎？',
+    source: 'CMoney 股市爆料同學會',
+    sourceColor: 'orange',
+    date: '2026-10-02 13:45',
+    companies: [{ code: '2327', name: '國巨*' }, { code: '2492', name: '華新科' }],
+    summary: '同學會熱門榜單第一名！國巨與華新科今日吸引全市場超過千億熱錢，多空激烈攻防。大戶分點「凱基台北」強勢鎖定 3 連板，散戶融資大增引發爆量討論。',
+    url: 'https://www.cmoney.tw/forum/',
+    hot: true
+  },
+  {
+    id: 'gooaye-1',
+    industry: '半導體產業',
+    industryCode: 'SEMI',
+    title: '【股癌 Gooaye 每日精選觀點】EP 盤後重點隨筆：不要預設立場，被動元件與原物料走的是景氣循環底部的強烈修復',
+    source: '股癌 Gooaye',
+    sourceColor: 'indigo',
+    date: '2026-10-02 13:30',
+    companies: [{ code: '2330', name: '台積電' }, { code: '2492', name: '華新科' }],
+    summary: '股癌指出：市場目前資金充沛，權值台積電盤整震盪時，中小型被動元件與面板順勢接棒吸走流動性。長線投資者應留意供應鏈庫存週期，短線切忌追高無基之彈。',
+    url: 'https://www.facebook.com/GooayePodcast/',
+    hot: true
+  },
+  {
+    id: 'leek-1',
+    industry: '光電面板與光學',
+    industryCode: 'OPTO',
+    title: '【韭菜畢業班 每日避坑與籌碼筆記】友達爆出 70 萬張天量換手！外資大買 vs 隔日沖分點倒貨攻防大解密',
+    source: '韭菜畢業班',
+    sourceColor: 'emerald',
+    date: '2026-10-02 13:15',
+    companies: [{ code: '2409', name: '友達' }, { code: '3481', name: '群創' }],
+    summary: '韭菜畢業班分析：面板雙虎爆歷史巨量，觀察三大隔日沖券商「富邦建國」、「元大土城」盤中買超佔比超過 15%，提醒散戶明日開盤切勿盲目追價，謹慎觀察洗盤。',
+    url: 'https://t.me/leek_graduate',
+    hot: true
+  },
+
+  // 1. 半導體產業
+  {
+    id: 'semi-1',
+    industry: '半導體產業',
+    industryCode: 'SEMI',
+    title: '台積電2奈米量產進度超前！蘋果、輝達預訂首批產能，CoWoS產能再擴產3成',
+    source: 'MoneyDJ 理財網',
+    sourceColor: 'emerald',
+    date: '2026-09-30 14:30',
+    companies: [{ code: '2330', name: '台積電' }, { code: '2454', name: '聯發科' }],
+    summary: '晶圓代工龍頭台積電先進製程供不應求，外資法人連續三個交易日買超逾1.5萬張，目標價調升至2800元，供應鏈設備廠營運吞下大補丸。',
+    url: 'https://www.moneydj.com',
+    hot: true
+  },
   {
     id: 'semi-2',
     industry: '半導體產業',
