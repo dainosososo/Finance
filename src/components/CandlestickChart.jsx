@@ -949,20 +949,20 @@ export default function CandlestickChart({
             {activeItem?.time}
           </span>
           <div className="flex items-center space-x-2 font-mono">
-            <span>開: <strong className="text-slate-800">NT$ {activeItem?.open ?? activeItem?.price}</strong></span>
-            <span>高: <strong className="text-red-600">NT$ {activeItem?.high ?? activeItem?.price}</strong></span>
-            <span>低: <strong className="text-emerald-600">NT$ {activeItem?.low ?? activeItem?.price}</strong></span>
+            <span>開: <strong className="text-slate-800">NT$ {activeItem?.open != null ? Number(activeItem.open).toFixed(2) : (activeItem?.price != null ? Number(activeItem.price).toFixed(2) : '--')}</strong></span>
+            <span>高: <strong className="text-red-600">NT$ {activeItem?.high != null ? Number(activeItem.high).toFixed(2) : (activeItem?.price != null ? Number(activeItem.price).toFixed(2) : '--')}</strong></span>
+            <span>低: <strong className="text-emerald-600">NT$ {activeItem?.low != null ? Number(activeItem.low).toFixed(2) : (activeItem?.price != null ? Number(activeItem.price).toFixed(2) : '--')}</strong></span>
             <span>收: <strong className={itemIsUp ? 'text-red-600 font-bold' : 'text-emerald-600 font-bold'}>
-              NT$ {activeItem?.close ?? activeItem?.price}
+              NT$ {activeItem?.close != null ? Number(activeItem.close).toFixed(2) : (activeItem?.price != null ? Number(activeItem.price).toFixed(2) : '--')}
             </strong></span>
           </div>
 
           <div className="flex items-center space-x-2 font-mono pl-2 border-l border-pink-300">
             <span className="text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200 font-bold">
-              撐: NT$ {activeSupportPrice}
+              撐: NT$ {activeSupportPrice != null && !isNaN(Number(activeSupportPrice)) ? Number(activeSupportPrice).toFixed(2) : activeSupportPrice}
             </span>
             <span className="text-red-700 bg-red-50 px-1.5 py-0.2 rounded border border-red-200 font-bold">
-              壓: NT$ {activeResistancePrice}
+              壓: NT$ {activeResistancePrice != null && !isNaN(Number(activeResistancePrice)) ? Number(activeResistancePrice).toFixed(2) : activeResistancePrice}
             </span>
           </div>
         </div>
@@ -972,19 +972,19 @@ export default function CandlestickChart({
           {activeItem?.ma5 && (
             <span className="text-blue-600 font-semibold flex items-center gap-1">
               <span className="w-2 h-0.5 bg-blue-600 inline-block"></span>
-              MA5: NT$ {activeItem.ma5}
+              MA5: NT$ {Number(activeItem.ma5).toFixed(2)}
             </span>
           )}
           {activeItem?.ma20 && (
             <span className="text-amber-600 font-semibold flex items-center gap-1">
               <span className="w-2 h-0.5 bg-amber-600 inline-block"></span>
-              MA20: NT$ {activeItem.ma20}
+              MA20: NT$ {Number(activeItem.ma20).toFixed(2)}
             </span>
           )}
           {activeItem?.ma60 && (
             <span className="text-purple-600 font-semibold flex items-center gap-1">
               <span className="w-2 h-0.5 bg-purple-600 inline-block"></span>
-              MA60: NT$ {activeItem.ma60}
+              MA60: NT$ {Number(activeItem.ma60).toFixed(2)}
             </span>
           )}
         </div>

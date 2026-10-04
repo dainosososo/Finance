@@ -1,3 +1,30 @@
+import { STOCKS_HISTORY_COMPACT } from '../data/stocksHistoryCompact.js';
+
+// 取得台灣證券交易所全市場 1,382 檔標的之真實歷史日 K 棒數據
+export function getStockHistoryDays(code) {
+  if (!code) return null;
+  const cleanCode = String(code).trim();
+  const rows = STOCKS_HISTORY_COMPACT[cleanCode];
+  if (rows && rows.length > 0) {
+    return rows.map(r => ({
+      time: r[0],
+      fullDate: r[1],
+      open: r[2],
+      high: r[3],
+      low: r[4],
+      close: r[5],
+      price: r[5],
+      volume: r[6],
+      change: r[7],
+      tradeValue: r[8]
+    }));
+  }
+  if (PRELOADED_KLINE_HISTORY[cleanCode]) {
+    return PRELOADED_KLINE_HISTORY[cleanCode].days;
+  }
+  return null;
+}
+
 // Preloaded authentic TWSE K-line historical data for flagship stocks
 export const PRELOADED_KLINE_HISTORY = {
   "2330": {
@@ -2358,7 +2385,8 @@ export const PRELOADED_KLINE_HISTORY = {
         "change": 0.5
       }
     ]
-  },
+  }
+,
   "1519": {
   "code": "1519",
   "name": "華城",

@@ -8,7 +8,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.45,
     "close": 25.55,
     "change": -0.75,
-    "volume": 54833
+    "volume": 54833,
+    "rawVolume": 54833108,
+    "tradeValue": 1412587301,
+    "turnover": "14.1 億"
   },
   "1102": {
     "code": "1102",
@@ -19,7 +22,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.2,
     "close": 35.65,
     "change": -0.15,
-    "volume": 11842
+    "volume": 11842,
+    "rawVolume": 11842180,
+    "tradeValue": 420783956,
+    "turnover": "4.2 億"
   },
   "1103": {
     "code": "1103",
@@ -30,7 +36,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.1,
     "close": 13.2,
     "change": 0,
-    "volume": 301629
+    "volume": 302,
+    "rawVolume": 301629,
+    "tradeValue": 3971821,
+    "turnover": "397.2 萬"
   },
   "1104": {
     "code": "1104",
@@ -41,7 +50,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.55,
     "close": 26.7,
     "change": 0,
-    "volume": 520
+    "volume": 520,
+    "rawVolume": 520149,
+    "tradeValue": 13837771,
+    "turnover": "1383.8 萬"
   },
   "1108": {
     "code": "1108",
@@ -52,7 +64,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.05,
     "close": 11.15,
     "change": 0,
-    "volume": 151559
+    "volume": 152,
+    "rawVolume": 151559,
+    "tradeValue": 1689101,
+    "turnover": "168.9 萬"
   },
   "1109": {
     "code": "1109",
@@ -63,7 +78,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.25,
     "close": 13.3,
     "change": -0.05,
-    "volume": 206947
+    "volume": 207,
+    "rawVolume": 206947,
+    "tradeValue": 2753336,
+    "turnover": "275.3 萬"
   },
   "1110": {
     "code": "1110",
@@ -74,7 +92,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.55,
     "close": 14.65,
     "change": 0,
-    "volume": 120182
+    "volume": 120,
+    "rawVolume": 120182,
+    "tradeValue": 1759942,
+    "turnover": "176.0 萬"
   },
   "1201": {
     "code": "1201",
@@ -85,7 +106,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.5,
     "close": 11.6,
     "change": -0.05,
-    "volume": 706
+    "volume": 707,
+    "rawVolume": 706723,
+    "tradeValue": 8176890,
+    "turnover": "817.7 萬"
   },
   "1203": {
     "code": "1203",
@@ -96,7 +120,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.65,
     "close": 43.9,
     "change": 0.2,
-    "volume": 3554
+    "volume": 4,
+    "rawVolume": 3554,
+    "tradeValue": 154411,
+    "turnover": "15.4 萬"
   },
   "1210": {
     "code": "1210",
@@ -107,7 +134,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.5,
     "close": 51.7,
     "change": -0.3,
-    "volume": 990
+    "volume": 991,
+    "rawVolume": 990702,
+    "tradeValue": 51261613,
+    "turnover": "5126.2 萬"
   },
   "1213": {
     "code": "1213",
@@ -118,7 +148,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 7,
     "close": 7,
     "change": -0.47,
-    "volume": 6025
+    "volume": 6,
+    "rawVolume": 6025,
+    "tradeValue": 42857,
+    "turnover": "4.3 萬"
   },
   "1215": {
     "code": "1215",
@@ -129,7 +162,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 104.5,
     "close": 105.5,
     "change": 0.5,
-    "volume": 322122
+    "volume": 322,
+    "rawVolume": 322122,
+    "tradeValue": 33896774,
+    "turnover": "3389.7 萬"
   },
   "1216": {
     "code": "1216",
@@ -140,7 +176,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 73.7,
     "close": 73.9,
     "change": -0.3,
-    "volume": 5933
+    "volume": 5934,
+    "rawVolume": 5933943,
+    "tradeValue": 438809204,
+    "turnover": "4.4 億"
   },
   "1217": {
     "code": "1217",
@@ -151,7 +190,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.91,
     "close": 9.96,
     "change": 0.01,
-    "volume": 203542
+    "volume": 204,
+    "rawVolume": 203542,
+    "tradeValue": 2023530,
+    "turnover": "202.4 萬"
   },
   "1218": {
     "code": "1218",
@@ -162,7 +204,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.45,
     "close": 14.5,
     "change": -0.1,
-    "volume": 260576
+    "volume": 261,
+    "rawVolume": 260576,
+    "tradeValue": 3780386,
+    "turnover": "378.0 萬"
   },
   "1219": {
     "code": "1219",
@@ -173,7 +218,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.35,
     "close": 11.45,
     "change": 0,
-    "volume": 81323
+    "volume": 81,
+    "rawVolume": 81323,
+    "tradeValue": 929585,
+    "turnover": "93.0 萬"
   },
   "1220": {
     "code": "1220",
@@ -184,7 +232,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.75,
     "close": 10.85,
     "change": 0,
-    "volume": 50838
+    "volume": 51,
+    "rawVolume": 50838,
+    "tradeValue": 548733,
+    "turnover": "54.9 萬"
   },
   "1225": {
     "code": "1225",
@@ -195,7 +246,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.7,
     "close": 24.2,
     "change": -0.35,
-    "volume": 60991
+    "volume": 61,
+    "rawVolume": 60991,
+    "tradeValue": 1477096,
+    "turnover": "147.7 萬"
   },
   "1227": {
     "code": "1227",
@@ -206,7 +260,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 28,
     "close": 28.1,
     "change": 0,
-    "volume": 342204
+    "volume": 342,
+    "rawVolume": 342204,
+    "tradeValue": 9598567,
+    "turnover": "959.9 萬"
   },
   "1229": {
     "code": "1229",
@@ -217,7 +274,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.95,
     "close": 40.2,
     "change": 0.3,
-    "volume": 2550
+    "volume": 2550,
+    "rawVolume": 2550357,
+    "tradeValue": 102441582,
+    "turnover": "1.0 億"
   },
   "1231": {
     "code": "1231",
@@ -228,7 +288,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 79.5,
     "close": 79.8,
     "change": 0.2,
-    "volume": 223078
+    "volume": 223,
+    "rawVolume": 223078,
+    "tradeValue": 17766548,
+    "turnover": "1776.7 萬"
   },
   "1232": {
     "code": "1232",
@@ -239,7 +302,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 153,
     "close": 153,
     "change": -0.5,
-    "volume": 107013
+    "volume": 107,
+    "rawVolume": 107013,
+    "tradeValue": 16425663,
+    "turnover": "1642.6 萬"
   },
   "1233": {
     "code": "1233",
@@ -250,7 +316,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 28,
     "close": 28.1,
     "change": 0,
-    "volume": 5292
+    "volume": 5,
+    "rawVolume": 5292,
+    "tradeValue": 148218,
+    "turnover": "14.8 萬"
   },
   "1234": {
     "code": "1234",
@@ -261,7 +330,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.8,
     "close": 32.9,
     "change": -0.1,
-    "volume": 90393
+    "volume": 90,
+    "rawVolume": 90393,
+    "tradeValue": 2967703,
+    "turnover": "296.8 萬"
   },
   "1235": {
     "code": "1235",
@@ -272,7 +344,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.9,
     "close": 32.9,
     "change": -0.25,
-    "volume": 42911
+    "volume": 43,
+    "rawVolume": 42911,
+    "tradeValue": 1414341,
+    "turnover": "141.4 萬"
   },
   "1236": {
     "code": "1236",
@@ -283,7 +358,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.3,
     "close": 25.5,
     "change": 0.05,
-    "volume": 13674
+    "volume": 14,
+    "rawVolume": 13674,
+    "tradeValue": 348373,
+    "turnover": "34.8 萬"
   },
   "1256": {
     "code": "1256",
@@ -294,7 +372,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 167.5,
     "close": 168.5,
     "change": 0.5,
-    "volume": 12051
+    "volume": 12,
+    "rawVolume": 12051,
+    "tradeValue": 2024766,
+    "turnover": "202.5 萬"
   },
   "1301": {
     "code": "1301",
@@ -305,7 +386,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 66.3,
     "close": 66.8,
     "change": -1.3,
-    "volume": 19100
+    "volume": 19101,
+    "rawVolume": 19100785,
+    "tradeValue": 1283671665,
+    "turnover": "12.8 億"
   },
   "1303": {
     "code": "1303",
@@ -316,7 +400,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 250.5,
     "close": 254,
     "change": -1.5,
-    "volume": 57138
+    "volume": 57138,
+    "rawVolume": 57138460,
+    "tradeValue": 14560587946,
+    "turnover": "145.6 億"
   },
   "1304": {
     "code": "1304",
@@ -327,7 +414,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.35,
     "close": 12.45,
     "change": -0.2,
-    "volume": 1522
+    "volume": 1522,
+    "rawVolume": 1522353,
+    "tradeValue": 18977117,
+    "turnover": "1897.7 萬"
   },
   "1305": {
     "code": "1305",
@@ -338,7 +428,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.1,
     "close": 12.15,
     "change": -0.2,
-    "volume": 670
+    "volume": 671,
+    "rawVolume": 670622,
+    "tradeValue": 8159376,
+    "turnover": "815.9 萬"
   },
   "1307": {
     "code": "1307",
@@ -349,7 +442,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.3,
     "close": 31.45,
     "change": -0.05,
-    "volume": 531
+    "volume": 532,
+    "rawVolume": 531905,
+    "tradeValue": 16712612,
+    "turnover": "1671.3 萬"
   },
   "1308": {
     "code": "1308",
@@ -360,7 +456,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.1,
     "close": 14.2,
     "change": -0.25,
-    "volume": 758
+    "volume": 758,
+    "rawVolume": 758207,
+    "tradeValue": 10765396,
+    "turnover": "1076.5 萬"
   },
   "1309": {
     "code": "1309",
@@ -371,7 +470,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.6,
     "close": 13.7,
     "change": -0.25,
-    "volume": 1146
+    "volume": 1146,
+    "rawVolume": 1146443,
+    "tradeValue": 15716048,
+    "turnover": "1571.6 萬"
   },
   "1310": {
     "code": "1310",
@@ -382,7 +484,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.02,
     "close": 9.02,
     "change": -0.23,
-    "volume": 2511
+    "volume": 2512,
+    "rawVolume": 2511718,
+    "tradeValue": 22813456,
+    "turnover": "2281.3 萬"
   },
   "1312": {
     "code": "1312",
@@ -393,7 +498,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.6,
     "close": 14.6,
     "change": -0.4,
-    "volume": 8517
+    "volume": 8518,
+    "rawVolume": 8517813,
+    "tradeValue": 125385680,
+    "turnover": "1.3 億"
   },
   "1313": {
     "code": "1313",
@@ -404,7 +512,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.25,
     "close": 12.4,
     "change": 0.1,
-    "volume": 4532
+    "volume": 4532,
+    "rawVolume": 4532235,
+    "tradeValue": 56424616,
+    "turnover": "5642.5 萬"
   },
   "1314": {
     "code": "1314",
@@ -415,7 +526,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.86,
     "close": 8.89,
     "change": -0.11,
-    "volume": 34798
+    "volume": 34798,
+    "rawVolume": 34798207,
+    "tradeValue": 310960646,
+    "turnover": "3.1 億"
   },
   "1315": {
     "code": "1315",
@@ -426,7 +540,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 68.1,
     "close": 68.7,
     "change": -0.1,
-    "volume": 10790
+    "volume": 11,
+    "rawVolume": 10790,
+    "tradeValue": 737927,
+    "turnover": "73.8 萬"
   },
   "1316": {
     "code": "1316",
@@ -437,7 +554,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.5,
     "close": 10.5,
     "change": -0.2,
-    "volume": 1238
+    "volume": 1238,
+    "rawVolume": 1238358,
+    "tradeValue": 13171164,
+    "turnover": "1317.1 萬"
   },
   "1319": {
     "code": "1319",
@@ -448,7 +568,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 77.5,
     "close": 78.6,
     "change": 0.7,
-    "volume": 1483
+    "volume": 1484,
+    "rawVolume": 1483670,
+    "tradeValue": 115836271,
+    "turnover": "1.2 億"
   },
   "1321": {
     "code": "1321",
@@ -459,7 +582,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.15,
     "close": 32.5,
     "change": 0.1,
-    "volume": 45000
+    "volume": 45,
+    "rawVolume": 45000,
+    "tradeValue": 1452650,
+    "turnover": "145.3 萬"
   },
   "1323": {
     "code": "1323",
@@ -470,7 +596,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.25,
     "close": 21.5,
     "change": 0.05,
-    "volume": 9048
+    "volume": 9,
+    "rawVolume": 9048,
+    "tradeValue": 194303,
+    "turnover": "19.4 萬"
   },
   "1324": {
     "code": "1324",
@@ -481,7 +610,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.94,
     "close": 10.05,
     "change": 0.06,
-    "volume": 32639
+    "volume": 33,
+    "rawVolume": 32639,
+    "tradeValue": 325564,
+    "turnover": "32.6 萬"
   },
   "1325": {
     "code": "1325",
@@ -492,7 +624,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.7,
     "close": 25.7,
     "change": -0.2,
-    "volume": 97552
+    "volume": 98,
+    "rawVolume": 97552,
+    "tradeValue": 2514690,
+    "turnover": "251.5 萬"
   },
   "1326": {
     "code": "1326",
@@ -503,7 +638,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 67.5,
     "close": 67.7,
     "change": -2,
-    "volume": 18698
+    "volume": 18699,
+    "rawVolume": 18698939,
+    "tradeValue": 1275555034,
+    "turnover": "12.8 億"
   },
   "1337": {
     "code": "1337",
@@ -514,7 +652,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 4.44,
     "close": 4.47,
     "change": 0,
-    "volume": 195911
+    "volume": 196,
+    "rawVolume": 195911,
+    "tradeValue": 874501,
+    "turnover": "87.5 萬"
   },
   "1338": {
     "code": "1338",
@@ -525,7 +666,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.05,
     "close": 15.3,
     "change": -0.3,
-    "volume": 221510
+    "volume": 222,
+    "rawVolume": 221510,
+    "tradeValue": 3383648,
+    "turnover": "338.4 萬"
   },
   "1339": {
     "code": "1339",
@@ -536,7 +680,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.15,
     "close": 42.7,
     "change": 0.35,
-    "volume": 53816
+    "volume": 54,
+    "rawVolume": 53816,
+    "tradeValue": 2290073,
+    "turnover": "229.0 萬"
   },
   "1340": {
     "code": "1340",
@@ -547,7 +694,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 5.19,
     "close": 5.23,
     "change": -0.01,
-    "volume": 62541
+    "volume": 63,
+    "rawVolume": 62541,
+    "tradeValue": 325590,
+    "turnover": "32.6 萬"
   },
   "1341": {
     "code": "1341",
@@ -558,7 +708,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 59,
     "close": 59,
     "change": -0.9,
-    "volume": 2248
+    "volume": 2,
+    "rawVolume": 2248,
+    "tradeValue": 132939,
+    "turnover": "13.3 萬"
   },
   "1342": {
     "code": "1342",
@@ -569,7 +722,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 99.6,
     "close": 100,
     "change": 0,
-    "volume": 108543
+    "volume": 109,
+    "rawVolume": 108543,
+    "tradeValue": 10853889,
+    "turnover": "1085.4 萬"
   },
   "1402": {
     "code": "1402",
@@ -580,7 +736,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.7,
     "close": 27.95,
     "change": -0.3,
-    "volume": 14615
+    "volume": 14615,
+    "rawVolume": 14615452,
+    "tradeValue": 408051947,
+    "turnover": "4.1 億"
   },
   "1409": {
     "code": "1409",
@@ -591,7 +750,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.3,
     "close": 24.4,
     "change": -0.5,
-    "volume": 8727
+    "volume": 8728,
+    "rawVolume": 8727863,
+    "tradeValue": 213339758,
+    "turnover": "2.1 億"
   },
   "1410": {
     "code": "1410",
@@ -602,7 +764,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24,
     "close": 24.15,
     "change": 0.05,
-    "volume": 39399
+    "volume": 39,
+    "rawVolume": 39399,
+    "tradeValue": 955634,
+    "turnover": "95.6 萬"
   },
   "1413": {
     "code": "1413",
@@ -613,7 +778,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.2,
     "close": 9.25,
     "change": 0.03,
-    "volume": 9329
+    "volume": 9,
+    "rawVolume": 9329,
+    "tradeValue": 85926,
+    "turnover": "8.6 萬"
   },
   "1414": {
     "code": "1414",
@@ -624,7 +792,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.35,
     "close": 17.35,
     "change": -0.3,
-    "volume": 78345
+    "volume": 78,
+    "rawVolume": 78345,
+    "tradeValue": 1366413,
+    "turnover": "136.6 萬"
   },
   "1416": {
     "code": "1416",
@@ -635,7 +806,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.5,
     "close": 11.65,
     "change": 0.2,
-    "volume": 463909
+    "volume": 464,
+    "rawVolume": 463909,
+    "tradeValue": 5373071,
+    "turnover": "537.3 萬"
   },
   "1417": {
     "code": "1417",
@@ -646,7 +820,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.05,
     "close": 8.13,
     "change": -0.01,
-    "volume": 168685
+    "volume": 169,
+    "rawVolume": 168685,
+    "tradeValue": 1364436,
+    "turnover": "136.4 萬"
   },
   "1418": {
     "code": "1418",
@@ -657,7 +834,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.4,
     "close": 18.5,
     "change": 0.15,
-    "volume": 11038
+    "volume": 11,
+    "rawVolume": 11038,
+    "tradeValue": 203491,
+    "turnover": "20.3 萬"
   },
   "1419": {
     "code": "1419",
@@ -668,7 +848,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 65.4,
     "close": 65.8,
     "change": -0.3,
-    "volume": 21795
+    "volume": 22,
+    "rawVolume": 21795,
+    "tradeValue": 1432794,
+    "turnover": "143.3 萬"
   },
   "1423": {
     "code": "1423",
@@ -679,7 +862,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.5,
     "close": 35.5,
     "change": -0.5,
-    "volume": 2010
+    "volume": 2,
+    "rawVolume": 2010,
+    "tradeValue": 71359,
+    "turnover": "7.1 萬"
   },
   "1432": {
     "code": "1432",
@@ -690,7 +876,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.95,
     "close": 15.05,
     "change": 0.05,
-    "volume": 61056
+    "volume": 61,
+    "rawVolume": 61056,
+    "tradeValue": 915920,
+    "turnover": "91.6 萬"
   },
   "1434": {
     "code": "1434",
@@ -701,7 +890,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.9,
     "close": 17.95,
     "change": -0.2,
-    "volume": 1414
+    "volume": 1415,
+    "rawVolume": 1414846,
+    "tradeValue": 25468388,
+    "turnover": "2546.8 萬"
   },
   "1435": {
     "code": "1435",
@@ -712,7 +904,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.3,
     "close": 22,
     "change": -0.4,
-    "volume": 20285
+    "volume": 20,
+    "rawVolume": 20285,
+    "tradeValue": 434745,
+    "turnover": "43.5 萬"
   },
   "1436": {
     "code": "1436",
@@ -723,7 +918,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.35,
     "close": 35.35,
     "change": -0.35,
-    "volume": 86138
+    "volume": 86,
+    "rawVolume": 86138,
+    "tradeValue": 3052394,
+    "turnover": "305.2 萬"
   },
   "1437": {
     "code": "1437",
@@ -734,7 +932,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.8,
     "close": 31.85,
     "change": 0,
-    "volume": 62770
+    "volume": 63,
+    "rawVolume": 62770,
+    "tradeValue": 1999059,
+    "turnover": "199.9 萬"
   },
   "1438": {
     "code": "1438",
@@ -745,7 +946,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.25,
     "close": 21.8,
     "change": 0.65,
-    "volume": 27847
+    "volume": 28,
+    "rawVolume": 27847,
+    "tradeValue": 600324,
+    "turnover": "60.0 萬"
   },
   "1439": {
     "code": "1439",
@@ -756,7 +960,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 28.85,
     "close": 28.95,
     "change": 0.05,
-    "volume": 59033
+    "volume": 59,
+    "rawVolume": 59033,
+    "tradeValue": 1707690,
+    "turnover": "170.8 萬"
   },
   "1440": {
     "code": "1440",
@@ -767,7 +974,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.3,
     "close": 13.4,
     "change": -0.25,
-    "volume": 2962
+    "volume": 2962,
+    "rawVolume": 2962057,
+    "tradeValue": 39687888,
+    "turnover": "3968.8 萬"
   },
   "1441": {
     "code": "1441",
@@ -778,7 +988,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.87,
     "close": 9.87,
     "change": -0.13,
-    "volume": 39105
+    "volume": 39,
+    "rawVolume": 39105,
+    "tradeValue": 387453,
+    "turnover": "38.7 萬"
   },
   "1442": {
     "code": "1442",
@@ -789,7 +1002,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.5,
     "close": 26.5,
     "change": -0.7,
-    "volume": 966
+    "volume": 967,
+    "rawVolume": 966889,
+    "tradeValue": 25859579,
+    "turnover": "2586.0 萬"
   },
   "1443": {
     "code": "1443",
@@ -800,7 +1016,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.35,
     "close": 23.35,
     "change": -0.1,
-    "volume": 3001
+    "volume": 3,
+    "rawVolume": 3001,
+    "tradeValue": 70223,
+    "turnover": "7.0 萬"
   },
   "1444": {
     "code": "1444",
@@ -811,7 +1030,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6.9,
     "close": 6.9,
     "change": -0.22,
-    "volume": 1233
+    "volume": 1233,
+    "rawVolume": 1233444,
+    "tradeValue": 8606045,
+    "turnover": "860.6 萬"
   },
   "1445": {
     "code": "1445",
@@ -822,7 +1044,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10,
     "close": 10,
     "change": -0.1,
-    "volume": 49190
+    "volume": 49,
+    "rawVolume": 49190,
+    "tradeValue": 495565,
+    "turnover": "49.6 萬"
   },
   "1446": {
     "code": "1446",
@@ -833,7 +1058,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.35,
     "close": 13.45,
     "change": 0.05,
-    "volume": 29311
+    "volume": 29,
+    "rawVolume": 29311,
+    "tradeValue": 393218,
+    "turnover": "39.3 萬"
   },
   "1447": {
     "code": "1447",
@@ -844,7 +1072,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6.5,
     "close": 6.51,
     "change": -0.26,
-    "volume": 1028
+    "volume": 1029,
+    "rawVolume": 1028818,
+    "tradeValue": 6753961,
+    "turnover": "675.4 萬"
   },
   "1449": {
     "code": "1449",
@@ -855,7 +1086,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.3,
     "close": 12.3,
     "change": -0.2,
-    "volume": 192790
+    "volume": 193,
+    "rawVolume": 192790,
+    "tradeValue": 2384024,
+    "turnover": "238.4 萬"
   },
   "1451": {
     "code": "1451",
@@ -866,7 +1100,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.8,
     "close": 17,
     "change": 0,
-    "volume": 199338
+    "volume": 199,
+    "rawVolume": 199338,
+    "tradeValue": 3365931,
+    "turnover": "336.6 萬"
   },
   "1452": {
     "code": "1452",
@@ -877,7 +1114,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.75,
     "close": 10.8,
     "change": 0,
-    "volume": 19052
+    "volume": 19,
+    "rawVolume": 19052,
+    "tradeValue": 205695,
+    "turnover": "20.6 萬"
   },
   "1453": {
     "code": "1453",
@@ -888,7 +1128,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.9,
     "close": 10.9,
     "change": 0,
-    "volume": 11353
+    "volume": 11,
+    "rawVolume": 11353,
+    "tradeValue": 123970,
+    "turnover": "12.4 萬"
   },
   "1454": {
     "code": "1454",
@@ -899,7 +1142,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.15,
     "close": 12.15,
     "change": -0.05,
-    "volume": 11668
+    "volume": 12,
+    "rawVolume": 11668,
+    "tradeValue": 142754,
+    "turnover": "14.3 萬"
   },
   "1455": {
     "code": "1455",
@@ -910,7 +1156,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.81,
     "close": 9.84,
     "change": -0.1,
-    "volume": 326384
+    "volume": 326,
+    "rawVolume": 326384,
+    "tradeValue": 3214851,
+    "turnover": "321.5 萬"
   },
   "1456": {
     "code": "1456",
@@ -921,7 +1170,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.45,
     "close": 14.8,
     "change": 0.15,
-    "volume": 158906
+    "volume": 159,
+    "rawVolume": 158906,
+    "tradeValue": 2338074,
+    "turnover": "233.8 萬"
   },
   "1457": {
     "code": "1457",
@@ -932,7 +1184,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.3,
     "close": 14.45,
     "change": 0.05,
-    "volume": 71418
+    "volume": 71,
+    "rawVolume": 71418,
+    "tradeValue": 1024923,
+    "turnover": "102.5 萬"
   },
   "1459": {
     "code": "1459",
@@ -943,7 +1198,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.7,
     "close": 17,
     "change": 0.3,
-    "volume": 215213
+    "volume": 215,
+    "rawVolume": 215213,
+    "tradeValue": 3624265,
+    "turnover": "362.4 萬"
   },
   "1460": {
     "code": "1460",
@@ -954,7 +1212,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6.22,
     "close": 6.23,
     "change": -0.03,
-    "volume": 169811
+    "volume": 170,
+    "rawVolume": 169811,
+    "tradeValue": 1059195,
+    "turnover": "105.9 萬"
   },
   "1463": {
     "code": "1463",
@@ -965,7 +1226,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.5,
     "close": 17.5,
     "change": 0,
-    "volume": 12067
+    "volume": 12,
+    "rawVolume": 12067,
+    "tradeValue": 211825,
+    "turnover": "21.2 萬"
   },
   "1464": {
     "code": "1464",
@@ -976,7 +1240,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.96,
     "close": 10,
     "change": 0.02,
-    "volume": 328472
+    "volume": 328,
+    "rawVolume": 328472,
+    "tradeValue": 3278132,
+    "turnover": "327.8 萬"
   },
   "1465": {
     "code": "1465",
@@ -987,7 +1254,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.6,
     "close": 11.65,
     "change": 0,
-    "volume": 52021
+    "volume": 52,
+    "rawVolume": 52021,
+    "tradeValue": 605236,
+    "turnover": "60.5 萬"
   },
   "1466": {
     "code": "1466",
@@ -998,7 +1268,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.65,
     "close": 14.7,
     "change": -0.15,
-    "volume": 118037
+    "volume": 118,
+    "rawVolume": 118037,
+    "tradeValue": 1736740,
+    "turnover": "173.7 萬"
   },
   "1467": {
     "code": "1467",
@@ -1009,7 +1282,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 7.7,
     "close": 7.94,
     "change": -0.09,
-    "volume": 372161
+    "volume": 372,
+    "rawVolume": 372161,
+    "tradeValue": 2934319,
+    "turnover": "293.4 萬"
   },
   "1468": {
     "code": "1468",
@@ -1020,7 +1296,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.05,
     "close": 13.55,
     "change": 0.05,
-    "volume": 63000
+    "volume": 63,
+    "rawVolume": 63000,
+    "tradeValue": 840850,
+    "turnover": "84.1 萬"
   },
   "1470": {
     "code": "1470",
@@ -1031,7 +1310,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.15,
     "close": 24.4,
     "change": 0.25,
-    "volume": 6000
+    "volume": 6,
+    "rawVolume": 6000,
+    "tradeValue": 145150,
+    "turnover": "14.5 萬"
   },
   "1471": {
     "code": "1471",
@@ -1042,7 +1324,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.37,
     "close": 9.49,
     "change": 0.03,
-    "volume": 88354
+    "volume": 88,
+    "rawVolume": 88354,
+    "tradeValue": 834172,
+    "turnover": "83.4 萬"
   },
   "1472": {
     "code": "1472",
@@ -1053,7 +1338,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 88.2,
     "close": 88.8,
     "change": 0,
-    "volume": 103196
+    "volume": 103,
+    "rawVolume": 103196,
+    "tradeValue": 9157958,
+    "turnover": "915.8 萬"
   },
   "1473": {
     "code": "1473",
@@ -1064,7 +1352,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.25,
     "close": 19.25,
     "change": 0,
-    "volume": 99306
+    "volume": 99,
+    "rawVolume": 99306,
+    "tradeValue": 1912805,
+    "turnover": "191.3 萬"
   },
   "1474": {
     "code": "1474",
@@ -1075,7 +1366,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.93,
     "close": 10.05,
     "change": 0,
-    "volume": 80621
+    "volume": 81,
+    "rawVolume": 80621,
+    "tradeValue": 806040,
+    "turnover": "80.6 萬"
   },
   "1475": {
     "code": "1475",
@@ -1086,7 +1380,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.05,
     "close": 26.05,
     "change": 0.05,
-    "volume": 6000
+    "volume": 6,
+    "rawVolume": 6000,
+    "tradeValue": 156850,
+    "turnover": "15.7 萬"
   },
   "1476": {
     "code": "1476",
@@ -1097,7 +1394,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 273.5,
     "close": 274.5,
     "change": 0.5,
-    "volume": 831
+    "volume": 832,
+    "rawVolume": 831703,
+    "tradeValue": 228513205,
+    "turnover": "2.3 億"
   },
   "1477": {
     "code": "1477",
@@ -1108,7 +1408,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 189.5,
     "close": 190.5,
     "change": -1.5,
-    "volume": 912
+    "volume": 912,
+    "rawVolume": 912315,
+    "tradeValue": 173700896,
+    "turnover": "1.7 億"
   },
   "1503": {
     "code": "1503",
@@ -1119,7 +1422,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 196,
     "close": 197.5,
     "change": 0,
-    "volume": 346701
+    "volume": 347,
+    "rawVolume": 346701,
+    "tradeValue": 68309314,
+    "turnover": "6830.9 萬"
   },
   "1504": {
     "code": "1504",
@@ -1130,7 +1436,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 68.8,
     "close": 69.1,
     "change": 0,
-    "volume": 2132
+    "volume": 2133,
+    "rawVolume": 2132864,
+    "tradeValue": 147321751,
+    "turnover": "1.5 億"
   },
   "1506": {
     "code": "1506",
@@ -1141,7 +1450,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.44,
     "close": 9.5,
     "change": -0.03,
-    "volume": 375836
+    "volume": 376,
+    "rawVolume": 375836,
+    "tradeValue": 3562381,
+    "turnover": "356.2 萬"
   },
   "1512": {
     "code": "1512",
@@ -1152,7 +1464,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6.1,
     "close": 6.2,
     "change": 0.09,
-    "volume": 54716
+    "volume": 55,
+    "rawVolume": 54716,
+    "tradeValue": 338698,
+    "turnover": "33.9 萬"
   },
   "1513": {
     "code": "1513",
@@ -1163,7 +1478,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 166.5,
     "close": 166.5,
     "change": -1.5,
-    "volume": 1480
+    "volume": 1481,
+    "rawVolume": 1480846,
+    "tradeValue": 247598387,
+    "turnover": "2.5 億"
   },
   "1514": {
     "code": "1514",
@@ -1174,7 +1492,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 101.5,
     "close": 102,
     "change": -0.5,
-    "volume": 553
+    "volume": 554,
+    "rawVolume": 553808,
+    "tradeValue": 56491039,
+    "turnover": "5649.1 萬"
   },
   "1515": {
     "code": "1515",
@@ -1185,7 +1506,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.1,
     "close": 29.25,
     "change": -0.55,
-    "volume": 501
+    "volume": 501,
+    "rawVolume": 501315,
+    "tradeValue": 14680329,
+    "turnover": "1468.0 萬"
   },
   "1516": {
     "code": "1516",
@@ -1196,7 +1520,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.4,
     "close": 13.5,
     "change": -0.2,
-    "volume": 17631
+    "volume": 18,
+    "rawVolume": 17631,
+    "tradeValue": 239261,
+    "turnover": "23.9 萬"
   },
   "1517": {
     "code": "1517",
@@ -1207,7 +1534,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.3,
     "close": 10.4,
     "change": -0.1,
-    "volume": 157323
+    "volume": 157,
+    "rawVolume": 157323,
+    "tradeValue": 1630024,
+    "turnover": "163.0 萬"
   },
   "1519": {
     "code": "1519",
@@ -1218,7 +1548,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 681,
     "close": 692,
     "change": 4,
-    "volume": 1083
+    "volume": 1083,
+    "rawVolume": 1083000,
+    "tradeValue": 749436000,
+    "turnover": "7.5 億"
   },
   "1521": {
     "code": "1521",
@@ -1229,7 +1562,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.65,
     "close": 25.8,
     "change": 0.2,
-    "volume": 5274
+    "volume": 5,
+    "rawVolume": 5274,
+    "tradeValue": 136129,
+    "turnover": "13.6 萬"
   },
   "1522": {
     "code": "1522",
@@ -1240,7 +1576,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.4,
     "close": 26.45,
     "change": -0.35,
-    "volume": 203560
+    "volume": 204,
+    "rawVolume": 203560,
+    "tradeValue": 5409877,
+    "turnover": "541.0 萬"
   },
   "1524": {
     "code": "1524",
@@ -1251,7 +1590,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.8,
     "close": 25.95,
     "change": -0.15,
-    "volume": 176035
+    "volume": 176,
+    "rawVolume": 176035,
+    "tradeValue": 4562620,
+    "turnover": "456.3 萬"
   },
   "1525": {
     "code": "1525",
@@ -1262,7 +1604,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 63.7,
     "close": 63.7,
     "change": 0,
-    "volume": 10199
+    "volume": 10,
+    "rawVolume": 10199,
+    "tradeValue": 649474,
+    "turnover": "64.9 萬"
   },
   "1526": {
     "code": "1526",
@@ -1273,7 +1618,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.8,
     "close": 14.95,
     "change": -0.1,
-    "volume": 28704
+    "volume": 29,
+    "rawVolume": 28704,
+    "tradeValue": 425916,
+    "turnover": "42.6 萬"
   },
   "1527": {
     "code": "1527",
@@ -1284,7 +1632,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.65,
     "close": 32.8,
     "change": 0.1,
-    "volume": 137401
+    "volume": 137,
+    "rawVolume": 137401,
+    "tradeValue": 4502205,
+    "turnover": "450.2 萬"
   },
   "1528": {
     "code": "1528",
@@ -1295,7 +1646,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25,
     "close": 25,
     "change": -0.85,
-    "volume": 3331
+    "volume": 3331,
+    "rawVolume": 3331136,
+    "tradeValue": 83855532,
+    "turnover": "8385.6 萬"
   },
   "1529": {
     "code": "1529",
@@ -1306,7 +1660,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.65,
     "close": 15.65,
     "change": -0.3,
-    "volume": 437915
+    "volume": 438,
+    "rawVolume": 437915,
+    "tradeValue": 6911156,
+    "turnover": "691.1 萬"
   },
   "1530": {
     "code": "1530",
@@ -1317,7 +1674,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.65,
     "close": 26.85,
     "change": 0.05,
-    "volume": 11314
+    "volume": 11,
+    "rawVolume": 11314,
+    "tradeValue": 303464,
+    "turnover": "30.3 萬"
   },
   "1531": {
     "code": "1531",
@@ -1328,7 +1688,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.45,
     "close": 11.6,
     "change": -0.05,
-    "volume": 82880
+    "volume": 83,
+    "rawVolume": 82880,
+    "tradeValue": 957857,
+    "turnover": "95.8 萬"
   },
   "1532": {
     "code": "1532",
@@ -1339,7 +1702,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.15,
     "close": 22.2,
     "change": -0.1,
-    "volume": 206021
+    "volume": 206,
+    "rawVolume": 206021,
+    "tradeValue": 4579130,
+    "turnover": "457.9 萬"
   },
   "1533": {
     "code": "1533",
@@ -1350,7 +1716,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.4,
     "close": 30.55,
     "change": 0.25,
-    "volume": 54006
+    "volume": 54,
+    "rawVolume": 54006,
+    "tradeValue": 1647333,
+    "turnover": "164.7 萬"
   },
   "1535": {
     "code": "1535",
@@ -1361,7 +1730,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.3,
     "close": 45.85,
     "change": 0.05,
-    "volume": 15847
+    "volume": 16,
+    "rawVolume": 15847,
+    "tradeValue": 723706,
+    "turnover": "72.4 萬"
   },
   "1536": {
     "code": "1536",
@@ -1372,7 +1744,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 46.5,
     "close": 46.65,
     "change": -0.25,
-    "volume": 510
+    "volume": 511,
+    "rawVolume": 510512,
+    "tradeValue": 23808320,
+    "turnover": "2380.8 萬"
   },
   "1537": {
     "code": "1537",
@@ -1383,7 +1758,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 114,
     "close": 115,
     "change": 0,
-    "volume": 143652
+    "volume": 144,
+    "rawVolume": 143652,
+    "tradeValue": 16418411,
+    "turnover": "1641.8 萬"
   },
   "1538": {
     "code": "1538",
@@ -1394,7 +1772,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 7.48,
     "close": 7.83,
     "change": 0.35,
-    "volume": 15832
+    "volume": 16,
+    "rawVolume": 15832,
+    "tradeValue": 119926,
+    "turnover": "12.0 萬"
   },
   "1539": {
     "code": "1539",
@@ -1405,7 +1786,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.45,
     "close": 15.65,
     "change": 0.2,
-    "volume": 25405
+    "volume": 25,
+    "rawVolume": 25405,
+    "tradeValue": 396743,
+    "turnover": "39.7 萬"
   },
   "1540": {
     "code": "1540",
@@ -1416,7 +1800,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.2,
     "close": 19.5,
     "change": 0.2,
-    "volume": 51011
+    "volume": 51,
+    "rawVolume": 51011,
+    "tradeValue": 985191,
+    "turnover": "98.5 萬"
   },
   "1541": {
     "code": "1541",
@@ -1427,7 +1814,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.65,
     "close": 20.75,
     "change": -0.15,
-    "volume": 6283
+    "volume": 6,
+    "rawVolume": 6283,
+    "tradeValue": 130100,
+    "turnover": "13.0 萬"
   },
   "1558": {
     "code": "1558",
@@ -1438,7 +1828,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 104,
     "close": 112.5,
     "change": 0,
-    "volume": 385719
+    "volume": 386,
+    "rawVolume": 385719,
+    "tradeValue": 41854875,
+    "turnover": "4185.5 萬"
   },
   "1560": {
     "code": "1560",
@@ -1449,7 +1842,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 963,
     "close": 1000,
     "change": 37,
-    "volume": 1592
+    "volume": 1593,
+    "rawVolume": 1592741,
+    "tradeValue": 1574474919,
+    "turnover": "15.7 億"
   },
   "1563": {
     "code": "1563",
@@ -1460,7 +1856,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 74.8,
     "close": 76.1,
     "change": 0.5,
-    "volume": 196239
+    "volume": 196,
+    "rawVolume": 196239,
+    "tradeValue": 14778653,
+    "turnover": "1477.9 萬"
   },
   "1568": {
     "code": "1568",
@@ -1471,7 +1870,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.25,
     "close": 32.7,
     "change": -0.1,
-    "volume": 365521
+    "volume": 366,
+    "rawVolume": 365521,
+    "tradeValue": 11900494,
+    "turnover": "1190.0 萬"
   },
   "1582": {
     "code": "1582",
@@ -1482,7 +1884,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 71,
     "close": 71.1,
     "change": -0.8,
-    "volume": 214712
+    "volume": 215,
+    "rawVolume": 214712,
+    "tradeValue": 15313640,
+    "turnover": "1531.4 萬"
   },
   "1583": {
     "code": "1583",
@@ -1493,7 +1898,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 46.5,
     "close": 47.05,
     "change": 0.25,
-    "volume": 8092
+    "volume": 8,
+    "rawVolume": 8092,
+    "tradeValue": 378379,
+    "turnover": "37.8 萬"
   },
   "1587": {
     "code": "1587",
@@ -1504,7 +1912,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.85,
     "close": 23.85,
     "change": -0.6,
-    "volume": 99688
+    "volume": 100,
+    "rawVolume": 99688,
+    "tradeValue": 2388074,
+    "turnover": "238.8 萬"
   },
   "1590": {
     "code": "1590",
@@ -1515,7 +1926,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1175,
     "close": 1185,
     "change": -15,
-    "volume": 668
+    "volume": 668,
+    "rawVolume": 668109,
+    "tradeValue": 792181143,
+    "turnover": "7.9 億"
   },
   "1597": {
     "code": "1597",
@@ -1526,7 +1940,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 141,
     "close": 154.5,
     "change": 8,
-    "volume": 4660
+    "volume": 4660,
+    "rawVolume": 4660046,
+    "tradeValue": 705665092,
+    "turnover": "7.1 億"
   },
   "1598": {
     "code": "1598",
@@ -1537,7 +1954,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.4,
     "close": 20.55,
     "change": 0.05,
-    "volume": 103610
+    "volume": 104,
+    "rawVolume": 103610,
+    "tradeValue": 2120640,
+    "turnover": "212.1 萬"
   },
   "1603": {
     "code": "1603",
@@ -1548,7 +1968,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.4,
     "close": 30.65,
     "change": 0.05,
-    "volume": 151204
+    "volume": 151,
+    "rawVolume": 151204,
+    "tradeValue": 4629855,
+    "turnover": "463.0 萬"
   },
   "1604": {
     "code": "1604",
@@ -1559,7 +1982,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.3,
     "close": 23.35,
     "change": -0.1,
-    "volume": 155413
+    "volume": 155,
+    "rawVolume": 155413,
+    "tradeValue": 3632807,
+    "turnover": "363.3 萬"
   },
   "1605": {
     "code": "1605",
@@ -1570,7 +1996,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38,
     "close": 38.55,
     "change": 0.15,
-    "volume": 34858
+    "volume": 34859,
+    "rawVolume": 34858998,
+    "tradeValue": 1343639574,
+    "turnover": "13.4 億"
   },
   "1608": {
     "code": "1608",
@@ -1581,7 +2010,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.75,
     "close": 35.95,
     "change": -0.3,
-    "volume": 1428
+    "volume": 1428,
+    "rawVolume": 1428176,
+    "tradeValue": 51450202,
+    "turnover": "5145.0 萬"
   },
   "1609": {
     "code": "1609",
@@ -1592,7 +2024,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.25,
     "close": 38.7,
     "change": -0.05,
-    "volume": 4848
+    "volume": 4849,
+    "rawVolume": 4848716,
+    "tradeValue": 187555434,
+    "turnover": "1.9 億"
   },
   "1611": {
     "code": "1611",
@@ -1603,7 +2038,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.35,
     "close": 11.45,
     "change": -0.1,
-    "volume": 407999
+    "volume": 408,
+    "rawVolume": 407999,
+    "tradeValue": 4669828,
+    "turnover": "467.0 萬"
   },
   "1612": {
     "code": "1612",
@@ -1614,7 +2052,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.05,
     "close": 35.15,
     "change": -0.55,
-    "volume": 598
+    "volume": 599,
+    "rawVolume": 598564,
+    "tradeValue": 21090587,
+    "turnover": "2109.1 萬"
   },
   "1614": {
     "code": "1614",
@@ -1625,7 +2066,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.9,
     "close": 31.25,
     "change": 0.1,
-    "volume": 55732
+    "volume": 56,
+    "rawVolume": 55732,
+    "tradeValue": 1731622,
+    "turnover": "173.2 萬"
   },
   "1615": {
     "code": "1615",
@@ -1636,7 +2080,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.45,
     "close": 42.7,
     "change": -0.25,
-    "volume": 125204
+    "volume": 125,
+    "rawVolume": 125204,
+    "tradeValue": 5338063,
+    "turnover": "533.8 萬"
   },
   "1616": {
     "code": "1616",
@@ -1647,7 +2094,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.35,
     "close": 18.35,
     "change": -0.3,
-    "volume": 190591
+    "volume": 191,
+    "rawVolume": 190591,
+    "tradeValue": 3515759,
+    "turnover": "351.6 萬"
   },
   "1617": {
     "code": "1617",
@@ -1658,7 +2108,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.4,
     "close": 24.8,
     "change": 0.75,
-    "volume": 9152
+    "volume": 9153,
+    "rawVolume": 9152630,
+    "tradeValue": 232482812,
+    "turnover": "2.3 億"
   },
   "1618": {
     "code": "1618",
@@ -1669,7 +2122,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.8,
     "close": 38.8,
     "change": -0.15,
-    "volume": 232698
+    "volume": 233,
+    "rawVolume": 232698,
+    "tradeValue": 9052902,
+    "turnover": "905.3 萬"
   },
   "1623": {
     "code": "1623",
@@ -1680,7 +2136,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 197.5,
     "close": 198.5,
     "change": -2,
-    "volume": 38560
+    "volume": 39,
+    "rawVolume": 38560,
+    "tradeValue": 7653473,
+    "turnover": "765.3 萬"
   },
   "1626": {
     "code": "1626",
@@ -1691,7 +2150,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.7,
     "close": 9.72,
     "change": 0.12,
-    "volume": 13550
+    "volume": 14,
+    "rawVolume": 13550,
+    "tradeValue": 131912,
+    "turnover": "13.2 萬"
   },
   "1702": {
     "code": "1702",
@@ -1702,7 +2164,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.85,
     "close": 33.45,
     "change": 0.4,
-    "volume": 227316
+    "volume": 227,
+    "rawVolume": 227316,
+    "tradeValue": 7561708,
+    "turnover": "756.2 萬"
   },
   "1707": {
     "code": "1707",
@@ -1713,7 +2178,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 85.1,
     "close": 85.5,
     "change": -0.2,
-    "volume": 291489
+    "volume": 291,
+    "rawVolume": 291489,
+    "tradeValue": 24882629,
+    "turnover": "2488.3 萬"
   },
   "1708": {
     "code": "1708",
@@ -1724,7 +2192,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 53,
     "close": 53.6,
     "change": -0.2,
-    "volume": 3644
+    "volume": 3644,
+    "rawVolume": 3644386,
+    "tradeValue": 194773451,
+    "turnover": "1.9 億"
   },
   "1709": {
     "code": "1709",
@@ -1735,7 +2206,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.6,
     "close": 53.2,
     "change": 4.8,
-    "volume": 28453
+    "volume": 28454,
+    "rawVolume": 28453763,
+    "tradeValue": 1508039075,
+    "turnover": "15.1 億"
   },
   "1710": {
     "code": "1710",
@@ -1746,7 +2220,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.6,
     "close": 17,
     "change": 0.25,
-    "volume": 5875
+    "volume": 5875,
+    "rawVolume": 5875087,
+    "tradeValue": 99675570,
+    "turnover": "9967.6 萬"
   },
   "1711": {
     "code": "1711",
@@ -1757,7 +2234,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.85,
     "close": 40.55,
     "change": -0.35,
-    "volume": 2699
+    "volume": 2699,
+    "rawVolume": 2699361,
+    "tradeValue": 108909045,
+    "turnover": "1.1 億"
   },
   "1712": {
     "code": "1712",
@@ -1768,7 +2248,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.65,
     "close": 39.65,
     "change": -0.15,
-    "volume": 364657
+    "volume": 365,
+    "rawVolume": 364657,
+    "tradeValue": 14474323,
+    "turnover": "1447.4 萬"
   },
   "1713": {
     "code": "1713",
@@ -1779,7 +2262,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.2,
     "close": 42.45,
     "change": 0,
-    "volume": 86205
+    "volume": 86,
+    "rawVolume": 86205,
+    "tradeValue": 3652581,
+    "turnover": "365.3 萬"
   },
   "1714": {
     "code": "1714",
@@ -1790,7 +2276,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.2,
     "close": 16.2,
     "change": -0.3,
-    "volume": 6256
+    "volume": 6256,
+    "rawVolume": 6256321,
+    "tradeValue": 102062387,
+    "turnover": "1.0 億"
   },
   "1717": {
     "code": "1717",
@@ -1801,7 +2290,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 73.2,
     "close": 73.5,
     "change": -0.5,
-    "volume": 7328
+    "volume": 7328,
+    "rawVolume": 7328417,
+    "tradeValue": 541650590,
+    "turnover": "5.4 億"
   },
   "1718": {
     "code": "1718",
@@ -1812,7 +2304,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.55,
     "close": 10.65,
     "change": -0.2,
-    "volume": 10229
+    "volume": 10229,
+    "rawVolume": 10229352,
+    "tradeValue": 108781043,
+    "turnover": "1.1 億"
   },
   "1720": {
     "code": "1720",
@@ -1823,7 +2318,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 55.9,
     "close": 56.1,
     "change": -0.2,
-    "volume": 74151
+    "volume": 74,
+    "rawVolume": 74151,
+    "tradeValue": 4154512,
+    "turnover": "415.5 萬"
   },
   "1721": {
     "code": "1721",
@@ -1834,7 +2332,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.75,
     "close": 26.6,
     "change": 0.15,
-    "volume": 3409
+    "volume": 3409,
+    "rawVolume": 3409492,
+    "tradeValue": 90560481,
+    "turnover": "9056.0 萬"
   },
   "1722": {
     "code": "1722",
@@ -1845,7 +2346,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41.15,
     "close": 41.15,
     "change": -0.4,
-    "volume": 1602
+    "volume": 1602,
+    "rawVolume": 1602478,
+    "tradeValue": 66066506,
+    "turnover": "6606.7 萬"
   },
   "1723": {
     "code": "1723",
@@ -1856,7 +2360,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 79.5,
     "close": 79.7,
     "change": -1,
-    "volume": 767
+    "volume": 767,
+    "rawVolume": 767219,
+    "tradeValue": 61334040,
+    "turnover": "6133.4 萬"
   },
   "1725": {
     "code": "1725",
@@ -1867,7 +2374,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.5,
     "close": 33.5,
     "change": -0.65,
-    "volume": 38197
+    "volume": 38,
+    "rawVolume": 38197,
+    "tradeValue": 1288823,
+    "turnover": "128.9 萬"
   },
   "1726": {
     "code": "1726",
@@ -1878,7 +2388,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 76.2,
     "close": 76.5,
     "change": 0,
-    "volume": 13130
+    "volume": 13,
+    "rawVolume": 13130,
+    "tradeValue": 1002710,
+    "turnover": "100.3 萬"
   },
   "1727": {
     "code": "1727",
@@ -1889,7 +2402,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 105.5,
     "close": 112,
     "change": 3,
-    "volume": 18550
+    "volume": 18550,
+    "rawVolume": 18550381,
+    "tradeValue": 2047948415,
+    "turnover": "20.5 億"
   },
   "1730": {
     "code": "1730",
@@ -1900,7 +2416,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.2,
     "close": 51.3,
     "change": 0.1,
-    "volume": 29960
+    "volume": 30,
+    "rawVolume": 29960,
+    "tradeValue": 1535733,
+    "turnover": "153.6 萬"
   },
   "1731": {
     "code": "1731",
@@ -1911,7 +2430,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.75,
     "close": 20.85,
     "change": -0.05,
-    "volume": 67690
+    "volume": 68,
+    "rawVolume": 67690,
+    "tradeValue": 1411891,
+    "turnover": "141.2 萬"
   },
   "1732": {
     "code": "1732",
@@ -1922,7 +2444,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.95,
     "close": 26,
     "change": -0.15,
-    "volume": 34514
+    "volume": 35,
+    "rawVolume": 34514,
+    "tradeValue": 897557,
+    "turnover": "89.8 萬"
   },
   "1733": {
     "code": "1733",
@@ -1933,7 +2458,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.5,
     "close": 29.85,
     "change": 0.25,
-    "volume": 79199
+    "volume": 79,
+    "rawVolume": 79199,
+    "tradeValue": 2356336,
+    "turnover": "235.6 萬"
   },
   "1734": {
     "code": "1734",
@@ -1944,7 +2472,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.8,
     "close": 32.1,
     "change": 0,
-    "volume": 157024
+    "volume": 157,
+    "rawVolume": 157024,
+    "tradeValue": 5014677,
+    "turnover": "501.5 萬"
   },
   "1735": {
     "code": "1735",
@@ -1955,7 +2486,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.15,
     "close": 20.15,
     "change": -0.05,
-    "volume": 51610
+    "volume": 52,
+    "rawVolume": 51610,
+    "tradeValue": 1050541,
+    "turnover": "105.1 萬"
   },
   "1736": {
     "code": "1736",
@@ -1966,7 +2500,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 127,
     "close": 127.5,
     "change": -1,
-    "volume": 100252
+    "volume": 100,
+    "rawVolume": 100252,
+    "tradeValue": 12829832,
+    "turnover": "1283.0 萬"
   },
   "1737": {
     "code": "1737",
@@ -1977,7 +2514,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30,
     "close": 30,
     "change": -0.05,
-    "volume": 102338
+    "volume": 102,
+    "rawVolume": 102338,
+    "tradeValue": 3072819,
+    "turnover": "307.3 萬"
   },
   "1752": {
     "code": "1752",
@@ -1988,7 +2528,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.35,
     "close": 31.35,
     "change": -0.15,
-    "volume": 66550
+    "volume": 67,
+    "rawVolume": 66550,
+    "tradeValue": 2094223,
+    "turnover": "209.4 萬"
   },
   "1760": {
     "code": "1760",
@@ -1999,7 +2542,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 54.3,
     "close": 54.6,
     "change": 0,
-    "volume": 117063
+    "volume": 117,
+    "rawVolume": 117063,
+    "tradeValue": 6378331,
+    "turnover": "637.8 萬"
   },
   "1762": {
     "code": "1762",
@@ -2010,7 +2556,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.85,
     "close": 33.95,
     "change": -0.4,
-    "volume": 22332
+    "volume": 22,
+    "rawVolume": 22332,
+    "tradeValue": 760696,
+    "turnover": "76.1 萬"
   },
   "1773": {
     "code": "1773",
@@ -2021,7 +2570,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 167,
     "close": 167.5,
     "change": 0,
-    "volume": 512
+    "volume": 513,
+    "rawVolume": 512879,
+    "tradeValue": 86653289,
+    "turnover": "8665.3 萬"
   },
   "1776": {
     "code": "1776",
@@ -2032,7 +2584,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.8,
     "close": 18.05,
     "change": -0.1,
-    "volume": 29014
+    "volume": 29,
+    "rawVolume": 29014,
+    "tradeValue": 522349,
+    "turnover": "52.2 萬"
   },
   "1783": {
     "code": "1783",
@@ -2043,7 +2598,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 36.9,
     "close": 37.35,
     "change": 0.1,
-    "volume": 43420
+    "volume": 43,
+    "rawVolume": 43420,
+    "tradeValue": 1604157,
+    "turnover": "160.4 萬"
   },
   "1786": {
     "code": "1786",
@@ -2054,7 +2612,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.8,
     "close": 43.25,
     "change": -0.05,
-    "volume": 97010
+    "volume": 97,
+    "rawVolume": 97010,
+    "tradeValue": 4195764,
+    "turnover": "419.6 萬"
   },
   "1789": {
     "code": "1789",
@@ -2065,7 +2626,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.7,
     "close": 18.8,
     "change": -0.15,
-    "volume": 277794
+    "volume": 278,
+    "rawVolume": 277794,
+    "tradeValue": 5220993,
+    "turnover": "522.1 萬"
   },
   "1795": {
     "code": "1795",
@@ -2076,7 +2640,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 177,
     "close": 177,
     "change": -2,
-    "volume": 681
+    "volume": 682,
+    "rawVolume": 681616,
+    "tradeValue": 121040119,
+    "turnover": "1.2 億"
   },
   "1802": {
     "code": "1802",
@@ -2087,7 +2654,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 58.3,
     "close": 58.8,
     "change": -1.1,
-    "volume": 15496
+    "volume": 15496,
+    "rawVolume": 15496264,
+    "tradeValue": 913096038,
+    "turnover": "9.1 億"
   },
   "1805": {
     "code": "1805",
@@ -2098,7 +2668,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10,
     "close": 10.1,
     "change": 0.05,
-    "volume": 27124
+    "volume": 27,
+    "rawVolume": 27124,
+    "tradeValue": 272374,
+    "turnover": "27.2 萬"
   },
   "1806": {
     "code": "1806",
@@ -2109,7 +2682,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 7.88,
     "close": 7.92,
     "change": -0.08,
-    "volume": 344515
+    "volume": 345,
+    "rawVolume": 344515,
+    "tradeValue": 2726514,
+    "turnover": "272.7 萬"
   },
   "1808": {
     "code": "1808",
@@ -2120,7 +2696,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.4,
     "close": 31.7,
     "change": 0.05,
-    "volume": 1385
+    "volume": 1385,
+    "rawVolume": 1385047,
+    "tradeValue": 43711289,
+    "turnover": "4371.1 萬"
   },
   "1809": {
     "code": "1809",
@@ -2131,7 +2710,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.55,
     "close": 45.75,
     "change": -2.1,
-    "volume": 5728
+    "volume": 5728,
+    "rawVolume": 5728368,
+    "tradeValue": 265049289,
+    "turnover": "2.7 億"
   },
   "1810": {
     "code": "1810",
@@ -2142,7 +2724,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.95,
     "close": 24,
     "change": -0.45,
-    "volume": 1319
+    "volume": 1320,
+    "rawVolume": 1319890,
+    "tradeValue": 31819483,
+    "turnover": "3181.9 萬"
   },
   "1817": {
     "code": "1817",
@@ -2153,7 +2738,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40,
     "close": 40,
     "change": 0.15,
-    "volume": 16995
+    "volume": 17,
+    "rawVolume": 16995,
+    "tradeValue": 680389,
+    "turnover": "68.0 萬"
   },
   "1903": {
     "code": "1903",
@@ -2164,7 +2752,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 47.25,
     "close": 47.65,
     "change": -0.15,
-    "volume": 24918
+    "volume": 25,
+    "rawVolume": 24918,
+    "tradeValue": 1183129,
+    "turnover": "118.3 萬"
   },
   "1904": {
     "code": "1904",
@@ -2175,7 +2766,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.05,
     "close": 24.1,
     "change": -0.5,
-    "volume": 2000
+    "volume": 2001,
+    "rawVolume": 2000585,
+    "tradeValue": 48420273,
+    "turnover": "4842.0 萬"
   },
   "1905": {
     "code": "1905",
@@ -2186,7 +2780,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.65,
     "close": 12.8,
     "change": -0.25,
-    "volume": 4228
+    "volume": 4228,
+    "rawVolume": 4228154,
+    "tradeValue": 54140034,
+    "turnover": "5414.0 萬"
   },
   "1906": {
     "code": "1906",
@@ -2197,7 +2794,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.75,
     "close": 10.8,
     "change": -0.1,
-    "volume": 29188
+    "volume": 29,
+    "rawVolume": 29188,
+    "tradeValue": 315037,
+    "turnover": "31.5 萬"
   },
   "1907": {
     "code": "1907",
@@ -2208,7 +2808,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.75,
     "close": 28,
     "change": -0.4,
-    "volume": 1143
+    "volume": 1143,
+    "rawVolume": 1143383,
+    "tradeValue": 31929970,
+    "turnover": "3193.0 萬"
   },
   "1909": {
     "code": "1909",
@@ -2219,7 +2822,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.1,
     "close": 10.2,
     "change": -0.1,
-    "volume": 1189
+    "volume": 1189,
+    "rawVolume": 1189488,
+    "tradeValue": 12114042,
+    "turnover": "1211.4 萬"
   },
   "2002": {
     "code": "2002",
@@ -2230,7 +2836,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.85,
     "close": 18.95,
     "change": -0.25,
-    "volume": 38390
+    "volume": 38391,
+    "rawVolume": 38390897,
+    "tradeValue": 729189316,
+    "turnover": "7.3 億"
   },
   "2006": {
     "code": "2006",
@@ -2241,7 +2850,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 84.1,
     "close": 84.6,
     "change": -0.8,
-    "volume": 2447
+    "volume": 2447,
+    "rawVolume": 2447124,
+    "tradeValue": 207531646,
+    "turnover": "2.1 億"
   },
   "2007": {
     "code": "2007",
@@ -2252,7 +2864,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6.91,
     "close": 7,
     "change": 0,
-    "volume": 231238
+    "volume": 231,
+    "rawVolume": 231238,
+    "tradeValue": 1616950,
+    "turnover": "161.7 萬"
   },
   "2008": {
     "code": "2008",
@@ -2263,7 +2878,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.55,
     "close": 30.85,
     "change": -0.25,
-    "volume": 5244
+    "volume": 5,
+    "rawVolume": 5244,
+    "tradeValue": 161119,
+    "turnover": "16.1 萬"
   },
   "2009": {
     "code": "2009",
@@ -2274,7 +2892,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.15,
     "close": 39.3,
     "change": -0.7,
-    "volume": 1229
+    "volume": 1229,
+    "rawVolume": 1229356,
+    "tradeValue": 48408329,
+    "turnover": "4840.8 萬"
   },
   "2010": {
     "code": "2010",
@@ -2285,7 +2906,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.4,
     "close": 22.5,
     "change": -0.5,
-    "volume": 1526
+    "volume": 1527,
+    "rawVolume": 1526972,
+    "tradeValue": 34616490,
+    "turnover": "3461.6 萬"
   },
   "2012": {
     "code": "2012",
@@ -2296,7 +2920,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.2,
     "close": 14.35,
     "change": -0.05,
-    "volume": 29406
+    "volume": 29,
+    "rawVolume": 29406,
+    "tradeValue": 420540,
+    "turnover": "42.1 萬"
   },
   "2013": {
     "code": "2013",
@@ -2307,7 +2934,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41.3,
     "close": 41.5,
     "change": -0.1,
-    "volume": 32397
+    "volume": 32,
+    "rawVolume": 32397,
+    "tradeValue": 1340009,
+    "turnover": "134.0 萬"
   },
   "2014": {
     "code": "2014",
@@ -2318,7 +2948,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.95,
     "close": 17.1,
     "change": -0.3,
-    "volume": 2893
+    "volume": 2893,
+    "rawVolume": 2893468,
+    "tradeValue": 49551952,
+    "turnover": "4955.2 萬"
   },
   "2015": {
     "code": "2015",
@@ -2329,7 +2962,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 63.9,
     "close": 64.2,
     "change": 0,
-    "volume": 75885
+    "volume": 76,
+    "rawVolume": 75885,
+    "tradeValue": 4862760,
+    "turnover": "486.3 萬"
   },
   "2017": {
     "code": "2017",
@@ -2340,7 +2976,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.96,
     "close": 9.09,
     "change": -0.04,
-    "volume": 252574
+    "volume": 253,
+    "rawVolume": 252574,
+    "tradeValue": 2283230,
+    "turnover": "228.3 萬"
   },
   "2020": {
     "code": "2020",
@@ -2351,7 +2990,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26,
     "close": 26.2,
     "change": -0.5,
-    "volume": 21074
+    "volume": 21075,
+    "rawVolume": 21074637,
+    "tradeValue": 589451581,
+    "turnover": "5.9 億"
   },
   "2022": {
     "code": "2022",
@@ -2362,7 +3004,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 7.21,
     "close": 7.34,
     "change": 0.01,
-    "volume": 208884
+    "volume": 209,
+    "rawVolume": 208884,
+    "tradeValue": 1518497,
+    "turnover": "151.8 萬"
   },
   "2023": {
     "code": "2023",
@@ -2373,7 +3018,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.75,
     "close": 13.8,
     "change": 0.05,
-    "volume": 1896
+    "volume": 1896,
+    "rawVolume": 1896256,
+    "tradeValue": 26361893,
+    "turnover": "2636.2 萬"
   },
   "2024": {
     "code": "2024",
@@ -2384,7 +3032,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.9,
     "close": 13.3,
     "change": 0.4,
-    "volume": 43413
+    "volume": 43,
+    "rawVolume": 43413,
+    "tradeValue": 571771,
+    "turnover": "57.2 萬"
   },
   "2025": {
     "code": "2025",
@@ -2395,7 +3046,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.7,
     "close": 14.05,
     "change": -0.6,
-    "volume": 4380
+    "volume": 4380,
+    "rawVolume": 4380086,
+    "tradeValue": 62533018,
+    "turnover": "6253.3 萬"
   },
   "2027": {
     "code": "2027",
@@ -2406,7 +3060,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 47.7,
     "close": 48.05,
     "change": 0.6,
-    "volume": 15670
+    "volume": 15671,
+    "rawVolume": 15670981,
+    "tradeValue": 756066070,
+    "turnover": "7.6 億"
   },
   "2028": {
     "code": "2028",
@@ -2417,7 +3074,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.6,
     "close": 16.6,
     "change": -0.55,
-    "volume": 237108
+    "volume": 237,
+    "rawVolume": 237108,
+    "tradeValue": 4025808,
+    "turnover": "402.6 萬"
   },
   "2029": {
     "code": "2029",
@@ -2428,7 +3088,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.85,
     "close": 22,
     "change": -0.45,
-    "volume": 510
+    "volume": 511,
+    "rawVolume": 510760,
+    "tradeValue": 11370233,
+    "turnover": "1137.0 萬"
   },
   "2030": {
     "code": "2030",
@@ -2439,7 +3102,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 36.05,
     "close": 37.65,
     "change": 0.95,
-    "volume": 70647
+    "volume": 70648,
+    "rawVolume": 70647596,
+    "tradeValue": 2689357454,
+    "turnover": "26.9 億"
   },
   "2031": {
     "code": "2031",
@@ -2450,7 +3116,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 46.05,
     "close": 46.2,
     "change": -0.3,
-    "volume": 753
+    "volume": 754,
+    "rawVolume": 753695,
+    "tradeValue": 35027972,
+    "turnover": "3502.8 萬"
   },
   "2032": {
     "code": "2032",
@@ -2461,7 +3130,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.15,
     "close": 19.6,
     "change": -0.7,
-    "volume": 5176
+    "volume": 5177,
+    "rawVolume": 5176631,
+    "tradeValue": 103404636,
+    "turnover": "1.0 億"
   },
   "2033": {
     "code": "2033",
@@ -2472,7 +3144,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44,
     "close": 46.55,
     "change": 4.2,
-    "volume": 1489
+    "volume": 1489,
+    "rawVolume": 1489009,
+    "tradeValue": 68358982,
+    "turnover": "6835.9 萬"
   },
   "2034": {
     "code": "2034",
@@ -2483,7 +3158,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.4,
     "close": 23.6,
     "change": -1.2,
-    "volume": 9284
+    "volume": 9285,
+    "rawVolume": 9284967,
+    "tradeValue": 222439388,
+    "turnover": "2.2 億"
   },
   "2038": {
     "code": "2038",
@@ -2494,7 +3172,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.75,
     "close": 12.9,
     "change": -0.3,
-    "volume": 474343
+    "volume": 474,
+    "rawVolume": 474343,
+    "tradeValue": 6157544,
+    "turnover": "615.8 萬"
   },
   "2049": {
     "code": "2049",
@@ -2505,7 +3186,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 332.5,
     "close": 335,
     "change": 0,
-    "volume": 1302
+    "volume": 1303,
+    "rawVolume": 1302617,
+    "tradeValue": 435972297,
+    "turnover": "4.4 億"
   },
   "2059": {
     "code": "2059",
@@ -2516,7 +3200,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11760,
     "close": 11835,
     "change": -220,
-    "volume": 339243
+    "volume": 339,
+    "rawVolume": 339243,
+    "tradeValue": 4033393225,
+    "turnover": "40.3 億"
   },
   "2062": {
     "code": "2062",
@@ -2527,7 +3214,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18,
     "close": 18,
     "change": -0.05,
-    "volume": 111204
+    "volume": 111,
+    "rawVolume": 111204,
+    "tradeValue": 2007458,
+    "turnover": "200.7 萬"
   },
   "2069": {
     "code": "2069",
@@ -2538,7 +3228,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.35,
     "close": 25.75,
     "change": -0.95,
-    "volume": 1821
+    "volume": 1821,
+    "rawVolume": 1821078,
+    "tradeValue": 47520418,
+    "turnover": "4752.0 萬"
   },
   "2072": {
     "code": "2072",
@@ -2549,7 +3242,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 132,
     "close": 134,
     "change": 2.5,
-    "volume": 207748
+    "volume": 208,
+    "rawVolume": 207748,
+    "tradeValue": 27780373,
+    "turnover": "2778.0 萬"
   },
   "2101": {
     "code": "2101",
@@ -2560,7 +3256,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.65,
     "close": 29.65,
     "change": -0.25,
-    "volume": 1688
+    "volume": 1688,
+    "rawVolume": 1688108,
+    "tradeValue": 50263215,
+    "turnover": "5026.3 萬"
   },
   "2102": {
     "code": "2102",
@@ -2571,7 +3270,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.55,
     "close": 16.85,
     "change": 0.3,
-    "volume": 373982
+    "volume": 374,
+    "rawVolume": 373982,
+    "tradeValue": 6245374,
+    "turnover": "624.5 萬"
   },
   "2103": {
     "code": "2103",
@@ -2582,7 +3284,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.7,
     "close": 27.95,
     "change": -0.2,
-    "volume": 1423
+    "volume": 1424,
+    "rawVolume": 1423826,
+    "tradeValue": 39681754,
+    "turnover": "3968.2 萬"
   },
   "2104": {
     "code": "2104",
@@ -2593,7 +3298,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.95,
     "close": 11,
     "change": -0.15,
-    "volume": 3126
+    "volume": 3126,
+    "rawVolume": 3126051,
+    "tradeValue": 34688359,
+    "turnover": "3468.8 萬"
   },
   "2105": {
     "code": "2105",
@@ -2604,7 +3312,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.5,
     "close": 30.55,
     "change": -0.1,
-    "volume": 3575
+    "volume": 3576,
+    "rawVolume": 3575667,
+    "tradeValue": 109352851,
+    "turnover": "1.1 億"
   },
   "2106": {
     "code": "2106",
@@ -2615,7 +3326,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.6,
     "close": 16.65,
     "change": 0,
-    "volume": 300105
+    "volume": 300,
+    "rawVolume": 300105,
+    "tradeValue": 5000197,
+    "turnover": "500.0 萬"
   },
   "2107": {
     "code": "2107",
@@ -2626,7 +3340,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.8,
     "close": 26.95,
     "change": -0.05,
-    "volume": 400598
+    "volume": 401,
+    "rawVolume": 400598,
+    "tradeValue": 10797157,
+    "turnover": "1079.7 萬"
   },
   "2108": {
     "code": "2108",
@@ -2637,7 +3354,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 28.25,
     "close": 28.35,
     "change": -0.4,
-    "volume": 452033
+    "volume": 452,
+    "rawVolume": 452033,
+    "tradeValue": 12830392,
+    "turnover": "1283.0 萬"
   },
   "2109": {
     "code": "2109",
@@ -2648,7 +3368,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.3,
     "close": 14.4,
     "change": 0,
-    "volume": 72070
+    "volume": 72,
+    "rawVolume": 72070,
+    "tradeValue": 1033960,
+    "turnover": "103.4 萬"
   },
   "2114": {
     "code": "2114",
@@ -2659,7 +3382,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 89.3,
     "close": 90,
     "change": 0.1,
-    "volume": 9392
+    "volume": 9,
+    "rawVolume": 9392,
+    "tradeValue": 842734,
+    "turnover": "84.3 萬"
   },
   "2115": {
     "code": "2115",
@@ -2670,7 +3396,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.7,
     "close": 23.85,
     "change": -0.05,
-    "volume": 34888
+    "volume": 35,
+    "rawVolume": 34888,
+    "tradeValue": 832717,
+    "turnover": "83.3 萬"
   },
   "2201": {
     "code": "2201",
@@ -2681,7 +3410,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.2,
     "close": 29.2,
     "change": -0.05,
-    "volume": 2076
+    "volume": 2076,
+    "rawVolume": 2076309,
+    "tradeValue": 60741015,
+    "turnover": "6074.1 萬"
   },
   "2204": {
     "code": "2204",
@@ -2692,7 +3424,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 52,
     "close": 52.2,
     "change": -0.1,
-    "volume": 204052
+    "volume": 204,
+    "rawVolume": 204052,
+    "tradeValue": 10652329,
+    "turnover": "1065.2 萬"
   },
   "2206": {
     "code": "2206",
@@ -2703,7 +3438,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 62.1,
     "close": 62.6,
     "change": 0.5,
-    "volume": 299411
+    "volume": 299,
+    "rawVolume": 299411,
+    "tradeValue": 18685503,
+    "turnover": "1868.6 萬"
   },
   "2207": {
     "code": "2207",
@@ -2714,7 +3452,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 508,
     "close": 515,
     "change": 6,
-    "volume": 239429
+    "volume": 239,
+    "rawVolume": 239429,
+    "tradeValue": 122738884,
+    "turnover": "1.2 億"
   },
   "2208": {
     "code": "2208",
@@ -2725,7 +3466,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.85,
     "close": 18.85,
     "change": -0.3,
-    "volume": 3315
+    "volume": 3316,
+    "rawVolume": 3315980,
+    "tradeValue": 62949129,
+    "turnover": "6294.9 萬"
   },
   "2211": {
     "code": "2211",
@@ -2736,7 +3480,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 79.1,
     "close": 79.3,
     "change": -0.4,
-    "volume": 586
+    "volume": 587,
+    "rawVolume": 586620,
+    "tradeValue": 46564915,
+    "turnover": "4656.5 萬"
   },
   "2227": {
     "code": "2227",
@@ -2747,7 +3494,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44.7,
     "close": 45,
     "change": 0,
-    "volume": 27062
+    "volume": 27,
+    "rawVolume": 27062,
+    "tradeValue": 1213707,
+    "turnover": "121.4 萬"
   },
   "2228": {
     "code": "2228",
@@ -2758,7 +3508,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 74.9,
     "close": 75.7,
     "change": 0.9,
-    "volume": 88266
+    "volume": 88,
+    "rawVolume": 88266,
+    "tradeValue": 6673578,
+    "turnover": "667.4 萬"
   },
   "2231": {
     "code": "2231",
@@ -2769,7 +3522,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 92.2,
     "close": 92.9,
     "change": -1.8,
-    "volume": 329706
+    "volume": 330,
+    "rawVolume": 329706,
+    "tradeValue": 31213053,
+    "turnover": "3121.3 萬"
   },
   "2233": {
     "code": "2233",
@@ -2780,7 +3536,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 165,
     "close": 168.5,
     "change": 1.5,
-    "volume": 224485
+    "volume": 224,
+    "rawVolume": 224485,
+    "tradeValue": 37615309,
+    "turnover": "3761.5 萬"
   },
   "2236": {
     "code": "2236",
@@ -2791,7 +3550,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 106,
     "close": 108.5,
     "change": -1,
-    "volume": 413705
+    "volume": 414,
+    "rawVolume": 413705,
+    "tradeValue": 44520946,
+    "turnover": "4452.1 萬"
   },
   "2237": {
     "code": "2237",
@@ -2802,7 +3564,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.75,
     "close": 26.75,
     "change": 0,
-    "volume": 40201
+    "volume": 40,
+    "rawVolume": 40201,
+    "tradeValue": 1077444,
+    "turnover": "107.7 萬"
   },
   "2239": {
     "code": "2239",
@@ -2813,7 +3578,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.75,
     "close": 19.05,
     "change": 0.1,
-    "volume": 28206
+    "volume": 28,
+    "rawVolume": 28206,
+    "tradeValue": 533563,
+    "turnover": "53.4 萬"
   },
   "2241": {
     "code": "2241",
@@ -2824,7 +3592,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44,
     "close": 44.05,
     "change": -2.1,
-    "volume": 3600
+    "volume": 3600,
+    "rawVolume": 3600149,
+    "tradeValue": 161857829,
+    "turnover": "1.6 億"
   },
   "2243": {
     "code": "2243",
@@ -2835,7 +3606,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.9,
     "close": 52.2,
     "change": -0.4,
-    "volume": 138505
+    "volume": 139,
+    "rawVolume": 138505,
+    "tradeValue": 7262101,
+    "turnover": "726.2 萬"
   },
   "2247": {
     "code": "2247",
@@ -2846,7 +3620,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 224,
     "close": 225.5,
     "change": 1,
-    "volume": 19395
+    "volume": 19,
+    "rawVolume": 19395,
+    "tradeValue": 4362911,
+    "turnover": "436.3 萬"
   },
   "2248": {
     "code": "2248",
@@ -2857,7 +3634,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 61.4,
     "close": 61.4,
     "change": 0.1,
-    "volume": 5702
+    "volume": 6,
+    "rawVolume": 5702,
+    "tradeValue": 351294,
+    "turnover": "35.1 萬"
   },
   "2250": {
     "code": "2250",
@@ -2868,7 +3648,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 55.6,
     "close": 55.7,
     "change": -1.3,
-    "volume": 112855
+    "volume": 113,
+    "rawVolume": 112855,
+    "tradeValue": 6344741,
+    "turnover": "634.5 萬"
   },
   "2254": {
     "code": "2254",
@@ -2879,7 +3662,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 93,
     "close": 94.1,
     "change": 1.5,
-    "volume": 1662
+    "volume": 1663,
+    "rawVolume": 1662968,
+    "tradeValue": 156265834,
+    "turnover": "1.6 億"
   },
   "2258": {
     "code": "2258",
@@ -2890,7 +3676,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.75,
     "close": 31.9,
     "change": -0.1,
-    "volume": 537
+    "volume": 537,
+    "rawVolume": 537180,
+    "tradeValue": 17182314,
+    "turnover": "1718.2 萬"
   },
   "2301": {
     "code": "2301",
@@ -2901,7 +3690,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 278,
     "close": 284.5,
     "change": 5,
-    "volume": 9330
+    "volume": 9330,
+    "rawVolume": 9330365,
+    "tradeValue": 2633314952,
+    "turnover": "26.3 億"
   },
   "2302": {
     "code": "2302",
@@ -2912,7 +3704,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44.9,
     "close": 46.5,
     "change": 1.5,
-    "volume": 6731
+    "volume": 6732,
+    "rawVolume": 6731653,
+    "tradeValue": 313228579,
+    "turnover": "3.1 億"
   },
   "2303": {
     "code": "2303",
@@ -2923,7 +3718,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 157.5,
     "close": 161.5,
     "change": 0,
-    "volume": 98614
+    "volume": 98614,
+    "rawVolume": 98614000,
+    "tradeValue": 15926161000,
+    "turnover": "159.3 億"
   },
   "2305": {
     "code": "2305",
@@ -2934,7 +3732,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 61.9,
     "close": 61.9,
     "change": -6.8,
-    "volume": 9397
+    "volume": 9397,
+    "rawVolume": 9397489,
+    "tradeValue": 586747683,
+    "turnover": "5.9 億"
   },
   "2308": {
     "code": "2308",
@@ -2945,7 +3746,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1880,
     "close": 1885,
     "change": -20,
-    "volume": 5517
+    "volume": 5517,
+    "rawVolume": 5517000,
+    "tradeValue": 10399545000,
+    "turnover": "104.0 億"
   },
   "2312": {
     "code": "2312",
@@ -2956,7 +3760,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.7,
     "close": 31,
     "change": -0.25,
-    "volume": 4886
+    "volume": 4887,
+    "rawVolume": 4886792,
+    "tradeValue": 151264720,
+    "turnover": "1.5 億"
   },
   "2313": {
     "code": "2313",
@@ -2967,7 +3774,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 223,
     "close": 224.5,
     "change": -2,
-    "volume": 6854
+    "volume": 6854,
+    "rawVolume": 6854303,
+    "tradeValue": 1539717552,
+    "turnover": "15.4 億"
   },
   "2314": {
     "code": "2314",
@@ -2978,7 +3788,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.3,
     "close": 11.5,
     "change": 0.3,
-    "volume": 212224
+    "volume": 212,
+    "rawVolume": 212224,
+    "tradeValue": 2429819,
+    "turnover": "243.0 萬"
   },
   "2316": {
     "code": "2316",
@@ -2989,7 +3802,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 164.5,
     "close": 167,
     "change": 1,
-    "volume": 2448
+    "volume": 2449,
+    "rawVolume": 2448561,
+    "tradeValue": 410404785,
+    "turnover": "4.1 億"
   },
   "2317": {
     "code": "2317",
@@ -3000,7 +3816,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 250.5,
     "close": 251,
     "change": -3,
-    "volume": 28399
+    "volume": 28399,
+    "rawVolume": 28399000,
+    "tradeValue": 7128149000,
+    "turnover": "71.3 億"
   },
   "2321": {
     "code": "2321",
@@ -3011,7 +3830,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.5,
     "close": 23.5,
     "change": -0.8,
-    "volume": 4468
+    "volume": 4,
+    "rawVolume": 4468,
+    "tradeValue": 106347,
+    "turnover": "10.6 萬"
   },
   "2324": {
     "code": "2324",
@@ -3022,7 +3844,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 36.65,
     "close": 36.65,
     "change": -0.45,
-    "volume": 25328
+    "volume": 25328,
+    "rawVolume": 25328443,
+    "tradeValue": 932348613,
+    "turnover": "9.3 億"
   },
   "2327": {
     "code": "2327",
@@ -3033,7 +3858,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 598,
     "close": 626,
     "change": 24,
-    "volume": 102947
+    "volume": 102947,
+    "rawVolume": 102947000,
+    "tradeValue": 64444822000,
+    "turnover": "644.4 億"
   },
   "2328": {
     "code": "2328",
@@ -3044,7 +3872,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 47.5,
     "close": 47.75,
     "change": 0.2,
-    "volume": 1214
+    "volume": 1215,
+    "rawVolume": 1214940,
+    "tradeValue": 58091459,
+    "turnover": "5809.1 萬"
   },
   "2329": {
     "code": "2329",
@@ -3055,7 +3886,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44.2,
     "close": 44.35,
     "change": -0.45,
-    "volume": 1772
+    "volume": 1772,
+    "rawVolume": 1772390,
+    "tradeValue": 78727206,
+    "turnover": "7872.7 萬"
   },
   "2330": {
     "code": "2330",
@@ -3066,7 +3900,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 2495,
     "close": 2500,
     "change": -10,
-    "volume": 13869
+    "volume": 13869,
+    "rawVolume": 13869000,
+    "tradeValue": 34672500000,
+    "turnover": "346.7 億"
   },
   "2331": {
     "code": "2331",
@@ -3077,7 +3914,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.05,
     "close": 19.15,
     "change": -0.05,
-    "volume": 700
+    "volume": 700,
+    "rawVolume": 700402,
+    "tradeValue": 13416556,
+    "turnover": "1341.7 萬"
   },
   "2332": {
     "code": "2332",
@@ -3088,7 +3928,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.15,
     "close": 20.15,
     "change": -0.45,
-    "volume": 5301
+    "volume": 5302,
+    "rawVolume": 5301945,
+    "tradeValue": 107660598,
+    "turnover": "1.1 億"
   },
   "2337": {
     "code": "2337",
@@ -3099,7 +3942,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 119.5,
     "close": 121,
     "change": -1.5,
-    "volume": 16468
+    "volume": 16468,
+    "rawVolume": 16468161,
+    "tradeValue": 1995123411,
+    "turnover": "20.0 億"
   },
   "2338": {
     "code": "2338",
@@ -3110,7 +3956,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 47,
     "close": 47.2,
     "change": -0.1,
-    "volume": 2741
+    "volume": 2741,
+    "rawVolume": 2741462,
+    "tradeValue": 129954006,
+    "turnover": "1.3 億"
   },
   "2340": {
     "code": "2340",
@@ -3121,7 +3970,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.25,
     "close": 43.85,
     "change": 3.05,
-    "volume": 40533
+    "volume": 40534,
+    "rawVolume": 40533802,
+    "tradeValue": 1751006879,
+    "turnover": "17.5 億"
   },
   "2342": {
     "code": "2342",
@@ -3132,7 +3984,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 49,
     "close": 49.35,
     "change": -0.95,
-    "volume": 7460
+    "volume": 7460,
+    "rawVolume": 7460322,
+    "tradeValue": 369978459,
+    "turnover": "3.7 億"
   },
   "2344": {
     "code": "2344",
@@ -3143,7 +3998,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 175.5,
     "close": 180,
     "change": 0.5,
-    "volume": 64785
+    "volume": 64786,
+    "rawVolume": 64785773,
+    "tradeValue": 11594391808,
+    "turnover": "115.9 億"
   },
   "2345": {
     "code": "2345",
@@ -3154,7 +4012,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1785,
     "close": 1900,
     "change": 125,
-    "volume": 5872
+    "volume": 5872,
+    "rawVolume": 5872368,
+    "tradeValue": 10987166435,
+    "turnover": "109.9 億"
   },
   "2347": {
     "code": "2347",
@@ -3165,7 +4026,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 94.4,
     "close": 95.4,
     "change": 0.5,
-    "volume": 5965
+    "volume": 5965,
+    "rawVolume": 5965468,
+    "tradeValue": 568771273,
+    "turnover": "5.7 億"
   },
   "2348": {
     "code": "2348",
@@ -3176,7 +4040,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 70.2,
     "close": 70.4,
     "change": -0.2,
-    "volume": 108740
+    "volume": 109,
+    "rawVolume": 108740,
+    "tradeValue": 7655030,
+    "turnover": "765.5 萬"
   },
   "2349": {
     "code": "2349",
@@ -3187,7 +4054,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.35,
     "close": 10.5,
     "change": -0.2,
-    "volume": 2276
+    "volume": 2277,
+    "rawVolume": 2276956,
+    "tradeValue": 23861632,
+    "turnover": "2386.2 萬"
   },
   "2351": {
     "code": "2351",
@@ -3198,7 +4068,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 207,
     "close": 212.5,
     "change": 3.5,
-    "volume": 3449
+    "volume": 3449,
+    "rawVolume": 3449076,
+    "tradeValue": 727988219,
+    "turnover": "7.3 億"
   },
   "2352": {
     "code": "2352",
@@ -3209,7 +4082,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.1,
     "close": 29.1,
     "change": -0.55,
-    "volume": 3305
+    "volume": 3305,
+    "rawVolume": 3305366,
+    "tradeValue": 96785911,
+    "turnover": "9678.6 萬"
   },
   "2353": {
     "code": "2353",
@@ -3220,7 +4096,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.4,
     "close": 31.85,
     "change": 0.2,
-    "volume": 10102
+    "volume": 10102,
+    "rawVolume": 10102356,
+    "tradeValue": 320932417,
+    "turnover": "3.2 億"
   },
   "2354": {
     "code": "2354",
@@ -3231,7 +4110,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 65.3,
     "close": 66.2,
     "change": 0.5,
-    "volume": 21963
+    "volume": 21963,
+    "rawVolume": 21963245,
+    "tradeValue": 1460434049,
+    "turnover": "14.6 億"
   },
   "2355": {
     "code": "2355",
@@ -3242,7 +4124,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41.25,
     "close": 41.3,
     "change": -0.5,
-    "volume": 1319
+    "volume": 1320,
+    "rawVolume": 1319934,
+    "tradeValue": 54670364,
+    "turnover": "5467.0 萬"
   },
   "2356": {
     "code": "2356",
@@ -3253,7 +4138,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 59,
     "close": 59.7,
     "change": 0.2,
-    "volume": 8414
+    "volume": 8414,
+    "rawVolume": 8414140,
+    "tradeValue": 499614825,
+    "turnover": "5.0 億"
   },
   "2357": {
     "code": "2357",
@@ -3264,7 +4152,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 960,
     "close": 965,
     "change": 4,
-    "volume": 1566
+    "volume": 1566,
+    "rawVolume": 1566104,
+    "tradeValue": 1513796786,
+    "turnover": "15.1 億"
   },
   "2359": {
     "code": "2359",
@@ -3275,7 +4166,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 128,
     "close": 128,
     "change": -0.5,
-    "volume": 889
+    "volume": 890,
+    "rawVolume": 889565,
+    "tradeValue": 114124780,
+    "turnover": "1.1 億"
   },
   "2360": {
     "code": "2360",
@@ -3286,7 +4180,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 2025,
     "close": 2080,
     "change": -55,
-    "volume": 2619
+    "volume": 2620,
+    "rawVolume": 2619905,
+    "tradeValue": 5427160360,
+    "turnover": "54.3 億"
   },
   "2362": {
     "code": "2362",
@@ -3297,7 +4194,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 46.6,
     "close": 46.6,
     "change": -0.3,
-    "volume": 479520
+    "volume": 480,
+    "rawVolume": 479520,
+    "tradeValue": 22418015,
+    "turnover": "2241.8 萬"
   },
   "2363": {
     "code": "2363",
@@ -3308,7 +4208,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 59.1,
     "close": 60.6,
     "change": 1.5,
-    "volume": 9203
+    "volume": 9203,
+    "rawVolume": 9203056,
+    "tradeValue": 554576363,
+    "turnover": "5.5 億"
   },
   "2364": {
     "code": "2364",
@@ -3319,7 +4222,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 64.6,
     "close": 64.9,
     "change": -0.1,
-    "volume": 81552
+    "volume": 82,
+    "rawVolume": 81552,
+    "tradeValue": 5303219,
+    "turnover": "530.3 萬"
   },
   "2365": {
     "code": "2365",
@@ -3330,7 +4236,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.9,
     "close": 28.2,
     "change": -0.15,
-    "volume": 666
+    "volume": 666,
+    "rawVolume": 666337,
+    "tradeValue": 18692473,
+    "turnover": "1869.2 萬"
   },
   "2367": {
     "code": "2367",
@@ -3341,7 +4250,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.9,
     "close": 43.35,
     "change": -0.2,
-    "volume": 3785
+    "volume": 3785,
+    "rawVolume": 3785466,
+    "tradeValue": 164035488,
+    "turnover": "1.6 億"
   },
   "2368": {
     "code": "2368",
@@ -3352,7 +4264,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1085,
     "close": 1095,
     "change": -25,
-    "volume": 9076
+    "volume": 9077,
+    "rawVolume": 9076956,
+    "tradeValue": 9997381060,
+    "turnover": "100.0 億"
   },
   "2369": {
     "code": "2369",
@@ -3363,7 +4278,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.65,
     "close": 31.75,
     "change": -0.4,
-    "volume": 3071
+    "volume": 3071,
+    "rawVolume": 3071153,
+    "tradeValue": 97650761,
+    "turnover": "9765.1 萬"
   },
   "2371": {
     "code": "2371",
@@ -3374,7 +4292,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.3,
     "close": 30.5,
     "change": 0.05,
-    "volume": 33538
+    "volume": 33538,
+    "rawVolume": 33538127,
+    "tradeValue": 1031965317,
+    "turnover": "10.3 億"
   },
   "2373": {
     "code": "2373",
@@ -3385,7 +4306,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 52.8,
     "close": 53,
     "change": 0.1,
-    "volume": 12490
+    "volume": 12,
+    "rawVolume": 12490,
+    "tradeValue": 661620,
+    "turnover": "66.2 萬"
   },
   "2374": {
     "code": "2374",
@@ -3396,7 +4320,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 66.5,
     "close": 66.7,
     "change": -0.5,
-    "volume": 1221
+    "volume": 1221,
+    "rawVolume": 1221265,
+    "tradeValue": 81530895,
+    "turnover": "8153.1 萬"
   },
   "2375": {
     "code": "2375",
@@ -3407,7 +4334,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 119,
     "close": 124.5,
     "change": 6.5,
-    "volume": 8440
+    "volume": 8440,
+    "rawVolume": 8440304,
+    "tradeValue": 1045671373,
+    "turnover": "10.5 億"
   },
   "2376": {
     "code": "2376",
@@ -3418,7 +4348,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 358.5,
     "close": 368.5,
     "change": 10,
-    "volume": 4284
+    "volume": 4284,
+    "rawVolume": 4284244,
+    "tradeValue": 1551503649,
+    "turnover": "15.5 億"
   },
   "2377": {
     "code": "2377",
@@ -3429,7 +4362,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 151,
     "close": 152.5,
     "change": 1.5,
-    "volume": 3015
+    "volume": 3016,
+    "rawVolume": 3015613,
+    "tradeValue": 459812953,
+    "turnover": "4.6 億"
   },
   "2379": {
     "code": "2379",
@@ -3440,7 +4376,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 751,
     "close": 762,
     "change": 2,
-    "volume": 3150
+    "volume": 3150,
+    "rawVolume": 3150180,
+    "tradeValue": 2394811797,
+    "turnover": "23.9 億"
   },
   "2380": {
     "code": "2380",
@@ -3451,7 +4390,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.85,
     "close": 17,
     "change": 0,
-    "volume": 41137
+    "volume": 41,
+    "rawVolume": 41137,
+    "tradeValue": 698296,
+    "turnover": "69.8 萬"
   },
   "2382": {
     "code": "2382",
@@ -3462,7 +4404,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 330,
     "close": 332,
     "change": -2,
-    "volume": 9943
+    "volume": 9943,
+    "rawVolume": 9943000,
+    "tradeValue": 3301076000,
+    "turnover": "33.0 億"
   },
   "2383": {
     "code": "2383",
@@ -3473,7 +4418,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 4855,
     "close": 4975,
     "change": 40,
-    "volume": 1363
+    "volume": 1363,
+    "rawVolume": 1363430,
+    "tradeValue": 6698010765,
+    "turnover": "67.0 億"
   },
   "2385": {
     "code": "2385",
@@ -3484,7 +4432,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 104.5,
     "close": 105.5,
     "change": 1,
-    "volume": 1776
+    "volume": 1776,
+    "rawVolume": 1776109,
+    "tradeValue": 187543790,
+    "turnover": "1.9 億"
   },
   "2387": {
     "code": "2387",
@@ -3495,7 +4446,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 36.35,
     "close": 36.55,
     "change": 0.1,
-    "volume": 142099
+    "volume": 142,
+    "rawVolume": 142099,
+    "tradeValue": 5189152,
+    "turnover": "518.9 萬"
   },
   "2388": {
     "code": "2388",
@@ -3506,7 +4460,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 72.8,
     "close": 73.3,
     "change": 0.3,
-    "volume": 3772
+    "volume": 3772,
+    "rawVolume": 3772346,
+    "tradeValue": 279149405,
+    "turnover": "2.8 億"
   },
   "2390": {
     "code": "2390",
@@ -3517,7 +4474,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.1,
     "close": 10.15,
     "change": -0.15,
-    "volume": 247599
+    "volume": 248,
+    "rawVolume": 247599,
+    "tradeValue": 2522755,
+    "turnover": "252.3 萬"
   },
   "2392": {
     "code": "2392",
@@ -3528,7 +4488,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41.2,
     "close": 41.6,
     "change": 0,
-    "volume": 893
+    "volume": 893,
+    "rawVolume": 893005,
+    "tradeValue": 37179689,
+    "turnover": "3718.0 萬"
   },
   "2393": {
     "code": "2393",
@@ -3539,7 +4502,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 63.8,
     "close": 64.5,
     "change": 0,
-    "volume": 1196
+    "volume": 1196,
+    "rawVolume": 1196217,
+    "tradeValue": 76932865,
+    "turnover": "7693.3 萬"
   },
   "2395": {
     "code": "2395",
@@ -3550,7 +4516,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 718,
     "close": 723,
     "change": -3,
-    "volume": 1657
+    "volume": 1657,
+    "rawVolume": 1657283,
+    "tradeValue": 1199032593,
+    "turnover": "12.0 億"
   },
   "2397": {
     "code": "2397",
@@ -3561,7 +4530,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 62.5,
     "close": 63.1,
     "change": 0.1,
-    "volume": 77471
+    "volume": 77,
+    "rawVolume": 77471,
+    "tradeValue": 4871250,
+    "turnover": "487.1 萬"
   },
   "2399": {
     "code": "2399",
@@ -3572,7 +4544,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.6,
     "close": 51.3,
     "change": 2.35,
-    "volume": 18929
+    "volume": 18929,
+    "rawVolume": 18929412,
+    "tradeValue": 959524541,
+    "turnover": "9.6 億"
   },
   "2401": {
     "code": "2401",
@@ -3583,7 +4558,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.55,
     "close": 26.85,
     "change": 0.1,
-    "volume": 6341
+    "volume": 6342,
+    "rawVolume": 6341638,
+    "tradeValue": 170858902,
+    "turnover": "1.7 億"
   },
   "2402": {
     "code": "2402",
@@ -3594,7 +4572,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 56.7,
     "close": 57.2,
     "change": -1.3,
-    "volume": 1592
+    "volume": 1593,
+    "rawVolume": 1592787,
+    "tradeValue": 91515216,
+    "turnover": "9151.5 萬"
   },
   "2404": {
     "code": "2404",
@@ -3605,7 +4586,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1270,
     "close": 1305,
     "change": 15,
-    "volume": 1828
+    "volume": 1828,
+    "rawVolume": 1828034,
+    "tradeValue": 2374827010,
+    "turnover": "23.7 億"
   },
   "2405": {
     "code": "2405",
@@ -3616,7 +4600,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.3,
     "close": 15.3,
     "change": 0.05,
-    "volume": 1893
+    "volume": 1894,
+    "rawVolume": 1893686,
+    "tradeValue": 29343112,
+    "turnover": "2934.3 萬"
   },
   "2406": {
     "code": "2406",
@@ -3627,7 +4614,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.1,
     "close": 31.4,
     "change": -0.05,
-    "volume": 6902
+    "volume": 6902,
+    "rawVolume": 6902322,
+    "tradeValue": 216763896,
+    "turnover": "2.2 億"
   },
   "2408": {
     "code": "2408",
@@ -3638,7 +4628,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 521,
     "close": 526,
     "change": 7,
-    "volume": 35255
+    "volume": 35255,
+    "rawVolume": 35255000,
+    "tradeValue": 18544130000,
+    "turnover": "185.4 億"
   },
   "2409": {
     "code": "2409",
@@ -3649,7 +4642,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.65,
     "close": 40.45,
     "change": 2.15,
-    "volume": 697290
+    "volume": 697290,
+    "rawVolume": 697290000,
+    "tradeValue": 28205380500,
+    "turnover": "282.1 億"
   },
   "2412": {
     "code": "2412",
@@ -3660,7 +4656,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 143,
     "close": 145.5,
     "change": 2,
-    "volume": 8628
+    "volume": 8628,
+    "rawVolume": 8628434,
+    "tradeValue": 1248190797,
+    "turnover": "12.5 億"
   },
   "2413": {
     "code": "2413",
@@ -3671,7 +4670,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 50.7,
     "close": 51.6,
     "change": 0.2,
-    "volume": 2839
+    "volume": 2840,
+    "rawVolume": 2839552,
+    "tradeValue": 147978965,
+    "turnover": "1.5 億"
   },
   "2414": {
     "code": "2414",
@@ -3682,7 +4684,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 52.8,
     "close": 53.2,
     "change": -0.1,
-    "volume": 47056
+    "volume": 47,
+    "rawVolume": 47056,
+    "tradeValue": 2493465,
+    "turnover": "249.3 萬"
   },
   "2415": {
     "code": "2415",
@@ -3693,7 +4698,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.05,
     "close": 27.25,
     "change": 0.05,
-    "volume": 81248
+    "volume": 81,
+    "rawVolume": 81248,
+    "tradeValue": 2211316,
+    "turnover": "221.1 萬"
   },
   "2417": {
     "code": "2417",
@@ -3704,7 +4712,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.85,
     "close": 38.95,
     "change": -0.35,
-    "volume": 226049
+    "volume": 226,
+    "rawVolume": 226049,
+    "tradeValue": 8817341,
+    "turnover": "881.7 萬"
   },
   "2419": {
     "code": "2419",
@@ -3715,7 +4726,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29,
     "close": 29.05,
     "change": -0.65,
-    "volume": 868
+    "volume": 869,
+    "rawVolume": 868654,
+    "tradeValue": 25375479,
+    "turnover": "2537.5 萬"
   },
   "2420": {
     "code": "2420",
@@ -3726,7 +4740,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 55.2,
     "close": 58,
     "change": 3,
-    "volume": 1734
+    "volume": 1735,
+    "rawVolume": 1734967,
+    "tradeValue": 100042640,
+    "turnover": "1.0 億"
   },
   "2421": {
     "code": "2421",
@@ -3737,7 +4754,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 160.5,
     "close": 164,
     "change": 3.5,
-    "volume": 1500
+    "volume": 1500,
+    "rawVolume": 1500134,
+    "tradeValue": 244674357,
+    "turnover": "2.4 億"
   },
   "2423": {
     "code": "2423",
@@ -3748,7 +4768,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 70.3,
     "close": 71.6,
     "change": -0.5,
-    "volume": 155965
+    "volume": 156,
+    "rawVolume": 155965,
+    "tradeValue": 11066650,
+    "turnover": "1106.7 萬"
   },
   "2424": {
     "code": "2424",
@@ -3759,7 +4782,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.02,
     "close": 8.16,
     "change": -0.14,
-    "volume": 29020
+    "volume": 29,
+    "rawVolume": 29020,
+    "tradeValue": 242120,
+    "turnover": "24.2 萬"
   },
   "2425": {
     "code": "2425",
@@ -3770,7 +4796,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 37.55,
     "close": 37.75,
     "change": 0.25,
-    "volume": 472709
+    "volume": 473,
+    "rawVolume": 472709,
+    "tradeValue": 17885318,
+    "turnover": "1788.5 萬"
   },
   "2426": {
     "code": "2426",
@@ -3781,7 +4810,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 102,
     "close": 103,
     "change": -1,
-    "volume": 60579
+    "volume": 60579,
+    "rawVolume": 60579280,
+    "tradeValue": 6448719604,
+    "turnover": "64.5 億"
   },
   "2427": {
     "code": "2427",
@@ -3792,7 +4824,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.25,
     "close": 23.3,
     "change": -0.05,
-    "volume": 326919
+    "volume": 327,
+    "rawVolume": 326919,
+    "tradeValue": 7625973,
+    "turnover": "762.6 萬"
   },
   "2428": {
     "code": "2428",
@@ -3803,7 +4838,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 253,
     "close": 261,
     "change": 9.5,
-    "volume": 1837
+    "volume": 1837,
+    "rawVolume": 1837260,
+    "tradeValue": 476863823,
+    "turnover": "4.8 億"
   },
   "2429": {
     "code": "2429",
@@ -3814,7 +4852,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.6,
     "close": 30.75,
     "change": -0.2,
-    "volume": 174885
+    "volume": 175,
+    "rawVolume": 174885,
+    "tradeValue": 5390459,
+    "turnover": "539.0 萬"
   },
   "2430": {
     "code": "2430",
@@ -3825,7 +4866,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.05,
     "close": 18.1,
     "change": -0.15,
-    "volume": 20062
+    "volume": 20,
+    "rawVolume": 20062,
+    "tradeValue": 363693,
+    "turnover": "36.4 萬"
   },
   "2431": {
     "code": "2431",
@@ -3836,7 +4880,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.05,
     "close": 10.15,
     "change": 0,
-    "volume": 52066
+    "volume": 52,
+    "rawVolume": 52066,
+    "tradeValue": 525877,
+    "turnover": "52.6 萬"
   },
   "2432": {
     "code": "2432",
@@ -3847,7 +4894,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.6,
     "close": 27.6,
     "change": -0.05,
-    "volume": 2204
+    "volume": 2,
+    "rawVolume": 2204,
+    "tradeValue": 60868,
+    "turnover": "6.1 萬"
   },
   "2433": {
     "code": "2433",
@@ -3858,7 +4908,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.05,
     "close": 40.2,
     "change": -0.25,
-    "volume": 27552
+    "volume": 28,
+    "rawVolume": 27552,
+    "tradeValue": 1108221,
+    "turnover": "110.8 萬"
   },
   "2434": {
     "code": "2434",
@@ -3869,7 +4922,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 62.5,
     "close": 62.9,
     "change": -2.5,
-    "volume": 470446
+    "volume": 470,
+    "rawVolume": 470446,
+    "tradeValue": 29943948,
+    "turnover": "2994.4 萬"
   },
   "2436": {
     "code": "2436",
@@ -3880,7 +4936,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 73.9,
     "close": 74,
     "change": -0.5,
-    "volume": 5128
+    "volume": 5128,
+    "rawVolume": 5128346,
+    "tradeValue": 382001037,
+    "turnover": "3.8 億"
   },
   "2438": {
     "code": "2438",
@@ -3891,7 +4950,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.7,
     "close": 19.95,
     "change": 0.05,
-    "volume": 68287
+    "volume": 68,
+    "rawVolume": 68287,
+    "tradeValue": 1358023,
+    "turnover": "135.8 萬"
   },
   "2439": {
     "code": "2439",
@@ -3902,7 +4964,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 76.2,
     "close": 76.5,
     "change": -0.8,
-    "volume": 1185
+    "volume": 1186,
+    "rawVolume": 1185652,
+    "tradeValue": 90828654,
+    "turnover": "9082.9 萬"
   },
   "2440": {
     "code": "2440",
@@ -3913,7 +4978,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.25,
     "close": 14.4,
     "change": 0,
-    "volume": 106400
+    "volume": 106,
+    "rawVolume": 106400,
+    "tradeValue": 1525738,
+    "turnover": "152.6 萬"
   },
   "2441": {
     "code": "2441",
@@ -3924,7 +4992,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 123,
     "close": 124.5,
     "change": -1,
-    "volume": 2286
+    "volume": 2287,
+    "rawVolume": 2286709,
+    "tradeValue": 283342747,
+    "turnover": "2.8 億"
   },
   "2442": {
     "code": "2442",
@@ -3935,7 +5006,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.25,
     "close": 14.3,
     "change": -0.1,
-    "volume": 584
+    "volume": 585,
+    "rawVolume": 584765,
+    "tradeValue": 8367607,
+    "turnover": "836.8 萬"
   },
   "2444": {
     "code": "2444",
@@ -3946,7 +5020,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15,
     "close": 15,
     "change": -0.9,
-    "volume": 2798
+    "volume": 2799,
+    "rawVolume": 2798688,
+    "tradeValue": 42597177,
+    "turnover": "4259.7 萬"
   },
   "2449": {
     "code": "2449",
@@ -3957,7 +5034,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 292,
     "close": 296,
     "change": 1.5,
-    "volume": 14832
+    "volume": 14832,
+    "rawVolume": 14832156,
+    "tradeValue": 4373864506,
+    "turnover": "43.7 億"
   },
   "2450": {
     "code": "2450",
@@ -3968,7 +5048,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 28.2,
     "close": 28.3,
     "change": 0.1,
-    "volume": 57825
+    "volume": 58,
+    "rawVolume": 57825,
+    "tradeValue": 1632986,
+    "turnover": "163.3 萬"
   },
   "2451": {
     "code": "2451",
@@ -3979,7 +5062,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 287,
     "close": 289.5,
     "change": 0.5,
-    "volume": 1342
+    "volume": 1342,
+    "rawVolume": 1342152,
+    "tradeValue": 387889998,
+    "turnover": "3.9 億"
   },
   "2453": {
     "code": "2453",
@@ -3990,7 +5076,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 53.2,
     "close": 53.3,
     "change": -0.3,
-    "volume": 181828
+    "volume": 182,
+    "rawVolume": 181828,
+    "tradeValue": 9706667,
+    "turnover": "970.7 萬"
   },
   "2454": {
     "code": "2454",
@@ -4001,7 +5090,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 4880,
     "close": 4950,
     "change": -30,
-    "volume": 3831
+    "volume": 3831,
+    "rawVolume": 3831000,
+    "tradeValue": 18963450000,
+    "turnover": "189.6 億"
   },
   "2455": {
     "code": "2455",
@@ -4012,7 +5104,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 530,
     "close": 546,
     "change": -6,
-    "volume": 2010
+    "volume": 2011,
+    "rawVolume": 2010853,
+    "tradeValue": 1079758693,
+    "turnover": "10.8 億"
   },
   "2457": {
     "code": "2457",
@@ -4023,7 +5118,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22,
     "close": 22.05,
     "change": -0.5,
-    "volume": 875
+    "volume": 875,
+    "rawVolume": 875354,
+    "tradeValue": 19343227,
+    "turnover": "1934.3 萬"
   },
   "2458": {
     "code": "2458",
@@ -4034,7 +5132,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 136,
     "close": 138.5,
     "change": 1,
-    "volume": 1517
+    "volume": 1518,
+    "rawVolume": 1517721,
+    "tradeValue": 209208174,
+    "turnover": "2.1 億"
   },
   "2459": {
     "code": "2459",
@@ -4045,7 +5146,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 64.5,
     "close": 64.9,
     "change": -0.1,
-    "volume": 65989
+    "volume": 66,
+    "rawVolume": 65989,
+    "tradeValue": 4272491,
+    "turnover": "427.2 萬"
   },
   "2460": {
     "code": "2460",
@@ -4056,7 +5160,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.9,
     "close": 30.6,
     "change": 0.05,
-    "volume": 182478
+    "volume": 182,
+    "rawVolume": 182478,
+    "tradeValue": 5528284,
+    "turnover": "552.8 萬"
   },
   "2461": {
     "code": "2461",
@@ -4067,7 +5174,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.25,
     "close": 17.4,
     "change": -0.45,
-    "volume": 630
+    "volume": 630,
+    "rawVolume": 630493,
+    "tradeValue": 11012088,
+    "turnover": "1101.2 萬"
   },
   "2462": {
     "code": "2462",
@@ -4078,7 +5188,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.75,
     "close": 19.9,
     "change": -0.05,
-    "volume": 53335
+    "volume": 53,
+    "rawVolume": 53335,
+    "tradeValue": 1057105,
+    "turnover": "105.7 萬"
   },
   "2464": {
     "code": "2464",
@@ -4089,7 +5202,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 189.5,
     "close": 193.5,
     "change": 1,
-    "volume": 8277
+    "volume": 8278,
+    "rawVolume": 8277531,
+    "tradeValue": 1591240393,
+    "turnover": "15.9 億"
   },
   "2465": {
     "code": "2465",
@@ -4100,7 +5216,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 90,
     "close": 93.2,
     "change": 2,
-    "volume": 1460
+    "volume": 1460,
+    "rawVolume": 1460228,
+    "tradeValue": 134436342,
+    "turnover": "1.3 億"
   },
   "2466": {
     "code": "2466",
@@ -4111,7 +5230,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 127,
     "close": 128.5,
     "change": 4,
-    "volume": 5280
+    "volume": 5281,
+    "rawVolume": 5280903,
+    "tradeValue": 692150401,
+    "turnover": "6.9 億"
   },
   "2467": {
     "code": "2467",
@@ -4122,7 +5244,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 537,
     "close": 543,
     "change": 4,
-    "volume": 878
+    "volume": 878,
+    "rawVolume": 878273,
+    "tradeValue": 477361559,
+    "turnover": "4.8 億"
   },
   "2468": {
     "code": "2468",
@@ -4133,7 +5258,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44.3,
     "close": 44.55,
     "change": -0.95,
-    "volume": 993
+    "volume": 994,
+    "rawVolume": 993907,
+    "tradeValue": 44404820,
+    "turnover": "4440.5 萬"
   },
   "2471": {
     "code": "2471",
@@ -4144,7 +5272,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.7,
     "close": 52,
     "change": 0.2,
-    "volume": 92092
+    "volume": 92,
+    "rawVolume": 92092,
+    "tradeValue": 4779379,
+    "turnover": "477.9 萬"
   },
   "2472": {
     "code": "2472",
@@ -4155,7 +5286,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 213.5,
     "close": 226,
     "change": 12.5,
-    "volume": 5071
+    "volume": 5071,
+    "rawVolume": 5071180,
+    "tradeValue": 1136657250,
+    "turnover": "11.4 億"
   },
   "2474": {
     "code": "2474",
@@ -4166,7 +5300,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 206,
     "close": 207.5,
     "change": 1,
-    "volume": 1387
+    "volume": 1387,
+    "rawVolume": 1387154,
+    "tradeValue": 287590978,
+    "turnover": "2.9 億"
   },
   "2476": {
     "code": "2476",
@@ -4177,7 +5314,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 120.5,
     "close": 123,
     "change": -0.5,
-    "volume": 858
+    "volume": 859,
+    "rawVolume": 858837,
+    "tradeValue": 104720777,
+    "turnover": "1.0 億"
   },
   "2477": {
     "code": "2477",
@@ -4188,7 +5328,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.85,
     "close": 23.1,
     "change": -0.05,
-    "volume": 175918
+    "volume": 176,
+    "rawVolume": 175918,
+    "tradeValue": 4055235,
+    "turnover": "405.5 萬"
   },
   "2478": {
     "code": "2478",
@@ -4199,7 +5342,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 120.5,
     "close": 124.5,
     "change": 4.5,
-    "volume": 6254
+    "volume": 6255,
+    "rawVolume": 6254538,
+    "tradeValue": 785128770,
+    "turnover": "7.9 億"
   },
   "2480": {
     "code": "2480",
@@ -4210,7 +5356,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 159,
     "close": 160,
     "change": 0,
-    "volume": 87403
+    "volume": 87,
+    "rawVolume": 87403,
+    "tradeValue": 13942857,
+    "turnover": "1394.3 萬"
   },
   "2481": {
     "code": "2481",
@@ -4221,7 +5370,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 171.5,
     "close": 177.5,
     "change": 5.5,
-    "volume": 23859
+    "volume": 23859,
+    "rawVolume": 23859129,
+    "tradeValue": 4191876099,
+    "turnover": "41.9 億"
   },
   "2482": {
     "code": "2482",
@@ -4232,7 +5384,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.25,
     "close": 16.3,
     "change": -0.15,
-    "volume": 57932
+    "volume": 58,
+    "rawVolume": 57932,
+    "tradeValue": 945540,
+    "turnover": "94.6 萬"
   },
   "2483": {
     "code": "2483",
@@ -4243,7 +5398,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 34.3,
     "close": 36.6,
     "change": 0.85,
-    "volume": 5737
+    "volume": 5737,
+    "rawVolume": 5737472,
+    "tradeValue": 207032601,
+    "turnover": "2.1 億"
   },
   "2484": {
     "code": "2484",
@@ -4254,7 +5412,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 77.3,
     "close": 84.6,
     "change": 6.6,
-    "volume": 40048
+    "volume": 40049,
+    "rawVolume": 40048717,
+    "tradeValue": 3311654586,
+    "turnover": "33.1 億"
   },
   "2485": {
     "code": "2485",
@@ -4265,7 +5426,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.4,
     "close": 40.5,
     "change": -1.2,
-    "volume": 2456
+    "volume": 2456,
+    "rawVolume": 2456324,
+    "tradeValue": 100068474,
+    "turnover": "1.0 億"
   },
   "2486": {
     "code": "2486",
@@ -4276,7 +5440,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 241,
     "close": 248.5,
     "change": 8.5,
-    "volume": 8667
+    "volume": 8668,
+    "rawVolume": 8667512,
+    "tradeValue": 2172319941,
+    "turnover": "21.7 億"
   },
   "2488": {
     "code": "2488",
@@ -4287,7 +5454,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.8,
     "close": 48.95,
     "change": 0.1,
-    "volume": 28095
+    "volume": 28,
+    "rawVolume": 28095,
+    "tradeValue": 1376493,
+    "turnover": "137.6 萬"
   },
   "2489": {
     "code": "2489",
@@ -4298,7 +5468,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.6,
     "close": 40.65,
     "change": -1.15,
-    "volume": 12754
+    "volume": 12755,
+    "rawVolume": 12754502,
+    "tradeValue": 523505376,
+    "turnover": "5.2 億"
   },
   "2491": {
     "code": "2491",
@@ -4309,7 +5482,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40,
     "close": 40.5,
     "change": -0.3,
-    "volume": 513
+    "volume": 514,
+    "rawVolume": 513778,
+    "tradeValue": 20768072,
+    "turnover": "2076.8 萬"
   },
   "2492": {
     "code": "2492",
@@ -4320,7 +5496,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 329,
     "close": 361.5,
     "change": 32.5,
-    "volume": 54902
+    "volume": 54902,
+    "rawVolume": 54902000,
+    "tradeValue": 19847073000,
+    "turnover": "198.5 億"
   },
   "2493": {
     "code": "2493",
@@ -4331,7 +5510,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 195.5,
     "close": 197,
     "change": -0.5,
-    "volume": 988
+    "volume": 989,
+    "rawVolume": 988907,
+    "tradeValue": 194979066,
+    "turnover": "1.9 億"
   },
   "2495": {
     "code": "2495",
@@ -4342,7 +5524,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.5,
     "close": 38.6,
     "change": -0.45,
-    "volume": 864
+    "volume": 865,
+    "rawVolume": 864591,
+    "tradeValue": 33488935,
+    "turnover": "3348.9 萬"
   },
   "2496": {
     "code": "2496",
@@ -4353,7 +5538,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 55,
     "close": 55.1,
     "change": 0.1,
-    "volume": 15908
+    "volume": 16,
+    "rawVolume": 15908,
+    "tradeValue": 875365,
+    "turnover": "87.5 萬"
   },
   "2497": {
     "code": "2497",
@@ -4364,7 +5552,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.9,
     "close": 44,
     "change": -0.35,
-    "volume": 207894
+    "volume": 208,
+    "rawVolume": 207894,
+    "tradeValue": 9204437,
+    "turnover": "920.4 萬"
   },
   "2498": {
     "code": "2498",
@@ -4375,7 +5566,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.5,
     "close": 43.7,
     "change": 0.8,
-    "volume": 23409
+    "volume": 23409,
+    "rawVolume": 23409453,
+    "tradeValue": 1048021821,
+    "turnover": "10.5 億"
   },
   "2501": {
     "code": "2501",
@@ -4386,7 +5580,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.95,
     "close": 21.05,
     "change": -0.05,
-    "volume": 1745
+    "volume": 1745,
+    "rawVolume": 1745076,
+    "tradeValue": 36781981,
+    "turnover": "3678.2 萬"
   },
   "2504": {
     "code": "2504",
@@ -4397,7 +5594,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.55,
     "close": 30.55,
     "change": -0.1,
-    "volume": 1242
+    "volume": 1242,
+    "rawVolume": 1242464,
+    "tradeValue": 38068977,
+    "turnover": "3806.9 萬"
   },
   "2505": {
     "code": "2505",
@@ -4408,7 +5608,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.95,
     "close": 17.05,
     "change": 0.05,
-    "volume": 97110
+    "volume": 97,
+    "rawVolume": 97110,
+    "tradeValue": 1650796,
+    "turnover": "165.1 萬"
   },
   "2506": {
     "code": "2506",
@@ -4419,7 +5622,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.37,
     "close": 8.43,
     "change": 0,
-    "volume": 293255
+    "volume": 293,
+    "rawVolume": 293255,
+    "tradeValue": 2462419,
+    "turnover": "246.2 萬"
   },
   "2509": {
     "code": "2509",
@@ -4430,7 +5636,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.1,
     "close": 14.3,
     "change": 0,
-    "volume": 58505
+    "volume": 59,
+    "rawVolume": 58505,
+    "tradeValue": 829037,
+    "turnover": "82.9 萬"
   },
   "2511": {
     "code": "2511",
@@ -4441,7 +5650,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.29,
     "close": 8.32,
     "change": -0.02,
-    "volume": 413104
+    "volume": 413,
+    "rawVolume": 413104,
+    "tradeValue": 3431064,
+    "turnover": "343.1 萬"
   },
   "2514": {
     "code": "2514",
@@ -4452,7 +5664,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.5,
     "close": 11.6,
     "change": -0.1,
-    "volume": 51071
+    "volume": 51,
+    "rawVolume": 51071,
+    "tradeValue": 593000,
+    "turnover": "59.3 萬"
   },
   "2515": {
     "code": "2515",
@@ -4463,7 +5678,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.85,
     "close": 11.95,
     "change": 0.05,
-    "volume": 1882
+    "volume": 1882,
+    "rawVolume": 1882455,
+    "tradeValue": 22432622,
+    "turnover": "2243.3 萬"
   },
   "2516": {
     "code": "2516",
@@ -4474,7 +5692,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.05,
     "close": 15.15,
     "change": -0.2,
-    "volume": 115002
+    "volume": 115,
+    "rawVolume": 115002,
+    "tradeValue": 1747757,
+    "turnover": "174.8 萬"
   },
   "2520": {
     "code": "2520",
@@ -4485,7 +5706,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 36.4,
     "close": 36.75,
     "change": 0.25,
-    "volume": 1180
+    "volume": 1181,
+    "rawVolume": 1180983,
+    "tradeValue": 43279243,
+    "turnover": "4327.9 萬"
   },
   "2524": {
     "code": "2524",
@@ -4496,7 +5720,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 34.25,
     "close": 34.6,
     "change": -0.1,
-    "volume": 25371
+    "volume": 25,
+    "rawVolume": 25371,
+    "tradeValue": 874407,
+    "turnover": "87.4 萬"
   },
   "2527": {
     "code": "2527",
@@ -4507,7 +5734,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.4,
     "close": 49.1,
     "change": -0.9,
-    "volume": 842
+    "volume": 842,
+    "rawVolume": 842203,
+    "tradeValue": 41247769,
+    "turnover": "4124.8 萬"
   },
   "2528": {
     "code": "2528",
@@ -4518,7 +5748,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.25,
     "close": 19.25,
     "change": -0.15,
-    "volume": 121117
+    "volume": 121,
+    "rawVolume": 121117,
+    "tradeValue": 2338486,
+    "turnover": "233.8 萬"
   },
   "2530": {
     "code": "2530",
@@ -4529,7 +5762,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.9,
     "close": 20.05,
     "change": 0,
-    "volume": 193533
+    "volume": 194,
+    "rawVolume": 193533,
+    "tradeValue": 3873322,
+    "turnover": "387.3 萬"
   },
   "2534": {
     "code": "2534",
@@ -4540,7 +5776,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.7,
     "close": 16.85,
     "change": -0.1,
-    "volume": 205842
+    "volume": 206,
+    "rawVolume": 205842,
+    "tradeValue": 3455564,
+    "turnover": "345.6 萬"
   },
   "2535": {
     "code": "2535",
@@ -4551,7 +5790,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 88.7,
     "close": 88.9,
     "change": -0.3,
-    "volume": 166962
+    "volume": 167,
+    "rawVolume": 166962,
+    "tradeValue": 14840501,
+    "turnover": "1484.1 萬"
   },
   "2536": {
     "code": "2536",
@@ -4562,7 +5804,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.1,
     "close": 19.1,
     "change": -0.05,
-    "volume": 398618
+    "volume": 399,
+    "rawVolume": 398618,
+    "tradeValue": 7641022,
+    "turnover": "764.1 萬"
   },
   "2537": {
     "code": "2537",
@@ -4573,7 +5818,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.05,
     "close": 11.1,
     "change": -0.15,
-    "volume": 1015
+    "volume": 1015,
+    "rawVolume": 1015171,
+    "tradeValue": 11278852,
+    "turnover": "1127.9 萬"
   },
   "2538": {
     "code": "2538",
@@ -4584,7 +5832,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.8,
     "close": 8.83,
     "change": -0.09,
-    "volume": 251192
+    "volume": 251,
+    "rawVolume": 251192,
+    "tradeValue": 2221104,
+    "turnover": "222.1 萬"
   },
   "2539": {
     "code": "2539",
@@ -4595,7 +5846,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 34,
     "close": 34.25,
     "change": -0.05,
-    "volume": 661
+    "volume": 662,
+    "rawVolume": 661576,
+    "tradeValue": 22585195,
+    "turnover": "2258.5 萬"
   },
   "2540": {
     "code": "2540",
@@ -4606,7 +5860,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.15,
     "close": 48.85,
     "change": 0.4,
-    "volume": 167264
+    "volume": 167,
+    "rawVolume": 167264,
+    "tradeValue": 8144432,
+    "turnover": "814.4 萬"
   },
   "2542": {
     "code": "2542",
@@ -4617,7 +5874,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.15,
     "close": 38.4,
     "change": -0.25,
-    "volume": 11207
+    "volume": 11208,
+    "rawVolume": 11207800,
+    "tradeValue": 430138512,
+    "turnover": "4.3 億"
   },
   "2543": {
     "code": "2543",
@@ -4628,7 +5888,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.15,
     "close": 38.2,
     "change": -0.3,
-    "volume": 547
+    "volume": 548,
+    "rawVolume": 547540,
+    "tradeValue": 20986387,
+    "turnover": "2098.6 萬"
   },
   "2545": {
     "code": "2545",
@@ -4639,7 +5902,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 34.15,
     "close": 34.2,
     "change": -0.25,
-    "volume": 44791
+    "volume": 45,
+    "rawVolume": 44791,
+    "tradeValue": 1534684,
+    "turnover": "153.5 萬"
   },
   "2546": {
     "code": "2546",
@@ -4650,7 +5916,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 104.5,
     "close": 106,
     "change": 1,
-    "volume": 119687
+    "volume": 120,
+    "rawVolume": 119687,
+    "tradeValue": 12576325,
+    "turnover": "1257.6 萬"
   },
   "2547": {
     "code": "2547",
@@ -4661,7 +5930,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.78,
     "close": 9.78,
     "change": -0.01,
-    "volume": 724
+    "volume": 725,
+    "rawVolume": 724577,
+    "tradeValue": 7095318,
+    "turnover": "709.5 萬"
   },
   "2548": {
     "code": "2548",
@@ -4672,7 +5944,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 91.7,
     "close": 91.8,
     "change": 0.2,
-    "volume": 575
+    "volume": 575,
+    "rawVolume": 575056,
+    "tradeValue": 52865324,
+    "turnover": "5286.5 萬"
   },
   "2597": {
     "code": "2597",
@@ -4683,7 +5958,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 167,
     "close": 167.5,
     "change": -0.5,
-    "volume": 272552
+    "volume": 273,
+    "rawVolume": 272552,
+    "tradeValue": 45671962,
+    "turnover": "4567.2 萬"
   },
   "2603": {
     "code": "2603",
@@ -4694,7 +5972,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 236.5,
     "close": 240,
     "change": 2,
-    "volume": 5500
+    "volume": 5500,
+    "rawVolume": 5500000,
+    "tradeValue": 1320000000,
+    "turnover": "13.2 億"
   },
   "2605": {
     "code": "2605",
@@ -4705,7 +5986,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.15,
     "close": 35.4,
     "change": -0.15,
-    "volume": 4547
+    "volume": 4548,
+    "rawVolume": 4547958,
+    "tradeValue": 160377157,
+    "turnover": "1.6 億"
   },
   "2606": {
     "code": "2606",
@@ -4716,7 +6000,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 73.1,
     "close": 73.5,
     "change": -0.1,
-    "volume": 1729
+    "volume": 1729,
+    "rawVolume": 1729086,
+    "tradeValue": 127418729,
+    "turnover": "1.3 億"
   },
   "2607": {
     "code": "2607",
@@ -4727,7 +6014,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 53.4,
     "close": 53.8,
     "change": 0,
-    "volume": 188561
+    "volume": 189,
+    "rawVolume": 188561,
+    "tradeValue": 10098798,
+    "turnover": "1009.9 萬"
   },
   "2608": {
     "code": "2608",
@@ -4738,7 +6028,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 28.6,
     "close": 28.8,
     "change": 0.2,
-    "volume": 85896
+    "volume": 86,
+    "rawVolume": 85896,
+    "tradeValue": 2463051,
+    "turnover": "246.3 萬"
   },
   "2609": {
     "code": "2609",
@@ -4749,7 +6042,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 58.7,
     "close": 58.8,
     "change": -0.6,
-    "volume": 12469
+    "volume": 12470,
+    "rawVolume": 12469577,
+    "tradeValue": 735529470,
+    "turnover": "7.4 億"
   },
   "2610": {
     "code": "2610",
@@ -4760,7 +6056,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.15,
     "close": 20.3,
     "change": -0.15,
-    "volume": 11977
+    "volume": 11977,
+    "rawVolume": 11977056,
+    "tradeValue": 242665652,
+    "turnover": "2.4 億"
   },
   "2611": {
     "code": "2611",
@@ -4771,7 +6070,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.3,
     "close": 14.35,
     "change": -0.15,
-    "volume": 236913
+    "volume": 237,
+    "rawVolume": 236913,
+    "tradeValue": 3403434,
+    "turnover": "340.3 萬"
   },
   "2612": {
     "code": "2612",
@@ -4782,7 +6084,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 61,
     "close": 61.4,
     "change": -0.4,
-    "volume": 131957
+    "volume": 132,
+    "rawVolume": 131957,
+    "tradeValue": 8120884,
+    "turnover": "812.1 萬"
   },
   "2613": {
     "code": "2613",
@@ -4793,7 +6098,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.05,
     "close": 22.2,
     "change": -0.2,
-    "volume": 97537
+    "volume": 98,
+    "rawVolume": 97537,
+    "tradeValue": 2161091,
+    "turnover": "216.1 萬"
   },
   "2614": {
     "code": "2614",
@@ -4804,7 +6112,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19,
     "close": 19.25,
     "change": 0.05,
-    "volume": 2033
+    "volume": 2034,
+    "rawVolume": 2033832,
+    "tradeValue": 38957512,
+    "turnover": "3895.8 萬"
   },
   "2615": {
     "code": "2615",
@@ -4815,7 +6126,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 111.5,
     "close": 112.5,
     "change": -1.5,
-    "volume": 4209
+    "volume": 4210,
+    "rawVolume": 4209797,
+    "tradeValue": 474223057,
+    "turnover": "4.7 億"
   },
   "2616": {
     "code": "2616",
@@ -4826,7 +6140,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.25,
     "close": 13.3,
     "change": 0,
-    "volume": 31106
+    "volume": 31,
+    "rawVolume": 31106,
+    "tradeValue": 412713,
+    "turnover": "41.3 萬"
   },
   "2617": {
     "code": "2617",
@@ -4837,7 +6154,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.9,
     "close": 31.1,
     "change": -0.35,
-    "volume": 792
+    "volume": 793,
+    "rawVolume": 792762,
+    "tradeValue": 24652566,
+    "turnover": "2465.3 萬"
   },
   "2618": {
     "code": "2618",
@@ -4848,7 +6168,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41.85,
     "close": 42.2,
     "change": -0.65,
-    "volume": 17575
+    "volume": 17575,
+    "rawVolume": 17575412,
+    "tradeValue": 740656439,
+    "turnover": "7.4 億"
   },
   "2630": {
     "code": "2630",
@@ -4859,7 +6182,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 46.85,
     "close": 46.85,
     "change": -0.2,
-    "volume": 403948
+    "volume": 404,
+    "rawVolume": 403948,
+    "tradeValue": 18972152,
+    "turnover": "1897.2 萬"
   },
   "2633": {
     "code": "2633",
@@ -4870,7 +6196,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.6,
     "close": 25.8,
     "change": 0.15,
-    "volume": 2936
+    "volume": 2936,
+    "rawVolume": 2936139,
+    "tradeValue": 75381027,
+    "turnover": "7538.1 萬"
   },
   "2634": {
     "code": "2634",
@@ -4881,7 +6210,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 63.8,
     "close": 64.4,
     "change": 0.4,
-    "volume": 4805
+    "volume": 4806,
+    "rawVolume": 4805802,
+    "tradeValue": 308969981,
+    "turnover": "3.1 億"
   },
   "2636": {
     "code": "2636",
@@ -4892,7 +6224,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 70.3,
     "close": 70.7,
     "change": -1,
-    "volume": 181358
+    "volume": 181,
+    "rawVolume": 181358,
+    "tradeValue": 12826787,
+    "turnover": "1282.7 萬"
   },
   "2637": {
     "code": "2637",
@@ -4903,7 +6238,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 95.2,
     "close": 95.3,
     "change": -1.1,
-    "volume": 2302
+    "volume": 2303,
+    "rawVolume": 2302502,
+    "tradeValue": 220590027,
+    "turnover": "2.2 億"
   },
   "2642": {
     "code": "2642",
@@ -4914,7 +6252,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.3,
     "close": 20.35,
     "change": -0.05,
-    "volume": 20158
+    "volume": 20,
+    "rawVolume": 20158,
+    "tradeValue": 410215,
+    "turnover": "41.0 萬"
   },
   "2645": {
     "code": "2645",
@@ -4925,7 +6266,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 173.5,
     "close": 174,
     "change": 1,
-    "volume": 674
+    "volume": 674,
+    "rawVolume": 674343,
+    "tradeValue": 117601034,
+    "turnover": "1.2 億"
   },
   "2646": {
     "code": "2646",
@@ -4936,7 +6280,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.05,
     "close": 20.15,
     "change": 0,
-    "volume": 2336
+    "volume": 2336,
+    "rawVolume": 2336074,
+    "tradeValue": 46997029,
+    "turnover": "4699.7 萬"
   },
   "2701": {
     "code": "2701",
@@ -4947,7 +6294,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.2,
     "close": 10.3,
     "change": 0,
-    "volume": 52791
+    "volume": 53,
+    "rawVolume": 52791,
+    "tradeValue": 541919,
+    "turnover": "54.2 萬"
   },
   "2702": {
     "code": "2702",
@@ -4958,7 +6308,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.2,
     "close": 12.35,
     "change": 0.1,
-    "volume": 37177
+    "volume": 37,
+    "rawVolume": 37177,
+    "tradeValue": 457382,
+    "turnover": "45.7 萬"
   },
   "2704": {
     "code": "2704",
@@ -4969,7 +6322,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44.9,
     "close": 45.15,
     "change": -0.3,
-    "volume": 77222
+    "volume": 77,
+    "rawVolume": 77222,
+    "tradeValue": 3485268,
+    "turnover": "348.5 萬"
   },
   "2705": {
     "code": "2705",
@@ -4980,7 +6336,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.05,
     "close": 15.15,
     "change": 0.05,
-    "volume": 104397
+    "volume": 104,
+    "rawVolume": 104397,
+    "tradeValue": 1581661,
+    "turnover": "158.2 萬"
   },
   "2706": {
     "code": "2706",
@@ -4991,7 +6350,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.15,
     "close": 12.2,
     "change": 0,
-    "volume": 15089
+    "volume": 15,
+    "rawVolume": 15089,
+    "tradeValue": 183725,
+    "turnover": "18.4 萬"
   },
   "2707": {
     "code": "2707",
@@ -5002,7 +6364,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 175,
     "close": 176,
     "change": 0.5,
-    "volume": 78822
+    "volume": 79,
+    "rawVolume": 78822,
+    "tradeValue": 13845675,
+    "turnover": "1384.6 萬"
   },
   "2712": {
     "code": "2712",
@@ -5013,7 +6378,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.35,
     "close": 13.35,
     "change": -0.2,
-    "volume": 3200
+    "volume": 3,
+    "rawVolume": 3200,
+    "tradeValue": 42878,
+    "turnover": "4.3 萬"
   },
   "2722": {
     "code": "2722",
@@ -5024,7 +6392,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.3,
     "close": 21.45,
     "change": 0.05,
-    "volume": 26529
+    "volume": 27,
+    "rawVolume": 26529,
+    "tradeValue": 566859,
+    "turnover": "56.7 萬"
   },
   "2723": {
     "code": "2723",
@@ -5035,7 +6406,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 76.6,
     "close": 77.5,
     "change": 0.1,
-    "volume": 142418
+    "volume": 142,
+    "rawVolume": 142418,
+    "tradeValue": 10978047,
+    "turnover": "1097.8 萬"
   },
   "2727": {
     "code": "2727",
@@ -5046,7 +6420,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 233.5,
     "close": 235,
     "change": -1,
-    "volume": 150961
+    "volume": 151,
+    "rawVolume": 150961,
+    "tradeValue": 35405521,
+    "turnover": "3540.6 萬"
   },
   "2731": {
     "code": "2731",
@@ -5057,7 +6434,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 143,
     "close": 144,
     "change": -0.5,
-    "volume": 91631
+    "volume": 92,
+    "rawVolume": 91631,
+    "tradeValue": 13161259,
+    "turnover": "1316.1 萬"
   },
   "2739": {
     "code": "2739",
@@ -5068,7 +6448,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 36.15,
     "close": 36.5,
     "change": -0.05,
-    "volume": 70879
+    "volume": 71,
+    "rawVolume": 70879,
+    "tradeValue": 2575237,
+    "turnover": "257.5 萬"
   },
   "2748": {
     "code": "2748",
@@ -5079,7 +6462,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.8,
     "close": 39.1,
     "change": 0.3,
-    "volume": 162917
+    "volume": 163,
+    "rawVolume": 162917,
+    "tradeValue": 6335136,
+    "turnover": "633.5 萬"
   },
   "2753": {
     "code": "2753",
@@ -5090,7 +6476,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 180.5,
     "close": 183.5,
     "change": 3.5,
-    "volume": 385921
+    "volume": 386,
+    "rawVolume": 385921,
+    "tradeValue": 70469519,
+    "turnover": "7047.0 萬"
   },
   "2762": {
     "code": "2762",
@@ -5101,7 +6490,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 77.6,
     "close": 78.4,
     "change": -0.8,
-    "volume": 116056
+    "volume": 116,
+    "rawVolume": 116056,
+    "tradeValue": 9119259,
+    "turnover": "911.9 萬"
   },
   "2801": {
     "code": "2801",
@@ -5112,7 +6504,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.1,
     "close": 27.55,
     "change": -0.05,
-    "volume": 17913
+    "volume": 17914,
+    "rawVolume": 17913790,
+    "tradeValue": 490340457,
+    "turnover": "4.9 億"
   },
   "2812": {
     "code": "2812",
@@ -5123,7 +6518,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.75,
     "close": 18.8,
     "change": -0.05,
-    "volume": 11214
+    "volume": 11215,
+    "rawVolume": 11214795,
+    "tradeValue": 210851143,
+    "turnover": "2.1 億"
   },
   "2816": {
     "code": "2816",
@@ -5134,7 +6532,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.6,
     "close": 39.65,
     "change": -0.65,
-    "volume": 374701
+    "volume": 375,
+    "rawVolume": 374701,
+    "tradeValue": 14896740,
+    "turnover": "1489.7 萬"
   },
   "2820": {
     "code": "2820",
@@ -5145,7 +6546,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.7,
     "close": 16.75,
     "change": -0.1,
-    "volume": 2353
+    "volume": 2353,
+    "rawVolume": 2353366,
+    "tradeValue": 39401383,
+    "turnover": "3940.1 萬"
   },
   "2832": {
     "code": "2832",
@@ -5156,7 +6560,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 56.5,
     "close": 56.8,
     "change": -0.1,
-    "volume": 83583
+    "volume": 84,
+    "rawVolume": 83583,
+    "tradeValue": 4742030,
+    "turnover": "474.2 萬"
   },
   "2834": {
     "code": "2834",
@@ -5167,7 +6574,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.4,
     "close": 17.5,
     "change": -0.25,
-    "volume": 37318
+    "volume": 37319,
+    "rawVolume": 37318805,
+    "tradeValue": 653452238,
+    "turnover": "6.5 億"
   },
   "2836": {
     "code": "2836",
@@ -5178,7 +6588,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12,
     "close": 12.05,
     "change": -0.05,
-    "volume": 1872
+    "volume": 1873,
+    "rawVolume": 1872757,
+    "tradeValue": 22569007,
+    "turnover": "2256.9 萬"
   },
   "2838": {
     "code": "2838",
@@ -5189,7 +6602,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.45,
     "close": 20.65,
     "change": 0.05,
-    "volume": 2848
+    "volume": 2848,
+    "rawVolume": 2848143,
+    "tradeValue": 56981301,
+    "turnover": "5698.1 萬"
   },
   "2845": {
     "code": "2845",
@@ -5200,7 +6616,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.95,
     "close": 13.1,
     "change": 0,
-    "volume": 14841
+    "volume": 14842,
+    "rawVolume": 14841518,
+    "tradeValue": 193125785,
+    "turnover": "1.9 億"
   },
   "2849": {
     "code": "2849",
@@ -5211,7 +6630,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.8,
     "close": 16,
     "change": -0.05,
-    "volume": 54065
+    "volume": 54,
+    "rawVolume": 54065,
+    "tradeValue": 862252,
+    "turnover": "86.2 萬"
   },
   "2850": {
     "code": "2850",
@@ -5222,7 +6644,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 156,
     "close": 157,
     "change": -6,
-    "volume": 649
+    "volume": 649,
+    "rawVolume": 649343,
+    "tradeValue": 102385837,
+    "turnover": "1.0 億"
   },
   "2851": {
     "code": "2851",
@@ -5233,7 +6658,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.7,
     "close": 46.1,
     "change": -1.1,
-    "volume": 3396
+    "volume": 3396,
+    "rawVolume": 3396289,
+    "tradeValue": 156554037,
+    "turnover": "1.6 億"
   },
   "2852": {
     "code": "2852",
@@ -5244,7 +6672,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.55,
     "close": 27.6,
     "change": -0.25,
-    "volume": 380754
+    "volume": 381,
+    "rawVolume": 380754,
+    "tradeValue": 10523796,
+    "turnover": "1052.4 萬"
   },
   "2855": {
     "code": "2855",
@@ -5255,7 +6686,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 54.7,
     "close": 56.4,
     "change": -0.2,
-    "volume": 4222
+    "volume": 4222,
+    "rawVolume": 4222173,
+    "tradeValue": 235153677,
+    "turnover": "2.4 億"
   },
   "2880": {
     "code": "2880",
@@ -5266,7 +6700,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44,
     "close": 45.25,
     "change": -0.1,
-    "volume": 13395
+    "volume": 13396,
+    "rawVolume": 13395509,
+    "tradeValue": 598921952,
+    "turnover": "6.0 億"
   },
   "2881": {
     "code": "2881",
@@ -5277,7 +6714,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 149,
     "close": 150.5,
     "change": 0,
-    "volume": 10143
+    "volume": 10143,
+    "rawVolume": 10143000,
+    "tradeValue": 1526521500,
+    "turnover": "15.3 億"
   },
   "2882": {
     "code": "2882",
@@ -5288,7 +6728,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 110,
     "close": 111.5,
     "change": 1,
-    "volume": 13072
+    "volume": 13072,
+    "rawVolume": 13072000,
+    "tradeValue": 1457528000,
+    "turnover": "14.6 億"
   },
   "2883": {
     "code": "2883",
@@ -5299,7 +6742,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 36.4,
     "close": 36.9,
     "change": -1.95,
-    "volume": 124035
+    "volume": 124035,
+    "rawVolume": 124035181,
+    "tradeValue": 4596144853,
+    "turnover": "46.0 億"
   },
   "2884": {
     "code": "2884",
@@ -5310,7 +6756,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44.2,
     "close": 45.35,
     "change": 0.5,
-    "volume": 29162
+    "volume": 29162,
+    "rawVolume": 29162352,
+    "tradeValue": 1309161917,
+    "turnover": "13.1 億"
   },
   "2885": {
     "code": "2885",
@@ -5321,7 +6770,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 66.5,
     "close": 67.4,
     "change": -1.1,
-    "volume": 23394
+    "volume": 23395,
+    "rawVolume": 23394934,
+    "tradeValue": 1568175543,
+    "turnover": "15.7 億"
   },
   "2886": {
     "code": "2886",
@@ -5332,7 +6784,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.4,
     "close": 48.85,
     "change": -0.3,
-    "volume": 30290
+    "volume": 30290,
+    "rawVolume": 30290335,
+    "tradeValue": 1475858210,
+    "turnover": "14.8 億"
   },
   "2887": {
     "code": "2887",
@@ -5343,7 +6798,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.1,
     "close": 41.25,
     "change": -0.7,
-    "volume": 82708
+    "volume": 82709,
+    "rawVolume": 82708620,
+    "tradeValue": 3383107447,
+    "turnover": "33.8 億"
   },
   "2889": {
     "code": "2889",
@@ -5354,7 +6812,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.05,
     "close": 16.15,
     "change": -0.35,
-    "volume": 11163
+    "volume": 11164,
+    "rawVolume": 11163653,
+    "tradeValue": 180969650,
+    "turnover": "1.8 億"
   },
   "2890": {
     "code": "2890",
@@ -5365,7 +6826,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.1,
     "close": 43.65,
     "change": -0.6,
-    "volume": 22127
+    "volume": 22127,
+    "rawVolume": 22127376,
+    "tradeValue": 962579057,
+    "turnover": "9.6 億"
   },
   "2891": {
     "code": "2891",
@@ -5376,7 +6840,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 67.1,
     "close": 67.9,
     "change": -0.5,
-    "volume": 28647
+    "volume": 28647,
+    "rawVolume": 28647138,
+    "tradeValue": 1937917705,
+    "turnover": "19.4 億"
   },
   "2892": {
     "code": "2892",
@@ -5387,7 +6854,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.15,
     "close": 38.7,
     "change": 0.05,
-    "volume": 18760
+    "volume": 18761,
+    "rawVolume": 18760717,
+    "tradeValue": 723073283,
+    "turnover": "7.2 億"
   },
   "2897": {
     "code": "2897",
@@ -5398,7 +6868,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.65,
     "close": 10.8,
     "change": -0.1,
-    "volume": 8785
+    "volume": 8785,
+    "rawVolume": 8785321,
+    "tradeValue": 94589909,
+    "turnover": "9459.0 萬"
   },
   "2901": {
     "code": "2901",
@@ -5409,7 +6882,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.15,
     "close": 24.8,
     "change": 0.65,
-    "volume": 36636
+    "volume": 37,
+    "rawVolume": 36636,
+    "tradeValue": 896819,
+    "turnover": "89.7 萬"
   },
   "2903": {
     "code": "2903",
@@ -5420,7 +6896,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.85,
     "close": 21.95,
     "change": -0.2,
-    "volume": 1960
+    "volume": 1960,
+    "rawVolume": 1960447,
+    "tradeValue": 42989105,
+    "turnover": "4298.9 萬"
   },
   "2904": {
     "code": "2904",
@@ -5431,7 +6910,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.6,
     "close": 12.7,
     "change": 0.1,
-    "volume": 6487
+    "volume": 6,
+    "rawVolume": 6487,
+    "tradeValue": 82199,
+    "turnover": "8.2 萬"
   },
   "2905": {
     "code": "2905",
@@ -5442,7 +6924,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.9,
     "close": 18.05,
     "change": -0.25,
-    "volume": 1176
+    "volume": 1177,
+    "rawVolume": 1176639,
+    "tradeValue": 21193624,
+    "turnover": "2119.4 萬"
   },
   "2906": {
     "code": "2906",
@@ -5453,7 +6938,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.3,
     "close": 13.4,
     "change": 0,
-    "volume": 40114
+    "volume": 40,
+    "rawVolume": 40114,
+    "tradeValue": 535567,
+    "turnover": "53.6 萬"
   },
   "2908": {
     "code": "2908",
@@ -5464,7 +6952,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22,
     "close": 22.1,
     "change": 0.05,
-    "volume": 260894
+    "volume": 261,
+    "rawVolume": 260894,
+    "tradeValue": 5752318,
+    "turnover": "575.2 萬"
   },
   "2910": {
     "code": "2910",
@@ -5475,7 +6966,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.6,
     "close": 23.6,
     "change": 0,
-    "volume": 1000
+    "volume": 1,
+    "rawVolume": 1000,
+    "tradeValue": 23600,
+    "turnover": "2.4 萬"
   },
   "2911": {
     "code": "2911",
@@ -5486,7 +6980,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6,
     "close": 6.14,
     "change": 0.06,
-    "volume": 90769
+    "volume": 91,
+    "rawVolume": 90769,
+    "tradeValue": 549263,
+    "turnover": "54.9 萬"
   },
   "2912": {
     "code": "2912",
@@ -5497,7 +6994,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 210.5,
     "close": 212.5,
     "change": 0,
-    "volume": 2207
+    "volume": 2208,
+    "rawVolume": 2207660,
+    "tradeValue": 467278976,
+    "turnover": "4.7 億"
   },
   "2913": {
     "code": "2913",
@@ -5508,7 +7008,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11,
     "close": 11.1,
     "change": -0.05,
-    "volume": 345222
+    "volume": 345,
+    "rawVolume": 345222,
+    "tradeValue": 3820399,
+    "turnover": "382.0 萬"
   },
   "2915": {
     "code": "2915",
@@ -5519,7 +7022,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 57.7,
     "close": 58.3,
     "change": -0.5,
-    "volume": 1152
+    "volume": 1153,
+    "rawVolume": 1152943,
+    "tradeValue": 67081820,
+    "turnover": "6708.2 萬"
   },
   "2923": {
     "code": "2923",
@@ -5530,7 +7036,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.15,
     "close": 25.4,
     "change": -0.05,
-    "volume": 44485
+    "volume": 44,
+    "rawVolume": 44485,
+    "tradeValue": 1126191,
+    "turnover": "112.6 萬"
   },
   "2929": {
     "code": "2929",
@@ -5541,7 +7050,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 5.77,
     "close": 5.81,
     "change": -0.02,
-    "volume": 34652
+    "volume": 35,
+    "rawVolume": 34652,
+    "tradeValue": 201012,
+    "turnover": "20.1 萬"
   },
   "2939": {
     "code": "2939",
@@ -5552,7 +7064,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.5,
     "close": 21.95,
     "change": 0.05,
-    "volume": 24032
+    "volume": 24,
+    "rawVolume": 24032,
+    "tradeValue": 524688,
+    "turnover": "52.5 萬"
   },
   "2945": {
     "code": "2945",
@@ -5563,7 +7078,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.55,
     "close": 39.9,
     "change": 0.05,
-    "volume": 21688
+    "volume": 22,
+    "rawVolume": 21688,
+    "tradeValue": 863977,
+    "turnover": "86.4 萬"
   },
   "3002": {
     "code": "3002",
@@ -5574,7 +7092,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.05,
     "close": 19.45,
     "change": 0.15,
-    "volume": 397346
+    "volume": 397,
+    "rawVolume": 397346,
+    "tradeValue": 7778847,
+    "turnover": "777.9 萬"
   },
   "3003": {
     "code": "3003",
@@ -5585,7 +7106,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 59.5,
     "close": 59.8,
     "change": -0.6,
-    "volume": 205478
+    "volume": 205,
+    "rawVolume": 205478,
+    "tradeValue": 12318894,
+    "turnover": "1231.9 萬"
   },
   "3004": {
     "code": "3004",
@@ -5596,7 +7120,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 119,
     "close": 121,
     "change": 2,
-    "volume": 488162
+    "volume": 488,
+    "rawVolume": 488162,
+    "tradeValue": 59250288,
+    "turnover": "5925.0 萬"
   },
   "3005": {
     "code": "3005",
@@ -5607,7 +7134,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 116.5,
     "close": 117.5,
     "change": 1,
-    "volume": 975
+    "volume": 975,
+    "rawVolume": 975079,
+    "tradeValue": 114212410,
+    "turnover": "1.1 億"
   },
   "3006": {
     "code": "3006",
@@ -5618,7 +7148,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 279,
     "close": 281,
     "change": -5,
-    "volume": 6910
+    "volume": 6911,
+    "rawVolume": 6910568,
+    "tradeValue": 1943687510,
+    "turnover": "19.4 億"
   },
   "3008": {
     "code": "3008",
@@ -5629,7 +7162,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6090,
     "close": 6290,
     "change": 85,
-    "volume": 1516
+    "volume": 1516,
+    "rawVolume": 1516000,
+    "tradeValue": 9535640000,
+    "turnover": "95.4 億"
   },
   "3010": {
     "code": "3010",
@@ -5640,7 +7176,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 125,
     "close": 126,
     "change": 0.5,
-    "volume": 392956
+    "volume": 393,
+    "rawVolume": 392956,
+    "tradeValue": 49501939,
+    "turnover": "4950.2 萬"
   },
   "3011": {
     "code": "3011",
@@ -5651,7 +7190,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.96,
     "close": 10.05,
     "change": -0.1,
-    "volume": 291227
+    "volume": 291,
+    "rawVolume": 291227,
+    "tradeValue": 2927953,
+    "turnover": "292.8 萬"
   },
   "3013": {
     "code": "3013",
@@ -5662,7 +7204,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 85.8,
     "close": 94,
     "change": 7.2,
-    "volume": 5259
+    "volume": 5260,
+    "rawVolume": 5259584,
+    "tradeValue": 476519270,
+    "turnover": "4.8 億"
   },
   "3014": {
     "code": "3014",
@@ -5673,7 +7218,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 141,
     "close": 142,
     "change": 0.5,
-    "volume": 1276
+    "volume": 1276,
+    "rawVolume": 1276071,
+    "tradeValue": 181883125,
+    "turnover": "1.8 億"
   },
   "3015": {
     "code": "3015",
@@ -5684,7 +7232,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 54.3,
     "close": 54.6,
     "change": -0.6,
-    "volume": 338875
+    "volume": 339,
+    "rawVolume": 338875,
+    "tradeValue": 18548228,
+    "turnover": "1854.8 萬"
   },
   "3016": {
     "code": "3016",
@@ -5695,7 +7246,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 162.5,
     "close": 168,
     "change": -1,
-    "volume": 5580
+    "volume": 5581,
+    "rawVolume": 5580762,
+    "tradeValue": 929303023,
+    "turnover": "9.3 億"
   },
   "3017": {
     "code": "3017",
@@ -5706,7 +7260,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 3385,
     "close": 3440,
     "change": -70,
-    "volume": 3127
+    "volume": 3127,
+    "rawVolume": 3127000,
+    "tradeValue": 10756880000,
+    "turnover": "107.6 億"
   },
   "3018": {
     "code": "3018",
@@ -5717,7 +7274,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.9,
     "close": 12.25,
     "change": 0.25,
-    "volume": 23483
+    "volume": 23,
+    "rawVolume": 23483,
+    "tradeValue": 283133,
+    "turnover": "28.3 萬"
   },
   "3019": {
     "code": "3019",
@@ -5728,7 +7288,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 135.5,
     "close": 137,
     "change": 0.5,
-    "volume": 1848
+    "volume": 1849,
+    "rawVolume": 1848644,
+    "tradeValue": 252365909,
+    "turnover": "2.5 億"
   },
   "3021": {
     "code": "3021",
@@ -5739,7 +7302,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 28.1,
     "close": 28.15,
     "change": -0.3,
-    "volume": 1240
+    "volume": 1241,
+    "rawVolume": 1240592,
+    "tradeValue": 35392285,
+    "turnover": "3539.2 萬"
   },
   "3022": {
     "code": "3022",
@@ -5750,7 +7316,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 91.6,
     "close": 92.6,
     "change": 0.3,
-    "volume": 863
+    "volume": 863,
+    "rawVolume": 863351,
+    "tradeValue": 79741496,
+    "turnover": "7974.1 萬"
   },
   "3023": {
     "code": "3023",
@@ -5761,7 +7330,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 305,
     "close": 309,
     "change": 2,
-    "volume": 715
+    "volume": 716,
+    "rawVolume": 715936,
+    "tradeValue": 219833814,
+    "turnover": "2.2 億"
   },
   "3024": {
     "code": "3024",
@@ -5772,7 +7344,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.05,
     "close": 14.1,
     "change": -0.1,
-    "volume": 562
+    "volume": 562,
+    "rawVolume": 562192,
+    "tradeValue": 7967190,
+    "turnover": "796.7 萬"
   },
   "3025": {
     "code": "3025",
@@ -5783,7 +7358,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 55.7,
     "close": 58.1,
     "change": 5.2,
-    "volume": 706
+    "volume": 707,
+    "rawVolume": 706836,
+    "tradeValue": 40844846,
+    "turnover": "4084.5 萬"
   },
   "3026": {
     "code": "3026",
@@ -5794,7 +7372,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 831,
     "close": 835,
     "change": -17,
-    "volume": 16809
+    "volume": 16809,
+    "rawVolume": 16809000,
+    "tradeValue": 14035515000,
+    "turnover": "140.4 億"
   },
   "3027": {
     "code": "3027",
@@ -5805,7 +7386,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.5,
     "close": 18.7,
     "change": -0.2,
-    "volume": 115914
+    "volume": 116,
+    "rawVolume": 115914,
+    "tradeValue": 2167402,
+    "turnover": "216.7 萬"
   },
   "3028": {
     "code": "3028",
@@ -5816,7 +7400,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 62,
     "close": 62.1,
     "change": -0.8,
-    "volume": 560
+    "volume": 561,
+    "rawVolume": 560567,
+    "tradeValue": 34935759,
+    "turnover": "3493.6 萬"
   },
   "3029": {
     "code": "3029",
@@ -5827,7 +7414,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 118.5,
     "close": 119,
     "change": -1,
-    "volume": 920
+    "volume": 921,
+    "rawVolume": 920932,
+    "tradeValue": 109938348,
+    "turnover": "1.1 億"
   },
   "3030": {
     "code": "3030",
@@ -5838,7 +7428,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 278.5,
     "close": 289,
     "change": 10,
-    "volume": 1666
+    "volume": 1666,
+    "rawVolume": 1666287,
+    "tradeValue": 474168804,
+    "turnover": "4.7 億"
   },
   "3031": {
     "code": "3031",
@@ -5849,7 +7442,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.1,
     "close": 30.5,
     "change": -0.3,
-    "volume": 2758
+    "volume": 2758,
+    "rawVolume": 2758118,
+    "tradeValue": 84904236,
+    "turnover": "8490.4 萬"
   },
   "3032": {
     "code": "3032",
@@ -5860,7 +7456,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 78.4,
     "close": 79.3,
     "change": 1,
-    "volume": 310689
+    "volume": 311,
+    "rawVolume": 310689,
+    "tradeValue": 24634525,
+    "turnover": "2463.5 萬"
   },
   "3033": {
     "code": "3033",
@@ -5871,7 +7470,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.3,
     "close": 42.4,
     "change": -0.2,
-    "volume": 1485
+    "volume": 1486,
+    "rawVolume": 1485998,
+    "tradeValue": 63127384,
+    "turnover": "6312.7 萬"
   },
   "3034": {
     "code": "3034",
@@ -5882,7 +7484,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 541,
     "close": 547,
     "change": 1,
-    "volume": 2451
+    "volume": 2452,
+    "rawVolume": 2451830,
+    "tradeValue": 1339470225,
+    "turnover": "13.4 億"
   },
   "3035": {
     "code": "3035",
@@ -5893,7 +7498,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 208.5,
     "close": 213,
     "change": 2.5,
-    "volume": 4389
+    "volume": 4389,
+    "rawVolume": 4389347,
+    "tradeValue": 929383257,
+    "turnover": "9.3 億"
   },
   "3036": {
     "code": "3036",
@@ -5904,7 +7512,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 205,
     "close": 212.5,
     "change": 7,
-    "volume": 9949
+    "volume": 9950,
+    "rawVolume": 9949553,
+    "tradeValue": 2095926375,
+    "turnover": "21.0 億"
   },
   "3037": {
     "code": "3037",
@@ -5915,7 +7526,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1170,
     "close": 1215,
     "change": 40,
-    "volume": 15498
+    "volume": 15498,
+    "rawVolume": 15498297,
+    "tradeValue": 18588313800,
+    "turnover": "185.9 億"
   },
   "3038": {
     "code": "3038",
@@ -5926,7 +7540,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.6,
     "close": 20.9,
     "change": 0.1,
-    "volume": 203975
+    "volume": 204,
+    "rawVolume": 203975,
+    "tradeValue": 4237694,
+    "turnover": "423.8 萬"
   },
   "3040": {
     "code": "3040",
@@ -5937,7 +7554,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.4,
     "close": 33.4,
     "change": -0.45,
-    "volume": 175521
+    "volume": 176,
+    "rawVolume": 175521,
+    "tradeValue": 5912014,
+    "turnover": "591.2 萬"
   },
   "3041": {
     "code": "3041",
@@ -5948,7 +7568,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.35,
     "close": 24.65,
     "change": 0.3,
-    "volume": 1067
+    "volume": 1068,
+    "rawVolume": 1067759,
+    "tradeValue": 26415169,
+    "turnover": "2641.5 萬"
   },
   "3042": {
     "code": "3042",
@@ -5959,7 +7582,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 207.5,
     "close": 218.5,
     "change": 8.5,
-    "volume": 34574
+    "volume": 34575,
+    "rawVolume": 34574954,
+    "tradeValue": 7506531605,
+    "turnover": "75.1 億"
   },
   "3043": {
     "code": "3043",
@@ -5970,7 +7596,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.15,
     "close": 20.25,
     "change": -0.1,
-    "volume": 58243
+    "volume": 58,
+    "rawVolume": 58243,
+    "tradeValue": 1177001,
+    "turnover": "117.7 萬"
   },
   "3044": {
     "code": "3044",
@@ -5981,7 +7610,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 521,
     "close": 529,
     "change": 4,
-    "volume": 1557
+    "volume": 1558,
+    "rawVolume": 1557583,
+    "tradeValue": 817585685,
+    "turnover": "8.2 億"
   },
   "3045": {
     "code": "3045",
@@ -5992,7 +7624,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 119.5,
     "close": 122,
     "change": 2.5,
-    "volume": 5834
+    "volume": 5835,
+    "rawVolume": 5834785,
+    "tradeValue": 706165948,
+    "turnover": "7.1 億"
   },
   "3046": {
     "code": "3046",
@@ -6003,7 +7638,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 53.2,
     "close": 53.5,
     "change": -0.1,
-    "volume": 95148
+    "volume": 95,
+    "rawVolume": 95148,
+    "tradeValue": 5082430,
+    "turnover": "508.2 萬"
   },
   "3047": {
     "code": "3047",
@@ -6014,7 +7652,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.45,
     "close": 14.5,
     "change": -0.25,
-    "volume": 461361
+    "volume": 461,
+    "rawVolume": 461361,
+    "tradeValue": 6711641,
+    "turnover": "671.2 萬"
   },
   "3048": {
     "code": "3048",
@@ -6025,7 +7666,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.7,
     "close": 52.8,
     "change": 1.1,
-    "volume": 1773
+    "volume": 1774,
+    "rawVolume": 1773847,
+    "tradeValue": 93001978,
+    "turnover": "9300.2 萬"
   },
   "3049": {
     "code": "3049",
@@ -6036,7 +7680,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.2,
     "close": 12.3,
     "change": -0.35,
-    "volume": 4037
+    "volume": 4037,
+    "rawVolume": 4037187,
+    "tradeValue": 49962178,
+    "turnover": "4996.2 萬"
   },
   "3050": {
     "code": "3050",
@@ -6047,7 +7694,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.6,
     "close": 11.75,
     "change": -0.2,
-    "volume": 949
+    "volume": 949,
+    "rawVolume": 949207,
+    "tradeValue": 11127902,
+    "turnover": "1112.8 萬"
   },
   "3051": {
     "code": "3051",
@@ -6058,7 +7708,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.95,
     "close": 23,
     "change": -0.3,
-    "volume": 465031
+    "volume": 465,
+    "rawVolume": 465031,
+    "tradeValue": 10727651,
+    "turnover": "1072.8 萬"
   },
   "3052": {
     "code": "3052",
@@ -6069,7 +7722,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.4,
     "close": 10.45,
     "change": 0.05,
-    "volume": 388657
+    "volume": 389,
+    "rawVolume": 388657,
+    "tradeValue": 4063437,
+    "turnover": "406.3 萬"
   },
   "3054": {
     "code": "3054",
@@ -6080,7 +7736,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 58.5,
     "close": 59.6,
     "change": 0.2,
-    "volume": 123164
+    "volume": 123,
+    "rawVolume": 123164,
+    "tradeValue": 7274364,
+    "turnover": "727.4 萬"
   },
   "3055": {
     "code": "3055",
@@ -6091,7 +7750,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 202,
     "close": 210,
     "change": 0.5,
-    "volume": 1429
+    "volume": 1430,
+    "rawVolume": 1429994,
+    "tradeValue": 296483678,
+    "turnover": "3.0 億"
   },
   "3056": {
     "code": "3056",
@@ -6102,7 +7764,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.7,
     "close": 13.75,
     "change": -0.1,
-    "volume": 422164
+    "volume": 422,
+    "rawVolume": 422164,
+    "tradeValue": 5806532,
+    "turnover": "580.7 萬"
   },
   "3057": {
     "code": "3057",
@@ -6113,7 +7778,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.9,
     "close": 15.9,
     "change": -0.3,
-    "volume": 117456
+    "volume": 117,
+    "rawVolume": 117456,
+    "tradeValue": 1894210,
+    "turnover": "189.4 萬"
   },
   "3058": {
     "code": "3058",
@@ -6124,7 +7792,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.14,
     "close": 8.15,
     "change": -0.05,
-    "volume": 280976
+    "volume": 281,
+    "rawVolume": 280976,
+    "tradeValue": 2295669,
+    "turnover": "229.6 萬"
   },
   "3059": {
     "code": "3059",
@@ -6135,7 +7806,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.15,
     "close": 38.3,
     "change": -0.45,
-    "volume": 1140
+    "volume": 1140,
+    "rawVolume": 1140406,
+    "tradeValue": 43754667,
+    "turnover": "4375.5 萬"
   },
   "3060": {
     "code": "3060",
@@ -6146,7 +7820,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 28.15,
     "close": 28.3,
     "change": 0.2,
-    "volume": 1766
+    "volume": 1766,
+    "rawVolume": 1766140,
+    "tradeValue": 50685174,
+    "turnover": "5068.5 萬"
   },
   "3062": {
     "code": "3062",
@@ -6157,7 +7834,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.15,
     "close": 22.25,
     "change": -0.65,
-    "volume": 1441
+    "volume": 1442,
+    "rawVolume": 1441699,
+    "tradeValue": 32232822,
+    "turnover": "3223.3 萬"
   },
   "3090": {
     "code": "3090",
@@ -6168,7 +7848,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 162,
     "close": 169,
     "change": 8,
-    "volume": 8362
+    "volume": 8362,
+    "rawVolume": 8362101,
+    "tradeValue": 1407416133,
+    "turnover": "14.1 億"
   },
   "3092": {
     "code": "3092",
@@ -6179,7 +7862,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24,
     "close": 24.3,
     "change": -0.7,
-    "volume": 756
+    "volume": 757,
+    "rawVolume": 756516,
+    "tradeValue": 18408455,
+    "turnover": "1840.8 萬"
   },
   "3094": {
     "code": "3094",
@@ -6190,7 +7876,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 61.7,
     "close": 67.7,
     "change": 6.1,
-    "volume": 29571
+    "volume": 29572,
+    "rawVolume": 29571938,
+    "tradeValue": 1943273767,
+    "turnover": "19.4 億"
   },
   "3105": {
     "code": "3105",
@@ -6201,7 +7890,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 572,
     "close": 591,
     "change": 53,
-    "volume": 27304
+    "volume": 27304,
+    "rawVolume": 27304000,
+    "tradeValue": 16136664000,
+    "turnover": "161.4 億"
   },
   "3130": {
     "code": "3130",
@@ -6212,7 +7904,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 208.5,
     "close": 210,
     "change": 1,
-    "volume": 64449
+    "volume": 64,
+    "rawVolume": 64449,
+    "tradeValue": 13471688,
+    "turnover": "1347.2 萬"
   },
   "3135": {
     "code": "3135",
@@ -6223,7 +7918,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 157,
     "close": 157,
     "change": -1,
-    "volume": 326702
+    "volume": 327,
+    "rawVolume": 326702,
+    "tradeValue": 51557046,
+    "turnover": "5155.7 萬"
   },
   "3138": {
     "code": "3138",
@@ -6234,7 +7932,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 98.5,
     "close": 99,
     "change": -2,
-    "volume": 365535
+    "volume": 366,
+    "rawVolume": 365535,
+    "tradeValue": 36240747,
+    "turnover": "3624.1 萬"
   },
   "3149": {
     "code": "3149",
@@ -6245,7 +7946,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 72.2,
     "close": 74.3,
     "change": 0.3,
-    "volume": 37136
+    "volume": 37136,
+    "rawVolume": 37136003,
+    "tradeValue": 2751144047,
+    "turnover": "27.5 億"
   },
   "3150": {
     "code": "3150",
@@ -6256,7 +7960,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.45,
     "close": 15.7,
     "change": 0.05,
-    "volume": 32133
+    "volume": 32,
+    "rawVolume": 32133,
+    "tradeValue": 506164,
+    "turnover": "50.6 萬"
   },
   "3164": {
     "code": "3164",
@@ -6267,7 +7974,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.5,
     "close": 16.5,
     "change": -0.05,
-    "volume": 30213
+    "volume": 30,
+    "rawVolume": 30213,
+    "tradeValue": 499754,
+    "turnover": "50.0 萬"
   },
   "3167": {
     "code": "3167",
@@ -6278,7 +7988,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 908,
     "close": 975,
     "change": 88,
-    "volume": 9021
+    "volume": 9022,
+    "rawVolume": 9021626,
+    "tradeValue": 8573334940,
+    "turnover": "85.7 億"
   },
   "3168": {
     "code": "3168",
@@ -6289,7 +8002,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.8,
     "close": 43.05,
     "change": 0.25,
-    "volume": 3155
+    "volume": 3,
+    "rawVolume": 3155,
+    "tradeValue": 135331,
+    "turnover": "13.5 萬"
   },
   "3189": {
     "code": "3189",
@@ -6300,7 +8016,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 964,
     "close": 1010,
     "change": 40,
-    "volume": 32224
+    "volume": 32224,
+    "rawVolume": 32224071,
+    "tradeValue": 32117333192,
+    "turnover": "321.2 億"
   },
   "3209": {
     "code": "3209",
@@ -6311,7 +8030,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.35,
     "close": 45.35,
     "change": 0,
-    "volume": 553
+    "volume": 554,
+    "rawVolume": 553669,
+    "tradeValue": 25174435,
+    "turnover": "2517.4 萬"
   },
   "3229": {
     "code": "3229",
@@ -6322,7 +8044,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 57.2,
     "close": 59,
     "change": 0.4,
-    "volume": 1070
+    "volume": 1070,
+    "rawVolume": 1070262,
+    "tradeValue": 62224904,
+    "turnover": "6222.5 萬"
   },
   "3231": {
     "code": "3231",
@@ -6333,7 +8058,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 186,
     "close": 186.5,
     "change": -4,
-    "volume": 35616
+    "volume": 35616,
+    "rawVolume": 35616000,
+    "tradeValue": 6642384000,
+    "turnover": "66.4 億"
   },
   "3257": {
     "code": "3257",
@@ -6344,7 +8072,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 49.6,
     "close": 49.7,
     "change": 0.1,
-    "volume": 164320
+    "volume": 164,
+    "rawVolume": 164320,
+    "tradeValue": 8213252,
+    "turnover": "821.3 萬"
   },
   "3266": {
     "code": "3266",
@@ -6355,7 +8086,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.8,
     "close": 14,
     "change": 0,
-    "volume": 19178
+    "volume": 19,
+    "rawVolume": 19178,
+    "tradeValue": 266436,
+    "turnover": "26.6 萬"
   },
   "3296": {
     "code": "3296",
@@ -6366,7 +8100,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 28.1,
     "close": 28.6,
     "change": 0.2,
-    "volume": 71403
+    "volume": 71,
+    "rawVolume": 71403,
+    "tradeValue": 2025378,
+    "turnover": "202.5 萬"
   },
   "3305": {
     "code": "3305",
@@ -6377,7 +8114,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 105,
     "close": 106,
     "change": 0,
-    "volume": 660
+    "volume": 660,
+    "rawVolume": 660406,
+    "tradeValue": 69894062,
+    "turnover": "6989.4 萬"
   },
   "3308": {
     "code": "3308",
@@ -6388,7 +8128,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.25,
     "close": 22.75,
     "change": 0.4,
-    "volume": 84857
+    "volume": 85,
+    "rawVolume": 84857,
+    "tradeValue": 1911816,
+    "turnover": "191.2 萬"
   },
   "3311": {
     "code": "3311",
@@ -6399,7 +8142,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.1,
     "close": 45.15,
     "change": 4.1,
-    "volume": 7066
+    "volume": 7066,
+    "rawVolume": 7066254,
+    "tradeValue": 316399538,
+    "turnover": "3.2 億"
   },
   "3312": {
     "code": "3312",
@@ -6410,7 +8156,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.4,
     "close": 51.5,
     "change": -0.5,
-    "volume": 570
+    "volume": 570,
+    "rawVolume": 570384,
+    "tradeValue": 29557653,
+    "turnover": "2955.8 萬"
   },
   "3321": {
     "code": "3321",
@@ -6421,7 +8170,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18,
     "close": 18.3,
     "change": 0.05,
-    "volume": 139857
+    "volume": 140,
+    "rawVolume": 139857,
+    "tradeValue": 2547603,
+    "turnover": "254.8 萬"
   },
   "3338": {
     "code": "3338",
@@ -6432,7 +8184,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 67.2,
     "close": 67.9,
     "change": -0.1,
-    "volume": 340858
+    "volume": 341,
+    "rawVolume": 340858,
+    "tradeValue": 23099903,
+    "turnover": "2310.0 萬"
   },
   "3346": {
     "code": "3346",
@@ -6443,7 +8198,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.8,
     "close": 24,
     "change": -0.15,
-    "volume": 434042
+    "volume": 434,
+    "rawVolume": 434042,
+    "tradeValue": 10395352,
+    "turnover": "1039.5 萬"
   },
   "3356": {
     "code": "3356",
@@ -6454,7 +8212,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 65.5,
     "close": 65.7,
     "change": -0.3,
-    "volume": 212121
+    "volume": 212,
+    "rawVolume": 212121,
+    "tradeValue": 13998717,
+    "turnover": "1399.9 萬"
   },
   "3376": {
     "code": "3376",
@@ -6465,7 +8226,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 174,
     "close": 174,
     "change": -0.5,
-    "volume": 1408
+    "volume": 1408,
+    "rawVolume": 1408149,
+    "tradeValue": 245962049,
+    "turnover": "2.5 億"
   },
   "3380": {
     "code": "3380",
@@ -6476,7 +8240,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.25,
     "close": 31.3,
     "change": -0.85,
-    "volume": 2569
+    "volume": 2570,
+    "rawVolume": 2569518,
+    "tradeValue": 80834800,
+    "turnover": "8083.5 萬"
   },
   "3406": {
     "code": "3406",
@@ -6487,7 +8254,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 871,
     "close": 950,
     "change": 60,
-    "volume": 6290
+    "volume": 6291,
+    "rawVolume": 6290699,
+    "tradeValue": 5824330929,
+    "turnover": "58.2 億"
   },
   "3413": {
     "code": "3413",
@@ -6498,7 +8268,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 290,
     "close": 293,
     "change": 2,
-    "volume": 545
+    "volume": 546,
+    "rawVolume": 545674,
+    "tradeValue": 159866465,
+    "turnover": "1.6 億"
   },
   "3416": {
     "code": "3416",
@@ -6509,7 +8282,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 161,
     "close": 166.5,
     "change": 4,
-    "volume": 408797
+    "volume": 409,
+    "rawVolume": 408797,
+    "tradeValue": 67489370,
+    "turnover": "6748.9 萬"
   },
   "3419": {
     "code": "3419",
@@ -6520,7 +8296,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.85,
     "close": 11.85,
     "change": -0.2,
-    "volume": 241818
+    "volume": 242,
+    "rawVolume": 241818,
+    "tradeValue": 2886398,
+    "turnover": "288.6 萬"
   },
   "3432": {
     "code": "3432",
@@ -6531,7 +8310,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.75,
     "close": 14.75,
     "change": -0.15,
-    "volume": 51427
+    "volume": 51,
+    "rawVolume": 51427,
+    "tradeValue": 763915,
+    "turnover": "76.4 萬"
   },
   "3437": {
     "code": "3437",
@@ -6542,7 +8324,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.95,
     "close": 22.05,
     "change": -0.4,
-    "volume": 1527
+    "volume": 1527,
+    "rawVolume": 1527483,
+    "tradeValue": 34146350,
+    "turnover": "3414.6 萬"
   },
   "3443": {
     "code": "3443",
@@ -6553,7 +8338,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 7730,
     "close": 7900,
     "change": -140,
-    "volume": 718
+    "volume": 718,
+    "rawVolume": 718321,
+    "tradeValue": 5651744130,
+    "turnover": "56.5 億"
   },
   "3447": {
     "code": "3447",
@@ -6564,7 +8352,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.65,
     "close": 27.65,
     "change": 0.1,
-    "volume": 27060
+    "volume": 27,
+    "rawVolume": 27060,
+    "tradeValue": 750959,
+    "turnover": "75.1 萬"
   },
   "3450": {
     "code": "3450",
@@ -6575,7 +8366,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 508,
     "close": 515,
     "change": -8,
-    "volume": 5342
+    "volume": 5342,
+    "rawVolume": 5342360,
+    "tradeValue": 2754540768,
+    "turnover": "27.5 億"
   },
   "3481": {
     "code": "3481",
@@ -6586,7 +8380,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 52,
     "close": 52.8,
     "change": 0.5,
-    "volume": 210003
+    "volume": 210003,
+    "rawVolume": 210003000,
+    "tradeValue": 11088158399,
+    "turnover": "110.9 億"
   },
   "3494": {
     "code": "3494",
@@ -6597,7 +8394,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 7.02,
     "close": 7.09,
     "change": -0.01,
-    "volume": 44109
+    "volume": 44,
+    "rawVolume": 44109,
+    "tradeValue": 311181,
+    "turnover": "31.1 萬"
   },
   "3501": {
     "code": "3501",
@@ -6608,7 +8408,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 37.6,
     "close": 37.7,
     "change": 0.05,
-    "volume": 55355
+    "volume": 55,
+    "rawVolume": 55355,
+    "tradeValue": 2086764,
+    "turnover": "208.7 萬"
   },
   "3504": {
     "code": "3504",
@@ -6619,7 +8422,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 79.2,
     "close": 80.2,
     "change": 1.1,
-    "volume": 1338
+    "volume": 1338,
+    "rawVolume": 1338044,
+    "tradeValue": 107523162,
+    "turnover": "1.1 億"
   },
   "3515": {
     "code": "3515",
@@ -6630,7 +8436,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 212.5,
     "close": 215,
     "change": 3,
-    "volume": 326295
+    "volume": 326,
+    "rawVolume": 326295,
+    "tradeValue": 69927091,
+    "turnover": "6992.7 萬"
   },
   "3518": {
     "code": "3518",
@@ -6641,7 +8450,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.15,
     "close": 40.35,
     "change": -0.75,
-    "volume": 18736
+    "volume": 18737,
+    "rawVolume": 18736885,
+    "tradeValue": 790875605,
+    "turnover": "7.9 億"
   },
   "3528": {
     "code": "3528",
@@ -6652,7 +8464,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 85.1,
     "close": 86.9,
     "change": 1.3,
-    "volume": 407144
+    "volume": 407,
+    "rawVolume": 407144,
+    "tradeValue": 35256066,
+    "turnover": "3525.6 萬"
   },
   "3530": {
     "code": "3530",
@@ -6663,7 +8478,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 58.9,
     "close": 59,
     "change": -0.2,
-    "volume": 84403
+    "volume": 84,
+    "rawVolume": 84403,
+    "tradeValue": 4991264,
+    "turnover": "499.1 萬"
   },
   "3532": {
     "code": "3532",
@@ -6674,7 +8492,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 465.5,
     "close": 474,
     "change": 3,
-    "volume": 9721
+    "volume": 9721,
+    "rawVolume": 9721232,
+    "tradeValue": 4664509146,
+    "turnover": "46.6 億"
   },
   "3533": {
     "code": "3533",
@@ -6685,7 +8506,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1760,
     "close": 1855,
     "change": 85,
-    "volume": 2677
+    "volume": 2677,
+    "rawVolume": 2677060,
+    "tradeValue": 4851266630,
+    "turnover": "48.5 億"
   },
   "3535": {
     "code": "3535",
@@ -6696,7 +8520,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 90.4,
     "close": 91.3,
     "change": -0.7,
-    "volume": 587
+    "volume": 588,
+    "rawVolume": 587800,
+    "tradeValue": 53529391,
+    "turnover": "5352.9 萬"
   },
   "3543": {
     "code": "3543",
@@ -6707,7 +8534,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 50.5,
     "close": 51.1,
     "change": -0.1,
-    "volume": 2685
+    "volume": 2685,
+    "rawVolume": 2685192,
+    "tradeValue": 137259056,
+    "turnover": "1.4 億"
   },
   "3545": {
     "code": "3545",
@@ -6718,7 +8548,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.6,
     "close": 51.6,
     "change": -0.2,
-    "volume": 662
+    "volume": 663,
+    "rawVolume": 662736,
+    "tradeValue": 34621414,
+    "turnover": "3462.1 萬"
   },
   "3550": {
     "code": "3550",
@@ -6729,7 +8562,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.7,
     "close": 25.7,
     "change": -0.2,
-    "volume": 2399
+    "volume": 2400,
+    "rawVolume": 2399524,
+    "tradeValue": 62543684,
+    "turnover": "6254.4 萬"
   },
   "3557": {
     "code": "3557",
@@ -6740,7 +8576,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.85,
     "close": 23.1,
     "change": 0.1,
-    "volume": 27269
+    "volume": 27,
+    "rawVolume": 27269,
+    "tradeValue": 625078,
+    "turnover": "62.5 萬"
   },
   "3563": {
     "code": "3563",
@@ -6751,7 +8590,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 750,
     "close": 754,
     "change": -53,
-    "volume": 2874
+    "volume": 2875,
+    "rawVolume": 2874564,
+    "tradeValue": 2215536443,
+    "turnover": "22.2 億"
   },
   "3576": {
     "code": "3576",
@@ -6762,7 +8604,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.5,
     "close": 18.5,
     "change": -1.2,
-    "volume": 55900
+    "volume": 55900,
+    "rawVolume": 55900173,
+    "tradeValue": 1069810419,
+    "turnover": "10.7 億"
   },
   "3583": {
     "code": "3583",
@@ -6773,7 +8618,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 703,
     "close": 707,
     "change": 0,
-    "volume": 684
+    "volume": 684,
+    "rawVolume": 684194,
+    "tradeValue": 486080777,
+    "turnover": "4.9 億"
   },
   "3588": {
     "code": "3588",
@@ -6784,7 +8632,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 54.2,
     "close": 59.2,
     "change": 5.3,
-    "volume": 611
+    "volume": 611,
+    "rawVolume": 611029,
+    "tradeValue": 35651569,
+    "turnover": "3565.2 萬"
   },
   "3591": {
     "code": "3591",
@@ -6795,7 +8646,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.7,
     "close": 26.9,
     "change": -0.55,
-    "volume": 1378
+    "volume": 1379,
+    "rawVolume": 1378569,
+    "tradeValue": 37741642,
+    "turnover": "3774.2 萬"
   },
   "3592": {
     "code": "3592",
@@ -6806,7 +8660,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 237,
     "close": 238,
     "change": 0.5,
-    "volume": 1116
+    "volume": 1116,
+    "rawVolume": 1116128,
+    "tradeValue": 266723671,
+    "turnover": "2.7 億"
   },
   "3593": {
     "code": "3593",
@@ -6817,7 +8674,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.5,
     "close": 11.5,
     "change": 0.5,
-    "volume": 20260
+    "volume": 20,
+    "rawVolume": 20260,
+    "tradeValue": 223255,
+    "turnover": "22.3 萬"
   },
   "3596": {
     "code": "3596",
@@ -6828,7 +8688,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 152,
     "close": 153,
     "change": 0,
-    "volume": 560
+    "volume": 561,
+    "rawVolume": 560797,
+    "tradeValue": 85761942,
+    "turnover": "8576.2 萬"
   },
   "3605": {
     "code": "3605",
@@ -6839,7 +8702,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 168.5,
     "close": 178,
     "change": 7.5,
-    "volume": 11986
+    "volume": 11987,
+    "rawVolume": 11986946,
+    "tradeValue": 2080833958,
+    "turnover": "20.8 億"
   },
   "3607": {
     "code": "3607",
@@ -6850,7 +8716,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.85,
     "close": 13.95,
     "change": -0.05,
-    "volume": 127845
+    "volume": 128,
+    "rawVolume": 127845,
+    "tradeValue": 1782150,
+    "turnover": "178.2 萬"
   },
   "3617": {
     "code": "3617",
@@ -6861,7 +8730,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 241.5,
     "close": 243,
     "change": 1,
-    "volume": 86640
+    "volume": 87,
+    "rawVolume": 86640,
+    "tradeValue": 21014638,
+    "turnover": "2101.5 萬"
   },
   "3622": {
     "code": "3622",
@@ -6872,7 +8744,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.85,
     "close": 45.9,
     "change": -0.2,
-    "volume": 83314
+    "volume": 83,
+    "rawVolume": 83314,
+    "tradeValue": 3829183,
+    "turnover": "382.9 萬"
   },
   "3645": {
     "code": "3645",
@@ -6883,7 +8758,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 73.8,
     "close": 74.2,
     "change": -1.1,
-    "volume": 3575
+    "volume": 3575,
+    "rawVolume": 3575306,
+    "tradeValue": 266999816,
+    "turnover": "2.7 億"
   },
   "3652": {
     "code": "3652",
@@ -6894,7 +8772,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.8,
     "close": 34.5,
     "change": 0.3,
-    "volume": 56085
+    "volume": 56,
+    "rawVolume": 56085,
+    "tradeValue": 1914167,
+    "turnover": "191.4 萬"
   },
   "3653": {
     "code": "3653",
@@ -6905,7 +8786,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6665,
     "close": 6875,
     "change": 75,
-    "volume": 616
+    "volume": 617,
+    "rawVolume": 616931,
+    "tradeValue": 4192372040,
+    "turnover": "41.9 億"
   },
   "3661": {
     "code": "3661",
@@ -6916,7 +8800,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 3735,
     "close": 3765,
     "change": 25,
-    "volume": 953
+    "volume": 953,
+    "rawVolume": 953454,
+    "tradeValue": 3595359310,
+    "turnover": "36.0 億"
   },
   "3665": {
     "code": "3665",
@@ -6927,7 +8814,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 2510,
     "close": 2555,
     "change": -40,
-    "volume": 3055
+    "volume": 3056,
+    "rawVolume": 3055668,
+    "tradeValue": 7846329410,
+    "turnover": "78.5 億"
   },
   "3669": {
     "code": "3669",
@@ -6938,7 +8828,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.75,
     "close": 33.4,
     "change": 0.4,
-    "volume": 248576
+    "volume": 249,
+    "rawVolume": 248576,
+    "tradeValue": 8270829,
+    "turnover": "827.1 萬"
   },
   "3673": {
     "code": "3673",
@@ -6949,7 +8842,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 71.7,
     "close": 73.3,
     "change": -2.2,
-    "volume": 26102
+    "volume": 26103,
+    "rawVolume": 26102941,
+    "tradeValue": 1921816472,
+    "turnover": "19.2 億"
   },
   "3679": {
     "code": "3679",
@@ -6960,7 +8856,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 107.5,
     "close": 108.5,
     "change": 0.5,
-    "volume": 64247
+    "volume": 64,
+    "rawVolume": 64247,
+    "tradeValue": 6944138,
+    "turnover": "694.4 萬"
   },
   "3686": {
     "code": "3686",
@@ -6971,7 +8870,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.8,
     "close": 16,
     "change": -0.3,
-    "volume": 486960
+    "volume": 487,
+    "rawVolume": 486960,
+    "tradeValue": 7966382,
+    "turnover": "796.6 萬"
   },
   "3694": {
     "code": "3694",
@@ -6982,7 +8884,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.1,
     "close": 51.2,
     "change": -0.3,
-    "volume": 283839
+    "volume": 284,
+    "rawVolume": 283839,
+    "tradeValue": 14561576,
+    "turnover": "1456.2 萬"
   },
   "3701": {
     "code": "3701",
@@ -6993,7 +8898,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.9,
     "close": 50.4,
     "change": 4.5,
-    "volume": 8814
+    "volume": 8814,
+    "rawVolume": 8814066,
+    "tradeValue": 426330824,
+    "turnover": "4.3 億"
   },
   "3702": {
     "code": "3702",
@@ -7004,7 +8912,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 114,
     "close": 119,
     "change": 5,
-    "volume": 9434
+    "volume": 9434,
+    "rawVolume": 9434235,
+    "tradeValue": 1107114279,
+    "turnover": "11.1 億"
   },
   "3703": {
     "code": "3703",
@@ -7015,7 +8926,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.5,
     "close": 19.55,
     "change": -0.05,
-    "volume": 308715
+    "volume": 309,
+    "rawVolume": 308715,
+    "tradeValue": 6046435,
+    "turnover": "604.6 萬"
   },
   "3704": {
     "code": "3704",
@@ -7026,7 +8940,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.05,
     "close": 40.05,
     "change": -0.45,
-    "volume": 1609
+    "volume": 1609,
+    "rawVolume": 1609432,
+    "tradeValue": 64661444,
+    "turnover": "6466.1 萬"
   },
   "3705": {
     "code": "3705",
@@ -7037,7 +8954,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 56.2,
     "close": 56.7,
     "change": 0,
-    "volume": 75603
+    "volume": 76,
+    "rawVolume": 75603,
+    "tradeValue": 4276864,
+    "turnover": "427.7 萬"
   },
   "3706": {
     "code": "3706",
@@ -7048,7 +8968,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 79.6,
     "close": 82.1,
     "change": 2.8,
-    "volume": 12817
+    "volume": 12817,
+    "rawVolume": 12817231,
+    "tradeValue": 1041036289,
+    "turnover": "10.4 億"
   },
   "3708": {
     "code": "3708",
@@ -7059,7 +8982,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 97.6,
     "close": 98.9,
     "change": 0,
-    "volume": 306248
+    "volume": 306,
+    "rawVolume": 306248,
+    "tradeValue": 30238820,
+    "turnover": "3023.9 萬"
   },
   "3711": {
     "code": "3711",
@@ -7070,7 +8996,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 693,
     "close": 710,
     "change": 7,
-    "volume": 8885
+    "volume": 8886,
+    "rawVolume": 8885905,
+    "tradeValue": 6245817713,
+    "turnover": "62.5 億"
   },
   "3712": {
     "code": "3712",
@@ -7081,7 +9010,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.45,
     "close": 20.65,
     "change": 0,
-    "volume": 358923
+    "volume": 359,
+    "rawVolume": 358923,
+    "tradeValue": 7389273,
+    "turnover": "738.9 萬"
   },
   "3714": {
     "code": "3714",
@@ -7092,7 +9024,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 68,
     "close": 68.8,
     "change": -1.1,
-    "volume": 10454
+    "volume": 10455,
+    "rawVolume": 10454787,
+    "tradeValue": 722039562,
+    "turnover": "7.2 億"
   },
   "3715": {
     "code": "3715",
@@ -7103,7 +9038,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 125,
     "close": 129,
     "change": 2.5,
-    "volume": 4697
+    "volume": 4698,
+    "rawVolume": 4697705,
+    "tradeValue": 599287788,
+    "turnover": "6.0 億"
   },
   "3716": {
     "code": "3716",
@@ -7114,7 +9052,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.85,
     "close": 34,
     "change": -0.25,
-    "volume": 156287
+    "volume": 156,
+    "rawVolume": 156287,
+    "tradeValue": 5312562,
+    "turnover": "531.3 萬"
   },
   "3717": {
     "code": "3717",
@@ -7125,7 +9066,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.05,
     "close": 27.35,
     "change": -0.35,
-    "volume": 8871
+    "volume": 8872,
+    "rawVolume": 8871822,
+    "tradeValue": 243862923,
+    "turnover": "2.4 億"
   },
   "4104": {
     "code": "4104",
@@ -7136,7 +9080,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 72.3,
     "close": 72.7,
     "change": 0,
-    "volume": 80457
+    "volume": 80,
+    "rawVolume": 80457,
+    "tradeValue": 5833712,
+    "turnover": "583.4 萬"
   },
   "4106": {
     "code": "4106",
@@ -7147,7 +9094,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.95,
     "close": 24.1,
     "change": -0.25,
-    "volume": 155555
+    "volume": 156,
+    "rawVolume": 155555,
+    "tradeValue": 3746011,
+    "turnover": "374.6 萬"
   },
   "4108": {
     "code": "4108",
@@ -7158,7 +9108,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.4,
     "close": 11.5,
     "change": 0,
-    "volume": 50723
+    "volume": 51,
+    "rawVolume": 50723,
+    "tradeValue": 581314,
+    "turnover": "58.1 萬"
   },
   "4119": {
     "code": "4119",
@@ -7169,7 +9122,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 55.1,
     "close": 55.7,
     "change": 0.2,
-    "volume": 65763
+    "volume": 66,
+    "rawVolume": 65763,
+    "tradeValue": 3648542,
+    "turnover": "364.9 萬"
   },
   "4133": {
     "code": "4133",
@@ -7180,7 +9136,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.4,
     "close": 20.65,
     "change": 0,
-    "volume": 30488
+    "volume": 30,
+    "rawVolume": 30488,
+    "tradeValue": 626279,
+    "turnover": "62.6 萬"
   },
   "4137": {
     "code": "4137",
@@ -7191,7 +9150,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 76.2,
     "close": 76.3,
     "change": -1,
-    "volume": 96735
+    "volume": 97,
+    "rawVolume": 96735,
+    "tradeValue": 7442921,
+    "turnover": "744.3 萬"
   },
   "4142": {
     "code": "4142",
@@ -7202,7 +9164,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.05,
     "close": 18.1,
     "change": -0.15,
-    "volume": 554
+    "volume": 555,
+    "rawVolume": 554793,
+    "tradeValue": 10053316,
+    "turnover": "1005.3 萬"
   },
   "4148": {
     "code": "4148",
@@ -7213,7 +9178,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.6,
     "close": 31.8,
     "change": -0.2,
-    "volume": 25747
+    "volume": 26,
+    "rawVolume": 25747,
+    "tradeValue": 816963,
+    "turnover": "81.7 萬"
   },
   "4155": {
     "code": "4155",
@@ -7224,7 +9192,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.6,
     "close": 14.85,
     "change": 0.2,
-    "volume": 274351
+    "volume": 274,
+    "rawVolume": 274351,
+    "tradeValue": 4045547,
+    "turnover": "404.6 萬"
   },
   "4164": {
     "code": "4164",
@@ -7235,7 +9206,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.95,
     "close": 27.1,
     "change": -0.25,
-    "volume": 355144
+    "volume": 355,
+    "rawVolume": 355144,
+    "tradeValue": 9628659,
+    "turnover": "962.9 萬"
   },
   "4169": {
     "code": "4169",
@@ -7246,7 +9220,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 149,
     "close": 151,
     "change": -1,
-    "volume": 55654
+    "volume": 56,
+    "rawVolume": 55654,
+    "tradeValue": 8376462,
+    "turnover": "837.6 萬"
   },
   "4178": {
     "code": "4178",
@@ -7257,7 +9234,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17,
     "close": 18.35,
     "change": 1.65,
-    "volume": 913
+    "volume": 913,
+    "rawVolume": 913402,
+    "tradeValue": 16631209,
+    "turnover": "1663.1 萬"
   },
   "4190": {
     "code": "4190",
@@ -7268,7 +9248,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.75,
     "close": 25,
     "change": 0.05,
-    "volume": 10274
+    "volume": 10,
+    "rawVolume": 10274,
+    "tradeValue": 255774,
+    "turnover": "25.6 萬"
   },
   "4195": {
     "code": "4195",
@@ -7279,7 +9262,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.35,
     "close": 15.7,
     "change": -0.4,
-    "volume": 174365
+    "volume": 174,
+    "rawVolume": 174365,
+    "tradeValue": 2720951,
+    "turnover": "272.1 萬"
   },
   "4306": {
     "code": "4306",
@@ -7290,7 +9276,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.45,
     "close": 14.45,
     "change": -0.25,
-    "volume": 1003
+    "volume": 1003,
+    "rawVolume": 1003498,
+    "tradeValue": 14574210,
+    "turnover": "1457.4 萬"
   },
   "4414": {
     "code": "4414",
@@ -7301,7 +9290,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.07,
     "close": 8.11,
     "change": -0.03,
-    "volume": 146069
+    "volume": 146,
+    "rawVolume": 146069,
+    "tradeValue": 1183279,
+    "turnover": "118.3 萬"
   },
   "4426": {
     "code": "4426",
@@ -7312,7 +9304,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 7.53,
     "close": 7.66,
     "change": 0.05,
-    "volume": 70001
+    "volume": 70,
+    "rawVolume": 70001,
+    "tradeValue": 533311,
+    "turnover": "53.3 萬"
   },
   "4438": {
     "code": "4438",
@@ -7323,7 +9318,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 57,
     "close": 57.2,
     "change": 0.2,
-    "volume": 26288
+    "volume": 26,
+    "rawVolume": 26288,
+    "tradeValue": 1503509,
+    "turnover": "150.4 萬"
   },
   "4439": {
     "code": "4439",
@@ -7334,7 +9332,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 97,
     "close": 97.7,
     "change": -0.7,
-    "volume": 6015
+    "volume": 6,
+    "rawVolume": 6015,
+    "tradeValue": 587376,
+    "turnover": "58.7 萬"
   },
   "4440": {
     "code": "4440",
@@ -7345,7 +9346,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.45,
     "close": 17.55,
     "change": 0,
-    "volume": 30000
+    "volume": 30,
+    "rawVolume": 30000,
+    "tradeValue": 524550,
+    "turnover": "52.5 萬"
   },
   "4441": {
     "code": "4441",
@@ -7356,7 +9360,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 170,
     "close": 170,
     "change": -1.5,
-    "volume": 30869
+    "volume": 31,
+    "rawVolume": 30869,
+    "tradeValue": 5265329,
+    "turnover": "526.5 萬"
   },
   "4526": {
     "code": "4526",
@@ -7367,7 +9374,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 34.15,
     "close": 34.4,
     "change": 0.35,
-    "volume": 8738
+    "volume": 8739,
+    "rawVolume": 8738505,
+    "tradeValue": 308522992,
+    "turnover": "3.1 億"
   },
   "4532": {
     "code": "4532",
@@ -7378,7 +9388,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.65,
     "close": 24.8,
     "change": -0.05,
-    "volume": 530
+    "volume": 531,
+    "rawVolume": 530666,
+    "tradeValue": 13112701,
+    "turnover": "1311.3 萬"
   },
   "4536": {
     "code": "4536",
@@ -7389,7 +9402,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 160,
     "close": 162,
     "change": 1,
-    "volume": 132564
+    "volume": 133,
+    "rawVolume": 132564,
+    "tradeValue": 21332315,
+    "turnover": "2133.2 萬"
   },
   "4540": {
     "code": "4540",
@@ -7400,7 +9416,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 61.3,
     "close": 61.8,
     "change": -0.3,
-    "volume": 1519
+    "volume": 1519,
+    "rawVolume": 1519386,
+    "tradeValue": 94060139,
+    "turnover": "9406.0 萬"
   },
   "4545": {
     "code": "4545",
@@ -7411,7 +9430,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.5,
     "close": 39.4,
     "change": 0.3,
-    "volume": 1012
+    "volume": 1013,
+    "rawVolume": 1012709,
+    "tradeValue": 40098937,
+    "turnover": "4009.9 萬"
   },
   "4551": {
     "code": "4551",
@@ -7422,7 +9444,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 168.5,
     "close": 172.5,
     "change": -2,
-    "volume": 1565
+    "volume": 1565,
+    "rawVolume": 1565007,
+    "tradeValue": 268416058,
+    "turnover": "2.7 億"
   },
   "4552": {
     "code": "4552",
@@ -7433,7 +9458,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.5,
     "close": 15.65,
     "change": -0.15,
-    "volume": 66636
+    "volume": 67,
+    "rawVolume": 66636,
+    "tradeValue": 1041114,
+    "turnover": "104.1 萬"
   },
   "4555": {
     "code": "4555",
@@ -7444,7 +9472,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41.6,
     "close": 42.3,
     "change": 0.15,
-    "volume": 75083
+    "volume": 75,
+    "rawVolume": 75083,
+    "tradeValue": 3156087,
+    "turnover": "315.6 萬"
   },
   "4557": {
     "code": "4557",
@@ -7455,7 +9486,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 50.1,
     "close": 50.3,
     "change": 0,
-    "volume": 35344
+    "volume": 35,
+    "rawVolume": 35344,
+    "tradeValue": 1774202,
+    "turnover": "177.4 萬"
   },
   "4560": {
     "code": "4560",
@@ -7466,7 +9500,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.3,
     "close": 29.4,
     "change": -0.5,
-    "volume": 229000
+    "volume": 229,
+    "rawVolume": 229000,
+    "tradeValue": 6764300,
+    "turnover": "676.4 萬"
   },
   "4562": {
     "code": "4562",
@@ -7477,7 +9514,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.45,
     "close": 30.95,
     "change": 0,
-    "volume": 114402
+    "volume": 114,
+    "rawVolume": 114402,
+    "tradeValue": 3538750,
+    "turnover": "353.9 萬"
   },
   "4564": {
     "code": "4564",
@@ -7488,7 +9528,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.05,
     "close": 16.3,
     "change": -0.1,
-    "volume": 332041
+    "volume": 332,
+    "rawVolume": 332041,
+    "tradeValue": 5380556,
+    "turnover": "538.1 萬"
   },
   "4566": {
     "code": "4566",
@@ -7499,7 +9542,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 74.3,
     "close": 75.2,
     "change": 1.1,
-    "volume": 3816
+    "volume": 3817,
+    "rawVolume": 3816528,
+    "tradeValue": 289419494,
+    "turnover": "2.9 億"
   },
   "4569": {
     "code": "4569",
@@ -7510,7 +9556,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 153,
     "close": 155,
     "change": -2.5,
-    "volume": 19365
+    "volume": 19,
+    "rawVolume": 19365,
+    "tradeValue": 2994454,
+    "turnover": "299.4 萬"
   },
   "4571": {
     "code": "4571",
@@ -7521,7 +9570,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 152.5,
     "close": 154,
     "change": 0.5,
-    "volume": 56720
+    "volume": 57,
+    "rawVolume": 56720,
+    "tradeValue": 8713465,
+    "turnover": "871.3 萬"
   },
   "4572": {
     "code": "4572",
@@ -7532,7 +9584,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 138.5,
     "close": 138.5,
     "change": 0,
-    "volume": 11521
+    "volume": 12,
+    "rawVolume": 11521,
+    "tradeValue": 1606005,
+    "turnover": "160.6 萬"
   },
   "4576": {
     "code": "4576",
@@ -7543,7 +9598,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 230.5,
     "close": 237.5,
     "change": 1.5,
-    "volume": 1065
+    "volume": 1065,
+    "rawVolume": 1065162,
+    "tradeValue": 250138653,
+    "turnover": "2.5 億"
   },
   "4581": {
     "code": "4581",
@@ -7554,7 +9612,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 47.75,
     "close": 47.85,
     "change": -0.35,
-    "volume": 3045
+    "volume": 3,
+    "rawVolume": 3045,
+    "tradeValue": 145519,
+    "turnover": "14.6 萬"
   },
   "4582": {
     "code": "4582",
@@ -7565,7 +9626,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.2,
     "close": 22.4,
     "change": -0.1,
-    "volume": 33230
+    "volume": 33,
+    "rawVolume": 33230,
+    "tradeValue": 741445,
+    "turnover": "74.1 萬"
   },
   "4583": {
     "code": "4583",
@@ -7576,7 +9640,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 413.5,
     "close": 419.5,
     "change": -7,
-    "volume": 79949
+    "volume": 80,
+    "rawVolume": 79949,
+    "tradeValue": 33663536,
+    "turnover": "3366.4 萬"
   },
   "4585": {
     "code": "4585",
@@ -7587,7 +9654,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 290,
     "close": 294.5,
     "change": 2.5,
-    "volume": 96701
+    "volume": 97,
+    "rawVolume": 96701,
+    "tradeValue": 28263773,
+    "turnover": "2826.4 萬"
   },
   "4588": {
     "code": "4588",
@@ -7598,7 +9668,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 55.2,
     "close": 55.8,
     "change": -0.2,
-    "volume": 22386
+    "volume": 22,
+    "rawVolume": 22386,
+    "tradeValue": 1239906,
+    "turnover": "124.0 萬"
   },
   "4590": {
     "code": "4590",
@@ -7609,7 +9682,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 88.1,
     "close": 88.2,
     "change": -0.9,
-    "volume": 133483
+    "volume": 133,
+    "rawVolume": 133483,
+    "tradeValue": 11787338,
+    "turnover": "1178.7 萬"
   },
   "4720": {
     "code": "4720",
@@ -7620,7 +9696,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19,
     "close": 19.05,
     "change": -0.25,
-    "volume": 304048
+    "volume": 304,
+    "rawVolume": 304048,
+    "tradeValue": 5797600,
+    "turnover": "579.8 萬"
   },
   "4722": {
     "code": "4722",
@@ -7631,7 +9710,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 194.5,
     "close": 209.5,
     "change": 19,
-    "volume": 2273
+    "volume": 2274,
+    "rawVolume": 2273814,
+    "tradeValue": 461332222,
+    "turnover": "4.6 億"
   },
   "4736": {
     "code": "4736",
@@ -7642,7 +9724,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 129,
     "close": 130,
     "change": 0,
-    "volume": 97667
+    "volume": 98,
+    "rawVolume": 97667,
+    "tradeValue": 12697904,
+    "turnover": "1269.8 萬"
   },
   "4737": {
     "code": "4737",
@@ -7653,7 +9738,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 55,
     "close": 55.4,
     "change": 0,
-    "volume": 38645
+    "volume": 39,
+    "rawVolume": 38645,
+    "tradeValue": 2139606,
+    "turnover": "214.0 萬"
   },
   "4739": {
     "code": "4739",
@@ -7664,7 +9752,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 86.2,
     "close": 87.5,
     "change": -0.9,
-    "volume": 1654
+    "volume": 1655,
+    "rawVolume": 1654514,
+    "tradeValue": 144158251,
+    "turnover": "1.4 億"
   },
   "4746": {
     "code": "4746",
@@ -7675,7 +9766,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.6,
     "close": 49,
     "change": 0.05,
-    "volume": 444421
+    "volume": 444,
+    "rawVolume": 444421,
+    "tradeValue": 21744515,
+    "turnover": "2174.5 萬"
   },
   "4755": {
     "code": "4755",
@@ -7686,7 +9780,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 116,
     "close": 119,
     "change": 1,
-    "volume": 155047
+    "volume": 155,
+    "rawVolume": 155047,
+    "tradeValue": 18228125,
+    "turnover": "1822.8 萬"
   },
   "4763": {
     "code": "4763",
@@ -7697,7 +9794,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 46.85,
     "close": 46.85,
     "change": -2.05,
-    "volume": 11589
+    "volume": 11589,
+    "rawVolume": 11589391,
+    "tradeValue": 550892988,
+    "turnover": "5.5 億"
   },
   "4764": {
     "code": "4764",
@@ -7708,7 +9808,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 182.5,
     "close": 185,
     "change": -4,
-    "volume": 1155
+    "volume": 1155,
+    "rawVolume": 1155256,
+    "tradeValue": 214667964,
+    "turnover": "2.1 億"
   },
   "4766": {
     "code": "4766",
@@ -7719,7 +9822,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 339.5,
     "close": 342.5,
     "change": 2,
-    "volume": 73624
+    "volume": 74,
+    "rawVolume": 73624,
+    "tradeValue": 25099153,
+    "turnover": "2509.9 萬"
   },
   "4770": {
     "code": "4770",
@@ -7730,7 +9836,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 273.5,
     "close": 275,
     "change": -7,
-    "volume": 871
+    "volume": 872,
+    "rawVolume": 871633,
+    "tradeValue": 240515294,
+    "turnover": "2.4 億"
   },
   "4771": {
     "code": "4771",
@@ -7741,7 +9850,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 212.5,
     "close": 213.5,
     "change": -1,
-    "volume": 51963
+    "volume": 52,
+    "rawVolume": 51963,
+    "tradeValue": 11107470,
+    "turnover": "1110.7 萬"
   },
   "4807": {
     "code": "4807",
@@ -7752,7 +9864,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.1,
     "close": 29.8,
     "change": 0.45,
-    "volume": 60509
+    "volume": 61,
+    "rawVolume": 60509,
+    "tradeValue": 1773564,
+    "turnover": "177.4 萬"
   },
   "4904": {
     "code": "4904",
@@ -7763,7 +9878,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 103,
     "close": 105,
     "change": 1.5,
-    "volume": 3201
+    "volume": 3202,
+    "rawVolume": 3201796,
+    "tradeValue": 333612954,
+    "turnover": "3.3 億"
   },
   "4906": {
     "code": "4906",
@@ -7774,7 +9892,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.85,
     "close": 40.5,
     "change": -1.8,
-    "volume": 11744
+    "volume": 11744,
+    "rawVolume": 11744264,
+    "tradeValue": 478969850,
+    "turnover": "4.8 億"
   },
   "4912": {
     "code": "4912",
@@ -7785,7 +9906,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 100,
     "close": 107,
     "change": 7,
-    "volume": 1798
+    "volume": 1799,
+    "rawVolume": 1798906,
+    "tradeValue": 190956560,
+    "turnover": "1.9 億"
   },
   "4915": {
     "code": "4915",
@@ -7796,7 +9920,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 63.1,
     "close": 65,
     "change": 1.5,
-    "volume": 2662
+    "volume": 2662,
+    "rawVolume": 2662280,
+    "tradeValue": 170446146,
+    "turnover": "1.7 億"
   },
   "4916": {
     "code": "4916",
@@ -7807,7 +9934,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 103,
     "close": 103,
     "change": -1,
-    "volume": 1928
+    "volume": 1928,
+    "rawVolume": 1928234,
+    "tradeValue": 200595600,
+    "turnover": "2.0 億"
   },
   "4919": {
     "code": "4919",
@@ -7818,7 +9948,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 139,
     "close": 152,
     "change": 13.5,
-    "volume": 21151
+    "volume": 21152,
+    "rawVolume": 21151511,
+    "tradeValue": 3150093712,
+    "turnover": "31.5 億"
   },
   "4927": {
     "code": "4927",
@@ -7829,7 +9962,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.6,
     "close": 43.8,
     "change": -0.7,
-    "volume": 1834
+    "volume": 1834,
+    "rawVolume": 1834309,
+    "tradeValue": 80628614,
+    "turnover": "8062.9 萬"
   },
   "4930": {
     "code": "4930",
@@ -7840,7 +9976,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.85,
     "close": 15.95,
     "change": 0.05,
-    "volume": 32140
+    "volume": 32,
+    "rawVolume": 32140,
+    "tradeValue": 511202,
+    "turnover": "51.1 萬"
   },
   "4934": {
     "code": "4934",
@@ -7851,7 +9990,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.5,
     "close": 14.5,
     "change": -0.45,
-    "volume": 487149
+    "volume": 487,
+    "rawVolume": 487149,
+    "tradeValue": 7123099,
+    "turnover": "712.3 萬"
   },
   "4935": {
     "code": "4935",
@@ -7862,7 +10004,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.1,
     "close": 34.05,
     "change": -0.15,
-    "volume": 131289
+    "volume": 131,
+    "rawVolume": 131289,
+    "tradeValue": 4429499,
+    "turnover": "442.9 萬"
   },
   "4938": {
     "code": "4938",
@@ -7873,7 +10018,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 89.2,
     "close": 90.2,
     "change": 0.4,
-    "volume": 6887
+    "volume": 6888,
+    "rawVolume": 6887853,
+    "tradeValue": 618646673,
+    "turnover": "6.2 億"
   },
   "4942": {
     "code": "4942",
@@ -7884,7 +10032,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.45,
     "close": 31.8,
     "change": -0.1,
-    "volume": 89195
+    "volume": 89,
+    "rawVolume": 89195,
+    "tradeValue": 2821832,
+    "turnover": "282.2 萬"
   },
   "4943": {
     "code": "4943",
@@ -7895,7 +10046,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6.6,
     "close": 6.67,
     "change": -0.24,
-    "volume": 50554
+    "volume": 51,
+    "rawVolume": 50554,
+    "tradeValue": 336992,
+    "turnover": "33.7 萬"
   },
   "4949": {
     "code": "4949",
@@ -7906,7 +10060,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 75.5,
     "close": 75.9,
     "change": -0.4,
-    "volume": 269362
+    "volume": 269,
+    "rawVolume": 269362,
+    "tradeValue": 20483378,
+    "turnover": "2048.3 萬"
   },
   "4952": {
     "code": "4952",
@@ -7917,7 +10074,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.7,
     "close": 49.65,
     "change": 0.25,
-    "volume": 304454
+    "volume": 304,
+    "rawVolume": 304454,
+    "tradeValue": 15147830,
+    "turnover": "1514.8 萬"
   },
   "4956": {
     "code": "4956",
@@ -7928,7 +10088,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 46.2,
     "close": 47.25,
     "change": 0.75,
-    "volume": 21286
+    "volume": 21286,
+    "rawVolume": 21286091,
+    "tradeValue": 1017874414,
+    "turnover": "10.2 億"
   },
   "4958": {
     "code": "4958",
@@ -7939,7 +10102,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 514,
     "close": 561,
     "change": 51,
-    "volume": 65790
+    "volume": 65790,
+    "rawVolume": 65790000,
+    "tradeValue": 36908190000,
+    "turnover": "369.1 億"
   },
   "4960": {
     "code": "4960",
@@ -7950,7 +10116,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.6,
     "close": 23.9,
     "change": -0.5,
-    "volume": 5391
+    "volume": 5391,
+    "rawVolume": 5391096,
+    "tradeValue": 129712693,
+    "turnover": "1.3 億"
   },
   "4961": {
     "code": "4961",
@@ -7961,7 +10130,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 179.5,
     "close": 186,
     "change": 5,
-    "volume": 2413
+    "volume": 2414,
+    "rawVolume": 2413984,
+    "tradeValue": 450150019,
+    "turnover": "4.5 億"
   },
   "4967": {
     "code": "4967",
@@ -7972,7 +10144,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 271.5,
     "close": 272,
     "change": -3,
-    "volume": 1098
+    "volume": 1099,
+    "rawVolume": 1098693,
+    "tradeValue": 299672756,
+    "turnover": "3.0 億"
   },
   "4968": {
     "code": "4968",
@@ -7983,7 +10158,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 97,
     "close": 101,
     "change": 4.4,
-    "volume": 2244
+    "volume": 2245,
+    "rawVolume": 2244713,
+    "tradeValue": 225567055,
+    "turnover": "2.3 億"
   },
   "4976": {
     "code": "4976",
@@ -7994,7 +10172,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 36,
     "close": 36.05,
     "change": 0.25,
-    "volume": 847
+    "volume": 847,
+    "rawVolume": 847068,
+    "tradeValue": 30802132,
+    "turnover": "3080.2 萬"
   },
   "4977": {
     "code": "4977",
@@ -8005,7 +10186,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 167.5,
     "close": 170.5,
     "change": 1.5,
-    "volume": 1199
+    "volume": 1199,
+    "rawVolume": 1199078,
+    "tradeValue": 203560491,
+    "turnover": "2.0 億"
   },
   "4989": {
     "code": "4989",
@@ -8016,7 +10200,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 60.4,
     "close": 61.1,
     "change": 0.1,
-    "volume": 1665
+    "volume": 1666,
+    "rawVolume": 1665543,
+    "tradeValue": 101547798,
+    "turnover": "1.0 億"
   },
   "4994": {
     "code": "4994",
@@ -8027,7 +10214,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 81.4,
     "close": 81.6,
     "change": -0.2,
-    "volume": 10235
+    "volume": 10,
+    "rawVolume": 10235,
+    "tradeValue": 835455,
+    "turnover": "83.5 萬"
   },
   "4999": {
     "code": "4999",
@@ -8038,7 +10228,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.65,
     "close": 17.65,
     "change": -0.2,
-    "volume": 68134
+    "volume": 68,
+    "rawVolume": 68134,
+    "tradeValue": 1208753,
+    "turnover": "120.9 萬"
   },
   "5007": {
     "code": "5007",
@@ -8049,7 +10242,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 56.3,
     "close": 56.4,
     "change": 0,
-    "volume": 8786
+    "volume": 9,
+    "rawVolume": 8786,
+    "tradeValue": 494263,
+    "turnover": "49.4 萬"
   },
   "5203": {
     "code": "5203",
@@ -8060,7 +10256,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 57.8,
     "close": 58.2,
     "change": -0.2,
-    "volume": 69274
+    "volume": 69,
+    "rawVolume": 69274,
+    "tradeValue": 4030469,
+    "turnover": "403.0 萬"
   },
   "5215": {
     "code": "5215",
@@ -8071,7 +10270,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 37.75,
     "close": 37.75,
     "change": -0.15,
-    "volume": 31621
+    "volume": 32,
+    "rawVolume": 31621,
+    "tradeValue": 1202505,
+    "turnover": "120.3 萬"
   },
   "5222": {
     "code": "5222",
@@ -8082,7 +10284,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 105.5,
     "close": 106.5,
     "change": 0,
-    "volume": 118037
+    "volume": 118,
+    "rawVolume": 118037,
+    "tradeValue": 12549343,
+    "turnover": "1254.9 萬"
   },
   "5225": {
     "code": "5225",
@@ -8093,7 +10298,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 55.1,
     "close": 55.5,
     "change": 0.1,
-    "volume": 64304
+    "volume": 64,
+    "rawVolume": 64304,
+    "tradeValue": 3561112,
+    "turnover": "356.1 萬"
   },
   "5234": {
     "code": "5234",
@@ -8104,7 +10312,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 302,
     "close": 302.5,
     "change": -6,
-    "volume": 458163
+    "volume": 458,
+    "rawVolume": 458163,
+    "tradeValue": 139533149,
+    "turnover": "1.4 億"
   },
   "5236": {
     "code": "5236",
@@ -8115,7 +10326,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 136.5,
     "close": 137,
     "change": -0.5,
-    "volume": 65712
+    "volume": 66,
+    "rawVolume": 65712,
+    "tradeValue": 9012434,
+    "turnover": "901.2 萬"
   },
   "5243": {
     "code": "5243",
@@ -8126,7 +10340,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 90.7,
     "close": 93.2,
     "change": 1.7,
-    "volume": 1158
+    "volume": 1158,
+    "rawVolume": 1158249,
+    "tradeValue": 106954129,
+    "turnover": "1.1 億"
   },
   "5244": {
     "code": "5244",
@@ -8137,7 +10354,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.3,
     "close": 35.75,
     "change": 0.15,
-    "volume": 48300
+    "volume": 48,
+    "rawVolume": 48300,
+    "tradeValue": 1719059,
+    "turnover": "171.9 萬"
   },
   "5258": {
     "code": "5258",
@@ -8148,7 +10368,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41.65,
     "close": 42.25,
     "change": -0.15,
-    "volume": 236387
+    "volume": 236,
+    "rawVolume": 236387,
+    "tradeValue": 9923707,
+    "turnover": "992.4 萬"
   },
   "5269": {
     "code": "5269",
@@ -8159,7 +10382,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1455,
     "close": 1475,
     "change": 15,
-    "volume": 208165
+    "volume": 208,
+    "rawVolume": 208165,
+    "tradeValue": 305666335,
+    "turnover": "3.1 億"
   },
   "5283": {
     "code": "5283",
@@ -8170,7 +10396,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 52.6,
     "close": 53,
     "change": 0.2,
-    "volume": 18316
+    "volume": 18,
+    "rawVolume": 18316,
+    "tradeValue": 967495,
+    "turnover": "96.7 萬"
   },
   "5284": {
     "code": "5284",
@@ -8181,7 +10410,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 297,
     "close": 298,
     "change": -1.5,
-    "volume": 160096
+    "volume": 160,
+    "rawVolume": 160096,
+    "tradeValue": 47768882,
+    "turnover": "4776.9 萬"
   },
   "5285": {
     "code": "5285",
@@ -8192,7 +10424,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 90.2,
     "close": 94.2,
     "change": 4.1,
-    "volume": 1550
+    "volume": 1551,
+    "rawVolume": 1550671,
+    "tradeValue": 143729583,
+    "turnover": "1.4 億"
   },
   "5288": {
     "code": "5288",
@@ -8203,7 +10438,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 184.5,
     "close": 190,
     "change": 6.5,
-    "volume": 344431
+    "volume": 344,
+    "rawVolume": 344431,
+    "tradeValue": 65423891,
+    "turnover": "6542.4 萬"
   },
   "5292": {
     "code": "5292",
@@ -8214,7 +10452,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 228.5,
     "close": 237,
     "change": 7,
-    "volume": 489503
+    "volume": 490,
+    "rawVolume": 489503,
+    "tradeValue": 115217981,
+    "turnover": "1.2 億"
   },
   "5306": {
     "code": "5306",
@@ -8225,7 +10466,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 87.8,
     "close": 88.4,
     "change": -0.4,
-    "volume": 186616
+    "volume": 187,
+    "rawVolume": 186616,
+    "tradeValue": 16440878,
+    "turnover": "1644.1 萬"
   },
   "5388": {
     "code": "5388",
@@ -8236,7 +10480,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 70.7,
     "close": 71.3,
     "change": -0.2,
-    "volume": 2516
+    "volume": 2516,
+    "rawVolume": 2516492,
+    "tradeValue": 178861273,
+    "turnover": "1.8 億"
   },
   "5434": {
     "code": "5434",
@@ -8247,7 +10494,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 550,
     "close": 567,
     "change": 12,
-    "volume": 750
+    "volume": 751,
+    "rawVolume": 750830,
+    "tradeValue": 421353864,
+    "turnover": "4.2 億"
   },
   "5469": {
     "code": "5469",
@@ -8258,7 +10508,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 73.5,
     "close": 74.6,
     "change": 0.6,
-    "volume": 1285
+    "volume": 1286,
+    "rawVolume": 1285551,
+    "tradeValue": 95563820,
+    "turnover": "9556.4 萬"
   },
   "5471": {
     "code": "5471",
@@ -8269,7 +10522,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 52.3,
     "close": 52.4,
     "change": 0.1,
-    "volume": 784
+    "volume": 785,
+    "rawVolume": 784557,
+    "tradeValue": 41384708,
+    "turnover": "4138.5 萬"
   },
   "5484": {
     "code": "5484",
@@ -8280,7 +10536,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.15,
     "close": 39.2,
     "change": -0.4,
-    "volume": 122331
+    "volume": 122,
+    "rawVolume": 122331,
+    "tradeValue": 4812453,
+    "turnover": "481.2 萬"
   },
   "5515": {
     "code": "5515",
@@ -8291,7 +10550,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51,
     "close": 51.5,
     "change": -0.4,
-    "volume": 293058
+    "volume": 293,
+    "rawVolume": 293058,
+    "tradeValue": 15093316,
+    "turnover": "1509.3 萬"
   },
   "5519": {
     "code": "5519",
@@ -8302,7 +10564,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.1,
     "close": 25.15,
     "change": -0.15,
-    "volume": 77809
+    "volume": 78,
+    "rawVolume": 77809,
+    "tradeValue": 1956408,
+    "turnover": "195.6 萬"
   },
   "5521": {
     "code": "5521",
@@ -8313,7 +10578,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.5,
     "close": 10.65,
     "change": 0.05,
-    "volume": 942
+    "volume": 942,
+    "rawVolume": 942139,
+    "tradeValue": 9970615,
+    "turnover": "997.1 萬"
   },
   "5522": {
     "code": "5522",
@@ -8324,7 +10592,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 60.8,
     "close": 60.8,
     "change": -0.2,
-    "volume": 467206
+    "volume": 467,
+    "rawVolume": 467206,
+    "tradeValue": 28511900,
+    "turnover": "2851.2 萬"
   },
   "5525": {
     "code": "5525",
@@ -8335,7 +10606,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.8,
     "close": 21.9,
     "change": -0.1,
-    "volume": 57058
+    "volume": 57,
+    "rawVolume": 57058,
+    "tradeValue": 1246772,
+    "turnover": "124.7 萬"
   },
   "5531": {
     "code": "5531",
@@ -8346,7 +10620,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6.86,
     "close": 6.91,
     "change": -0.01,
-    "volume": 423058
+    "volume": 423,
+    "rawVolume": 423058,
+    "tradeValue": 2912934,
+    "turnover": "291.3 萬"
   },
   "5533": {
     "code": "5533",
@@ -8357,7 +10634,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.8,
     "close": 13.9,
     "change": -0.05,
-    "volume": 100100
+    "volume": 100,
+    "rawVolume": 100100,
+    "tradeValue": 1388384,
+    "turnover": "138.8 萬"
   },
   "5534": {
     "code": "5534",
@@ -8368,7 +10648,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 73,
     "close": 73.3,
     "change": 0.2,
-    "volume": 505
+    "volume": 506,
+    "rawVolume": 505887,
+    "tradeValue": 37025407,
+    "turnover": "3702.5 萬"
   },
   "5538": {
     "code": "5538",
@@ -8379,7 +10662,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.8,
     "close": 35.95,
     "change": -0.3,
-    "volume": 45837
+    "volume": 46,
+    "rawVolume": 45837,
+    "tradeValue": 1653171,
+    "turnover": "165.3 萬"
   },
   "5546": {
     "code": "5546",
@@ -8390,7 +10676,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.6,
     "close": 13.85,
     "change": -0.5,
-    "volume": 64484
+    "volume": 64,
+    "rawVolume": 64484,
+    "tradeValue": 884925,
+    "turnover": "88.5 萬"
   },
   "5607": {
     "code": "5607",
@@ -8401,7 +10690,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.6,
     "close": 51.9,
     "change": -0.5,
-    "volume": 442373
+    "volume": 442,
+    "rawVolume": 442373,
+    "tradeValue": 22915279,
+    "turnover": "2291.5 萬"
   },
   "5608": {
     "code": "5608",
@@ -8412,7 +10704,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.7,
     "close": 17,
     "change": 0.05,
-    "volume": 1736
+    "volume": 1736,
+    "rawVolume": 1736303,
+    "tradeValue": 29343931,
+    "turnover": "2934.4 萬"
   },
   "5706": {
     "code": "5706",
@@ -8423,7 +10718,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44,
     "close": 44.2,
     "change": 0.05,
-    "volume": 34462
+    "volume": 34,
+    "rawVolume": 34462,
+    "tradeValue": 1520388,
+    "turnover": "152.0 萬"
   },
   "5871": {
     "code": "5871",
@@ -8434,7 +10732,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 106,
     "close": 107.5,
     "change": 0.5,
-    "volume": 7876
+    "volume": 7876,
+    "rawVolume": 7876457,
+    "tradeValue": 839516160,
+    "turnover": "8.4 億"
   },
   "5876": {
     "code": "5876",
@@ -8445,7 +10746,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 47.9,
     "close": 48.4,
     "change": -0.75,
-    "volume": 10364
+    "volume": 10364,
+    "rawVolume": 10364447,
+    "tradeValue": 500702711,
+    "turnover": "5.0 億"
   },
   "5880": {
     "code": "5880",
@@ -8456,7 +10760,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.65,
     "close": 26,
     "change": -0.1,
-    "volume": 17025
+    "volume": 17025,
+    "rawVolume": 17025431,
+    "tradeValue": 439993403,
+    "turnover": "4.4 億"
   },
   "5906": {
     "code": "5906",
@@ -8467,7 +10774,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41.3,
     "close": 41.3,
     "change": 0.3,
-    "volume": 1000
+    "volume": 1,
+    "rawVolume": 1000,
+    "tradeValue": 41300,
+    "turnover": "4.1 萬"
   },
   "5907": {
     "code": "5907",
@@ -8478,7 +10788,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 4.76,
     "close": 4.8,
     "change": -0.01,
-    "volume": 233385
+    "volume": 233,
+    "rawVolume": 233385,
+    "tradeValue": 1116871,
+    "turnover": "111.7 萬"
   },
   "6005": {
     "code": "6005",
@@ -8489,7 +10802,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.4,
     "close": 31.9,
     "change": -0.15,
-    "volume": 8047
+    "volume": 8048,
+    "rawVolume": 8047795,
+    "tradeValue": 254942883,
+    "turnover": "2.5 億"
   },
   "6024": {
     "code": "6024",
@@ -8500,7 +10816,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 59.7,
     "close": 59.9,
     "change": -0.5,
-    "volume": 271843
+    "volume": 272,
+    "rawVolume": 271843,
+    "tradeValue": 16304846,
+    "turnover": "1630.5 萬"
   },
   "6108": {
     "code": "6108",
@@ -8511,7 +10830,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.8,
     "close": 25,
     "change": -0.05,
-    "volume": 2564
+    "volume": 2564,
+    "rawVolume": 2564254,
+    "tradeValue": 65577206,
+    "turnover": "6557.7 萬"
   },
   "6112": {
     "code": "6112",
@@ -8522,7 +10844,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 47.4,
     "close": 47.7,
     "change": -0.35,
-    "volume": 513
+    "volume": 513,
+    "rawVolume": 513036,
+    "tradeValue": 24461017,
+    "turnover": "2446.1 萬"
   },
   "6115": {
     "code": "6115",
@@ -8533,7 +10858,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.95,
     "close": 44.05,
     "change": 0.05,
-    "volume": 73924
+    "volume": 74,
+    "rawVolume": 73924,
+    "tradeValue": 3253180,
+    "turnover": "325.3 萬"
   },
   "6116": {
     "code": "6116",
@@ -8544,7 +10872,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.5,
     "close": 15.65,
     "change": -0.7,
-    "volume": 122735
+    "volume": 122736,
+    "rawVolume": 122735728,
+    "tradeValue": 1938864796,
+    "turnover": "19.4 億"
   },
   "6117": {
     "code": "6117",
@@ -8555,7 +10886,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 61.6,
     "close": 62.3,
     "change": 0.1,
-    "volume": 158239
+    "volume": 158,
+    "rawVolume": 158239,
+    "tradeValue": 9826388,
+    "turnover": "982.6 萬"
   },
   "6120": {
     "code": "6120",
@@ -8566,7 +10900,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.45,
     "close": 14.75,
     "change": 0.4,
-    "volume": 32148
+    "volume": 32148,
+    "rawVolume": 32148411,
+    "tradeValue": 480663059,
+    "turnover": "4.8 億"
   },
   "6128": {
     "code": "6128",
@@ -8577,7 +10914,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.15,
     "close": 19.25,
     "change": 0.05,
-    "volume": 16167
+    "volume": 16,
+    "rawVolume": 16167,
+    "tradeValue": 310858,
+    "turnover": "31.1 萬"
   },
   "6133": {
     "code": "6133",
@@ -8588,7 +10928,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.3,
     "close": 29.3,
     "change": -0.3,
-    "volume": 10855
+    "volume": 10855,
+    "rawVolume": 10855089,
+    "tradeValue": 324307853,
+    "turnover": "3.2 億"
   },
   "6136": {
     "code": "6136",
@@ -8599,7 +10942,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.1,
     "close": 25.25,
     "change": 0.2,
-    "volume": 390720
+    "volume": 391,
+    "rawVolume": 390720,
+    "tradeValue": 9853708,
+    "turnover": "985.4 萬"
   },
   "6139": {
     "code": "6139",
@@ -8610,7 +10956,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 750,
     "close": 759,
     "change": 3,
-    "volume": 3014
+    "volume": 3014,
+    "rawVolume": 3014465,
+    "tradeValue": 2289924133,
+    "turnover": "22.9 億"
   },
   "6141": {
     "code": "6141",
@@ -8621,7 +10970,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 50.8,
     "close": 52.2,
     "change": 0.4,
-    "volume": 1323
+    "volume": 1324,
+    "rawVolume": 1323629,
+    "tradeValue": 68557462,
+    "turnover": "6855.7 萬"
   },
   "6142": {
     "code": "6142",
@@ -8632,7 +10984,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.09,
     "close": 9.17,
     "change": -0.27,
-    "volume": 734
+    "volume": 734,
+    "rawVolume": 734389,
+    "tradeValue": 6749306,
+    "turnover": "674.9 萬"
   },
   "6152": {
     "code": "6152",
@@ -8643,7 +10998,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.05,
     "close": 15.45,
     "change": 0.15,
-    "volume": 1040
+    "volume": 1041,
+    "rawVolume": 1040623,
+    "tradeValue": 15849444,
+    "turnover": "1584.9 萬"
   },
   "6153": {
     "code": "6153",
@@ -8654,7 +11012,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.7,
     "close": 17.8,
     "change": -0.4,
-    "volume": 3966
+    "volume": 3967,
+    "rawVolume": 3966841,
+    "tradeValue": 71445803,
+    "turnover": "7144.6 萬"
   },
   "6155": {
     "code": "6155",
@@ -8665,7 +11026,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 64.2,
     "close": 69.6,
     "change": 6.3,
-    "volume": 10413
+    "volume": 10413,
+    "rawVolume": 10413045,
+    "tradeValue": 709506992,
+    "turnover": "7.1 億"
   },
   "6164": {
     "code": "6164",
@@ -8676,7 +11040,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.45,
     "close": 12.55,
     "change": -0.05,
-    "volume": 192930
+    "volume": 193,
+    "rawVolume": 192930,
+    "tradeValue": 2423887,
+    "turnover": "242.4 萬"
   },
   "6165": {
     "code": "6165",
@@ -8687,7 +11054,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 49.5,
     "close": 49.6,
     "change": -0.4,
-    "volume": 284325
+    "volume": 284,
+    "rawVolume": 284325,
+    "tradeValue": 14260601,
+    "turnover": "1426.1 萬"
   },
   "6166": {
     "code": "6166",
@@ -8698,7 +11068,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 128.5,
     "close": 130,
     "change": -3,
-    "volume": 1276
+    "volume": 1276,
+    "rawVolume": 1276252,
+    "tradeValue": 166479137,
+    "turnover": "1.7 億"
   },
   "6168": {
     "code": "6168",
@@ -8709,7 +11082,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.7,
     "close": 47,
     "change": 1.75,
-    "volume": 5130
+    "volume": 5130,
+    "rawVolume": 5130479,
+    "tradeValue": 237784994,
+    "turnover": "2.4 億"
   },
   "6176": {
     "code": "6176",
@@ -8720,7 +11096,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 90.8,
     "close": 91.4,
     "change": 0.2,
-    "volume": 1062
+    "volume": 1062,
+    "rawVolume": 1062269,
+    "tradeValue": 97026229,
+    "turnover": "9702.6 萬"
   },
   "6177": {
     "code": "6177",
@@ -8731,7 +11110,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 46.2,
     "close": 46.65,
     "change": 0.2,
-    "volume": 1612
+    "volume": 1613,
+    "rawVolume": 1612608,
+    "tradeValue": 75097020,
+    "turnover": "7509.7 萬"
   },
   "6183": {
     "code": "6183",
@@ -8742,7 +11124,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 91,
     "close": 92.3,
     "change": 0.5,
-    "volume": 11899
+    "volume": 12,
+    "rawVolume": 11899,
+    "tradeValue": 1092881,
+    "turnover": "109.3 萬"
   },
   "6184": {
     "code": "6184",
@@ -8753,7 +11138,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.05,
     "close": 40.4,
     "change": 0.1,
-    "volume": 32765
+    "volume": 33,
+    "rawVolume": 32765,
+    "tradeValue": 1318780,
+    "turnover": "131.9 萬"
   },
   "6189": {
     "code": "6189",
@@ -8764,7 +11152,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 49.8,
     "close": 50.2,
     "change": -0.2,
-    "volume": 243441
+    "volume": 243,
+    "rawVolume": 243441,
+    "tradeValue": 12206916,
+    "turnover": "1220.7 萬"
   },
   "6191": {
     "code": "6191",
@@ -8775,7 +11166,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 83.8,
     "close": 84.3,
     "change": 0.3,
-    "volume": 1084
+    "volume": 1085,
+    "rawVolume": 1084592,
+    "tradeValue": 91262523,
+    "turnover": "9126.3 萬"
   },
   "6192": {
     "code": "6192",
@@ -8786,7 +11180,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 108.5,
     "close": 110,
     "change": 0.5,
-    "volume": 130793
+    "volume": 131,
+    "rawVolume": 130793,
+    "tradeValue": 14266822,
+    "turnover": "1426.7 萬"
   },
   "6196": {
     "code": "6196",
@@ -8797,7 +11194,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 579,
     "close": 602,
     "change": 17,
-    "volume": 1948
+    "volume": 1949,
+    "rawVolume": 1948826,
+    "tradeValue": 1163116422,
+    "turnover": "11.6 億"
   },
   "6197": {
     "code": "6197",
@@ -8808,7 +11208,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 324,
     "close": 330,
     "change": 4,
-    "volume": 1809
+    "volume": 1810,
+    "rawVolume": 1809543,
+    "tradeValue": 593888454,
+    "turnover": "5.9 億"
   },
   "6201": {
     "code": "6201",
@@ -8819,7 +11222,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44.15,
     "close": 44.55,
     "change": -0.05,
-    "volume": 22383
+    "volume": 22,
+    "rawVolume": 22383,
+    "tradeValue": 992710,
+    "turnover": "99.3 萬"
   },
   "6202": {
     "code": "6202",
@@ -8830,7 +11236,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 58.6,
     "close": 60.1,
     "change": 1.5,
-    "volume": 3638
+    "volume": 3639,
+    "rawVolume": 3638957,
+    "tradeValue": 218673460,
+    "turnover": "2.2 億"
   },
   "6205": {
     "code": "6205",
@@ -8841,7 +11250,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 70.2,
     "close": 71.8,
     "change": 0.5,
-    "volume": 1310
+    "volume": 1310,
+    "rawVolume": 1310192,
+    "tradeValue": 93766633,
+    "turnover": "9376.7 萬"
   },
   "6206": {
     "code": "6206",
@@ -8852,7 +11264,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 138.5,
     "close": 139,
     "change": -0.5,
-    "volume": 281465
+    "volume": 281,
+    "rawVolume": 281465,
+    "tradeValue": 39175551,
+    "turnover": "3917.6 萬"
   },
   "6209": {
     "code": "6209",
@@ -8863,7 +11278,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 81.1,
     "close": 82.7,
     "change": 1,
-    "volume": 9114
+    "volume": 9114,
+    "rawVolume": 9114038,
+    "tradeValue": 753405266,
+    "turnover": "7.5 億"
   },
   "6213": {
     "code": "6213",
@@ -8874,7 +11292,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 639,
     "close": 683,
     "change": 41,
-    "volume": 23938
+    "volume": 23938,
+    "rawVolume": 23938000,
+    "tradeValue": 16349654000,
+    "turnover": "163.5 億"
   },
   "6214": {
     "code": "6214",
@@ -8885,7 +11306,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 188,
     "close": 189,
     "change": 1,
-    "volume": 732
+    "volume": 732,
+    "rawVolume": 732126,
+    "tradeValue": 138337659,
+    "turnover": "1.4 億"
   },
   "6215": {
     "code": "6215",
@@ -8896,7 +11320,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 96.5,
     "close": 97.1,
     "change": -0.6,
-    "volume": 269464
+    "volume": 269,
+    "rawVolume": 269464,
+    "tradeValue": 26129709,
+    "turnover": "2613.0 萬"
   },
   "6216": {
     "code": "6216",
@@ -8907,7 +11334,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.65,
     "close": 19.75,
     "change": -0.2,
-    "volume": 60632
+    "volume": 61,
+    "rawVolume": 60632,
+    "tradeValue": 1195623,
+    "turnover": "119.6 萬"
   },
   "6224": {
     "code": "6224",
@@ -8918,7 +11348,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 79.1,
     "close": 81.7,
     "change": 2.9,
-    "volume": 1382
+    "volume": 1382,
+    "rawVolume": 1382127,
+    "tradeValue": 112172600,
+    "turnover": "1.1 億"
   },
   "6225": {
     "code": "6225",
@@ -8929,7 +11362,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 66.9,
     "close": 66.9,
     "change": 6,
-    "volume": 168037
+    "volume": 168,
+    "rawVolume": 168037,
+    "tradeValue": 11241656,
+    "turnover": "1124.2 萬"
   },
   "6226": {
     "code": "6226",
@@ -8940,7 +11376,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44.55,
     "close": 48,
     "change": 2.9,
-    "volume": 4543
+    "volume": 4543,
+    "rawVolume": 4543123,
+    "tradeValue": 211619021,
+    "turnover": "2.1 億"
   },
   "6230": {
     "code": "6230",
@@ -8951,7 +11390,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 110,
     "close": 111,
     "change": -2,
-    "volume": 37943
+    "volume": 38,
+    "rawVolume": 37943,
+    "tradeValue": 4191954,
+    "turnover": "419.2 萬"
   },
   "6235": {
     "code": "6235",
@@ -8962,7 +11404,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.8,
     "close": 39.15,
     "change": 0.05,
-    "volume": 205162
+    "volume": 205,
+    "rawVolume": 205162,
+    "tradeValue": 8006043,
+    "turnover": "800.6 萬"
   },
   "6239": {
     "code": "6239",
@@ -8973,7 +11418,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 288,
     "close": 292.5,
     "change": 3,
-    "volume": 7278
+    "volume": 7279,
+    "rawVolume": 7278591,
+    "tradeValue": 2118253766,
+    "turnover": "21.2 億"
   },
   "6243": {
     "code": "6243",
@@ -8984,7 +11432,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.5,
     "close": 40.55,
     "change": 1.05,
-    "volume": 943
+    "volume": 943,
+    "rawVolume": 943422,
+    "tradeValue": 38290614,
+    "turnover": "3829.1 萬"
   },
   "6257": {
     "code": "6257",
@@ -8995,7 +11446,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 249,
     "close": 256.5,
     "change": 2.5,
-    "volume": 10058
+    "volume": 10059,
+    "rawVolume": 10058604,
+    "tradeValue": 2557695092,
+    "turnover": "25.6 億"
   },
   "6269": {
     "code": "6269",
@@ -9006,7 +11460,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 64.5,
     "close": 65,
     "change": -1,
-    "volume": 2357
+    "volume": 2358,
+    "rawVolume": 2357712,
+    "tradeValue": 153385342,
+    "turnover": "1.5 億"
   },
   "6271": {
     "code": "6271",
@@ -9017,7 +11474,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 225.5,
     "close": 230.5,
     "change": 4,
-    "volume": 2948
+    "volume": 2948,
+    "rawVolume": 2948143,
+    "tradeValue": 677084357,
+    "turnover": "6.8 億"
   },
   "6272": {
     "code": "6272",
@@ -9028,7 +11488,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.05,
     "close": 25.2,
     "change": -0.4,
-    "volume": 178660
+    "volume": 179,
+    "rawVolume": 178660,
+    "tradeValue": 4509274,
+    "turnover": "450.9 萬"
   },
   "6274": {
     "code": "6274",
@@ -9039,7 +11502,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1530,
     "close": 1620,
     "change": 85,
-    "volume": 11778
+    "volume": 11778,
+    "rawVolume": 11778000,
+    "tradeValue": 19080360000,
+    "turnover": "190.8 億"
   },
   "6277": {
     "code": "6277",
@@ -9050,7 +11516,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 76.4,
     "close": 77.7,
     "change": 0.7,
-    "volume": 157780
+    "volume": 158,
+    "rawVolume": 157780,
+    "tradeValue": 12172031,
+    "turnover": "1217.2 萬"
   },
   "6278": {
     "code": "6278",
@@ -9061,7 +11530,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 214,
     "close": 216.5,
     "change": -1.5,
-    "volume": 4156
+    "volume": 4157,
+    "rawVolume": 4156845,
+    "tradeValue": 899498421,
+    "turnover": "9.0 億"
   },
   "6281": {
     "code": "6281",
@@ -9072,7 +11544,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 50.6,
     "close": 51.1,
     "change": 0.1,
-    "volume": 41841
+    "volume": 42,
+    "rawVolume": 41841,
+    "tradeValue": 2127373,
+    "turnover": "212.7 萬"
   },
   "6282": {
     "code": "6282",
@@ -9083,7 +11558,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.2,
     "close": 43.3,
     "change": -0.4,
-    "volume": 3597
+    "volume": 3598,
+    "rawVolume": 3597560,
+    "tradeValue": 155966600,
+    "turnover": "1.6 億"
   },
   "6283": {
     "code": "6283",
@@ -9094,7 +11572,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.15,
     "close": 19.3,
     "change": -0.2,
-    "volume": 45310
+    "volume": 45,
+    "rawVolume": 45310,
+    "tradeValue": 874190,
+    "turnover": "87.4 萬"
   },
   "6285": {
     "code": "6285",
@@ -9105,7 +11586,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 233,
     "close": 235.5,
     "change": -0.5,
-    "volume": 1866
+    "volume": 1867,
+    "rawVolume": 1866928,
+    "tradeValue": 438061256,
+    "turnover": "4.4 億"
   },
   "6405": {
     "code": "6405",
@@ -9116,7 +11600,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.1,
     "close": 45.1,
     "change": -5,
-    "volume": 1637
+    "volume": 1637,
+    "rawVolume": 1637248,
+    "tradeValue": 73839815,
+    "turnover": "7384.0 萬"
   },
   "6409": {
     "code": "6409",
@@ -9127,7 +11614,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 889,
     "close": 891,
     "change": -16,
-    "volume": 175120
+    "volume": 175,
+    "rawVolume": 175120,
+    "tradeValue": 156421422,
+    "turnover": "1.6 億"
   },
   "6412": {
     "code": "6412",
@@ -9138,7 +11628,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 74.3,
     "close": 74.6,
     "change": -0.2,
-    "volume": 551
+    "volume": 551,
+    "rawVolume": 551443,
+    "tradeValue": 41285407,
+    "turnover": "4128.5 萬"
   },
   "6414": {
     "code": "6414",
@@ -9149,7 +11642,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 388,
     "close": 402.5,
     "change": 10.5,
-    "volume": 1615
+    "volume": 1615,
+    "rawVolume": 1615318,
+    "tradeValue": 647619730,
+    "turnover": "6.5 億"
   },
   "6415": {
     "code": "6415",
@@ -9160,7 +11656,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 406.5,
     "close": 413,
     "change": 4,
-    "volume": 1082
+    "volume": 1083,
+    "rawVolume": 1082903,
+    "tradeValue": 445742144,
+    "turnover": "4.5 億"
   },
   "6416": {
     "code": "6416",
@@ -9171,7 +11670,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 115.5,
     "close": 120.5,
     "change": 6,
-    "volume": 1336
+    "volume": 1337,
+    "rawVolume": 1336888,
+    "tradeValue": 158025429,
+    "turnover": "1.6 億"
   },
   "6426": {
     "code": "6426",
@@ -9182,7 +11684,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 330,
     "close": 339.5,
     "change": -5.5,
-    "volume": 2159
+    "volume": 2160,
+    "rawVolume": 2159773,
+    "tradeValue": 729135064,
+    "turnover": "7.3 億"
   },
   "6431": {
     "code": "6431",
@@ -9193,7 +11698,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.9,
     "close": 17.6,
     "change": 0,
-    "volume": 91812
+    "volume": 92,
+    "rawVolume": 91812,
+    "tradeValue": 1577930,
+    "turnover": "157.8 萬"
   },
   "6438": {
     "code": "6438",
@@ -9204,7 +11712,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 163.5,
     "close": 164.5,
     "change": 0.5,
-    "volume": 714
+    "volume": 714,
+    "rawVolume": 714358,
+    "tradeValue": 117948011,
+    "turnover": "1.2 億"
   },
   "6442": {
     "code": "6442",
@@ -9215,7 +11726,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1465,
     "close": 1480,
     "change": -10,
-    "volume": 1019
+    "volume": 1020,
+    "rawVolume": 1019944,
+    "tradeValue": 1512328990,
+    "turnover": "15.1 億"
   },
   "6443": {
     "code": "6443",
@@ -9226,7 +11740,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.8,
     "close": 27.9,
     "change": -0.85,
-    "volume": 4764
+    "volume": 4765,
+    "rawVolume": 4764648,
+    "tradeValue": 134004798,
+    "turnover": "1.3 億"
   },
   "6446": {
     "code": "6446",
@@ -9237,7 +11754,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1165,
     "close": 1170,
     "change": -45,
-    "volume": 2506
+    "volume": 2507,
+    "rawVolume": 2506975,
+    "tradeValue": 2972958495,
+    "turnover": "29.7 億"
   },
   "6449": {
     "code": "6449",
@@ -9248,7 +11768,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 211.5,
     "close": 230,
     "change": 20.5,
-    "volume": 2592
+    "volume": 2592,
+    "rawVolume": 2592335,
+    "tradeValue": 579367069,
+    "turnover": "5.8 億"
   },
   "6451": {
     "code": "6451",
@@ -9259,7 +11782,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 412.5,
     "close": 413,
     "change": -7.5,
-    "volume": 858
+    "volume": 859,
+    "rawVolume": 858989,
+    "tradeValue": 356883400,
+    "turnover": "3.6 億"
   },
   "6456": {
     "code": "6456",
@@ -9270,7 +11796,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 86.1,
     "close": 87.9,
     "change": -4.1,
-    "volume": 20200
+    "volume": 20201,
+    "rawVolume": 20200523,
+    "tradeValue": 1779470957,
+    "turnover": "17.8 億"
   },
   "6464": {
     "code": "6464",
@@ -9281,7 +11810,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 76.8,
     "close": 77,
     "change": 0.2,
-    "volume": 10970
+    "volume": 11,
+    "rawVolume": 10970,
+    "tradeValue": 843122,
+    "turnover": "84.3 萬"
   },
   "6472": {
     "code": "6472",
@@ -9292,7 +11824,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 426.5,
     "close": 429.5,
     "change": 5.5,
-    "volume": 737
+    "volume": 738,
+    "rawVolume": 737615,
+    "tradeValue": 320095488,
+    "turnover": "3.2 億"
   },
   "6477": {
     "code": "6477",
@@ -9303,7 +11838,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 34.7,
     "close": 34.8,
     "change": -0.8,
-    "volume": 643
+    "volume": 643,
+    "rawVolume": 643318,
+    "tradeValue": 22488834,
+    "turnover": "2248.9 萬"
   },
   "6491": {
     "code": "6491",
@@ -9314,7 +11852,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 409,
     "close": 421.5,
     "change": 8.5,
-    "volume": 654
+    "volume": 654,
+    "rawVolume": 654214,
+    "tradeValue": 272251236,
+    "turnover": "2.7 億"
   },
   "6504": {
     "code": "6504",
@@ -9325,7 +11866,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 37.05,
     "close": 37.2,
     "change": 0.25,
-    "volume": 16155
+    "volume": 16,
+    "rawVolume": 16155,
+    "tradeValue": 601081,
+    "turnover": "60.1 萬"
   },
   "6505": {
     "code": "6505",
@@ -9336,7 +11880,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 92.8,
     "close": 94.2,
     "change": -3.1,
-    "volume": 27316
+    "volume": 27317,
+    "rawVolume": 27316952,
+    "tradeValue": 2589529866,
+    "turnover": "25.9 億"
   },
   "6515": {
     "code": "6515",
@@ -9347,7 +11894,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 5755,
     "close": 5770,
     "change": -160,
-    "volume": 436839
+    "volume": 437,
+    "rawVolume": 436839,
+    "tradeValue": 2565608300,
+    "turnover": "25.7 億"
   },
   "6525": {
     "code": "6525",
@@ -9358,7 +11908,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 135,
     "close": 136.5,
     "change": 1,
-    "volume": 738
+    "volume": 739,
+    "rawVolume": 738981,
+    "tradeValue": 101057525,
+    "turnover": "1.0 億"
   },
   "6526": {
     "code": "6526",
@@ -9369,7 +11922,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 818,
     "close": 829,
     "change": -11,
-    "volume": 621
+    "volume": 621,
+    "rawVolume": 621003,
+    "tradeValue": 512745655,
+    "turnover": "5.1 億"
   },
   "6531": {
     "code": "6531",
@@ -9380,7 +11936,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 914,
     "close": 933,
     "change": 6,
-    "volume": 1859
+    "volume": 1859,
+    "rawVolume": 1859447,
+    "tradeValue": 1721601702,
+    "turnover": "17.2 億"
   },
   "6533": {
     "code": "6533",
@@ -9391,7 +11950,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 337,
     "close": 366.5,
     "change": 33,
-    "volume": 16660
+    "volume": 16661,
+    "rawVolume": 16660559,
+    "tradeValue": 5859667385,
+    "turnover": "58.6 億"
   },
   "6534": {
     "code": "6534",
@@ -9402,7 +11964,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 90.1,
     "close": 90.8,
     "change": 0.2,
-    "volume": 13448
+    "volume": 13,
+    "rawVolume": 13448,
+    "tradeValue": 1218523,
+    "turnover": "121.9 萬"
   },
   "6541": {
     "code": "6541",
@@ -9413,7 +11978,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.1,
     "close": 30.25,
     "change": -0.85,
-    "volume": 385265
+    "volume": 385,
+    "rawVolume": 385265,
+    "tradeValue": 11745415,
+    "turnover": "1174.5 萬"
   },
   "6550": {
     "code": "6550",
@@ -9424,7 +11992,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.4,
     "close": 17.5,
     "change": -0.35,
-    "volume": 512
+    "volume": 513,
+    "rawVolume": 512868,
+    "tradeValue": 8991935,
+    "turnover": "899.2 萬"
   },
   "6552": {
     "code": "6552",
@@ -9435,7 +12006,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.9,
     "close": 25.1,
     "change": 0.1,
-    "volume": 27778
+    "volume": 28,
+    "rawVolume": 27778,
+    "tradeValue": 695377,
+    "turnover": "69.5 萬"
   },
   "6558": {
     "code": "6558",
@@ -9446,7 +12020,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25,
     "close": 25.35,
     "change": 0.35,
-    "volume": 139942
+    "volume": 140,
+    "rawVolume": 139942,
+    "tradeValue": 3541249,
+    "turnover": "354.1 萬"
   },
   "6573": {
     "code": "6573",
@@ -9457,7 +12034,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.2,
     "close": 16.3,
     "change": -0.15,
-    "volume": 77678
+    "volume": 78,
+    "rawVolume": 77678,
+    "tradeValue": 1266272,
+    "turnover": "126.6 萬"
   },
   "6579": {
     "code": "6579",
@@ -9468,7 +12048,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 157.5,
     "close": 160.5,
     "change": 1.5,
-    "volume": 225157
+    "volume": 225,
+    "rawVolume": 225157,
+    "tradeValue": 35855009,
+    "turnover": "3585.5 萬"
   },
   "6581": {
     "code": "6581",
@@ -9479,7 +12062,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 108,
     "close": 108,
     "change": -0.5,
-    "volume": 14133
+    "volume": 14,
+    "rawVolume": 14133,
+    "tradeValue": 1528491,
+    "turnover": "152.8 萬"
   },
   "6582": {
     "code": "6582",
@@ -9490,7 +12076,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.1,
     "close": 31.3,
     "change": 0.2,
-    "volume": 8739
+    "volume": 9,
+    "rawVolume": 8739,
+    "tradeValue": 273088,
+    "turnover": "27.3 萬"
   },
   "6585": {
     "code": "6585",
@@ -9501,7 +12090,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 102,
     "close": 102.5,
     "change": -1.5,
-    "volume": 134485
+    "volume": 134,
+    "rawVolume": 134485,
+    "tradeValue": 13807101,
+    "turnover": "1380.7 萬"
   },
   "6589": {
     "code": "6589",
@@ -9512,7 +12104,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 52.1,
     "close": 52.4,
     "change": -1,
-    "volume": 554
+    "volume": 554,
+    "rawVolume": 554109,
+    "tradeValue": 29202512,
+    "turnover": "2920.3 萬"
   },
   "6591": {
     "code": "6591",
@@ -9523,7 +12118,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.65,
     "close": 43.1,
     "change": 0.25,
-    "volume": 57174
+    "volume": 57,
+    "rawVolume": 57174,
+    "tradeValue": 2456984,
+    "turnover": "245.7 萬"
   },
   "6592": {
     "code": "6592",
@@ -9534,7 +12132,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 56.6,
     "close": 57,
     "change": 0.1,
-    "volume": 704
+    "volume": 704,
+    "rawVolume": 704165,
+    "tradeValue": 39977412,
+    "turnover": "3997.7 萬"
   },
   "6598": {
     "code": "6598",
@@ -9545,7 +12146,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.25,
     "close": 26.65,
     "change": -0.75,
-    "volume": 265199
+    "volume": 265,
+    "rawVolume": 265199,
+    "tradeValue": 7098912,
+    "turnover": "709.9 萬"
   },
   "6605": {
     "code": "6605",
@@ -9556,7 +12160,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 136.5,
     "close": 139,
     "change": 1.5,
-    "volume": 276197
+    "volume": 276,
+    "rawVolume": 276197,
+    "tradeValue": 38158191,
+    "turnover": "3815.8 萬"
   },
   "6606": {
     "code": "6606",
@@ -9567,7 +12174,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.9,
     "close": 25,
     "change": 0.2,
-    "volume": 35000
+    "volume": 35,
+    "rawVolume": 35000,
+    "tradeValue": 874850,
+    "turnover": "87.5 萬"
   },
   "6614": {
     "code": "6614",
@@ -9578,7 +12188,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.2,
     "close": 35.3,
     "change": 0,
-    "volume": 8118
+    "volume": 8,
+    "rawVolume": 8118,
+    "tradeValue": 286463,
+    "turnover": "28.6 萬"
   },
   "6625": {
     "code": "6625",
@@ -9589,7 +12202,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 73.7,
     "close": 74,
     "change": 0,
-    "volume": 57097
+    "volume": 57,
+    "rawVolume": 57097,
+    "tradeValue": 4223691,
+    "turnover": "422.4 萬"
   },
   "6641": {
     "code": "6641",
@@ -9600,7 +12216,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.8,
     "close": 16.9,
     "change": -0.1,
-    "volume": 6000
+    "volume": 6,
+    "rawVolume": 6000,
+    "tradeValue": 101300,
+    "turnover": "10.1 萬"
   },
   "6645": {
     "code": "6645",
@@ -9611,7 +12230,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.6,
     "close": 12.75,
     "change": -0.1,
-    "volume": 8943
+    "volume": 9,
+    "rawVolume": 8943,
+    "tradeValue": 113676,
+    "turnover": "11.4 萬"
   },
   "6655": {
     "code": "6655",
@@ -9622,7 +12244,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 0,
     "close": 0,
     "change": 0,
-    "volume": 465
+    "volume": 0,
+    "rawVolume": 465,
+    "tradeValue": 57657,
+    "turnover": "5.8 萬"
   },
   "6657": {
     "code": "6657",
@@ -9633,7 +12258,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.1,
     "close": 32.6,
     "change": -0.1,
-    "volume": 63107
+    "volume": 63,
+    "rawVolume": 63107,
+    "tradeValue": 2055198,
+    "turnover": "205.5 萬"
   },
   "6658": {
     "code": "6658",
@@ -9644,7 +12272,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 178.5,
     "close": 181,
     "change": 0.5,
-    "volume": 162459
+    "volume": 162,
+    "rawVolume": 162459,
+    "tradeValue": 29327723,
+    "turnover": "2932.8 萬"
   },
   "6666": {
     "code": "6666",
@@ -9655,7 +12286,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.95,
     "close": 45.95,
     "change": 0.4,
-    "volume": 1201
+    "volume": 1,
+    "rawVolume": 1201,
+    "tradeValue": 55144,
+    "turnover": "5.5 萬"
   },
   "6668": {
     "code": "6668",
@@ -9666,7 +12300,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 46.5,
     "close": 47.1,
     "change": 0.05,
-    "volume": 2134
+    "volume": 2134,
+    "rawVolume": 2134337,
+    "tradeValue": 101076806,
+    "turnover": "1.0 億"
   },
   "6669": {
     "code": "6669",
@@ -9677,7 +12314,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 2095,
     "close": 2110,
     "change": 20,
-    "volume": 1259
+    "volume": 1259,
+    "rawVolume": 1259173,
+    "tradeValue": 2648647890,
+    "turnover": "26.5 億"
   },
   "6670": {
     "code": "6670",
@@ -9688,7 +12328,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 270,
     "close": 271,
     "change": -1,
-    "volume": 208364
+    "volume": 208,
+    "rawVolume": 208364,
+    "tradeValue": 56574366,
+    "turnover": "5657.4 萬"
   },
   "6671": {
     "code": "6671",
@@ -9699,7 +12342,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.75,
     "close": 22.85,
     "change": 0.15,
-    "volume": 34000
+    "volume": 34,
+    "rawVolume": 34000,
+    "tradeValue": 777600,
+    "turnover": "77.8 萬"
   },
   "6672": {
     "code": "6672",
@@ -9710,7 +12356,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 369.5,
     "close": 405.5,
     "change": 36.5,
-    "volume": 18447
+    "volume": 18448,
+    "rawVolume": 18447532,
+    "tradeValue": 7145894611,
+    "turnover": "71.5 億"
   },
   "6674": {
     "code": "6674",
@@ -9721,7 +12370,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.3,
     "close": 18.35,
     "change": 0.1,
-    "volume": 183356
+    "volume": 183,
+    "rawVolume": 183356,
+    "tradeValue": 3356850,
+    "turnover": "335.7 萬"
   },
   "6689": {
     "code": "6689",
@@ -9732,7 +12384,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 64.1,
     "close": 64.2,
     "change": -0.6,
-    "volume": 142347
+    "volume": 142,
+    "rawVolume": 142347,
+    "tradeValue": 9186229,
+    "turnover": "918.6 萬"
   },
   "6691": {
     "code": "6691",
@@ -9743,7 +12398,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 719,
     "close": 733,
     "change": 14,
-    "volume": 1746
+    "volume": 1747,
+    "rawVolume": 1746877,
+    "tradeValue": 1282549260,
+    "turnover": "12.8 億"
   },
   "6695": {
     "code": "6695",
@@ -9754,7 +12412,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 54.9,
     "close": 55.4,
     "change": 0.4,
-    "volume": 905
+    "volume": 906,
+    "rawVolume": 905563,
+    "tradeValue": 50632919,
+    "turnover": "5063.3 萬"
   },
   "6698": {
     "code": "6698",
@@ -9765,7 +12426,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.2,
     "close": 32.25,
     "change": -1.05,
-    "volume": 199960
+    "volume": 200,
+    "rawVolume": 199960,
+    "tradeValue": 6477744,
+    "turnover": "647.8 萬"
   },
   "6706": {
     "code": "6706",
@@ -9776,7 +12440,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 152,
     "close": 154.5,
     "change": 4.5,
-    "volume": 7046
+    "volume": 7047,
+    "rawVolume": 7046801,
+    "tradeValue": 1100778769,
+    "turnover": "11.0 億"
   },
   "6715": {
     "code": "6715",
@@ -9787,7 +12454,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 430,
     "close": 453,
     "change": 11,
-    "volume": 536
+    "volume": 537,
+    "rawVolume": 536514,
+    "tradeValue": 235679642,
+    "turnover": "2.4 億"
   },
   "6719": {
     "code": "6719",
@@ -9798,7 +12468,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 186.5,
     "close": 188,
     "change": 1.5,
-    "volume": 492395
+    "volume": 492,
+    "rawVolume": 492395,
+    "tradeValue": 92845084,
+    "turnover": "9284.5 萬"
   },
   "6722": {
     "code": "6722",
@@ -9809,7 +12482,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32,
     "close": 32.5,
     "change": 0,
-    "volume": 24527
+    "volume": 25,
+    "rawVolume": 24527,
+    "tradeValue": 790610,
+    "turnover": "79.1 萬"
   },
   "6742": {
     "code": "6742",
@@ -9820,7 +12496,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 55.1,
     "close": 55.6,
     "change": -0.7,
-    "volume": 967
+    "volume": 967,
+    "rawVolume": 967057,
+    "tradeValue": 54294722,
+    "turnover": "5429.5 萬"
   },
   "6743": {
     "code": "6743",
@@ -9831,7 +12510,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.8,
     "close": 33.5,
     "change": 1.65,
-    "volume": 1118
+    "volume": 1119,
+    "rawVolume": 1118714,
+    "tradeValue": 36797278,
+    "turnover": "3679.7 萬"
   },
   "6753": {
     "code": "6753",
@@ -9842,7 +12524,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 132,
     "close": 133,
     "change": -0.5,
-    "volume": 251815
+    "volume": 252,
+    "rawVolume": 251815,
+    "tradeValue": 33421043,
+    "turnover": "3342.1 萬"
   },
   "6754": {
     "code": "6754",
@@ -9853,7 +12538,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41,
     "close": 41,
     "change": -0.5,
-    "volume": 16320
+    "volume": 16,
+    "rawVolume": 16320,
+    "tradeValue": 675429,
+    "turnover": "67.5 萬"
   },
   "6756": {
     "code": "6756",
@@ -9864,7 +12552,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 98,
     "close": 98,
     "change": -0.7,
-    "volume": 118518
+    "volume": 119,
+    "rawVolume": 118518,
+    "tradeValue": 11789017,
+    "turnover": "1178.9 萬"
   },
   "6757": {
     "code": "6757",
@@ -9875,7 +12566,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 53.4,
     "close": 53.4,
     "change": -0.6,
-    "volume": 331003
+    "volume": 331,
+    "rawVolume": 331003,
+    "tradeValue": 17720966,
+    "turnover": "1772.1 萬"
   },
   "6768": {
     "code": "6768",
@@ -9886,7 +12580,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 62.5,
     "close": 63.3,
     "change": 0.6,
-    "volume": 106131
+    "volume": 106,
+    "rawVolume": 106131,
+    "tradeValue": 6688496,
+    "turnover": "668.8 萬"
   },
   "6770": {
     "code": "6770",
@@ -9897,7 +12594,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 73.3,
     "close": 74.5,
     "change": -0.8,
-    "volume": 92791
+    "volume": 92791,
+    "rawVolume": 92791273,
+    "tradeValue": 6880532673,
+    "turnover": "68.8 億"
   },
   "6771": {
     "code": "6771",
@@ -9908,7 +12608,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.5,
     "close": 43,
     "change": 0.4,
-    "volume": 59156
+    "volume": 59,
+    "rawVolume": 59156,
+    "tradeValue": 2531898,
+    "turnover": "253.2 萬"
   },
   "6776": {
     "code": "6776",
@@ -9919,7 +12622,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 52.2,
     "close": 52.8,
     "change": -0.1,
-    "volume": 60431
+    "volume": 60,
+    "rawVolume": 60431,
+    "tradeValue": 3163483,
+    "turnover": "316.3 萬"
   },
   "6781": {
     "code": "6781",
@@ -9930,7 +12636,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1010,
     "close": 1025,
     "change": 5,
-    "volume": 173934
+    "volume": 174,
+    "rawVolume": 173934,
+    "tradeValue": 177279265,
+    "turnover": "1.8 億"
   },
   "6782": {
     "code": "6782",
@@ -9941,7 +12650,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 236,
     "close": 237.5,
     "change": -4.5,
-    "volume": 242118
+    "volume": 242,
+    "rawVolume": 242118,
+    "tradeValue": 57713713,
+    "turnover": "5771.4 萬"
   },
   "6789": {
     "code": "6789",
@@ -9952,7 +12664,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 482,
     "close": 489,
     "change": -5,
-    "volume": 1576
+    "volume": 1577,
+    "rawVolume": 1576642,
+    "tradeValue": 772479530,
+    "turnover": "7.7 億"
   },
   "6790": {
     "code": "6790",
@@ -9963,7 +12678,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 37.55,
     "close": 37.65,
     "change": -0.15,
-    "volume": 128014
+    "volume": 128,
+    "rawVolume": 128014,
+    "tradeValue": 4814080,
+    "turnover": "481.4 萬"
   },
   "6792": {
     "code": "6792",
@@ -9974,7 +12692,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 58.7,
     "close": 59,
     "change": -0.6,
-    "volume": 13037
+    "volume": 13,
+    "rawVolume": 13037,
+    "tradeValue": 769899,
+    "turnover": "77.0 萬"
   },
   "6794": {
     "code": "6794",
@@ -9985,7 +12706,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 70.2,
     "close": 73.2,
     "change": 1.4,
-    "volume": 20126
+    "volume": 20,
+    "rawVolume": 20126,
+    "tradeValue": 1432386,
+    "turnover": "143.2 萬"
   },
   "6796": {
     "code": "6796",
@@ -9996,7 +12720,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 53.1,
     "close": 53.1,
     "change": 0.1,
-    "volume": 18544
+    "volume": 19,
+    "rawVolume": 18544,
+    "tradeValue": 988642,
+    "turnover": "98.9 萬"
   },
   "6799": {
     "code": "6799",
@@ -10007,7 +12734,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 91.5,
     "close": 92.2,
     "change": 0.5,
-    "volume": 324626
+    "volume": 325,
+    "rawVolume": 324626,
+    "tradeValue": 30005197,
+    "turnover": "3000.5 萬"
   },
   "6805": {
     "code": "6805",
@@ -10018,7 +12748,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 2335,
     "close": 2390,
     "change": -65,
-    "volume": 2121
+    "volume": 2121,
+    "rawVolume": 2121012,
+    "tradeValue": 5072393260,
+    "turnover": "50.7 億"
   },
   "6807": {
     "code": "6807",
@@ -10029,7 +12762,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.6,
     "close": 32.3,
     "change": 0,
-    "volume": 15057
+    "volume": 15,
+    "rawVolume": 15057,
+    "tradeValue": 480393,
+    "turnover": "48.0 萬"
   },
   "6830": {
     "code": "6830",
@@ -10040,7 +12776,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 530,
     "close": 531,
     "change": -2,
-    "volume": 794
+    "volume": 794,
+    "rawVolume": 794025,
+    "tradeValue": 424441006,
+    "turnover": "4.2 億"
   },
   "6831": {
     "code": "6831",
@@ -10051,7 +12790,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 472,
     "close": 474.5,
     "change": 3,
-    "volume": 701
+    "volume": 701,
+    "rawVolume": 701310,
+    "tradeValue": 334746232,
+    "turnover": "3.3 億"
   },
   "6834": {
     "code": "6834",
@@ -10062,7 +12804,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 110,
     "close": 119.5,
     "change": 10.5,
-    "volume": 9597
+    "volume": 9598,
+    "rawVolume": 9597928,
+    "tradeValue": 1122381806,
+    "turnover": "11.2 億"
   },
   "6835": {
     "code": "6835",
@@ -10073,7 +12818,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31,
     "close": 31.15,
     "change": -0.05,
-    "volume": 14178
+    "volume": 14,
+    "rawVolume": 14178,
+    "tradeValue": 442110,
+    "turnover": "44.2 萬"
   },
   "6838": {
     "code": "6838",
@@ -10084,7 +12832,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.4,
     "close": 25.8,
     "change": 0,
-    "volume": 149573
+    "volume": 150,
+    "rawVolume": 149573,
+    "tradeValue": 3829103,
+    "turnover": "382.9 萬"
   },
   "6854": {
     "code": "6854",
@@ -10095,7 +12846,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 92.4,
     "close": 93.7,
     "change": 0.4,
-    "volume": 209199
+    "volume": 209,
+    "rawVolume": 209199,
+    "tradeValue": 19617777,
+    "turnover": "1961.8 萬"
   },
   "6861": {
     "code": "6861",
@@ -10106,7 +12860,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 288,
     "close": 292,
     "change": -21.5,
-    "volume": 5529
+    "volume": 5529,
+    "rawVolume": 5529447,
+    "tradeValue": 1691505808,
+    "turnover": "16.9 億"
   },
   "6862": {
     "code": "6862",
@@ -10117,7 +12874,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 139,
     "close": 142,
     "change": 4,
-    "volume": 341341
+    "volume": 341,
+    "rawVolume": 341341,
+    "tradeValue": 48922046,
+    "turnover": "4892.2 萬"
   },
   "6863": {
     "code": "6863",
@@ -10128,7 +12888,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 95,
     "close": 95.5,
     "change": 0.2,
-    "volume": 53107
+    "volume": 53,
+    "rawVolume": 53107,
+    "tradeValue": 5072267,
+    "turnover": "507.2 萬"
   },
   "6869": {
     "code": "6869",
@@ -10139,7 +12902,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 69.4,
     "close": 69.4,
     "change": -2.5,
-    "volume": 491626
+    "volume": 492,
+    "rawVolume": 491626,
+    "tradeValue": 34932994,
+    "turnover": "3493.3 萬"
   },
   "6873": {
     "code": "6873",
@@ -10150,7 +12916,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 67.6,
     "close": 67.9,
     "change": -0.5,
-    "volume": 192440
+    "volume": 192,
+    "rawVolume": 192440,
+    "tradeValue": 13120078,
+    "turnover": "1312.0 萬"
   },
   "6885": {
     "code": "6885",
@@ -10161,7 +12930,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.15,
     "close": 31.5,
     "change": -0.5,
-    "volume": 728
+    "volume": 728,
+    "rawVolume": 728383,
+    "tradeValue": 22961055,
+    "turnover": "2296.1 萬"
   },
   "6887": {
     "code": "6887",
@@ -10172,7 +12944,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 37.6,
     "close": 37.95,
     "change": -0.15,
-    "volume": 10317
+    "volume": 10,
+    "rawVolume": 10317,
+    "tradeValue": 391640,
+    "turnover": "39.2 萬"
   },
   "6890": {
     "code": "6890",
@@ -10183,7 +12958,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 147.5,
     "close": 148.5,
     "change": 0.5,
-    "volume": 152759
+    "volume": 153,
+    "rawVolume": 152759,
+    "tradeValue": 22742201,
+    "turnover": "2274.2 萬"
   },
   "6901": {
     "code": "6901",
@@ -10194,7 +12972,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.55,
     "close": 16.65,
     "change": -0.2,
-    "volume": 2764
+    "volume": 2765,
+    "rawVolume": 2764815,
+    "tradeValue": 46882353,
+    "turnover": "4688.2 萬"
   },
   "6902": {
     "code": "6902",
@@ -10205,7 +12986,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 155,
     "close": 155,
     "change": -4,
-    "volume": 390751
+    "volume": 391,
+    "rawVolume": 390751,
+    "tradeValue": 61638603,
+    "turnover": "6163.9 萬"
   },
   "6906": {
     "code": "6906",
@@ -10216,7 +13000,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 83,
     "close": 84,
     "change": 0.4,
-    "volume": 41424
+    "volume": 41,
+    "rawVolume": 41424,
+    "tradeValue": 3474782,
+    "turnover": "347.5 萬"
   },
   "6908": {
     "code": "6908",
@@ -10227,7 +13014,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.6,
     "close": 27.5,
     "change": 0.85,
-    "volume": 174332
+    "volume": 174,
+    "rawVolume": 174332,
+    "tradeValue": 4911940,
+    "turnover": "491.2 萬"
   },
   "6909": {
     "code": "6909",
@@ -10238,7 +13028,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.05,
     "close": 42.75,
     "change": -0.1,
-    "volume": 159114
+    "volume": 159,
+    "rawVolume": 159114,
+    "tradeValue": 6751595,
+    "turnover": "675.2 萬"
   },
   "6914": {
     "code": "6914",
@@ -10249,7 +13042,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 118,
     "close": 118,
     "change": -1,
-    "volume": 75504
+    "volume": 76,
+    "rawVolume": 75504,
+    "tradeValue": 8961510,
+    "turnover": "896.2 萬"
   },
   "6916": {
     "code": "6916",
@@ -10260,7 +13056,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.5,
     "close": 18.5,
     "change": -0.2,
-    "volume": 13150
+    "volume": 13,
+    "rawVolume": 13150,
+    "tradeValue": 244271,
+    "turnover": "24.4 萬"
   },
   "6918": {
     "code": "6918",
@@ -10271,7 +13070,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 73.9,
     "close": 73.9,
     "change": -0.4,
-    "volume": 31233
+    "volume": 31,
+    "rawVolume": 31233,
+    "tradeValue": 2328187,
+    "turnover": "232.8 萬"
   },
   "6919": {
     "code": "6919",
@@ -10282,7 +13084,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 79,
     "close": 79.1,
     "change": 0.1,
-    "volume": 2747
+    "volume": 2747,
+    "rawVolume": 2747160,
+    "tradeValue": 218519112,
+    "turnover": "2.2 億"
   },
   "6921": {
     "code": "6921",
@@ -10293,7 +13098,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 66.4,
     "close": 66.4,
     "change": -1.6,
-    "volume": 11000
+    "volume": 11,
+    "rawVolume": 11000,
+    "tradeValue": 735100,
+    "turnover": "73.5 萬"
   },
   "6923": {
     "code": "6923",
@@ -10304,7 +13112,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 74.5,
     "close": 75,
     "change": -0.2,
-    "volume": 39363
+    "volume": 39,
+    "rawVolume": 39363,
+    "tradeValue": 2949695,
+    "turnover": "295.0 萬"
   },
   "6924": {
     "code": "6924",
@@ -10315,7 +13126,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 132,
     "close": 134,
     "change": -1,
-    "volume": 20234
+    "volume": 20,
+    "rawVolume": 20234,
+    "tradeValue": 2713090,
+    "turnover": "271.3 萬"
   },
   "6928": {
     "code": "6928",
@@ -10326,7 +13140,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.7,
     "close": 46.5,
     "change": 0.5,
-    "volume": 57589
+    "volume": 58,
+    "rawVolume": 57589,
+    "tradeValue": 2646203,
+    "turnover": "264.6 萬"
   },
   "6931": {
     "code": "6931",
@@ -10337,7 +13154,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.9,
     "close": 38.9,
     "change": 0,
-    "volume": 34220
+    "volume": 34,
+    "rawVolume": 34220,
+    "tradeValue": 1332936,
+    "turnover": "133.3 萬"
   },
   "6933": {
     "code": "6933",
@@ -10348,7 +13168,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 369.5,
     "close": 394.5,
     "change": 23.5,
-    "volume": 3166
+    "volume": 3166,
+    "rawVolume": 3166449,
+    "tradeValue": 1226713757,
+    "turnover": "12.3 億"
   },
   "6934": {
     "code": "6934",
@@ -10359,7 +13182,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 75.2,
     "close": 75.2,
     "change": -0.1,
-    "volume": 54048
+    "volume": 54,
+    "rawVolume": 54048,
+    "tradeValue": 4094462,
+    "turnover": "409.4 萬"
   },
   "6936": {
     "code": "6936",
@@ -10370,7 +13196,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.8,
     "close": 32,
     "change": 0,
-    "volume": 2095
+    "volume": 2,
+    "rawVolume": 2095,
+    "tradeValue": 66840,
+    "turnover": "6.7 萬"
   },
   "6937": {
     "code": "6937",
@@ -10381,7 +13210,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 300,
     "close": 301.5,
     "change": -6.5,
-    "volume": 516
+    "volume": 516,
+    "rawVolume": 516330,
+    "tradeValue": 157673044,
+    "turnover": "1.6 億"
   },
   "6944": {
     "code": "6944",
@@ -10392,7 +13224,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 776,
     "close": 800,
     "change": 25,
-    "volume": 653
+    "volume": 654,
+    "rawVolume": 653674,
+    "tradeValue": 521524650,
+    "turnover": "5.2 億"
   },
   "6947": {
     "code": "6947",
@@ -10403,7 +13238,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 67.5,
     "close": 68.5,
     "change": 0.1,
-    "volume": 221733
+    "volume": 222,
+    "rawVolume": 221733,
+    "tradeValue": 15150788,
+    "turnover": "1515.1 萬"
   },
   "6949": {
     "code": "6949",
@@ -10414,7 +13252,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 49,
     "close": 49.4,
     "change": -1.2,
-    "volume": 2139
+    "volume": 2139,
+    "rawVolume": 2139054,
+    "tradeValue": 106213967,
+    "turnover": "1.1 億"
   },
   "6951": {
     "code": "6951",
@@ -10425,7 +13266,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 69.3,
     "close": 69.4,
     "change": 0.2,
-    "volume": 19383
+    "volume": 19,
+    "rawVolume": 19383,
+    "tradeValue": 1346276,
+    "turnover": "134.6 萬"
   },
   "6952": {
     "code": "6952",
@@ -10436,7 +13280,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.75,
     "close": 38.8,
     "change": 0,
-    "volume": 5032
+    "volume": 5,
+    "rawVolume": 5032,
+    "tradeValue": 195153,
+    "turnover": "19.5 萬"
   },
   "6955": {
     "code": "6955",
@@ -10447,7 +13294,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 94.6,
     "close": 95.2,
     "change": -0.8,
-    "volume": 7407
+    "volume": 7,
+    "rawVolume": 7407,
+    "tradeValue": 700346,
+    "turnover": "70.0 萬"
   },
   "6957": {
     "code": "6957",
@@ -10458,7 +13308,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 364,
     "close": 384,
     "change": 13,
-    "volume": 1907
+    "volume": 1908,
+    "rawVolume": 1907750,
+    "tradeValue": 728695901,
+    "turnover": "7.3 億"
   },
   "6958": {
     "code": "6958",
@@ -10469,7 +13322,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.2,
     "close": 17.5,
     "change": 0,
-    "volume": 10277
+    "volume": 10,
+    "rawVolume": 10277,
+    "tradeValue": 178791,
+    "turnover": "17.9 萬"
   },
   "6962": {
     "code": "6962",
@@ -10480,7 +13336,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.65,
     "close": 33.15,
     "change": 0.7,
-    "volume": 2751
+    "volume": 2752,
+    "rawVolume": 2751544,
+    "tradeValue": 91093455,
+    "turnover": "9109.3 萬"
   },
   "6965": {
     "code": "6965",
@@ -10491,7 +13350,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 62.5,
     "close": 63.2,
     "change": -0.5,
-    "volume": 47737
+    "volume": 48,
+    "rawVolume": 47737,
+    "tradeValue": 3002267,
+    "turnover": "300.2 萬"
   },
   "6969": {
     "code": "6969",
@@ -10502,7 +13364,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.2,
     "close": 30.45,
     "change": -0.9,
-    "volume": 161667
+    "volume": 162,
+    "rawVolume": 161667,
+    "tradeValue": 4909634,
+    "turnover": "491.0 萬"
   },
   "6988": {
     "code": "6988",
@@ -10513,7 +13378,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.4,
     "close": 11.65,
     "change": -0.05,
-    "volume": 94000
+    "volume": 94,
+    "rawVolume": 94000,
+    "tradeValue": 1080900,
+    "turnover": "108.1 萬"
   },
   "6994": {
     "code": "6994",
@@ -10524,7 +13392,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.5,
     "close": 29.15,
     "change": 2.65,
-    "volume": 998
+    "volume": 998,
+    "rawVolume": 998022,
+    "tradeValue": 28498152,
+    "turnover": "2849.8 萬"
   },
   "7610": {
     "code": "7610",
@@ -10535,7 +13406,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1705,
     "close": 1780,
     "change": 45,
-    "volume": 526
+    "volume": 527,
+    "rawVolume": 526796,
+    "tradeValue": 928334260,
+    "turnover": "9.3 億"
   },
   "7631": {
     "code": "7631",
@@ -10546,7 +13420,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 142.5,
     "close": 145.5,
     "change": 5,
-    "volume": 276501
+    "volume": 277,
+    "rawVolume": 276501,
+    "tradeValue": 40793780,
+    "turnover": "4079.4 萬"
   },
   "7689": {
     "code": "7689",
@@ -10557,7 +13434,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 158.5,
     "close": 161,
     "change": 1.5,
-    "volume": 59530
+    "volume": 60,
+    "rawVolume": 59530,
+    "tradeValue": 9512004,
+    "turnover": "951.2 萬"
   },
   "7705": {
     "code": "7705",
@@ -10568,7 +13448,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.7,
     "close": 29.7,
     "change": -0.15,
-    "volume": 21204
+    "volume": 21,
+    "rawVolume": 21204,
+    "tradeValue": 630489,
+    "turnover": "63.0 萬"
   },
   "7711": {
     "code": "7711",
@@ -10579,7 +13462,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 551,
     "close": 616,
     "change": 56,
-    "volume": 1893
+    "volume": 1893,
+    "rawVolume": 1893247,
+    "tradeValue": 1125407266,
+    "turnover": "11.3 億"
   },
   "7721": {
     "code": "7721",
@@ -10590,7 +13476,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 61.7,
     "close": 61.9,
     "change": -0.3,
-    "volume": 30611
+    "volume": 31,
+    "rawVolume": 30611,
+    "tradeValue": 1897181,
+    "turnover": "189.7 萬"
   },
   "7722": {
     "code": "7722",
@@ -10601,7 +13490,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 259.5,
     "close": 260,
     "change": 1,
-    "volume": 26410
+    "volume": 26,
+    "rawVolume": 26410,
+    "tradeValue": 6863630,
+    "turnover": "686.4 萬"
   },
   "7730": {
     "code": "7730",
@@ -10612,7 +13504,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 180,
     "close": 194.5,
     "change": 15,
-    "volume": 444008
+    "volume": 444,
+    "rawVolume": 444008,
+    "tradeValue": 84649205,
+    "turnover": "8464.9 萬"
   },
   "7732": {
     "code": "7732",
@@ -10623,7 +13518,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.15,
     "close": 33.2,
     "change": -0.3,
-    "volume": 6030
+    "volume": 6,
+    "rawVolume": 6030,
+    "tradeValue": 200102,
+    "turnover": "20.0 萬"
   },
   "7736": {
     "code": "7736",
@@ -10634,7 +13532,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 68.6,
     "close": 68.7,
     "change": 0.2,
-    "volume": 58011
+    "volume": 58,
+    "rawVolume": 58011,
+    "tradeValue": 3984953,
+    "turnover": "398.5 萬"
   },
   "7740": {
     "code": "7740",
@@ -10645,7 +13546,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 102,
     "close": 102.5,
     "change": -2,
-    "volume": 169455
+    "volume": 169,
+    "rawVolume": 169455,
+    "tradeValue": 17629792,
+    "turnover": "1763.0 萬"
   },
   "7749": {
     "code": "7749",
@@ -10656,7 +13560,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 390,
     "close": 401.5,
     "change": 10.5,
-    "volume": 283560
+    "volume": 284,
+    "rawVolume": 283560,
+    "tradeValue": 113353951,
+    "turnover": "1.1 億"
   },
   "7750": {
     "code": "7750",
@@ -10667,7 +13574,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1890,
     "close": 1895,
     "change": -20,
-    "volume": 97494
+    "volume": 97,
+    "rawVolume": 97494,
+    "tradeValue": 185404705,
+    "turnover": "1.9 億"
   },
   "7760": {
     "code": "7760",
@@ -10678,7 +13588,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.5,
     "close": 32.5,
     "change": -0.05,
-    "volume": 42946
+    "volume": 43,
+    "rawVolume": 42946,
+    "tradeValue": 1395854,
+    "turnover": "139.6 萬"
   },
   "7765": {
     "code": "7765",
@@ -10689,7 +13602,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 235,
     "close": 236.5,
     "change": -0.5,
-    "volume": 70820
+    "volume": 71,
+    "rawVolume": 70820,
+    "tradeValue": 16717478,
+    "turnover": "1671.7 萬"
   },
   "7768": {
     "code": "7768",
@@ -10700,7 +13616,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 289,
     "close": 301,
     "change": 1.5,
-    "volume": 121020
+    "volume": 121,
+    "rawVolume": 121020,
+    "tradeValue": 35848564,
+    "turnover": "3584.9 萬"
   },
   "7769": {
     "code": "7769",
@@ -10711,7 +13630,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 5435,
     "close": 5490,
     "change": -15,
-    "volume": 487125
+    "volume": 487,
+    "rawVolume": 487125,
+    "tradeValue": 2681325005,
+    "turnover": "26.8 億"
   },
   "7780": {
     "code": "7780",
@@ -10722,7 +13644,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16,
     "close": 16.15,
     "change": -0.1,
-    "volume": 862
+    "volume": 863,
+    "rawVolume": 862735,
+    "tradeValue": 13924969,
+    "turnover": "1392.5 萬"
   },
   "7786": {
     "code": "7786",
@@ -10733,7 +13658,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 117.5,
     "close": 118.5,
     "change": -1,
-    "volume": 77730
+    "volume": 78,
+    "rawVolume": 77730,
+    "tradeValue": 9181480,
+    "turnover": "918.1 萬"
   },
   "7788": {
     "code": "7788",
@@ -10744,7 +13672,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 285,
     "close": 290.5,
     "change": -3.5,
-    "volume": 2530
+    "volume": 2530,
+    "rawVolume": 2530364,
+    "tradeValue": 736914650,
+    "turnover": "7.4 億"
   },
   "7791": {
     "code": "7791",
@@ -10755,7 +13686,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 54.7,
     "close": 54.8,
     "change": -0.5,
-    "volume": 58971
+    "volume": 59,
+    "rawVolume": 58971,
+    "tradeValue": 3238960,
+    "turnover": "323.9 萬"
   },
   "7795": {
     "code": "7795",
@@ -10766,7 +13700,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 483,
     "close": 536,
     "change": 48,
-    "volume": 1890
+    "volume": 1891,
+    "rawVolume": 1890557,
+    "tradeValue": 981202894,
+    "turnover": "9.8 億"
   },
   "7799": {
     "code": "7799",
@@ -10777,7 +13714,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 544,
     "close": 555,
     "change": 16,
-    "volume": 2198
+    "volume": 2198,
+    "rawVolume": 2198114,
+    "tradeValue": 1228775588,
+    "turnover": "12.3 億"
   },
   "7803": {
     "code": "7803",
@@ -10788,7 +13728,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.55,
     "close": 17.8,
     "change": -0.15,
-    "volume": 40080
+    "volume": 40,
+    "rawVolume": 40080,
+    "tradeValue": 710536,
+    "turnover": "71.1 萬"
   },
   "7812": {
     "code": "7812",
@@ -10799,7 +13742,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 64,
     "close": 64.5,
     "change": -2.2,
-    "volume": 292086
+    "volume": 292,
+    "rawVolume": 292086,
+    "tradeValue": 19038101,
+    "turnover": "1903.8 萬"
   },
   "7818": {
     "code": "7818",
@@ -10810,7 +13756,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 59.7,
     "close": 60.1,
     "change": 0,
-    "volume": 55153
+    "volume": 55,
+    "rawVolume": 55153,
+    "tradeValue": 3303067,
+    "turnover": "330.3 萬"
   },
   "7821": {
     "code": "7821",
@@ -10821,7 +13770,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.6,
     "close": 35.85,
     "change": -0.05,
-    "volume": 160670
+    "volume": 161,
+    "rawVolume": 160670,
+    "tradeValue": 5739877,
+    "turnover": "574.0 萬"
   },
   "7822": {
     "code": "7822",
@@ -10832,7 +13784,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 979,
     "close": 1000,
     "change": 2,
-    "volume": 295608
+    "volume": 296,
+    "rawVolume": 295608,
+    "tradeValue": 295892276,
+    "turnover": "3.0 億"
   },
   "7823": {
     "code": "7823",
@@ -10843,7 +13798,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 79.1,
     "close": 79.9,
     "change": -0.3,
-    "volume": 53100
+    "volume": 53,
+    "rawVolume": 53100,
+    "tradeValue": 4241760,
+    "turnover": "424.2 萬"
   },
   "7827": {
     "code": "7827",
@@ -10854,7 +13812,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 163.5,
     "close": 165,
     "change": 0,
-    "volume": 352923
+    "volume": 353,
+    "rawVolume": 352923,
+    "tradeValue": 58901434,
+    "turnover": "5890.1 萬"
   },
   "7835": {
     "code": "7835",
@@ -10865,7 +13826,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.6,
     "close": 19.75,
     "change": -0.45,
-    "volume": 98060
+    "volume": 98,
+    "rawVolume": 98060,
+    "tradeValue": 1937594,
+    "turnover": "193.8 萬"
   },
   "7855": {
     "code": "7855",
@@ -10876,7 +13840,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41.35,
     "close": 41.4,
     "change": 0,
-    "volume": 378013
+    "volume": 378,
+    "rawVolume": 378013,
+    "tradeValue": 15659610,
+    "turnover": "1566.0 萬"
   },
   "8011": {
     "code": "8011",
@@ -10887,7 +13854,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16,
     "close": 16.05,
     "change": -0.05,
-    "volume": 127920
+    "volume": 128,
+    "rawVolume": 127920,
+    "tradeValue": 2050775,
+    "turnover": "205.1 萬"
   },
   "8016": {
     "code": "8016",
@@ -10898,7 +13868,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 285,
     "close": 288.5,
     "change": 4.5,
-    "volume": 499987
+    "volume": 500,
+    "rawVolume": 499987,
+    "tradeValue": 143638447,
+    "turnover": "1.4 億"
   },
   "8021": {
     "code": "8021",
@@ -10909,7 +13882,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 487,
     "close": 503,
     "change": 17,
-    "volume": 1461
+    "volume": 1462,
+    "rawVolume": 1461511,
+    "tradeValue": 728852868,
+    "turnover": "7.3 億"
   },
   "8028": {
     "code": "8028",
@@ -10920,7 +13896,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 275.5,
     "close": 280,
     "change": -2.5,
-    "volume": 5165
+    "volume": 5165,
+    "rawVolume": 5165195,
+    "tradeValue": 1436672571,
+    "turnover": "14.4 億"
   },
   "8033": {
     "code": "8033",
@@ -10931,7 +13910,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 173,
     "close": 175.5,
     "change": 1,
-    "volume": 1716
+    "volume": 1716,
+    "rawVolume": 1716075,
+    "tradeValue": 299881717,
+    "turnover": "3.0 億"
   },
   "8039": {
     "code": "8039",
@@ -10942,7 +13924,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 285,
     "close": 288.5,
     "change": -12,
-    "volume": 30321
+    "volume": 30322,
+    "rawVolume": 30321735,
+    "tradeValue": 8812514102,
+    "turnover": "88.1 億"
   },
   "8045": {
     "code": "8045",
@@ -10953,7 +13938,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 53.8,
     "close": 54.7,
     "change": 0.8,
-    "volume": 174112
+    "volume": 174,
+    "rawVolume": 174112,
+    "tradeValue": 9498655,
+    "turnover": "949.9 萬"
   },
   "8046": {
     "code": "8046",
@@ -10964,7 +13952,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1370,
     "close": 1420,
     "change": 80,
-    "volume": 19869
+    "volume": 19869,
+    "rawVolume": 19869429,
+    "tradeValue": 28112205605,
+    "turnover": "281.1 億"
   },
   "8070": {
     "code": "8070",
@@ -10975,7 +13966,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 50,
     "close": 50.2,
     "change": 0,
-    "volume": 885
+    "volume": 885,
+    "rawVolume": 885030,
+    "tradeValue": 44415487,
+    "turnover": "4441.5 萬"
   },
   "8072": {
     "code": "8072",
@@ -10986,7 +13980,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.7,
     "close": 27.8,
     "change": -0.05,
-    "volume": 99062
+    "volume": 99,
+    "rawVolume": 99062,
+    "tradeValue": 2755155,
+    "turnover": "275.5 萬"
   },
   "8081": {
     "code": "8081",
@@ -10997,7 +13994,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 252,
     "close": 255,
     "change": 3.5,
-    "volume": 411748
+    "volume": 412,
+    "rawVolume": 411748,
+    "tradeValue": 104575681,
+    "turnover": "1.0 億"
   },
   "8101": {
     "code": "8101",
@@ -11008,7 +14008,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11,
     "close": 11.05,
     "change": 0,
-    "volume": 5605
+    "volume": 6,
+    "rawVolume": 5605,
+    "tradeValue": 61549,
+    "turnover": "6.2 萬"
   },
   "8103": {
     "code": "8103",
@@ -11019,7 +14022,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 119,
     "close": 124,
     "change": 2.5,
-    "volume": 4022
+    "volume": 4022,
+    "rawVolume": 4022075,
+    "tradeValue": 490587414,
+    "turnover": "4.9 億"
   },
   "8104": {
     "code": "8104",
@@ -11030,7 +14036,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.5,
     "close": 31.7,
     "change": -0.4,
-    "volume": 217875
+    "volume": 218,
+    "rawVolume": 217875,
+    "tradeValue": 6915680,
+    "turnover": "691.6 萬"
   },
   "8105": {
     "code": "8105",
@@ -11041,7 +14050,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.45,
     "close": 15.45,
     "change": -0.9,
-    "volume": 6433
+    "volume": 6434,
+    "rawVolume": 6433836,
+    "tradeValue": 100746791,
+    "turnover": "1.0 億"
   },
   "8110": {
     "code": "8110",
@@ -11052,7 +14064,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.3,
     "close": 48.7,
     "change": -0.5,
-    "volume": 4341
+    "volume": 4342,
+    "rawVolume": 4341907,
+    "tradeValue": 211083650,
+    "turnover": "2.1 億"
   },
   "8112": {
     "code": "8112",
@@ -11063,7 +14078,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 82.7,
     "close": 83.8,
     "change": 1,
-    "volume": 5690
+    "volume": 5691,
+    "rawVolume": 5690582,
+    "tradeValue": 475313906,
+    "turnover": "4.8 億"
   },
   "8114": {
     "code": "8114",
@@ -11074,7 +14092,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 176,
     "close": 178,
     "change": -1,
-    "volume": 227586
+    "volume": 228,
+    "rawVolume": 227586,
+    "tradeValue": 40359223,
+    "turnover": "4035.9 萬"
   },
   "8131": {
     "code": "8131",
@@ -11085,7 +14106,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 61.9,
     "close": 62.5,
     "change": -0.1,
-    "volume": 1213
+    "volume": 1214,
+    "rawVolume": 1213878,
+    "tradeValue": 75637103,
+    "turnover": "7563.7 萬"
   },
   "8150": {
     "code": "8150",
@@ -11096,7 +14120,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 109.5,
     "close": 115.5,
     "change": 1,
-    "volume": 72187
+    "volume": 72187,
+    "rawVolume": 72187178,
+    "tradeValue": 8163266377,
+    "turnover": "81.6 億"
   },
   "8162": {
     "code": "8162",
@@ -11107,7 +14134,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 66.1,
     "close": 68,
     "change": 1.2,
-    "volume": 422474
+    "volume": 422,
+    "rawVolume": 422474,
+    "tradeValue": 28410624,
+    "turnover": "2841.1 萬"
   },
   "8163": {
     "code": "8163",
@@ -11118,7 +14148,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.25,
     "close": 30.6,
     "change": 0.35,
-    "volume": 732
+    "volume": 732,
+    "rawVolume": 732384,
+    "tradeValue": 22397392,
+    "turnover": "2239.7 萬"
   },
   "8201": {
     "code": "8201",
@@ -11129,7 +14162,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.1,
     "close": 17.65,
     "change": 1.6,
-    "volume": 2774
+    "volume": 2774,
+    "rawVolume": 2774334,
+    "tradeValue": 48300530,
+    "turnover": "4830.1 萬"
   },
   "8210": {
     "code": "8210",
@@ -11140,7 +14176,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 822,
     "close": 845,
     "change": 9,
-    "volume": 2063
+    "volume": 2064,
+    "rawVolume": 2063602,
+    "tradeValue": 1719068127,
+    "turnover": "17.2 億"
   },
   "8213": {
     "code": "8213",
@@ -11151,7 +14190,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.7,
     "close": 34,
     "change": -0.5,
-    "volume": 385406
+    "volume": 385,
+    "rawVolume": 385406,
+    "tradeValue": 13050729,
+    "turnover": "1305.1 萬"
   },
   "8215": {
     "code": "8215",
@@ -11162,7 +14204,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 28.85,
     "close": 29.1,
     "change": -0.55,
-    "volume": 2446
+    "volume": 2447,
+    "rawVolume": 2446726,
+    "tradeValue": 71919439,
+    "turnover": "7191.9 萬"
   },
   "8222": {
     "code": "8222",
@@ -11173,7 +14218,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.5,
     "close": 35.55,
     "change": -0.25,
-    "volume": 112361
+    "volume": 112,
+    "rawVolume": 112361,
+    "tradeValue": 4006160,
+    "turnover": "400.6 萬"
   },
   "8249": {
     "code": "8249",
@@ -11184,7 +14232,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.3,
     "close": 39.4,
     "change": -0.1,
-    "volume": 99799
+    "volume": 100,
+    "rawVolume": 99799,
+    "tradeValue": 3939108,
+    "turnover": "393.9 萬"
   },
   "8261": {
     "code": "8261",
@@ -11195,7 +14246,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 177,
     "close": 181.5,
     "change": 5.5,
-    "volume": 3960
+    "volume": 3961,
+    "rawVolume": 3960633,
+    "tradeValue": 718144814,
+    "turnover": "7.2 億"
   },
   "8271": {
     "code": "8271",
@@ -11206,7 +14260,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 200.5,
     "close": 201,
     "change": -1,
-    "volume": 696
+    "volume": 696,
+    "rawVolume": 696257,
+    "tradeValue": 140146930,
+    "turnover": "1.4 億"
   },
   "8341": {
     "code": "8341",
@@ -11217,7 +14274,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 74.2,
     "close": 74.2,
     "change": -0.2,
-    "volume": 106612
+    "volume": 107,
+    "rawVolume": 106612,
+    "tradeValue": 7923557,
+    "turnover": "792.4 萬"
   },
   "8367": {
     "code": "8367",
@@ -11228,7 +14288,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.25,
     "close": 40.8,
     "change": 0.35,
-    "volume": 13706
+    "volume": 14,
+    "rawVolume": 13706,
+    "tradeValue": 554538,
+    "turnover": "55.5 萬"
   },
   "8374": {
     "code": "8374",
@@ -11239,7 +14302,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 76.4,
     "close": 76.9,
     "change": -0.7,
-    "volume": 116667
+    "volume": 117,
+    "rawVolume": 116667,
+    "tradeValue": 8968211,
+    "turnover": "896.8 萬"
   },
   "8404": {
     "code": "8404",
@@ -11250,7 +14316,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.2,
     "close": 13.3,
     "change": 0.05,
-    "volume": 316826
+    "volume": 317,
+    "rawVolume": 316826,
+    "tradeValue": 4204662,
+    "turnover": "420.5 萬"
   },
   "8411": {
     "code": "8411",
@@ -11261,7 +14330,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.75,
     "close": 11.9,
     "change": 0,
-    "volume": 82100
+    "volume": 82,
+    "rawVolume": 82100,
+    "tradeValue": 971531,
+    "turnover": "97.2 萬"
   },
   "8422": {
     "code": "8422",
@@ -11272,7 +14344,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.5,
     "close": 25.6,
     "change": -0.3,
-    "volume": 2860
+    "volume": 2861,
+    "rawVolume": 2860578,
+    "tradeValue": 73280217,
+    "turnover": "7328.0 萬"
   },
   "8429": {
     "code": "8429",
@@ -11283,7 +14358,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 5.87,
     "close": 5.91,
     "change": 0,
-    "volume": 97112
+    "volume": 97,
+    "rawVolume": 97112,
+    "tradeValue": 571190,
+    "turnover": "57.1 萬"
   },
   "8438": {
     "code": "8438",
@@ -11294,7 +14372,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 80.1,
     "close": 80.9,
     "change": 0.1,
-    "volume": 508
+    "volume": 508,
+    "rawVolume": 508451,
+    "tradeValue": 41328371,
+    "turnover": "4132.8 萬"
   },
   "8442": {
     "code": "8442",
@@ -11305,7 +14386,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44.7,
     "close": 45.6,
     "change": 0,
-    "volume": 22328
+    "volume": 22,
+    "rawVolume": 22328,
+    "tradeValue": 1013506,
+    "turnover": "101.4 萬"
   },
   "8443": {
     "code": "8443",
@@ -11316,7 +14400,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.05,
     "close": 11.1,
     "change": -0.05,
-    "volume": 7906
+    "volume": 8,
+    "rawVolume": 7906,
+    "tradeValue": 87724,
+    "turnover": "8.8 萬"
   },
   "8454": {
     "code": "8454",
@@ -11327,7 +14414,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 238.5,
     "close": 239,
     "change": -1.5,
-    "volume": 233272
+    "volume": 233,
+    "rawVolume": 233272,
+    "tradeValue": 55946595,
+    "turnover": "5594.7 萬"
   },
   "8462": {
     "code": "8462",
@@ -11338,7 +14428,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 153.5,
     "close": 157,
     "change": -1.5,
-    "volume": 122968
+    "volume": 123,
+    "rawVolume": 122968,
+    "tradeValue": 19402717,
+    "turnover": "1940.3 萬"
   },
   "8463": {
     "code": "8463",
@@ -11349,7 +14442,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.15,
     "close": 21.2,
     "change": -0.05,
-    "volume": 17010
+    "volume": 17,
+    "rawVolume": 17010,
+    "tradeValue": 360462,
+    "turnover": "36.0 萬"
   },
   "8464": {
     "code": "8464",
@@ -11360,7 +14456,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 362.5,
     "close": 362.5,
     "change": -4,
-    "volume": 188926
+    "volume": 189,
+    "rawVolume": 188926,
+    "tradeValue": 68911851,
+    "turnover": "6891.2 萬"
   },
   "8466": {
     "code": "8466",
@@ -11371,7 +14470,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15,
     "close": 15.15,
     "change": 0.05,
-    "volume": 15000
+    "volume": 15,
+    "rawVolume": 15000,
+    "tradeValue": 227400,
+    "turnover": "22.7 萬"
   },
   "8467": {
     "code": "8467",
@@ -11382,7 +14484,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 87.1,
     "close": 88.1,
     "change": 0.4,
-    "volume": 6320
+    "volume": 6,
+    "rawVolume": 6320,
+    "tradeValue": 554924,
+    "turnover": "55.5 萬"
   },
   "8473": {
     "code": "8473",
@@ -11393,7 +14498,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39,
     "close": 39.05,
     "change": -0.7,
-    "volume": 391226
+    "volume": 391,
+    "rawVolume": 391226,
+    "tradeValue": 15318746,
+    "turnover": "1531.9 萬"
   },
   "8476": {
     "code": "8476",
@@ -11404,7 +14512,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.05,
     "close": 20.3,
     "change": 0.2,
-    "volume": 256988
+    "volume": 257,
+    "rawVolume": 256988,
+    "tradeValue": 5189140,
+    "turnover": "518.9 萬"
   },
   "8478": {
     "code": "8478",
@@ -11415,7 +14526,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 139.5,
     "close": 141.5,
     "change": 0.5,
-    "volume": 46001
+    "volume": 46,
+    "rawVolume": 46001,
+    "tradeValue": 6474589,
+    "turnover": "647.5 萬"
   },
   "8481": {
     "code": "8481",
@@ -11426,7 +14540,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.6,
     "close": 40.65,
     "change": -0.3,
-    "volume": 9000
+    "volume": 9,
+    "rawVolume": 9000,
+    "tradeValue": 365650,
+    "turnover": "36.6 萬"
   },
   "8482": {
     "code": "8482",
@@ -11437,7 +14554,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.85,
     "close": 48.85,
     "change": -0.35,
-    "volume": 1000
+    "volume": 1,
+    "rawVolume": 1000,
+    "tradeValue": 48850,
+    "turnover": "4.9 萬"
   },
   "8487": {
     "code": "8487",
@@ -11448,7 +14568,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 70,
     "close": 70.3,
     "change": -0.5,
-    "volume": 27430
+    "volume": 27,
+    "rawVolume": 27430,
+    "tradeValue": 1925850,
+    "turnover": "192.6 萬"
   },
   "8488": {
     "code": "8488",
@@ -11459,7 +14582,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.82,
     "close": 9.84,
     "change": -0.11,
-    "volume": 13415
+    "volume": 13,
+    "rawVolume": 13415,
+    "tradeValue": 131850,
+    "turnover": "13.2 萬"
   },
   "8499": {
     "code": "8499",
@@ -11470,7 +14596,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 255,
     "close": 256,
     "change": -2,
-    "volume": 8170
+    "volume": 8,
+    "rawVolume": 8170,
+    "tradeValue": 2101435,
+    "turnover": "210.1 萬"
   },
   "8926": {
     "code": "8926",
@@ -11481,7 +14610,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 58.6,
     "close": 58.9,
     "change": -0.3,
-    "volume": 1154
+    "volume": 1155,
+    "rawVolume": 1154934,
+    "tradeValue": 67995137,
+    "turnover": "6799.5 萬"
   },
   "8940": {
     "code": "8940",
@@ -11492,7 +14624,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15,
     "close": 15.05,
     "change": -0.05,
-    "volume": 11029
+    "volume": 11,
+    "rawVolume": 11029,
+    "tradeValue": 166137,
+    "turnover": "16.6 萬"
   },
   "8996": {
     "code": "8996",
@@ -11503,7 +14638,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1470,
     "close": 1565,
     "change": -40,
-    "volume": 5416
+    "volume": 5416,
+    "rawVolume": 5416446,
+    "tradeValue": 8385625415,
+    "turnover": "83.9 億"
   },
   "9103": {
     "code": "9103",
@@ -11514,7 +14652,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 4.94,
     "close": 4.94,
     "change": -0.04,
-    "volume": 433054
+    "volume": 433,
+    "rawVolume": 433054,
+    "tradeValue": 2147074,
+    "turnover": "214.7 萬"
   },
   "9105": {
     "code": "9105",
@@ -11525,7 +14666,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.43,
     "close": 8.45,
     "change": -0.08,
-    "volume": 10908
+    "volume": 10909,
+    "rawVolume": 10908550,
+    "tradeValue": 92418673,
+    "turnover": "9241.9 萬"
   },
   "9110": {
     "code": "9110",
@@ -11536,7 +14680,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 2.98,
     "close": 2.98,
     "change": -0.01,
-    "volume": 7030
+    "volume": 7,
+    "rawVolume": 7030,
+    "tradeValue": 21190,
+    "turnover": "2.1 萬"
   },
   "9136": {
     "code": "9136",
@@ -11547,7 +14694,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.04,
     "close": 9.13,
     "change": -0.01,
-    "volume": 135856
+    "volume": 136,
+    "rawVolume": 135856,
+    "tradeValue": 1235908,
+    "turnover": "123.6 萬"
   },
   "9802": {
     "code": "9802",
@@ -11558,7 +14708,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 64.2,
     "close": 64.8,
     "change": 0,
-    "volume": 565
+    "volume": 566,
+    "rawVolume": 565927,
+    "tradeValue": 36605072,
+    "turnover": "3660.5 萬"
   },
   "9902": {
     "code": "9902",
@@ -11569,7 +14722,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.05,
     "close": 13.2,
     "change": 0,
-    "volume": 158795
+    "volume": 159,
+    "rawVolume": 158795,
+    "tradeValue": 2082436,
+    "turnover": "208.2 萬"
   },
   "9904": {
     "code": "9904",
@@ -11580,7 +14736,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.7,
     "close": 24.85,
     "change": -0.1,
-    "volume": 8975
+    "volume": 8976,
+    "rawVolume": 8975716,
+    "tradeValue": 222659794,
+    "turnover": "2.2 億"
   },
   "9905": {
     "code": "9905",
@@ -11591,7 +14750,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.3,
     "close": 21.4,
     "change": 0.05,
-    "volume": 43147
+    "volume": 43,
+    "rawVolume": 43147,
+    "tradeValue": 920012,
+    "turnover": "92.0 萬"
   },
   "9906": {
     "code": "9906",
@@ -11602,7 +14764,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.4,
     "close": 40.25,
     "change": 0.8,
-    "volume": 37220
+    "volume": 37,
+    "rawVolume": 37220,
+    "tradeValue": 1480367,
+    "turnover": "148.0 萬"
   },
   "9907": {
     "code": "9907",
@@ -11613,7 +14778,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.85,
     "close": 14.85,
     "change": -0.05,
-    "volume": 677
+    "volume": 678,
+    "rawVolume": 677777,
+    "tradeValue": 10106366,
+    "turnover": "1010.6 萬"
   },
   "9908": {
     "code": "9908",
@@ -11624,7 +14792,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 28.95,
     "close": 28.95,
     "change": -0.05,
-    "volume": 67493
+    "volume": 67,
+    "rawVolume": 67493,
+    "tradeValue": 1955185,
+    "turnover": "195.5 萬"
   },
   "9910": {
     "code": "9910",
@@ -11635,7 +14806,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 68.3,
     "close": 68.8,
     "change": 0,
-    "volume": 875
+    "volume": 875,
+    "rawVolume": 875341,
+    "tradeValue": 60175186,
+    "turnover": "6017.5 萬"
   },
   "9911": {
     "code": "9911",
@@ -11646,7 +14820,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 81.4,
     "close": 81.5,
     "change": 0,
-    "volume": 107539
+    "volume": 108,
+    "rawVolume": 107539,
+    "tradeValue": 8764704,
+    "turnover": "876.5 萬"
   },
   "9912": {
     "code": "9912",
@@ -11657,7 +14834,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.9,
     "close": 12.95,
     "change": -0.15,
-    "volume": 12180
+    "volume": 12,
+    "rawVolume": 12180,
+    "tradeValue": 157677,
+    "turnover": "15.8 萬"
   },
   "9914": {
     "code": "9914",
@@ -11668,7 +14848,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 67.6,
     "close": 68.3,
     "change": 0,
-    "volume": 789
+    "volume": 790,
+    "rawVolume": 789781,
+    "tradeValue": 53816875,
+    "turnover": "5381.7 萬"
   },
   "9917": {
     "code": "9917",
@@ -11679,7 +14862,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 105.5,
     "close": 106.5,
     "change": 1,
-    "volume": 204764
+    "volume": 205,
+    "rawVolume": 204764,
+    "tradeValue": 21711393,
+    "turnover": "2171.1 萬"
   },
   "9918": {
     "code": "9918",
@@ -11690,7 +14876,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.75,
     "close": 43.2,
     "change": 0.05,
-    "volume": 11928
+    "volume": 12,
+    "rawVolume": 11928,
+    "tradeValue": 513258,
+    "turnover": "51.3 萬"
   },
   "9919": {
     "code": "9919",
@@ -11701,7 +14890,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.65,
     "close": 13.8,
     "change": -0.05,
-    "volume": 124594
+    "volume": 125,
+    "rawVolume": 124594,
+    "tradeValue": 1715378,
+    "turnover": "171.5 萬"
   },
   "9921": {
     "code": "9921",
@@ -11712,7 +14904,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 91.1,
     "close": 91.8,
     "change": -1.3,
-    "volume": 1035
+    "volume": 1035,
+    "rawVolume": 1035498,
+    "tradeValue": 94972987,
+    "turnover": "9497.3 萬"
   },
   "9924": {
     "code": "9924",
@@ -11723,7 +14918,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 37.8,
     "close": 38.2,
     "change": 0,
-    "volume": 50617
+    "volume": 51,
+    "rawVolume": 50617,
+    "tradeValue": 1929565,
+    "turnover": "193.0 萬"
   },
   "9925": {
     "code": "9925",
@@ -11734,7 +14932,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.45,
     "close": 39.55,
     "change": 0,
-    "volume": 319171
+    "volume": 319,
+    "rawVolume": 319171,
+    "tradeValue": 12616537,
+    "turnover": "1261.7 萬"
   },
   "9926": {
     "code": "9926",
@@ -11745,7 +14946,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.7,
     "close": 49.1,
     "change": 0,
-    "volume": 9000
+    "volume": 9,
+    "rawVolume": 9000,
+    "tradeValue": 440500,
+    "turnover": "44.0 萬"
   },
   "9927": {
     "code": "9927",
@@ -11756,7 +14960,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 63.7,
     "close": 64,
     "change": 0,
-    "volume": 748
+    "volume": 748,
+    "rawVolume": 748435,
+    "tradeValue": 47887889,
+    "turnover": "4788.8 萬"
   },
   "9928": {
     "code": "9928",
@@ -11767,7 +14974,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.85,
     "close": 18.05,
     "change": 0.3,
-    "volume": 72144
+    "volume": 72,
+    "rawVolume": 72144,
+    "tradeValue": 1297444,
+    "turnover": "129.7 萬"
   },
   "9929": {
     "code": "9929",
@@ -11778,7 +14988,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.05,
     "close": 11.1,
     "change": 0,
-    "volume": 2503
+    "volume": 2503,
+    "rawVolume": 2503247,
+    "tradeValue": 27786003,
+    "turnover": "2778.6 萬"
   },
   "9930": {
     "code": "9930",
@@ -11789,7 +15002,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 59.9,
     "close": 60.2,
     "change": 0,
-    "volume": 64546
+    "volume": 65,
+    "rawVolume": 64546,
+    "tradeValue": 3877780,
+    "turnover": "387.8 萬"
   },
   "9931": {
     "code": "9931",
@@ -11800,7 +15016,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.85,
     "close": 34.1,
     "change": -0.1,
-    "volume": 5120
+    "volume": 5,
+    "rawVolume": 5120,
+    "tradeValue": 174041,
+    "turnover": "17.4 萬"
   },
   "9933": {
     "code": "9933",
@@ -11811,7 +15030,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.6,
     "close": 41.65,
     "change": 0.95,
-    "volume": 3030
+    "volume": 3030,
+    "rawVolume": 3030280,
+    "tradeValue": 125800280,
+    "turnover": "1.3 億"
   },
   "9934": {
     "code": "9934",
@@ -11822,7 +15044,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.82,
     "close": 9.86,
     "change": -0.01,
-    "volume": 302566
+    "volume": 303,
+    "rawVolume": 302566,
+    "tradeValue": 2984639,
+    "turnover": "298.5 萬"
   },
   "9935": {
     "code": "9935",
@@ -11833,7 +15058,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.15,
     "close": 18.35,
     "change": 0.05,
-    "volume": 140355
+    "volume": 140,
+    "rawVolume": 140355,
+    "tradeValue": 2568085,
+    "turnover": "256.8 萬"
   },
   "9937": {
     "code": "9937",
@@ -11844,7 +15072,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 54.2,
     "close": 54.5,
     "change": 0,
-    "volume": 14157
+    "volume": 14,
+    "rawVolume": 14157,
+    "tradeValue": 769721,
+    "turnover": "77.0 萬"
   },
   "9938": {
     "code": "9938",
@@ -11855,7 +15086,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.1,
     "close": 38.55,
     "change": 0.3,
-    "volume": 533
+    "volume": 534,
+    "rawVolume": 533525,
+    "tradeValue": 20496795,
+    "turnover": "2049.7 萬"
   },
   "9939": {
     "code": "9939",
@@ -11866,7 +15100,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 123.5,
     "close": 124.5,
     "change": -1.5,
-    "volume": 798
+    "volume": 798,
+    "rawVolume": 798328,
+    "tradeValue": 99253734,
+    "turnover": "9925.4 萬"
   },
   "9940": {
     "code": "9940",
@@ -11877,7 +15114,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.05,
     "close": 20.05,
     "change": -0.05,
-    "volume": 150932
+    "volume": 151,
+    "rawVolume": 150932,
+    "tradeValue": 3031812,
+    "turnover": "303.2 萬"
   },
   "9941": {
     "code": "9941",
@@ -11888,7 +15128,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 77.2,
     "close": 77.9,
     "change": 0,
-    "volume": 1273
+    "volume": 1274,
+    "rawVolume": 1273517,
+    "tradeValue": 98861524,
+    "turnover": "9886.2 萬"
   },
   "9942": {
     "code": "9942",
@@ -11899,7 +15142,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 114,
     "close": 114.5,
     "change": 0,
-    "volume": 22539
+    "volume": 23,
+    "rawVolume": 22539,
+    "tradeValue": 2572207,
+    "turnover": "257.2 萬"
   },
   "9943": {
     "code": "9943",
@@ -11910,7 +15156,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 50.3,
     "close": 50.4,
     "change": 0,
-    "volume": 18138
+    "volume": 18,
+    "rawVolume": 18138,
+    "tradeValue": 913481,
+    "turnover": "91.3 萬"
   },
   "9944": {
     "code": "9944",
@@ -11921,7 +15170,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.1,
     "close": 17.15,
     "change": -0.05,
-    "volume": 26896
+    "volume": 27,
+    "rawVolume": 26896,
+    "tradeValue": 462240,
+    "turnover": "46.2 萬"
   },
   "9945": {
     "code": "9945",
@@ -11932,7 +15184,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.15,
     "close": 29.25,
     "change": -0.2,
-    "volume": 3828
+    "volume": 3829,
+    "rawVolume": 3828692,
+    "tradeValue": 111980962,
+    "turnover": "1.1 億"
   },
   "9946": {
     "code": "9946",
@@ -11943,7 +15198,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.85,
     "close": 16.85,
     "change": -0.15,
-    "volume": 136072
+    "volume": 136,
+    "rawVolume": 136072,
+    "tradeValue": 2298523,
+    "turnover": "229.9 萬"
   },
   "9955": {
     "code": "9955",
@@ -11954,7 +15212,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23,
     "close": 23.1,
     "change": 0,
-    "volume": 115084
+    "volume": 115,
+    "rawVolume": 115084,
+    "tradeValue": 2659560,
+    "turnover": "266.0 萬"
   },
   "9958": {
     "code": "9958",
@@ -11965,7 +15226,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 91.7,
     "close": 92,
     "change": -1,
-    "volume": 871
+    "volume": 872,
+    "rawVolume": 871632,
+    "tradeValue": 80586937,
+    "turnover": "8058.7 萬"
   },
   "910322": {
     "code": "910322",
@@ -11976,7 +15240,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 0,
     "close": 0,
     "change": 0,
-    "volume": 204
+    "volume": 0,
+    "rawVolume": 204,
+    "tradeValue": 4781,
+    "turnover": "0.5 萬"
   },
   "910861": {
     "code": "910861",
@@ -11987,7 +15254,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 4.69,
     "close": 4.69,
     "change": -0.01,
-    "volume": 85000
+    "volume": 85,
+    "rawVolume": 85000,
+    "tradeValue": 399430,
+    "turnover": "39.9 萬"
   },
   "911608": {
     "code": "911608",
@@ -11998,7 +15268,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 2.69,
     "close": 2.7,
     "change": 0,
-    "volume": 26233
+    "volume": 26,
+    "rawVolume": 26233,
+    "tradeValue": 70646,
+    "turnover": "7.1 萬"
   },
   "911622": {
     "code": "911622",
@@ -12009,7 +15282,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 0,
     "close": 0,
     "change": 0,
-    "volume": 0
+    "volume": 0,
+    "rawVolume": 0,
+    "tradeValue": 0,
+    "turnover": "0.0 萬"
   },
   "911868": {
     "code": "911868",
@@ -12020,7 +15296,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1.15,
     "close": 1.15,
     "change": -0.01,
-    "volume": 116311
+    "volume": 116,
+    "rawVolume": 116311,
+    "tradeValue": 134584,
+    "turnover": "13.5 萬"
   },
   "912000": {
     "code": "912000",
@@ -12031,7 +15310,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 2.45,
     "close": 2.48,
     "change": -0.01,
-    "volume": 112401
+    "volume": 112,
+    "rawVolume": 112401,
+    "tradeValue": 277707,
+    "turnover": "27.8 萬"
   },
   "00400A": {
     "code": "00400A",
@@ -12042,7 +15324,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.42,
     "close": 15.6,
     "change": 0.04,
-    "volume": 25716
+    "volume": 25717,
+    "rawVolume": 25716586,
+    "tradeValue": 399315045,
+    "turnover": "4.0 億"
   },
   "00401A": {
     "code": "00401A",
@@ -12053,7 +15338,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.13,
     "close": 14.26,
     "change": 0.04,
-    "volume": 4678
+    "volume": 4678,
+    "rawVolume": 4678108,
+    "tradeValue": 66388858,
+    "turnover": "6638.9 萬"
   },
   "00402A": {
     "code": "00402A",
@@ -12064,7 +15352,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.08,
     "close": 10.22,
     "change": 0.2,
-    "volume": 29956
+    "volume": 29957,
+    "rawVolume": 29956985,
+    "tradeValue": 303975030,
+    "turnover": "3.0 億"
   },
   "00403A": {
     "code": "00403A",
@@ -12075,7 +15366,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.78,
     "close": 10.92,
     "change": 0.13,
-    "volume": 202851
+    "volume": 202851,
+    "rawVolume": 202851174,
+    "tradeValue": 2204873204,
+    "turnover": "22.0 億"
   },
   "00404A": {
     "code": "00404A",
@@ -12086,7 +15380,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.8,
     "close": 9.88,
     "change": 0.03,
-    "volume": 5864
+    "volume": 5864,
+    "rawVolume": 5864249,
+    "tradeValue": 57719486,
+    "turnover": "5771.9 萬"
   },
   "00405A": {
     "code": "00405A",
@@ -12097,7 +15394,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.19,
     "close": 9.28,
     "change": 0.02,
-    "volume": 38274
+    "volume": 38275,
+    "rawVolume": 38274544,
+    "tradeValue": 354625061,
+    "turnover": "3.5 億"
   },
   "00406A": {
     "code": "00406A",
@@ -12108,7 +15408,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.89,
     "close": 10,
     "change": 0.09,
-    "volume": 308261
+    "volume": 308261,
+    "rawVolume": 308261323,
+    "tradeValue": 3063949182,
+    "turnover": "30.6 億"
   },
   "00407A": {
     "code": "00407A",
@@ -12119,7 +15422,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.01,
     "close": 10.12,
     "change": 0.06,
-    "volume": 26761
+    "volume": 26761,
+    "rawVolume": 26761080,
+    "tradeValue": 269621109,
+    "turnover": "2.7 億"
   },
   "00408A": {
     "code": "00408A",
@@ -12130,7 +15436,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.45,
     "close": 10.55,
     "change": 0.06,
-    "volume": 1120
+    "volume": 1121,
+    "rawVolume": 1120688,
+    "tradeValue": 11765347,
+    "turnover": "1176.5 萬"
   },
   "00409A": {
     "code": "00409A",
@@ -12141,7 +15450,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.09,
     "close": 10.3,
     "change": 0.21,
-    "volume": 56865
+    "volume": 56866,
+    "rawVolume": 56865796,
+    "tradeValue": 579187544,
+    "turnover": "5.8 億"
   },
   "00410A": {
     "code": "00410A",
@@ -12152,7 +15464,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.36,
     "close": 12.48,
     "change": 0.05,
-    "volume": 1874
+    "volume": 1874,
+    "rawVolume": 1874100,
+    "tradeValue": 23294364,
+    "turnover": "2329.4 萬"
   },
   "0050": {
     "code": "0050",
@@ -12163,7 +15478,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 112.3,
     "close": 112.8,
     "change": -0.1,
-    "volume": 64776
+    "volume": 64776,
+    "rawVolume": 64776000,
+    "tradeValue": 7306732800,
+    "turnover": "73.1 億"
   },
   "0051": {
     "code": "0051",
@@ -12174,7 +15492,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 148.4,
     "close": 148.85,
     "change": -0.2,
-    "volume": 50930
+    "volume": 51,
+    "rawVolume": 50930,
+    "tradeValue": 7584057,
+    "turnover": "758.4 萬"
   },
   "0052": {
     "code": "0052",
@@ -12185,7 +15506,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 65.3,
     "close": 66,
     "change": 0.55,
-    "volume": 17530
+    "volume": 17531,
+    "rawVolume": 17530841,
+    "tradeValue": 1151607349,
+    "turnover": "11.5 億"
   },
   "0053": {
     "code": "0053",
@@ -12196,7 +15520,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 252.95,
     "close": 255.7,
     "change": 3.65,
-    "volume": 162099
+    "volume": 162,
+    "rawVolume": 162099,
+    "tradeValue": 41194359,
+    "turnover": "4119.4 萬"
   },
   "0055": {
     "code": "0055",
@@ -12207,7 +15534,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.12,
     "close": 48.7,
     "change": -0.57,
-    "volume": 1854
+    "volume": 1855,
+    "rawVolume": 1854543,
+    "tradeValue": 89844580,
+    "turnover": "8984.5 萬"
   },
   "0056": {
     "code": "0056",
@@ -12218,7 +15548,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 56.4,
     "close": 56.85,
     "change": -0.1,
-    "volume": 42084
+    "volume": 42085,
+    "rawVolume": 42084968,
+    "tradeValue": 2383816634,
+    "turnover": "23.8 億"
   },
   "0057": {
     "code": "0057",
@@ -12229,7 +15562,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 334.1,
     "close": 334.3,
     "change": 0.85,
-    "volume": 6682
+    "volume": 7,
+    "rawVolume": 6682,
+    "tradeValue": 2230963,
+    "turnover": "223.1 萬"
   },
   "0061": {
     "code": "0061",
@@ -12240,7 +15576,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.17,
     "close": 23.32,
     "change": 0.07,
-    "volume": 29974
+    "volume": 30,
+    "rawVolume": 29974,
+    "tradeValue": 697776,
+    "turnover": "69.8 萬"
   },
   "006203": {
     "code": "006203",
@@ -12251,7 +15590,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 202.3,
     "close": 203.3,
     "change": 0.1,
-    "volume": 8134
+    "volume": 8,
+    "rawVolume": 8134,
+    "tradeValue": 1648031,
+    "turnover": "164.8 萬"
   },
   "006204": {
     "code": "006204",
@@ -12262,7 +15604,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 237.95,
     "close": 239.3,
     "change": -1.55,
-    "volume": 3213
+    "volume": 3,
+    "rawVolume": 3213,
+    "tradeValue": 763885,
+    "turnover": "76.4 萬"
   },
   "006205": {
     "code": "006205",
@@ -12273,7 +15618,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.2,
     "close": 39.21,
     "change": -0.11,
-    "volume": 47985
+    "volume": 48,
+    "rawVolume": 47985,
+    "tradeValue": 1887300,
+    "turnover": "188.7 萬"
   },
   "006206": {
     "code": "006206",
@@ -12284,7 +15632,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 36.6,
     "close": 36.61,
     "change": -0.11,
-    "volume": 13952
+    "volume": 14,
+    "rawVolume": 13952,
+    "tradeValue": 510788,
+    "turnover": "51.1 萬"
   },
   "006207": {
     "code": "006207",
@@ -12295,7 +15646,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.9,
     "close": 30.97,
     "change": -0.14,
-    "volume": 106075
+    "volume": 106,
+    "rawVolume": 106075,
+    "tradeValue": 3280006,
+    "turnover": "328.0 萬"
   },
   "006208": {
     "code": "006208",
@@ -12306,7 +15660,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 256.25,
     "close": 258.25,
     "change": 1.95,
-    "volume": 1576
+    "volume": 1576,
+    "rawVolume": 1576398,
+    "tradeValue": 405309795,
+    "turnover": "4.1 億"
   },
   "00625K": {
     "code": "00625K",
@@ -12317,7 +15674,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 0,
     "close": 0,
     "change": 0,
-    "volume": 0
+    "volume": 0,
+    "rawVolume": 0,
+    "tradeValue": 0,
+    "turnover": "0.0 萬"
   },
   "00631L": {
     "code": "00631L",
@@ -12328,7 +15688,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.9,
     "close": 39.62,
     "change": 0.63,
-    "volume": 104514
+    "volume": 104515,
+    "rawVolume": 104514650,
+    "tradeValue": 4103772177,
+    "turnover": "41.0 億"
   },
   "00632R": {
     "code": "00632R",
@@ -12339,7 +15702,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.4,
     "close": 9.41,
     "change": -0.06,
-    "volume": 71656
+    "volume": 71657,
+    "rawVolume": 71656895,
+    "tradeValue": 677019065,
+    "turnover": "6.8 億"
   },
   "00633L": {
     "code": "00633L",
@@ -12350,7 +15716,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44.07,
     "close": 44.23,
     "change": -0.01,
-    "volume": 720
+    "volume": 720,
+    "rawVolume": 720335,
+    "tradeValue": 31840405,
+    "turnover": "3184.0 萬"
   },
   "00634R": {
     "code": "00634R",
@@ -12361,7 +15730,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 3.25,
     "close": 3.26,
     "change": -0.01,
-    "volume": 74000
+    "volume": 74,
+    "rawVolume": 74000,
+    "tradeValue": 240640,
+    "turnover": "24.1 萬"
   },
   "00635U": {
     "code": "00635U",
@@ -12372,7 +15744,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.72,
     "close": 43.1,
     "change": 0.06,
-    "volume": 1562
+    "volume": 1562,
+    "rawVolume": 1562005,
+    "tradeValue": 67038510,
+    "turnover": "6703.9 萬"
   },
   "00636": {
     "code": "00636",
@@ -12383,7 +15758,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.33,
     "close": 26.43,
     "change": -0.11,
-    "volume": 194232
+    "volume": 194,
+    "rawVolume": 194232,
+    "tradeValue": 5128792,
+    "turnover": "512.9 萬"
   },
   "00636K": {
     "code": "00636K",
@@ -12394,7 +15772,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.36,
     "close": 8.36,
     "change": 0.2,
-    "volume": 100
+    "volume": 0,
+    "rawVolume": 100,
+    "tradeValue": 836,
+    "turnover": "0.1 萬"
   },
   "00637L": {
     "code": "00637L",
@@ -12405,7 +15786,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.22,
     "close": 18.33,
     "change": 0.01,
-    "volume": 3815
+    "volume": 3815,
+    "rawVolume": 3815447,
+    "tradeValue": 69817804,
+    "turnover": "6981.8 萬"
   },
   "00638R": {
     "code": "00638R",
@@ -12416,7 +15800,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6.94,
     "close": 6.94,
     "change": -0.01,
-    "volume": 25000
+    "volume": 25,
+    "rawVolume": 25000,
+    "tradeValue": 173500,
+    "turnover": "17.4 萬"
   },
   "00639": {
     "code": "00639",
@@ -12427,7 +15814,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.07,
     "close": 15.15,
     "change": -0.05,
-    "volume": 401929
+    "volume": 402,
+    "rawVolume": 401929,
+    "tradeValue": 6074375,
+    "turnover": "607.4 萬"
   },
   "00640L": {
     "code": "00640L",
@@ -12438,7 +15828,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 109,
     "close": 111.2,
     "change": 1.3,
-    "volume": 58977
+    "volume": 59,
+    "rawVolume": 58977,
+    "tradeValue": 6488922,
+    "turnover": "648.9 萬"
   },
   "00641R": {
     "code": "00641R",
@@ -12449,7 +15842,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 3.62,
     "close": 3.62,
     "change": -0.01,
-    "volume": 1173
+    "volume": 1173,
+    "rawVolume": 1173243,
+    "tradeValue": 4256889,
+    "turnover": "425.7 萬"
   },
   "00642U": {
     "code": "00642U",
@@ -12460,7 +15856,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.54,
     "close": 30.54,
     "change": -0.29,
-    "volume": 997
+    "volume": 998,
+    "rawVolume": 997563,
+    "tradeValue": 30709751,
+    "turnover": "3071.0 萬"
   },
   "00643": {
     "code": "00643",
@@ -12471,7 +15870,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.12,
     "close": 17.18,
     "change": -0.08,
-    "volume": 2194
+    "volume": 2195,
+    "rawVolume": 2194505,
+    "tradeValue": 37600373,
+    "turnover": "3760.0 萬"
   },
   "00643K": {
     "code": "00643K",
@@ -12482,7 +15884,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 0,
     "close": 0,
     "change": 0,
-    "volume": 0
+    "volume": 0,
+    "rawVolume": 0,
+    "tradeValue": 0,
+    "turnover": "0.0 萬"
   },
   "00645": {
     "code": "00645",
@@ -12493,7 +15898,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 58.1,
     "close": 58.7,
     "change": 0.35,
-    "volume": 168620
+    "volume": 169,
+    "rawVolume": 168620,
+    "tradeValue": 9848828,
+    "turnover": "984.9 萬"
   },
   "00646": {
     "code": "00646",
@@ -12504,7 +15912,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 77,
     "close": 77.5,
     "change": 0.35,
-    "volume": 1614
+    "volume": 1615,
+    "rawVolume": 1614704,
+    "tradeValue": 124716492,
+    "turnover": "1.2 億"
   },
   "00647L": {
     "code": "00647L",
@@ -12515,7 +15926,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 138.05,
     "close": 138.8,
     "change": 0.5,
-    "volume": 22360
+    "volume": 22,
+    "rawVolume": 22360,
+    "tradeValue": 3095206,
+    "turnover": "309.5 萬"
   },
   "00648R": {
     "code": "00648R",
@@ -12526,7 +15940,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 3.92,
     "close": 3.92,
     "change": 0.01,
-    "volume": 506
+    "volume": 506,
+    "rawVolume": 506000,
+    "tradeValue": 1984130,
+    "turnover": "198.4 萬"
   },
   "00650L": {
     "code": "00650L",
@@ -12537,7 +15954,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.82,
     "close": 15.92,
     "change": -0.04,
-    "volume": 148571
+    "volume": 149,
+    "rawVolume": 148571,
+    "tradeValue": 2363026,
+    "turnover": "236.3 萬"
   },
   "00651R": {
     "code": "00651R",
@@ -12548,7 +15968,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 5.33,
     "close": 5.33,
     "change": -0.02,
-    "volume": 189998
+    "volume": 190,
+    "rawVolume": 189998,
+    "tradeValue": 1012898,
+    "turnover": "101.3 萬"
   },
   "00652": {
     "code": "00652",
@@ -12559,7 +15982,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.05,
     "close": 31.13,
     "change": -0.07,
-    "volume": 139748
+    "volume": 140,
+    "rawVolume": 139748,
+    "tradeValue": 4346434,
+    "turnover": "434.6 萬"
   },
   "00653L": {
     "code": "00653L",
@@ -12570,7 +15996,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.36,
     "close": 40.51,
     "change": -0.49,
-    "volume": 699
+    "volume": 699,
+    "rawVolume": 699169,
+    "tradeValue": 28346898,
+    "turnover": "2834.7 萬"
   },
   "00654R": {
     "code": "00654R",
@@ -12581,7 +16010,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 7.19,
     "close": 7.19,
     "change": 0.06,
-    "volume": 8000
+    "volume": 8,
+    "rawVolume": 8000,
+    "tradeValue": 57570,
+    "turnover": "5.8 萬"
   },
   "00655L": {
     "code": "00655L",
@@ -12592,7 +16024,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.65,
     "close": 30.84,
     "change": 0.01,
-    "volume": 201166
+    "volume": 201,
+    "rawVolume": 201166,
+    "tradeValue": 6191969,
+    "turnover": "619.2 萬"
   },
   "00656R": {
     "code": "00656R",
@@ -12603,7 +16038,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 6.12,
     "close": 6.12,
     "change": -0.01,
-    "volume": 211000
+    "volume": 211,
+    "rawVolume": 211000,
+    "tradeValue": 1292530,
+    "turnover": "129.3 萬"
   },
   "00657": {
     "code": "00657",
@@ -12614,7 +16052,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 80.3,
     "close": 81.6,
     "change": 2.3,
-    "volume": 370367
+    "volume": 370,
+    "rawVolume": 370367,
+    "tradeValue": 29838077,
+    "turnover": "2983.8 萬"
   },
   "00657K": {
     "code": "00657K",
@@ -12625,7 +16066,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.49,
     "close": 25.49,
     "change": 0.65,
-    "volume": 500
+    "volume": 1,
+    "rawVolume": 500,
+    "tradeValue": 12745,
+    "turnover": "1.3 萬"
   },
   "00660": {
     "code": "00660",
@@ -12636,7 +16080,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.59,
     "close": 45.6,
     "change": -0.83,
-    "volume": 27795
+    "volume": 28,
+    "rawVolume": 27795,
+    "tradeValue": 1267045,
+    "turnover": "126.7 萬"
   },
   "00661": {
     "code": "00661",
@@ -12647,7 +16094,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 87.85,
     "close": 89.35,
     "change": 2.65,
-    "volume": 128086
+    "volume": 128,
+    "rawVolume": 128086,
+    "tradeValue": 11360449,
+    "turnover": "1136.0 萬"
   },
   "00662": {
     "code": "00662",
@@ -12658,7 +16108,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 124.75,
     "close": 126.2,
     "change": 2,
-    "volume": 2162
+    "volume": 2163,
+    "rawVolume": 2162883,
+    "tradeValue": 271325463,
+    "turnover": "2.7 億"
   },
   "00663L": {
     "code": "00663L",
@@ -12669,7 +16122,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 112.2,
     "close": 114.6,
     "change": 1.75,
-    "volume": 2626
+    "volume": 2626,
+    "rawVolume": 2626393,
+    "tradeValue": 297693933,
+    "turnover": "3.0 億"
   },
   "00664R": {
     "code": "00664R",
@@ -12680,7 +16136,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 1.52,
     "close": 1.53,
     "change": 0,
-    "volume": 6713
+    "volume": 6713,
+    "rawVolume": 6713184,
+    "tradeValue": 10255268,
+    "turnover": "1025.5 萬"
   },
   "00665L": {
     "code": "00665L",
@@ -12691,7 +16150,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.8,
     "close": 8.84,
     "change": 0,
-    "volume": 1183
+    "volume": 1184,
+    "rawVolume": 1183948,
+    "tradeValue": 10439470,
+    "turnover": "1043.9 萬"
   },
   "00666R": {
     "code": "00666R",
@@ -12702,7 +16164,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 0,
     "close": 0,
     "change": 0,
-    "volume": 0
+    "volume": 0,
+    "rawVolume": 0,
+    "tradeValue": 0,
+    "turnover": "0.0 萬"
   },
   "00668": {
     "code": "00668",
@@ -12713,7 +16178,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 59.6,
     "close": 59.85,
     "change": -0.25,
-    "volume": 102048
+    "volume": 102,
+    "rawVolume": 102048,
+    "tradeValue": 6096988,
+    "turnover": "609.7 萬"
   },
   "00668K": {
     "code": "00668K",
@@ -12724,7 +16192,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.68,
     "close": 18.68,
     "change": -0.1,
-    "volume": 500
+    "volume": 1,
+    "rawVolume": 500,
+    "tradeValue": 9340,
+    "turnover": "0.9 萬"
   },
   "00669R": {
     "code": "00669R",
@@ -12735,7 +16206,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 5.42,
     "close": 5.43,
     "change": 0.06,
-    "volume": 1362
+    "volume": 1362,
+    "rawVolume": 1362288,
+    "tradeValue": 7399165,
+    "turnover": "739.9 萬"
   },
   "00670L": {
     "code": "00670L",
@@ -12746,7 +16220,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 211.9,
     "close": 215.65,
     "change": 6.15,
-    "volume": 608
+    "volume": 608,
+    "rawVolume": 608131,
+    "tradeValue": 129743244,
+    "turnover": "1.3 億"
   },
   "00671R": {
     "code": "00671R",
@@ -12757,7 +16234,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 2.33,
     "close": 2.33,
     "change": -0.03,
-    "volume": 1197
+    "volume": 1197,
+    "rawVolume": 1197333,
+    "tradeValue": 2794580,
+    "turnover": "279.5 萬"
   },
   "00673R": {
     "code": "00673R",
@@ -12768,7 +16248,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.8,
     "close": 10.97,
     "change": 0.11,
-    "volume": 16461
+    "volume": 16461,
+    "rawVolume": 16461067,
+    "tradeValue": 179225686,
+    "turnover": "1.8 億"
   },
   "00674R": {
     "code": "00674R",
@@ -12779,7 +16262,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.24,
     "close": 29.24,
     "change": -0.04,
-    "volume": 43273
+    "volume": 43,
+    "rawVolume": 43273,
+    "tradeValue": 1270205,
+    "turnover": "127.0 萬"
   },
   "00675L": {
     "code": "00675L",
@@ -12790,7 +16276,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 340.05,
     "close": 347.15,
     "change": 5.3,
-    "volume": 485185
+    "volume": 485,
+    "rawVolume": 485185,
+    "tradeValue": 166724596,
+    "turnover": "1.7 億"
   },
   "00676R": {
     "code": "00676R",
@@ -12801,7 +16290,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 5.2,
     "close": 5.2,
     "change": -0.04,
-    "volume": 4795
+    "volume": 4796,
+    "rawVolume": 4795819,
+    "tradeValue": 25048315,
+    "turnover": "2504.8 萬"
   },
   "00678": {
     "code": "00678",
@@ -12812,7 +16304,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.7,
     "close": 43.98,
     "change": 0.15,
-    "volume": 442685
+    "volume": 443,
+    "rawVolume": 442685,
+    "tradeValue": 19387664,
+    "turnover": "1938.8 萬"
   },
   "00680L": {
     "code": "00680L",
@@ -12823,7 +16318,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 5.65,
     "close": 5.72,
     "change": -0.11,
-    "volume": 28045
+    "volume": 28045,
+    "rawVolume": 28045497,
+    "tradeValue": 159643274,
+    "turnover": "1.6 億"
   },
   "00681R": {
     "code": "00681R",
@@ -12834,7 +16332,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.04,
     "close": 23.1,
     "change": 0.31,
-    "volume": 876
+    "volume": 876,
+    "rawVolume": 876100,
+    "tradeValue": 20244975,
+    "turnover": "2024.5 萬"
   },
   "00682U": {
     "code": "00682U",
@@ -12845,7 +16346,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.9,
     "close": 20.91,
     "change": 0.1,
-    "volume": 43000
+    "volume": 43,
+    "rawVolume": 43000,
+    "tradeValue": 898800,
+    "turnover": "89.9 萬"
   },
   "00683L": {
     "code": "00683L",
@@ -12856,7 +16360,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.28,
     "close": 22.42,
     "change": 0.13,
-    "volume": 93002
+    "volume": 93,
+    "rawVolume": 93002,
+    "tradeValue": 2083874,
+    "turnover": "208.4 萬"
   },
   "00684R": {
     "code": "00684R",
@@ -12867,7 +16374,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.84,
     "close": 14.84,
     "change": 0,
-    "volume": 50000
+    "volume": 50,
+    "rawVolume": 50000,
+    "tradeValue": 742000,
+    "turnover": "74.2 萬"
   },
   "00685L": {
     "code": "00685L",
@@ -12878,7 +16388,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.84,
     "close": 13.1,
     "change": 0.19,
-    "volume": 123358
+    "volume": 123359,
+    "rawVolume": 123358626,
+    "tradeValue": 1600122668,
+    "turnover": "16.0 億"
   },
   "00686R": {
     "code": "00686R",
@@ -12889,7 +16402,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 0.92,
     "close": 0.92,
     "change": -0.02,
-    "volume": 3238
+    "volume": 3238,
+    "rawVolume": 3238185,
+    "tradeValue": 3012896,
+    "turnover": "301.3 萬"
   },
   "00688L": {
     "code": "00688L",
@@ -12900,7 +16416,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 5.64,
     "close": 5.71,
     "change": -0.09,
-    "volume": 8413
+    "volume": 8413,
+    "rawVolume": 8413394,
+    "tradeValue": 47707716,
+    "turnover": "4770.8 萬"
   },
   "00689R": {
     "code": "00689R",
@@ -12911,7 +16430,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.15,
     "close": 24.17,
     "change": 0.26,
-    "volume": 119000
+    "volume": 119,
+    "rawVolume": 119000,
+    "tradeValue": 2876960,
+    "turnover": "287.7 萬"
   },
   "00690": {
     "code": "00690",
@@ -12922,7 +16444,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 81.8,
     "close": 82.85,
     "change": 0.55,
-    "volume": 138457
+    "volume": 138,
+    "rawVolume": 138457,
+    "tradeValue": 11414580,
+    "turnover": "1141.5 萬"
   },
   "00692": {
     "code": "00692",
@@ -12933,7 +16458,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 96.3,
     "close": 97.4,
     "change": 0.8,
-    "volume": 517
+    "volume": 517,
+    "rawVolume": 517017,
+    "tradeValue": 50128800,
+    "turnover": "5012.9 萬"
   },
   "00693U": {
     "code": "00693U",
@@ -12944,7 +16472,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.39,
     "close": 23.4,
     "change": -0.28,
-    "volume": 950
+    "volume": 951,
+    "rawVolume": 950564,
+    "tradeValue": 22297269,
+    "turnover": "2229.7 萬"
   },
   "00700": {
     "code": "00700",
@@ -12955,7 +16486,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.77,
     "close": 16.84,
     "change": -0.08,
-    "volume": 52388
+    "volume": 52,
+    "rawVolume": 52388,
+    "tradeValue": 883409,
+    "turnover": "88.3 萬"
   },
   "00701": {
     "code": "00701",
@@ -12966,7 +16500,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.9,
     "close": 41.41,
     "change": -0.01,
-    "volume": 226073
+    "volume": 226,
+    "rawVolume": 226073,
+    "tradeValue": 9290653,
+    "turnover": "929.1 萬"
   },
   "00702": {
     "code": "00702",
@@ -12977,7 +16514,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.07,
     "close": 23.17,
     "change": -0.21,
-    "volume": 383558
+    "volume": 384,
+    "rawVolume": 383558,
+    "tradeValue": 8908502,
+    "turnover": "890.9 萬"
   },
   "00703": {
     "code": "00703",
@@ -12988,7 +16528,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.79,
     "close": 18.79,
     "change": -0.02,
-    "volume": 7168
+    "volume": 7,
+    "rawVolume": 7168,
+    "tradeValue": 134706,
+    "turnover": "13.5 萬"
   },
   "00706L": {
     "code": "00706L",
@@ -12999,7 +16542,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.05,
     "close": 19.05,
     "change": -0.29,
-    "volume": 441117
+    "volume": 441,
+    "rawVolume": 441117,
+    "tradeValue": 8420071,
+    "turnover": "842.0 萬"
   },
   "00707R": {
     "code": "00707R",
@@ -13010,7 +16556,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 0,
     "close": 0,
     "change": 0,
-    "volume": 0
+    "volume": 0,
+    "rawVolume": 0,
+    "tradeValue": 0,
+    "turnover": "0.0 萬"
   },
   "00708L": {
     "code": "00708L",
@@ -13021,7 +16570,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 71.4,
     "close": 72.65,
     "change": 0.45,
-    "volume": 2482
+    "volume": 2483,
+    "rawVolume": 2482848,
+    "tradeValue": 178807055,
+    "turnover": "1.8 億"
   },
   "00709": {
     "code": "00709",
@@ -13032,7 +16584,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.96,
     "close": 38.98,
     "change": -0.48,
-    "volume": 19713
+    "volume": 20,
+    "rawVolume": 19713,
+    "tradeValue": 769448,
+    "turnover": "76.9 萬"
   },
   "00710B": {
     "code": "00710B",
@@ -13043,7 +16598,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.51,
     "close": 18.56,
     "change": 0.04,
-    "volume": 269072
+    "volume": 269,
+    "rawVolume": 269072,
+    "tradeValue": 4987859,
+    "turnover": "498.8 萬"
   },
   "00711B": {
     "code": "00711B",
@@ -13054,7 +16612,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.65,
     "close": 14.71,
     "change": -0.06,
-    "volume": 234063
+    "volume": 234,
+    "rawVolume": 234063,
+    "tradeValue": 3439293,
+    "turnover": "343.9 萬"
   },
   "00712": {
     "code": "00712",
@@ -13065,7 +16626,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 7.29,
     "close": 7.31,
     "change": -0.23,
-    "volume": 118917
+    "volume": 118917,
+    "rawVolume": 118917492,
+    "tradeValue": 869475721,
+    "turnover": "8.7 億"
   },
   "00713": {
     "code": "00713",
@@ -13076,7 +16640,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 62.55,
     "close": 62.85,
     "change": -0.15,
-    "volume": 3399
+    "volume": 3399,
+    "rawVolume": 3399132,
+    "tradeValue": 213193608,
+    "turnover": "2.1 億"
   },
   "00714": {
     "code": "00714",
@@ -13087,7 +16654,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.29,
     "close": 20.36,
     "change": -0.25,
-    "volume": 211167
+    "volume": 211,
+    "rawVolume": 211167,
+    "tradeValue": 4294470,
+    "turnover": "429.4 萬"
   },
   "00715L": {
     "code": "00715L",
@@ -13098,7 +16668,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 63.5,
     "close": 63.55,
     "change": 0.2,
-    "volume": 2662
+    "volume": 2662,
+    "rawVolume": 2662123,
+    "tradeValue": 171967200,
+    "turnover": "1.7 億"
   },
   "00717": {
     "code": "00717",
@@ -13109,7 +16682,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.47,
     "close": 14.54,
     "change": 0.07,
-    "volume": 144508
+    "volume": 145,
+    "rawVolume": 144508,
+    "tradeValue": 2097371,
+    "turnover": "209.7 萬"
   },
   "00728": {
     "code": "00728",
@@ -13120,7 +16696,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 69.65,
     "close": 70.4,
     "change": 0.2,
-    "volume": 69415
+    "volume": 69,
+    "rawVolume": 69415,
+    "tradeValue": 4860288,
+    "turnover": "486.0 萬"
   },
   "00730": {
     "code": "00730",
@@ -13131,7 +16710,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.72,
     "close": 29.9,
     "change": 0.18,
-    "volume": 105151
+    "volume": 105,
+    "rawVolume": 105151,
+    "tradeValue": 3138046,
+    "turnover": "313.8 萬"
   },
   "00731": {
     "code": "00731",
@@ -13142,7 +16724,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 96.65,
     "close": 97.5,
     "change": -0.5,
-    "volume": 525
+    "volume": 526,
+    "rawVolume": 525894,
+    "tradeValue": 50906120,
+    "turnover": "5090.6 萬"
   },
   "00733": {
     "code": "00733",
@@ -13153,7 +16738,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 71.65,
     "close": 72.85,
     "change": 1.3,
-    "volume": 537
+    "volume": 538,
+    "rawVolume": 537959,
+    "tradeValue": 38943157,
+    "turnover": "3894.3 萬"
   },
   "00735": {
     "code": "00735",
@@ -13164,7 +16752,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 107.75,
     "close": 109.65,
     "change": 1.7,
-    "volume": 899
+    "volume": 900,
+    "rawVolume": 899903,
+    "tradeValue": 97841251,
+    "turnover": "9784.1 萬"
   },
   "00736": {
     "code": "00736",
@@ -13175,7 +16766,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.55,
     "close": 31.6,
     "change": -0.03,
-    "volume": 101889
+    "volume": 102,
+    "rawVolume": 101889,
+    "tradeValue": 3214181,
+    "turnover": "321.4 萬"
   },
   "00737": {
     "code": "00737",
@@ -13186,7 +16780,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41.06,
     "close": 41.57,
     "change": 0.7,
-    "volume": 120440
+    "volume": 120,
+    "rawVolume": 120440,
+    "tradeValue": 4985721,
+    "turnover": "498.6 萬"
   },
   "00738U": {
     "code": "00738U",
@@ -13197,7 +16794,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 47.8,
     "close": 48.55,
     "change": 0.18,
-    "volume": 1481
+    "volume": 1482,
+    "rawVolume": 1481865,
+    "tradeValue": 71455091,
+    "turnover": "7145.5 萬"
   },
   "00739": {
     "code": "00739",
@@ -13208,7 +16808,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.5,
     "close": 26.5,
     "change": -0.1,
-    "volume": 2988
+    "volume": 3,
+    "rawVolume": 2988,
+    "tradeValue": 79106,
+    "turnover": "7.9 萬"
   },
   "00752": {
     "code": "00752",
@@ -13219,7 +16822,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.27,
     "close": 22.31,
     "change": -0.03,
-    "volume": 487429
+    "volume": 487,
+    "rawVolume": 487429,
+    "tradeValue": 10868738,
+    "turnover": "1086.9 萬"
   },
   "00753L": {
     "code": "00753L",
@@ -13230,7 +16836,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.57,
     "close": 8.64,
     "change": 0,
-    "volume": 3996
+    "volume": 3996,
+    "rawVolume": 3996293,
+    "tradeValue": 34407861,
+    "turnover": "3440.8 萬"
   },
   "00757": {
     "code": "00757",
@@ -13241,7 +16850,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 143.65,
     "close": 145.35,
     "change": 2.15,
-    "volume": 813
+    "volume": 814,
+    "rawVolume": 813576,
+    "tradeValue": 117733715,
+    "turnover": "1.2 億"
   },
   "00762": {
     "code": "00762",
@@ -13252,7 +16864,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 120.35,
     "close": 123,
     "change": 2.25,
-    "volume": 179280
+    "volume": 179,
+    "rawVolume": 179280,
+    "tradeValue": 21947214,
+    "turnover": "2194.7 萬"
   },
   "00763U": {
     "code": "00763U",
@@ -13263,7 +16878,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 34.47,
     "close": 34.66,
     "change": -0.01,
-    "volume": 131047
+    "volume": 131,
+    "rawVolume": 131047,
+    "tradeValue": 4529552,
+    "turnover": "453.0 萬"
   },
   "00770": {
     "code": "00770",
@@ -13274,7 +16892,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 65.4,
     "close": 66.3,
     "change": 1.1,
-    "volume": 454344
+    "volume": 454,
+    "rawVolume": 454344,
+    "tradeValue": 29925222,
+    "turnover": "2992.5 萬"
   },
   "00771": {
     "code": "00771",
@@ -13285,7 +16906,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.95,
     "close": 14.95,
     "change": -0.01,
-    "volume": 8512
+    "volume": 9,
+    "rawVolume": 8512,
+    "tradeValue": 127336,
+    "turnover": "12.7 萬"
   },
   "00775B": {
     "code": "00775B",
@@ -13296,7 +16920,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.6,
     "close": 29.65,
     "change": -0.12,
-    "volume": 83397
+    "volume": 83,
+    "rawVolume": 83397,
+    "tradeValue": 2468768,
+    "turnover": "246.9 萬"
   },
   "00783": {
     "code": "00783",
@@ -13307,7 +16934,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.07,
     "close": 27.07,
     "change": -0.08,
-    "volume": 3726
+    "volume": 4,
+    "rawVolume": 3726,
+    "tradeValue": 100853,
+    "turnover": "10.1 萬"
   },
   "00830": {
     "code": "00830",
@@ -13318,7 +16948,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 89,
     "close": 90.9,
     "change": 2.1,
-    "volume": 9753
+    "volume": 9754,
+    "rawVolume": 9753830,
+    "tradeValue": 876458515,
+    "turnover": "8.8 億"
   },
   "00850": {
     "code": "00850",
@@ -13329,7 +16962,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 95.65,
     "close": 96.5,
     "change": 0.45,
-    "volume": 536
+    "volume": 536,
+    "rawVolume": 536447,
+    "tradeValue": 51677071,
+    "turnover": "5167.7 萬"
   },
   "00851": {
     "code": "00851",
@@ -13340,7 +16976,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 73.15,
     "close": 73.85,
     "change": 0.7,
-    "volume": 59325
+    "volume": 59,
+    "rawVolume": 59325,
+    "tradeValue": 4361054,
+    "turnover": "436.1 萬"
   },
   "00852L": {
     "code": "00852L",
@@ -13351,7 +16990,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.35,
     "close": 32.59,
     "change": -0.5,
-    "volume": 310327
+    "volume": 310,
+    "rawVolume": 310327,
+    "tradeValue": 10061378,
+    "turnover": "1006.1 萬"
   },
   "00861": {
     "code": "00861",
@@ -13362,7 +17004,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 88.85,
     "close": 90.2,
     "change": 1.7,
-    "volume": 199051
+    "volume": 199,
+    "rawVolume": 199051,
+    "tradeValue": 17787355,
+    "turnover": "1778.7 萬"
   },
   "00865B": {
     "code": "00865B",
@@ -13373,7 +17018,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.97,
     "close": 49.12,
     "change": 0.13,
-    "volume": 2099
+    "volume": 2099,
+    "rawVolume": 2099422,
+    "tradeValue": 103013626,
+    "turnover": "1.0 億"
   },
   "00875": {
     "code": "00875",
@@ -13384,7 +17032,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 57.65,
     "close": 58.25,
     "change": 1.2,
-    "volume": 148633
+    "volume": 149,
+    "rawVolume": 148633,
+    "tradeValue": 8593246,
+    "turnover": "859.3 萬"
   },
   "00876": {
     "code": "00876",
@@ -13395,7 +17046,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 91,
     "close": 92.75,
     "change": 1.5,
-    "volume": 361343
+    "volume": 361,
+    "rawVolume": 361343,
+    "tradeValue": 33234542,
+    "turnover": "3323.5 萬"
   },
   "00878": {
     "code": "00878",
@@ -13406,7 +17060,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 34.68,
     "close": 34.89,
     "change": -0.01,
-    "volume": 34467
+    "volume": 34467,
+    "rawVolume": 34467088,
+    "tradeValue": 1198824742,
+    "turnover": "12.0 億"
   },
   "00881": {
     "code": "00881",
@@ -13417,7 +17074,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 52,
     "close": 52.6,
     "change": 0.4,
-    "volume": 8913
+    "volume": 8913,
+    "rawVolume": 8913190,
+    "tradeValue": 466005413,
+    "turnover": "4.7 億"
   },
   "00882": {
     "code": "00882",
@@ -13428,7 +17088,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.83,
     "close": 14.84,
     "change": -0.08,
-    "volume": 1961
+    "volume": 1961,
+    "rawVolume": 1961420,
+    "tradeValue": 29198634,
+    "turnover": "2919.9 萬"
   },
   "00885": {
     "code": "00885",
@@ -13439,7 +17102,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.86,
     "close": 17.94,
     "change": -0.06,
-    "volume": 1348
+    "volume": 1348,
+    "rawVolume": 1348285,
+    "tradeValue": 24167554,
+    "turnover": "2416.8 萬"
   },
   "00891": {
     "code": "00891",
@@ -13450,7 +17116,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 37.5,
     "close": 37.82,
     "change": 0.29,
-    "volume": 7469
+    "volume": 7470,
+    "rawVolume": 7469760,
+    "tradeValue": 281305404,
+    "turnover": "2.8 億"
   },
   "00892": {
     "code": "00892",
@@ -13461,7 +17130,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.77,
     "close": 43.08,
     "change": 0.03,
-    "volume": 3837
+    "volume": 3838,
+    "rawVolume": 3837891,
+    "tradeValue": 164725029,
+    "turnover": "1.6 億"
   },
   "00893": {
     "code": "00893",
@@ -13472,7 +17144,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.71,
     "close": 46.33,
     "change": 0.6,
-    "volume": 3370
+    "volume": 3370,
+    "rawVolume": 3370101,
+    "tradeValue": 154878745,
+    "turnover": "1.5 億"
   },
   "00894": {
     "code": "00894",
@@ -13483,7 +17158,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 49.61,
     "close": 50.05,
     "change": 0.21,
-    "volume": 1057
+    "volume": 1057,
+    "rawVolume": 1057094,
+    "tradeValue": 52733053,
+    "turnover": "5273.3 萬"
   },
   "00895": {
     "code": "00895",
@@ -13494,7 +17172,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.7,
     "close": 52.4,
     "change": 0.7,
-    "volume": 639
+    "volume": 640,
+    "rawVolume": 639816,
+    "tradeValue": 33347891,
+    "turnover": "3334.8 萬"
   },
   "00896": {
     "code": "00896",
@@ -13505,7 +17186,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.7,
     "close": 27.84,
     "change": 0.07,
-    "volume": 2568
+    "volume": 2568,
+    "rawVolume": 2568275,
+    "tradeValue": 71424652,
+    "turnover": "7142.5 萬"
   },
   "00897": {
     "code": "00897",
@@ -13516,7 +17200,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.18,
     "close": 14.27,
     "change": 0.05,
-    "volume": 1192
+    "volume": 1193,
+    "rawVolume": 1192745,
+    "tradeValue": 16962097,
+    "turnover": "1696.2 萬"
   },
   "00898": {
     "code": "00898",
@@ -13527,7 +17214,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.05,
     "close": 12.11,
     "change": 0.03,
-    "volume": 762
+    "volume": 763,
+    "rawVolume": 762881,
+    "tradeValue": 9213358,
+    "turnover": "921.3 萬"
   },
   "00899": {
     "code": "00899",
@@ -13538,7 +17228,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.14,
     "close": 22.2,
     "change": 0.06,
-    "volume": 63215
+    "volume": 63,
+    "rawVolume": 63215,
+    "tradeValue": 1403209,
+    "turnover": "140.3 萬"
   },
   "00900": {
     "code": "00900",
@@ -13549,7 +17242,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.19,
     "close": 19.4,
     "change": 0,
-    "volume": 3308
+    "volume": 3309,
+    "rawVolume": 3308829,
+    "tradeValue": 63871459,
+    "turnover": "6387.1 萬"
   },
   "00901": {
     "code": "00901",
@@ -13560,7 +17256,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.07,
     "close": 48.59,
     "change": 0.44,
-    "volume": 552
+    "volume": 552,
+    "rawVolume": 552179,
+    "tradeValue": 26781871,
+    "turnover": "2678.2 萬"
   },
   "00902": {
     "code": "00902",
@@ -13571,7 +17270,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.44,
     "close": 12.59,
     "change": 0.16,
-    "volume": 471891
+    "volume": 472,
+    "rawVolume": 471891,
+    "tradeValue": 5907245,
+    "turnover": "590.7 萬"
   },
   "00903": {
     "code": "00903",
@@ -13582,7 +17284,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.97,
     "close": 22.29,
     "change": 0.44,
-    "volume": 211769
+    "volume": 212,
+    "rawVolume": 211769,
+    "tradeValue": 4701592,
+    "turnover": "470.2 萬"
   },
   "00904": {
     "code": "00904",
@@ -13593,7 +17298,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.43,
     "close": 43.69,
     "change": 0.26,
-    "volume": 1972
+    "volume": 1973,
+    "rawVolume": 1972670,
+    "tradeValue": 85931206,
+    "turnover": "8593.1 萬"
   },
   "00905": {
     "code": "00905",
@@ -13604,7 +17312,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 27.56,
     "close": 27.8,
     "change": 0.15,
-    "volume": 771
+    "volume": 771,
+    "rawVolume": 771230,
+    "tradeValue": 21334393,
+    "turnover": "2133.4 萬"
   },
   "00907": {
     "code": "00907",
@@ -13615,7 +17326,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.53,
     "close": 17.64,
     "change": -0.1,
-    "volume": 892
+    "volume": 893,
+    "rawVolume": 892752,
+    "tradeValue": 15692645,
+    "turnover": "1569.3 萬"
   },
   "00908": {
     "code": "00908",
@@ -13626,7 +17340,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.53,
     "close": 14.55,
     "change": 0.01,
-    "volume": 31285
+    "volume": 31,
+    "rawVolume": 31285,
+    "tradeValue": 454973,
+    "turnover": "45.5 萬"
   },
   "00909": {
     "code": "00909",
@@ -13637,7 +17354,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 47.72,
     "close": 48.51,
     "change": -0.11,
-    "volume": 987
+    "volume": 988,
+    "rawVolume": 987579,
+    "tradeValue": 47406058,
+    "turnover": "4740.6 萬"
   },
   "00910": {
     "code": "00910",
@@ -13648,7 +17368,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 56.9,
     "close": 57.7,
     "change": 0.45,
-    "volume": 510
+    "volume": 511,
+    "rawVolume": 510896,
+    "tradeValue": 29183446,
+    "turnover": "2918.3 萬"
   },
   "00911": {
     "code": "00911",
@@ -13659,7 +17382,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 56.75,
     "close": 58,
     "change": 1.3,
-    "volume": 814
+    "volume": 814,
+    "rawVolume": 814248,
+    "tradeValue": 46632005,
+    "turnover": "4663.2 萬"
   },
   "00912": {
     "code": "00912",
@@ -13670,7 +17396,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 35.86,
     "close": 36.21,
     "change": 0.01,
-    "volume": 544
+    "volume": 544,
+    "rawVolume": 544016,
+    "tradeValue": 19653461,
+    "turnover": "1965.3 萬"
   },
   "00913": {
     "code": "00913",
@@ -13681,7 +17410,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 52.55,
     "close": 53,
     "change": 0.3,
-    "volume": 1031
+    "volume": 1032,
+    "rawVolume": 1031732,
+    "tradeValue": 54523132,
+    "turnover": "5452.3 萬"
   },
   "00915": {
     "code": "00915",
@@ -13692,7 +17424,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 32.81,
     "close": 33.13,
     "change": 0.06,
-    "volume": 1567
+    "volume": 1567,
+    "rawVolume": 1567439,
+    "tradeValue": 51615941,
+    "turnover": "5161.6 萬"
   },
   "00916": {
     "code": "00916",
@@ -13703,7 +17438,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.88,
     "close": 27.04,
     "change": 0.19,
-    "volume": 474822
+    "volume": 475,
+    "rawVolume": 474822,
+    "tradeValue": 12804330,
+    "turnover": "1280.4 萬"
   },
   "00917": {
     "code": "00917",
@@ -13714,7 +17452,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.26,
     "close": 22.33,
     "change": -0.12,
-    "volume": 833
+    "volume": 834,
+    "rawVolume": 833763,
+    "tradeValue": 18587399,
+    "turnover": "1858.7 萬"
   },
   "00918": {
     "code": "00918",
@@ -13725,7 +17466,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.7,
     "close": 33.89,
     "change": 0,
-    "volume": 42307
+    "volume": 42307,
+    "rawVolume": 42307443,
+    "tradeValue": 1429536520,
+    "turnover": "14.3 億"
   },
   "00919": {
     "code": "00919",
@@ -13736,7 +17480,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.41,
     "close": 31.63,
     "change": -0.25,
-    "volume": 147842
+    "volume": 147843,
+    "rawVolume": 147842613,
+    "tradeValue": 4662668421,
+    "turnover": "46.6 億"
   },
   "00920": {
     "code": "00920",
@@ -13747,7 +17494,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 24.75,
     "close": 24.99,
     "change": 0.11,
-    "volume": 359674
+    "volume": 360,
+    "rawVolume": 359674,
+    "tradeValue": 8975249,
+    "turnover": "897.5 萬"
   },
   "00921": {
     "code": "00921",
@@ -13758,7 +17508,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.4,
     "close": 23.48,
     "change": -0.13,
-    "volume": 124051
+    "volume": 124,
+    "rawVolume": 124051,
+    "tradeValue": 2910813,
+    "turnover": "291.1 萬"
   },
   "00922": {
     "code": "00922",
@@ -13769,7 +17522,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.41,
     "close": 43.85,
     "change": 0.2,
-    "volume": 7840
+    "volume": 7841,
+    "rawVolume": 7840645,
+    "tradeValue": 341685763,
+    "turnover": "3.4 億"
   },
   "00923": {
     "code": "00923",
@@ -13780,7 +17536,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 41.4,
     "close": 41.82,
     "change": 0.31,
-    "volume": 2495
+    "volume": 2496,
+    "rawVolume": 2495630,
+    "tradeValue": 103779759,
+    "turnover": "1.0 億"
   },
   "00924": {
     "code": "00924",
@@ -13791,7 +17550,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.8,
     "close": 34.09,
     "change": 0.31,
-    "volume": 2322
+    "volume": 2323,
+    "rawVolume": 2322859,
+    "tradeValue": 78932274,
+    "turnover": "7893.2 萬"
   },
   "00926": {
     "code": "00926",
@@ -13802,7 +17564,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.63,
     "close": 26.77,
     "change": 0.18,
-    "volume": 432210
+    "volume": 432,
+    "rawVolume": 432210,
+    "tradeValue": 11535710,
+    "turnover": "1153.6 萬"
   },
   "00927": {
     "code": "00927",
@@ -13813,7 +17578,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 39.84,
     "close": 40.29,
     "change": 0.4,
-    "volume": 41649
+    "volume": 41650,
+    "rawVolume": 41649614,
+    "tradeValue": 1670774824,
+    "turnover": "16.7 億"
   },
   "00929": {
     "code": "00929",
@@ -13824,7 +17592,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.36,
     "close": 29.59,
     "change": 0.24,
-    "volume": 24482
+    "volume": 24483,
+    "rawVolume": 24482847,
+    "tradeValue": 722140349,
+    "turnover": "7.2 億"
   },
   "00930": {
     "code": "00930",
@@ -13835,7 +17606,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.7,
     "close": 23.79,
     "change": -0.01,
-    "volume": 1439
+    "volume": 1439,
+    "rawVolume": 1439173,
+    "tradeValue": 34165641,
+    "turnover": "3416.6 萬"
   },
   "00932": {
     "code": "00932",
@@ -13846,7 +17620,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.51,
     "close": 17.55,
     "change": 0.03,
-    "volume": 292940
+    "volume": 293,
+    "rawVolume": 292940,
+    "tradeValue": 5136698,
+    "turnover": "513.7 萬"
   },
   "00934": {
     "code": "00934",
@@ -13857,7 +17634,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.86,
     "close": 30.01,
     "change": 0.06,
-    "volume": 1156
+    "volume": 1157,
+    "rawVolume": 1156602,
+    "tradeValue": 34680127,
+    "turnover": "3468.0 萬"
   },
   "00935": {
     "code": "00935",
@@ -13868,7 +17648,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 60.75,
     "close": 61.55,
     "change": 0.6,
-    "volume": 4964
+    "volume": 4965,
+    "rawVolume": 4964957,
+    "tradeValue": 303471067,
+    "turnover": "3.0 億"
   },
   "00936": {
     "code": "00936",
@@ -13879,7 +17662,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.51,
     "close": 21.57,
     "change": -0.01,
-    "volume": 186008
+    "volume": 186,
+    "rawVolume": 186008,
+    "tradeValue": 4007204,
+    "turnover": "400.7 萬"
   },
   "00938": {
     "code": "00938",
@@ -13890,7 +17676,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 26.5,
     "close": 26.79,
     "change": -0.12,
-    "volume": 912
+    "volume": 912,
+    "rawVolume": 912052,
+    "tradeValue": 24315699,
+    "turnover": "2431.6 萬"
   },
   "00939": {
     "code": "00939",
@@ -13901,7 +17690,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.79,
     "close": 24.02,
     "change": -0.08,
-    "volume": 3587
+    "volume": 3587,
+    "rawVolume": 3587232,
+    "tradeValue": 85702980,
+    "turnover": "8570.3 萬"
   },
   "00940": {
     "code": "00940",
@@ -13912,7 +17704,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.08,
     "close": 13.18,
     "change": 0.06,
-    "volume": 9356
+    "volume": 9356,
+    "rawVolume": 9356116,
+    "tradeValue": 122904067,
+    "turnover": "1.2 億"
   },
   "00941": {
     "code": "00941",
@@ -13923,7 +17718,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.88,
     "close": 26.42,
     "change": 0.61,
-    "volume": 2728
+    "volume": 2729,
+    "rawVolume": 2728690,
+    "tradeValue": 71623946,
+    "turnover": "7162.4 萬"
   },
   "00943": {
     "code": "00943",
@@ -13934,7 +17732,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.03,
     "close": 21.17,
     "change": 0.15,
-    "volume": 135659
+    "volume": 136,
+    "rawVolume": 135659,
+    "tradeValue": 2860117,
+    "turnover": "286.0 萬"
   },
   "00944": {
     "code": "00944",
@@ -13945,7 +17746,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.91,
     "close": 22.1,
     "change": 0.15,
-    "volume": 102727
+    "volume": 103,
+    "rawVolume": 102727,
+    "tradeValue": 2260512,
+    "turnover": "226.1 萬"
   },
   "00945B": {
     "code": "00945B",
@@ -13956,7 +17760,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.16,
     "close": 14.2,
     "change": 0.01,
-    "volume": 2630
+    "volume": 2631,
+    "rawVolume": 2630921,
+    "tradeValue": 37332565,
+    "turnover": "3733.3 萬"
   },
   "00946": {
     "code": "00946",
@@ -13967,7 +17774,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.4,
     "close": 15.47,
     "change": 0.05,
-    "volume": 1209
+    "volume": 1209,
+    "rawVolume": 1209363,
+    "tradeValue": 18692800,
+    "turnover": "1869.3 萬"
   },
   "00947": {
     "code": "00947",
@@ -13978,7 +17788,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 40.21,
     "close": 40.45,
     "change": -0.01,
-    "volume": 5840
+    "volume": 5840,
+    "rawVolume": 5840468,
+    "tradeValue": 235912313,
+    "turnover": "2.4 億"
   },
   "00949": {
     "code": "00949",
@@ -13989,7 +17802,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.98,
     "close": 22.19,
     "change": 0.04,
-    "volume": 750
+    "volume": 750,
+    "rawVolume": 750328,
+    "tradeValue": 16552434,
+    "turnover": "1655.2 萬"
   },
   "00951": {
     "code": "00951",
@@ -14000,7 +17816,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.55,
     "close": 19.09,
     "change": 0.99,
-    "volume": 4668
+    "volume": 4668,
+    "rawVolume": 4668364,
+    "tradeValue": 88037590,
+    "turnover": "8803.8 萬"
   },
   "00952": {
     "code": "00952",
@@ -14011,7 +17830,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.39,
     "close": 18.55,
     "change": 0.16,
-    "volume": 2123
+    "volume": 2123,
+    "rawVolume": 2123391,
+    "tradeValue": 39262920,
+    "turnover": "3926.3 萬"
   },
   "00953B": {
     "code": "00953B",
@@ -14022,7 +17844,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.5,
     "close": 9.52,
     "change": 0.01,
-    "volume": 24498
+    "volume": 24498,
+    "rawVolume": 24498128,
+    "tradeValue": 232979139,
+    "turnover": "2.3 億"
   },
   "00954": {
     "code": "00954",
@@ -14033,7 +17858,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.8,
     "close": 20.34,
     "change": 1.01,
-    "volume": 4093
+    "volume": 4094,
+    "rawVolume": 4093724,
+    "tradeValue": 82364420,
+    "turnover": "8236.4 萬"
   },
   "00956": {
     "code": "00956",
@@ -14044,7 +17872,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.34,
     "close": 13.43,
     "change": -0.16,
-    "volume": 233075
+    "volume": 233,
+    "rawVolume": 233075,
+    "tradeValue": 3124911,
+    "turnover": "312.5 萬"
   },
   "00960": {
     "code": "00960",
@@ -14055,7 +17886,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.21,
     "close": 22.31,
     "change": -0.07,
-    "volume": 442683
+    "volume": 443,
+    "rawVolume": 442683,
+    "tradeValue": 9881035,
+    "turnover": "988.1 萬"
   },
   "00961": {
     "code": "00961",
@@ -14066,7 +17900,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.21,
     "close": 13.27,
     "change": 0.03,
-    "volume": 10944
+    "volume": 10945,
+    "rawVolume": 10944527,
+    "tradeValue": 144890583,
+    "turnover": "1.4 億"
   },
   "00962": {
     "code": "00962",
@@ -14077,7 +17914,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.07,
     "close": 15.18,
     "change": 0.13,
-    "volume": 4494
+    "volume": 4494,
+    "rawVolume": 4494118,
+    "tradeValue": 67955785,
+    "turnover": "6795.6 萬"
   },
   "00963": {
     "code": "00963",
@@ -14088,7 +17928,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.44,
     "close": 12.49,
     "change": -0.03,
-    "volume": 1818
+    "volume": 1818,
+    "rawVolume": 1818173,
+    "tradeValue": 22648044,
+    "turnover": "2264.8 萬"
   },
   "00964": {
     "code": "00964",
@@ -14099,7 +17942,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.75,
     "close": 14.78,
     "change": -0.04,
-    "volume": 892
+    "volume": 893,
+    "rawVolume": 892803,
+    "tradeValue": 13176811,
+    "turnover": "1317.7 萬"
   },
   "00965": {
     "code": "00965",
@@ -14110,7 +17956,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.1,
     "close": 25.37,
     "change": 0.18,
-    "volume": 9858
+    "volume": 9859,
+    "rawVolume": 9858600,
+    "tradeValue": 247985544,
+    "turnover": "2.5 億"
   },
   "00971": {
     "code": "00971",
@@ -14121,7 +17970,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.85,
     "close": 18.03,
     "change": 0.23,
-    "volume": 226747
+    "volume": 227,
+    "rawVolume": 226747,
+    "tradeValue": 4070827,
+    "turnover": "407.1 萬"
   },
   "00972": {
     "code": "00972",
@@ -14132,7 +17984,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.48,
     "close": 21.58,
     "change": -0.24,
-    "volume": 102245
+    "volume": 102,
+    "rawVolume": 102245,
+    "tradeValue": 2200525,
+    "turnover": "220.1 萬"
   },
   "009800": {
     "code": "009800",
@@ -14143,7 +17998,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.45,
     "close": 13.65,
     "change": 0.23,
-    "volume": 1575
+    "volume": 1576,
+    "rawVolume": 1575697,
+    "tradeValue": 21363062,
+    "turnover": "2136.3 萬"
   },
   "009801": {
     "code": "009801",
@@ -14154,7 +18012,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.68,
     "close": 11.82,
     "change": 0.18,
-    "volume": 1226
+    "volume": 1226,
+    "rawVolume": 1226305,
+    "tradeValue": 14388933,
+    "turnover": "1438.9 萬"
   },
   "009802": {
     "code": "009802",
@@ -14165,7 +18026,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 19.84,
     "close": 19.98,
     "change": -0.09,
-    "volume": 2074
+    "volume": 2074,
+    "rawVolume": 2074035,
+    "tradeValue": 41337757,
+    "turnover": "4133.8 萬"
   },
   "009803": {
     "code": "009803",
@@ -14176,7 +18040,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.58,
     "close": 21.79,
     "change": 0.18,
-    "volume": 3043
+    "volume": 3043,
+    "rawVolume": 3043479,
+    "tradeValue": 66001694,
+    "turnover": "6600.2 萬"
   },
   "009804": {
     "code": "009804",
@@ -14187,7 +18054,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.88,
     "close": 24.09,
     "change": 0.08,
-    "volume": 692
+    "volume": 692,
+    "rawVolume": 692246,
+    "tradeValue": 16601931,
+    "turnover": "1660.2 萬"
   },
   "009805": {
     "code": "009805",
@@ -14198,7 +18068,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.84,
     "close": 14.95,
     "change": -0.01,
-    "volume": 2732
+    "volume": 2732,
+    "rawVolume": 2732367,
+    "tradeValue": 40689675,
+    "turnover": "4069.0 萬"
   },
   "009808": {
     "code": "009808",
@@ -14209,7 +18082,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 31.96,
     "close": 32.2,
     "change": 0.15,
-    "volume": 65676
+    "volume": 66,
+    "rawVolume": 65676,
+    "tradeValue": 2105615,
+    "turnover": "210.6 萬"
   },
   "009809": {
     "code": "009809",
@@ -14220,7 +18096,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.51,
     "close": 18.69,
     "change": 0.11,
-    "volume": 62369
+    "volume": 62,
+    "rawVolume": 62369,
+    "tradeValue": 1158623,
+    "turnover": "115.9 萬"
   },
   "00980A": {
     "code": "00980A",
@@ -14231,7 +18110,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 25.25,
     "close": 25.55,
     "change": 0.14,
-    "volume": 9041
+    "volume": 9041,
+    "rawVolume": 9041437,
+    "tradeValue": 229620679,
+    "turnover": "2.3 億"
   },
   "009810": {
     "code": "009810",
@@ -14242,7 +18124,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.37,
     "close": 21.46,
     "change": 0.14,
-    "volume": 69420
+    "volume": 69,
+    "rawVolume": 69420,
+    "tradeValue": 1486463,
+    "turnover": "148.6 萬"
   },
   "009811": {
     "code": "009811",
@@ -14253,7 +18138,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.5,
     "close": 13.62,
     "change": 0.13,
-    "volume": 2500
+    "volume": 2500,
+    "rawVolume": 2500475,
+    "tradeValue": 33974745,
+    "turnover": "3397.5 萬"
   },
   "009812": {
     "code": "009812",
@@ -14264,7 +18152,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.03,
     "close": 13.15,
     "change": -0.02,
-    "volume": 483359
+    "volume": 483,
+    "rawVolume": 483359,
+    "tradeValue": 6326423,
+    "turnover": "632.6 萬"
   },
   "009813": {
     "code": "009813",
@@ -14275,7 +18166,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.5,
     "close": 11.61,
     "change": 0.12,
-    "volume": 4970
+    "volume": 4971,
+    "rawVolume": 4970561,
+    "tradeValue": 57464902,
+    "turnover": "5746.5 萬"
   },
   "009816": {
     "code": "009816",
@@ -14286,7 +18180,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.43,
     "close": 16.6,
     "change": 0.11,
-    "volume": 96626
+    "volume": 96626,
+    "rawVolume": 96626053,
+    "tradeValue": 1596037385,
+    "turnover": "16.0 億"
   },
   "009817": {
     "code": "009817",
@@ -14297,7 +18194,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.68,
     "close": 8.69,
     "change": -0.11,
-    "volume": 1489
+    "volume": 1489,
+    "rawVolume": 1489099,
+    "tradeValue": 12952209,
+    "turnover": "1295.2 萬"
   },
   "009818": {
     "code": "009818",
@@ -14308,7 +18208,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.34,
     "close": 21.53,
     "change": 0.36,
-    "volume": 399634
+    "volume": 400,
+    "rawVolume": 399634,
+    "tradeValue": 8559539,
+    "turnover": "856.0 萬"
   },
   "009819": {
     "code": "009819",
@@ -14319,7 +18222,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.64,
     "close": 9.74,
     "change": 0.07,
-    "volume": 2210
+    "volume": 2211,
+    "rawVolume": 2210625,
+    "tradeValue": 21424897,
+    "turnover": "2142.5 萬"
   },
   "00981A": {
     "code": "00981A",
@@ -14330,7 +18236,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 30.53,
     "close": 31,
     "change": 0.46,
-    "volume": 113187
+    "volume": 113188,
+    "rawVolume": 113187922,
+    "tradeValue": 3485355767,
+    "turnover": "34.9 億"
   },
   "00981T": {
     "code": "00981T",
@@ -14341,7 +18250,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.58,
     "close": 11.64,
     "change": 0,
-    "volume": 1827
+    "volume": 1827,
+    "rawVolume": 1827207,
+    "tradeValue": 21197175,
+    "turnover": "2119.7 萬"
   },
   "009820": {
     "code": "009820",
@@ -14352,7 +18264,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.53,
     "close": 10.67,
     "change": 0.21,
-    "volume": 20705
+    "volume": 20706,
+    "rawVolume": 20705889,
+    "tradeValue": 219113826,
+    "turnover": "2.2 億"
   },
   "009821": {
     "code": "009821",
@@ -14363,7 +18278,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.19,
     "close": 13.21,
     "change": -0.09,
-    "volume": 7930
+    "volume": 7931,
+    "rawVolume": 7930670,
+    "tradeValue": 104740913,
+    "turnover": "1.0 億"
   },
   "009824": {
     "code": "009824",
@@ -14374,7 +18292,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.61,
     "close": 10.75,
     "change": 0.19,
-    "volume": 6826
+    "volume": 6826,
+    "rawVolume": 6826228,
+    "tradeValue": 72924869,
+    "turnover": "7292.5 萬"
   },
   "009826": {
     "code": "009826",
@@ -14385,7 +18306,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.02,
     "close": 10.05,
     "change": 0.02,
-    "volume": 8273
+    "volume": 8274,
+    "rawVolume": 8273634,
+    "tradeValue": 83009419,
+    "turnover": "8300.9 萬"
   },
   "009827": {
     "code": "009827",
@@ -14396,7 +18320,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.29,
     "close": 10.42,
     "change": 0.13,
-    "volume": 2968
+    "volume": 2968,
+    "rawVolume": 2968319,
+    "tradeValue": 30769367,
+    "turnover": "3076.9 萬"
   },
   "009828": {
     "code": "009828",
@@ -14407,7 +18334,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.16,
     "close": 10.38,
     "change": 0.26,
-    "volume": 35197
+    "volume": 35197,
+    "rawVolume": 35197217,
+    "tradeValue": 361701509,
+    "turnover": "3.6 億"
   },
   "009829": {
     "code": "009829",
@@ -14418,7 +18348,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.72,
     "close": 10.98,
     "change": 0.2,
-    "volume": 19172
+    "volume": 19173,
+    "rawVolume": 19172503,
+    "tradeValue": 207545844,
+    "turnover": "2.1 億"
   },
   "00982A": {
     "code": "00982A",
@@ -14429,7 +18362,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.94,
     "close": 23.15,
     "change": 0.08,
-    "volume": 10059
+    "volume": 10060,
+    "rawVolume": 10059669,
+    "tradeValue": 232220040,
+    "turnover": "2.3 億"
   },
   "00982D": {
     "code": "00982D",
@@ -14440,7 +18376,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.3,
     "close": 9.32,
     "change": -0.02,
-    "volume": 558
+    "volume": 559,
+    "rawVolume": 558927,
+    "tradeValue": 5201036,
+    "turnover": "520.1 萬"
   },
   "00982T": {
     "code": "00982T",
@@ -14451,7 +18390,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.41,
     "close": 15.52,
     "change": 0.11,
-    "volume": 272723
+    "volume": 273,
+    "rawVolume": 272723,
+    "tradeValue": 4223215,
+    "turnover": "422.3 萬"
   },
   "00983A": {
     "code": "00983A",
@@ -14462,7 +18404,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.29,
     "close": 13.42,
     "change": 0.12,
-    "volume": 759
+    "volume": 759,
+    "rawVolume": 759106,
+    "tradeValue": 10139533,
+    "turnover": "1014.0 萬"
   },
   "00983D": {
     "code": "00983D",
@@ -14473,7 +18418,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.56,
     "close": 9.59,
     "change": 0,
-    "volume": 550
+    "volume": 550,
+    "rawVolume": 550130,
+    "tradeValue": 5265132,
+    "turnover": "526.5 萬"
   },
   "00984A": {
     "code": "00984A",
@@ -14484,7 +18432,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.6,
     "close": 15.68,
     "change": -0.03,
-    "volume": 2833
+    "volume": 2833,
+    "rawVolume": 2833257,
+    "tradeValue": 44373466,
+    "turnover": "4437.3 萬"
   },
   "00984D": {
     "code": "00984D",
@@ -14495,7 +18446,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.71,
     "close": 9.75,
     "change": 0.02,
-    "volume": 13002
+    "volume": 13002,
+    "rawVolume": 13002359,
+    "tradeValue": 126568278,
+    "turnover": "1.3 億"
   },
   "00985A": {
     "code": "00985A",
@@ -14506,7 +18460,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.61,
     "close": 23.81,
     "change": 0.31,
-    "volume": 28030
+    "volume": 28030,
+    "rawVolume": 28030344,
+    "tradeValue": 664182099,
+    "turnover": "6.6 億"
   },
   "00985B": {
     "code": "00985B",
@@ -14517,7 +18474,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 10.06,
     "close": 10.1,
     "change": 0.02,
-    "volume": 3894
+    "volume": 3895,
+    "rawVolume": 3894563,
+    "tradeValue": 39255215,
+    "turnover": "3925.5 萬"
   },
   "00986A": {
     "code": "00986A",
@@ -14528,7 +18488,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.8,
     "close": 14.99,
     "change": 0.19,
-    "volume": 681
+    "volume": 682,
+    "rawVolume": 681513,
+    "tradeValue": 10174950,
+    "turnover": "1017.5 萬"
   },
   "00987A": {
     "code": "00987A",
@@ -14539,7 +18502,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.13,
     "close": 17.31,
     "change": 0.04,
-    "volume": 1148
+    "volume": 1149,
+    "rawVolume": 1148558,
+    "tradeValue": 19791512,
+    "turnover": "1979.2 萬"
   },
   "00988A": {
     "code": "00988A",
@@ -14550,7 +18516,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.85,
     "close": 17.18,
     "change": 0.39,
-    "volume": 22243
+    "volume": 22244,
+    "rawVolume": 22243705,
+    "tradeValue": 378036411,
+    "turnover": "3.8 億"
   },
   "00989A": {
     "code": "00989A",
@@ -14561,7 +18530,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.76,
     "close": 18.08,
     "change": 0.42,
-    "volume": 922
+    "volume": 923,
+    "rawVolume": 922775,
+    "tradeValue": 16593064,
+    "turnover": "1659.3 萬"
   },
   "00990A": {
     "code": "00990A",
@@ -14572,7 +18544,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.04,
     "close": 16.29,
     "change": 0.34,
-    "volume": 14668
+    "volume": 14669,
+    "rawVolume": 14668990,
+    "tradeValue": 236761649,
+    "turnover": "2.4 億"
   },
   "00991A": {
     "code": "00991A",
@@ -14583,7 +18558,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.05,
     "close": 18.33,
     "change": 0.33,
-    "volume": 68643
+    "volume": 68643,
+    "rawVolume": 68643276,
+    "tradeValue": 1250582167,
+    "turnover": "12.5 億"
   },
   "00991B": {
     "code": "00991B",
@@ -14594,7 +18572,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.21,
     "close": 14.29,
     "change": -0.04,
-    "volume": 258080
+    "volume": 258,
+    "rawVolume": 258080,
+    "tradeValue": 3675528,
+    "turnover": "367.6 萬"
   },
   "00992A": {
     "code": "00992A",
@@ -14605,7 +18586,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 18.75,
     "close": 19.02,
     "change": 0.2,
-    "volume": 39337
+    "volume": 39338,
+    "rawVolume": 39337608,
+    "tradeValue": 743692057,
+    "turnover": "7.4 億"
   },
   "00993A": {
     "code": "00993A",
@@ -14616,7 +18600,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 13.78,
     "close": 13.98,
     "change": 0.2,
-    "volume": 4771
+    "volume": 4772,
+    "rawVolume": 4771720,
+    "tradeValue": 66257399,
+    "turnover": "6625.7 萬"
   },
   "00994A": {
     "code": "00994A",
@@ -14627,7 +18614,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.1,
     "close": 17.29,
     "change": 0.06,
-    "volume": 4733
+    "volume": 4734,
+    "rawVolume": 4733743,
+    "tradeValue": 81580896,
+    "turnover": "8158.1 萬"
   },
   "00995A": {
     "code": "00995A",
@@ -14638,7 +18628,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 17.68,
     "close": 17.89,
     "change": 0.11,
-    "volume": 1846
+    "volume": 1847,
+    "rawVolume": 1846637,
+    "tradeValue": 32873423,
+    "turnover": "3287.3 萬"
   },
   "00996A": {
     "code": "00996A",
@@ -14649,7 +18642,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 14.52,
     "close": 14.66,
     "change": 0.18,
-    "volume": 5652
+    "volume": 5652,
+    "rawVolume": 5652353,
+    "tradeValue": 82554995,
+    "turnover": "8255.5 萬"
   },
   "00997A": {
     "code": "00997A",
@@ -14660,7 +18656,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.75,
     "close": 11.93,
     "change": 0.21,
-    "volume": 11426
+    "volume": 11426,
+    "rawVolume": 11426422,
+    "tradeValue": 135141406,
+    "turnover": "1.4 億"
   },
   "00999A": {
     "code": "00999A",
@@ -14671,7 +18670,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.2,
     "close": 11.3,
     "change": 0.02,
-    "volume": 4877
+    "volume": 4877,
+    "rawVolume": 4877218,
+    "tradeValue": 54915891,
+    "turnover": "5491.6 萬"
   },
   "01001T": {
     "code": "01001T",
@@ -14682,7 +18684,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.11,
     "close": 11.11,
     "change": -0.02,
-    "volume": 21000
+    "volume": 21,
+    "rawVolume": 21000,
+    "tradeValue": 233410,
+    "turnover": "23.3 萬"
   },
   "01002T": {
     "code": "01002T",
@@ -14693,7 +18698,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.71,
     "close": 12.71,
     "change": -0.09,
-    "volume": 62000
+    "volume": 62,
+    "rawVolume": 62000,
+    "tradeValue": 790600,
+    "turnover": "79.1 萬"
   },
   "01004T": {
     "code": "01004T",
@@ -14704,7 +18712,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.98,
     "close": 9.99,
     "change": -0.02,
-    "volume": 77460
+    "volume": 77,
+    "rawVolume": 77460,
+    "tradeValue": 773590,
+    "turnover": "77.4 萬"
   },
   "01007T": {
     "code": "01007T",
@@ -14715,7 +18726,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.26,
     "close": 11.32,
     "change": 0.01,
-    "volume": 57000
+    "volume": 57,
+    "rawVolume": 57000,
+    "tradeValue": 642480,
+    "turnover": "64.2 萬"
   },
   "01009T": {
     "code": "01009T",
@@ -14726,7 +18740,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 5.57,
     "close": 5.58,
     "change": -0.01,
-    "volume": 5190
+    "volume": 5190,
+    "rawVolume": 5190000,
+    "tradeValue": 26187290,
+    "turnover": "2618.7 萬"
   },
   "01010T": {
     "code": "01010T",
@@ -14737,7 +18754,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.99,
     "close": 10,
     "change": 0,
-    "volume": 82384
+    "volume": 82,
+    "rawVolume": 82384,
+    "tradeValue": 823043,
+    "turnover": "82.3 萬"
   },
   "020000": {
     "code": "020000",
@@ -14748,7 +18768,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 33.16,
     "close": 33.35,
     "change": 0.48,
-    "volume": 22000
+    "volume": 22,
+    "rawVolume": 22000,
+    "tradeValue": 732710,
+    "turnover": "73.3 萬"
   },
   "020011": {
     "code": "020011",
@@ -14759,7 +18782,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 0,
     "close": 0,
     "change": 0,
-    "volume": 0
+    "volume": 0,
+    "rawVolume": 0,
+    "tradeValue": 0,
+    "turnover": "0.0 萬"
   },
   "020012": {
     "code": "020012",
@@ -14770,7 +18796,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.13,
     "close": 23.13,
     "change": 0,
-    "volume": 1000
+    "volume": 1,
+    "rawVolume": 1000,
+    "tradeValue": 23130,
+    "turnover": "2.3 萬"
   },
   "02001L": {
     "code": "02001L",
@@ -14781,7 +18810,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 155.8,
     "close": 160.75,
     "change": 7.5,
-    "volume": 84000
+    "volume": 84,
+    "rawVolume": 84000,
+    "tradeValue": 13299550,
+    "turnover": "1330.0 萬"
   },
   "020020": {
     "code": "020020",
@@ -14792,7 +18824,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 29.87,
     "close": 30.2,
     "change": -0.1,
-    "volume": 35000
+    "volume": 35,
+    "rawVolume": 35000,
+    "tradeValue": 1055670,
+    "turnover": "105.6 萬"
   },
   "020028": {
     "code": "020028",
@@ -14803,7 +18838,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.77,
     "close": 20.95,
     "change": -0.21,
-    "volume": 11000
+    "volume": 11,
+    "rawVolume": 11000,
+    "tradeValue": 229710,
+    "turnover": "23.0 萬"
   },
   "020029": {
     "code": "020029",
@@ -14814,7 +18852,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 20.72,
     "close": 20.72,
     "change": -0.09,
-    "volume": 2000
+    "volume": 2,
+    "rawVolume": 2000,
+    "tradeValue": 41440,
+    "turnover": "4.1 萬"
   },
   "020030": {
     "code": "020030",
@@ -14825,7 +18866,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.05,
     "close": 21.29,
     "change": 0.24,
-    "volume": 4000
+    "volume": 4,
+    "rawVolume": 4000,
+    "tradeValue": 84560,
+    "turnover": "8.5 萬"
   },
   "020031": {
     "code": "020031",
@@ -14836,7 +18880,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.71,
     "close": 11.72,
     "change": -0.07,
-    "volume": 4000
+    "volume": 4,
+    "rawVolume": 4000,
+    "tradeValue": 47010,
+    "turnover": "4.7 萬"
   },
   "020032": {
     "code": "020032",
@@ -14847,7 +18894,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.25,
     "close": 11.25,
     "change": 0.04,
-    "volume": 10000
+    "volume": 10,
+    "rawVolume": 10000,
+    "tradeValue": 112500,
+    "turnover": "11.3 萬"
   },
   "020034": {
     "code": "020034",
@@ -14858,7 +18908,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.9,
     "close": 16.9,
     "change": -0.25,
-    "volume": 11000
+    "volume": 11,
+    "rawVolume": 11000,
+    "tradeValue": 186230,
+    "turnover": "18.6 萬"
   },
   "020036": {
     "code": "020036",
@@ -14869,7 +18922,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 11.37,
     "close": 11.37,
     "change": 0,
-    "volume": 2000
+    "volume": 2,
+    "rawVolume": 2000,
+    "tradeValue": 22750,
+    "turnover": "2.3 萬"
   },
   "020037": {
     "code": "020037",
@@ -14880,7 +18936,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 12.63,
     "close": 12.81,
     "change": 0,
-    "volume": 12000
+    "volume": 12,
+    "rawVolume": 12000,
+    "tradeValue": 151840,
+    "turnover": "15.2 萬"
   },
   "020038": {
     "code": "020038",
@@ -14891,7 +18950,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 16.04,
     "close": 16.04,
     "change": 0,
-    "volume": 1000
+    "volume": 1,
+    "rawVolume": 1000,
+    "tradeValue": 16040,
+    "turnover": "1.6 萬"
   },
   "020039": {
     "code": "020039",
@@ -14902,7 +18964,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 15.39,
     "close": 15.47,
     "change": 0.06,
-    "volume": 150000
+    "volume": 150,
+    "rawVolume": 150000,
+    "tradeValue": 2316130,
+    "turnover": "231.6 萬"
   },
   "1101B": {
     "code": "1101B",
@@ -14913,7 +18978,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 43.4,
     "close": 43.5,
     "change": 0.1,
-    "volume": 6384
+    "volume": 6,
+    "rawVolume": 6384,
+    "tradeValue": 277196,
+    "turnover": "27.7 萬"
   },
   "1312A": {
     "code": "1312A",
@@ -14924,7 +18992,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 0,
     "close": 0,
     "change": 0,
-    "volume": 499
+    "volume": 0,
+    "rawVolume": 499,
+    "tradeValue": 11449,
+    "turnover": "1.1 萬"
   },
   "2002A": {
     "code": "2002A",
@@ -14935,7 +19006,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 37.25,
     "close": 37.5,
     "change": 0.25,
-    "volume": 21557
+    "volume": 22,
+    "rawVolume": 21557,
+    "tradeValue": 805708,
+    "turnover": "80.6 萬"
   },
   "2348A": {
     "code": "2348A",
@@ -14946,7 +19020,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 38.45,
     "close": 38.45,
     "change": -0.1,
-    "volume": 33049
+    "volume": 33,
+    "rawVolume": 33049,
+    "tradeValue": 1272141,
+    "turnover": "127.2 萬"
   },
   "2836A": {
     "code": "2836A",
@@ -14957,7 +19034,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 23.85,
     "close": 23.9,
     "change": -0.1,
-    "volume": 20915
+    "volume": 21,
+    "rawVolume": 20915,
+    "tradeValue": 499916,
+    "turnover": "50.0 萬"
   },
   "2838A": {
     "code": "2838A",
@@ -14968,7 +19048,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 52,
     "close": 52,
     "change": 0,
-    "volume": 14002
+    "volume": 14,
+    "rawVolume": 14002,
+    "tradeValue": 728104,
+    "turnover": "72.8 萬"
   },
   "2881A": {
     "code": "2881A",
@@ -14979,7 +19062,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 61.4,
     "close": 61.5,
     "change": -0.1,
-    "volume": 50405
+    "volume": 50,
+    "rawVolume": 50405,
+    "tradeValue": 3096195,
+    "turnover": "309.6 萬"
   },
   "2881B": {
     "code": "2881B",
@@ -14990,7 +19076,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 60.8,
     "close": 60.8,
     "change": 0.1,
-    "volume": 2087
+    "volume": 2,
+    "rawVolume": 2087,
+    "tradeValue": 126519,
+    "turnover": "12.7 萬"
   },
   "2881C": {
     "code": "2881C",
@@ -15001,7 +19090,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 51.8,
     "close": 51.8,
     "change": 0,
-    "volume": 64974
+    "volume": 65,
+    "rawVolume": 64974,
+    "tradeValue": 3365592,
+    "turnover": "336.6 萬"
   },
   "2882A": {
     "code": "2882A",
@@ -15012,7 +19104,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 60.1,
     "close": 60.2,
     "change": 0,
-    "volume": 37376
+    "volume": 37,
+    "rawVolume": 37376,
+    "tradeValue": 2246499,
+    "turnover": "224.6 萬"
   },
   "2882B": {
     "code": "2882B",
@@ -15023,7 +19118,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 58.6,
     "close": 58.8,
     "change": 0,
-    "volume": 6227
+    "volume": 6,
+    "rawVolume": 6227,
+    "tradeValue": 364832,
+    "turnover": "36.5 萬"
   },
   "2883B": {
     "code": "2883B",
@@ -15034,7 +19132,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 8.57,
     "close": 8.7,
     "change": 0.14,
-    "volume": 4957
+    "volume": 4958,
+    "rawVolume": 4957639,
+    "tradeValue": 42803139,
+    "turnover": "4280.3 萬"
   },
   "2887E": {
     "code": "2887E",
@@ -15045,7 +19146,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.35,
     "close": 48.4,
     "change": 0,
-    "volume": 155206
+    "volume": 155,
+    "rawVolume": 155206,
+    "tradeValue": 7508237,
+    "turnover": "750.8 萬"
   },
   "2887F": {
     "code": "2887F",
@@ -15056,7 +19160,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.5,
     "close": 45.55,
     "change": 0,
-    "volume": 17566
+    "volume": 18,
+    "rawVolume": 17566,
+    "tradeValue": 799458,
+    "turnover": "79.9 萬"
   },
   "2887G": {
     "code": "2887G",
@@ -15067,7 +19174,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 44.25,
     "close": 44.25,
     "change": -0.2,
-    "volume": 105783
+    "volume": 106,
+    "rawVolume": 105783,
+    "tradeValue": 4689090,
+    "turnover": "468.9 萬"
   },
   "2887H": {
     "code": "2887H",
@@ -15078,7 +19188,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 42.95,
     "close": 43,
     "change": -0.05,
-    "volume": 171206
+    "volume": 171,
+    "rawVolume": 171206,
+    "tradeValue": 7362169,
+    "turnover": "736.2 萬"
   },
   "2887I": {
     "code": "2887I",
@@ -15089,7 +19202,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 9.52,
     "close": 9.53,
     "change": 0,
-    "volume": 2304
+    "volume": 2304,
+    "rawVolume": 2304108,
+    "tradeValue": 21937310,
+    "turnover": "2193.7 萬"
   },
   "2887Z1": {
     "code": "2887Z1",
@@ -15100,7 +19216,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 22.6,
     "close": 22.65,
     "change": -0.2,
-    "volume": 9778
+    "volume": 10,
+    "rawVolume": 9778,
+    "tradeValue": 221545,
+    "turnover": "22.2 萬"
   },
   "2891B": {
     "code": "2891B",
@@ -15111,7 +19230,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 61.7,
     "close": 61.7,
     "change": -0.2,
-    "volume": 1581
+    "volume": 2,
+    "rawVolume": 1581,
+    "tradeValue": 97434,
+    "turnover": "9.7 萬"
   },
   "2891C": {
     "code": "2891C",
@@ -15122,7 +19244,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 59.9,
     "close": 60.5,
     "change": 0,
-    "volume": 70958
+    "volume": 71,
+    "rawVolume": 70958,
+    "tradeValue": 4274977,
+    "turnover": "427.5 萬"
   },
   "2897B": {
     "code": "2897B",
@@ -15133,7 +19258,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 0,
     "close": 0,
     "change": 0,
-    "volume": 1784
+    "volume": 2,
+    "rawVolume": 1784,
+    "tradeValue": 20911,
+    "turnover": "2.1 萬"
   },
   "5871A": {
     "code": "5871A",
@@ -15144,7 +19272,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 99.9,
     "close": 100,
     "change": 0,
-    "volume": 13000
+    "volume": 13,
+    "rawVolume": 13000,
+    "tradeValue": 1299400,
+    "turnover": "129.9 萬"
   },
   "6592A": {
     "code": "6592A",
@@ -15155,7 +19286,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 96.6,
     "close": 96.6,
     "change": 0.5,
-    "volume": 3153
+    "volume": 3,
+    "rawVolume": 3153,
+    "tradeValue": 303488,
+    "turnover": "30.3 萬"
   },
   "6592B": {
     "code": "6592B",
@@ -15166,7 +19300,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 94.6,
     "close": 95.4,
     "change": 0.8,
-    "volume": 3071
+    "volume": 3,
+    "rawVolume": 3071,
+    "tradeValue": 291416,
+    "turnover": "29.1 萬"
   },
   "6958A": {
     "code": "6958A",
@@ -15177,7 +19314,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 21.95,
     "close": 21.95,
     "change": -0.05,
-    "volume": 1000
+    "volume": 1,
+    "rawVolume": 1000,
+    "tradeValue": 21950,
+    "turnover": "2.2 萬"
   },
   "8112A": {
     "code": "8112A",
@@ -15188,7 +19328,10 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 45.75,
     "close": 45.8,
     "change": 0,
-    "volume": 11807
+    "volume": 12,
+    "rawVolume": 11807,
+    "tradeValue": 540421,
+    "turnover": "54.0 萬"
   },
   "9941A": {
     "code": "9941A",
@@ -15199,6 +19342,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "low": 48.8,
     "close": 48.8,
     "change": 0,
-    "volume": 12792
+    "volume": 13,
+    "rawVolume": 12792,
+    "tradeValue": 624075,
+    "turnover": "62.4 萬"
   }
 };

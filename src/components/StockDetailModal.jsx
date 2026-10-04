@@ -138,7 +138,7 @@ export default function StockDetailModal({ stock, onClose }) {
           {/* 最新價格與漲跌 */}
           <div className="flex items-baseline space-x-3">
             <span className={`text-2xl sm:text-3xl font-black font-mono tracking-tight ${isUp ? 'text-red-600' : 'text-emerald-600'}`}>
-              NT$ {detail.price?.toLocaleString()}
+              NT$ {detail.price != null && !isNaN(Number(detail.price)) ? Number(detail.price).toFixed(2) : detail.price}
             </span>
             <span className={`inline-flex items-center text-xs font-bold font-mono px-2 py-0.5 rounded ${
               isUp ? 'bg-red-50 text-red-600 border border-red-200' : 'bg-emerald-50 text-emerald-600 border border-emerald-200'
@@ -152,23 +152,23 @@ export default function StockDetailModal({ stock, onClose }) {
           <div className="flex items-center space-x-3 sm:space-x-4 text-[11px] font-mono flex-wrap">
             <div>
               <span className="text-slate-400 mr-1">開</span>
-              <strong className="text-slate-800">NT${detail.open}</strong>
+              <strong className="text-slate-800">NT$ {detail.open != null && !isNaN(Number(detail.open)) ? Number(detail.open).toFixed(2) : detail.open}</strong>
             </div>
             <div>
               <span className="text-slate-400 mr-1">高</span>
-              <strong className="text-red-600">NT${detail.high}</strong>
+              <strong className="text-red-600">NT$ {detail.high != null && !isNaN(Number(detail.high)) ? Number(detail.high).toFixed(2) : detail.high}</strong>
             </div>
             <div>
               <span className="text-slate-400 mr-1">低</span>
-              <strong className="text-emerald-600">NT${detail.low}</strong>
+              <strong className="text-emerald-600">NT$ {detail.low != null && !isNaN(Number(detail.low)) ? Number(detail.low).toFixed(2) : detail.low}</strong>
             </div>
             <div>
               <span className="text-slate-400 mr-1">昨收</span>
-              <strong className="text-slate-600">NT${detail.prevClose}</strong>
+              <strong className="text-slate-600">NT$ {detail.prevClose != null && !isNaN(Number(detail.prevClose)) ? Number(detail.prevClose).toFixed(2) : detail.prevClose}</strong>
             </div>
             <div>
               <span className="text-slate-400 mr-1">成交量</span>
-              <strong className="text-slate-900">{detail.volume?.toLocaleString()}張</strong>
+              <strong className="text-slate-900">{Number(detail.volume || 0).toLocaleString()} 張</strong>
               <span className="text-slate-500 text-[10px] ml-1">({detail.turnover})</span>
             </div>
 
