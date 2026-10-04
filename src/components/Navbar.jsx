@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TrendingUp, Search, RefreshCw, Github, Zap, ArrowUpRight, ArrowDownRight, X } from 'lucide-react';
+import { TrendingUp, Search, RefreshCw, Github, Zap, ArrowUpRight, ArrowDownRight, X, Bell, Wifi } from 'lucide-react';
 
 export default function Navbar({ 
   onSearch, 
@@ -16,7 +16,13 @@ export default function Navbar({
   taiexData,
   onOpenReportModal,
   onToggleSidebar,
-  isSidebarCollapsed
+  isSidebarCollapsed,
+  onOpenAlertsModal,
+  alertCount = 0,
+  hasTriggeredAlert = false,
+  onOpenWsModal,
+  wsStatus = 'DISCONNECTED',
+  wsLatency = 0
 }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [isFocused, setIsFocused] = useState(false);
@@ -182,6 +188,68 @@ export default function Navbar({
                 </div>
               </div>
             </>
+          )}
+        </div>
+
+        {/* Right Action Buttons: WebSocket Status & Alerts Manager */}
+        <div className="flex items-center space-x-2 flex-shrink-0">
+          {/* WebSocket Status Pill */}
+          <button
+            onClick={onOpenWsModal}
+            className={`px-3 py-1.5 rounded-xl border text-xs font-bold font-mono transition flex items-center gap-1.5 shadow-2xs cursor-pointer ${
+              wsStatus === 'CONNECTED'
+                ? 'bg-emerald-50 text-emerald-800 border-emerald-300 hover:bg-emerald-100'
+                : wsStatus === 'FALLBACK_RACING'
+                  ? 'bg-amber-50 text-amber-800 border-amber-300 hover:bg-amber-100'
+                  : 'bg-rose-50 text-rose-800 border-pink-200 hover:bg-rose-100'
+            }`}
+            title="點擊開啟 WebSocket 串流控制台與延遲監控"
+          >
+            <span className={`w-2 h-2 rounded-full ${
+              wsStatus === 'CONNECTED'
+                ? 'bg-emerald-500 animate-ping'
+                : wsStatus === 'FALLBACK_RACING'
+                  ? 'bg-amber-500 animate-pulse'
+                  : 'bg-rose-500'
+            }`}></span>
+            <span className="hidden md:inline">
+              {wsStatus === 'CONNECTED' ? 'WS 串流' : wsStatus === 'FALLBACK_RACING' ? '競速串流' : '未連線'}
+            </span>
+            <span className="text-[10px] opacity-75">{wsLatency > 0 ? `${wsLatency}ms` : ''}</span>
+          </button>
+
+          {/* Cloud Alerts Bell Button */}
+          <button
+            onClick={onOpenAlertsModal}
+            className={`relative p-2 rounded-xl border transition shadow-2xs cursor-pointer ${
+              hasTriggeredAlert
+                ? 'bg-rose-600 text-white border-rose-600 animate-bounce'
+                : 'bg-white text-rose-700 hover:bg-rose-50 border-pink-200'
+            }`}
+            title="雲端條件警報與推播中心"
+            aria-label="雲端條件警報"
+          >
+            <Bell className="w-5 h-5" />
+            {alertCount > 0 && (
+              <span className={`absolute -top-1 -right-1 text-[10px] font-bold px-1.5 py-0.2 rounded-full border border-white ${
+                hasTriggeredAlert ? 'bg-amber-400 text-slate-900 animate-pulse' : 'bg-rose-600 text-white'
+              }`}>
+                {alertCount}
+              </span>
+            )}
+          </button>
+
+          {/* Manual Refresh */}
+          {onManualRefresh && (
+            <button
+              onClick={onManualRefresh}
+              className={`p-2 rounded-xl bg-white hover:bg-rose-50 text-rose-700 border border-pink-200 transition shadow-2xs ${
+                isRefreshing ? 'opacity-60 cursor-not-allowed' : ''
+              }`}
+              title="強制刷新全市場即時數據"
+            >
+              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
+            </button>
           )}
         </div>
       </div>

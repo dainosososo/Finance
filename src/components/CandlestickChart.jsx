@@ -74,8 +74,9 @@ export default function CandlestickChart({
   const [dragStartX, setDragStartX] = useState(0);
   const [dragStartOffset, setDragStartOffset] = useState(0);
 
-  // 2. 支撐壓力線顯示開關
+  // 2. 支撐壓力線與成交量分布圖 (Volume Profile) 顯示開關
   const [showSupportResistance, setShowSupportResistance] = useState(true);
+  const [showVolumeProfile, setShowVolumeProfile] = useState(true);
 
   // 3. 【核心升級 1】: 多副圖指標陣列 (預設比照三竹智選股同時並列 MACD + KD)
   const [activeIndicators, setActiveIndicators] = useState(['MACD', 'KD']);
@@ -186,6 +187,96 @@ export default function CandlestickChart({
 
     return { minPrice, maxPrice };
   }, [currentWindow, showSupportResistance, activeSupportPrice, activeResistancePrice]);
+
+  // ==========================================
+  // 計算價格軸成交量分布圖 (Volume Profile / VPVR)
+  // ==========================================
+  const volumeProfileData = useMemo(() => {
+    if (!currentWindow || currentWindow.length === 0 || !showVolumeProfile) return null;
+
+    const BINS_COUNT = 24;
+    const priceRange = maxPrice - minPrice;
+    if (priceRange <= 0) return null;
+    const binSize = priceRange / BINS_COUNT;
+
+    const bins = Array.from({ length: BINS_COUNT }, (_, i) => {
+      const low = minPrice + i * binSize;
+      const high = low + binSize;
+      const mid = (low + high) / 2;
+      return {
+        binIndex: i,
+        priceLow: low,
+        priceHigh: high,
+        priceMid: mid,
+        upVolume: 0,
+        downVolume: 0,
+        totalVolume: 0
+      };
+    });
+
+    let totalVolumeSum = 0;
+
+    currentWindow.forEach(d => {
+      const low = d.low ?? d.price;
+      const high = d.high ?? d.price;
+      const open = d.open ?? d.price;
+      const close = d.close ?? d.price;
+      const vol = d.volume ?? 1000;
+      const isUp = close >= open;
+
+      totalVolumeSum += vol;
+
+      const startBin = Math.max(0, Math.min(BINS_COUNT - 1, Math.floor((low - minPrice) / binSize)));
+      const endBin = Math.max(0, Math.min(BINS_COUNT - 1, Math.floor((high - minPrice) / binSize)));
+      const coveredBins = Math.max(1, endBin - startBin + 1);
+      const volPerBin = vol / coveredBins;
+
+      for (let b = startBin; b <= endBin; b++) {
+        if (bins[b]) {
+          bins[b].totalVolume += volPerBin;
+          if (isUp) bins[b].upVolume += volPerBin;
+          else bins[b].downVolume += volPerBin;
+        }
+      }
+    });
+
+    let maxBinVol = 0;
+    let pocBin = bins[0];
+    bins.forEach(b => {
+      if (b.totalVolume > maxBinVol) {
+        maxBinVol = b.totalVolume;
+        pocBin = b;
+      }
+    });
+
+    // 計算 70% 價值區間 (Value Area)
+    const targetValueAreaVol = totalVolumeSum * 0.70;
+    let accumulatedVA = pocBin ? pocBin.totalVolume : 0;
+    let vaLowIdx = pocBin ? pocBin.binIndex : 0;
+    let vaHighIdx = pocBin ? pocBin.binIndex : 0;
+
+    while (accumulatedVA < targetValueAreaVol && (vaLowIdx > 0 || vaHighIdx < BINS_COUNT - 1)) {
+      const nextLowVol = vaLowIdx > 0 ? bins[vaLowIdx - 1].totalVolume : -1;
+      const nextHighVol = vaHighIdx < BINS_COUNT - 1 ? bins[vaHighIdx + 1].totalVolume : -1;
+
+      if (nextHighVol >= nextLowVol) {
+        vaHighIdx++;
+        accumulatedVA += bins[vaHighIdx].totalVolume;
+      } else {
+        vaLowIdx--;
+        accumulatedVA += bins[vaLowIdx].totalVolume;
+      }
+    }
+
+    return {
+      bins,
+      maxBinVol,
+      pocPrice: pocBin ? pocBin.priceMid : null,
+      pocBinIndex: pocBin ? pocBin.binIndex : 0,
+      vah: bins[vaHighIdx]?.priceHigh ?? null,
+      val: bins[vaLowIdx]?.priceLow ?? null
+    };
+  }, [currentWindow, minPrice, maxPrice, showVolumeProfile]);
 
   // ==========================================
   // 計算全套副圖指標數值集合 (Indicators Math)
@@ -808,6 +899,19 @@ export default function CandlestickChart({
             {showSupportResistance ? <Eye className="w-3 h-3 text-rose-600" /> : <EyeOff className="w-3 h-3" />}
             <span>支撐壓力: {showSupportResistance ? '開' : '關'}</span>
           </button>
+
+          <button
+            onClick={() => setShowVolumeProfile(!showVolumeProfile)}
+            className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition flex items-center gap-1 border cursor-pointer ${
+              showVolumeProfile 
+                ? 'bg-amber-100 text-amber-900 border-amber-300 shadow-2xs' 
+                : 'bg-white text-slate-500 border-pink-200'
+            }`}
+            title="開啟/關閉價格軸成交量分布圖 (Volume Profile / VPVR 籌碼密集區與 POC 控制點)"
+          >
+            <BarChart2 className="w-3 h-3 text-amber-600" />
+            <span>籌碼分布(VPVR): {showVolumeProfile ? '開' : '關'}</span>
+          </button>
         </div>
       </div>
 
@@ -911,6 +1015,107 @@ export default function CandlestickChart({
               </g>
             );
           })}
+
+          {/* ========================================================= */}
+          {/* 成交量分布圖 (Volume Profile / VPVR 價格軸籌碼堆疊)       */}
+          {/* ========================================================= */}
+          {showVolumeProfile && volumeProfileData && (
+            <g opacity="0.85">
+              {volumeProfileData.bins.map((bin) => {
+                const yTop = getY(bin.priceHigh);
+                const yBottom = getY(bin.priceLow);
+                const barH = Math.max(1.5, Math.abs(yBottom - yTop) - 0.5);
+                const maxW = 120; // 最大橫向寬度 (px)
+                const totalW = volumeProfileData.maxBinVol > 0 ? (bin.totalVolume / volumeProfileData.maxBinVol) * maxW : 0;
+                const upW = bin.totalVolume > 0 ? (bin.upVolume / bin.totalVolume) * totalW : 0;
+                const downW = totalW - upW;
+
+                const isPoc = bin.binIndex === volumeProfileData.pocBinIndex;
+                const rightX = svgWidth - paddingRight;
+
+                return (
+                  <g key={bin.binIndex} className="transition-opacity">
+                    {/* 跌量 / 賣方籌碼 (綠色) */}
+                    <rect
+                      x={rightX - totalW}
+                      y={yTop}
+                      width={downW}
+                      height={barH}
+                      fill="#10B981"
+                      fillOpacity={isPoc ? "0.65" : "0.35"}
+                    />
+                    {/* 漲量 / 買方籌碼 (紅色) */}
+                    <rect
+                      x={rightX - totalW + downW}
+                      y={yTop}
+                      width={upW}
+                      height={barH}
+                      fill="#EF4444"
+                      fillOpacity={isPoc ? "0.65" : "0.35"}
+                    />
+                  </g>
+                );
+              })}
+
+              {/* POC 控制點高亮線 (Point of Control) */}
+              {volumeProfileData.pocPrice && (
+                <g>
+                  <line
+                    x1={svgWidth - paddingRight - 130}
+                    y1={getY(volumeProfileData.pocPrice)}
+                    x2={svgWidth - paddingRight}
+                    y2={getY(volumeProfileData.pocPrice)}
+                    stroke="#F59E0B"
+                    strokeWidth="2"
+                    strokeDasharray="4 2"
+                  />
+                  <rect
+                    x={svgWidth - paddingRight - 110}
+                    y={getY(volumeProfileData.pocPrice) - 8}
+                    width="106"
+                    height="16"
+                    fill="#F59E0B"
+                    rx="4"
+                  />
+                  <text
+                    x={svgWidth - paddingRight - 57}
+                    y={getY(volumeProfileData.pocPrice) + 3.5}
+                    fill="#FFFFFF"
+                    fontSize="9"
+                    fontFamily="monospace"
+                    fontWeight="bold"
+                    textAnchor="middle"
+                  >
+                    POC 密集: NT${volumeProfileData.pocPrice.toFixed(1)}
+                  </text>
+                </g>
+              )}
+
+              {/* VAH / VAL 70% 價值區間線 */}
+              {volumeProfileData.vah && (
+                <line
+                  x1={svgWidth - paddingRight - 80}
+                  y1={getY(volumeProfileData.vah)}
+                  x2={svgWidth - paddingRight}
+                  y2={getY(volumeProfileData.vah)}
+                  stroke="#6366F1"
+                  strokeWidth="1"
+                  strokeDasharray="3 3"
+                />
+              )}
+              {volumeProfileData.val && (
+                <line
+                  x1={svgWidth - paddingRight - 80}
+                  y1={getY(volumeProfileData.val)}
+                  x2={svgWidth - paddingRight}
+                  y2={getY(volumeProfileData.val)}
+                  stroke="#6366F1"
+                  strokeWidth="1"
+                  strokeDasharray="3 3"
+                />
+              )}
+            </g>
+          )}
 
           {/* 三竹 Image 1 格式 MA 均線標頭: MA > 5T: ... 10T: ... 20T: ... */}
           <text x={paddingLeft + 4} y={paddingTop - 7} fill="#475569" fontSize="9.5" fontFamily="monospace" fontWeight="bold">

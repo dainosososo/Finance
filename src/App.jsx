@@ -11,6 +11,8 @@ import PostMarketRankings from './components/PostMarketRankings';
 import IndustryNewsFeed from './components/IndustryNewsFeed';
 import DailyReportModal from './components/DailyReportModal';
 import StrongStocksTracker from './components/StrongStocksTracker';
+import AlertsManagerModal from './components/AlertsManagerModal';
+import WebSocketStreamModal from './components/WebSocketStreamModal';
 import { 
   TrendingUp, 
   Layers, 
@@ -20,7 +22,8 @@ import {
   Zap, 
   Sparkles,
   Flame,
-  ArrowRight
+  ArrowRight,
+  Bell
 } from 'lucide-react';
 import { 
   fetchDailyClosingPrices, 
@@ -33,11 +36,22 @@ import {
   getMarketReportData,
   getIndustryNews
 } from './services/marketReportService';
+import { 
+  getAlerts, 
+  checkQuotesAgainstAlerts 
+} from './services/alertService';
+import { websocketStream } from './services/websocketStreamService';
 
 export default function App() {
   const [dailyStocks, setDailyStocks] = useState([]);
   const [watchlist, setWatchlist] = useState(['2330', '2317', '2454', '0050']);
   const [quotes, setQuotes] = useState([]);
+  const [showAlertsModal, setShowAlertsModal] = useState(false);
+  const [showWsModal, setShowWsModal] = useState(false);
+  const [wsStatus, setWsStatus] = useState('DISCONNECTED');
+  const [wsLatency, setWsLatency] = useState(0);
+  const [alertList, setAlertList] = useState(getAlerts());
+  const [triggeredToast, setTriggeredToast] = useState(null);
   const [taiexData, setTaiexData] = useState(null);
   const [fscNews, setFscNews] = useState([]);
   const [postMarketData, setPostMarketData] = useState(null);
@@ -93,7 +107,15 @@ export default function App() {
           setDailyStocks(daily);
         }
       }
-      if (realtime && realtime.length > 0) setQuotes(realtime.filter(q => watchlist.includes(q.symbol)));
+      if (realtime && realtime.length > 0) {
+        setQuotes(realtime.filter(q => watchlist.includes(q.symbol)));
+        // 條件警報檢查
+        const newly = checkQuotesAgainstAlerts(realtime);
+        if (newly && newly.length > 0) {
+          setTriggeredToast(newly[0]);
+          setAlertList(getAlerts());
+        }
+      }
       if (taiex) setTaiexData(taiex);
       if (news) setFscNews(news);
       if (postMarket) setPostMarketData(postMarket);
@@ -108,6 +130,58 @@ export default function App() {
   useEffect(() => {
     loadData();
   }, [loadData]);
+
+  // WebSocket 串流通訊監聽與頻道同步
+  useEffect(() => {
+    websocketStream.subscribe(watchlist);
+
+    const unStatus = websocketStream.onStatusChange((s, lat) => {
+      setWsStatus(s);
+      setWsLatency(lat);
+    });
+
+    const unTick = websocketStream.onTick((liveQuotes) => {
+      if (!liveQuotes || liveQuotes.length === 0) return;
+      // 1. 更新自選清單報價
+      setQuotes(prev => {
+        const liveMap = new Map(liveQuotes.map(q => [q.symbol, q]));
+        return prev.map(q => liveMap.get(q.symbol) || q);
+      });
+
+      // 2. 條件警報觸發自檢
+      const newly = checkQuotesAgainstAlerts(liveQuotes);
+      if (newly && newly.length > 0) {
+        setTriggeredToast(newly[0]);
+        setAlertList(getAlerts());
+      }
+
+      // 3. 補丁注入 dailyStocks 供熱力圖即時跳動
+      setDailyStocks(prevDaily => {
+        if (!prevDaily || prevDaily.length === 0) return prevDaily;
+        const liveMap = new Map(liveQuotes.map(r => [r.symbol, r]));
+        return prevDaily.map(st => {
+          const live = liveMap.get(st.Code);
+          if (live && live.isRealtime && live.price !== '-') {
+            return {
+              ...st,
+              ClosingPrice: live.price,
+              Change: live.change,
+              PctChange: live.pctChange,
+              TradeVolume: live.volume || st.TradeVolume,
+              TradeValue: live.tradeValue ? String(live.tradeValue) : st.TradeValue,
+              TurnoverYi: live.turnover ? String(live.turnover) : st.TurnoverYi
+            };
+          }
+          return st;
+        });
+      });
+    });
+
+    return () => {
+      unStatus();
+      unTick();
+    };
+  }, [watchlist]);
 
   // Auto-refresh interval polling for live stock quotes, TAIEX, and heatmap constituents
   useEffect(() => {
@@ -130,6 +204,13 @@ export default function App() {
         if (realtime && realtime.length > 0) {
           // Update watchlist quotes
           setQuotes(realtime.filter(q => watchlist.includes(q.symbol)));
+
+          // 條件警報檢查
+          const newly = checkQuotesAgainstAlerts(realtime);
+          if (newly && newly.length > 0) {
+            setTriggeredToast(newly[0]);
+            setAlertList(getAlerts());
+          }
 
           // Dynamically patch dailyStocks so MarketHeatmap receives live prices & turnover immediately
           setDailyStocks(prevDaily => {
@@ -219,6 +300,12 @@ export default function App() {
         onOpenReportModal={() => setShowDailyReportModal(true)}
         onToggleSidebar={() => setIsSidebarCollapsed(prev => !prev)}
         isSidebarCollapsed={isSidebarCollapsed}
+        onOpenAlertsModal={() => setShowAlertsModal(true)}
+        alertCount={alertList.filter(a => a.active).length}
+        hasTriggeredAlert={alertList.some(a => a.triggered)}
+        onOpenWsModal={() => setShowWsModal(true)}
+        wsStatus={wsStatus}
+        wsLatency={wsLatency}
       />
 
       {/* Main Container with Collapsible Sidebar & Content */}
@@ -425,6 +512,60 @@ export default function App() {
           stock={selectedStockModal}
           onClose={() => setSelectedStockModal(null)}
         />
+      )}
+
+      {/* Cloud Alerts Manager Modal */}
+      <AlertsManagerModal 
+        isOpen={showAlertsModal}
+        onClose={() => {
+          setShowAlertsModal(false);
+          setAlertList(getAlerts());
+        }}
+        stockList={dailyStocks}
+        defaultStock={selectedStockModal}
+      />
+
+      {/* WebSocket Real-time Stream Console Modal */}
+      <WebSocketStreamModal 
+        isOpen={showWsModal}
+        onClose={() => setShowWsModal(false)}
+      />
+
+      {/* Floating Alert Triggered Toast */}
+      {triggeredToast && (
+        <div className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-rose-600 to-pink-600 text-white p-4 rounded-2xl shadow-2xl border-2 border-white/50 max-w-sm animate-bounce">
+          <div className="flex items-start justify-between gap-3">
+            <div className="flex items-center space-x-2">
+              <Bell className="w-5 h-5 text-amber-300 animate-pulse" />
+              <div>
+                <h4 className="font-extrabold text-sm">
+                  🔔 警報觸發: {triggeredToast.alert.name} ({triggeredToast.alert.code})
+                </h4>
+                <p className="text-xs text-rose-100 mt-0.5">
+                  成交價: NT$ {triggeredToast.quote.price} ({triggeredToast.quote.pctChange}%)
+                </p>
+                <p className="text-[11px] text-amber-200 mt-1 font-mono">
+                  {triggeredToast.alert.triggeredAt}
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={() => setTriggeredToast(null)}
+              className="p-1 hover:bg-white/20 rounded-lg text-white transition"
+            >
+              ✕
+            </button>
+          </div>
+          <button
+            onClick={() => {
+              setShowAlertsModal(true);
+              setTriggeredToast(null);
+            }}
+            className="w-full mt-2.5 py-1.5 bg-white text-rose-700 text-xs font-bold rounded-xl text-center hover:bg-rose-50 transition"
+          >
+            查看警報紀錄 ➔
+          </button>
+        </div>
       )}
 
       {/* Minimalist Light Pink Footer */}
