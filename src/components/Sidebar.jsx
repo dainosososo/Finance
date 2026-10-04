@@ -15,7 +15,8 @@ import {
   BarChart3,
   Globe2,
   Sparkles,
-  Trophy
+  Trophy,
+  Workflow
 } from 'lucide-react';
 
 /**
@@ -90,6 +91,15 @@ export default function Sidebar({
       icon: Building2,
       color: 'text-purple-600',
       badge: '時事'
+    },
+    {
+      id: 'INDUSTRY_CHAIN',
+      tabTarget: 'CHAIN',
+      label: '產業鏈全景智庫',
+      sublabel: '上中下游生態系與公司負責項目',
+      icon: Workflow,
+      color: 'text-indigo-600',
+      badge: '產業鏈'
     },
     {
       id: 'DAILY',

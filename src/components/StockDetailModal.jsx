@@ -14,6 +14,11 @@ import {
   Scale, 
   ShieldCheck, 
   ExternalLink,
+  Bot,
+  Target,
+  Zap,
+  Sparkles,
+  CheckCircle2,
   CandlestickChart as CandleIcon,
   LineChart as LineIcon
 } from 'lucide-react';
@@ -30,6 +35,7 @@ import {
 } from 'recharts';
 import CandlestickChart from './CandlestickChart';
 import { getStockDetailData } from '../services/stockDetailService';
+import { analyzeSMC } from '../services/smcRlInferenceService';
 
 /**
  * 三竹智選股風格深度分析彈窗 (Mitake-Style Stock Detail Modal)
@@ -75,6 +81,12 @@ export default function StockDetailModal({ stock, onClose }) {
     }
     return detail.klines?.['日K'] || detail.charts?.['1M'] || [];
   }, [detail, klineType]);
+
+  // SMC (Smart Money Concepts) 強化學習推論分析
+  const smcAnalysis = useMemo(() => {
+    if (!currentChartData || currentChartData.length === 0) return null;
+    return analyzeSMC(currentChartData);
+  }, [currentChartData]);
 
   const handleKlineChange = (k) => {
     setKlineType(k);
@@ -255,10 +267,22 @@ export default function StockDetailModal({ stock, onClose }) {
               <Newspaper className="w-3.5 h-3.5" />
               <span>時事</span>
             </button>
+
+            <button
+              onClick={() => setActiveTab('SMC_RL')}
+              className={`flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-bold transition whitespace-nowrap shadow-xs ${
+                activeTab === 'SMC_RL'
+                  ? 'bg-gradient-to-r from-purple-700 via-indigo-600 to-rose-600 text-white shadow-md ring-2 ring-purple-300'
+                  : 'text-purple-900 bg-purple-50/90 hover:bg-purple-100 hover:text-purple-950 border border-purple-200'
+              }`}
+            >
+              <Bot className="w-3.5 h-3.5" />
+              <span>🤖 AI 聰明錢 (SMC-RL)</span>
+            </button>
           </div>
 
-          {/* 當前為技術面時，顯示 K 線週期切換按鈕群 */}
-          {activeTab === 'TECH' && (
+          {/* 當前為技術面或 SMC_RL 時，顯示 K 線週期切換按鈕群 */}
+          {(activeTab === 'TECH' || activeTab === 'SMC_RL') && (
             <div className="flex items-center space-x-1 text-xs">
               <div className="flex items-center space-x-1 bg-white p-0.5 rounded-lg border border-pink-200">
                 {['分時', '日K', '週K', '月K', '60分K', '還原K'].map((k) => (
@@ -521,6 +545,210 @@ export default function StockDetailModal({ stock, onClose }) {
                     </span>
                   </div>
                 ))}
+              </div>
+            )}
+
+            {/* 7. 🤖 AI 聰明錢強化學習決策 (SMC-RL Deep Reinforcement Learning) */}
+            {activeTab === 'SMC_RL' && (
+              <div className="space-y-4 text-xs animate-fade-in">
+                {/* 頂部 AI 狀態橫幅 */}
+                <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 rounded-2xl p-4 sm:p-5 text-white shadow-lg border border-purple-500/30">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2">
+                        <span className="p-1.5 bg-purple-500/20 border border-purple-400/40 rounded-lg text-purple-300">
+                          <Bot className="w-5 h-5" />
+                        </span>
+                        <h3 className="text-base sm:text-lg font-black tracking-tight flex items-center gap-2">
+                          SMC 深度強化學習交易代理人 (DRL Policy Agent)
+                          <span className="text-[10px] bg-purple-500/30 text-purple-200 px-2 py-0.5 rounded-full border border-purple-400/30 font-mono">
+                            Model: PPO-ActorCritic v2.4
+                          </span>
+                        </h3>
+                      </div>
+                      <p className="text-purple-200/80 text-[11px] leading-relaxed max-w-2xl">
+                        依據《SMC FinTech 碩士論文研究矩陣》Ep.05-39 核心架構訓練，嚴格遵循「流動性獵殺 (Sweeps) + 訂單塊 (Extreme OB) + 50% 均衡位折價過濾 + 拒絕 IDM 誘餌陷阱」高勝率數學決策邏輯。
+                      </p>
+                    </div>
+
+                    {/* 核心訊號動作卡片 */}
+                    <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/15 shrink-0">
+                      <div>
+                        <div className="text-[10px] text-purple-200 font-bold uppercase tracking-wider">AI 動作推薦 (Action)</div>
+                        <div className={`text-base font-black flex items-center gap-1.5 ${
+                          smcAnalysis?.decision?.action === 'BUY'
+                            ? 'text-emerald-400'
+                            : smcAnalysis?.decision?.action === 'SELL'
+                            ? 'text-rose-400'
+                            : 'text-amber-300'
+                        }`}>
+                          {smcAnalysis?.decision?.action === 'BUY' && '🎯 多方進場 (BUY)'}
+                          {smcAnalysis?.decision?.action === 'SELL' && '🛡️ 空方減碼 (SELL)'}
+                          {smcAnalysis?.decision?.action === 'HOLD' && '⏳ 觀望等待 (HOLD)'}
+                        </div>
+                      </div>
+                      <div className="pl-3 border-l border-white/20 text-right">
+                        <div className="text-[10px] text-purple-200 font-bold">策略置信度</div>
+                        <div className="text-lg font-black font-mono text-purple-300">
+                          {smcAnalysis?.decision?.confidence ?? 50}%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 三大結構量化指標卡片 */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {/* 進場 POI */}
+                  <div className="bg-white p-3.5 rounded-xl border border-pink-200 shadow-2xs space-y-1">
+                    <div className="flex items-center justify-between text-slate-500 font-bold text-[11px]">
+                      <span>關鍵進場參考價 (POI Entry)</span>
+                      <Target className="w-3.5 h-3.5 text-purple-600" />
+                    </div>
+                    <div className="text-xl font-black font-mono text-slate-900">
+                      NT$ {smcAnalysis?.decision?.entryPrice ?? detail.price}
+                    </div>
+                    <div className="text-[10px] text-slate-500">
+                      盤面現價: NT$ {detail.price} ({smcAnalysis?.isDiscount ? '折價區' : smcAnalysis?.isPremium ? '溢價區' : '均衡區'})
+                    </div>
+                  </div>
+
+                  {/* 結構性停損 SL */}
+                  <div className="bg-white p-3.5 rounded-xl border border-pink-200 shadow-2xs space-y-1">
+                    <div className="flex items-center justify-between text-slate-500 font-bold text-[11px]">
+                      <span>結構性防守止損 (Structural SL)</span>
+                      <ShieldCheck className="w-3.5 h-3.5 text-rose-600" />
+                    </div>
+                    <div className="text-xl font-black font-mono text-rose-600">
+                      {smcAnalysis?.decision?.stopLoss ? `NT$ ${smcAnalysis.decision.stopLoss}` : '動態前低外緣'}
+                    </div>
+                    <div className="text-[10px] text-slate-500">
+                      以 Extreme OB 或近期流動性極值保護，破位則失效
+                    </div>
+                  </div>
+
+                  {/* 目標止盈 TP (2.5R) */}
+                  <div className="bg-white p-3.5 rounded-xl border border-pink-200 shadow-2xs space-y-1">
+                    <div className="flex items-center justify-between text-slate-500 font-bold text-[11px]">
+                      <span>目標止盈價格 (Target TP @ 2.5R)</span>
+                      <TrendingUp className="w-3.5 h-3.5 text-emerald-600" />
+                    </div>
+                    <div className="text-xl font-black font-mono text-emerald-600">
+                      {smcAnalysis?.decision?.takeProfit ? `NT$ ${smcAnalysis.decision.takeProfit}` : '2.5R 盈虧比'}
+                    </div>
+                    <div className="text-[10px] text-slate-500">
+                      期望盈虧比: <strong className="font-mono text-slate-700">{smcAnalysis?.decision?.expectedRR || '1 : 2.5'}</strong> (滿足機構數學期望值)
+                    </div>
+                  </div>
+                </div>
+
+                {/* SMC 核心要素驗證檢驗表 (5-Point Checklist) */}
+                <div className="bg-white rounded-xl border border-pink-200 p-4 shadow-2xs space-y-3">
+                  <div className="flex items-center justify-between border-b border-pink-100 pb-2">
+                    <h4 className="font-bold text-slate-900 flex items-center gap-1.5 text-xs">
+                      <Sparkles className="w-4 h-4 text-purple-600" />
+                      SMC 機構進場 5 大核心結構檢驗指標 (Notion Notes Checklist)
+                    </h4>
+                    <span className="text-[11px] text-slate-500 font-mono">
+                      分析週期: {klineType}
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                    {/* 1. 斐波那契 50% 均衡位 */}
+                    <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start gap-2.5">
+                      <div className={`mt-0.5 p-1 rounded ${smcAnalysis?.isDiscount ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
+                        <Scale className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900">1. 斐波那契 50% 均衡位 (Equilibrium EQ)</div>
+                        <div className="text-slate-600 text-[11px] mt-0.5">
+                          EQ 中軸價位: <strong className="font-mono text-slate-800">NT$ {smcAnalysis?.fib50}</strong>
+                          <span className={`ml-2 px-1.5 py-0.2 rounded font-bold text-[10px] ${
+                            smcAnalysis?.isDiscount ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'
+                          }`}>
+                            {smcAnalysis?.isDiscount ? '折價區 Discount (買方安全區)' : '溢價區 Premium (高位警惕)'}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 2. 流動性掃蕩 */}
+                    <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start gap-2.5">
+                      <div className={`mt-0.5 p-1 rounded ${smcAnalysis?.sweeps?.length > 0 ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-200 text-slate-600'}`}>
+                        <Zap className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900">2. 流動性獵殺 (Liquidity Sweeps)</div>
+                        <div className="text-slate-600 text-[11px] mt-0.5">
+                          偵測到 <strong className="font-mono text-purple-700">{smcAnalysis?.sweeps?.length || 0}</strong> 次影線假突破掃蕩
+                          {smcAnalysis?.sweeps?.length > 0 && (
+                            <span className="text-[10px] text-slate-500 ml-1">
+                              (最近: {smcAnalysis.sweeps[smcAnalysis.sweeps.length - 1].type === 'BSL_SWEEP' ? '買方 BSL 假突破' : '賣方 SSL 獵殺收回'})
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 3. 訂單塊 */}
+                    <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start gap-2.5">
+                      <div className="mt-0.5 p-1 rounded bg-blue-100 text-blue-700">
+                        <Layers className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900">3. 極端訂單塊 (Extreme Order Blocks)</div>
+                        <div className="text-slate-600 text-[11px] mt-0.5">
+                          多頭 OB: <strong className="font-mono text-emerald-600">{smcAnalysis?.orderBlocks?.filter(o => o.type === 'BULL').length || 0}</strong> 處 |
+                          空頭 OB: <strong className="font-mono text-rose-600">{smcAnalysis?.orderBlocks?.filter(o => o.type === 'BEAR').length || 0}</strong> 處
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 4. 公允價值缺口 */}
+                    <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-start gap-2.5">
+                      <div className="mt-0.5 p-1 rounded bg-amber-100 text-amber-700">
+                        <Activity className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900">4. 公允價值缺口 (Fair Value Gaps / FVG)</div>
+                        <div className="text-slate-600 text-[11px] mt-0.5">
+                          包含 3 棒失衡與 4 棒孕線修復型 FVG，共 <strong className="font-mono text-amber-700">{smcAnalysis?.fvgs?.length || 0}</strong> 處磁吸區
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 代理人推演邏輯清單 */}
+                <div className="bg-[#fff0f3] p-4 rounded-xl border border-pink-200 space-y-2">
+                  <div className="font-bold text-slate-900 flex items-center justify-between">
+                    <span className="flex items-center gap-1.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                      強化學習決策推演信號鏈 (Agent Reasoning Signals)
+                    </span>
+                    <button
+                      onClick={() => setActiveTab('TECH')}
+                      className="text-rose-700 hover:text-rose-900 font-bold text-xs underline flex items-center gap-1"
+                    >
+                      前往 K 線圖視覺化查看 →
+                    </button>
+                  </div>
+
+                  <div className="space-y-1.5 mt-2">
+                    {smcAnalysis?.decision?.signals?.map((sig, sIdx) => (
+                      <div key={sIdx} className="bg-white/80 p-2.5 rounded-lg border border-pink-100 flex items-start gap-2">
+                        <span className="text-purple-600 font-bold font-mono">[{sIdx + 1}]</span>
+                        <span className="text-slate-800 leading-tight">{sig}</span>
+                      </div>
+                    ))}
+                    {(!smcAnalysis?.decision?.signals || smcAnalysis.decision.signals.length === 0) && (
+                      <div className="text-slate-500 italic p-2 bg-white/60 rounded">
+                        目前處於結構平衡區，未觸發極端高勝率 POI 條件，策略建議耐心觀望。
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             )}
           </div>

@@ -22,8 +22,10 @@ import {
   MoveHorizontal,
   Calendar,
   Layers,
-  Sparkles
+  Sparkles,
+  Bot
 } from 'lucide-react';
+import { analyzeSMC } from '../services/smcRlInferenceService';
 
 /**
  * 完整支援的副圖指標定義庫
@@ -77,6 +79,7 @@ export default function CandlestickChart({
   // 2. 支撐壓力線與成交量分布圖 (Volume Profile) 顯示開關
   const [showSupportResistance, setShowSupportResistance] = useState(true);
   const [showVolumeProfile, setShowVolumeProfile] = useState(true);
+  const [showSmcLayer, setShowSmcLayer] = useState(true);
 
   // 3. 【核心升級 1】: 多副圖指標陣列 (預設比照三竹智選股同時並列 MACD + KD)
   const [activeIndicators, setActiveIndicators] = useState(['MACD', 'KD']);
@@ -278,6 +281,14 @@ export default function CandlestickChart({
       val: bins[vaLowIdx]?.priceLow ?? null
     };
   }, [currentWindow, chartMetrics, showVolumeProfile]);
+
+  // ==========================================
+  // 計算 SMC (Smart Money Concepts) 結構與失衡
+  // ==========================================
+  const smcAnalysis = useMemo(() => {
+    if (!currentWindow || currentWindow.length === 0 || !showSmcLayer) return null;
+    return analyzeSMC(currentWindow);
+  }, [currentWindow, showSmcLayer]);
 
   // ==========================================
   // 計算全套副圖指標數值集合 (Indicators Math)
@@ -913,6 +924,19 @@ export default function CandlestickChart({
             <BarChart2 className="w-3 h-3 text-amber-600" />
             <span>籌碼分布(VPVR): {showVolumeProfile ? '開' : '關'}</span>
           </button>
+
+          <button
+            onClick={() => setShowSmcLayer(!showSmcLayer)}
+            className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition flex items-center gap-1 border cursor-pointer ${
+              showSmcLayer 
+                ? 'bg-purple-100 text-purple-900 border-purple-300 shadow-2xs' 
+                : 'bg-white text-slate-500 border-pink-200'
+            }`}
+            title="開啟/關閉 SMC 聰明錢圖層 (Order Block 訂單塊、FVG 失衡缺口、BOS 結構與 AI 決策)"
+          >
+            <Sparkles className="w-3 h-3 text-purple-600 animate-pulse" />
+            <span>SMC聰明錢: {showSmcLayer ? '開' : '關'}</span>
+          </button>
         </div>
       </div>
 
@@ -1198,6 +1222,126 @@ export default function CandlestickChart({
             </g>
           )}
 
+          {/* ========================================================= */}
+          {/* SMC 聰明錢概念背景圖層 (Order Blocks, FVGs, 50% 均衡位)   */}
+          {/* ========================================================= */}
+          {showSmcLayer && smcAnalysis && (
+            <g className="smc-background-layer">
+              {/* 1. 斐波那契 50% 均衡線 (Equilibrium Line) */}
+              {smcAnalysis.fib50 && (
+                <g opacity="0.8">
+                  <line
+                    x1={paddingLeft}
+                    y1={getY(smcAnalysis.fib50)}
+                    x2={svgWidth - paddingRight}
+                    y2={getY(smcAnalysis.fib50)}
+                    stroke="#8B5CF6"
+                    strokeWidth="1.2"
+                    strokeDasharray="4 3"
+                  />
+                  <rect
+                    x={paddingLeft + 6}
+                    y={getY(smcAnalysis.fib50) - 7}
+                    width="112"
+                    height="14"
+                    fill="#8B5CF6"
+                    rx="3"
+                  />
+                  <text
+                    x={paddingLeft + 62}
+                    y={getY(smcAnalysis.fib50) + 3.5}
+                    fill="#FFFFFF"
+                    fontSize="8.5"
+                    fontFamily="monospace"
+                    fontWeight="bold"
+                    textAnchor="middle"
+                  >
+                    EQ 50% 均衡: {smcAnalysis.fib50}
+                  </text>
+                </g>
+              )}
+
+              {/* 2. 訂單塊 (Order Blocks) 橫向擴展緩解區間 */}
+              {smcAnalysis.orderBlocks.map((ob, obIdx) => {
+                const yHigh = getY(ob.high);
+                const yLow = getY(ob.low);
+                const yTop = Math.min(yHigh, yLow);
+                const boxH = Math.max(3, Math.abs(yLow - yHigh));
+                const startX = Math.max(paddingLeft, paddingLeft + (ob.startIndex + 0.5) * barSpacing);
+                const endX = svgWidth - paddingRight;
+                const isBull = ob.type === 'BULL';
+                const fillColor = isBull ? '#10B981' : '#EF4444';
+                const strokeColor = isBull ? '#059669' : '#DC2626';
+
+                return (
+                  <g key={`ob-${obIdx}`} opacity="0.85">
+                    <rect
+                      x={startX}
+                      y={yTop}
+                      width={Math.max(25, endX - startX)}
+                      height={boxH}
+                      fill={fillColor}
+                      fillOpacity="0.18"
+                      stroke={strokeColor}
+                      strokeWidth="1"
+                      strokeDasharray="3 2"
+                      rx="2"
+                    />
+                    <text
+                      x={startX + 4}
+                      y={Math.max(paddingTop + 10, yTop + 9)}
+                      fill={strokeColor}
+                      fontSize="8"
+                      fontFamily="monospace"
+                      fontWeight="bold"
+                    >
+                      {isBull ? '▲ OB 多頭訂單塊' : '▼ OB 空頭訂單塊'} [{ob.low}~{ob.high}]
+                    </text>
+                  </g>
+                );
+              })}
+
+              {/* 3. 公允價值缺口 (Fair Value Gaps / FVG) */}
+              {smcAnalysis.fvgs.map((fvg, fvgIdx) => {
+                const yHigh = getY(fvg.top);
+                const yLow = getY(fvg.bottom);
+                const yTop = Math.min(yHigh, yLow);
+                const boxH = Math.max(2.5, Math.abs(yLow - yHigh));
+                const startX = Math.max(paddingLeft, paddingLeft + (fvg.startIndex + 0.5) * barSpacing);
+                const endX = Math.min(svgWidth - paddingRight, paddingLeft + (fvg.endIndex + 0.5) * barSpacing + 40);
+                const isBull = fvg.type === 'BULL';
+                const strokeColor = isBull ? '#F59E0B' : '#6366F1';
+
+                return (
+                  <g key={`fvg-${fvgIdx}`} opacity="0.8">
+                    <rect
+                      x={startX}
+                      y={yTop}
+                      width={Math.max(20, endX - startX)}
+                      height={boxH}
+                      fill={strokeColor}
+                      fillOpacity="0.15"
+                      stroke={strokeColor}
+                      strokeWidth="0.8"
+                      strokeDasharray="3 3"
+                      rx="1"
+                    />
+                    <text
+                      x={startX + 3}
+                      y={Math.max(paddingTop + 8, yTop + boxH / 2 + 3)}
+                      fill={strokeColor}
+                      fontSize="7.5"
+                      fontFamily="monospace"
+                      fontWeight="bold"
+                    >
+                      FVG 缺口
+                    </text>
+                  </g>
+                );
+              })}
+            </g>
+          )}
+
           {/* 均線 Polyline (MA5, MA20, MA60) */}
           {ma5Points && <polyline fill="none" stroke="#2563EB" strokeWidth="1.6" points={ma5Points} />}
           {ma20Points && <polyline fill="none" stroke="#D97706" strokeWidth="1.6" points={ma20Points} />}
@@ -1274,6 +1418,192 @@ export default function CandlestickChart({
               </g>
             );
           })}
+
+          {/* ========================================================= */}
+          {/* SMC 結構破壞 (BOS/CHoCH)、流動性獵殺與 AI 決策投影疊加圖層 */}
+          {/* ========================================================= */}
+          {showSmcLayer && smcAnalysis && (
+            <g className="smc-foreground-layer">
+              {/* 1. 結構破壞 (BOS / CHoCH 破位標籤與虛線) */}
+              {smcAnalysis.structures.map((st, sIdx) => {
+                const x = paddingLeft + (st.index + 0.5) * barSpacing;
+                const y = getY(st.price);
+                const isBull = st.direction === 'BULL';
+                const tagColor = isBull ? '#2563EB' : '#DC2626';
+
+                return (
+                  <g key={`st-${sIdx}`}>
+                    <line
+                      x1={Math.max(paddingLeft, x - barSpacing * 3.5)}
+                      y1={y}
+                      x2={Math.min(svgWidth - paddingRight, x + barSpacing * 1.5)}
+                      y2={y}
+                      stroke={tagColor}
+                      strokeWidth="1.2"
+                      strokeDasharray="2 2"
+                    />
+                    <rect
+                      x={x - 18}
+                      y={isBull ? y - 14 : y + 3}
+                      width="36"
+                      height="12"
+                      fill={tagColor}
+                      rx="3"
+                    />
+                    <text
+                      x={x}
+                      y={isBull ? y - 5 : y + 12}
+                      fill="#FFFFFF"
+                      fontSize="7.5"
+                      fontFamily="monospace"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                    >
+                      {st.type}
+                    </text>
+                  </g>
+                );
+              })}
+
+              {/* 2. 流動性掃蕩獵殺標記 (Liquidity Sweeps ⚡) */}
+              {smcAnalysis.sweeps.map((sw, swIdx) => {
+                const x = paddingLeft + (sw.index + 0.5) * barSpacing;
+                const y = getY(sw.price);
+                const isBsl = sw.type === 'BSL_SWEEP';
+                const sweepColor = isBsl ? '#DC2626' : '#16A34A';
+
+                return (
+                  <g key={`sw-${swIdx}`}>
+                    <circle
+                      cx={x}
+                      cy={y}
+                      r="3.5"
+                      fill={sweepColor}
+                      stroke="#FFFFFF"
+                      strokeWidth="1.2"
+                    />
+                    <text
+                      x={x}
+                      y={isBsl ? y - 6 : y + 13}
+                      fill={sweepColor}
+                      fontSize="7.5"
+                      fontFamily="monospace"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                    >
+                      {isBsl ? '⚡BSL' : '⚡SSL'}
+                    </text>
+                  </g>
+                );
+              })}
+
+              {/* 3. 最新 K 棒 AI 聰明錢決策標籤與目標投影 (TP / SL Projection) */}
+              {smcAnalysis.decision && (() => {
+                const { action, confidence, stopLoss, takeProfit } = smcAnalysis.decision;
+                if (action === 'HOLD' || currentWindow.length === 0) return null;
+                const lastIdx = currentWindow.length - 1;
+                const lastX = paddingLeft + (lastIdx + 0.5) * barSpacing;
+                const lastBar = currentWindow[lastIdx];
+                const currentP = lastBar.close ?? lastBar.price;
+                const isBuy = action === 'BUY';
+                const badgeY = isBuy ? getY(lastBar.low ?? currentP) + 24 : getY(lastBar.high ?? currentP) - 24;
+                const themeColor = isBuy ? '#059669' : '#DC2626';
+
+                return (
+                  <g key="ai-decision-projection">
+                    {/* 結構性止損線 (SL) */}
+                    {stopLoss && (
+                      <g>
+                        <line
+                          x1={lastX}
+                          y1={getY(stopLoss)}
+                          x2={svgWidth - paddingRight}
+                          y2={getY(stopLoss)}
+                          stroke="#EF4444"
+                          strokeWidth="1.2"
+                          strokeDasharray="4 2"
+                        />
+                        <rect
+                          x={svgWidth - paddingRight - 84}
+                          y={getY(stopLoss) - 8}
+                          width="80"
+                          height="14"
+                          fill="#EF4444"
+                          rx="2"
+                        />
+                        <text
+                          x={svgWidth - paddingRight - 44}
+                          y={getY(stopLoss) + 2.5}
+                          fill="#FFFFFF"
+                          fontSize="8"
+                          fontFamily="monospace"
+                          fontWeight="bold"
+                          textAnchor="middle"
+                        >
+                          SL 防守: {stopLoss}
+                        </text>
+                      </g>
+                    )}
+
+                    {/* 2.5R 目標止盈線 (TP) */}
+                    {takeProfit && (
+                      <g>
+                        <line
+                          x1={lastX}
+                          y1={getY(takeProfit)}
+                          x2={svgWidth - paddingRight}
+                          y2={getY(takeProfit)}
+                          stroke="#10B981"
+                          strokeWidth="1.2"
+                          strokeDasharray="4 2"
+                        />
+                        <rect
+                          x={svgWidth - paddingRight - 96}
+                          y={getY(takeProfit) - 8}
+                          width="92"
+                          height="14"
+                          fill="#10B981"
+                          rx="2"
+                        />
+                        <text
+                          x={svgWidth - paddingRight - 50}
+                          y={getY(takeProfit) + 2.5}
+                          fill="#FFFFFF"
+                          fontSize="8"
+                          fontFamily="monospace"
+                          fontWeight="bold"
+                          textAnchor="middle"
+                        >
+                          TP 盈虧(2.5R): {takeProfit}
+                        </text>
+                      </g>
+                    )}
+
+                    {/* AI 決策徽章 */}
+                    <rect
+                      x={Math.max(paddingLeft, lastX - 38)}
+                      y={badgeY - 10}
+                      width="76"
+                      height="20"
+                      fill={themeColor}
+                      rx="4"
+                    />
+                    <text
+                      x={Math.max(paddingLeft + 38, lastX)}
+                      y={badgeY + 4}
+                      fill="#FFFFFF"
+                      fontSize="9"
+                      fontWeight="bold"
+                      fontFamily="sans-serif"
+                      textAnchor="middle"
+                    >
+                      {isBuy ? `🤖 AI多 ${confidence}%` : `🤖 AI空 ${confidence}%`}
+                    </text>
+                  </g>
+                );
+              })()}
+            </g>
+          )}
 
           {/* 使用者手繪線條渲染 (支援點選與滑鼠拖曳移動 Movable Drawn Lines) */}
           {drawnLines.map(line => {

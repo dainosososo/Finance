@@ -13,6 +13,7 @@ import DailyReportModal from './components/DailyReportModal';
 import StrongStocksTracker from './components/StrongStocksTracker';
 import AlertsManagerModal from './components/AlertsManagerModal';
 import WebSocketStreamModal from './components/WebSocketStreamModal';
+import IndustryChainTracker from './components/IndustryChainTracker';
 import ErrorBoundary from './components/ErrorBoundary';
 import { 
   TrendingUp, 
@@ -479,6 +480,15 @@ export default function App() {
                 onSelectStock={(st) => setSelectedStockModal(st)}
               />
               <FscNewsFeed newsList={fscNews} />
+            </div>
+          )}
+
+          {/* 5.5 TAB: CHAIN (臺灣核心產業鏈全景智庫) */}
+          {activeTab === 'CHAIN' && (
+            <div className="space-y-6 animate-fade-in">
+              <IndustryChainTracker 
+                onSelectStock={(st) => setSelectedStockModal(st)}
+              />
             </div>
           )}
 
