@@ -57,7 +57,7 @@ const SECTOR_GROUPS = [
     colorTheme: 'amber',
     weight: 15.6,
     stocks: [
-      { code: '2409', name: '友達', price: 40.45, change: 2.15, pctChange: 5.61, turnover: 282.1, isUp: true },
+      { code: '2409', name: '友達', price: 40.45, change: 2.15, pctChange: 5.61, turnover: 282.1, isUp: true, open: 38.75, high: 40.85, low: 38.65, prevClose: 38.30, volume: 69729 },
       { code: '3481', name: '群創', price: 52.8, change: 0.5, pctChange: 0.96, turnover: 110.9, isUp: true },
       { code: '3008', name: '大立光', price: 6290.0, change: 85.0, pctChange: 1.37, turnover: 95.4, isUp: true }
     ]
@@ -210,7 +210,7 @@ export default function MarketHeatmap({
         { code: '2327', name: '國巨*', price: 626.0, change: 24.0, pctChange: 3.99, turnover: 644.4, sector: '零組件' },
         { code: '4958', name: '臻鼎-KY', price: 561.0, change: 51.0, pctChange: 10.0, turnover: 369.1, sector: '零組件' },
         { code: '2330', name: '台積電', price: 2500.0, change: -10.0, pctChange: -0.40, turnover: 346.7, sector: '半導體' },
-        { code: '2409', name: '友達', price: 40.45, change: 2.15, pctChange: 5.61, turnover: 282.1, sector: '光電業' },
+        { code: '2409', name: '友達', price: 40.45, change: 2.15, pctChange: 5.61, turnover: 282.1, sector: '光電業', open: 38.75, high: 40.85, low: 38.65, prevClose: 38.30, volume: 69729 },
         { code: '2492', name: '華新科', price: 361.5, change: 32.5, pctChange: 9.88, turnover: 198.5, sector: '零組件' },
         { code: '6274', name: '台燿', price: 1620.0, change: 85.0, pctChange: 5.54, turnover: 190.8, sector: '零組件' },
         { code: '2408', name: '南亞科', price: 526.0, change: 7.0, pctChange: 1.35, turnover: 185.4, sector: '半導體' },

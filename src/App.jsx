@@ -580,31 +580,6 @@ export default function App() {
           </button>
         </div>
       )}
-
-      {/* Minimalist Light Pink Footer */}
-      <footer className="bg-[#fff0f3] border-t border-pink-200 py-6 text-center text-xs text-rose-800 shadow-xs">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center space-x-2">
-            <span className="font-bold text-slate-800">Finance 台灣股市觀測站</span>
-            <span className="text-[10px] bg-rose-100/90 text-rose-800 px-2 py-0.5 rounded border border-pink-300 font-semibold">
-              櫻花粉簡約雙熱力圖版
-            </span>
-          </div>
-
-          <p className="text-rose-900/70 text-[11px]">
-            臺灣證券交易所 (TWSE Open Data) • 盤後三大法人 • 自由縮放K棒蠟燭圖 • 雙熱力圖
-          </p>
-
-          <a 
-            href="https://github.com/dainosososo/Finance"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-rose-700 hover:text-rose-900 flex items-center gap-1 font-mono text-xs font-semibold"
-          >
-            github.com/dainosososo/Finance
-          </a>
-        </div>
-      </footer>
     </div>
   );
 }

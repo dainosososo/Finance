@@ -66,6 +66,10 @@ export default function StockDetailModal({ stock, onClose }) {
       d.price = Number(stock.price);
       if (stock.change !== undefined) d.change = Number(stock.change);
       if (stock.pctChange !== undefined) d.pctChange = Number(stock.pctChange);
+      if (stock.open) d.open = Number(stock.open);
+      if (stock.high) d.high = Number(stock.high);
+      if (stock.low) d.low = Number(stock.low);
+      if (stock.prevClose) d.prevClose = Number(stock.prevClose);
     }
     return d;
   }, [stock]);
