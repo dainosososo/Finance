@@ -3,6 +3,7 @@
  * 提供個股深度多週期技術面、盤差、籌碼面、基本面、股利政策、產業鏈與專屬個股時事
  */
 import { PRELOADED_KLINE_HISTORY } from './stockHistoryData.js';
+import { DAILY_TWSE_STOCKS_MAP } from '../data/dailyTwseStocksMap.js';
 
 // 臺灣證券交易所 (TWSE) 標的上市櫃日期與掛牌起始資訊
 export const STOCK_IPO_REGISTRY = {
@@ -321,60 +322,68 @@ const STOCK_PRESETS = {
  * 取得或動態產生符合三竹標準的個股分析數據
  */
 export function getStockDetailData(symbolOrStock) {
-  const code = typeof symbolOrStock === 'string' ? symbolOrStock : (symbolOrStock?.Code || symbolOrStock?.symbol || '2330');
+  const code = String(typeof symbolOrStock === 'string' ? symbolOrStock : (symbolOrStock?.Code || symbolOrStock?.code || symbolOrStock?.symbol || '2330')).trim();
+  const twseData = DAILY_TWSE_STOCKS_MAP[code];
   const existing = STOCK_PRESETS[code];
 
-  if (existing) {
-    const passedPrice = parseFloat(symbolOrStock?.ClosingPrice || symbolOrStock?.price || 0);
-    const passedChange = parseFloat(symbolOrStock?.Change || symbolOrStock?.change || 0);
-    const passedOpen = parseFloat(symbolOrStock?.OpeningPrice || symbolOrStock?.open || 0);
-    const passedHigh = parseFloat(symbolOrStock?.HighestPrice || symbolOrStock?.high || 0);
-    const passedLow = parseFloat(symbolOrStock?.LowestPrice || symbolOrStock?.low || 0);
-    const passedVol = parseFloat(symbolOrStock?.TradeVolume || symbolOrStock?.volume || 0);
+  const passedPrice = parseFloat(symbolOrStock?.ClosingPrice || symbolOrStock?.price || twseData?.close || 0);
+  const passedChange = parseFloat(symbolOrStock?.Change !== undefined ? symbolOrStock.Change : (symbolOrStock?.change !== undefined ? symbolOrStock.change : (twseData?.change !== undefined ? twseData.change : 0)));
+  const passedOpen = parseFloat(symbolOrStock?.OpeningPrice || symbolOrStock?.open || twseData?.open || 0);
+  const passedHigh = parseFloat(symbolOrStock?.HighestPrice || symbolOrStock?.high || twseData?.high || 0);
+  const passedLow = parseFloat(symbolOrStock?.LowestPrice || symbolOrStock?.low || twseData?.low || 0);
+  const rawVol = parseFloat(symbolOrStock?.TradeVolume || symbolOrStock?.volume || twseData?.volume || 0);
+  const passedVol = rawVol > 500000 ? Math.floor(rawVol / 1000) : rawVol;
+  const passedDate = symbolOrStock?.Date || symbolOrStock?.date || twseData?.date || '1151001';
+  const name = symbolOrStock?.Name || symbolOrStock?.name || twseData?.name || existing?.name || `個股 ${code}`;
+  const sector = symbolOrStock?.Sector || symbolOrStock?.sector || existing?.sector || '上市產業';
 
+  if (existing) {
     let merged = { ...existing };
     if (passedPrice > 0) {
       merged.price = passedPrice;
-      if (!isNaN(passedChange) && passedChange !== 0) {
-        merged.change = passedChange;
-        merged.prevClose = symbolOrStock?.prevClose ? Number(symbolOrStock.prevClose) : Number((passedPrice - passedChange).toFixed(2));
-        merged.pctChange = Number(((passedChange / merged.prevClose) * 100).toFixed(2));
-      }
-      // 優先使用傳入的真實盤面 開高低，絕不使用隨機計算覆蓋！
+      merged.change = passedChange;
+      merged.prevClose = symbolOrStock?.prevClose ? Number(symbolOrStock.prevClose) : Number((passedPrice - passedChange).toFixed(2));
+      merged.pctChange = merged.prevClose > 0 ? Number(((passedChange / merged.prevClose) * 100).toFixed(2)) : 0;
       if (passedOpen > 0) merged.open = passedOpen;
       if (passedHigh > 0) merged.high = passedHigh;
       if (passedLow > 0) merged.low = passedLow;
-      if (passedVol > 0) merged.volume = passedVol > 500000 ? Math.floor(passedVol / 1000) : passedVol;
+      if (passedVol > 0) merged.volume = passedVol;
     }
+    merged.date = passedDate;
     return enrichWithCalculatedMetrics(merged);
   }
 
-  // 若為未預設標的，以該股真實行情動態產生擬真高規格三竹數據
-  const basePrice = parseFloat(symbolOrStock?.ClosingPrice || symbolOrStock?.price || 100);
-  const change = parseFloat(symbolOrStock?.Change || symbolOrStock?.change || 1.5);
-  const name = symbolOrStock?.Name || symbolOrStock?.name || `個股 ${code}`;
-  const sector = symbolOrStock?.Sector || '上市產業';
-  const pct = basePrice > 0 ? ((change / basePrice) * 100).toFixed(2) : '1.50';
+  // 若為未預設標的，以該股真實 TWSE 數據產生高規格三竹數據
+  const basePrice = passedPrice > 0 ? passedPrice : 100;
+  const change = passedChange;
+  const prevClose = symbolOrStock?.prevClose ? Number(symbolOrStock.prevClose) : Number((basePrice - change).toFixed(2));
+  const pct = prevClose > 0 ? ((change / prevClose) * 100).toFixed(2) : '0.00';
+
+  const open = passedOpen > 0 ? passedOpen : Number((change >= 0 ? basePrice - Math.abs(change) * 0.6 : basePrice + Math.abs(change) * 0.6).toFixed(2));
+  const high = passedHigh > 0 ? passedHigh : Number((Math.max(open, basePrice) * 1.008).toFixed(2));
+  const low = passedLow > 0 ? passedLow : Number((Math.min(open, basePrice) * 0.992).toFixed(2));
+  const volume = passedVol > 0 ? passedVol : Math.floor(Math.random() * 30000 + 8000);
 
   const generated = {
     name,
     code,
+    date: passedDate,
     market: '上市 (TWSE)',
     sector,
     price: basePrice,
     change: change,
     pctChange: parseFloat(pct),
-    prevClose: Number((basePrice - change).toFixed(2)),
-    open: Number((basePrice - change * 0.4).toFixed(2)),
-    high: Number((basePrice + Math.abs(change) * 0.8).toFixed(2)),
-    low: Number((basePrice - Math.abs(change) * 0.8).toFixed(2)),
-    volume: Math.floor(Math.random() * 30000 + 8000),
-    turnover: `${((basePrice * 15000 * 1000) / 100000000).toFixed(1)} 億`,
-    outVolume: Math.floor(Math.random() * 8000 + 5000),
-    inVolume: Math.floor(Math.random() * 6000 + 3000),
+    prevClose: prevClose,
+    open: open,
+    high: high,
+    low: low,
+    volume: volume,
+    turnover: `${((basePrice * volume * 1000) / 100000000).toFixed(1)} 億`,
+    outVolume: Math.floor(volume * 0.56),
+    inVolume: Math.floor(volume * 0.44),
     outRatio: 56.4,
     inRatio: 43.6,
-    spread: 0.5,
+    spread: basePrice > 500 ? 5.0 : (basePrice > 100 ? 0.5 : (basePrice > 50 ? 0.1 : 0.05)),
     pe: 16.8,
     pb: 1.85,
     eps: (basePrice / 18).toFixed(2),
@@ -413,6 +422,62 @@ export function getStockDetailData(symbolOrStock) {
   };
 
   return enrichWithCalculatedMetrics(generated);
+}
+
+/**
+ * 解析 TWSE 日期格式（支援民國年月日如 1151001、西元年月日如 2026-10-01、10/02 等）
+ */
+export function parseTwseDate(twseDateStr) {
+  if (!twseDateStr) return { dateStr: '2026-10-01', timeLabel: '10/01', isToday: false };
+  const s = String(twseDateStr).trim();
+  if (s === '1151002' || s === '2026-10-02' || s === '10/02') {
+    return { dateStr: '2026-10-02', timeLabel: '10/02 (今)', isToday: true };
+  }
+  if (s.length === 7) {
+    const y = parseInt(s.slice(0, 3), 10) + 1911;
+    const m = s.slice(3, 5);
+    const d = s.slice(5, 7);
+    const isToday = (m === '10' && d === '02');
+    return { dateStr: `${y}-${m}-${d}`, timeLabel: isToday ? `${m}/${d} (今)` : `${m}/${d}`, isToday };
+  }
+  if (s.includes('-')) {
+    const parts = s.split('-');
+    const m = parts[1].padStart(2, '0');
+    const d = parts[2].padStart(2, '0');
+    const isToday = (m === '10' && d === '02');
+    return { dateStr: s, timeLabel: isToday ? `${m}/${d} (今)` : `${m}/${d}`, isToday };
+  }
+  return { dateStr: '2026-10-01', timeLabel: '10/01', isToday: false };
+}
+
+/**
+ * 產生截至指定交易日的最近 N 個真實台股交易日清單
+ * 嚴格以 endDate 為最後一日，絕不產生未來日期或重複日期
+ */
+export function getTradingDaysEndingAt(count = 20, endDate = new Date('2026-10-01')) {
+  const result = [];
+  let d = new Date(endDate);
+
+  // 若 endDate 落在週末，先退至週五
+  if (d.getDay() === 6) d.setDate(d.getDate() - 1);
+  else if (d.getDay() === 0) d.setDate(d.getDate() - 2);
+
+  while (result.length < count) {
+    const dayOfWeek = d.getDay();
+    if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const dd = String(d.getDate()).padStart(2, '0');
+      const isToday = (mm === '10' && dd === '02');
+      result.unshift({
+        time: isToday ? `${mm}/${dd} (今)` : `${mm}/${dd}`,
+        rawDate: `${mm}/${dd}`,
+        fullDate: `${yyyy}-${mm}-${dd}`
+      });
+    }
+    d.setDate(d.getDate() - 1);
+  }
+  return result;
 }
 
 /**
@@ -517,35 +582,38 @@ function enrichWithCalculatedMetrics(stock) {
     };
   });
 
-  // 2. 日K (嚴格時間序列，徹底杜絕日期跳回與價格斷層)
+  // 2. 日K (嚴格時間序列，徹底杜絕日期跳回、重複日期與價格斷層)
+  const dateInfo = parseTwseDate(stock.date || stock.Date);
+  const { dateStr, timeLabel, isToday } = dateInfo;
+
   const realStockHistory = PRELOADED_KLINE_HISTORY[code]?.days || [];
   const TOTAL_DAILY_BARS = 600; // 涵蓋約 2.5 年歷史成交日 (週K/月K則收錄上市至今全歷史)
   
-  const resistancePrice = Number((base * 1.03).toFixed(2));
-  const supportPrice = Number((base * 0.97).toFixed(2));
+  const resistancePrice = Number((Math.max(base, stock.high || base) * 1.02).toFixed(2));
+  const supportPrice = Number((Math.min(base, stock.low || base) * 0.98).toFixed(2));
   
   let chart1M = [];
   
   if (realStockHistory && realStockHistory.length >= 5) {
     const knownCount = realStockHistory.length;
-    const needPrepend = Math.max(0, TOTAL_DAILY_BARS - knownCount);
+    const needPrepend = Math.max(0, TOTAL_DAILY_BARS - (isToday ? knownCount + 1 : knownCount));
     const firstRealDate = new Date(realStockHistory[0].fullDate || '2026-09-01');
     
-    // 嚴格取得 2026-09-01 之前的交易日 (最後一天為 2026-08-31)
+    // 嚴格取得 2026-09-01 之前的交易日
     const prependedDays = getTradingDaysBeforeDate(needPrepend, firstRealDate);
     
-    // 從第一筆真實價格 (例如 09/01 開盤價 2395) 往前回溯生成無縫連續價格
+    // 從第一筆真實價格往前回溯生成無縫連續價格
     let currentPrice = realStockHistory[0].open || base;
     const prependedBars = new Array(needPrepend);
     
     for (let i = needPrepend - 1; i >= 0; i--) {
       const dayInfo = prependedDays[i];
-      const dailyReturn = (Math.random() - 0.495) * 0.016;
       const close = Number(currentPrice.toFixed(2));
-      const open = Number((close / (1 + dailyReturn)).toFixed(2));
-      const high = Number((Math.max(open, close) + Math.random() * (close * 0.008)).toFixed(2));
-      const low = Number((Math.min(open, close) - Math.random() * (close * 0.008)).toFixed(2));
-      const vol = Math.floor((stock.volume || 25000) * (0.6 + Math.random() * 0.7));
+      const trend = Math.sin(i * 0.8) * 0.008;
+      const open = Number((close * (1 - trend)).toFixed(2));
+      const high = Number((Math.max(open, close) * 1.006).toFixed(2));
+      const low = Number((Math.min(open, close) * 0.994).toFixed(2));
+      const vol = Math.floor((stock.volume || 25000) * (0.8 + Math.abs(Math.sin(i * 0.5)) * 0.4));
       const isUpDay = close >= open;
 
       prependedBars[i] = {
@@ -580,61 +648,79 @@ function enrichWithCalculatedMetrics(stock) {
       return item;
     });
 
-    // 今日 (10/02 今) K 棒獨立追加，嚴格保留昨日 10/01 真實收盤與陰陽燭線
-    const lastHistBar = realBars[realBars.length - 1];
-    const prevCloseVal = lastHistBar ? lastHistBar.close : (stock.prevClose || base);
-    const todayOpen = Number((stock.open || (stock.price >= prevCloseVal ? prevCloseVal * 1.008 : prevCloseVal * 0.992)).toFixed(2));
-    const todayClose = Number(stock.price.toFixed(2));
-    const todayHigh = Number((stock.high || Math.max(todayOpen, todayClose) * 1.005).toFixed(2));
-    const todayLow = Number((stock.low || Math.min(todayOpen, todayClose) * 0.995).toFixed(2));
-    const todayVol = Number(stock.volume || 25000);
-    const todayIsUp = todayClose >= todayOpen;
+    if (isToday) {
+      // 今日 (10/02 今) K 棒獨立追加，嚴格保留昨日 10/01 真實收盤與陰陽燭線
+      const lastHistBar = realBars[realBars.length - 1];
+      const prevCloseVal = lastHistBar ? lastHistBar.close : (stock.prevClose || base);
+      const todayOpen = Number((stock.open || (stock.price >= prevCloseVal ? prevCloseVal * 1.008 : prevCloseVal * 0.992)).toFixed(2));
+      const todayClose = Number(stock.price.toFixed(2));
+      const todayHigh = Number((stock.high || Math.max(todayOpen, todayClose) * 1.005).toFixed(2));
+      const todayLow = Number((stock.low || Math.min(todayOpen, todayClose) * 0.995).toFixed(2));
+      const todayVol = Number(stock.volume || 25000);
+      const todayIsUp = todayClose >= todayOpen;
 
-    const todayBar = {
-      time: "10/02 (今)",
-      fullDate: "2026-10-02",
-      open: todayOpen,
-      high: todayHigh,
-      low: todayLow,
-      close: todayClose,
-      price: todayClose,
-      volume: todayVol,
-      change: Number((todayClose - prevCloseVal).toFixed(2)),
-      foreignNet: Math.floor((todayIsUp ? 1 : -1) * (todayVol * 0.15)),
-      trustNet: Math.floor((todayIsUp ? 1 : -0.5) * (todayVol * 0.07)),
-      dealerNet: Math.floor((todayIsUp ? 0.5 : -0.5) * (todayVol * 0.03)),
-      revMonthly: Number((base * 1.5).toFixed(1)),
-      revMoM: 5.2,
-      revYoY: 18.5
-    };
+      const todayBar = {
+        time: "10/02 (今)",
+        fullDate: "2026-10-02",
+        open: todayOpen,
+        high: todayHigh,
+        low: todayLow,
+        close: todayClose,
+        price: todayClose,
+        volume: todayVol,
+        change: Number((stock.change !== undefined ? stock.change : todayClose - prevCloseVal).toFixed(2)),
+        foreignNet: Math.floor((todayIsUp ? 1 : -1) * (todayVol * 0.15)),
+        trustNet: Math.floor((todayIsUp ? 1 : -0.5) * (todayVol * 0.07)),
+        dealerNet: Math.floor((todayIsUp ? 0.5 : -0.5) * (todayVol * 0.03)),
+        revMonthly: Number((base * 1.5).toFixed(1)),
+        revMoM: 5.2,
+        revYoY: 18.5
+      };
 
-    chart1M = [...prependedBars, ...realBars, todayBar];
+      chart1M = [...prependedBars, ...realBars, todayBar];
+    } else {
+      // 標的最新日期即為 10/01（不重複追加今日），更新 10/01 真實數據
+      if (realBars.length > 0) {
+        const lastIdx = realBars.length - 1;
+        realBars[lastIdx] = {
+          ...realBars[lastIdx],
+          open: Number((stock.open || realBars[lastIdx].open).toFixed(2)),
+          high: Number((stock.high || realBars[lastIdx].high).toFixed(2)),
+          low: Number((stock.low || realBars[lastIdx].low).toFixed(2)),
+          close: Number(stock.price.toFixed(2)),
+          price: Number(stock.price.toFixed(2)),
+          volume: Number(stock.volume || realBars[lastIdx].volume),
+          change: Number((stock.change !== undefined ? stock.change : realBars[lastIdx].change).toFixed(2))
+        };
+      }
+      chart1M = [...prependedBars, ...realBars];
+    }
   } else {
-    // 一般個股: 從真實昨收與今日行情確定連續 K 線，絕不使用隨機數字顛倒陰陽線！
-    const tradingDays = getTradingDaysUntilToday(TOTAL_DAILY_BARS - 1, now);
+    // 一般個股 (如 6005 群益證 等): 嚴格由該股最新交易日 (10/01 或 10/02) 排列，絕不出現重複日期或陰陽燭顛倒！
+    const tradingDays = getTradingDaysEndingAt(TOTAL_DAILY_BARS, new Date(dateStr));
     const yestClose = Number((stock.prevClose || (stock.price - (stock.change || 0))).toFixed(2));
-    const todayClose = Number(stock.price.toFixed(2));
-    const todayOpen = Number((stock.open || (todayClose >= yestClose ? yestClose * 1.005 : yestClose * 0.995)).toFixed(2));
-    const todayHigh = Number((stock.high || Math.max(todayOpen, todayClose) * 1.006).toFixed(2));
-    const todayLow = Number((stock.low || Math.min(todayOpen, todayClose) * 0.994).toFixed(2));
-    const todayVol = Number(stock.volume || 25000);
+    const lastClose = Number(stock.price.toFixed(2));
+    const lastOpen = Number((stock.open || (lastClose >= yestClose ? yestClose * 1.005 : yestClose * 0.995)).toFixed(2));
+    const lastHigh = Number((stock.high || Math.max(lastOpen, lastClose) * 1.006).toFixed(2));
+    const lastLow = Number((stock.low || Math.min(lastOpen, lastClose) * 0.994).toFixed(2));
+    const lastVol = Number(stock.volume || 25000);
+    const lastIsUp = lastClose >= lastOpen;
 
-    const historyBars = new Array(TOTAL_DAILY_BARS - 1);
+    const historyBars = new Array(TOTAL_DAILY_BARS);
     let runningPrice = yestClose;
 
-    // 由昨日 10/01 往前回溯，確保昨日 10/01 收盤價嚴格等於 yestClose
+    // 前 TOTAL_DAILY_BARS - 1 根往前回溯，確保倒數第二根收盤價嚴格等於 yestClose
     for (let i = TOTAL_DAILY_BARS - 2; i >= 0; i--) {
       const dayInfo = tradingDays[i];
       const isYest = i === TOTAL_DAILY_BARS - 2;
       
       let close, open, high, low;
       if (isYest) {
-        // 昨日 10/01: 收盤價就是 yestClose！
         close = yestClose;
-        const chg = stock.change !== undefined ? Number(stock.change) : 0;
-        open = Number((chg >= 0 ? close * 0.994 : close * 1.008).toFixed(2));
-        high = Number((Math.max(open, close) * 1.005).toFixed(2));
-        low = Number((Math.min(open, close) * 0.995).toFixed(2));
+        const dayTrend = Math.sin(i * 0.8) * 0.005;
+        open = Number((close * (1 - dayTrend)).toFixed(2));
+        high = Number((Math.max(open, close) * 1.006).toFixed(2));
+        low = Number((Math.min(open, close) * 0.994).toFixed(2));
       } else {
         close = Number(runningPrice.toFixed(2));
         const dayTrend = Math.sin(i * 0.8) * 0.008;
@@ -643,7 +729,7 @@ function enrichWithCalculatedMetrics(stock) {
         low = Number((Math.min(open, close) * 0.994).toFixed(2));
       }
       
-      const vol = Math.floor((stock.volume || 25000) * (0.8 + Math.abs(Math.sin(i * 0.5)) * 0.4));
+      const vol = Math.floor(lastVol * (0.8 + Math.abs(Math.sin(i * 0.5)) * 0.4));
       const isUp = close >= open;
       
       historyBars[i] = {
@@ -665,25 +751,26 @@ function enrichWithCalculatedMetrics(stock) {
       runningPrice = open;
     }
 
-    const todayBar = {
-      time: "10/02 (今)",
-      fullDate: "2026-10-02",
-      open: todayOpen,
-      high: todayHigh,
-      low: todayLow,
-      close: todayClose,
-      price: todayClose,
-      volume: todayVol,
-      change: Number((todayClose - yestClose).toFixed(2)),
-      foreignNet: Math.floor((todayClose >= todayOpen ? 1 : -1) * (todayVol * 0.15)),
-      trustNet: Math.floor((todayClose >= todayOpen ? 1 : -0.5) * (todayVol * 0.07)),
-      dealerNet: Math.floor((todayClose >= todayOpen ? 0.5 : -0.5) * (todayVol * 0.03)),
+    // 最後一根 K 棒：嚴格為官方真實行情 (10/01 或 10/02)
+    historyBars[TOTAL_DAILY_BARS - 1] = {
+      time: timeLabel,
+      fullDate: dateStr,
+      open: lastOpen,
+      high: lastHigh,
+      low: lastLow,
+      close: lastClose,
+      price: lastClose,
+      volume: lastVol,
+      change: Number((stock.change !== undefined ? stock.change : lastClose - yestClose).toFixed(2)),
+      foreignNet: Math.floor((lastIsUp ? 1 : -1) * (lastVol * 0.15)),
+      trustNet: Math.floor((lastIsUp ? 1 : -0.5) * (lastVol * 0.07)),
+      dealerNet: Math.floor((lastIsUp ? 0.5 : -0.5) * (lastVol * 0.03)),
       revMonthly: Number((base * 1.5).toFixed(1)),
       revMoM: 5.2,
       revYoY: 18.5
     };
 
-    chart1M = [...historyBars, todayBar];
+    chart1M = historyBars;
   }
 
   // 計算全週期 MA5, MA20, MA60 動態均線
@@ -704,7 +791,7 @@ function enrichWithCalculatedMetrics(stock) {
   // 3. 5D: 近五日走勢 (取 1M 的最後 5 個交易日)
   const chart5D = chart1M.slice(-5).map((d, idx) => ({
     ...d,
-    time: idx === 4 && !d.time.includes('今') ? `${d.time} (今)` : d.time
+    time: idx === 4 && isToday && !d.time.includes('今') ? `${d.time} (今)` : d.time
   }));
 
   // 4. 週 K 走勢: 從上市掛牌首週完整呈現至本週 (例如 2330 涵蓋 1994 ~ 2026 逾 1,600 週！)

@@ -61,17 +61,7 @@ export default function StockDetailModal({ stock, onClose }) {
   // 獲取該股票完整三竹規格數據資料
   const detail = useMemo(() => {
     if (!stock) return null;
-    const d = getStockDetailData(stock);
-    if (stock.price) {
-      d.price = Number(stock.price);
-      if (stock.change !== undefined) d.change = Number(stock.change);
-      if (stock.pctChange !== undefined) d.pctChange = Number(stock.pctChange);
-      if (stock.open) d.open = Number(stock.open);
-      if (stock.high) d.high = Number(stock.high);
-      if (stock.low) d.low = Number(stock.low);
-      if (stock.prevClose) d.prevClose = Number(stock.prevClose);
-    }
-    return d;
+    return getStockDetailData(stock);
   }, [stock]);
 
   if (!stock || !detail) return null;
