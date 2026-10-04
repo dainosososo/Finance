@@ -13,6 +13,7 @@ import DailyReportModal from './components/DailyReportModal';
 import StrongStocksTracker from './components/StrongStocksTracker';
 import AlertsManagerModal from './components/AlertsManagerModal';
 import WebSocketStreamModal from './components/WebSocketStreamModal';
+import ErrorBoundary from './components/ErrorBoundary';
 import { 
   TrendingUp, 
   Layers, 
@@ -508,10 +509,12 @@ export default function App() {
 
       {/* Mitake-Style Stock Detail Modal (三竹股市風格深度分析 - 含 K線蠟燭圖) */}
       {selectedStockModal && (
-        <StockDetailModal 
-          stock={selectedStockModal}
-          onClose={() => setSelectedStockModal(null)}
-        />
+        <ErrorBoundary onClose={() => setSelectedStockModal(null)}>
+          <StockDetailModal 
+            stock={selectedStockModal}
+            onClose={() => setSelectedStockModal(null)}
+          />
+        </ErrorBoundary>
       )}
 
       {/* Cloud Alerts Manager Modal */}

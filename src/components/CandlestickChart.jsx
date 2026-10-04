@@ -192,8 +192,9 @@ export default function CandlestickChart({
   // 計算價格軸成交量分布圖 (Volume Profile / VPVR)
   // ==========================================
   const volumeProfileData = useMemo(() => {
-    if (!currentWindow || currentWindow.length === 0 || !showVolumeProfile) return null;
+    if (!currentWindow || currentWindow.length === 0 || !showVolumeProfile || !chartMetrics) return null;
 
+    const { minPrice, maxPrice } = chartMetrics;
     const BINS_COUNT = 24;
     const priceRange = maxPrice - minPrice;
     if (priceRange <= 0) return null;
@@ -276,7 +277,7 @@ export default function CandlestickChart({
       vah: bins[vaHighIdx]?.priceHigh ?? null,
       val: bins[vaLowIdx]?.priceLow ?? null
     };
-  }, [currentWindow, minPrice, maxPrice, showVolumeProfile]);
+  }, [currentWindow, chartMetrics, showVolumeProfile]);
 
   // ==========================================
   // 計算全套副圖指標數值集合 (Indicators Math)
