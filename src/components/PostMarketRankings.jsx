@@ -11,6 +11,7 @@ import {
   ChevronRight,
   Flame
 } from 'lucide-react';
+import { STOCK_SEARCH_ALIASES } from './Navbar';
 
 export default function PostMarketRankings({ 
   reportData, 
@@ -38,11 +39,17 @@ export default function PostMarketRankings({
     if (!Array.isArray(list)) return [];
     if (!searchTerm.trim()) return list;
     const term = searchTerm.toLowerCase();
-    return list.filter(item => 
-      (item?.name && item.name.toLowerCase().includes(term)) || 
-      (item?.code && item.code.includes(term)) ||
-      (item?.sector && item.sector.includes(term))
-    );
+    const aliasCode = STOCK_SEARCH_ALIASES[searchTerm.trim()];
+    return list.filter(item => {
+      if (aliasCode && item?.code === aliasCode) return true;
+      const n = (item?.name || '').toLowerCase();
+      return (
+        n.includes(term) || 
+        term.includes(n) ||
+        (item?.code && item.code.includes(term)) ||
+        (item?.sector && item.sector.includes(term))
+      );
+    });
   };
 
   const filteredVolume = filterList(volumeRankings || []);

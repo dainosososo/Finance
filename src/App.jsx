@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import Navbar from './components/Navbar';
+import Navbar, { STOCK_SEARCH_ALIASES } from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import MarketHeatmap from './components/MarketHeatmap';
 import MarketSummary from './components/MarketSummary';
@@ -274,15 +274,63 @@ export default function App() {
   const handleSearch = async (term) => {
     if (!term) return;
     const clean = term.trim();
-    let found = dailyStocks.find(s => s.Code?.toLowerCase() === clean.toLowerCase() || s.Name?.toLowerCase() === clean.toLowerCase()) ||
-                  dailyStocks.find(s => s.Code?.toLowerCase().includes(clean.toLowerCase()) || s.Name?.toLowerCase().includes(clean.toLowerCase())) ||
-                  quotes.find(q => q.symbol?.toLowerCase() === clean.toLowerCase() || q.name?.toLowerCase() === clean.toLowerCase());
+    const cleanLower = clean.toLowerCase();
+
+    // 0. 優先檢查別名庫 (如 密望實 -> 8043, 世界先進 -> 5347)
+    const aliasCode = STOCK_SEARCH_ALIASES[clean];
+    let found = null;
+
+    if (aliasCode && DAILY_TWSE_STOCKS_MAP[aliasCode]) {
+      const m = DAILY_TWSE_STOCKS_MAP[aliasCode];
+      found = {
+        Code: aliasCode,
+        Name: m.name,
+        ClosingPrice: String(m.price || m.close),
+        Change: String(m.change),
+        PctChange: String(m.pctChange),
+        TradeVolume: String(m.volume * 1000),
+        TradeValue: String(m.tradeValue || 0),
+        open: m.open,
+        high: m.high,
+        low: m.low,
+        prevClose: m.prevClose
+      };
+    }
 
     if (!found) {
-      if (clean in DAILY_TWSE_STOCKS_MAP) {
-        const m = DAILY_TWSE_STOCKS_MAP[clean];
+      found = dailyStocks.find(s => s.Code?.toLowerCase() === cleanLower || s.Name?.toLowerCase() === cleanLower) ||
+              quotes.find(q => q.symbol?.toLowerCase() === cleanLower || q.name?.toLowerCase() === cleanLower);
+    }
+
+    if (!found && clean in DAILY_TWSE_STOCKS_MAP) {
+      const m = DAILY_TWSE_STOCKS_MAP[clean];
+      found = {
+        Code: clean,
+        Name: m.name,
+        ClosingPrice: String(m.price || m.close),
+        Change: String(m.change),
+        PctChange: String(m.pctChange),
+        TradeVolume: String(m.volume * 1000),
+        TradeValue: String(m.tradeValue || 0),
+        open: m.open,
+        high: m.high,
+        low: m.low,
+        prevClose: m.prevClose
+      };
+    }
+
+    if (!found) {
+      // 依序精準匹配：精確名稱 -> 名稱開頭 -> 相互包含
+      const foundCode = Object.keys(DAILY_TWSE_STOCKS_MAP).find(c => DAILY_TWSE_STOCKS_MAP[c].name.toLowerCase() === cleanLower) ||
+                        Object.keys(DAILY_TWSE_STOCKS_MAP).find(c => DAILY_TWSE_STOCKS_MAP[c].name.toLowerCase().startsWith(cleanLower)) ||
+                        Object.keys(DAILY_TWSE_STOCKS_MAP).find(c => {
+                          const n = DAILY_TWSE_STOCKS_MAP[c].name.toLowerCase();
+                          return n.includes(cleanLower) || cleanLower.includes(n);
+                        });
+      if (foundCode) {
+        const m = DAILY_TWSE_STOCKS_MAP[foundCode];
         found = {
-          Code: clean,
+          Code: foundCode,
           Name: m.name,
           ClosingPrice: String(m.price || m.close),
           Change: String(m.change),
@@ -294,24 +342,6 @@ export default function App() {
           low: m.low,
           prevClose: m.prevClose
         };
-      } else {
-        const foundCode = Object.keys(DAILY_TWSE_STOCKS_MAP).find(c => DAILY_TWSE_STOCKS_MAP[c].name === clean || DAILY_TWSE_STOCKS_MAP[c].name.includes(clean));
-        if (foundCode) {
-          const m = DAILY_TWSE_STOCKS_MAP[foundCode];
-          found = {
-            Code: foundCode,
-            Name: m.name,
-            ClosingPrice: String(m.price || m.close),
-            Change: String(m.change),
-            PctChange: String(m.pctChange),
-            TradeVolume: String(m.volume * 1000),
-            TradeValue: String(m.tradeValue || 0),
-            open: m.open,
-            high: m.high,
-            low: m.low,
-            prevClose: m.prevClose
-          };
-        }
       }
     }
 

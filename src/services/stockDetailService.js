@@ -393,7 +393,7 @@ export function getStockDetailData(symbolOrStock) {
     name,
     code,
     date: passedDate,
-    market: '上市 (TWSE)',
+    market: symbolOrStock?.market || twseData?.market || existing?.market || '上市 (TWSE)',
     sector,
     price: basePrice,
     change: change,
@@ -487,7 +487,7 @@ export function parseTwseDate(twseDateStr) {
  * 產生截至指定交易日的最近 N 個真實台股交易日清單
  * 嚴格以 endDate 為最後一日，絕不產生未來日期或重複日期
  */
-export function getTradingDaysEndingAt(count = 20, endDate = new Date('2026-10-01')) {
+export function getTradingDaysEndingAt(count = 20, endDate = new Date('2026-10-02')) {
   const result = [];
   let d = new Date(endDate);
 
@@ -501,9 +501,8 @@ export function getTradingDaysEndingAt(count = 20, endDate = new Date('2026-10-0
       const yyyy = d.getFullYear();
       const mm = String(d.getMonth() + 1).padStart(2, '0');
       const dd = String(d.getDate()).padStart(2, '0');
-      const isToday = (mm === '10' && dd === '02');
       result.unshift({
-        time: isToday ? `${mm}/${dd} (今)` : `${mm}/${dd}`,
+        time: `${mm}/${dd}`,
         rawDate: `${mm}/${dd}`,
         fullDate: `${yyyy}-${mm}-${dd}`
       });
@@ -625,6 +624,14 @@ function enrichWithCalculatedMetrics(stock) {
   const dateInfo = parseTwseDate(stock.date || stock.Date);
   const { dateStr, timeLabel, isToday } = dateInfo;
 
+  const curDateObj = new Date();
+  const curDay = curDateObj.getDay();
+  const curM = String(curDateObj.getMonth() + 1).padStart(2, '0');
+  const curD = String(curDateObj.getDate()).padStart(2, '0');
+  const todayFullDate = `${curDateObj.getFullYear()}-${curM}-${curD}`;
+  const todayTimeLabel = `${curM}/${curD} (今)`;
+  const isTradingDayToday = (curDay >= 1 && curDay <= 5);
+
   // 優先載入全台股 1,382 檔標的之真實 TWSE 歷史 K 棒
   const realStockHistory = getStockHistoryDays(code) || PRELOADED_KLINE_HISTORY[code]?.days || [];
   const TOTAL_DAILY_BARS = 600; // 涵蓋約 2.5 年歷史成交日 (週K/月K則收錄上市至今全歷史)
@@ -694,17 +701,8 @@ function enrichWithCalculatedMetrics(stock) {
       return item;
     });
 
-    const curDateObj = new Date();
-    const curDay = curDateObj.getDay();
-    const curM = String(curDateObj.getMonth() + 1).padStart(2, '0');
-    const curD = String(curDateObj.getDate()).padStart(2, '0');
-    const todayFullDate = `${curDateObj.getFullYear()}-${curM}-${curD}`;
-    const todayTimeLabel = `${curM}/${curD} (今)`;
-
     const lastHistBar = realBars[realBars.length - 1];
     const hasTodayInHistory = lastHistBar && (lastHistBar.fullDate === todayFullDate);
-    // 若今日為平日（週一至週五）且歷史資料尚未收錄今日，將今日盤中即時最新 K 棒無縫接合
-    const isTradingDayToday = (curDay >= 1 && curDay <= 5);
 
     if (hasTodayInHistory) {
       chart1M = [...prependedBars, ...realBars];
@@ -817,7 +815,34 @@ function enrichWithCalculatedMetrics(stock) {
       revYoY: 18.5
     };
 
-    chart1M = historyBars;
+    if (isTradingDayToday && dateStr !== todayFullDate) {
+      const todayOpen = Number((stock.open || (lastClose >= yestClose ? yestClose * 1.005 : yestClose * 0.995)).toFixed(2));
+      const todayClose = Number(stock.price.toFixed(2));
+      const todayHigh = Number((stock.high || Math.max(todayOpen, todayClose) * 1.005).toFixed(2));
+      const todayLow = Number((stock.low || Math.min(todayOpen, todayClose) * 0.995).toFixed(2));
+      const todayVol = Number(stock.volume || lastVol);
+      const todayIsUp = todayClose >= todayOpen;
+      const todayBar = {
+        time: todayTimeLabel,
+        fullDate: todayFullDate,
+        open: todayOpen,
+        high: todayHigh,
+        low: todayLow,
+        close: todayClose,
+        price: todayClose,
+        volume: todayVol,
+        change: Number((stock.change !== undefined ? stock.change : todayClose - lastClose).toFixed(2)),
+        foreignNet: Math.floor((todayIsUp ? 1 : -1) * (todayVol * 0.15)),
+        trustNet: Math.floor((todayIsUp ? 1 : -0.5) * (todayVol * 0.07)),
+        dealerNet: Math.floor((todayIsUp ? 0.5 : -0.5) * (todayVol * 0.03)),
+        revMonthly: Number((base * 1.5).toFixed(1)),
+        revMoM: 5.2,
+        revYoY: 18.5
+      };
+      chart1M = [...historyBars, todayBar];
+    } else {
+      chart1M = historyBars;
+    }
   }
 
   // 計算全週期 MA5, MA20, MA60 動態均線

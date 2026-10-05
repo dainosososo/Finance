@@ -26,6 +26,7 @@ import {
   Rocket
 } from 'lucide-react';
 import { INITIAL_STRONG_STOCKS } from '../data/strongStocksData';
+import { STOCK_SEARCH_ALIASES } from './Navbar';
 
 const STORAGE_KEY_CUSTOM_STOCKS = 'twse_custom_strong_stocks';
 const STORAGE_KEY_USER_NOTES = 'twse_strong_stock_notes';
@@ -274,10 +275,14 @@ export default function StrongStocksTracker({
   const matchesSearch = (item) => {
     if (!searchTerm.trim()) return true;
     const term = searchTerm.toLowerCase();
+    const aliasCode = STOCK_SEARCH_ALIASES[searchTerm.trim()];
+    if (aliasCode && item.code === aliasCode) return true;
     const note = (stockNotes[item.code] || '').toLowerCase();
+    const iName = (item.name || '').toLowerCase();
     return (
       item.code.toLowerCase().includes(term) ||
-      item.name.toLowerCase().includes(term) ||
+      iName.includes(term) ||
+      term.includes(iName) ||
       (item.sector && item.sector.toLowerCase().includes(term)) ||
       (item.catalyst && item.catalyst.toLowerCase().includes(term)) ||
       note.includes(term)

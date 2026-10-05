@@ -7,7 +7,7 @@ export function getStockHistoryDays(code) {
   const rows = STOCKS_HISTORY_COMPACT[cleanCode];
   if (rows && rows.length > 0) {
     return rows.map(r => ({
-      time: r[0],
+      time: String(r[0]).replace(/\s*\(今\)/g, ''),
       fullDate: r[1],
       open: r[2],
       high: r[3],
@@ -20,7 +20,10 @@ export function getStockHistoryDays(code) {
     }));
   }
   if (PRELOADED_KLINE_HISTORY[cleanCode]) {
-    return PRELOADED_KLINE_HISTORY[cleanCode].days;
+    return PRELOADED_KLINE_HISTORY[cleanCode].days.map(d => ({
+      ...d,
+      time: String(d.time).replace(/\s*\(今\)/g, '')
+    }));
   }
   return null;
 }

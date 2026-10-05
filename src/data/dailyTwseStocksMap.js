@@ -446,15 +446,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "茂生農經",
     "price": 54,
     "change": -0.1,
-    "pctChange": -0.19,
+    "pctChange": -0.18,
     "open": 54.1,
     "high": 54.1,
     "low": 54,
-    "prevClose": 54,
+    "prevClose": 54.1,
     "volume": 11,
     "turnover": "61.5 萬",
     "tradeValue": 614933,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 54
   },
   "1256": {
     "code": "1256",
@@ -485,7 +487,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 4,
     "turnover": "29.4 萬",
     "tradeValue": 293534,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 68
   },
   "1264": {
     "name": "德麥",
@@ -499,7 +503,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 17,
     "turnover": "407.0 萬",
     "tradeValue": 4070011,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 245
   },
   "1268": {
     "name": "漢來美食",
@@ -513,7 +519,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 18,
     "turnover": "312.6 萬",
     "tradeValue": 3126098,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 177.5
   },
   "1294": {
     "name": "漢田生技",
@@ -523,25 +531,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 49.3,
     "high": 49.75,
     "low": 49.3,
-    "prevClose": 49.75,
+    "prevClose": 50.2,
     "volume": 20,
     "turnover": "97.5 萬",
     "tradeValue": 975063,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 49.75
   },
   "1295": {
     "name": "生合",
     "price": 48.7,
     "change": 0.9,
-    "pctChange": 1.85,
+    "pctChange": 1.88,
     "open": 48.2,
     "high": 49.15,
     "low": 48.2,
-    "prevClose": 48.7,
+    "prevClose": 47.8,
     "volume": 72,
     "turnover": "349.0 萬",
     "tradeValue": 3490384,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 48.7
   },
   "1301": {
     "code": "1301",
@@ -870,15 +882,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "台翰",
     "price": 18.05,
     "change": -0.25,
-    "pctChange": -1.39,
+    "pctChange": -1.37,
     "open": 18.15,
     "high": 18.5,
     "low": 18.05,
-    "prevClose": 18.05,
+    "prevClose": 18.3,
     "volume": 329,
     "turnover": "598.9 萬",
     "tradeValue": 5988711,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.05
   },
   "1337": {
     "code": "1337",
@@ -2363,15 +2377,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "精華",
     "price": 97.2,
     "change": 0.5,
-    "pctChange": 0.51,
+    "pctChange": 0.52,
     "open": 96.7,
     "high": 97.9,
     "low": 96.7,
-    "prevClose": 97.2,
+    "prevClose": 96.7,
     "volume": 140,
     "turnover": "1359.6 萬",
     "tradeValue": 13595801,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 97.2
   },
   "1568": {
     "code": "1568",
@@ -2394,29 +2410,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "濱川",
     "price": 66.5,
     "change": 2.7,
-    "pctChange": 4.06,
+    "pctChange": 4.23,
     "open": 64,
     "high": 68.6,
     "low": 63.1,
-    "prevClose": 66.5,
+    "prevClose": 63.8,
     "volume": 7075,
     "turnover": "4.7 億",
     "tradeValue": 467688314,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 66.5
   },
   "1570": {
     "name": "力肯",
     "price": 32.9,
     "change": 0.65,
-    "pctChange": 1.98,
+    "pctChange": 2.02,
     "open": 32.05,
     "high": 32.9,
     "low": 32.05,
-    "prevClose": 32.9,
+    "prevClose": 32.25,
     "volume": 65,
     "turnover": "210.8 萬",
     "tradeValue": 2107650,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 32.9
   },
   "1580": {
     "name": "新麥",
@@ -2426,11 +2446,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 97.1,
     "high": 97.3,
     "low": 97.1,
-    "prevClose": 97.2,
+    "prevClose": 97.4,
     "volume": 19,
     "turnover": "183.5 萬",
     "tradeValue": 1834590,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 97.2
   },
   "1582": {
     "code": "1582",
@@ -2478,7 +2500,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 259,
     "turnover": "481.6 萬",
     "tradeValue": 4816316,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.6
   },
   "1586": {
     "name": "和勤",
@@ -2492,7 +2516,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 238,
     "turnover": "425.9 萬",
     "tradeValue": 4259427,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.9
   },
   "1587": {
     "code": "1587",
@@ -2536,11 +2562,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 41.4,
     "high": 42,
     "low": 41.05,
-    "prevClose": 41.25,
+    "prevClose": 41.4,
     "volume": 121,
     "turnover": "499.2 萬",
     "tradeValue": 4992230,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.25
   },
   "1593": {
     "name": "祺驊",
@@ -2554,21 +2582,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 17,
     "turnover": "52.5 萬",
     "tradeValue": 524993,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.7
   },
   "1595": {
     "name": "川寶",
     "price": 79.3,
     "change": -4,
-    "pctChange": -5.04,
+    "pctChange": -4.8,
     "open": 83.1,
     "high": 83.2,
     "low": 79,
-    "prevClose": 79.3,
+    "prevClose": 83.3,
     "volume": 2256,
     "turnover": "1.8 億",
     "tradeValue": 181197829,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 79.3
   },
   "1597": {
     "code": "1597",
@@ -2612,11 +2644,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23.2,
     "high": 23.2,
     "low": 22.95,
-    "prevClose": 23.2,
+    "prevClose": 23.1,
     "volume": 26,
     "turnover": "59.7 萬",
     "tradeValue": 597287,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.2
   },
   "1603": {
     "code": "1603",
@@ -3302,15 +3336,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "台蠟",
     "price": 17.5,
     "change": -0.3,
-    "pctChange": -1.71,
+    "pctChange": -1.69,
     "open": 17.75,
     "high": 17.75,
     "low": 17.4,
-    "prevClose": 17.5,
+    "prevClose": 17.8,
     "volume": 73,
     "turnover": "128.2 萬",
     "tradeValue": 1281514,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.5
   },
   "1752": {
     "code": "1752",
@@ -3405,25 +3441,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 74.3,
     "high": 74.7,
     "low": 73.8,
-    "prevClose": 74.4,
+    "prevClose": 74.3,
     "volume": 47,
     "turnover": "349.0 萬",
     "tradeValue": 3490282,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 74.4
   },
   "1780": {
     "name": "立弘",
     "price": 25.35,
     "change": 0.1,
-    "pctChange": 0.39,
+    "pctChange": 0.4,
     "open": 25.05,
     "high": 25.35,
     "low": 24.65,
-    "prevClose": 25.35,
+    "prevClose": 25.25,
     "volume": 137,
     "turnover": "343.7 萬",
     "tradeValue": 3437425,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.35
   },
   "1781": {
     "name": "合世",
@@ -3437,7 +3477,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 24,
     "turnover": "23.9 萬",
     "tradeValue": 238878,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 9.99
   },
   "1783": {
     "code": "1783",
@@ -3464,25 +3506,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 60.4,
     "high": 60.5,
     "low": 60.2,
-    "prevClose": 60.5,
+    "prevClose": 60.4,
     "volume": 19,
     "turnover": "116.7 萬",
     "tradeValue": 1167396,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 60.5
   },
   "1785": {
     "name": "光洋科",
     "price": 102.5,
     "change": 1.5,
-    "pctChange": 1.46,
+    "pctChange": 1.49,
     "open": 101,
     "high": 103.5,
     "low": 100,
-    "prevClose": 102.5,
+    "prevClose": 101,
     "volume": 7507,
     "turnover": "7.7 億",
     "tradeValue": 768066905,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 102.5
   },
   "1786": {
     "code": "1786",
@@ -3509,11 +3555,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 128,
     "high": 128,
     "low": 127.5,
-    "prevClose": 128,
+    "prevClose": 127.5,
     "volume": 14,
     "turnover": "173.1 萬",
     "tradeValue": 1730852,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 128
   },
   "1789": {
     "code": "1789",
@@ -3553,15 +3601,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "金穎生技",
     "price": 29.9,
     "change": -0.4,
-    "pctChange": -1.34,
+    "pctChange": -1.32,
     "open": 30.75,
     "high": 30.75,
     "low": 29.7,
-    "prevClose": 29.9,
+    "prevClose": 30.3,
     "volume": 9,
     "turnover": "27.9 萬",
     "tradeValue": 279452,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29.9
   },
   "1799": {
     "name": "易威",
@@ -3571,11 +3621,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 29,
     "high": 29.3,
     "low": 28.8,
-    "prevClose": 29,
+    "prevClose": 28.95,
     "volume": 83,
     "turnover": "241.5 萬",
     "tradeValue": 2414677,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29
   },
   "1802": {
     "code": "1802",
@@ -3687,25 +3739,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 11.25,
     "high": 11.3,
     "low": 11.25,
-    "prevClose": 11.25,
+    "prevClose": 11.3,
     "volume": 9,
     "turnover": "10.6 萬",
     "tradeValue": 105553,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 11.25
   },
   "1815": {
     "name": "富喬",
     "price": 121,
     "change": 5,
-    "pctChange": 4.13,
+    "pctChange": 4.31,
     "open": 116.5,
     "high": 122,
     "low": 116,
-    "prevClose": 121,
+    "prevClose": 116,
     "volume": 43203,
     "turnover": "51.9 億",
     "tradeValue": 5185527994,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 121
   },
   "1817": {
     "code": "1817",
@@ -4238,15 +4294,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "唐榮",
     "price": 26.7,
     "change": -0.2,
-    "pctChange": -0.75,
+    "pctChange": -0.74,
     "open": 26.7,
     "high": 26.7,
     "low": 26.7,
-    "prevClose": 26.7,
+    "prevClose": 26.9,
     "volume": 3,
     "turnover": "8.0 萬",
     "tradeValue": 80152,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 26.7
   },
   "2038": {
     "code": "2038",
@@ -4303,15 +4361,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "風青",
     "price": 67.8,
     "change": 6.1,
-    "pctChange": 9,
+    "pctChange": 9.89,
     "open": 60.8,
     "high": 67.8,
     "low": 60,
-    "prevClose": 67.8,
+    "prevClose": 61.7,
     "volume": 5253,
     "turnover": "3.5 億",
     "tradeValue": 346171710,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 67.8
   },
   "2062": {
     "code": "2062",
@@ -4338,11 +4398,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23.65,
     "high": 23.8,
     "low": 23.3,
-    "prevClose": 23.65,
+    "prevClose": 23.6,
     "volume": 72,
     "turnover": "169.9 萬",
     "tradeValue": 1699160,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.65
   },
   "2064": {
     "name": "晉椿",
@@ -4356,7 +4418,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 2,
     "turnover": "2.4 萬",
     "tradeValue": 24000,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12
   },
   "2065": {
     "name": "世豐",
@@ -4370,21 +4434,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 53,
     "turnover": "188.9 萬",
     "tradeValue": 1889331,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 35.65
   },
   "2066": {
     "name": "世德",
     "price": 52.5,
     "change": 0.8,
-    "pctChange": 1.52,
+    "pctChange": 1.55,
     "open": 52.5,
     "high": 52.5,
     "low": 52.1,
-    "prevClose": 52.5,
+    "prevClose": 51.7,
     "volume": 7,
     "turnover": "37.0 萬",
     "tradeValue": 369585,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 52.5
   },
   "2067": {
     "name": "嘉鋼",
@@ -4394,11 +4462,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 4.88,
     "high": 5,
     "low": 4.87,
-    "prevClose": 4.89,
+    "prevClose": 4.91,
     "volume": 109,
     "turnover": "53.5 萬",
     "tradeValue": 534737,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 4.89
   },
   "2069": {
     "code": "2069",
@@ -4425,11 +4495,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 63.1,
     "high": 63.8,
     "low": 63.1,
-    "prevClose": 63.1,
+    "prevClose": 63,
     "volume": 51,
     "turnover": "322.5 萬",
     "tradeValue": 3224608,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 63.1
   },
   "2072": {
     "code": "2072",
@@ -4456,11 +4528,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 25.6,
     "high": 25.6,
     "low": 25.6,
-    "prevClose": 25.6,
+    "prevClose": 25.8,
     "volume": 2,
     "turnover": "5.1 萬",
     "tradeValue": 51200,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.6
   },
   "2101": {
     "code": "2101",
@@ -4755,15 +4829,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "大甲",
     "price": 188,
     "change": 9,
-    "pctChange": 4.79,
+    "pctChange": 5.03,
     "open": 182,
     "high": 188,
     "low": 177.5,
-    "prevClose": 188,
+    "prevClose": 179,
     "volume": 1034,
     "turnover": "1.9 億",
     "tradeValue": 188945681,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 188
   },
   "2227": {
     "code": "2227",
@@ -4803,15 +4879,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "泰茂",
     "price": 22.2,
     "change": 0.7,
-    "pctChange": 3.15,
+    "pctChange": 3.26,
     "open": 22,
     "high": 22.85,
     "low": 21.95,
-    "prevClose": 22.2,
+    "prevClose": 21.5,
     "volume": 187,
     "turnover": "418.8 萬",
     "tradeValue": 4188026,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.2
   },
   "2231": {
     "code": "2231",
@@ -4851,15 +4929,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "謚源",
     "price": 28.1,
     "change": 0.45,
-    "pctChange": 1.6,
+    "pctChange": 1.63,
     "open": 28.05,
     "high": 28.1,
     "low": 28.05,
-    "prevClose": 28.1,
+    "prevClose": 27.65,
     "volume": 5,
     "turnover": "14.4 萬",
     "tradeValue": 143805,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.1
   },
   "2236": {
     "code": "2236",
@@ -7810,11 +7890,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 35.55,
     "high": 35.8,
     "low": 34.6,
-    "prevClose": 34.8,
+    "prevClose": 34.9,
     "volume": 33,
     "turnover": "114.4 萬",
     "tradeValue": 1143518,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 34.8
   },
   "2597": {
     "code": "2597",
@@ -8198,25 +8280,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 156,
     "high": 156.5,
     "low": 155.5,
-    "prevClose": 156.5,
+    "prevClose": 157,
     "volume": 8,
     "turnover": "131.9 萬",
     "tradeValue": 1318698,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 156.5
   },
   "2641": {
     "name": "正德",
     "price": 17.45,
     "change": 0.1,
-    "pctChange": 0.57,
+    "pctChange": 0.58,
     "open": 17.4,
     "high": 17.5,
     "low": 17.35,
-    "prevClose": 17.45,
+    "prevClose": 17.35,
     "volume": 806,
     "turnover": "1403.5 萬",
     "tradeValue": 14035205,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.45
   },
   "2642": {
     "code": "2642",
@@ -8243,11 +8329,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 61.8,
     "high": 62,
     "low": 61.8,
-    "prevClose": 62,
+    "prevClose": 62.3,
     "volume": 9,
     "turnover": "56.8 萬",
     "tradeValue": 568185,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 62
   },
   "2645": {
     "code": "2645",
@@ -8406,29 +8494,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "全心投控",
     "price": 40.3,
     "change": 0.3,
-    "pctChange": 0.74,
+    "pctChange": 0.75,
     "open": 40.1,
     "high": 40.3,
     "low": 40.1,
-    "prevClose": 40.3,
+    "prevClose": 40,
     "volume": 5,
     "turnover": "21.3 萬",
     "tradeValue": 212578,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 40.3
   },
   "2719": {
     "name": "燦星旅",
     "price": 19.7,
     "change": 0.2,
-    "pctChange": 1.02,
+    "pctChange": 1.03,
     "open": 19.9,
     "high": 19.9,
     "low": 19.7,
-    "prevClose": 19.7,
+    "prevClose": 19.5,
     "volume": 4,
     "turnover": "7.9 萬",
     "tradeValue": 79200,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.7
   },
   "2722": {
     "code": "2722",
@@ -8468,15 +8560,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "藝舍-KY",
     "price": 12.7,
     "change": 0.9,
-    "pctChange": 7.09,
+    "pctChange": 7.63,
     "open": 12.7,
     "high": 12.7,
     "low": 12.65,
-    "prevClose": 12.7,
+    "prevClose": 11.8,
     "volume": 3,
     "turnover": "3.9 萬",
     "tradeValue": 38557,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.7
   },
   "2726": {
     "name": "雅茗-KY",
@@ -8486,11 +8580,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 8.05,
     "high": 8.06,
     "low": 7.96,
-    "prevClose": 8.02,
+    "prevClose": 8,
     "volume": 55,
     "turnover": "43.9 萬",
     "tradeValue": 438906,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 8.02
   },
   "2727": {
     "code": "2727",
@@ -8517,11 +8613,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 156,
     "high": 156,
     "low": 154.5,
-    "prevClose": 155.5,
+    "prevClose": 157,
     "volume": 7,
     "turnover": "115.3 萬",
     "tradeValue": 1152920,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 155.5
   },
   "2731": {
     "code": "2731",
@@ -8544,15 +8642,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "六角",
     "price": 63.4,
     "change": 0.6,
-    "pctChange": 0.95,
+    "pctChange": 0.96,
     "open": 63.5,
     "high": 63.7,
     "low": 62.7,
-    "prevClose": 63.4,
+    "prevClose": 62.8,
     "volume": 29,
     "turnover": "180.2 萬",
     "tradeValue": 1802326,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 63.4
   },
   "2734": {
     "name": "易飛網",
@@ -8562,25 +8662,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 14.3,
     "high": 14.4,
     "low": 14.3,
-    "prevClose": 14.4,
+    "prevClose": 14.35,
     "volume": 31,
     "turnover": "44.1 萬",
     "tradeValue": 441240,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.4
   },
   "2736": {
     "name": "富野",
     "price": 11.2,
     "change": -0.1,
-    "pctChange": -0.89,
+    "pctChange": -0.88,
     "open": 11.25,
     "high": 11.25,
     "low": 11.2,
-    "prevClose": 11.2,
+    "prevClose": 11.3,
     "volume": 79,
     "turnover": "88.3 萬",
     "tradeValue": 883363,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 11.2
   },
   "2739": {
     "code": "2739",
@@ -8603,15 +8707,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "華軒",
     "price": 30.5,
     "change": 1.5,
-    "pctChange": 4.92,
+    "pctChange": 5.17,
     "open": 29.1,
     "high": 30.8,
     "low": 27.65,
-    "prevClose": 30.5,
+    "prevClose": 29,
     "volume": 8,
     "turnover": "23.1 萬",
     "tradeValue": 231340,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.5
   },
   "2743": {
     "name": "山富",
@@ -8621,11 +8727,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 52.9,
     "high": 52.9,
     "low": 52.2,
-    "prevClose": 52.7,
+    "prevClose": 52.3,
     "volume": 33,
     "turnover": "170.7 萬",
     "tradeValue": 1706773,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 52.7
   },
   "2745": {
     "name": "五福",
@@ -8635,11 +8743,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 84.6,
     "high": 84.9,
     "low": 84.6,
-    "prevClose": 84.9,
+    "prevClose": 84.6,
     "volume": 19,
     "turnover": "160.5 萬",
     "tradeValue": 1605186,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 84.9
   },
   "2748": {
     "code": "2748",
@@ -8666,11 +8776,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 178,
     "high": 178,
     "low": 177,
-    "prevClose": 177,
+    "prevClose": 176.5,
     "volume": 3,
     "turnover": "49.4 萬",
     "tradeValue": 493631,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 177
   },
   "2753": {
     "code": "2753",
@@ -8697,11 +8809,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 67.9,
     "high": 68.1,
     "low": 67.1,
-    "prevClose": 68.1,
+    "prevClose": 68,
     "volume": 50,
     "turnover": "337.8 萬",
     "tradeValue": 3378383,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 68.1
   },
   "2755": {
     "name": "揚秦",
@@ -8711,25 +8825,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 99,
     "high": 99.8,
     "low": 98.6,
-    "prevClose": 98.7,
+    "prevClose": 99,
     "volume": 31,
     "turnover": "307.4 萬",
     "tradeValue": 3074142,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 98.7
   },
   "2756": {
     "name": "聯發國際",
     "price": 61.9,
     "change": -0.9,
-    "pctChange": -1.45,
+    "pctChange": -1.43,
     "open": 61.1,
     "high": 62.4,
     "low": 61.1,
-    "prevClose": 61.9,
+    "prevClose": 62.8,
     "volume": 16,
     "turnover": "100.2 萬",
     "tradeValue": 1001926,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 61.9
   },
   "2762": {
     "code": "2762",
@@ -9402,11 +9520,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 40.6,
     "high": 40.65,
     "low": 40.55,
-    "prevClose": 40.65,
+    "prevClose": 40.5,
     "volume": 17,
     "turnover": "70.9 萬",
     "tradeValue": 709416,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 40.65
   },
   "2923": {
     "code": "2923",
@@ -9433,25 +9553,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 18.95,
     "high": 18.95,
     "low": 17.15,
-    "prevClose": 18.7,
+    "prevClose": 18.85,
     "volume": 9,
     "turnover": "16.1 萬",
     "tradeValue": 160812,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.7
   },
   "2926": {
     "name": "誠品生活",
     "price": 29.95,
     "change": -0.35,
-    "pctChange": -1.17,
+    "pctChange": -1.16,
     "open": 29.7,
     "high": 30,
     "low": 29.65,
-    "prevClose": 29.95,
+    "prevClose": 30.3,
     "volume": 9,
     "turnover": "27.3 萬",
     "tradeValue": 273400,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29.95
   },
   "2929": {
     "code": "2929",
@@ -9478,11 +9602,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 44.7,
     "high": 44.95,
     "low": 44.7,
-    "prevClose": 44.95,
+    "prevClose": 44.7,
     "volume": 5,
     "turnover": "22.5 萬",
     "tradeValue": 224990,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 44.95
   },
   "2938": {
     "name": "床的世界",
@@ -9496,7 +9622,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 73,
     "turnover": "134.5 萬",
     "tradeValue": 1345472,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.5
   },
   "2939": {
     "code": "2939",
@@ -9519,15 +9647,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "米斯特",
     "price": 30.15,
     "change": -0.85,
-    "pctChange": -2.82,
+    "pctChange": -2.74,
     "open": 31.45,
     "high": 31.45,
     "low": 30.15,
-    "prevClose": 30.15,
+    "prevClose": 31,
     "volume": 2,
     "turnover": "6.2 萬",
     "tradeValue": 61600,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.15
   },
   "2945": {
     "code": "2945",
@@ -9550,15 +9680,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "振宇五金",
     "price": 60.8,
     "change": 0.3,
-    "pctChange": 0.49,
+    "pctChange": 0.5,
     "open": 60.5,
     "high": 62.4,
     "low": 60.5,
-    "prevClose": 60.8,
+    "prevClose": 60.5,
     "volume": 16,
     "turnover": "100.5 萬",
     "tradeValue": 1004711,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 60.8
   },
   "2948": {
     "name": "寶陞",
@@ -9572,21 +9704,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 4,
     "turnover": "14.7 萬",
     "tradeValue": 147150,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 36.5
   },
   "2949": {
     "name": "欣新網",
     "price": 65.2,
     "change": -3.2,
-    "pctChange": -4.91,
+    "pctChange": -4.68,
     "open": 65.2,
     "high": 65.2,
     "low": 65.2,
-    "prevClose": 65.2,
+    "prevClose": 68.4,
     "volume": 1,
     "turnover": "7.0 萬",
     "tradeValue": 70177,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 65.2
   },
   "3002": {
     "code": "3002",
@@ -10514,39 +10650,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 15.75,
     "high": 15.8,
     "low": 15.75,
-    "prevClose": 15.8,
+    "prevClose": 15.75,
     "volume": 3,
     "turnover": "5.0 萬",
     "tradeValue": 49852,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.8
   },
   "3066": {
     "name": "李洲",
     "price": 29,
     "change": 0.1,
-    "pctChange": 0.34,
+    "pctChange": 0.35,
     "open": 28.95,
     "high": 29.4,
     "low": 28.55,
-    "prevClose": 29,
+    "prevClose": 28.9,
     "volume": 983,
     "turnover": "2847.8 萬",
     "tradeValue": 28477785,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29
   },
   "3071": {
     "name": "協禧",
     "price": 22.95,
     "change": -0.1,
-    "pctChange": -0.44,
+    "pctChange": -0.43,
     "open": 23.05,
     "high": 23.1,
     "low": 22.85,
-    "prevClose": 22.95,
+    "prevClose": 23.05,
     "volume": 178,
     "turnover": "408.5 萬",
     "tradeValue": 4084760,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.95
   },
   "3073": {
     "name": "天方能源",
@@ -10556,11 +10698,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 20.6,
     "high": 20.85,
     "low": 20.6,
-    "prevClose": 20.6,
+    "prevClose": 20.5,
     "volume": 19,
     "turnover": "38.5 萬",
     "tradeValue": 385498,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.6
   },
   "3078": {
     "name": "僑威",
@@ -10570,25 +10714,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 45.6,
     "high": 46.2,
     "low": 45.35,
-    "prevClose": 45.95,
+    "prevClose": 45.75,
     "volume": 394,
     "turnover": "1805.1 萬",
     "tradeValue": 18051357,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 45.95
   },
   "3081": {
     "name": "聯亞",
     "price": 2925,
     "change": 265,
-    "pctChange": 9.06,
+    "pctChange": 9.96,
     "open": 2780,
     "high": 2925,
     "low": 2735,
-    "prevClose": 2925,
+    "prevClose": 2660,
     "volume": 4649,
     "turnover": "132.5 億",
     "tradeValue": 13251354385,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 2925
   },
   "3083": {
     "name": "網龍",
@@ -10598,25 +10746,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 24,
     "high": 24,
     "low": 23.65,
-    "prevClose": 23.75,
+    "prevClose": 23.95,
     "volume": 78,
     "turnover": "185.0 萬",
     "tradeValue": 1850323,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.75
   },
   "3086": {
     "name": "華義*",
     "price": 28.4,
     "change": 1.05,
-    "pctChange": 3.7,
+    "pctChange": 3.84,
     "open": 27.4,
     "high": 28.4,
     "low": 27.4,
-    "prevClose": 28.4,
+    "prevClose": 27.35,
     "volume": 115,
     "turnover": "319.4 萬",
     "tradeValue": 3194351,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.4
   },
   "3088": {
     "name": "艾訊",
@@ -10626,11 +10778,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 132.5,
     "high": 133.5,
     "low": 132,
-    "prevClose": 132,
+    "prevClose": 132.5,
     "volume": 441,
     "turnover": "5843.5 萬",
     "tradeValue": 58435419,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 132
   },
   "3090": {
     "code": "3090",
@@ -10674,11 +10828,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 46.05,
     "high": 46.55,
     "low": 45.65,
-    "prevClose": 46.2,
+    "prevClose": 45.85,
     "volume": 271,
     "turnover": "1248.6 萬",
     "tradeValue": 12486147,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 46.2
   },
   "3094": {
     "code": "3094",
@@ -10705,53 +10861,61 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 33.2,
     "high": 33.2,
     "low": 33.1,
-    "prevClose": 33.1,
+    "prevClose": 33.2,
     "volume": 3,
     "turnover": "8.3 萬",
     "tradeValue": 82926,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 33.1
   },
   "3105": {
     "name": "穩懋",
     "price": 591,
     "change": 53,
-    "pctChange": 8.97,
+    "pctChange": 9.85,
     "open": 574,
     "high": 591,
     "low": 572,
-    "prevClose": 591,
+    "prevClose": 538,
     "volume": 28498,
     "turnover": "166.8 億",
     "tradeValue": 16684253544,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 591
   },
   "3114": {
     "name": "好德",
     "price": 39.65,
     "change": 3.6,
-    "pctChange": 9.08,
+    "pctChange": 9.99,
     "open": 36.75,
     "high": 39.65,
     "low": 35.35,
-    "prevClose": 39.65,
+    "prevClose": 36.05,
     "volume": 3600,
     "turnover": "1.4 億",
     "tradeValue": 139982432,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 39.65
   },
   "3115": {
     "name": "富榮綱",
     "price": 8.39,
     "change": 0.19,
-    "pctChange": 2.26,
+    "pctChange": 2.32,
     "open": 8.48,
     "high": 8.48,
     "low": 8,
-    "prevClose": 8.39,
+    "prevClose": 8.2,
     "volume": 30,
     "turnover": "24.7 萬",
     "tradeValue": 246897,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 8.39
   },
   "3118": {
     "name": "進階",
@@ -10761,39 +10925,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 31.55,
     "high": 31.65,
     "low": 31.3,
-    "prevClose": 31.5,
+    "prevClose": 31.55,
     "volume": 10,
     "turnover": "30.1 萬",
     "tradeValue": 301340,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.5
   },
   "3122": {
     "name": "笙泉",
     "price": 24.2,
     "change": -0.3,
-    "pctChange": -1.24,
+    "pctChange": -1.22,
     "open": 24.4,
     "high": 24.4,
     "low": 24,
-    "prevClose": 24.2,
+    "prevClose": 24.5,
     "volume": 35,
     "turnover": "84.0 萬",
     "tradeValue": 839896,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.2
   },
   "3128": {
     "name": "昇銳",
     "price": 20.35,
     "change": 0.3,
-    "pctChange": 1.47,
+    "pctChange": 1.5,
     "open": 20.2,
     "high": 20.45,
     "low": 20.1,
-    "prevClose": 20.35,
+    "prevClose": 20.05,
     "volume": 52,
     "turnover": "105.0 萬",
     "tradeValue": 1050459,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.35
   },
   "3130": {
     "code": "3130",
@@ -10816,15 +10986,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "弘塑",
     "price": 2430,
     "change": 50,
-    "pctChange": 2.06,
+    "pctChange": 2.1,
     "open": 2390,
     "high": 2465,
     "low": 2390,
-    "prevClose": 2430,
+    "prevClose": 2380,
     "volume": 350,
     "turnover": "8.5 億",
     "tradeValue": 850356895,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 2430
   },
   "3135": {
     "code": "3135",
@@ -10864,29 +11036,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "晶宏",
     "price": 87.1,
     "change": 2.6,
-    "pctChange": 2.99,
+    "pctChange": 3.08,
     "open": 84.2,
     "high": 88.2,
     "low": 83.5,
-    "prevClose": 87.1,
+    "prevClose": 84.5,
     "volume": 2462,
     "turnover": "2.1 億",
     "tradeValue": 211762816,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 87.1
   },
   "3147": {
     "name": "大綜",
     "price": 264.5,
     "change": -3,
-    "pctChange": -1.13,
+    "pctChange": -1.12,
     "open": 266,
     "high": 273,
     "low": 255,
-    "prevClose": 264.5,
+    "prevClose": 267.5,
     "volume": 2172,
     "turnover": "5.7 億",
     "tradeValue": 572723764,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 264.5
   },
   "3149": {
     "code": "3149",
@@ -10926,57 +11102,65 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "璟德",
     "price": 235.5,
     "change": 3,
-    "pctChange": 1.27,
+    "pctChange": 1.29,
     "open": 234.5,
     "high": 235.5,
     "low": 233,
-    "prevClose": 235.5,
+    "prevClose": 232.5,
     "volume": 59,
     "turnover": "1392.9 萬",
     "tradeValue": 13928761,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 235.5
   },
   "3158": {
     "name": "嘉實",
     "price": 86,
     "change": 1.5,
-    "pctChange": 1.74,
+    "pctChange": 1.78,
     "open": 84.5,
     "high": 86,
     "low": 84.5,
-    "prevClose": 86,
+    "prevClose": 84.5,
     "volume": 24,
     "turnover": "208.1 萬",
     "tradeValue": 2080906,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 86
   },
   "3162": {
     "name": "精確",
     "price": 89.6,
     "change": 2.1,
-    "pctChange": 2.34,
+    "pctChange": 2.4,
     "open": 87.5,
     "high": 91,
     "low": 85.5,
-    "prevClose": 89.6,
+    "prevClose": 87.5,
     "volume": 4335,
     "turnover": "3.9 億",
     "tradeValue": 386436053,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 89.6
   },
   "3163": {
     "name": "波若威",
     "price": 713,
     "change": 62,
-    "pctChange": 8.7,
+    "pctChange": 9.52,
     "open": 667,
     "high": 716,
     "low": 667,
-    "prevClose": 713,
+    "prevClose": 651,
     "volume": 8067,
     "turnover": "56.2 億",
     "tradeValue": 5617860589,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 713
   },
   "3164": {
     "code": "3164",
@@ -11033,29 +11217,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "亞信",
     "price": 115,
     "change": -2,
-    "pctChange": -1.74,
+    "pctChange": -1.71,
     "open": 117,
     "high": 117,
     "low": 113,
-    "prevClose": 115,
+    "prevClose": 117,
     "volume": 297,
     "turnover": "3411.6 萬",
     "tradeValue": 34115717,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 115
   },
   "3171": {
     "name": "炎洲流通",
     "price": 56.7,
     "change": -0.6,
-    "pctChange": -1.06,
+    "pctChange": -1.05,
     "open": 57.3,
     "high": 57.3,
     "low": 56.5,
-    "prevClose": 56.7,
+    "prevClose": 57.3,
     "volume": 41,
     "turnover": "229.8 萬",
     "tradeValue": 2297740,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 56.7
   },
   "3176": {
     "name": "基亞",
@@ -11065,25 +11253,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 37.5,
     "high": 37.55,
     "low": 37.05,
-    "prevClose": 37.55,
+    "prevClose": 37.5,
     "volume": 224,
     "turnover": "835.7 萬",
     "tradeValue": 8357024,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 37.55
   },
   "3178": {
     "name": "公準",
     "price": 71.4,
     "change": 2,
-    "pctChange": 2.8,
+    "pctChange": 2.88,
     "open": 70,
     "high": 73.3,
     "low": 69.4,
-    "prevClose": 71.4,
+    "prevClose": 69.4,
     "volume": 523,
     "turnover": "3760.4 萬",
     "tradeValue": 37603506,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 71.4
   },
   "3188": {
     "name": "鑫龍騰",
@@ -11093,11 +11285,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23.3,
     "high": 23.35,
     "low": 23.05,
-    "prevClose": 23.1,
+    "prevClose": 23.2,
     "volume": 160,
     "turnover": "370.3 萬",
     "tradeValue": 3702639,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.1
   },
   "3189": {
     "code": "3189",
@@ -11120,57 +11314,65 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "雲嘉南",
     "price": 17.45,
     "change": 0.6,
-    "pctChange": 3.44,
+    "pctChange": 3.56,
     "open": 16.85,
     "high": 17.75,
     "low": 16.8,
-    "prevClose": 17.45,
+    "prevClose": 16.85,
     "volume": 60,
     "turnover": "101.1 萬",
     "tradeValue": 1010967,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.45
   },
   "3205": {
     "name": "佰研",
     "price": 47.2,
     "change": 0.5,
-    "pctChange": 1.06,
+    "pctChange": 1.07,
     "open": 46.7,
     "high": 47.3,
     "low": 46.5,
-    "prevClose": 47.2,
+    "prevClose": 46.7,
     "volume": 28,
     "turnover": "132.7 萬",
     "tradeValue": 1327181,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 47.2
   },
   "3206": {
     "name": "志豐",
     "price": 34,
     "change": -0.6,
-    "pctChange": -1.76,
+    "pctChange": -1.73,
     "open": 34.05,
     "high": 34.6,
     "low": 33.8,
-    "prevClose": 34,
+    "prevClose": 34.6,
     "volume": 55,
     "turnover": "186.7 萬",
     "tradeValue": 1866945,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 34
   },
   "3207": {
     "name": "耀勝",
     "price": 39.75,
     "change": -0.95,
-    "pctChange": -2.39,
+    "pctChange": -2.33,
     "open": 41.8,
     "high": 41.8,
     "low": 39.7,
-    "prevClose": 39.75,
+    "prevClose": 40.7,
     "volume": 247,
     "turnover": "998.0 萬",
     "tradeValue": 9980213,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 39.75
   },
   "3209": {
     "code": "3209",
@@ -11197,11 +11399,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 396,
     "high": 402,
     "low": 391,
-    "prevClose": 397,
+    "prevClose": 394,
     "volume": 2962,
     "turnover": "11.8 億",
     "tradeValue": 1175050917,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 397
   },
   "3213": {
     "name": "茂訊",
@@ -11211,11 +11415,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 124,
     "high": 124.5,
     "low": 121.5,
-    "prevClose": 123,
+    "prevClose": 124,
     "volume": 378,
     "turnover": "4647.5 萬",
     "tradeValue": 46475388,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 123
   },
   "3217": {
     "name": "優群",
@@ -11225,11 +11431,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 129.5,
     "high": 130.5,
     "low": 129,
-    "prevClose": 129,
+    "prevClose": 129.5,
     "volume": 249,
     "turnover": "3221.8 萬",
     "tradeValue": 32218437,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 129
   },
   "3218": {
     "name": "大學光",
@@ -11239,95 +11447,109 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 134,
     "high": 134.5,
     "low": 133.5,
-    "prevClose": 133.5,
+    "prevClose": 134,
     "volume": 109,
     "turnover": "1465.0 萬",
     "tradeValue": 14650399,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 133.5
   },
   "3219": {
     "name": "倚強科",
     "price": 128.5,
     "change": -3,
-    "pctChange": -2.33,
+    "pctChange": -2.28,
     "open": 132.5,
     "high": 132.5,
     "low": 126.5,
-    "prevClose": 128.5,
+    "prevClose": 131.5,
     "volume": 893,
     "turnover": "1.1 億",
     "tradeValue": 114802395,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 128.5
   },
   "3221": {
     "name": "台嘉碩",
     "price": 56,
     "change": 2.3,
-    "pctChange": 4.11,
+    "pctChange": 4.28,
     "open": 56.1,
     "high": 57.8,
     "low": 55.3,
-    "prevClose": 56,
+    "prevClose": 53.7,
     "volume": 12922,
     "turnover": "7.3 億",
     "tradeValue": 727755515,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 56
   },
   "3224": {
     "name": "三顧",
     "price": 31.25,
     "change": 0.35,
-    "pctChange": 1.12,
+    "pctChange": 1.13,
     "open": 31.2,
     "high": 31.3,
     "low": 30.9,
-    "prevClose": 31.25,
+    "prevClose": 30.9,
     "volume": 27,
     "turnover": "84.4 萬",
     "tradeValue": 844022,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.25
   },
   "3226": {
     "name": "龍鋒",
     "price": 63.1,
     "change": -1.9,
-    "pctChange": -3.01,
+    "pctChange": -2.92,
     "open": 64.8,
     "high": 64.8,
     "low": 62.3,
-    "prevClose": 63.1,
+    "prevClose": 65,
     "volume": 38,
     "turnover": "240.3 萬",
     "tradeValue": 2402538,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 63.1
   },
   "3227": {
     "name": "原相",
     "price": 187.5,
     "change": 2,
-    "pctChange": 1.07,
+    "pctChange": 1.08,
     "open": 185,
     "high": 187.5,
     "low": 184,
-    "prevClose": 187.5,
+    "prevClose": 185.5,
     "volume": 831,
     "turnover": "1.5 億",
     "tradeValue": 154553918,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 187.5
   },
   "3228": {
     "name": "金麗科",
     "price": 175.5,
     "change": -4,
-    "pctChange": -2.28,
+    "pctChange": -2.23,
     "open": 183,
     "high": 183,
     "low": 174,
-    "prevClose": 175.5,
+    "prevClose": 179.5,
     "volume": 443,
     "turnover": "7795.5 萬",
     "tradeValue": 77955418,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 175.5
   },
   "3229": {
     "code": "3229",
@@ -11350,15 +11572,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "錦明",
     "price": 41.95,
     "change": -0.3,
-    "pctChange": -0.72,
+    "pctChange": -0.71,
     "open": 42.95,
     "high": 42.95,
     "low": 41.75,
-    "prevClose": 41.95,
+    "prevClose": 42.25,
     "volume": 305,
     "turnover": "1280.4 萬",
     "tradeValue": 12803771,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.95
   },
   "3231": {
     "code": "3231",
@@ -11381,43 +11605,49 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "昱捷",
     "price": 20.55,
     "change": -0.15,
-    "pctChange": -0.73,
+    "pctChange": -0.72,
     "open": 20.7,
     "high": 20.7,
     "low": 20.4,
-    "prevClose": 20.55,
+    "prevClose": 20.7,
     "volume": 36,
     "turnover": "74.8 萬",
     "tradeValue": 747606,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.55
   },
   "3234": {
     "name": "光環",
     "price": 181.5,
     "change": 9.5,
-    "pctChange": 5.23,
+    "pctChange": 5.52,
     "open": 174.5,
     "high": 184,
     "low": 174.5,
-    "prevClose": 181.5,
+    "prevClose": 172,
     "volume": 4389,
     "turnover": "7.9 億",
     "tradeValue": 787907681,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 181.5
   },
   "3236": {
     "name": "千如",
     "price": 53.4,
     "change": 4.85,
-    "pctChange": 9.08,
+    "pctChange": 9.99,
     "open": 51.4,
     "high": 53.4,
     "low": 51.4,
-    "prevClose": 53.4,
+    "prevClose": 48.55,
     "volume": 9989,
     "turnover": "5.3 億",
     "tradeValue": 525838669,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 53.4
   },
   "3252": {
     "name": "海灣",
@@ -11427,11 +11657,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 15.2,
     "high": 15.3,
     "low": 15.15,
-    "prevClose": 15.3,
+    "prevClose": 15.35,
     "volume": 15,
     "turnover": "22.3 萬",
     "tradeValue": 222632,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.3
   },
   "3257": {
     "code": "3257",
@@ -11454,29 +11686,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "鑫創",
     "price": 12.85,
     "change": 1.15,
-    "pctChange": 8.95,
+    "pctChange": 9.83,
     "open": 12.85,
     "high": 12.85,
     "low": 12.85,
-    "prevClose": 12.85,
+    "prevClose": 11.7,
     "volume": 84,
     "turnover": "107.4 萬",
     "tradeValue": 1073726,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.85
   },
   "3260": {
     "name": "威剛",
     "price": 382,
     "change": 2,
-    "pctChange": 0.52,
+    "pctChange": 0.53,
     "open": 384,
     "high": 385.5,
     "low": 379.5,
-    "prevClose": 382,
+    "prevClose": 380,
     "volume": 3939,
     "turnover": "15.0 億",
     "tradeValue": 1501510689,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 382
   },
   "3264": {
     "name": "欣銓",
@@ -11486,25 +11722,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 245,
     "high": 247.5,
     "low": 241.5,
-    "prevClose": 245,
+    "prevClose": 245.5,
     "volume": 11871,
     "turnover": "29.0 億",
     "tradeValue": 2903301261,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 245
   },
   "3265": {
     "name": "台星科",
     "price": 188,
     "change": 3,
-    "pctChange": 1.6,
+    "pctChange": 1.62,
     "open": 185,
     "high": 193,
     "low": 183,
-    "prevClose": 188,
+    "prevClose": 185,
     "volume": 1626,
     "turnover": "3.1 億",
     "tradeValue": 305773729,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 188
   },
   "3266": {
     "code": "3266",
@@ -11531,109 +11771,125 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 21.6,
     "high": 21.65,
     "low": 21.45,
-    "prevClose": 21.65,
+    "prevClose": 21.6,
     "volume": 83,
     "turnover": "178.5 萬",
     "tradeValue": 1785062,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 21.65
   },
   "3272": {
     "name": "東碩",
     "price": 14.1,
     "change": 0.2,
-    "pctChange": 1.42,
+    "pctChange": 1.44,
     "open": 13.9,
     "high": 14.1,
     "low": 13.85,
-    "prevClose": 14.1,
+    "prevClose": 13.9,
     "volume": 39,
     "turnover": "54.9 萬",
     "tradeValue": 548975,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.1
   },
   "3276": {
     "name": "宇環",
     "price": 14.5,
     "change": 0.6,
-    "pctChange": 4.14,
+    "pctChange": 4.32,
     "open": 14,
     "high": 14.55,
     "low": 14,
-    "prevClose": 14.5,
+    "prevClose": 13.9,
     "volume": 186,
     "turnover": "267.7 萬",
     "tradeValue": 2676662,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.5
   },
   "3284": {
     "name": "太普高",
     "price": 20.1,
     "change": 0.45,
-    "pctChange": 2.24,
+    "pctChange": 2.29,
     "open": 19.85,
     "high": 20.1,
     "low": 19.5,
-    "prevClose": 20.1,
+    "prevClose": 19.65,
     "volume": 142,
     "turnover": "283.7 萬",
     "tradeValue": 2837295,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.1
   },
   "3285": {
     "name": "微端",
     "price": 41.9,
     "change": 0.4,
-    "pctChange": 0.95,
+    "pctChange": 0.96,
     "open": 41.6,
     "high": 42.9,
     "low": 41.6,
-    "prevClose": 41.9,
+    "prevClose": 41.5,
     "volume": 17,
     "turnover": "70.4 萬",
     "tradeValue": 704169,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.9
   },
   "3287": {
     "name": "廣寰科",
     "price": 42.05,
     "change": 0.4,
-    "pctChange": 0.95,
+    "pctChange": 0.96,
     "open": 41.7,
     "high": 42.9,
     "low": 40.5,
-    "prevClose": 42.05,
+    "prevClose": 41.65,
     "volume": 791,
     "turnover": "3278.5 萬",
     "tradeValue": 32784704,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 42.05
   },
   "3288": {
     "name": "點晶",
     "price": 21.05,
     "change": -0.2,
-    "pctChange": -0.95,
+    "pctChange": -0.94,
     "open": 21.4,
     "high": 21.5,
     "low": 20.95,
-    "prevClose": 21.05,
+    "prevClose": 21.25,
     "volume": 21,
     "turnover": "44.4 萬",
     "tradeValue": 443768,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 21.05
   },
   "3289": {
     "name": "宜特",
     "price": 143,
     "change": 1.5,
-    "pctChange": 1.05,
+    "pctChange": 1.06,
     "open": 141,
     "high": 143,
     "low": 140.5,
-    "prevClose": 143,
+    "prevClose": 141.5,
     "volume": 568,
     "turnover": "8055.3 萬",
     "tradeValue": 80553434,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 143
   },
   "3290": {
     "name": "東浦",
@@ -11643,25 +11899,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 50.1,
     "high": 50.8,
     "low": 49.7,
-    "prevClose": 50.3,
+    "prevClose": 50,
     "volume": 457,
     "turnover": "2300.9 萬",
     "tradeValue": 23009198,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 50.3
   },
   "3293": {
     "name": "鈊象",
     "price": 791,
     "change": -23,
-    "pctChange": -2.91,
+    "pctChange": -2.83,
     "open": 819,
     "high": 819,
     "low": 778,
-    "prevClose": 791,
+    "prevClose": 814,
     "volume": 3086,
     "turnover": "24.4 億",
     "tradeValue": 2437406414,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 791
   },
   "3294": {
     "name": "英濟",
@@ -11671,11 +11931,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 33.05,
     "high": 33.05,
     "low": 32.5,
-    "prevClose": 32.8,
+    "prevClose": 33.05,
     "volume": 536,
     "turnover": "1756.0 萬",
     "tradeValue": 17559501,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 32.8
   },
   "3296": {
     "code": "3296",
@@ -11698,29 +11960,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "杭特",
     "price": 32.5,
     "change": 1,
-    "pctChange": 3.08,
+    "pctChange": 3.17,
     "open": 31.9,
     "high": 33.2,
     "low": 31.9,
-    "prevClose": 32.5,
+    "prevClose": 31.5,
     "volume": 188,
     "turnover": "610.6 萬",
     "tradeValue": 6106449,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 32.5
   },
   "3303": {
     "name": "岱稜",
     "price": 48.8,
     "change": 0.1,
-    "pctChange": 0.2,
+    "pctChange": 0.21,
     "open": 49.3,
     "high": 49.3,
     "low": 48.5,
-    "prevClose": 48.8,
+    "prevClose": 48.7,
     "volume": 137,
     "turnover": "666.9 萬",
     "tradeValue": 6669294,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 48.8
   },
   "3305": {
     "code": "3305",
@@ -11743,15 +12009,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "鼎天",
     "price": 47.05,
     "change": -0.45,
-    "pctChange": -0.96,
+    "pctChange": -0.95,
     "open": 48.2,
     "high": 48.2,
     "low": 47.05,
-    "prevClose": 47.05,
+    "prevClose": 47.5,
     "volume": 40,
     "turnover": "190.8 萬",
     "tradeValue": 1908101,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 47.05
   },
   "3308": {
     "code": "3308",
@@ -11778,11 +12046,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 69.1,
     "high": 69.1,
     "low": 67.6,
-    "prevClose": 67.6,
+    "prevClose": 68,
     "volume": 9,
     "turnover": "62.8 萬",
     "tradeValue": 627800,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 67.6
   },
   "3311": {
     "code": "3311",
@@ -11822,15 +12092,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "斐成",
     "price": 10.5,
     "change": -0.05,
-    "pctChange": -0.48,
+    "pctChange": -0.47,
     "open": 10.6,
     "high": 10.7,
     "low": 10.5,
-    "prevClose": 10.5,
+    "prevClose": 10.55,
     "volume": 74,
     "turnover": "77.8 萬",
     "tradeValue": 778105,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 10.5
   },
   "3317": {
     "name": "尼克森",
@@ -11840,11 +12112,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 65.3,
     "high": 66.6,
     "low": 64.7,
-    "prevClose": 65.3,
+    "prevClose": 65.2,
     "volume": 1846,
     "turnover": "1.2 億",
     "tradeValue": 121245794,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 65.3
   },
   "3321": {
     "code": "3321",
@@ -11867,43 +12141,49 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "建舜電",
     "price": 11.35,
     "change": -0.25,
-    "pctChange": -2.2,
+    "pctChange": -2.16,
     "open": 11.7,
     "high": 11.7,
     "low": 11.3,
-    "prevClose": 11.35,
+    "prevClose": 11.6,
     "volume": 177,
     "turnover": "202.5 萬",
     "tradeValue": 2025214,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 11.35
   },
   "3323": {
     "name": "加百裕",
     "price": 30.35,
     "change": 1.05,
-    "pctChange": 3.46,
+    "pctChange": 3.58,
     "open": 29.4,
     "high": 30.45,
     "low": 29.4,
-    "prevClose": 30.35,
+    "prevClose": 29.3,
     "volume": 679,
     "turnover": "2050.5 萬",
     "tradeValue": 20504810,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.35
   },
   "3324": {
     "name": "雙鴻",
     "price": 1505,
     "change": -20,
-    "pctChange": -1.33,
+    "pctChange": -1.31,
     "open": 1540,
     "high": 1560,
     "low": 1490,
-    "prevClose": 1505,
+    "prevClose": 1525,
     "volume": 3524,
     "turnover": "53.3 億",
     "tradeValue": 5326790950,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 1505
   },
   "3325": {
     "name": "旭品",
@@ -11913,25 +12193,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 11.75,
     "high": 11.9,
     "low": 11.7,
-    "prevClose": 11.8,
+    "prevClose": 11.7,
     "volume": 63,
     "turnover": "73.8 萬",
     "tradeValue": 737729,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 11.8
   },
   "3332": {
     "name": "幸康",
     "price": 64.3,
     "change": -0.6,
-    "pctChange": -0.93,
+    "pctChange": -0.92,
     "open": 64.6,
     "high": 65,
     "low": 64,
-    "prevClose": 64.3,
+    "prevClose": 64.9,
     "volume": 18,
     "turnover": "116.4 萬",
     "tradeValue": 1164275,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 64.3
   },
   "3338": {
     "code": "3338",
@@ -11954,15 +12238,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "泰谷",
     "price": 47,
     "change": 1.95,
-    "pctChange": 4.15,
+    "pctChange": 4.33,
     "open": 45.6,
     "high": 47.3,
     "low": 44.9,
-    "prevClose": 47,
+    "prevClose": 45.05,
     "volume": 2442,
     "turnover": "1.1 億",
     "tradeValue": 113470967,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 47
   },
   "3346": {
     "code": "3346",
@@ -11985,29 +12271,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "寶德",
     "price": 19,
     "change": -0.4,
-    "pctChange": -2.11,
+    "pctChange": -2.06,
     "open": 19.4,
     "high": 19.55,
     "low": 19,
-    "prevClose": 19,
+    "prevClose": 19.4,
     "volume": 151,
     "turnover": "291.1 萬",
     "tradeValue": 2911182,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19
   },
   "3354": {
     "name": "律勝",
     "price": 30.1,
     "change": 0.3,
-    "pctChange": 1,
+    "pctChange": 1.01,
     "open": 29.25,
     "high": 30.55,
     "low": 29.2,
-    "prevClose": 30.1,
+    "prevClose": 29.8,
     "volume": 1631,
     "turnover": "4910.3 萬",
     "tradeValue": 49103302,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.1
   },
   "3356": {
     "code": "3356",
@@ -12030,29 +12320,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "臺慶科",
     "price": 215.5,
     "change": 3,
-    "pctChange": 1.39,
+    "pctChange": 1.41,
     "open": 213,
     "high": 219,
     "low": 211.5,
-    "prevClose": 215.5,
+    "prevClose": 212.5,
     "volume": 1886,
     "turnover": "4.1 億",
     "tradeValue": 407865901,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 215.5
   },
   "3360": {
     "name": "尚立",
     "price": 15.55,
     "change": 0.3,
-    "pctChange": 1.93,
+    "pctChange": 1.97,
     "open": 15.25,
     "high": 15.6,
     "low": 15.15,
-    "prevClose": 15.55,
+    "prevClose": 15.25,
     "volume": 401,
     "turnover": "620.9 萬",
     "tradeValue": 6208644,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.55
   },
   "3362": {
     "name": "先進光",
@@ -12066,35 +12360,41 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 1669,
     "turnover": "2.9 億",
     "tradeValue": 293441850,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 175.5
   },
   "3363": {
     "name": "上詮",
     "price": 671,
     "change": 30,
-    "pctChange": 4.47,
+    "pctChange": 4.68,
     "open": 656,
     "high": 680,
     "low": 652,
-    "prevClose": 671,
+    "prevClose": 641,
     "volume": 3800,
     "turnover": "25.3 億",
     "tradeValue": 2532839599,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 671
   },
   "3372": {
     "name": "典範",
     "price": 16.9,
     "change": 0.45,
-    "pctChange": 2.66,
+    "pctChange": 2.74,
     "open": 16.5,
     "high": 17.05,
     "low": 16.45,
-    "prevClose": 16.9,
+    "prevClose": 16.45,
     "volume": 1033,
     "turnover": "1737.2 萬",
     "tradeValue": 17372340,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.9
   },
   "3373": {
     "name": "熱映",
@@ -12104,25 +12404,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 16,
     "high": 16,
     "low": 15.85,
-    "prevClose": 15.9,
+    "prevClose": 16,
     "volume": 64,
     "turnover": "102.1 萬",
     "tradeValue": 1020533,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.9
   },
   "3374": {
     "name": "精材",
     "price": 467.5,
     "change": 11.5,
-    "pctChange": 2.46,
+    "pctChange": 2.52,
     "open": 457,
     "high": 467.5,
     "low": 454,
-    "prevClose": 467.5,
+    "prevClose": 456,
     "volume": 1314,
     "turnover": "6.1 億",
     "tradeValue": 607215068,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 467.5
   },
   "3376": {
     "code": "3376",
@@ -12149,11 +12453,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 27.7,
     "high": 27.85,
     "low": 27.35,
-    "prevClose": 27.8,
+    "prevClose": 27.6,
     "volume": 30,
     "turnover": "82.8 萬",
     "tradeValue": 828489,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 27.8
   },
   "3380": {
     "code": "3380",
@@ -12180,11 +12486,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 84.3,
     "high": 85.3,
     "low": 84.3,
-    "prevClose": 84.5,
+    "prevClose": 84.4,
     "volume": 355,
     "turnover": "3004.8 萬",
     "tradeValue": 30047970,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 84.5
   },
   "3390": {
     "name": "旭軟",
@@ -12194,25 +12502,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 22.5,
     "high": 22.6,
     "low": 22.2,
-    "prevClose": 22.4,
+    "prevClose": 22.35,
     "volume": 126,
     "turnover": "281.9 萬",
     "tradeValue": 2818694,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.4
   },
   "3402": {
     "name": "漢科",
     "price": 139.5,
     "change": 2.5,
-    "pctChange": 1.79,
+    "pctChange": 1.82,
     "open": 137.5,
     "high": 140,
     "low": 137,
-    "prevClose": 139.5,
+    "prevClose": 137,
     "volume": 521,
     "turnover": "7209.4 萬",
     "tradeValue": 72094192,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 139.5
   },
   "3406": {
     "code": "3406",
@@ -12286,15 +12598,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "奇鈦科",
     "price": 113.5,
     "change": 2,
-    "pctChange": 1.76,
+    "pctChange": 1.79,
     "open": 112.5,
     "high": 119,
     "low": 112.5,
-    "prevClose": 113.5,
+    "prevClose": 111.5,
     "volume": 831,
     "turnover": "9619.6 萬",
     "tradeValue": 96196090,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 113.5
   },
   "3432": {
     "code": "3432",
@@ -12321,11 +12635,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 31.45,
     "high": 31.5,
     "low": 31.1,
-    "prevClose": 31.2,
+    "prevClose": 31.4,
     "volume": 57,
     "turnover": "176.7 萬",
     "tradeValue": 1767285,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.2
   },
   "3437": {
     "code": "3437",
@@ -12352,25 +12668,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 61.6,
     "high": 62.9,
     "low": 61.1,
-    "prevClose": 62,
+    "prevClose": 61.5,
     "volume": 117,
     "turnover": "720.5 萬",
     "tradeValue": 7204929,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 62
   },
   "3441": {
     "name": "聯一光",
     "price": 211,
     "change": 8.5,
-    "pctChange": 4.03,
+    "pctChange": 4.2,
     "open": 210,
     "high": 222.5,
     "low": 207,
-    "prevClose": 211,
+    "prevClose": 202.5,
     "volume": 28129,
     "turnover": "60.6 億",
     "tradeValue": 6058964475,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 211
   },
   "3443": {
     "code": "3443",
@@ -12397,11 +12717,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 80.7,
     "high": 80.8,
     "low": 79.8,
-    "prevClose": 80.8,
+    "prevClose": 80.7,
     "volume": 206,
     "turnover": "1651.4 萬",
     "tradeValue": 16513955,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 80.8
   },
   "3447": {
     "code": "3447",
@@ -12441,15 +12763,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "由田",
     "price": 280,
     "change": -7,
-    "pctChange": -2.5,
+    "pctChange": -2.44,
     "open": 287,
     "high": 295,
     "low": 277,
-    "prevClose": 280,
+    "prevClose": 287,
     "volume": 6578,
     "turnover": "18.8 億",
     "tradeValue": 1880576345,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 280
   },
   "3465": {
     "name": "進泰電子",
@@ -12459,39 +12783,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 30,
     "high": 30.05,
     "low": 29.2,
-    "prevClose": 30.05,
+    "prevClose": 30,
     "volume": 37,
     "turnover": "110.4 萬",
     "tradeValue": 1104033,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.05
   },
   "3466": {
     "name": "德晉",
     "price": 24.2,
     "change": 0.45,
-    "pctChange": 1.86,
+    "pctChange": 1.89,
     "open": 23.9,
     "high": 24.3,
     "low": 23.85,
-    "prevClose": 24.2,
+    "prevClose": 23.75,
     "volume": 133,
     "turnover": "318.9 萬",
     "tradeValue": 3188530,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.2
   },
   "3467": {
     "name": "台灣精材",
     "price": 73.2,
     "change": 0.6,
-    "pctChange": 0.82,
+    "pctChange": 0.83,
     "open": 72.5,
     "high": 74.3,
     "low": 70.8,
-    "prevClose": 73.2,
+    "prevClose": 72.6,
     "volume": 441,
     "turnover": "3204.5 萬",
     "tradeValue": 32044828,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 73.2
   },
   "3479": {
     "name": "安勤",
@@ -12501,11 +12831,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 137,
     "high": 138.5,
     "low": 136,
-    "prevClose": 136,
+    "prevClose": 136.5,
     "volume": 406,
     "turnover": "5539.4 萬",
     "tradeValue": 55394366,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 136
   },
   "3481": {
     "code": "3481",
@@ -12528,71 +12860,81 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "力致",
     "price": 80.9,
     "change": 2.4,
-    "pctChange": 2.97,
+    "pctChange": 3.06,
     "open": 78.4,
     "high": 81.6,
     "low": 77.9,
-    "prevClose": 80.9,
+    "prevClose": 78.5,
     "volume": 587,
     "turnover": "4709.7 萬",
     "tradeValue": 47096642,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 80.9
   },
   "3484": {
     "name": "崧騰",
     "price": 48.9,
     "change": 1.6,
-    "pctChange": 3.27,
+    "pctChange": 3.38,
     "open": 46.95,
     "high": 49.05,
     "low": 46.95,
-    "prevClose": 48.9,
+    "prevClose": 47.3,
     "volume": 304,
     "turnover": "1466.2 萬",
     "tradeValue": 14661585,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 48.9
   },
   "3485": {
     "name": "敘豐",
     "price": 216,
     "change": 3.5,
-    "pctChange": 1.62,
+    "pctChange": 1.65,
     "open": 213,
     "high": 216,
     "low": 210.5,
-    "prevClose": 216,
+    "prevClose": 212.5,
     "volume": 106,
     "turnover": "2254.3 萬",
     "tradeValue": 22542613,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 216
   },
   "3489": {
     "name": "森寶",
     "price": 23.2,
     "change": -0.6,
-    "pctChange": -2.59,
+    "pctChange": -2.52,
     "open": 23.9,
     "high": 23.9,
     "low": 23.05,
-    "prevClose": 23.2,
+    "prevClose": 23.8,
     "volume": 155,
     "turnover": "362.5 萬",
     "tradeValue": 3625321,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.2
   },
   "3490": {
     "name": "單井",
     "price": 50.7,
     "change": 1.95,
-    "pctChange": 3.85,
+    "pctChange": 4,
     "open": 50.8,
     "high": 51.4,
     "low": 46.8,
-    "prevClose": 50.7,
+    "prevClose": 48.75,
     "volume": 18648,
     "turnover": "9.2 億",
     "tradeValue": 916946904,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 50.7
   },
   "3491": {
     "name": "昇達科",
@@ -12602,25 +12944,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 1480,
     "high": 1510,
     "low": 1475,
-    "prevClose": 1485,
+    "prevClose": 1490,
     "volume": 609,
     "turnover": "9.1 億",
     "tradeValue": 908519305,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 1485
   },
   "3492": {
     "name": "長盛",
     "price": 19.45,
     "change": 0.3,
-    "pctChange": 1.54,
+    "pctChange": 1.57,
     "open": 19.1,
     "high": 19.45,
     "low": 19.1,
-    "prevClose": 19.45,
+    "prevClose": 19.15,
     "volume": 19,
     "turnover": "36.6 萬",
     "tradeValue": 365800,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.45
   },
   "3494": {
     "code": "3494",
@@ -12643,15 +12989,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "陽程",
     "price": 215,
     "change": -4.5,
-    "pctChange": -2.09,
+    "pctChange": -2.05,
     "open": 221,
     "high": 226,
     "low": 212,
-    "prevClose": 215,
+    "prevClose": 219.5,
     "volume": 3041,
     "turnover": "6.6 億",
     "tradeValue": 658652740,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 215
   },
   "3499": {
     "name": "環天科",
@@ -12661,11 +13009,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 13.3,
     "high": 13.8,
     "low": 13.05,
-    "prevClose": 13.8,
+    "prevClose": 13.75,
     "volume": 81,
     "turnover": "109.0 萬",
     "tradeValue": 1089808,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 13.8
   },
   "3501": {
     "code": "3501",
@@ -12705,29 +13055,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "位速",
     "price": 25.75,
     "change": -0.25,
-    "pctChange": -0.97,
+    "pctChange": -0.96,
     "open": 26.6,
     "high": 26.6,
     "low": 25.75,
-    "prevClose": 25.75,
+    "prevClose": 26,
     "volume": 251,
     "turnover": "656.0 萬",
     "tradeValue": 6559560,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.75
   },
   "3511": {
     "name": "矽瑪",
     "price": 19.75,
     "change": 0.15,
-    "pctChange": 0.76,
+    "pctChange": 0.77,
     "open": 19.6,
     "high": 19.85,
     "low": 19.6,
-    "prevClose": 19.75,
+    "prevClose": 19.6,
     "volume": 92,
     "turnover": "182.0 萬",
     "tradeValue": 1820262,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.75
   },
   "3512": {
     "name": "皇龍",
@@ -12737,11 +13091,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 19.05,
     "high": 19.15,
     "low": 19.05,
-    "prevClose": 19.1,
+    "prevClose": 19.2,
     "volume": 19,
     "turnover": "36.4 萬",
     "tradeValue": 363908,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.1
   },
   "3515": {
     "code": "3515",
@@ -12772,7 +13128,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 49,
     "turnover": "123.8 萬",
     "tradeValue": 1237593,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.35
   },
   "3518": {
     "code": "3518",
@@ -12795,29 +13153,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "華盈",
     "price": 17.2,
     "change": 0.2,
-    "pctChange": 1.16,
+    "pctChange": 1.18,
     "open": 17,
     "high": 17.25,
     "low": 17,
-    "prevClose": 17.2,
+    "prevClose": 17,
     "volume": 152,
     "turnover": "260.8 萬",
     "tradeValue": 2608327,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.2
   },
   "3521": {
     "name": "台鋼建設",
     "price": 11.8,
     "change": -0.2,
-    "pctChange": -1.69,
+    "pctChange": -1.67,
     "open": 11.85,
     "high": 11.95,
     "low": 11.6,
-    "prevClose": 11.8,
+    "prevClose": 12,
     "volume": 21,
     "turnover": "24.9 萬",
     "tradeValue": 249379,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 11.8
   },
   "3522": {
     "name": "御嵿",
@@ -12827,39 +13189,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 12.45,
     "high": 12.5,
     "low": 12.2,
-    "prevClose": 12.45,
+    "prevClose": 12.5,
     "volume": 152,
     "turnover": "187.4 萬",
     "tradeValue": 1874397,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.45
   },
   "3523": {
     "name": "迎輝",
     "price": 14.3,
     "change": 0.8,
-    "pctChange": 5.59,
+    "pctChange": 5.93,
     "open": 13.7,
     "high": 14.6,
     "low": 13.7,
-    "prevClose": 14.3,
+    "prevClose": 13.5,
     "volume": 29,
     "turnover": "40.8 萬",
     "tradeValue": 408147,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.3
   },
   "3526": {
     "name": "凡甲",
     "price": 274.5,
     "change": 2.5,
-    "pctChange": 0.91,
+    "pctChange": 0.92,
     "open": 272,
     "high": 274.5,
     "low": 270.5,
-    "prevClose": 274.5,
+    "prevClose": 272,
     "volume": 138,
     "turnover": "3751.4 萬",
     "tradeValue": 37514004,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 274.5
   },
   "3527": {
     "name": "聚積",
@@ -12873,7 +13241,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 38,
     "turnover": "196.7 萬",
     "tradeValue": 1967163,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 51.4
   },
   "3528": {
     "code": "3528",
@@ -12896,15 +13266,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "力旺",
     "price": 3170,
     "change": -75,
-    "pctChange": -2.37,
+    "pctChange": -2.31,
     "open": 3245,
     "high": 3290,
     "low": 3160,
-    "prevClose": 3170,
+    "prevClose": 3245,
     "volume": 936,
     "turnover": "30.0 億",
     "tradeValue": 3004249900,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 3170
   },
   "3530": {
     "code": "3530",
@@ -12935,7 +13307,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 5,
     "turnover": "10.8 萬",
     "tradeValue": 108034,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 21.15
   },
   "3532": {
     "code": "3532",
@@ -12992,29 +13366,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "堡達",
     "price": 56.8,
     "change": -1.8,
-    "pctChange": -3.17,
+    "pctChange": -3.07,
     "open": 58.6,
     "high": 59.4,
     "low": 56.6,
-    "prevClose": 56.8,
+    "prevClose": 58.6,
     "volume": 2256,
     "turnover": "1.3 億",
     "tradeValue": 130681585,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 56.8
   },
   "3540": {
     "name": "曜越",
     "price": 23.4,
     "change": 0.3,
-    "pctChange": 1.28,
+    "pctChange": 1.3,
     "open": 23.1,
     "high": 23.45,
     "low": 22.85,
-    "prevClose": 23.4,
+    "prevClose": 23.1,
     "volume": 129,
     "turnover": "297.6 萬",
     "tradeValue": 2975642,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.4
   },
   "3541": {
     "name": "西柏",
@@ -13024,11 +13402,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 24,
     "high": 24.65,
     "low": 24,
-    "prevClose": 24.55,
+    "prevClose": 24.4,
     "volume": 52,
     "turnover": "127.5 萬",
     "tradeValue": 1274761,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.55
   },
   "3543": {
     "code": "3543",
@@ -13072,25 +13452,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 73.1,
     "high": 73.2,
     "low": 72.7,
-    "prevClose": 73,
+    "prevClose": 73.2,
     "volume": 88,
     "turnover": "640.4 萬",
     "tradeValue": 6403528,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 73
   },
   "3548": {
     "name": "兆利",
     "price": 77.2,
     "change": 0.7,
-    "pctChange": 0.91,
+    "pctChange": 0.92,
     "open": 76.5,
     "high": 77.3,
     "low": 76.3,
-    "prevClose": 77.2,
+    "prevClose": 76.5,
     "volume": 146,
     "turnover": "1121.3 萬",
     "tradeValue": 11212568,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 77.2
   },
   "3550": {
     "code": "3550",
@@ -13113,29 +13497,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "世禾",
     "price": 199.5,
     "change": 6.5,
-    "pctChange": 3.26,
+    "pctChange": 3.37,
     "open": 197,
     "high": 203,
     "low": 195.5,
-    "prevClose": 199.5,
+    "prevClose": 193,
     "volume": 3013,
     "turnover": "6.0 億",
     "tradeValue": 598779783,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 199.5
   },
   "3552": {
     "name": "同致",
     "price": 45.8,
     "change": 1.5,
-    "pctChange": 3.28,
+    "pctChange": 3.39,
     "open": 45.55,
     "high": 47,
     "low": 45.1,
-    "prevClose": 45.8,
+    "prevClose": 44.3,
     "volume": 846,
     "turnover": "3881.2 萬",
     "tradeValue": 38812336,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 45.8
   },
   "3555": {
     "name": "博士旺",
@@ -13149,7 +13537,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 38,
     "turnover": "635.9 萬",
     "tradeValue": 6358812,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 167
   },
   "3556": {
     "name": "禾瑞亞",
@@ -13163,7 +13553,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 126,
     "turnover": "747.1 萬",
     "tradeValue": 7471288,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 59.1
   },
   "3557": {
     "code": "3557",
@@ -13186,15 +13578,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "神準",
     "price": 131,
     "change": 2,
-    "pctChange": 1.53,
+    "pctChange": 1.55,
     "open": 128.5,
     "high": 133,
     "low": 128.5,
-    "prevClose": 131,
+    "prevClose": 129,
     "volume": 307,
     "turnover": "4029.4 萬",
     "tradeValue": 40294489,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 131
   },
   "3563": {
     "code": "3563",
@@ -13217,15 +13611,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "其陽",
     "price": 56.1,
     "change": 5.1,
-    "pctChange": 9.09,
+    "pctChange": 10,
     "open": 51.8,
     "high": 56.1,
     "low": 50.8,
-    "prevClose": 56.1,
+    "prevClose": 51,
     "volume": 1976,
     "turnover": "1.1 億",
     "tradeValue": 109470770,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 56.1
   },
   "3567": {
     "name": "逸昌",
@@ -13235,11 +13631,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 26.5,
     "high": 26.5,
     "low": 26.2,
-    "prevClose": 26.2,
+    "prevClose": 26.15,
     "volume": 48,
     "turnover": "126.0 萬",
     "tradeValue": 1260011,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 26.2
   },
   "3570": {
     "name": "大塚",
@@ -13249,11 +13647,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 170.5,
     "high": 170.5,
     "low": 169.5,
-    "prevClose": 170,
+    "prevClose": 170.5,
     "volume": 19,
     "turnover": "323.5 萬",
     "tradeValue": 3235394,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 170
   },
   "3576": {
     "code": "3576",
@@ -13280,11 +13680,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 115,
     "high": 115.5,
     "low": 114,
-    "prevClose": 114.5,
+    "prevClose": 115.5,
     "volume": 189,
     "turnover": "2168.4 萬",
     "tradeValue": 21684283,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 114.5
   },
   "3580": {
     "name": "友威科",
@@ -13294,25 +13696,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 108,
     "high": 110,
     "low": 107.5,
-    "prevClose": 108.5,
+    "prevClose": 109,
     "volume": 753,
     "turnover": "8192.4 萬",
     "tradeValue": 81924366,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 108.5
   },
   "3581": {
     "name": "博磊",
     "price": 118.5,
     "change": 1.5,
-    "pctChange": 1.27,
+    "pctChange": 1.28,
     "open": 115.5,
     "high": 122,
     "low": 115.5,
-    "prevClose": 118.5,
+    "prevClose": 117,
     "volume": 619,
     "turnover": "7362.2 萬",
     "tradeValue": 73622217,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 118.5
   },
   "3583": {
     "code": "3583",
@@ -13335,15 +13741,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "閎康",
     "price": 245,
     "change": 4,
-    "pctChange": 1.63,
+    "pctChange": 1.66,
     "open": 242.5,
     "high": 246,
     "low": 242,
-    "prevClose": 245,
+    "prevClose": 241,
     "volume": 511,
     "turnover": "1.2 億",
     "tradeValue": 124963209,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 245
   },
   "3588": {
     "code": "3588",
@@ -13417,15 +13825,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "磐儀",
     "price": 47.15,
     "change": -0.55,
-    "pctChange": -1.17,
+    "pctChange": -1.15,
     "open": 47.95,
     "high": 48.15,
     "low": 47.1,
-    "prevClose": 47.15,
+    "prevClose": 47.7,
     "volume": 292,
     "turnover": "1381.5 萬",
     "tradeValue": 13815329,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 47.15
   },
   "3596": {
     "code": "3596",
@@ -13448,15 +13858,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "映興",
     "price": 27.7,
     "change": -0.4,
-    "pctChange": -1.44,
+    "pctChange": -1.42,
     "open": 27.85,
     "high": 27.95,
     "low": 27.65,
-    "prevClose": 27.7,
+    "prevClose": 28.1,
     "volume": 26,
     "turnover": "71.2 萬",
     "tradeValue": 711795,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 27.7
   },
   "3605": {
     "code": "3605",
@@ -13496,15 +13908,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "三一東林",
     "price": 22.9,
     "change": -0.1,
-    "pctChange": -0.44,
+    "pctChange": -0.43,
     "open": 23,
     "high": 23,
     "low": 22.3,
-    "prevClose": 22.9,
+    "prevClose": 23,
     "volume": 49,
     "turnover": "111.6 萬",
     "tradeValue": 1116416,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.9
   },
   "3611": {
     "name": "鼎翰",
@@ -13518,21 +13932,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 22,
     "turnover": "404.9 萬",
     "tradeValue": 4048789,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 184.5
   },
   "3615": {
     "name": "安可",
     "price": 45,
     "change": 1.75,
-    "pctChange": 3.89,
+    "pctChange": 4.05,
     "open": 43.25,
     "high": 46.8,
     "low": 43.05,
-    "prevClose": 45,
+    "prevClose": 43.25,
     "volume": 4865,
     "turnover": "2.2 億",
     "tradeValue": 218576844,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 45
   },
   "3617": {
     "code": "3617",
@@ -13580,21 +13998,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 399,
     "turnover": "1205.0 萬",
     "tradeValue": 12050044,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.55
   },
   "3624": {
     "name": "光頡",
     "price": 148.5,
     "change": -2.5,
-    "pctChange": -1.68,
+    "pctChange": -1.66,
     "open": 151,
     "high": 157.5,
     "low": 147,
-    "prevClose": 148.5,
+    "prevClose": 151,
     "volume": 40514,
     "turnover": "61.6 億",
     "tradeValue": 6159460700,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 148.5
   },
   "3625": {
     "name": "西勝",
@@ -13604,39 +14026,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 11.25,
     "high": 11.25,
     "low": 10.9,
-    "prevClose": 11.15,
+    "prevClose": 11.2,
     "volume": 298,
     "turnover": "329.1 萬",
     "tradeValue": 3290549,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 11.15
   },
   "3628": {
     "name": "盈正",
     "price": 71.8,
     "change": -1,
-    "pctChange": -1.39,
+    "pctChange": -1.37,
     "open": 72,
     "high": 73.1,
     "low": 71.8,
-    "prevClose": 71.8,
+    "prevClose": 72.8,
     "volume": 83,
     "turnover": "599.0 萬",
     "tradeValue": 5989599,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 71.8
   },
   "3629": {
     "name": "地心引力",
     "price": 14.6,
     "change": -1.6,
-    "pctChange": -10.96,
+    "pctChange": -9.88,
     "open": 14.95,
     "high": 15,
     "low": 14.6,
-    "prevClose": 14.6,
+    "prevClose": 16.2,
     "volume": 8,
     "turnover": "11.8 萬",
     "tradeValue": 117900,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.6
   },
   "3630": {
     "name": "新鉅科",
@@ -13646,25 +14074,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 26.9,
     "high": 27.15,
     "low": 25.95,
-    "prevClose": 26.8,
+    "prevClose": 26.9,
     "volume": 522,
     "turnover": "1396.1 萬",
     "tradeValue": 13960792,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 26.8
   },
   "3631": {
     "name": "晟楠",
     "price": 41.15,
     "change": 0.7,
-    "pctChange": 1.7,
+    "pctChange": 1.73,
     "open": 40.7,
     "high": 41.25,
     "low": 40.2,
-    "prevClose": 41.15,
+    "prevClose": 40.45,
     "volume": 210,
     "turnover": "855.9 萬",
     "tradeValue": 8558985,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.15
   },
   "3632": {
     "name": "研勤",
@@ -13678,7 +14110,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 31,
     "turnover": "21.8 萬",
     "tradeValue": 217718,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 7.08
   },
   "3645": {
     "code": "3645",
@@ -13705,11 +14139,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 24.85,
     "high": 25,
     "low": 24.85,
-    "prevClose": 24.9,
+    "prevClose": 24.85,
     "volume": 12,
     "turnover": "29.9 萬",
     "tradeValue": 299392,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.9
   },
   "3652": {
     "code": "3652",
@@ -13770,25 +14206,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 65,
     "high": 65.4,
     "low": 64.5,
-    "prevClose": 64.8,
+    "prevClose": 65.1,
     "volume": 443,
     "turnover": "2874.3 萬",
     "tradeValue": 28742607,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 64.8
   },
   "3664": {
     "name": "安瑞-KY",
     "price": 8.31,
     "change": -0.54,
-    "pctChange": -6.5,
+    "pctChange": -6.1,
     "open": 8.85,
     "high": 8.85,
     "low": 8.31,
-    "prevClose": 8.31,
+    "prevClose": 8.85,
     "volume": 13,
     "turnover": "10.9 萬",
     "tradeValue": 109450,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 8.31
   },
   "3665": {
     "code": "3665",
@@ -13819,7 +14259,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 114,
     "turnover": "286.9 萬",
     "tradeValue": 2869499,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.3
   },
   "3669": {
     "code": "3669",
@@ -13842,15 +14284,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "康聯訊",
     "price": 12.25,
     "change": 0.15,
-    "pctChange": 1.22,
+    "pctChange": 1.24,
     "open": 12.1,
     "high": 12.25,
     "low": 12.1,
-    "prevClose": 12.25,
+    "prevClose": 12.1,
     "volume": 6,
     "turnover": "7.2 萬",
     "tradeValue": 71800,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.25
   },
   "3673": {
     "code": "3673",
@@ -13877,11 +14321,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 359,
     "high": 378.5,
     "low": 352.5,
-    "prevClose": 360,
+    "prevClose": 359,
     "volume": 2979,
     "turnover": "10.9 億",
     "tradeValue": 1089614128,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 360
   },
   "3679": {
     "code": "3679",
@@ -13908,25 +14354,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 558,
     "high": 558,
     "low": 547,
-    "prevClose": 552,
+    "prevClose": 551,
     "volume": 788,
     "turnover": "4.3 億",
     "tradeValue": 434138603,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 552
   },
   "3685": {
     "name": "元創精密",
     "price": 36,
     "change": 1.35,
-    "pctChange": 3.75,
+    "pctChange": 3.9,
     "open": 34.65,
     "high": 36.4,
     "low": 33.9,
-    "prevClose": 36,
+    "prevClose": 34.65,
     "volume": 1516,
     "turnover": "5391.9 萬",
     "tradeValue": 53918527,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 36
   },
   "3686": {
     "code": "3686",
@@ -13949,29 +14399,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "歐買尬",
     "price": 61.1,
     "change": -0.5,
-    "pctChange": -0.82,
+    "pctChange": -0.81,
     "open": 61.8,
     "high": 61.8,
     "low": 61.1,
-    "prevClose": 61.1,
+    "prevClose": 61.6,
     "volume": 31,
     "turnover": "192.7 萬",
     "tradeValue": 1927309,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 61.1
   },
   "3689": {
     "name": "湧德",
     "price": 113,
     "change": 2.5,
-    "pctChange": 2.21,
+    "pctChange": 2.26,
     "open": 111,
     "high": 113.5,
     "low": 110.5,
-    "prevClose": 113,
+    "prevClose": 110.5,
     "volume": 602,
     "turnover": "6749.9 萬",
     "tradeValue": 67498521,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 113
   },
   "3691": {
     "name": "碩禾",
@@ -13981,11 +14435,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 112.5,
     "high": 114,
     "low": 109.5,
-    "prevClose": 113,
+    "prevClose": 112.5,
     "volume": 1056,
     "turnover": "1.2 億",
     "tradeValue": 117777097,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 113
   },
   "3693": {
     "name": "營邦",
@@ -13995,11 +14451,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 660,
     "high": 676,
     "low": 656,
-    "prevClose": 663,
+    "prevClose": 664,
     "volume": 866,
     "turnover": "5.7 億",
     "tradeValue": 574171978,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 663
   },
   "3694": {
     "code": "3694",
@@ -14124,15 +14582,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "漢磊",
     "price": 85.2,
     "change": 7.7,
-    "pctChange": 9.04,
+    "pctChange": 9.94,
     "open": 77.5,
     "high": 85.2,
     "low": 76.3,
-    "prevClose": 85.2,
+    "prevClose": 77.5,
     "volume": 35856,
     "turnover": "29.8 億",
     "tradeValue": 2984859714,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 85.2
   },
   "3708": {
     "code": "3708",
@@ -14159,25 +14619,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 66,
     "high": 66,
     "low": 65.2,
-    "prevClose": 65.5,
+    "prevClose": 65.9,
     "volume": 195,
     "turnover": "1274.4 萬",
     "tradeValue": 12743787,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 65.5
   },
   "3710": {
     "name": "連展投控",
     "price": 8.12,
     "change": 0.04,
-    "pctChange": 0.49,
+    "pctChange": 0.5,
     "open": 8.08,
     "high": 8.15,
     "low": 7.86,
-    "prevClose": 8.12,
+    "prevClose": 8.08,
     "volume": 202,
     "turnover": "161.3 萬",
     "tradeValue": 1612974,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 8.12
   },
   "3711": {
     "code": "3711",
@@ -14225,7 +14689,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 19,
     "turnover": "25.3 萬",
     "tradeValue": 252501,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 13.8
   },
   "3714": {
     "code": "3714",
@@ -14299,15 +14765,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "中光電投控",
     "price": 65.1,
     "change": 0.8,
-    "pctChange": 1.23,
+    "pctChange": 1.24,
     "open": 64.8,
     "high": 65.3,
     "low": 64.3,
-    "prevClose": 65.1,
+    "prevClose": 64.3,
     "volume": 1255,
     "turnover": "8140.2 萬",
     "tradeValue": 81402451,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 65.1
   },
   "4102": {
     "name": "永日",
@@ -14321,7 +14789,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 32,
     "turnover": "59.1 萬",
     "tradeValue": 590746,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.45
   },
   "4104": {
     "code": "4104",
@@ -14348,11 +14818,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 78.8,
     "high": 78.9,
     "low": 78.5,
-    "prevClose": 78.9,
+    "prevClose": 78.5,
     "volume": 314,
     "turnover": "2471.3 萬",
     "tradeValue": 24712510,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 78.9
   },
   "4106": {
     "code": "4106",
@@ -14379,11 +14851,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 110,
     "high": 110.5,
     "low": 110,
-    "prevClose": 110,
+    "prevClose": 110.5,
     "volume": 18,
     "turnover": "193.5 萬",
     "tradeValue": 1934632,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 110
   },
   "4108": {
     "code": "4108",
@@ -14406,15 +14880,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "加捷生醫",
     "price": 11,
     "change": 0.1,
-    "pctChange": 0.91,
+    "pctChange": 0.92,
     "open": 10.95,
     "high": 11,
     "low": 10.9,
-    "prevClose": 11,
+    "prevClose": 10.9,
     "volume": 67,
     "turnover": "72.9 萬",
     "tradeValue": 728623,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 11
   },
   "4111": {
     "name": "濟生",
@@ -14424,11 +14900,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 28.85,
     "high": 29,
     "low": 28.55,
-    "prevClose": 29,
+    "prevClose": 28.85,
     "volume": 68,
     "turnover": "194.8 萬",
     "tradeValue": 1948078,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29
   },
   "4113": {
     "name": "聯上",
@@ -14438,11 +14916,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 15.15,
     "high": 15.2,
     "low": 15.1,
-    "prevClose": 15.2,
+    "prevClose": 15.1,
     "volume": 75,
     "turnover": "113.8 萬",
     "tradeValue": 1138487,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.2
   },
   "4114": {
     "name": "健喬",
@@ -14452,25 +14932,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 29.5,
     "high": 29.5,
     "low": 29.3,
-    "prevClose": 29.35,
+    "prevClose": 29.5,
     "volume": 633,
     "turnover": "1860.7 萬",
     "tradeValue": 18607482,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29.35
   },
   "4116": {
     "name": "明基醫",
     "price": 40.15,
     "change": 0.35,
-    "pctChange": 0.87,
+    "pctChange": 0.88,
     "open": 40,
     "high": 40.15,
     "low": 39.75,
-    "prevClose": 40.15,
+    "prevClose": 39.8,
     "volume": 56,
     "turnover": "224.0 萬",
     "tradeValue": 2240319,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 40.15
   },
   "4119": {
     "code": "4119",
@@ -14497,25 +14981,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 46,
     "high": 46.2,
     "low": 46,
-    "prevClose": 46.1,
+    "prevClose": 46,
     "volume": 59,
     "turnover": "270.8 萬",
     "tradeValue": 2708309,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 46.1
   },
   "4121": {
     "name": "優盛",
     "price": 12.9,
     "change": 0.15,
-    "pctChange": 1.16,
+    "pctChange": 1.18,
     "open": 12.8,
     "high": 13,
     "low": 12.8,
-    "prevClose": 12.9,
+    "prevClose": 12.75,
     "volume": 57,
     "turnover": "73.8 萬",
     "tradeValue": 738145,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.9
   },
   "4123": {
     "name": "晟德",
@@ -14525,11 +15013,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 31,
     "high": 31.2,
     "low": 30.8,
-    "prevClose": 31.2,
+    "prevClose": 31.3,
     "volume": 1080,
     "turnover": "3346.2 萬",
     "tradeValue": 33462152,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.2
   },
   "4126": {
     "name": "太醫",
@@ -14543,35 +15033,41 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 13,
     "turnover": "101.2 萬",
     "tradeValue": 1012407,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 78
   },
   "4127": {
     "name": "天良",
     "price": 45.6,
     "change": -1.1,
-    "pctChange": -2.41,
+    "pctChange": -2.36,
     "open": 47,
     "high": 47.55,
     "low": 45.1,
-    "prevClose": 45.6,
+    "prevClose": 46.7,
     "volume": 537,
     "turnover": "2469.3 萬",
     "tradeValue": 24692795,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 45.6
   },
   "4128": {
     "name": "中天",
     "price": 15.3,
     "change": 0.15,
-    "pctChange": 0.98,
+    "pctChange": 0.99,
     "open": 15.2,
     "high": 15.35,
     "low": 15,
-    "prevClose": 15.3,
+    "prevClose": 15.15,
     "volume": 791,
     "turnover": "1203.7 萬",
     "tradeValue": 12037423,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.3
   },
   "4129": {
     "name": "聯合",
@@ -14581,11 +15077,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 82.5,
     "high": 82.5,
     "low": 82.1,
-    "prevClose": 82.3,
+    "prevClose": 82.6,
     "volume": 62,
     "turnover": "512.4 萬",
     "tradeValue": 5124055,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 82.3
   },
   "4131": {
     "name": "浩泰",
@@ -14595,11 +15093,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 30.85,
     "high": 30.85,
     "low": 29.9,
-    "prevClose": 30.8,
+    "prevClose": 30.85,
     "volume": 36,
     "turnover": "107.9 萬",
     "tradeValue": 1079461,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.8
   },
   "4133": {
     "code": "4133",
@@ -14639,15 +15139,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "曜亞",
     "price": 53.5,
     "change": -0.8,
-    "pctChange": -1.5,
+    "pctChange": -1.47,
     "open": 54,
     "high": 54.1,
     "low": 53.5,
-    "prevClose": 53.5,
+    "prevClose": 54.3,
     "volume": 67,
     "turnover": "359.2 萬",
     "tradeValue": 3592120,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 53.5
   },
   "4139": {
     "name": "馬光-KY",
@@ -14661,7 +15163,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 23,
     "turnover": "94.2 萬",
     "tradeValue": 941740,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.95
   },
   "4142": {
     "code": "4142",
@@ -14684,15 +15188,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "中裕",
     "price": 61.4,
     "change": -0.6,
-    "pctChange": -0.98,
+    "pctChange": -0.97,
     "open": 62,
     "high": 62,
     "low": 61,
-    "prevClose": 61.4,
+    "prevClose": 62,
     "volume": 565,
     "turnover": "3464.7 萬",
     "tradeValue": 34647170,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 61.4
   },
   "4148": {
     "code": "4148",
@@ -14715,29 +15221,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "鈺緯",
     "price": 31.55,
     "change": 0.3,
-    "pctChange": 0.95,
+    "pctChange": 0.96,
     "open": 31.25,
     "high": 31.65,
     "low": 31.25,
-    "prevClose": 31.55,
+    "prevClose": 31.25,
     "volume": 20,
     "turnover": "61.4 萬",
     "tradeValue": 614222,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.55
   },
   "4154": {
     "name": "樂威科-KY",
     "price": 11.25,
     "change": -1.25,
-    "pctChange": -11.11,
+    "pctChange": -10,
     "open": 11.25,
     "high": 11.25,
     "low": 11.25,
-    "prevClose": 11.25,
+    "prevClose": 12.5,
     "volume": 8,
     "turnover": "9.0 萬",
     "tradeValue": 90011,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 11.25
   },
   "4155": {
     "code": "4155",
@@ -14764,11 +15274,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 8.7,
     "high": 8.73,
     "low": 8.64,
-    "prevClose": 8.65,
+    "prevClose": 8.73,
     "volume": 667,
     "turnover": "578.7 萬",
     "tradeValue": 5787351,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 8.65
   },
   "4160": {
     "name": "訊聯基因",
@@ -14778,11 +15290,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 38.8,
     "high": 38.9,
     "low": 38.7,
-    "prevClose": 38.8,
+    "prevClose": 38.9,
     "volume": 14,
     "turnover": "54.1 萬",
     "tradeValue": 541264,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 38.8
   },
   "4161": {
     "name": "聿新科",
@@ -14792,11 +15306,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 21.9,
     "high": 21.95,
     "low": 21.6,
-    "prevClose": 21.65,
+    "prevClose": 21.75,
     "volume": 30,
     "turnover": "65.3 萬",
     "tradeValue": 652987,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 21.65
   },
   "4162": {
     "name": "智擎",
@@ -14806,25 +15322,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 55.5,
     "high": 55.6,
     "low": 55.1,
-    "prevClose": 55.4,
+    "prevClose": 55.3,
     "volume": 107,
     "turnover": "590.0 萬",
     "tradeValue": 5899827,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 55.4
   },
   "4163": {
     "name": "鐿鈦",
     "price": 137,
     "change": 0.5,
-    "pctChange": 0.36,
+    "pctChange": 0.37,
     "open": 135.5,
     "high": 137,
     "low": 135.5,
-    "prevClose": 137,
+    "prevClose": 136.5,
     "volume": 18,
     "turnover": "248.2 萬",
     "tradeValue": 2481977,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 137
   },
   "4164": {
     "code": "4164",
@@ -14847,15 +15367,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "友霖",
     "price": 24.4,
     "change": -0.35,
-    "pctChange": -1.43,
+    "pctChange": -1.41,
     "open": 24.6,
     "high": 24.6,
     "low": 24.25,
-    "prevClose": 24.4,
+    "prevClose": 24.75,
     "volume": 36,
     "turnover": "88.3 萬",
     "tradeValue": 883340,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.4
   },
   "4167": {
     "name": "松瑞藥",
@@ -14865,25 +15387,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 19.6,
     "high": 19.6,
     "low": 19.4,
-    "prevClose": 19.55,
+    "prevClose": 19.6,
     "volume": 581,
     "turnover": "1133.9 萬",
     "tradeValue": 11339230,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.55
   },
   "4168": {
     "name": "醣聯",
     "price": 22.4,
     "change": 0.25,
-    "pctChange": 1.12,
+    "pctChange": 1.13,
     "open": 22.55,
     "high": 23,
     "low": 22.25,
-    "prevClose": 22.4,
+    "prevClose": 22.15,
     "volume": 198,
     "turnover": "446.4 萬",
     "tradeValue": 4464468,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.4
   },
   "4169": {
     "code": "4169",
@@ -14914,35 +15440,41 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 32,
     "turnover": "51.8 萬",
     "tradeValue": 517579,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.35
   },
   "4173": {
     "name": "久裕",
     "price": 17.4,
     "change": 0.15,
-    "pctChange": 0.86,
+    "pctChange": 0.87,
     "open": 17.3,
     "high": 17.4,
     "low": 17.25,
-    "prevClose": 17.4,
+    "prevClose": 17.25,
     "volume": 15,
     "turnover": "25.9 萬",
     "tradeValue": 259172,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.4
   },
   "4174": {
     "name": "浩鼎",
     "price": 42,
     "change": -1.1,
-    "pctChange": -2.62,
+    "pctChange": -2.55,
     "open": 45.6,
     "high": 45.6,
     "low": 40.1,
-    "prevClose": 42,
+    "prevClose": 43.1,
     "volume": 5956,
     "turnover": "2.5 億",
     "tradeValue": 252612825,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 42
   },
   "4178": {
     "code": "4178",
@@ -14965,29 +15497,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "福永生技",
     "price": 14.35,
     "change": -0.1,
-    "pctChange": -0.7,
+    "pctChange": -0.69,
     "open": 14.35,
     "high": 14.35,
     "low": 14.35,
-    "prevClose": 14.35,
+    "prevClose": 14.45,
     "volume": 3,
     "turnover": "4.3 萬",
     "tradeValue": 43065,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.35
   },
   "4188": {
     "name": "安克",
     "price": 14.1,
     "change": -0.2,
-    "pctChange": -1.42,
+    "pctChange": -1.4,
     "open": 14.3,
     "high": 14.45,
     "low": 14.1,
-    "prevClose": 14.1,
+    "prevClose": 14.3,
     "volume": 153,
     "turnover": "217.1 萬",
     "tradeValue": 2170597,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.1
   },
   "4190": {
     "code": "4190",
@@ -15031,11 +15567,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 49,
     "high": 49,
     "low": 49,
-    "prevClose": 49,
+    "prevClose": 49.25,
     "volume": 1,
     "turnover": "5.6 萬",
     "tradeValue": 55698,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 49
   },
   "4205": {
     "name": "中華食",
@@ -15045,11 +15583,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 68.4,
     "high": 68.4,
     "low": 68.3,
-    "prevClose": 68.4,
+    "prevClose": 68.8,
     "volume": 25,
     "turnover": "170.5 萬",
     "tradeValue": 1704561,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 68.4
   },
   "4207": {
     "name": "環泰",
@@ -15063,7 +15603,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 53,
     "turnover": "103.5 萬",
     "tradeValue": 1034699,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.4
   },
   "4303": {
     "name": "信立",
@@ -15077,7 +15619,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 461,
     "turnover": "1533.3 萬",
     "tradeValue": 15333479,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 33.35
   },
   "4304": {
     "name": "勝昱",
@@ -15091,7 +15635,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 30,
     "turnover": "51.4 萬",
     "tradeValue": 513851,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.3
   },
   "4306": {
     "code": "4306",
@@ -15118,11 +15664,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 14,
     "high": 14,
     "low": 13.9,
-    "prevClose": 13.95,
+    "prevClose": 13.9,
     "volume": 12,
     "turnover": "16.9 萬",
     "tradeValue": 168501,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 13.95
   },
   "4402": {
     "name": "郡都開發",
@@ -15136,7 +15684,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 15,
     "turnover": "21.4 萬",
     "tradeValue": 214286,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.15
   },
   "4406": {
     "name": "新昕纖",
@@ -15146,11 +15696,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 10.15,
     "high": 10.3,
     "low": 10.15,
-    "prevClose": 10.25,
+    "prevClose": 10.2,
     "volume": 23,
     "turnover": "23.6 萬",
     "tradeValue": 235850,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 10.25
   },
   "4413": {
     "name": "飛寶企業",
@@ -15160,11 +15712,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 20,
     "high": 20.3,
     "low": 20,
-    "prevClose": 20.3,
+    "prevClose": 20.35,
     "volume": 27,
     "turnover": "54.5 萬",
     "tradeValue": 544615,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.3
   },
   "4414": {
     "code": "4414",
@@ -15187,29 +15741,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "三圓",
     "price": 12.8,
     "change": -0.3,
-    "pctChange": -2.34,
+    "pctChange": -2.29,
     "open": 13.1,
     "high": 13.3,
     "low": 12.75,
-    "prevClose": 12.8,
+    "prevClose": 13.1,
     "volume": 731,
     "turnover": "944.6 萬",
     "tradeValue": 9445584,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.8
   },
   "4417": {
     "name": "金洲",
     "price": 49.35,
     "change": -0.25,
-    "pctChange": -0.51,
+    "pctChange": -0.5,
     "open": 49.6,
     "high": 49.6,
     "low": 49.3,
-    "prevClose": 49.35,
+    "prevClose": 49.6,
     "volume": 38,
     "turnover": "187.5 萬",
     "tradeValue": 1874924,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 49.35
   },
   "4419": {
     "name": "皇家美食",
@@ -15223,7 +15781,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 1,
     "turnover": "5.0 萬",
     "tradeValue": 50266,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 49.95
   },
   "4420": {
     "name": "光明",
@@ -15233,11 +15793,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 35.6,
     "high": 35.65,
     "low": 35,
-    "prevClose": 35.5,
+    "prevClose": 35.65,
     "volume": 29,
     "turnover": "104.2 萬",
     "tradeValue": 1041564,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 35.5
   },
   "4426": {
     "code": "4426",
@@ -15264,25 +15826,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 18.05,
     "high": 18.1,
     "low": 17.55,
-    "prevClose": 17.7,
+    "prevClose": 17.8,
     "volume": 31,
     "turnover": "54.6 萬",
     "tradeValue": 546080,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.7
   },
   "4432": {
     "name": "銘旺實",
     "price": 15.55,
     "change": 0.2,
-    "pctChange": 1.29,
+    "pctChange": 1.3,
     "open": 15.45,
     "high": 15.6,
     "low": 15.25,
-    "prevClose": 15.55,
+    "prevClose": 15.35,
     "volume": 21,
     "turnover": "32.3 萬",
     "tradeValue": 322700,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.55
   },
   "4433": {
     "name": "興采",
@@ -15292,11 +15858,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 18.05,
     "high": 18.05,
     "low": 17.9,
-    "prevClose": 18,
+    "prevClose": 18.05,
     "volume": 30,
     "turnover": "53.9 萬",
     "tradeValue": 538882,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18
   },
   "4438": {
     "code": "4438",
@@ -15370,15 +15938,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "竣邦-KY",
     "price": 53.6,
     "change": -0.4,
-    "pctChange": -0.75,
+    "pctChange": -0.74,
     "open": 53.6,
     "high": 53.9,
     "low": 53.3,
-    "prevClose": 53.6,
+    "prevClose": 54,
     "volume": 9,
     "turnover": "48.5 萬",
     "tradeValue": 485140,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 53.6
   },
   "4502": {
     "name": "健信",
@@ -15388,11 +15958,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 15.65,
     "high": 15.85,
     "low": 15.65,
-    "prevClose": 15.85,
+    "prevClose": 15.8,
     "volume": 5,
     "turnover": "7.6 萬",
     "tradeValue": 75949,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.85
   },
   "4503": {
     "name": "金雨",
@@ -15402,39 +15974,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 24.15,
     "high": 24.25,
     "low": 24,
-    "prevClose": 24.1,
+    "prevClose": 24.15,
     "volume": 60,
     "turnover": "144.1 萬",
     "tradeValue": 1441395,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.1
   },
   "4506": {
     "name": "崇友",
     "price": 117.5,
     "change": -0.5,
-    "pctChange": -0.43,
+    "pctChange": -0.42,
     "open": 118,
     "high": 118,
     "low": 117,
-    "prevClose": 117.5,
+    "prevClose": 118,
     "volume": 80,
     "turnover": "938.0 萬",
     "tradeValue": 9380341,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 117.5
   },
   "4510": {
     "name": "高鋒",
     "price": 43.6,
     "change": 0.15,
-    "pctChange": 0.34,
+    "pctChange": 0.35,
     "open": 43.55,
     "high": 43.65,
     "low": 43,
-    "prevClose": 43.6,
+    "prevClose": 43.45,
     "volume": 630,
     "turnover": "2728.6 萬",
     "tradeValue": 27285762,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 43.6
   },
   "4513": {
     "name": "福裕",
@@ -15444,11 +16022,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 16.4,
     "high": 16.5,
     "low": 16.15,
-    "prevClose": 16.3,
+    "prevClose": 16.4,
     "volume": 111,
     "turnover": "179.8 萬",
     "tradeValue": 1798441,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.3
   },
   "4523": {
     "name": "永彰",
@@ -15458,11 +16038,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 24.15,
     "high": 24.15,
     "low": 23.85,
-    "prevClose": 23.9,
+    "prevClose": 24,
     "volume": 56,
     "turnover": "134.2 萬",
     "tradeValue": 1341824,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.9
   },
   "4526": {
     "code": "4526",
@@ -15489,11 +16071,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 15.05,
     "high": 15.05,
     "low": 14.8,
-    "prevClose": 14.8,
+    "prevClose": 14.85,
     "volume": 19,
     "turnover": "27.9 萬",
     "tradeValue": 279434,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.8
   },
   "4529": {
     "name": "淳紳",
@@ -15503,25 +16087,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 3.33,
     "high": 3.34,
     "low": 3.33,
-    "prevClose": 3.34,
+    "prevClose": 3.33,
     "volume": 4,
     "turnover": "1.3 萬",
     "tradeValue": 13330,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 3.34
   },
   "4530": {
     "name": "天意能創",
     "price": 24,
     "change": -0.1,
-    "pctChange": -0.42,
+    "pctChange": -0.41,
     "open": 24.9,
     "high": 24.9,
     "low": 23.75,
-    "prevClose": 24,
+    "prevClose": 24.1,
     "volume": 14,
     "turnover": "34.4 萬",
     "tradeValue": 343526,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24
   },
   "4532": {
     "code": "4532",
@@ -15548,25 +16136,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 25.55,
     "high": 25.65,
     "low": 25.2,
-    "prevClose": 25.6,
+    "prevClose": 25.55,
     "volume": 969,
     "turnover": "2457.4 萬",
     "tradeValue": 24574344,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.6
   },
   "4534": {
     "name": "慶騰",
     "price": 30,
     "change": -0.7,
-    "pctChange": -2.33,
+    "pctChange": -2.28,
     "open": 30.7,
     "high": 30.7,
     "low": 29.8,
-    "prevClose": 30,
+    "prevClose": 30.7,
     "volume": 884,
     "turnover": "2658.3 萬",
     "tradeValue": 26582539,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30
   },
   "4535": {
     "name": "至興",
@@ -15576,11 +16168,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 26.9,
     "high": 27.05,
     "low": 26.7,
-    "prevClose": 26.75,
+    "prevClose": 27,
     "volume": 43,
     "turnover": "115.3 萬",
     "tradeValue": 1153303,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 26.75
   },
   "4536": {
     "code": "4536",
@@ -15603,15 +16197,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "大詠城",
     "price": 17.3,
     "change": -0.15,
-    "pctChange": -0.87,
+    "pctChange": -0.86,
     "open": 17.3,
     "high": 17.3,
     "low": 17.2,
-    "prevClose": 17.3,
+    "prevClose": 17.45,
     "volume": 10,
     "turnover": "18.0 萬",
     "tradeValue": 179577,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.3
   },
   "4540": {
     "code": "4540",
@@ -15634,29 +16230,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "晟田",
     "price": 61.1,
     "change": 1,
-    "pctChange": 1.64,
+    "pctChange": 1.66,
     "open": 60,
     "high": 61.2,
     "low": 59.6,
-    "prevClose": 61.1,
+    "prevClose": 60.1,
     "volume": 849,
     "turnover": "5127.5 萬",
     "tradeValue": 51274578,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 61.1
   },
   "4542": {
     "name": "科嶠",
     "price": 336.5,
     "change": 8.5,
-    "pctChange": 2.53,
+    "pctChange": 2.59,
     "open": 334,
     "high": 336.5,
     "low": 325,
-    "prevClose": 336.5,
+    "prevClose": 328,
     "volume": 350,
     "turnover": "1.2 億",
     "tradeValue": 116128369,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 336.5
   },
   "4543": {
     "name": "萬在",
@@ -15666,11 +16266,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 30.15,
     "high": 30.4,
     "low": 30.1,
-    "prevClose": 30.25,
+    "prevClose": 30.15,
     "volume": 69,
     "turnover": "209.7 萬",
     "tradeValue": 2097055,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.25
   },
   "4545": {
     "code": "4545",
@@ -15697,25 +16299,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 96.2,
     "high": 97.6,
     "low": 96.2,
-    "prevClose": 97.3,
+    "prevClose": 96.9,
     "volume": 35,
     "turnover": "338.8 萬",
     "tradeValue": 3387629,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 97.3
   },
   "4550": {
     "name": "長佳",
     "price": 24.15,
     "change": -0.3,
-    "pctChange": -1.24,
+    "pctChange": -1.23,
     "open": 24.05,
     "high": 24.8,
     "low": 24,
-    "prevClose": 24.15,
+    "prevClose": 24.45,
     "volume": 7,
     "turnover": "17.6 萬",
     "tradeValue": 176436,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.15
   },
   "4551": {
     "code": "4551",
@@ -15759,11 +16365,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 28.45,
     "high": 28.45,
     "low": 28.05,
-    "prevClose": 28.1,
+    "prevClose": 28.15,
     "volume": 19,
     "turnover": "52.9 萬",
     "tradeValue": 529310,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.1
   },
   "4555": {
     "code": "4555",
@@ -15786,15 +16394,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "旭然",
     "price": 114.5,
     "change": 3,
-    "pctChange": 2.62,
+    "pctChange": 2.69,
     "open": 111.5,
     "high": 122.5,
     "low": 109.5,
-    "prevClose": 114.5,
+    "prevClose": 111.5,
     "volume": 5320,
     "turnover": "6.3 億",
     "tradeValue": 630415490,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 114.5
   },
   "4557": {
     "code": "4557",
@@ -15821,11 +16431,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 16.95,
     "high": 16.95,
     "low": 16.7,
-    "prevClose": 16.8,
+    "prevClose": 16.85,
     "volume": 27,
     "turnover": "45.3 萬",
     "tradeValue": 453400,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.8
   },
   "4560": {
     "code": "4560",
@@ -15848,15 +16460,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "健椿",
     "price": 43.6,
     "change": 1.1,
-    "pctChange": 2.52,
+    "pctChange": 2.59,
     "open": 42.35,
     "high": 43.7,
     "low": 42.35,
-    "prevClose": 43.6,
+    "prevClose": 42.5,
     "volume": 149,
     "turnover": "641.2 萬",
     "tradeValue": 6411708,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 43.6
   },
   "4562": {
     "code": "4562",
@@ -15883,11 +16497,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 54,
     "high": 54,
     "low": 52.1,
-    "prevClose": 53.2,
+    "prevClose": 53.5,
     "volume": 355,
     "turnover": "1883.2 萬",
     "tradeValue": 18832078,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 53.2
   },
   "4564": {
     "code": "4564",
@@ -15931,11 +16547,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 38.9,
     "high": 39,
     "low": 38.85,
-    "prevClose": 39,
+    "prevClose": 39.05,
     "volume": 3,
     "turnover": "12.4 萬",
     "tradeValue": 123577,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 39
   },
   "4569": {
     "code": "4569",
@@ -16009,15 +16627,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "達航科技",
     "price": 92,
     "change": 1.6,
-    "pctChange": 1.74,
+    "pctChange": 1.77,
     "open": 91.3,
     "high": 92.9,
     "low": 90.3,
-    "prevClose": 92,
+    "prevClose": 90.4,
     "volume": 557,
     "turnover": "5109.6 萬",
     "tradeValue": 51096243,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 92
   },
   "4580": {
     "name": "捷流閥業",
@@ -16031,7 +16651,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 44,
     "turnover": "359.6 萬",
     "tradeValue": 3595898,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 82.2
   },
   "4581": {
     "code": "4581",
@@ -16088,15 +16710,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "君帆",
     "price": 38,
     "change": 0.5,
-    "pctChange": 1.32,
+    "pctChange": 1.33,
     "open": 37.5,
     "high": 38,
     "low": 37.5,
-    "prevClose": 38,
+    "prevClose": 37.5,
     "volume": 6,
     "turnover": "23.5 萬",
     "tradeValue": 235339,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 38
   },
   "4585": {
     "code": "4585",
@@ -16153,15 +16777,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "唐鋒",
     "price": 4.76,
     "change": 0.27,
-    "pctChange": 5.67,
+    "pctChange": 6.01,
     "open": 4.86,
     "high": 4.86,
     "low": 4.76,
-    "prevClose": 4.76,
+    "prevClose": 4.49,
     "volume": 2,
     "turnover": "1.0 萬",
     "tradeValue": 10050,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 4.76
   },
   "4702": {
     "name": "中美實",
@@ -16171,11 +16797,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 9.28,
     "high": 9.34,
     "low": 9.26,
-    "prevClose": 9.29,
+    "prevClose": 9.28,
     "volume": 56,
     "turnover": "51.7 萬",
     "tradeValue": 516999,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 9.29
   },
   "4706": {
     "name": "大恭",
@@ -16185,67 +16813,77 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 34.75,
     "high": 34.75,
     "low": 34.05,
-    "prevClose": 34.7,
+    "prevClose": 34.65,
     "volume": 9,
     "turnover": "31.2 萬",
     "tradeValue": 311826,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 34.7
   },
   "4707": {
     "name": "磐亞",
     "price": 30.15,
     "change": 1.45,
-    "pctChange": 4.81,
+    "pctChange": 5.05,
     "open": 28.8,
     "high": 30.8,
     "low": 28.7,
-    "prevClose": 30.15,
+    "prevClose": 28.7,
     "volume": 3090,
     "turnover": "9287.0 萬",
     "tradeValue": 92869829,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.15
   },
   "4711": {
     "name": "永純",
     "price": 16.4,
     "change": 0.25,
-    "pctChange": 1.52,
+    "pctChange": 1.55,
     "open": 16.2,
     "high": 16.45,
     "low": 16.15,
-    "prevClose": 16.4,
+    "prevClose": 16.15,
     "volume": 86,
     "turnover": "140.5 萬",
     "tradeValue": 1405141,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.4
   },
   "4714": {
     "name": "永捷",
     "price": 12.35,
     "change": 0.5,
-    "pctChange": 4.05,
+    "pctChange": 4.22,
     "open": 11.9,
     "high": 12.45,
     "low": 11.9,
-    "prevClose": 12.35,
+    "prevClose": 11.85,
     "volume": 1985,
     "turnover": "2443.7 萬",
     "tradeValue": 24437403,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.35
   },
   "4716": {
     "name": "大立",
     "price": 18.95,
     "change": 1.7,
-    "pctChange": 8.97,
+    "pctChange": 9.86,
     "open": 17.25,
     "high": 18.95,
     "low": 17.15,
-    "prevClose": 18.95,
+    "prevClose": 17.25,
     "volume": 3811,
     "turnover": "7031.7 萬",
     "tradeValue": 70316996,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.95
   },
   "4720": {
     "code": "4720",
@@ -16272,11 +16910,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 80.2,
     "high": 81.8,
     "low": 80.2,
-    "prevClose": 81.2,
+    "prevClose": 80.6,
     "volume": 382,
     "turnover": "3098.7 萬",
     "tradeValue": 30986653,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 81.2
   },
   "4722": {
     "code": "4722",
@@ -16299,15 +16939,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "永昕",
     "price": 23.2,
     "change": -0.2,
-    "pctChange": -0.86,
+    "pctChange": -0.85,
     "open": 23.2,
     "high": 23.4,
     "low": 23,
-    "prevClose": 23.2,
+    "prevClose": 23.4,
     "volume": 145,
     "turnover": "336.2 萬",
     "tradeValue": 3362319,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.2
   },
   "4728": {
     "name": "雙美",
@@ -16321,21 +16963,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 3,
     "turnover": "119.6 萬",
     "tradeValue": 1195681,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 394.5
   },
   "4729": {
     "name": "熒茂",
     "price": 19.7,
     "change": -0.7,
-    "pctChange": -3.55,
+    "pctChange": -3.43,
     "open": 20.4,
     "high": 20.45,
     "low": 19.7,
-    "prevClose": 19.7,
+    "prevClose": 20.4,
     "volume": 373,
     "turnover": "742.6 萬",
     "tradeValue": 7426264,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.7
   },
   "4735": {
     "name": "豪展",
@@ -16345,11 +16991,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 36.2,
     "high": 36.25,
     "low": 35.8,
-    "prevClose": 36,
+    "prevClose": 36.05,
     "volume": 16,
     "turnover": "58.2 萬",
     "tradeValue": 582343,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 36
   },
   "4736": {
     "code": "4736",
@@ -16406,43 +17054,49 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "泓瀚",
     "price": 41.65,
     "change": 1.35,
-    "pctChange": 3.24,
+    "pctChange": 3.35,
     "open": 41.15,
     "high": 42.8,
     "low": 41.1,
-    "prevClose": 41.65,
+    "prevClose": 40.3,
     "volume": 181,
     "turnover": "763.7 萬",
     "tradeValue": 7636922,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.65
   },
   "4743": {
     "name": "合一",
     "price": 47.15,
     "change": 1.3,
-    "pctChange": 2.76,
+    "pctChange": 2.84,
     "open": 45.85,
     "high": 47.15,
     "low": 45.7,
-    "prevClose": 47.15,
+    "prevClose": 45.85,
     "volume": 1041,
     "turnover": "4843.8 萬",
     "tradeValue": 48437668,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 47.15
   },
   "4744": {
     "name": "皇將",
     "price": 28.3,
     "change": -0.4,
-    "pctChange": -1.41,
+    "pctChange": -1.39,
     "open": 28.7,
     "high": 28.7,
     "low": 28.25,
-    "prevClose": 28.3,
+    "prevClose": 28.7,
     "volume": 49,
     "turnover": "139.8 萬",
     "tradeValue": 1398487,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.3
   },
   "4745": {
     "name": "合富-KY",
@@ -16452,11 +17106,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 12.2,
     "high": 12.2,
     "low": 12.1,
-    "prevClose": 12.2,
+    "prevClose": 12.15,
     "volume": 9,
     "turnover": "10.9 萬",
     "tradeValue": 109400,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.2
   },
   "4746": {
     "code": "4746",
@@ -16483,25 +17139,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23.1,
     "high": 23.1,
     "low": 22.7,
-    "prevClose": 22.95,
+    "prevClose": 23.1,
     "volume": 65,
     "turnover": "148.1 萬",
     "tradeValue": 1481049,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.95
   },
   "4749": {
     "name": "新應材",
     "price": 785,
     "change": 28,
-    "pctChange": 3.57,
+    "pctChange": 3.7,
     "open": 757,
     "high": 795,
     "low": 753,
-    "prevClose": 785,
+    "prevClose": 757,
     "volume": 1788,
     "turnover": "13.9 億",
     "tradeValue": 1394771249,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 785
   },
   "4754": {
     "name": "國碳科",
@@ -16511,11 +17171,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 38,
     "high": 38.2,
     "low": 37.8,
-    "prevClose": 38.15,
+    "prevClose": 37.85,
     "volume": 28,
     "turnover": "106.4 萬",
     "tradeValue": 1063573,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 38.15
   },
   "4755": {
     "code": "4755",
@@ -16538,15 +17200,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "勤凱",
     "price": 317,
     "change": 28.5,
-    "pctChange": 8.99,
+    "pctChange": 9.88,
     "open": 302,
     "high": 317,
     "low": 302,
-    "prevClose": 317,
+    "prevClose": 288.5,
     "volume": 833,
     "turnover": "2.6 億",
     "tradeValue": 259906207,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 317
   },
   "4763": {
     "code": "4763",
@@ -16603,29 +17267,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "誠泰科技",
     "price": 28.7,
     "change": 0.6,
-    "pctChange": 2.09,
+    "pctChange": 2.14,
     "open": 28.2,
     "high": 29.45,
     "low": 28.2,
-    "prevClose": 28.7,
+    "prevClose": 28.1,
     "volume": 44,
     "turnover": "127.4 萬",
     "tradeValue": 1273768,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.7
   },
   "4768": {
     "name": "晶呈科技",
     "price": 374.5,
     "change": 7.5,
-    "pctChange": 2,
+    "pctChange": 2.04,
     "open": 374,
     "high": 389,
     "low": 372.5,
-    "prevClose": 374.5,
+    "prevClose": 367,
     "volume": 1081,
     "turnover": "4.1 億",
     "tradeValue": 410300621,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 374.5
   },
   "4770": {
     "code": "4770",
@@ -16665,29 +17333,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "台特化",
     "price": 281.5,
     "change": 17,
-    "pctChange": 6.04,
+    "pctChange": 6.43,
     "open": 272,
     "high": 290.5,
     "low": 271.5,
-    "prevClose": 281.5,
+    "prevClose": 264.5,
     "volume": 5857,
     "turnover": "16.8 億",
     "tradeValue": 1681039445,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 281.5
   },
   "4806": {
     "name": "桂田文創",
     "price": 13.4,
     "change": -1.45,
-    "pctChange": -10.82,
+    "pctChange": -9.76,
     "open": 13.7,
     "high": 13.7,
     "low": 13.4,
-    "prevClose": 13.4,
+    "prevClose": 14.85,
     "volume": 93,
     "turnover": "125.3 萬",
     "tradeValue": 1253218,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 13.4
   },
   "4807": {
     "code": "4807",
@@ -16710,15 +17382,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "聯光通",
     "price": 45.3,
     "change": 0.95,
-    "pctChange": 2.1,
+    "pctChange": 2.14,
     "open": 45.05,
     "high": 46.45,
     "low": 45,
-    "prevClose": 45.3,
+    "prevClose": 44.35,
     "volume": 10525,
     "turnover": "4.8 億",
     "tradeValue": 479675649,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 45.3
   },
   "4904": {
     "code": "4904",
@@ -16741,15 +17415,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "台聯電",
     "price": 92.5,
     "change": 8.4,
-    "pctChange": 9.08,
+    "pctChange": 9.99,
     "open": 85.6,
     "high": 92.5,
     "low": 84,
-    "prevClose": 92.5,
+    "prevClose": 84.1,
     "volume": 245,
     "turnover": "2181.3 萬",
     "tradeValue": 21812601,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 92.5
   },
   "4906": {
     "code": "4906",
@@ -16772,57 +17448,65 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "富宇",
     "price": 44.5,
     "change": -0.55,
-    "pctChange": -1.24,
+    "pctChange": -1.22,
     "open": 44.5,
     "high": 45.15,
     "low": 44.15,
-    "prevClose": 44.5,
+    "prevClose": 45.05,
     "volume": 101,
     "turnover": "449.3 萬",
     "tradeValue": 4493436,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 44.5
   },
   "4908": {
     "name": "前鼎",
     "price": 224.5,
     "change": 20,
-    "pctChange": 8.91,
+    "pctChange": 9.78,
     "open": 210,
     "high": 224.5,
     "low": 210,
-    "prevClose": 224.5,
+    "prevClose": 204.5,
     "volume": 2756,
     "turnover": "6.1 億",
     "tradeValue": 605041432,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 224.5
   },
   "4909": {
     "name": "新復興",
     "price": 36.85,
     "change": 0.7,
-    "pctChange": 1.9,
+    "pctChange": 1.94,
     "open": 36.35,
     "high": 37,
     "low": 36.15,
-    "prevClose": 36.85,
+    "prevClose": 36.15,
     "volume": 377,
     "turnover": "1384.3 萬",
     "tradeValue": 13842684,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 36.85
   },
   "4911": {
     "name": "德英",
     "price": 28.4,
     "change": 0.2,
-    "pctChange": 0.7,
+    "pctChange": 0.71,
     "open": 28.2,
     "high": 28.4,
     "low": 28.05,
-    "prevClose": 28.4,
+    "prevClose": 28.2,
     "volume": 18,
     "turnover": "51.9 萬",
     "tradeValue": 519363,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.4
   },
   "4912": {
     "code": "4912",
@@ -16896,15 +17580,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "力士",
     "price": 66.6,
     "change": 1.4,
-    "pctChange": 2.1,
+    "pctChange": 2.15,
     "open": 69.2,
     "high": 70,
     "low": 66,
-    "prevClose": 66.6,
+    "prevClose": 65.2,
     "volume": 6586,
     "turnover": "4.4 億",
     "tradeValue": 443898846,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 66.6
   },
   "4924": {
     "name": "欣厚-KY",
@@ -16918,7 +17604,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 309,
     "turnover": "497.1 萬",
     "tradeValue": 4970967,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.9
   },
   "4927": {
     "code": "4927",
@@ -16958,29 +17646,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "新盛力",
     "price": 252,
     "change": 3.5,
-    "pctChange": 1.39,
+    "pctChange": 1.41,
     "open": 250,
     "high": 255,
     "low": 245.5,
-    "prevClose": 252,
+    "prevClose": 248.5,
     "volume": 3868,
     "turnover": "9.7 億",
     "tradeValue": 970300056,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 252
   },
   "4933": {
     "name": "友輝",
     "price": 53.9,
     "change": -0.3,
-    "pctChange": -0.56,
+    "pctChange": -0.55,
     "open": 54.2,
     "high": 54.6,
     "low": 53.8,
-    "prevClose": 53.9,
+    "prevClose": 54.2,
     "volume": 26,
     "turnover": "142.6 萬",
     "tradeValue": 1425922,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 53.9
   },
   "4934": {
     "code": "4934",
@@ -17041,11 +17733,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 79.2,
     "high": 81,
     "low": 78.1,
-    "prevClose": 79.2,
+    "prevClose": 78.9,
     "volume": 5045,
     "turnover": "4.0 億",
     "tradeValue": 400412770,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 79.2
   },
   "4942": {
     "code": "4942",
@@ -17089,11 +17783,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 98.5,
     "high": 101.5,
     "low": 98.5,
-    "prevClose": 101,
+    "prevClose": 100.5,
     "volume": 13,
     "turnover": "134.6 萬",
     "tradeValue": 1345930,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 101
   },
   "4949": {
     "code": "4949",
@@ -17120,11 +17816,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 16.05,
     "high": 16.1,
     "low": 16,
-    "prevClose": 16.1,
+    "prevClose": 16.2,
     "volume": 14,
     "turnover": "23.0 萬",
     "tradeValue": 230406,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.1
   },
   "4951": {
     "name": "精拓科",
@@ -17134,11 +17832,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 90.7,
     "high": 91.6,
     "low": 89.4,
-    "prevClose": 90.9,
+    "prevClose": 90.3,
     "volume": 188,
     "turnover": "1703.7 萬",
     "tradeValue": 17036939,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 90.9
   },
   "4952": {
     "code": "4952",
@@ -17169,7 +17869,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 192,
     "turnover": "2268.8 萬",
     "tradeValue": 22688136,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 117.5
   },
   "4956": {
     "code": "4956",
@@ -17247,11 +17949,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 570,
     "high": 576,
     "low": 570,
-    "prevClose": 574,
+    "prevClose": 572,
     "volume": 210,
     "turnover": "1.2 億",
     "tradeValue": 119917357,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 574
   },
   "4967": {
     "code": "4967",
@@ -17291,43 +17995,49 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "IET-KY",
     "price": 587,
     "change": 53,
-    "pctChange": 9.03,
+    "pctChange": 9.93,
     "open": 557,
     "high": 587,
     "low": 554,
-    "prevClose": 587,
+    "prevClose": 534,
     "volume": 1846,
     "turnover": "10.6 億",
     "tradeValue": 1059775282,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 587
   },
   "4972": {
     "name": "湯石照明",
     "price": 16.2,
     "change": -0.1,
-    "pctChange": -0.62,
+    "pctChange": -0.61,
     "open": 16.15,
     "high": 16.2,
     "low": 16.15,
-    "prevClose": 16.2,
+    "prevClose": 16.3,
     "volume": 12,
     "turnover": "19.0 萬",
     "tradeValue": 189586,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.2
   },
   "4973": {
     "name": "廣穎",
     "price": 138.5,
     "change": 1.5,
-    "pctChange": 1.08,
+    "pctChange": 1.09,
     "open": 137,
     "high": 139,
     "low": 137,
-    "prevClose": 138.5,
+    "prevClose": 137,
     "volume": 371,
     "turnover": "5124.3 萬",
     "tradeValue": 51243353,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 138.5
   },
   "4974": {
     "name": "亞泰",
@@ -17337,11 +18047,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 71.2,
     "high": 71.5,
     "low": 70.9,
-    "prevClose": 71.2,
+    "prevClose": 71.3,
     "volume": 73,
     "turnover": "521.0 萬",
     "tradeValue": 5210326,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 71.2
   },
   "4976": {
     "code": "4976",
@@ -17381,15 +18093,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "華星光",
     "price": 585,
     "change": 28,
-    "pctChange": 4.79,
+    "pctChange": 5.03,
     "open": 564,
     "high": 585,
     "low": 564,
-    "prevClose": 585,
+    "prevClose": 557,
     "volume": 1318,
     "turnover": "7.6 億",
     "tradeValue": 760576671,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 585
   },
   "4989": {
     "code": "4989",
@@ -17412,15 +18126,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "環宇-KY",
     "price": 534,
     "change": 48.5,
-    "pctChange": 9.08,
+    "pctChange": 9.99,
     "open": 509,
     "high": 534,
     "low": 498.5,
-    "prevClose": 534,
+    "prevClose": 485.5,
     "volume": 8593,
     "turnover": "44.5 億",
     "tradeValue": 4452253323,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 534
   },
   "4994": {
     "code": "4994",
@@ -17443,15 +18159,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "晶達",
     "price": 48.8,
     "change": -1.2,
-    "pctChange": -2.46,
+    "pctChange": -2.4,
     "open": 50,
     "high": 50,
     "low": 48.8,
-    "prevClose": 48.8,
+    "prevClose": 50,
     "volume": 58,
     "turnover": "284.1 萬",
     "tradeValue": 2841494,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 48.8
   },
   "4999": {
     "code": "4999",
@@ -17495,95 +18213,109 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 33.05,
     "high": 33.25,
     "low": 32.75,
-    "prevClose": 33.1,
+    "prevClose": 32.8,
     "volume": 1063,
     "turnover": "3514.8 萬",
     "tradeValue": 35147914,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 33.1
   },
   "5011": {
     "name": "久陽",
     "price": 20.45,
     "change": 1.85,
-    "pctChange": 9.05,
+    "pctChange": 9.95,
     "open": 18.55,
     "high": 20.45,
     "low": 18.5,
-    "prevClose": 20.45,
+    "prevClose": 18.6,
     "volume": 1107,
     "turnover": "2225.9 萬",
     "tradeValue": 22259335,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.45
   },
   "5013": {
     "name": "強新",
     "price": 46.85,
     "change": 4.25,
-    "pctChange": 9.07,
+    "pctChange": 9.98,
     "open": 46.85,
     "high": 46.85,
     "low": 46.85,
-    "prevClose": 46.85,
+    "prevClose": 42.6,
     "volume": 602,
     "turnover": "2820.1 萬",
     "tradeValue": 28200733,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 46.85
   },
   "5014": {
     "name": "建錩",
     "price": 10.1,
     "change": -0.2,
-    "pctChange": -1.98,
+    "pctChange": -1.94,
     "open": 10.25,
     "high": 10.3,
     "low": 10.1,
-    "prevClose": 10.1,
+    "prevClose": 10.3,
     "volume": 171,
     "turnover": "173.7 萬",
     "tradeValue": 1737445,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 10.1
   },
   "5015": {
     "name": "華祺",
     "price": 23.95,
     "change": 2.15,
-    "pctChange": 8.98,
+    "pctChange": 9.86,
     "open": 22.1,
     "high": 23.95,
     "low": 22.1,
-    "prevClose": 23.95,
+    "prevClose": 21.8,
     "volume": 261,
     "turnover": "608.1 萬",
     "tradeValue": 6081144,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.95
   },
   "5016": {
     "name": "松和",
     "price": 28.6,
     "change": 0.5,
-    "pctChange": 1.75,
+    "pctChange": 1.78,
     "open": 28.45,
     "high": 29.4,
     "low": 28.1,
-    "prevClose": 28.6,
+    "prevClose": 28.1,
     "volume": 1319,
     "turnover": "3789.5 萬",
     "tradeValue": 37894793,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.6
   },
   "5201": {
     "name": "凱衛",
     "price": 28,
     "change": -1.2,
-    "pctChange": -4.29,
+    "pctChange": -4.11,
     "open": 29.35,
     "high": 29.45,
     "low": 27.5,
-    "prevClose": 28,
+    "prevClose": 29.2,
     "volume": 85,
     "turnover": "243.0 萬",
     "tradeValue": 2429890,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28
   },
   "5202": {
     "name": "力新",
@@ -17593,11 +18325,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 14.35,
     "high": 14.4,
     "low": 14.05,
-    "prevClose": 14.1,
+    "prevClose": 14.15,
     "volume": 308,
     "turnover": "436.5 萬",
     "tradeValue": 4365212,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.1
   },
   "5203": {
     "code": "5203",
@@ -17620,15 +18354,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "中茂",
     "price": 22.8,
     "change": 2.05,
-    "pctChange": 8.99,
+    "pctChange": 9.88,
     "open": 22.4,
     "high": 22.8,
     "low": 22.3,
-    "prevClose": 22.8,
+    "prevClose": 20.75,
     "volume": 50,
     "turnover": "114.0 萬",
     "tradeValue": 1139827,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.8
   },
   "5206": {
     "name": "坤悅",
@@ -17638,25 +18374,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 22.8,
     "high": 23,
     "low": 22.7,
-    "prevClose": 22.85,
+    "prevClose": 22.8,
     "volume": 46,
     "turnover": "105.6 萬",
     "tradeValue": 1056109,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.85
   },
   "5209": {
     "name": "新鼎",
     "price": 176,
     "change": 4.5,
-    "pctChange": 2.56,
+    "pctChange": 2.62,
     "open": 173,
     "high": 177.5,
     "low": 171,
-    "prevClose": 176,
+    "prevClose": 171.5,
     "volume": 143,
     "turnover": "2511.6 萬",
     "tradeValue": 25116261,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 176
   },
   "5210": {
     "name": "寶碩",
@@ -17666,53 +18406,61 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 30.05,
     "high": 30.4,
     "low": 30,
-    "prevClose": 30.3,
+    "prevClose": 30.15,
     "volume": 155,
     "turnover": "465.6 萬",
     "tradeValue": 4656224,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.3
   },
   "5211": {
     "name": "蒙恬",
     "price": 21.35,
     "change": 0.25,
-    "pctChange": 1.17,
+    "pctChange": 1.18,
     "open": 21.1,
     "high": 21.45,
     "low": 20.95,
-    "prevClose": 21.35,
+    "prevClose": 21.1,
     "volume": 26,
     "turnover": "55.2 萬",
     "tradeValue": 551726,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 21.35
   },
   "5212": {
     "name": "凌網",
     "price": 49.3,
     "change": 0.45,
-    "pctChange": 0.91,
+    "pctChange": 0.92,
     "open": 49.5,
     "high": 49.5,
     "low": 48.7,
-    "prevClose": 49.3,
+    "prevClose": 48.85,
     "volume": 9,
     "turnover": "45.6 萬",
     "tradeValue": 455824,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 49.3
   },
   "5213": {
     "name": "亞昕",
     "price": 20.55,
     "change": -0.1,
-    "pctChange": -0.49,
+    "pctChange": -0.48,
     "open": 20.75,
     "high": 20.75,
     "low": 20.5,
-    "prevClose": 20.55,
+    "prevClose": 20.65,
     "volume": 106,
     "turnover": "217.5 萬",
     "tradeValue": 2175035,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.55
   },
   "5215": {
     "code": "5215",
@@ -17739,11 +18487,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23,
     "high": 23.7,
     "low": 23,
-    "prevClose": 23.1,
+    "prevClose": 23.2,
     "volume": 201,
     "turnover": "468.4 萬",
     "tradeValue": 4684352,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.1
   },
   "5222": {
     "code": "5222",
@@ -17766,15 +18516,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "安力-KY",
     "price": 22.95,
     "change": -0.45,
-    "pctChange": -1.96,
+    "pctChange": -1.92,
     "open": 23.4,
     "high": 23.6,
     "low": 22.8,
-    "prevClose": 22.95,
+    "prevClose": 23.4,
     "volume": 8,
     "turnover": "18.5 萬",
     "tradeValue": 185046,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.95
   },
   "5225": {
     "code": "5225",
@@ -17797,43 +18549,49 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "立凱-KY",
     "price": 30.55,
     "change": -0.4,
-    "pctChange": -1.31,
+    "pctChange": -1.29,
     "open": 30.8,
     "high": 31.1,
     "low": 30.1,
-    "prevClose": 30.55,
+    "prevClose": 30.95,
     "volume": 584,
     "turnover": "1777.3 萬",
     "tradeValue": 17773407,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.55
   },
   "5228": {
     "name": "鈺鎧",
     "price": 48.05,
     "change": 4.35,
-    "pctChange": 9.05,
+    "pctChange": 9.95,
     "open": 46.35,
     "high": 48.05,
     "low": 45.2,
-    "prevClose": 48.05,
+    "prevClose": 43.7,
     "volume": 2059,
     "turnover": "9643.2 萬",
     "tradeValue": 96431826,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 48.05
   },
   "5230": {
     "name": "雷笛克光學",
     "price": 22.25,
     "change": -0.4,
-    "pctChange": -1.8,
+    "pctChange": -1.77,
     "open": 22.65,
     "high": 22.7,
     "low": 21.85,
-    "prevClose": 22.25,
+    "prevClose": 22.65,
     "volume": 844,
     "turnover": "1877.9 萬",
     "tradeValue": 18779257,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.25
   },
   "5234": {
     "code": "5234",
@@ -17911,25 +18669,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 21.25,
     "high": 21.25,
     "low": 20.7,
-    "prevClose": 20.75,
+    "prevClose": 20.8,
     "volume": 109,
     "turnover": "225.3 萬",
     "tradeValue": 2253453,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.75
   },
   "5251": {
     "name": "天鉞電",
     "price": 29.95,
     "change": 0.25,
-    "pctChange": 0.83,
+    "pctChange": 0.84,
     "open": 30,
     "high": 30.5,
     "low": 29.85,
-    "prevClose": 29.95,
+    "prevClose": 29.7,
     "volume": 68,
     "turnover": "204.5 萬",
     "tradeValue": 2045144,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29.95
   },
   "5258": {
     "code": "5258",
@@ -17956,11 +18718,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 90.7,
     "high": 91,
     "low": 89.6,
-    "prevClose": 90.5,
+    "prevClose": 90.7,
     "volume": 94,
     "turnover": "843.6 萬",
     "tradeValue": 8435861,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 90.5
   },
   "5269": {
     "code": "5269",
@@ -17983,57 +18747,65 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "笙科",
     "price": 17.85,
     "change": -0.15,
-    "pctChange": -0.84,
+    "pctChange": -0.83,
     "open": 18.15,
     "high": 18.15,
     "low": 17.75,
-    "prevClose": 17.85,
+    "prevClose": 18,
     "volume": 65,
     "turnover": "116.9 萬",
     "tradeValue": 1168952,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.85
   },
   "5274": {
     "name": "信驊",
     "price": 18840,
     "change": -200,
-    "pctChange": -1.06,
+    "pctChange": -1.05,
     "open": 18740,
     "high": 18905,
     "low": 18355,
-    "prevClose": 18840,
+    "prevClose": 19040,
     "volume": 153,
     "turnover": "28.6 億",
     "tradeValue": 2863861785,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18840
   },
   "5276": {
     "name": "達輝-KY",
     "price": 17.85,
     "change": 0.55,
-    "pctChange": 3.08,
+    "pctChange": 3.18,
     "open": 17.3,
     "high": 17.85,
     "low": 17.3,
-    "prevClose": 17.85,
+    "prevClose": 17.3,
     "volume": 2,
     "turnover": "3.6 萬",
     "tradeValue": 36284,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.85
   },
   "5278": {
     "name": "尚凡*",
     "price": 23.7,
     "change": 0.2,
-    "pctChange": 0.84,
+    "pctChange": 0.85,
     "open": 23.5,
     "high": 23.8,
     "low": 23.45,
-    "prevClose": 23.7,
+    "prevClose": 23.5,
     "volume": 100,
     "turnover": "237.4 萬",
     "tradeValue": 2374325,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.7
   },
   "5283": {
     "code": "5283",
@@ -18098,7 +18870,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 111,
     "turnover": "1533.8 萬",
     "tradeValue": 15337984,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 137.5
   },
   "5288": {
     "code": "5288",
@@ -18125,25 +18899,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 1305,
     "high": 1315,
     "low": 1290,
-    "prevClose": 1295,
+    "prevClose": 1290,
     "volume": 867,
     "turnover": "11.3 億",
     "tradeValue": 1127373635,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 1295
   },
   "5291": {
     "name": "邑昇",
     "price": 62,
     "change": 0.9,
-    "pctChange": 1.45,
+    "pctChange": 1.47,
     "open": 61.6,
     "high": 62.3,
     "low": 61.3,
-    "prevClose": 62,
+    "prevClose": 61.1,
     "volume": 269,
     "turnover": "1667.0 萬",
     "tradeValue": 16670268,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 62
   },
   "5292": {
     "code": "5292",
@@ -18166,29 +18944,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "杰力",
     "price": 104.5,
     "change": 1,
-    "pctChange": 0.96,
+    "pctChange": 0.97,
     "open": 104.5,
     "high": 105.5,
     "low": 102,
-    "prevClose": 104.5,
+    "prevClose": 103.5,
     "volume": 361,
     "turnover": "3769.6 萬",
     "tradeValue": 37696211,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 104.5
   },
   "5302": {
     "name": "太欣",
     "price": 10.05,
     "change": 0.19,
-    "pctChange": 1.89,
+    "pctChange": 1.93,
     "open": 9.78,
     "high": 10.15,
     "low": 9.75,
-    "prevClose": 10.05,
+    "prevClose": 9.86,
     "volume": 414,
     "turnover": "411.3 萬",
     "tradeValue": 4113381,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 10.05
   },
   "5306": {
     "code": "5306",
@@ -18211,29 +18993,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "系統電",
     "price": 65.7,
     "change": 2.9,
-    "pctChange": 4.41,
+    "pctChange": 4.62,
     "open": 63,
     "high": 68,
     "low": 62.3,
-    "prevClose": 65.7,
+    "prevClose": 62.8,
     "volume": 14928,
     "turnover": "9.8 億",
     "tradeValue": 984205040,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 65.7
   },
   "5310": {
     "name": "天剛",
     "price": 29.6,
     "change": 2.4,
-    "pctChange": 8.11,
+    "pctChange": 8.82,
     "open": 27.2,
     "high": 29.9,
     "low": 26.15,
-    "prevClose": 29.6,
+    "prevClose": 27.2,
     "volume": 135,
     "turnover": "395.8 萬",
     "tradeValue": 3958066,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29.6
   },
   "5312": {
     "name": "寶島科",
@@ -18243,53 +19029,61 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 89.1,
     "high": 89.7,
     "low": 89.1,
-    "prevClose": 89.7,
+    "prevClose": 89.5,
     "volume": 15,
     "turnover": "133.9 萬",
     "tradeValue": 1339478,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 89.7
   },
   "5314": {
     "name": "世紀*",
     "price": 29.9,
     "change": -0.7,
-    "pctChange": -2.34,
+    "pctChange": -2.29,
     "open": 30.4,
     "high": 30.6,
     "low": 29.65,
-    "prevClose": 29.9,
+    "prevClose": 30.6,
     "volume": 31622,
     "turnover": "9.5 億",
     "tradeValue": 945646924,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29.9
   },
   "5315": {
     "name": "光聯",
     "price": 18.85,
     "change": -0.05,
-    "pctChange": -0.27,
+    "pctChange": -0.26,
     "open": 18.95,
     "high": 18.95,
     "low": 18.75,
-    "prevClose": 18.85,
+    "prevClose": 18.9,
     "volume": 115,
     "turnover": "215.8 萬",
     "tradeValue": 2158206,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.85
   },
   "5321": {
     "name": "美而快",
     "price": 68.6,
     "change": -1.7,
-    "pctChange": -2.48,
+    "pctChange": -2.42,
     "open": 70.3,
     "high": 71.1,
     "low": 68.5,
-    "prevClose": 68.6,
+    "prevClose": 70.3,
     "volume": 148,
     "turnover": "1024.8 萬",
     "tradeValue": 10247813,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 68.6
   },
   "5324": {
     "name": "士開",
@@ -18303,77 +19097,89 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 113,
     "turnover": "141.2 萬",
     "tradeValue": 1411718,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.45
   },
   "5328": {
     "name": "華容",
     "price": 59.1,
     "change": 0.7,
-    "pctChange": 1.18,
+    "pctChange": 1.2,
     "open": 57.5,
     "high": 60.8,
     "low": 56.5,
-    "prevClose": 59.1,
+    "prevClose": 58.4,
     "volume": 27393,
     "turnover": "16.2 億",
     "tradeValue": 1622031988,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 59.1
   },
   "5340": {
     "name": "建榮",
     "price": 83.2,
     "change": 2.8,
-    "pctChange": 3.37,
+    "pctChange": 3.48,
     "open": 81,
     "high": 83.7,
     "low": 80.6,
-    "prevClose": 83.2,
+    "prevClose": 80.4,
     "volume": 1427,
     "turnover": "1.2 億",
     "tradeValue": 117449064,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 83.2
   },
   "5344": {
     "name": "立衛",
     "price": 13.65,
     "change": 0.2,
-    "pctChange": 1.47,
+    "pctChange": 1.49,
     "open": 13.75,
     "high": 13.75,
     "low": 13.4,
-    "prevClose": 13.65,
+    "prevClose": 13.45,
     "volume": 74,
     "turnover": "99.2 萬",
     "tradeValue": 992072,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 13.65
   },
   "5345": {
     "name": "馥鴻",
     "price": 21.15,
     "change": -0.15,
-    "pctChange": -0.71,
+    "pctChange": -0.7,
     "open": 21.6,
     "high": 21.6,
     "low": 21.15,
-    "prevClose": 21.15,
+    "prevClose": 21.3,
     "volume": 12,
     "turnover": "25.8 萬",
     "tradeValue": 258057,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 21.15
   },
   "5347": {
     "name": "世界",
     "price": 187,
     "change": 2.5,
-    "pctChange": 1.34,
+    "pctChange": 1.36,
     "open": 184.5,
     "high": 188,
     "low": 180.5,
-    "prevClose": 187,
+    "prevClose": 184.5,
     "volume": 14012,
     "turnover": "25.9 億",
     "tradeValue": 2585123959,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 187
   },
   "5348": {
     "name": "正能量智能",
@@ -18387,49 +19193,57 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 1,
     "turnover": "1.6 萬",
     "tradeValue": 16350,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.35
   },
   "5351": {
     "name": "鈺創",
     "price": 116,
     "change": 6.5,
-    "pctChange": 5.6,
+    "pctChange": 5.94,
     "open": 110.5,
     "high": 116.5,
     "low": 110,
-    "prevClose": 116,
+    "prevClose": 109.5,
     "volume": 16681,
     "turnover": "19.1 億",
     "tradeValue": 1909595077,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 116
   },
   "5353": {
     "name": "台林",
     "price": 28.65,
     "change": 0.15,
-    "pctChange": 0.52,
+    "pctChange": 0.53,
     "open": 28.5,
     "high": 28.75,
     "low": 28.4,
-    "prevClose": 28.65,
+    "prevClose": 28.5,
     "volume": 56,
     "turnover": "159.1 萬",
     "tradeValue": 1591040,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.65
   },
   "5355": {
     "name": "佳總",
     "price": 7.4,
     "change": 0.3,
-    "pctChange": 4.05,
+    "pctChange": 4.23,
     "open": 7,
     "high": 7.45,
     "low": 6.96,
-    "prevClose": 7.4,
+    "prevClose": 7.1,
     "volume": 190,
     "turnover": "137.2 萬",
     "tradeValue": 1371800,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 7.4
   },
   "5356": {
     "name": "協益",
@@ -18439,11 +19253,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 25.75,
     "high": 25.9,
     "low": 25.75,
-    "prevClose": 25.75,
+    "prevClose": 25.9,
     "volume": 38,
     "turnover": "97.1 萬",
     "tradeValue": 970911,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.75
   },
   "5364": {
     "name": "力麗店",
@@ -18453,11 +19269,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 8.3,
     "high": 8.35,
     "low": 8.3,
-    "prevClose": 8.31,
+    "prevClose": 8.38,
     "volume": 28,
     "turnover": "23.6 萬",
     "tradeValue": 236243,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 8.31
   },
   "5381": {
     "name": "光譜",
@@ -18467,25 +19285,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23.25,
     "high": 23.55,
     "low": 23.05,
-    "prevClose": 23.35,
+    "prevClose": 23.25,
     "volume": 759,
     "turnover": "1762.0 萬",
     "tradeValue": 17619962,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.35
   },
   "5386": {
     "name": "青雲",
     "price": 292.5,
     "change": 4,
-    "pctChange": 1.37,
+    "pctChange": 1.39,
     "open": 292.5,
     "high": 297.5,
     "low": 291,
-    "prevClose": 292.5,
+    "prevClose": 288.5,
     "volume": 676,
     "turnover": "2.0 億",
     "tradeValue": 198457996,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 292.5
   },
   "5388": {
     "code": "5388",
@@ -18508,29 +19330,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "能率",
     "price": 40.05,
     "change": 0.15,
-    "pctChange": 0.37,
+    "pctChange": 0.38,
     "open": 39.9,
     "high": 40.2,
     "low": 39.7,
-    "prevClose": 40.05,
+    "prevClose": 39.9,
     "volume": 496,
     "turnover": "1981.7 萬",
     "tradeValue": 19816751,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 40.05
   },
   "5398": {
     "name": "慕康生醫",
     "price": 13.65,
     "change": -0.15,
-    "pctChange": -1.1,
+    "pctChange": -1.09,
     "open": 13.7,
     "high": 14.1,
     "low": 13.65,
-    "prevClose": 13.65,
+    "prevClose": 13.8,
     "volume": 100,
     "turnover": "138.0 萬",
     "tradeValue": 1380310,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 13.65
   },
   "5403": {
     "name": "中菲",
@@ -18540,67 +19366,77 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 92.6,
     "high": 93.1,
     "low": 92.5,
-    "prevClose": 92.7,
+    "prevClose": 93,
     "volume": 26,
     "turnover": "237.5 萬",
     "tradeValue": 2375097,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 92.7
   },
   "5410": {
     "name": "國眾",
     "price": 33.1,
     "change": 0.2,
-    "pctChange": 0.6,
+    "pctChange": 0.61,
     "open": 32.9,
     "high": 33.1,
     "low": 32.7,
-    "prevClose": 33.1,
+    "prevClose": 32.9,
     "volume": 192,
     "turnover": "629.1 萬",
     "tradeValue": 6291494,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 33.1
   },
   "5425": {
     "name": "台半",
     "price": 102,
     "change": 4.5,
-    "pctChange": 4.41,
+    "pctChange": 4.62,
     "open": 98.3,
     "high": 104,
     "low": 96.5,
-    "prevClose": 102,
+    "prevClose": 97.5,
     "volume": 22022,
     "turnover": "22.2 億",
     "tradeValue": 2220667954,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 102
   },
   "5426": {
     "name": "振發",
     "price": 29.65,
     "change": 1.05,
-    "pctChange": 3.54,
+    "pctChange": 3.67,
     "open": 29,
     "high": 29.9,
     "low": 28.65,
-    "prevClose": 29.65,
+    "prevClose": 28.6,
     "volume": 1075,
     "turnover": "3145.0 萬",
     "tradeValue": 31449829,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29.65
   },
   "5432": {
     "name": "新門",
     "price": 164.5,
     "change": 6,
-    "pctChange": 3.65,
+    "pctChange": 3.79,
     "open": 159,
     "high": 166.5,
     "low": 159,
-    "prevClose": 164.5,
+    "prevClose": 158.5,
     "volume": 325,
     "turnover": "5330.7 萬",
     "tradeValue": 53306811,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 164.5
   },
   "5434": {
     "code": "5434",
@@ -18627,39 +19463,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 17.3,
     "high": 17.35,
     "low": 17.2,
-    "prevClose": 17.35,
+    "prevClose": 17.25,
     "volume": 20,
     "turnover": "33.8 萬",
     "tradeValue": 337764,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.35
   },
   "5439": {
     "name": "高技",
     "price": 253,
     "change": 2,
-    "pctChange": 0.79,
+    "pctChange": 0.8,
     "open": 252,
     "high": 256,
     "low": 251.5,
-    "prevClose": 253,
+    "prevClose": 251,
     "volume": 962,
     "turnover": "2.4 億",
     "tradeValue": 243757249,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 253
   },
   "5443": {
     "name": "均豪",
     "price": 113.5,
     "change": 1.5,
-    "pctChange": 1.32,
+    "pctChange": 1.34,
     "open": 111.5,
     "high": 114.5,
     "low": 111,
-    "prevClose": 113.5,
+    "prevClose": 112,
     "volume": 1661,
     "turnover": "1.9 億",
     "tradeValue": 187935910,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 113.5
   },
   "5450": {
     "name": "南良",
@@ -18673,91 +19515,105 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 135,
     "turnover": "197.3 萬",
     "tradeValue": 1973375,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.6
   },
   "5452": {
     "name": "佶優",
     "price": 27.95,
     "change": 0.5,
-    "pctChange": 1.79,
+    "pctChange": 1.82,
     "open": 27.45,
     "high": 28.05,
     "low": 27.45,
-    "prevClose": 27.95,
+    "prevClose": 27.45,
     "volume": 609,
     "turnover": "1699.8 萬",
     "tradeValue": 16998044,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 27.95
   },
   "5457": {
     "name": "宣德",
     "price": 24.4,
     "change": 0.5,
-    "pctChange": 2.05,
+    "pctChange": 2.09,
     "open": 24,
     "high": 24.6,
     "low": 23.8,
-    "prevClose": 24.4,
+    "prevClose": 23.9,
     "volume": 475,
     "turnover": "1150.0 萬",
     "tradeValue": 11500155,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.4
   },
   "5460": {
     "name": "同協",
     "price": 17.4,
     "change": 0.15,
-    "pctChange": 0.86,
+    "pctChange": 0.87,
     "open": 17.4,
     "high": 17.4,
     "low": 17.2,
-    "prevClose": 17.4,
+    "prevClose": 17.25,
     "volume": 168,
     "turnover": "290.7 萬",
     "tradeValue": 2906513,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.4
   },
   "5464": {
     "name": "霖宏",
     "price": 90.7,
     "change": -1.8,
-    "pctChange": -1.98,
+    "pctChange": -1.95,
     "open": 94,
     "high": 94,
     "low": 89.5,
-    "prevClose": 90.7,
+    "prevClose": 92.5,
     "volume": 529,
     "turnover": "4826.1 萬",
     "tradeValue": 48260663,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 90.7
   },
   "5465": {
     "name": "富驊",
     "price": 33.1,
     "change": -0.75,
-    "pctChange": -2.27,
+    "pctChange": -2.22,
     "open": 33.85,
     "high": 33.85,
     "low": 32.85,
-    "prevClose": 33.1,
+    "prevClose": 33.85,
     "volume": 632,
     "turnover": "2096.6 萬",
     "tradeValue": 20966455,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 33.1
   },
   "5468": {
     "name": "凱鈺",
     "price": 25.2,
     "change": -0.25,
-    "pctChange": -0.99,
+    "pctChange": -0.98,
     "open": 25.85,
     "high": 25.85,
     "low": 25.1,
-    "prevClose": 25.2,
+    "prevClose": 25.45,
     "volume": 125,
     "turnover": "316.5 萬",
     "tradeValue": 3165099,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.2
   },
   "5469": {
     "code": "5469",
@@ -18797,29 +19653,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "聰泰",
     "price": 161.5,
     "change": -3.5,
-    "pctChange": -2.17,
+    "pctChange": -2.12,
     "open": 163.5,
     "high": 164,
     "low": 161,
-    "prevClose": 161.5,
+    "prevClose": 165,
     "volume": 128,
     "turnover": "2073.9 萬",
     "tradeValue": 20738513,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 161.5
   },
   "5475": {
     "name": "德宏",
     "price": 180.5,
     "change": 2.5,
-    "pctChange": 1.39,
+    "pctChange": 1.4,
     "open": 177,
     "high": 183,
     "low": 177,
-    "prevClose": 180.5,
+    "prevClose": 178,
     "volume": 2783,
     "turnover": "5.0 億",
     "tradeValue": 503120110,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 180.5
   },
   "5478": {
     "name": "智冠",
@@ -18829,39 +19689,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 97.6,
     "high": 97.7,
     "low": 97.3,
-    "prevClose": 97.6,
+    "prevClose": 97.5,
     "volume": 50,
     "turnover": "490.7 萬",
     "tradeValue": 4907124,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 97.6
   },
   "5481": {
     "name": "新華",
     "price": 21.85,
     "change": -0.25,
-    "pctChange": -1.14,
+    "pctChange": -1.13,
     "open": 22.1,
     "high": 22.1,
     "low": 21.7,
-    "prevClose": 21.85,
+    "prevClose": 22.1,
     "volume": 217,
     "turnover": "475.1 萬",
     "tradeValue": 4750916,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 21.85
   },
   "5483": {
     "name": "中美晶",
     "price": 221.5,
     "change": 10,
-    "pctChange": 4.51,
+    "pctChange": 4.73,
     "open": 210.5,
     "high": 229.5,
     "low": 209.5,
-    "prevClose": 221.5,
+    "prevClose": 211.5,
     "volume": 47867,
     "turnover": "105.4 億",
     "tradeValue": 10542897148,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 221.5
   },
   "5484": {
     "code": "5484",
@@ -18884,29 +19750,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "通泰",
     "price": 29.3,
     "change": 0.6,
-    "pctChange": 2.05,
+    "pctChange": 2.09,
     "open": 28.7,
     "high": 29.3,
     "low": 28.55,
-    "prevClose": 29.3,
+    "prevClose": 28.7,
     "volume": 31,
     "turnover": "89.2 萬",
     "tradeValue": 891628,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29.3
   },
   "5488": {
     "name": "松普",
     "price": 12.3,
     "change": 0.15,
-    "pctChange": 1.22,
+    "pctChange": 1.23,
     "open": 12.1,
     "high": 12.75,
     "low": 12,
-    "prevClose": 12.3,
+    "prevClose": 12.15,
     "volume": 1134,
     "turnover": "1404.9 萬",
     "tradeValue": 14049249,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.3
   },
   "5489": {
     "name": "彩富",
@@ -18916,25 +19786,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 42.15,
     "high": 43.15,
     "low": 42,
-    "prevClose": 42.3,
+    "prevClose": 42.35,
     "volume": 93,
     "turnover": "394.3 萬",
     "tradeValue": 3942998,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 42.3
   },
   "5490": {
     "name": "同亨",
     "price": 25.9,
     "change": 0.3,
-    "pctChange": 1.16,
+    "pctChange": 1.17,
     "open": 25.7,
     "high": 25.9,
     "low": 25.55,
-    "prevClose": 25.9,
+    "prevClose": 25.6,
     "volume": 167,
     "turnover": "431.0 萬",
     "tradeValue": 4310342,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.9
   },
   "5493": {
     "name": "三聯",
@@ -18944,25 +19818,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 91.2,
     "high": 92,
     "low": 90.4,
-    "prevClose": 91.3,
+    "prevClose": 90.7,
     "volume": 70,
     "turnover": "639.8 萬",
     "tradeValue": 6397846,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 91.3
   },
   "5498": {
     "name": "凱崴",
     "price": 55.6,
     "change": 5,
-    "pctChange": 8.99,
+    "pctChange": 9.88,
     "open": 50.9,
     "high": 55.6,
     "low": 50.8,
-    "prevClose": 55.6,
+    "prevClose": 50.6,
     "volume": 3986,
     "turnover": "2.2 億",
     "tradeValue": 216393369,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 55.6
   },
   "5508": {
     "name": "永信建",
@@ -18972,11 +19850,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 54.7,
     "high": 55.4,
     "low": 53.6,
-    "prevClose": 53.7,
+    "prevClose": 53.4,
     "volume": 340,
     "turnover": "1846.9 萬",
     "tradeValue": 18469104,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 53.7
   },
   "5511": {
     "name": "德昌",
@@ -18986,11 +19866,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 69.1,
     "high": 69.6,
     "low": 68.8,
-    "prevClose": 69,
+    "prevClose": 69.3,
     "volume": 49,
     "turnover": "339.0 萬",
     "tradeValue": 3389630,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 69
   },
   "5512": {
     "name": "力麒",
@@ -19000,11 +19882,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 7.71,
     "high": 7.71,
     "low": 7.67,
-    "prevClose": 7.59,
+    "prevClose": 7.7,
     "volume": 575,
     "turnover": "442.1 萬",
     "tradeValue": 4421490,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 7.69
   },
   "5514": {
     "name": "三豐",
@@ -19014,11 +19898,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 14.8,
     "high": 15.15,
     "low": 14.8,
-    "prevClose": 15.15,
+    "prevClose": 15.1,
     "volume": 11,
     "turnover": "16.5 萬",
     "tradeValue": 165378,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.15
   },
   "5515": {
     "code": "5515",
@@ -19041,15 +19927,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "雙喜",
     "price": 11.75,
     "change": -0.25,
-    "pctChange": -2.13,
+    "pctChange": -2.08,
     "open": 11.75,
     "high": 11.75,
     "low": 11.75,
-    "prevClose": 11.75,
+    "prevClose": 12,
     "volume": 1,
     "turnover": "1.2 萬",
     "tradeValue": 11750,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 11.75
   },
   "5519": {
     "code": "5519",
@@ -19080,7 +19968,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 1,
     "turnover": "8.3 萬",
     "tradeValue": 83500,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 83.5
   },
   "5521": {
     "code": "5521",
@@ -19120,15 +20010,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "豐謙",
     "price": 30.3,
     "change": -0.05,
-    "pctChange": -0.17,
+    "pctChange": -0.16,
     "open": 30.2,
     "high": 30.3,
     "low": 30.2,
-    "prevClose": 30.3,
+    "prevClose": 30.35,
     "volume": 6,
     "turnover": "16.7 萬",
     "tradeValue": 167454,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.3
   },
   "5525": {
     "code": "5525",
@@ -19159,7 +20051,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 117,
     "turnover": "303.1 萬",
     "tradeValue": 3030665,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 26.05
   },
   "5530": {
     "name": "龍巖",
@@ -19169,11 +20063,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 48.55,
     "high": 48.95,
     "low": 48.4,
-    "prevClose": 48.7,
+    "prevClose": 48.75,
     "volume": 172,
     "turnover": "832.8 萬",
     "tradeValue": 8328112,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 48.7
   },
   "5531": {
     "code": "5531",
@@ -19234,11 +20130,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 964,
     "high": 975,
     "low": 938,
-    "prevClose": 956,
+    "prevClose": 959,
     "volume": 1841,
     "turnover": "17.6 億",
     "tradeValue": 1755024886,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 956
   },
   "5538": {
     "code": "5538",
@@ -19261,15 +20159,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "桓鼎-KY",
     "price": 27.5,
     "change": 0.5,
-    "pctChange": 1.82,
+    "pctChange": 1.85,
     "open": 27.5,
     "high": 27.5,
     "low": 27.5,
-    "prevClose": 27.5,
+    "prevClose": 27,
     "volume": 1,
     "turnover": "2.8 萬",
     "tradeValue": 27557,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 27.5
   },
   "5546": {
     "code": "5546",
@@ -19296,11 +20196,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 20.25,
     "high": 20.25,
     "low": 20.2,
-    "prevClose": 20.2,
+    "prevClose": 20.15,
     "volume": 12,
     "turnover": "23.3 萬",
     "tradeValue": 232972,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.2
   },
   "5548": {
     "name": "安倉",
@@ -19310,25 +20212,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 20,
     "high": 20.1,
     "low": 20,
-    "prevClose": 20.05,
+    "prevClose": 20,
     "volume": 17,
     "turnover": "33.4 萬",
     "tradeValue": 333620,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.05
   },
   "5601": {
     "name": "台聯櫃",
     "price": 30.55,
     "change": 1.65,
-    "pctChange": 5.4,
+    "pctChange": 5.71,
     "open": 30.5,
     "high": 30.55,
     "low": 30.5,
-    "prevClose": 30.55,
+    "prevClose": 28.9,
     "volume": 3,
     "turnover": "9.3 萬",
     "tradeValue": 93141,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.55
   },
   "5603": {
     "name": "陸海",
@@ -19338,11 +20244,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 13.5,
     "high": 13.6,
     "low": 13.5,
-    "prevClose": 13.55,
+    "prevClose": 13.5,
     "volume": 54,
     "turnover": "73.3 萬",
     "tradeValue": 732804,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 13.55
   },
   "5604": {
     "name": "中連",
@@ -19356,7 +20264,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 16,
     "turnover": "51.0 萬",
     "tradeValue": 510376,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.4
   },
   "5607": {
     "code": "5607",
@@ -19400,11 +20310,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 78,
     "high": 78.3,
     "low": 77.9,
-    "prevClose": 78,
+    "prevClose": 77.9,
     "volume": 74,
     "turnover": "579.8 萬",
     "tradeValue": 5798288,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 78
   },
   "5701": {
     "name": "劍湖山",
@@ -19418,21 +20330,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 58,
     "turnover": "23.6 萬",
     "tradeValue": 236060,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 4.07
   },
   "5704": {
     "name": "老爺知",
     "price": 22.45,
     "change": -0.15,
-    "pctChange": -0.67,
+    "pctChange": -0.66,
     "open": 22.65,
     "high": 22.65,
     "low": 22.45,
-    "prevClose": 22.45,
+    "prevClose": 22.6,
     "volume": 13,
     "turnover": "28.4 萬",
     "tradeValue": 283933,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.45
   },
   "5706": {
     "code": "5706",
@@ -19455,15 +20371,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "致和證",
     "price": 39,
     "change": 0.75,
-    "pctChange": 1.92,
+    "pctChange": 1.96,
     "open": 38.35,
     "high": 39.1,
     "low": 37.85,
-    "prevClose": 39,
+    "prevClose": 38.25,
     "volume": 2468,
     "turnover": "9548.4 萬",
     "tradeValue": 95484373,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 39
   },
   "5871": {
     "code": "5871",
@@ -19507,11 +20425,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 37.8,
     "high": 37.8,
     "low": 37.8,
-    "prevClose": 37.8,
+    "prevClose": 37.85,
     "volume": 5,
     "turnover": "19.9 萬",
     "tradeValue": 199354,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 37.8
   },
   "5880": {
     "code": "5880",
@@ -19538,11 +20458,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 34.55,
     "high": 34.55,
     "low": 33.9,
-    "prevClose": 34.2,
+    "prevClose": 34.3,
     "volume": 18,
     "turnover": "60.0 萬",
     "tradeValue": 600347,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 34.2
   },
   "5903": {
     "name": "全家",
@@ -19556,21 +20478,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 16,
     "turnover": "303.9 萬",
     "tradeValue": 3039205,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 186
   },
   "5904": {
     "name": "寶雅*",
     "price": 68.4,
     "change": -0.7,
-    "pctChange": -1.02,
+    "pctChange": -1.01,
     "open": 69.1,
     "high": 69.1,
     "low": 68.2,
-    "prevClose": 68.4,
+    "prevClose": 69.1,
     "volume": 4252,
     "turnover": "2.9 億",
     "tradeValue": 290889796,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 68.4
   },
   "5905": {
     "name": "南仁湖",
@@ -19580,11 +20506,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 7.4,
     "high": 7.4,
     "low": 7.31,
-    "prevClose": 7.33,
+    "prevClose": 7.4,
     "volume": 200,
     "turnover": "147.3 萬",
     "tradeValue": 1473106,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 7.33
   },
   "5906": {
     "code": "5906",
@@ -19641,15 +20569,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "宏遠證",
     "price": 17.8,
     "change": 0.2,
-    "pctChange": 1.12,
+    "pctChange": 1.14,
     "open": 17.5,
     "high": 17.85,
     "low": 17.45,
-    "prevClose": 17.8,
+    "prevClose": 17.6,
     "volume": 1582,
     "turnover": "2800.7 萬",
     "tradeValue": 28007206,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.8
   },
   "6016": {
     "name": "康和證",
@@ -19659,11 +20589,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23.7,
     "high": 24.1,
     "low": 23.6,
-    "prevClose": 23.9,
+    "prevClose": 23.7,
     "volume": 2871,
     "turnover": "6859.0 萬",
     "tradeValue": 68590267,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.9
   },
   "6020": {
     "name": "大展證",
@@ -19677,7 +20609,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 12,
     "turnover": "24.8 萬",
     "tradeValue": 247850,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.55
   },
   "6021": {
     "name": "美好證",
@@ -19687,11 +20621,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 41.7,
     "high": 42.05,
     "low": 41.7,
-    "prevClose": 41.8,
+    "prevClose": 41.7,
     "volume": 52,
     "turnover": "218.9 萬",
     "tradeValue": 2189360,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.8
   },
   "6023": {
     "name": "元大期",
@@ -19701,11 +20637,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 84.8,
     "high": 85,
     "low": 84.1,
-    "prevClose": 84.7,
+    "prevClose": 84.8,
     "volume": 364,
     "turnover": "3073.5 萬",
     "tradeValue": 30735189,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 84.7
   },
   "6024": {
     "code": "6024",
@@ -19732,11 +20670,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 15.95,
     "high": 16.05,
     "low": 15.85,
-    "prevClose": 15.95,
+    "prevClose": 15.85,
     "volume": 763,
     "turnover": "1217.6 萬",
     "tradeValue": 12175760,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.95
   },
   "6028": {
     "name": "公勝保經",
@@ -19746,11 +20686,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 98.9,
     "high": 99.9,
     "low": 98.9,
-    "prevClose": 99.8,
+    "prevClose": 99.2,
     "volume": 10,
     "turnover": "99.1 萬",
     "tradeValue": 991218,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 99.8
   },
   "6101": {
     "name": "寬魚國際",
@@ -19760,11 +20702,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 37.6,
     "high": 37.8,
     "low": 37.4,
-    "prevClose": 37.8,
+    "prevClose": 37.75,
     "volume": 85,
     "turnover": "319.9 萬",
     "tradeValue": 3199377,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 37.8
   },
   "6103": {
     "name": "合邦",
@@ -19774,11 +20718,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 38,
     "high": 38,
     "low": 36.95,
-    "prevClose": 36.95,
+    "prevClose": 36.9,
     "volume": 44,
     "turnover": "163.6 萬",
     "tradeValue": 1636266,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 36.95
   },
   "6104": {
     "name": "創惟",
@@ -19788,11 +20734,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 92.4,
     "high": 92.5,
     "low": 91.6,
-    "prevClose": 92.3,
+    "prevClose": 91.7,
     "volume": 237,
     "turnover": "2185.9 萬",
     "tradeValue": 21859037,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 92.3
   },
   "6108": {
     "code": "6108",
@@ -19815,29 +20763,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "亞元",
     "price": 10.35,
     "change": -0.1,
-    "pctChange": -0.97,
+    "pctChange": -0.96,
     "open": 10.55,
     "high": 10.55,
     "low": 10.35,
-    "prevClose": 10.35,
+    "prevClose": 10.45,
     "volume": 125,
     "turnover": "130.3 萬",
     "tradeValue": 1303032,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 10.35
   },
   "6111": {
     "name": "光聚晶電",
     "price": 38.4,
     "change": 0.3,
-    "pctChange": 0.78,
+    "pctChange": 0.79,
     "open": 38,
     "high": 38.5,
     "low": 37.3,
-    "prevClose": 38.4,
+    "prevClose": 38.1,
     "volume": 221,
     "turnover": "842.4 萬",
     "tradeValue": 8424016,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 38.4
   },
   "6112": {
     "code": "6112",
@@ -19860,15 +20812,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "亞矽",
     "price": 24.45,
     "change": -0.45,
-    "pctChange": -1.84,
+    "pctChange": -1.81,
     "open": 25.3,
     "high": 25.6,
     "low": 24.4,
-    "prevClose": 24.45,
+    "prevClose": 24.9,
     "volume": 848,
     "turnover": "2104.0 萬",
     "tradeValue": 21039808,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.45
   },
   "6114": {
     "name": "久威",
@@ -19878,11 +20832,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23.3,
     "high": 23.4,
     "low": 23.2,
-    "prevClose": 23.4,
+    "prevClose": 23.5,
     "volume": 24,
     "turnover": "55.2 萬",
     "tradeValue": 552159,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.4
   },
   "6115": {
     "code": "6115",
@@ -19939,15 +20895,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "建達",
     "price": 16.15,
     "change": -0.15,
-    "pctChange": -0.93,
+    "pctChange": -0.92,
     "open": 16.35,
     "high": 16.35,
     "low": 16.15,
-    "prevClose": 16.15,
+    "prevClose": 16.3,
     "volume": 210,
     "turnover": "340.3 萬",
     "tradeValue": 3403049,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.15
   },
   "6120": {
     "code": "6120",
@@ -19970,29 +20928,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "新普",
     "price": 383,
     "change": 3.5,
-    "pctChange": 0.91,
+    "pctChange": 0.92,
     "open": 379.5,
     "high": 385,
     "low": 379,
-    "prevClose": 383,
+    "prevClose": 379.5,
     "volume": 360,
     "turnover": "1.4 億",
     "tradeValue": 137840595,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 383
   },
   "6122": {
     "name": "擎邦",
     "price": 63.9,
     "change": 1.6,
-    "pctChange": 2.5,
+    "pctChange": 2.57,
     "open": 62.5,
     "high": 63.9,
     "low": 60.8,
-    "prevClose": 63.9,
+    "prevClose": 62.3,
     "volume": 2171,
     "turnover": "1.4 億",
     "tradeValue": 136103092,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 63.9
   },
   "6123": {
     "name": "上奇",
@@ -20002,11 +20964,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 43,
     "high": 43.05,
     "low": 42.65,
-    "prevClose": 43.05,
+    "prevClose": 42.95,
     "volume": 33,
     "turnover": "141.3 萬",
     "tradeValue": 1413258,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 43.05
   },
   "6124": {
     "name": "業強",
@@ -20016,53 +20980,61 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 26.8,
     "high": 27.25,
     "low": 26.75,
-    "prevClose": 27.1,
+    "prevClose": 27.2,
     "volume": 26,
     "turnover": "70.6 萬",
     "tradeValue": 706173,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 27.1
   },
   "6125": {
     "name": "廣運",
     "price": 50.9,
     "change": 1.05,
-    "pctChange": 2.06,
+    "pctChange": 2.11,
     "open": 50.5,
     "high": 51.3,
     "low": 50.5,
-    "prevClose": 50.9,
+    "prevClose": 49.85,
     "volume": 965,
     "turnover": "4915.0 萬",
     "tradeValue": 49149632,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 50.9
   },
   "6126": {
     "name": "信音",
     "price": 31.25,
     "change": 0.45,
-    "pctChange": 1.44,
+    "pctChange": 1.46,
     "open": 30.8,
     "high": 31.4,
     "low": 30.75,
-    "prevClose": 31.25,
+    "prevClose": 30.8,
     "volume": 493,
     "turnover": "1536.7 萬",
     "tradeValue": 15367038,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.25
   },
   "6127": {
     "name": "九豪",
     "price": 58.4,
     "change": 1.6,
-    "pctChange": 2.74,
+    "pctChange": 2.82,
     "open": 57,
     "high": 59.6,
     "low": 55.8,
-    "prevClose": 58.4,
+    "prevClose": 56.8,
     "volume": 29645,
     "turnover": "17.2 億",
     "tradeValue": 1719817542,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 58.4
   },
   "6128": {
     "code": "6128",
@@ -20089,11 +21061,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 14.9,
     "high": 15.15,
     "low": 14.75,
-    "prevClose": 14.8,
+    "prevClose": 14.7,
     "volume": 530,
     "turnover": "791.3 萬",
     "tradeValue": 7913240,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.8
   },
   "6130": {
     "name": "上亞科技",
@@ -20103,11 +21077,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23.65,
     "high": 24.25,
     "low": 23.35,
-    "prevClose": 23.6,
+    "prevClose": 23.55,
     "volume": 303,
     "turnover": "721.3 萬",
     "tradeValue": 7212845,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.6
   },
   "6133": {
     "code": "6133",
@@ -20134,11 +21110,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 29.5,
     "high": 29.5,
     "low": 28.8,
-    "prevClose": 28.9,
+    "prevClose": 28.95,
     "volume": 151,
     "turnover": "435.3 萬",
     "tradeValue": 4353114,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.9
   },
   "6136": {
     "code": "6136",
@@ -20165,11 +21143,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 285,
     "high": 291,
     "low": 283.5,
-    "prevClose": 284.5,
+    "prevClose": 283.5,
     "volume": 749,
     "turnover": "2.1 億",
     "tradeValue": 214454022,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 284.5
   },
   "6139": {
     "code": "6139",
@@ -20196,11 +21176,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 20.4,
     "high": 20.4,
     "low": 20,
-    "prevClose": 20.1,
+    "prevClose": 20.05,
     "volume": 139,
     "turnover": "278.8 萬",
     "tradeValue": 2788452,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.1
   },
   "6141": {
     "code": "6141",
@@ -20244,53 +21226,61 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 80.7,
     "high": 81,
     "low": 80.4,
-    "prevClose": 80.9,
+    "prevClose": 80.6,
     "volume": 182,
     "turnover": "1465.6 萬",
     "tradeValue": 14655883,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 80.9
   },
   "6144": {
     "name": "得利影",
     "price": 14.05,
     "change": 1.25,
-    "pctChange": 8.9,
+    "pctChange": 9.77,
     "open": 13.65,
     "high": 14.05,
     "low": 12.95,
-    "prevClose": 14.05,
+    "prevClose": 12.8,
     "volume": 124,
     "turnover": "172.5 萬",
     "tradeValue": 1724509,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.05
   },
   "6146": {
     "name": "耕興",
     "price": 183.5,
     "change": 2,
-    "pctChange": 1.09,
+    "pctChange": 1.1,
     "open": 181.5,
     "high": 183.5,
     "low": 181,
-    "prevClose": 183.5,
+    "prevClose": 181.5,
     "volume": 231,
     "turnover": "4219.8 萬",
     "tradeValue": 42198082,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 183.5
   },
   "6147": {
     "name": "頎邦",
     "price": 223,
     "change": -2.5,
-    "pctChange": -1.12,
+    "pctChange": -1.11,
     "open": 224.5,
     "high": 227,
     "low": 221,
-    "prevClose": 223,
+    "prevClose": 225.5,
     "volume": 28574,
     "turnover": "64.0 億",
     "tradeValue": 6397832949,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 223
   },
   "6148": {
     "name": "驊宏資",
@@ -20300,39 +21290,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 38.45,
     "high": 38.9,
     "low": 37.45,
-    "prevClose": 38.1,
+    "prevClose": 38.05,
     "volume": 1120,
     "turnover": "4268.1 萬",
     "tradeValue": 42681003,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 38.1
   },
   "6150": {
     "name": "撼訊",
     "price": 68.5,
     "change": -1.4,
-    "pctChange": -2.04,
+    "pctChange": -2,
     "open": 69.9,
     "high": 70.4,
     "low": 67.2,
-    "prevClose": 68.5,
+    "prevClose": 69.9,
     "volume": 1755,
     "turnover": "1.2 億",
     "tradeValue": 120271161,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 68.5
   },
   "6151": {
     "name": "晉倫",
     "price": 35.2,
     "change": 0.55,
-    "pctChange": 1.56,
+    "pctChange": 1.59,
     "open": 34.75,
     "high": 35.2,
     "low": 34.5,
-    "prevClose": 35.2,
+    "prevClose": 34.65,
     "volume": 78,
     "turnover": "273.7 萬",
     "tradeValue": 2736585,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 35.2
   },
   "6152": {
     "code": "6152",
@@ -20380,7 +21376,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 22,
     "turnover": "31.0 萬",
     "tradeValue": 310225,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.2
   },
   "6155": {
     "code": "6155",
@@ -20403,29 +21401,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "松上",
     "price": 22.35,
     "change": 0.6,
-    "pctChange": 2.68,
+    "pctChange": 2.76,
     "open": 21.8,
     "high": 22.4,
     "low": 21.7,
-    "prevClose": 22.35,
+    "prevClose": 21.75,
     "volume": 711,
     "turnover": "1574.6 萬",
     "tradeValue": 15745610,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.35
   },
   "6158": {
     "name": "禾昌",
     "price": 17.4,
     "change": 0.15,
-    "pctChange": 0.86,
+    "pctChange": 0.87,
     "open": 17.55,
     "high": 18.2,
     "low": 17.35,
-    "prevClose": 17.4,
+    "prevClose": 17.25,
     "volume": 451,
     "turnover": "799.8 萬",
     "tradeValue": 7997553,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.4
   },
   "6160": {
     "name": "欣技",
@@ -20439,35 +21441,41 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 58,
     "turnover": "81.0 萬",
     "tradeValue": 809772,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 13.9
   },
   "6161": {
     "name": "捷波",
     "price": 49.65,
     "change": -0.65,
-    "pctChange": -1.31,
+    "pctChange": -1.29,
     "open": 50,
     "high": 50.1,
     "low": 49.6,
-    "prevClose": 49.65,
+    "prevClose": 50.3,
     "volume": 68,
     "turnover": "339.4 萬",
     "tradeValue": 3393829,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 49.65
   },
   "6163": {
     "name": "華電網",
     "price": 41.2,
     "change": -0.2,
-    "pctChange": -0.49,
+    "pctChange": -0.48,
     "open": 41.5,
     "high": 41.95,
     "low": 41.05,
-    "prevClose": 41.2,
+    "prevClose": 41.4,
     "volume": 501,
     "turnover": "2066.2 萬",
     "tradeValue": 20662154,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.2
   },
   "6164": {
     "code": "6164",
@@ -20528,11 +21536,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 10.25,
     "high": 10.3,
     "low": 10.2,
-    "prevClose": 10.2,
+    "prevClose": 10.25,
     "volume": 248,
     "turnover": "253.9 萬",
     "tradeValue": 2538680,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 10.2
   },
   "6168": {
     "code": "6168",
@@ -20555,15 +21565,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "昱泉",
     "price": 12,
     "change": 0.15,
-    "pctChange": 1.25,
+    "pctChange": 1.27,
     "open": 11.7,
     "high": 12.1,
     "low": 11.6,
-    "prevClose": 12,
+    "prevClose": 11.85,
     "volume": 13,
     "turnover": "14.9 萬",
     "tradeValue": 148872,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12
   },
   "6170": {
     "name": "統振",
@@ -20573,11 +21585,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 49.15,
     "high": 49.25,
     "low": 49,
-    "prevClose": 49.25,
+    "prevClose": 49.15,
     "volume": 116,
     "turnover": "568.2 萬",
     "tradeValue": 5682412,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 49.25
   },
   "6171": {
     "name": "大城地產",
@@ -20591,7 +21605,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 343,
     "turnover": "840.7 萬",
     "tradeValue": 8406653,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.5
   },
   "6173": {
     "name": "信昌電",
@@ -20601,25 +21617,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 300,
     "high": 322.5,
     "low": 299,
-    "prevClose": 303,
+    "prevClose": 302.5,
     "volume": 24377,
     "turnover": "76.1 億",
     "tradeValue": 7611907686,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 303
   },
   "6174": {
     "name": "安碁",
     "price": 55,
     "change": 5,
-    "pctChange": 9.09,
+    "pctChange": 10,
     "open": 54.9,
     "high": 55,
     "low": 54.1,
-    "prevClose": 55,
+    "prevClose": 50,
     "volume": 1576,
     "turnover": "8662.5 萬",
     "tradeValue": 86625325,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 55
   },
   "6175": {
     "name": "立敦",
@@ -20629,11 +21649,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 75.6,
     "high": 77.1,
     "low": 74.4,
-    "prevClose": 76.7,
+    "prevClose": 76.3,
     "volume": 4715,
     "turnover": "3.6 億",
     "tradeValue": 359914605,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 76.7
   },
   "6176": {
     "code": "6176",
@@ -20673,43 +21695,49 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "亞通",
     "price": 36.5,
     "change": 0.55,
-    "pctChange": 1.51,
+    "pctChange": 1.53,
     "open": 36,
     "high": 36.7,
     "low": 35.85,
-    "prevClose": 36.5,
+    "prevClose": 35.95,
     "volume": 3049,
     "turnover": "1.1 億",
     "tradeValue": 110544178,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 36.5
   },
   "6180": {
     "name": "橘子",
     "price": 41.2,
     "change": -0.45,
-    "pctChange": -1.09,
+    "pctChange": -1.08,
     "open": 41.55,
     "high": 41.55,
     "low": 41,
-    "prevClose": 41.2,
+    "prevClose": 41.65,
     "volume": 206,
     "turnover": "847.3 萬",
     "tradeValue": 8472717,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.2
   },
   "6182": {
     "name": "合晶",
     "price": 135,
     "change": 5,
-    "pctChange": 3.7,
+    "pctChange": 3.85,
     "open": 131,
     "high": 140,
     "low": 128.5,
-    "prevClose": 135,
+    "prevClose": 130,
     "volume": 142245,
     "turnover": "192.5 億",
     "tradeValue": 19252353256,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 135
   },
   "6183": {
     "code": "6183",
@@ -20749,15 +21777,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "幃翔",
     "price": 12.45,
     "change": -0.15,
-    "pctChange": -1.2,
+    "pctChange": -1.19,
     "open": 12.6,
     "high": 12.65,
     "low": 12.45,
-    "prevClose": 12.45,
+    "prevClose": 12.6,
     "volume": 151,
     "turnover": "188.5 萬",
     "tradeValue": 1884683,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.45
   },
   "6186": {
     "name": "新潤",
@@ -20767,25 +21797,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 29.05,
     "high": 29.05,
     "low": 28.85,
-    "prevClose": 28.9,
+    "prevClose": 29.1,
     "volume": 393,
     "turnover": "1137.3 萬",
     "tradeValue": 11373207,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.9
   },
   "6187": {
     "name": "萬潤",
     "price": 1355,
     "change": 80,
-    "pctChange": 5.9,
+    "pctChange": 6.27,
     "open": 1290,
     "high": 1385,
     "low": 1290,
-    "prevClose": 1355,
+    "prevClose": 1275,
     "volume": 2437,
     "turnover": "32.7 億",
     "tradeValue": 3271722825,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 1355
   },
   "6188": {
     "name": "廣明",
@@ -20795,11 +21829,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 62.2,
     "high": 62.6,
     "low": 61.9,
-    "prevClose": 62.4,
+    "prevClose": 62.1,
     "volume": 485,
     "turnover": "3020.5 萬",
     "tradeValue": 30204924,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 62.4
   },
   "6189": {
     "code": "6189",
@@ -20826,11 +21862,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 71.5,
     "high": 71.5,
     "low": 70.8,
-    "prevClose": 70.8,
+    "prevClose": 71.2,
     "volume": 1215,
     "turnover": "8629.4 萬",
     "tradeValue": 86293744,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 70.8
   },
   "6191": {
     "code": "6191",
@@ -20874,25 +21912,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 30,
     "high": 30,
     "low": 29.9,
-    "prevClose": 29.95,
+    "prevClose": 30.1,
     "volume": 29,
     "turnover": "86.9 萬",
     "tradeValue": 868569,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29.95
   },
   "6195": {
     "name": "詩肯",
     "price": 28.1,
     "change": -0.1,
-    "pctChange": -0.36,
+    "pctChange": -0.35,
     "open": 28.2,
     "high": 28.25,
     "low": 28.05,
-    "prevClose": 28.1,
+    "prevClose": 28.2,
     "volume": 53,
     "turnover": "148.2 萬",
     "tradeValue": 1481692,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.1
   },
   "6196": {
     "code": "6196",
@@ -20940,21 +21982,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 1,
     "turnover": "2.0 萬",
     "tradeValue": 19950,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.95
   },
   "6199": {
     "name": "天品",
     "price": 132,
     "change": 4,
-    "pctChange": 3.03,
+    "pctChange": 3.13,
     "open": 128,
     "high": 134,
     "low": 128,
-    "prevClose": 132,
+    "prevClose": 128,
     "volume": 5838,
     "turnover": "7.6 億",
     "tradeValue": 762902528,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 132
   },
   "6201": {
     "code": "6201",
@@ -21002,21 +22048,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 31,
     "turnover": "189.1 萬",
     "tradeValue": 1891313,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 60.3
   },
   "6204": {
     "name": "艾華",
     "price": 110,
     "change": 5.5,
-    "pctChange": 5,
+    "pctChange": 5.26,
     "open": 105.5,
     "high": 114,
     "low": 105,
-    "prevClose": 110,
+    "prevClose": 104.5,
     "volume": 826,
     "turnover": "9114.3 萬",
     "tradeValue": 91143376,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 110
   },
   "6205": {
     "code": "6205",
@@ -21056,29 +22106,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "雷科",
     "price": 148,
     "change": 3,
-    "pctChange": 2.03,
+    "pctChange": 2.07,
     "open": 145,
     "high": 152.5,
     "low": 141.5,
-    "prevClose": 148,
+    "prevClose": 145,
     "volume": 25967,
     "turnover": "38.2 億",
     "tradeValue": 3822816489,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 148
   },
   "6208": {
     "name": "日揚",
     "price": 80.4,
     "change": 0.9,
-    "pctChange": 1.12,
+    "pctChange": 1.13,
     "open": 80.1,
     "high": 80.6,
     "low": 79,
-    "prevClose": 80.4,
+    "prevClose": 79.5,
     "volume": 356,
     "turnover": "2843.0 萬",
     "tradeValue": 28430070,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 80.4
   },
   "6209": {
     "code": "6209",
@@ -21105,11 +22159,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 17.5,
     "high": 17.8,
     "low": 17.45,
-    "prevClose": 17.8,
+    "prevClose": 17.9,
     "volume": 12,
     "turnover": "21.3 萬",
     "tradeValue": 213421,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.8
   },
   "6212": {
     "name": "理銘",
@@ -21119,11 +22175,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 32.25,
     "high": 32.25,
     "low": 32.1,
-    "prevClose": 32.1,
+    "prevClose": 32.25,
     "volume": 2,
     "turnover": "6.4 萬",
     "tradeValue": 64350,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 32.1
   },
   "6213": {
     "code": "6213",
@@ -21197,43 +22255,49 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "中探針",
     "price": 177.5,
     "change": 3,
-    "pctChange": 1.69,
+    "pctChange": 1.72,
     "open": 174,
     "high": 184,
     "low": 174,
-    "prevClose": 177.5,
+    "prevClose": 174.5,
     "volume": 4322,
     "turnover": "7.7 億",
     "tradeValue": 774167250,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 177.5
   },
   "6218": {
     "name": "豪勉",
     "price": 64.4,
     "change": 1.6,
-    "pctChange": 2.48,
+    "pctChange": 2.55,
     "open": 63.2,
     "high": 64.9,
     "low": 62.8,
-    "prevClose": 64.4,
+    "prevClose": 62.8,
     "volume": 1575,
     "turnover": "1.0 億",
     "tradeValue": 100552222,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 64.4
   },
   "6219": {
     "name": "富旺",
     "price": 12.15,
     "change": -0.2,
-    "pctChange": -1.65,
+    "pctChange": -1.62,
     "open": 12.35,
     "high": 12.35,
     "low": 12.05,
-    "prevClose": 12.15,
+    "prevClose": 12.35,
     "volume": 88,
     "turnover": "107.6 萬",
     "tradeValue": 1075650,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.15
   },
   "6220": {
     "name": "岳豐",
@@ -21243,53 +22307,61 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 25.35,
     "high": 25.45,
     "low": 25.15,
-    "prevClose": 25.45,
+    "prevClose": 25.3,
     "volume": 164,
     "turnover": "413.4 萬",
     "tradeValue": 4134041,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.45
   },
   "6221": {
     "name": "晉泰",
     "price": 30.25,
     "change": -0.7,
-    "pctChange": -2.31,
+    "pctChange": -2.26,
     "open": 30.9,
     "high": 30.95,
     "low": 30.1,
-    "prevClose": 30.25,
+    "prevClose": 30.95,
     "volume": 939,
     "turnover": "2852.9 萬",
     "tradeValue": 28528594,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.25
   },
   "6222": {
     "name": "立軒",
     "price": 19.95,
     "change": 0.65,
-    "pctChange": 3.26,
+    "pctChange": 3.37,
     "open": 19.95,
     "high": 19.95,
     "low": 19.95,
-    "prevClose": 19.95,
+    "prevClose": 19.3,
     "volume": 2,
     "turnover": "4.0 萬",
     "tradeValue": 39900,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.95
   },
   "6223": {
     "name": "旺矽",
     "price": 5310,
     "change": 280,
-    "pctChange": 5.27,
+    "pctChange": 5.57,
     "open": 5055,
     "high": 5310,
     "low": 5055,
-    "prevClose": 5310,
+    "prevClose": 5030,
     "volume": 1108,
     "turnover": "58.0 億",
     "tradeValue": 5797421915,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 5310
   },
   "6224": {
     "code": "6224",
@@ -21346,15 +22418,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "茂綸",
     "price": 140.5,
     "change": 3.5,
-    "pctChange": 2.49,
+    "pctChange": 2.55,
     "open": 138.5,
     "high": 142,
     "low": 134.5,
-    "prevClose": 140.5,
+    "prevClose": 137,
     "volume": 1522,
     "turnover": "2.1 億",
     "tradeValue": 211526776,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 140.5
   },
   "6228": {
     "name": "全譜",
@@ -21364,11 +22438,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 18.6,
     "high": 18.7,
     "low": 18.25,
-    "prevClose": 18.25,
+    "prevClose": 18.15,
     "volume": 14,
     "turnover": "26.0 萬",
     "tradeValue": 260072,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.25
   },
   "6229": {
     "name": "研通",
@@ -21378,11 +22454,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 24.35,
     "high": 24.35,
     "low": 23.95,
-    "prevClose": 24.2,
+    "prevClose": 24.15,
     "volume": 80,
     "turnover": "193.6 萬",
     "tradeValue": 1935643,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.2
   },
   "6230": {
     "code": "6230",
@@ -21405,15 +22483,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "系微",
     "price": 243,
     "change": 6,
-    "pctChange": 2.47,
+    "pctChange": 2.53,
     "open": 237,
     "high": 247.5,
     "low": 237,
-    "prevClose": 243,
+    "prevClose": 237,
     "volume": 395,
     "turnover": "9605.2 萬",
     "tradeValue": 96051543,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 243
   },
   "6233": {
     "name": "旺玖",
@@ -21427,21 +22507,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 270,
     "turnover": "633.4 萬",
     "tradeValue": 6333610,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.55
   },
   "6234": {
     "name": "高僑",
     "price": 39.95,
     "change": 0.4,
-    "pctChange": 1,
+    "pctChange": 1.01,
     "open": 39.55,
     "high": 40.75,
     "low": 39.5,
-    "prevClose": 39.95,
+    "prevClose": 39.55,
     "volume": 973,
     "turnover": "3908.6 萬",
     "tradeValue": 39086305,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 39.95
   },
   "6235": {
     "code": "6235",
@@ -21464,29 +22548,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "中湛",
     "price": 16.9,
     "change": -1.8,
-    "pctChange": -10.65,
+    "pctChange": -9.63,
     "open": 18.8,
     "high": 18.8,
     "low": 16.85,
-    "prevClose": 16.9,
+    "prevClose": 18.7,
     "volume": 6,
     "turnover": "10.5 萬",
     "tradeValue": 105050,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.9
   },
   "6237": {
     "name": "驊訊",
     "price": 36.3,
     "change": -0.45,
-    "pctChange": -1.24,
+    "pctChange": -1.22,
     "open": 36.35,
     "high": 36.6,
     "low": 36,
-    "prevClose": 36.3,
+    "prevClose": 36.75,
     "volume": 258,
     "turnover": "934.8 萬",
     "tradeValue": 9348358,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 36.3
   },
   "6239": {
     "code": "6239",
@@ -21509,15 +22597,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "松崗",
     "price": 26.4,
     "change": 1.1,
-    "pctChange": 4.17,
+    "pctChange": 4.35,
     "open": 26,
     "high": 27.35,
     "low": 25.85,
-    "prevClose": 26.4,
+    "prevClose": 25.3,
     "volume": 48,
     "turnover": "126.9 萬",
     "tradeValue": 1269092,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 26.4
   },
   "6241": {
     "name": "鑫永洋",
@@ -21527,11 +22617,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 16.2,
     "high": 16.4,
     "low": 15.95,
-    "prevClose": 16.25,
+    "prevClose": 16.15,
     "volume": 101,
     "turnover": "163.1 萬",
     "tradeValue": 1631070,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.25
   },
   "6242": {
     "name": "立康",
@@ -21541,11 +22633,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 34.05,
     "high": 34.05,
     "low": 33.85,
-    "prevClose": 33.85,
+    "prevClose": 34.05,
     "volume": 6,
     "turnover": "19.4 萬",
     "tradeValue": 194154,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 33.85
   },
   "6243": {
     "code": "6243",
@@ -21568,15 +22662,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "茂迪",
     "price": 24.1,
     "change": 0.25,
-    "pctChange": 1.04,
+    "pctChange": 1.05,
     "open": 23.7,
     "high": 24.3,
     "low": 23.6,
-    "prevClose": 24.1,
+    "prevClose": 23.85,
     "volume": 2693,
     "turnover": "6443.3 萬",
     "tradeValue": 64433026,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.1
   },
   "6245": {
     "name": "立端",
@@ -21586,25 +22682,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 87.9,
     "high": 89,
     "low": 87.6,
-    "prevClose": 88.2,
+    "prevClose": 88.3,
     "volume": 361,
     "turnover": "3184.6 萬",
     "tradeValue": 31845753,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 88.2
   },
   "6246": {
     "name": "臺龍",
     "price": 12.65,
     "change": -0.05,
-    "pctChange": -0.4,
+    "pctChange": -0.39,
     "open": 12.6,
     "high": 12.85,
     "low": 12.6,
-    "prevClose": 12.65,
+    "prevClose": 12.7,
     "volume": 20,
     "turnover": "25.3 萬",
     "tradeValue": 253446,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.65
   },
   "6248": {
     "name": "沛波",
@@ -21614,11 +22714,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 17.25,
     "high": 17.3,
     "low": 17,
-    "prevClose": 17.2,
+    "prevClose": 17.25,
     "volume": 88,
     "turnover": "150.7 萬",
     "tradeValue": 1506612,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.2
   },
   "6257": {
     "code": "6257",
@@ -21641,15 +22743,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "百徽",
     "price": 32.65,
     "change": 0.85,
-    "pctChange": 2.6,
+    "pctChange": 2.67,
     "open": 32.1,
     "high": 32.8,
     "low": 31.55,
-    "prevClose": 32.65,
+    "prevClose": 31.8,
     "volume": 622,
     "turnover": "2015.1 萬",
     "tradeValue": 20150838,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 32.65
   },
   "6261": {
     "name": "久元",
@@ -21659,67 +22763,77 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 79,
     "high": 79.5,
     "low": 78.4,
-    "prevClose": 78.9,
+    "prevClose": 79.1,
     "volume": 304,
     "turnover": "2394.3 萬",
     "tradeValue": 23942926,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 78.9
   },
   "6263": {
     "name": "普萊德",
     "price": 169.5,
     "change": 5.5,
-    "pctChange": 3.24,
+    "pctChange": 3.35,
     "open": 167.5,
     "high": 174,
     "low": 165,
-    "prevClose": 169.5,
+    "prevClose": 164,
     "volume": 606,
     "turnover": "1.0 億",
     "tradeValue": 103254880,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 169.5
   },
   "6264": {
     "name": "富裔",
     "price": 6.35,
     "change": 0.32,
-    "pctChange": 5.04,
+    "pctChange": 5.31,
     "open": 5.92,
     "high": 6.57,
     "low": 5.92,
-    "prevClose": 6.35,
+    "prevClose": 6.03,
     "volume": 22,
     "turnover": "13.3 萬",
     "tradeValue": 133178,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 6.35
   },
   "6265": {
     "name": "方土昶",
     "price": 50.1,
     "change": 0.85,
-    "pctChange": 1.7,
+    "pctChange": 1.73,
     "open": 49.85,
     "high": 50.7,
     "low": 49.7,
-    "prevClose": 50.1,
+    "prevClose": 49.25,
     "volume": 2562,
     "turnover": "1.3 億",
     "tradeValue": 128529953,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 50.1
   },
   "6266": {
     "name": "泰詠",
     "price": 26.9,
     "change": 1.95,
-    "pctChange": 7.25,
+    "pctChange": 7.82,
     "open": 25,
     "high": 27.4,
     "low": 25,
-    "prevClose": 26.9,
+    "prevClose": 24.95,
     "volume": 2945,
     "turnover": "7932.9 萬",
     "tradeValue": 79329141,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 26.9
   },
   "6269": {
     "code": "6269",
@@ -21742,15 +22856,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "倍微",
     "price": 31,
     "change": 0.45,
-    "pctChange": 1.45,
+    "pctChange": 1.47,
     "open": 30.6,
     "high": 31.6,
     "low": 30.45,
-    "prevClose": 31,
+    "prevClose": 30.55,
     "volume": 434,
     "turnover": "1348.1 萬",
     "tradeValue": 13481158,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31
   },
   "6271": {
     "code": "6271",
@@ -21790,15 +22906,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "台燿",
     "price": 1620,
     "change": 85,
-    "pctChange": 5.25,
+    "pctChange": 5.54,
     "open": 1540,
     "high": 1685,
     "low": 1530,
-    "prevClose": 1620,
+    "prevClose": 1535,
     "volume": 12357,
     "turnover": "199.9 億",
     "tradeValue": 19992007315,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 1620
   },
   "6275": {
     "name": "元山",
@@ -21808,11 +22926,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 47.3,
     "high": 48,
     "low": 47.15,
-    "prevClose": 47.85,
+    "prevClose": 47.45,
     "volume": 324,
     "turnover": "1547.3 萬",
     "tradeValue": 15473200,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 47.85
   },
   "6277": {
     "code": "6277",
@@ -21852,15 +22972,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "胡連",
     "price": 117,
     "change": 4,
-    "pctChange": 3.42,
+    "pctChange": 3.54,
     "open": 113,
     "high": 117.5,
     "low": 112.5,
-    "prevClose": 117,
+    "prevClose": 113,
     "volume": 770,
     "turnover": "8930.4 萬",
     "tradeValue": 89304365,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 117
   },
   "6281": {
     "code": "6281",
@@ -21917,15 +23039,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "佳邦",
     "price": 79.8,
     "change": -0.5,
-    "pctChange": -0.63,
+    "pctChange": -0.62,
     "open": 80.8,
     "high": 81.4,
     "low": 79.7,
-    "prevClose": 79.8,
+    "prevClose": 80.3,
     "volume": 2279,
     "turnover": "1.8 億",
     "tradeValue": 183229739,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 79.8
   },
   "6285": {
     "code": "6285",
@@ -21952,39 +23076,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 279,
     "high": 280,
     "low": 276,
-    "prevClose": 277,
+    "prevClose": 277.5,
     "volume": 1759,
     "turnover": "4.9 億",
     "tradeValue": 487991706,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 277
   },
   "6291": {
     "name": "沛亨",
     "price": 493,
     "change": 4,
-    "pctChange": 0.81,
+    "pctChange": 0.82,
     "open": 492,
     "high": 504,
     "low": 489,
-    "prevClose": 493,
+    "prevClose": 489,
     "volume": 759,
     "turnover": "3.8 億",
     "tradeValue": 376231477,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 493
   },
   "6292": {
     "name": "迅德",
     "price": 70.9,
     "change": 3.7,
-    "pctChange": 5.22,
+    "pctChange": 5.51,
     "open": 67.9,
     "high": 71.3,
     "low": 66.6,
-    "prevClose": 70.9,
+    "prevClose": 67.2,
     "volume": 1072,
     "turnover": "7492.4 萬",
     "tradeValue": 74923518,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 70.9
   },
   "6294": {
     "name": "智基",
@@ -21994,11 +23124,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 28.5,
     "high": 28.5,
     "low": 28.05,
-    "prevClose": 28.05,
+    "prevClose": 28.15,
     "volume": 9,
     "turnover": "25.2 萬",
     "tradeValue": 252351,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.05
   },
   "6405": {
     "code": "6405",
@@ -22038,15 +23170,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "晶焱",
     "price": 79.5,
     "change": 1.1,
-    "pctChange": 1.38,
+    "pctChange": 1.4,
     "open": 78.7,
     "high": 79.7,
     "low": 78,
-    "prevClose": 79.5,
+    "prevClose": 78.4,
     "volume": 347,
     "turnover": "2744.2 萬",
     "tradeValue": 27441768,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 79.5
   },
   "6412": {
     "code": "6412",
@@ -22120,15 +23254,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "韋僑",
     "price": 104,
     "change": 2,
-    "pctChange": 1.92,
+    "pctChange": 1.96,
     "open": 102,
     "high": 104,
     "low": 102,
-    "prevClose": 104,
+    "prevClose": 102,
     "volume": 84,
     "turnover": "869.5 萬",
     "tradeValue": 8694528,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 104
   },
   "6418": {
     "name": "詠昇",
@@ -22138,53 +23274,61 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 34.1,
     "high": 34.95,
     "low": 34.05,
-    "prevClose": 34.65,
+    "prevClose": 34.55,
     "volume": 37,
     "turnover": "127.6 萬",
     "tradeValue": 1276000,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 34.65
   },
   "6419": {
     "name": "京晨科",
     "price": 156,
     "change": 1,
-    "pctChange": 0.64,
+    "pctChange": 0.65,
     "open": 157.5,
     "high": 160,
     "low": 156,
-    "prevClose": 156,
+    "prevClose": 155,
     "volume": 197,
     "turnover": "3106.6 萬",
     "tradeValue": 31066367,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 156
   },
   "6423": {
     "name": "億而得",
     "price": 95.5,
     "change": 1.1,
-    "pctChange": 1.15,
+    "pctChange": 1.17,
     "open": 103.5,
     "high": 103.5,
     "low": 95.5,
-    "prevClose": 95.5,
+    "prevClose": 94.4,
     "volume": 469,
     "turnover": "4698.3 萬",
     "tradeValue": 46982696,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 95.5
   },
   "6425": {
     "name": "易發",
     "price": 79.8,
     "change": -1.5,
-    "pctChange": -1.88,
+    "pctChange": -1.85,
     "open": 79.2,
     "high": 80,
     "low": 78.5,
-    "prevClose": 79.8,
+    "prevClose": 81.3,
     "volume": 1102,
     "turnover": "8729.3 萬",
     "tradeValue": 87292705,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 79.8
   },
   "6426": {
     "code": "6426",
@@ -22224,29 +23368,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "今展科",
     "price": 66.6,
     "change": -3.2,
-    "pctChange": -4.8,
+    "pctChange": -4.58,
     "open": 67.2,
     "high": 70.5,
     "low": 64.6,
-    "prevClose": 66.6,
+    "prevClose": 69.8,
     "volume": 5530,
     "turnover": "3.7 億",
     "tradeValue": 373670008,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 66.6
   },
   "6435": {
     "name": "大中",
     "price": 277,
     "change": 15,
-    "pctChange": 5.42,
+    "pctChange": 5.73,
     "open": 269.5,
     "high": 280,
     "low": 260,
-    "prevClose": 277,
+    "prevClose": 262,
     "volume": 1778,
     "turnover": "4.8 億",
     "tradeValue": 483967639,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 277
   },
   "6438": {
     "code": "6438",
@@ -22273,11 +23421,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 25.35,
     "high": 25.5,
     "low": 24.8,
-    "prevClose": 24.95,
+    "prevClose": 24.9,
     "volume": 169,
     "turnover": "424.9 萬",
     "tradeValue": 4248704,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.95
   },
   "6442": {
     "code": "6442",
@@ -22385,29 +23535,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "益得",
     "price": 26.45,
     "change": 2.4,
-    "pctChange": 9.07,
+    "pctChange": 9.98,
     "open": 24.05,
     "high": 26.45,
     "low": 24.05,
-    "prevClose": 26.45,
+    "prevClose": 24.05,
     "volume": 465,
     "turnover": "1212.2 萬",
     "tradeValue": 12122269,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 26.45
   },
   "6462": {
     "name": "神盾",
     "price": 106,
     "change": -1,
-    "pctChange": -0.94,
+    "pctChange": -0.93,
     "open": 106.5,
     "high": 106.5,
     "low": 104,
-    "prevClose": 106,
+    "prevClose": 107,
     "volume": 550,
     "turnover": "5795.4 萬",
     "tradeValue": 57953824,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 106
   },
   "6464": {
     "code": "6464",
@@ -22430,15 +23584,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "威潤",
     "price": 42.1,
     "change": 0.5,
-    "pctChange": 1.19,
+    "pctChange": 1.2,
     "open": 41.7,
     "high": 42.4,
     "low": 41.55,
-    "prevClose": 42.1,
+    "prevClose": 41.6,
     "volume": 79,
     "turnover": "329.6 萬",
     "tradeValue": 3296159,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 42.1
   },
   "6469": {
     "name": "大樹",
@@ -22448,11 +23604,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 64.4,
     "high": 64.6,
     "low": 64.2,
-    "prevClose": 64.5,
+    "prevClose": 64.4,
     "volume": 217,
     "turnover": "1396.2 萬",
     "tradeValue": 13962064,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 64.5
   },
   "6470": {
     "name": "宇智",
@@ -22462,11 +23620,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 42.2,
     "high": 42.75,
     "low": 42.2,
-    "prevClose": 42.75,
+    "prevClose": 42.7,
     "volume": 39,
     "turnover": "166.4 萬",
     "tradeValue": 1663934,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 42.75
   },
   "6472": {
     "code": "6472",
@@ -22489,15 +23649,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "華豫寧",
     "price": 35.75,
     "change": 0.3,
-    "pctChange": 0.84,
+    "pctChange": 0.85,
     "open": 35.45,
     "high": 35.75,
     "low": 35.45,
-    "prevClose": 35.75,
+    "prevClose": 35.45,
     "volume": 30,
     "turnover": "107.2 萬",
     "tradeValue": 1072250,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 35.75
   },
   "6477": {
     "code": "6477",
@@ -22520,29 +23682,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "弘煜科",
     "price": 24.2,
     "change": 0.55,
-    "pctChange": 2.27,
+    "pctChange": 2.33,
     "open": 24.2,
     "high": 24.2,
     "low": 24.2,
-    "prevClose": 24.2,
+    "prevClose": 23.65,
     "volume": 2,
     "turnover": "4.1 萬",
     "tradeValue": 41342,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.2
   },
   "6485": {
     "name": "點序",
     "price": 83.6,
     "change": -1.1,
-    "pctChange": -1.32,
+    "pctChange": -1.3,
     "open": 85.1,
     "high": 86.2,
     "low": 80,
-    "prevClose": 83.6,
+    "prevClose": 84.7,
     "volume": 2952,
     "turnover": "2.4 億",
     "tradeValue": 244233293,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 83.6
   },
   "6486": {
     "name": "互動",
@@ -22552,25 +23718,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 81.3,
     "high": 81.6,
     "low": 80.8,
-    "prevClose": 80.9,
+    "prevClose": 81.3,
     "volume": 46,
     "turnover": "375.5 萬",
     "tradeValue": 3755007,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 80.9
   },
   "6488": {
     "name": "環球晶",
     "price": 1190,
     "change": 105,
-    "pctChange": 8.82,
+    "pctChange": 9.68,
     "open": 1090,
     "high": 1190,
     "low": 1075,
-    "prevClose": 1190,
+    "prevClose": 1085,
     "volume": 16256,
     "turnover": "186.2 億",
     "tradeValue": 18622066280,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 1190
   },
   "6491": {
     "code": "6491",
@@ -22597,25 +23767,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 34.9,
     "high": 34.9,
     "low": 34,
-    "prevClose": 34.4,
+    "prevClose": 34.6,
     "volume": 125,
     "turnover": "429.0 萬",
     "tradeValue": 4290206,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 34.4
   },
   "6494": {
     "name": "九齊",
     "price": 53.3,
     "change": 0.9,
-    "pctChange": 1.69,
+    "pctChange": 1.72,
     "open": 52.3,
     "high": 53.3,
     "low": 51.6,
-    "prevClose": 53.3,
+    "prevClose": 52.4,
     "volume": 86,
     "turnover": "449.2 萬",
     "tradeValue": 4492130,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 53.3
   },
   "6496": {
     "name": "科懋",
@@ -22625,11 +23799,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23.95,
     "high": 24.25,
     "low": 23.95,
-    "prevClose": 23.95,
+    "prevClose": 23.8,
     "volume": 8,
     "turnover": "19.2 萬",
     "tradeValue": 191511,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.95
   },
   "6498": {
     "name": "久禾光",
@@ -22639,11 +23815,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 68,
     "high": 68.4,
     "low": 67.7,
-    "prevClose": 68.4,
+    "prevClose": 68.3,
     "volume": 58,
     "turnover": "392.3 萬",
     "tradeValue": 3922553,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 68.4
   },
   "6499": {
     "name": "益安",
@@ -22653,11 +23831,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 79.5,
     "high": 80.1,
     "low": 78.2,
-    "prevClose": 79.8,
+    "prevClose": 79.1,
     "volume": 275,
     "turnover": "2178.2 萬",
     "tradeValue": 21782063,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 79.8
   },
   "6504": {
     "code": "6504",
@@ -22701,53 +23881,61 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 18.6,
     "high": 18.7,
     "low": 18.25,
-    "prevClose": 18.6,
+    "prevClose": 18.55,
     "volume": 60,
     "turnover": "111.1 萬",
     "tradeValue": 1110582,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.6
   },
   "6508": {
     "name": "惠光",
     "price": 26.5,
     "change": -0.5,
-    "pctChange": -1.89,
+    "pctChange": -1.85,
     "open": 27,
     "high": 27,
     "low": 26.5,
-    "prevClose": 26.5,
+    "prevClose": 27,
     "volume": 40,
     "turnover": "107.0 萬",
     "tradeValue": 1070216,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 26.5
   },
   "6509": {
     "name": "聚和",
     "price": 49.9,
     "change": 1.1,
-    "pctChange": 2.2,
+    "pctChange": 2.25,
     "open": 49.05,
     "high": 50.3,
     "low": 48.9,
-    "prevClose": 49.9,
+    "prevClose": 48.8,
     "volume": 1961,
     "turnover": "9784.7 萬",
     "tradeValue": 97847487,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 49.9
   },
   "6510": {
     "name": "精測",
     "price": 3070,
     "change": 70,
-    "pctChange": 2.28,
+    "pctChange": 2.33,
     "open": 3000,
     "high": 3120,
     "low": 3000,
-    "prevClose": 3070,
+    "prevClose": 3000,
     "volume": 575,
     "turnover": "17.6 億",
     "tradeValue": 1760085005,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 3070
   },
   "6512": {
     "name": "啟發電",
@@ -22757,11 +23945,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 20.25,
     "high": 20.25,
     "low": 20.2,
-    "prevClose": 20.2,
+    "prevClose": 20.25,
     "volume": 3,
     "turnover": "6.8 萬",
     "tradeValue": 67569,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.2
   },
   "6515": {
     "code": "6515",
@@ -22792,21 +23982,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 41,
     "turnover": "228.8 萬",
     "tradeValue": 2288144,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 56.5
   },
   "6517": {
     "name": "保勝光學",
     "price": 66,
     "change": 2.5,
-    "pctChange": 3.79,
+    "pctChange": 3.94,
     "open": 63.6,
     "high": 66.3,
     "low": 63.6,
-    "prevClose": 66,
+    "prevClose": 63.5,
     "volume": 361,
     "turnover": "2358.6 萬",
     "tradeValue": 23586337,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 66
   },
   "6523": {
     "name": "達爾膚",
@@ -22816,11 +24010,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 89,
     "high": 90.6,
     "low": 89,
-    "prevClose": 89.2,
+    "prevClose": 89.5,
     "volume": 21,
     "turnover": "187.4 萬",
     "tradeValue": 1873989,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 89.2
   },
   "6525": {
     "code": "6525",
@@ -22864,25 +24060,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 75,
     "high": 75,
     "low": 74.5,
-    "prevClose": 74.8,
+    "prevClose": 75,
     "volume": 33,
     "turnover": "247.5 萬",
     "tradeValue": 2474800,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 74.8
   },
   "6530": {
     "name": "創威",
     "price": 100.5,
     "change": -1.5,
-    "pctChange": -1.49,
+    "pctChange": -1.47,
     "open": 102,
     "high": 104,
     "low": 100.5,
-    "prevClose": 100.5,
+    "prevClose": 102,
     "volume": 1612,
     "turnover": "1.7 億",
     "tradeValue": 165100858,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 100.5
   },
   "6531": {
     "code": "6531",
@@ -22905,15 +24105,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "瑞耘",
     "price": 120,
     "change": -2.5,
-    "pctChange": -2.08,
+    "pctChange": -2.04,
     "open": 123,
     "high": 123.5,
     "low": 117.5,
-    "prevClose": 120,
+    "prevClose": 122.5,
     "volume": 1568,
     "turnover": "1.9 億",
     "tradeValue": 188066600,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 120
   },
   "6533": {
     "code": "6533",
@@ -22953,15 +24155,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "順藥",
     "price": 85,
     "change": 4.1,
-    "pctChange": 4.82,
+    "pctChange": 5.07,
     "open": 80.5,
     "high": 85.2,
     "low": 80.5,
-    "prevClose": 85,
+    "prevClose": 80.9,
     "volume": 282,
     "turnover": "2358.4 萬",
     "tradeValue": 23583587,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 85
   },
   "6538": {
     "name": "倉和",
@@ -22971,11 +24175,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 369.5,
     "high": 382,
     "low": 352,
-    "prevClose": 372.5,
+    "prevClose": 369.5,
     "volume": 1926,
     "turnover": "7.1 億",
     "tradeValue": 710388598,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 372.5
   },
   "6541": {
     "code": "6541",
@@ -23002,53 +24208,61 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 40.9,
     "high": 40.9,
     "low": 39.8,
-    "prevClose": 40,
+    "prevClose": 39.9,
     "volume": 5,
     "turnover": "20.5 萬",
     "tradeValue": 204994,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 40
   },
   "6546": {
     "name": "正基",
     "price": 60.3,
     "change": 0.6,
-    "pctChange": 1,
+    "pctChange": 1.01,
     "open": 59.4,
     "high": 60.6,
     "low": 59.4,
-    "prevClose": 60.3,
+    "prevClose": 59.7,
     "volume": 172,
     "turnover": "1037.9 萬",
     "tradeValue": 10379144,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 60.3
   },
   "6547": {
     "name": "高端疫苗",
     "price": 60.8,
     "change": -1.8,
-    "pctChange": -2.96,
+    "pctChange": -2.88,
     "open": 63,
     "high": 63.1,
     "low": 60.8,
-    "prevClose": 60.8,
+    "prevClose": 62.6,
     "volume": 3148,
     "turnover": "1.9 億",
     "tradeValue": 193200105,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 60.8
   },
   "6548": {
     "name": "長科*",
     "price": 76.7,
     "change": 5.2,
-    "pctChange": 6.78,
+    "pctChange": 7.27,
     "open": 71.6,
     "high": 77.2,
     "low": 71.4,
-    "prevClose": 76.7,
+    "prevClose": 71.5,
     "volume": 8760,
     "turnover": "6.6 億",
     "tradeValue": 661967619,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 76.7
   },
   "6550": {
     "code": "6550",
@@ -23088,15 +24302,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "勝品",
     "price": 60.8,
     "change": -0.8,
-    "pctChange": -1.32,
+    "pctChange": -1.3,
     "open": 60.5,
     "high": 60.8,
     "low": 60.5,
-    "prevClose": 60.8,
+    "prevClose": 61.6,
     "volume": 7,
     "turnover": "42.7 萬",
     "tradeValue": 427360,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 60.8
   },
   "6558": {
     "code": "6558",
@@ -23119,29 +24335,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "欣普羅",
     "price": 31.9,
     "change": -0.7,
-    "pctChange": -2.19,
+    "pctChange": -2.15,
     "open": 32.6,
     "high": 32.6,
     "low": 31.9,
-    "prevClose": 31.9,
+    "prevClose": 32.6,
     "volume": 43,
     "turnover": "138.1 萬",
     "tradeValue": 1381200,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.9
   },
   "6561": {
     "name": "是方",
     "price": 313,
     "change": 2.5,
-    "pctChange": 0.8,
+    "pctChange": 0.81,
     "open": 310,
     "high": 313,
     "low": 309,
-    "prevClose": 313,
+    "prevClose": 310.5,
     "volume": 51,
     "turnover": "1594.1 萬",
     "tradeValue": 15941103,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 313
   },
   "6568": {
     "name": "宏觀",
@@ -23151,25 +24371,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 141.5,
     "high": 142,
     "low": 139.5,
-    "prevClose": 141,
+    "prevClose": 140,
     "volume": 67,
     "turnover": "939.5 萬",
     "tradeValue": 9395088,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 141
   },
   "6569": {
     "name": "醫揚",
     "price": 91.8,
     "change": 0.5,
-    "pctChange": 0.54,
+    "pctChange": 0.55,
     "open": 91.4,
     "high": 91.8,
     "low": 91.3,
-    "prevClose": 91.8,
+    "prevClose": 91.3,
     "volume": 8,
     "turnover": "72.3 萬",
     "tradeValue": 722538,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 91.8
   },
   "6570": {
     "name": "維田",
@@ -23179,11 +24403,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 47.55,
     "high": 47.7,
     "low": 47.2,
-    "prevClose": 47.25,
+    "prevClose": 47.55,
     "volume": 71,
     "turnover": "335.4 萬",
     "tradeValue": 3353955,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 47.25
   },
   "6573": {
     "code": "6573",
@@ -23210,11 +24436,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 118,
     "high": 119.5,
     "low": 117.5,
-    "prevClose": 119.5,
+    "prevClose": 118.5,
     "volume": 22,
     "turnover": "257.3 萬",
     "tradeValue": 2572785,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 119.5
   },
   "6576": {
     "name": "逸達",
@@ -23224,25 +24452,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 79.2,
     "high": 79.2,
     "low": 78.4,
-    "prevClose": 79,
+    "prevClose": 79.1,
     "volume": 182,
     "turnover": "1432.7 萬",
     "tradeValue": 14327064,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 79
   },
   "6577": {
     "name": "勁豐",
     "price": 81.2,
     "change": 0.7,
-    "pctChange": 0.86,
+    "pctChange": 0.87,
     "open": 80.5,
     "high": 81.2,
     "low": 80.5,
-    "prevClose": 81.2,
+    "prevClose": 80.5,
     "volume": 66,
     "turnover": "530.5 萬",
     "tradeValue": 5305120,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 81.2
   },
   "6578": {
     "name": "達邦蛋白",
@@ -23252,11 +24484,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 16.55,
     "high": 16.55,
     "low": 16.45,
-    "prevClose": 16.45,
+    "prevClose": 16.5,
     "volume": 12,
     "turnover": "19.8 萬",
     "tradeValue": 198014,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.45
   },
   "6579": {
     "code": "6579",
@@ -23321,7 +24555,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 408,
     "turnover": "2.2 億",
     "tradeValue": 217439023,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 531
   },
   "6585": {
     "code": "6585",
@@ -23344,15 +24580,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "東典光電",
     "price": 114,
     "change": 4,
-    "pctChange": 3.51,
+    "pctChange": 3.64,
     "open": 110.5,
     "high": 116,
     "low": 110.5,
-    "prevClose": 114,
+    "prevClose": 110,
     "volume": 1567,
     "turnover": "1.8 億",
     "tradeValue": 178441239,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 114
   },
   "6589": {
     "code": "6589",
@@ -23379,11 +24617,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 65.1,
     "high": 65.5,
     "low": 63.5,
-    "prevClose": 65.5,
+    "prevClose": 65.1,
     "volume": 25,
     "turnover": "162.6 萬",
     "tradeValue": 1626170,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 65.5
   },
   "6591": {
     "code": "6591",
@@ -23423,15 +24663,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "台灣銘板",
     "price": 31.9,
     "change": -0.4,
-    "pctChange": -1.25,
+    "pctChange": -1.24,
     "open": 31.7,
     "high": 32,
     "low": 31.6,
-    "prevClose": 31.9,
+    "prevClose": 32.3,
     "volume": 20,
     "turnover": "63.6 萬",
     "tradeValue": 636426,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.9
   },
   "6596": {
     "name": "寬宏藝術",
@@ -23441,11 +24683,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 96.8,
     "high": 96.8,
     "low": 96.4,
-    "prevClose": 96.6,
+    "prevClose": 97.2,
     "volume": 60,
     "turnover": "582.8 萬",
     "tradeValue": 5828161,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 96.6
   },
   "6597": {
     "name": "立誠",
@@ -23459,7 +24703,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 10,
     "turnover": "63.6 萬",
     "tradeValue": 636363,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 63
   },
   "6598": {
     "code": "6598",
@@ -23482,15 +24728,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "富強鑫",
     "price": 29.25,
     "change": -0.55,
-    "pctChange": -1.88,
+    "pctChange": -1.85,
     "open": 31.45,
     "high": 31.45,
     "low": 29.2,
-    "prevClose": 29.25,
+    "prevClose": 29.8,
     "volume": 10861,
     "turnover": "3.3 億",
     "tradeValue": 329115903,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29.25
   },
   "6605": {
     "code": "6605",
@@ -23530,15 +24778,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "瀧澤科",
     "price": 39.1,
     "change": -0.45,
-    "pctChange": -1.15,
+    "pctChange": -1.14,
     "open": 39.45,
     "high": 39.45,
     "low": 39.1,
-    "prevClose": 39.1,
+    "prevClose": 39.55,
     "volume": 79,
     "turnover": "311.1 萬",
     "tradeValue": 3111348,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 39.1
   },
   "6612": {
     "name": "奈米醫材",
@@ -23548,25 +24798,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 77,
     "high": 81.5,
     "low": 76.5,
-    "prevClose": 76.5,
+    "prevClose": 77,
     "volume": 104,
     "turnover": "820.5 萬",
     "tradeValue": 8204768,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 76.5
   },
   "6613": {
     "name": "朋億*",
     "price": 281,
     "change": 2.5,
-    "pctChange": 0.89,
+    "pctChange": 0.9,
     "open": 279,
     "high": 281.5,
     "low": 277.5,
-    "prevClose": 281,
+    "prevClose": 278.5,
     "volume": 264,
     "turnover": "7383.2 萬",
     "tradeValue": 73832452,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 281
   },
   "6614": {
     "code": "6614",
@@ -23593,11 +24847,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 33.7,
     "high": 34,
     "low": 33.55,
-    "prevClose": 33.65,
+    "prevClose": 33.5,
     "volume": 10,
     "turnover": "32.9 萬",
     "tradeValue": 328530,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 33.65
   },
   "6616": {
     "name": "特昇-KY",
@@ -23607,11 +24863,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 8.3,
     "high": 8.3,
     "low": 8.11,
-    "prevClose": 8.25,
+    "prevClose": 8.26,
     "volume": 5,
     "turnover": "4.1 萬",
     "tradeValue": 41168,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 8.25
   },
   "6617": {
     "name": "共信-KY",
@@ -23621,39 +24879,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 132.5,
     "high": 134.5,
     "low": 128,
-    "prevClose": 131.5,
+    "prevClose": 132,
     "volume": 547,
     "turnover": "7256.9 萬",
     "tradeValue": 72568801,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 131.5
   },
   "6620": {
     "name": "漢達",
     "price": 143.5,
     "change": -1,
-    "pctChange": -0.7,
+    "pctChange": -0.69,
     "open": 145,
     "high": 149.5,
     "low": 142.5,
-    "prevClose": 143.5,
+    "prevClose": 144.5,
     "volume": 3987,
     "turnover": "5.8 億",
     "tradeValue": 580385596,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 143.5
   },
   "6624": {
     "name": "萬年清",
     "price": 38.35,
     "change": 0.35,
-    "pctChange": 0.91,
+    "pctChange": 0.92,
     "open": 38.45,
     "high": 38.45,
     "low": 37.55,
-    "prevClose": 38.35,
+    "prevClose": 38,
     "volume": 7,
     "turnover": "27.6 萬",
     "tradeValue": 275990,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 38.35
   },
   "6625": {
     "code": "6625",
@@ -23684,35 +24948,41 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 27,
     "turnover": "279.7 萬",
     "tradeValue": 2797100,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 103.5
   },
   "6637": {
     "name": "醫影",
     "price": 53.4,
     "change": -0.5,
-    "pctChange": -0.94,
+    "pctChange": -0.93,
     "open": 53.9,
     "high": 54,
     "low": 53.4,
-    "prevClose": 53.4,
+    "prevClose": 53.9,
     "volume": 10,
     "turnover": "55.7 萬",
     "tradeValue": 557085,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 53.4
   },
   "6640": {
     "name": "均華",
     "price": 1125,
     "change": 15,
-    "pctChange": 1.33,
+    "pctChange": 1.35,
     "open": 1110,
     "high": 1165,
     "low": 1110,
-    "prevClose": 1125,
+    "prevClose": 1110,
     "volume": 303,
     "turnover": "3.4 億",
     "tradeValue": 342592635,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 1125
   },
   "6641": {
     "code": "6641",
@@ -23739,25 +25009,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 83.1,
     "high": 84.9,
     "low": 82.7,
-    "prevClose": 83.6,
+    "prevClose": 83,
     "volume": 238,
     "turnover": "2002.8 萬",
     "tradeValue": 20028198,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 83.6
   },
   "6643": {
     "name": "M31",
     "price": 516,
     "change": -5,
-    "pctChange": -0.97,
+    "pctChange": -0.96,
     "open": 520,
     "high": 524,
     "low": 513,
-    "prevClose": 516,
+    "prevClose": 521,
     "volume": 815,
     "turnover": "4.2 億",
     "tradeValue": 422361073,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 516
   },
   "6645": {
     "code": "6645",
@@ -23784,39 +25058,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 37,
     "high": 37.45,
     "low": 36.75,
-    "prevClose": 37.35,
+    "prevClose": 37.2,
     "volume": 40,
     "turnover": "150.4 萬",
     "tradeValue": 1503803,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 37.35
   },
   "6651": {
     "name": "全宇昕",
     "price": 150.5,
     "change": 3,
-    "pctChange": 1.99,
+    "pctChange": 2.03,
     "open": 147.5,
     "high": 152,
     "low": 147,
-    "prevClose": 150.5,
+    "prevClose": 147.5,
     "volume": 168,
     "turnover": "2531.6 萬",
     "tradeValue": 25316101,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 150.5
   },
   "6654": {
     "name": "天正國際",
     "price": 219,
     "change": 9,
-    "pctChange": 4.11,
+    "pctChange": 4.29,
     "open": 215,
     "high": 221,
     "low": 214,
-    "prevClose": 219,
+    "prevClose": 210,
     "volume": 95,
     "turnover": "2058.4 萬",
     "tradeValue": 20583610,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 219
   },
   "6655": {
     "code": "6655",
@@ -23877,25 +25157,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 28.5,
     "high": 28.6,
     "low": 27.9,
-    "prevClose": 28.6,
+    "prevClose": 28.5,
     "volume": 16,
     "turnover": "45.0 萬",
     "tradeValue": 449500,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.6
   },
   "6664": {
     "name": "群翊",
     "price": 378,
     "change": 6.5,
-    "pctChange": 1.72,
+    "pctChange": 1.75,
     "open": 375,
     "high": 380,
     "low": 371,
-    "prevClose": 378,
+    "prevClose": 371.5,
     "volume": 442,
     "turnover": "1.7 億",
     "tradeValue": 166421978,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 378
   },
   "6666": {
     "code": "6666",
@@ -23922,11 +25206,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 263.5,
     "high": 263.5,
     "low": 260,
-    "prevClose": 260,
+    "prevClose": 261,
     "volume": 228,
     "turnover": "5953.7 萬",
     "tradeValue": 59536786,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 260
   },
   "6668": {
     "code": "6668",
@@ -24034,29 +25320,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "鈺太",
     "price": 209,
     "change": 4.5,
-    "pctChange": 2.15,
+    "pctChange": 2.2,
     "open": 203.5,
     "high": 209.5,
     "low": 203.5,
-    "prevClose": 209,
+    "prevClose": 204.5,
     "volume": 265,
     "turnover": "5497.3 萬",
     "tradeValue": 54972780,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 209
   },
   "6683": {
     "name": "雍智科技",
     "price": 1490,
     "change": -85,
-    "pctChange": -5.7,
+    "pctChange": -5.4,
     "open": 1595,
     "high": 1650,
     "low": 1480,
-    "prevClose": 1490,
+    "prevClose": 1575,
     "volume": 1726,
     "turnover": "26.2 億",
     "tradeValue": 2622239515,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 1490
   },
   "6684": {
     "name": "安格",
@@ -24066,11 +25356,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 50.9,
     "high": 50.9,
     "low": 49.7,
-    "prevClose": 50,
+    "prevClose": 50.1,
     "volume": 64,
     "turnover": "319.7 萬",
     "tradeValue": 3197141,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 50
   },
   "6689": {
     "code": "6689",
@@ -24093,15 +25385,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "安碁資訊",
     "price": 176,
     "change": -1,
-    "pctChange": -0.57,
+    "pctChange": -0.56,
     "open": 177,
     "high": 178.5,
     "low": 175.5,
-    "prevClose": 176,
+    "prevClose": 177,
     "volume": 60,
     "turnover": "1059.1 萬",
     "tradeValue": 10591258,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 176
   },
   "6691": {
     "code": "6691",
@@ -24124,29 +25418,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "進能服",
     "price": 22.7,
     "change": -0.35,
-    "pctChange": -1.54,
+    "pctChange": -1.52,
     "open": 22.7,
     "high": 22.7,
     "low": 22.5,
-    "prevClose": 22.7,
+    "prevClose": 23.05,
     "volume": 12,
     "turnover": "28.0 萬",
     "tradeValue": 280002,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.7
   },
   "6693": {
     "name": "廣閎科",
     "price": 206,
     "change": -6.5,
-    "pctChange": -3.16,
+    "pctChange": -3.06,
     "open": 213.5,
     "high": 214,
     "low": 205,
-    "prevClose": 206,
+    "prevClose": 212.5,
     "volume": 1492,
     "turnover": "3.1 億",
     "tradeValue": 311767282,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 206
   },
   "6695": {
     "code": "6695",
@@ -24173,11 +25471,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 41.1,
     "high": 41.15,
     "low": 40.8,
-    "prevClose": 41.15,
+    "prevClose": 41.1,
     "volume": 35,
     "turnover": "143.3 萬",
     "tradeValue": 1432834,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.15
   },
   "6698": {
     "code": "6698",
@@ -24208,7 +25508,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 9,
     "turnover": "89.8 萬",
     "tradeValue": 897971,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 100.5
   },
   "6706": {
     "code": "6706",
@@ -24231,15 +25533,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "天擎",
     "price": 62.4,
     "change": 5.6,
-    "pctChange": 8.97,
+    "pctChange": 9.86,
     "open": 62,
     "high": 62.4,
     "low": 59.9,
-    "prevClose": 62.4,
+    "prevClose": 56.8,
     "volume": 833,
     "turnover": "5184.6 萬",
     "tradeValue": 51845751,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 62.4
   },
   "6712": {
     "name": "長聖",
@@ -24249,11 +25553,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 165,
     "high": 167,
     "low": 160.5,
-    "prevClose": 161,
+    "prevClose": 162,
     "volume": 417,
     "turnover": "6780.1 萬",
     "tradeValue": 67801109,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 161
   },
   "6715": {
     "code": "6715",
@@ -24276,15 +25582,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "應廣",
     "price": 121,
     "change": 3.5,
-    "pctChange": 2.89,
+    "pctChange": 2.98,
     "open": 118,
     "high": 121.5,
     "low": 115,
-    "prevClose": 121,
+    "prevClose": 117.5,
     "volume": 582,
     "turnover": "6923.2 萬",
     "tradeValue": 69232090,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 121
   },
   "6719": {
     "code": "6719",
@@ -24311,11 +25619,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 125.5,
     "high": 126.5,
     "low": 122.5,
-    "prevClose": 126,
+    "prevClose": 126.5,
     "volume": 76,
     "turnover": "951.9 萬",
     "tradeValue": 9519087,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 126
   },
   "6722": {
     "code": "6722",
@@ -24342,25 +25652,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 220.5,
     "high": 222,
     "low": 219.5,
-    "prevClose": 220.5,
+    "prevClose": 221,
     "volume": 58,
     "turnover": "1286.8 萬",
     "tradeValue": 12868122,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 220.5
   },
   "6727": {
     "name": "亞泰金屬",
     "price": 516,
     "change": 28,
-    "pctChange": 5.43,
+    "pctChange": 5.74,
     "open": 492.5,
     "high": 527,
     "low": 492.5,
-    "prevClose": 516,
+    "prevClose": 488,
     "volume": 1906,
     "turnover": "9.8 億",
     "tradeValue": 979231184,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 516
   },
   "6728": {
     "name": "上洋",
@@ -24370,11 +25684,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 108.5,
     "high": 108.5,
     "low": 107,
-    "prevClose": 108.5,
+    "prevClose": 109,
     "volume": 29,
     "turnover": "315.3 萬",
     "tradeValue": 3152575,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 108.5
   },
   "6730": {
     "name": "常廣",
@@ -24384,25 +25700,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 32,
     "high": 33,
     "low": 31.65,
-    "prevClose": 31.95,
+    "prevClose": 32.2,
     "volume": 21,
     "turnover": "67.2 萬",
     "tradeValue": 671756,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.95
   },
   "6732": {
     "name": "昇佳電子",
     "price": 154.5,
     "change": 2.5,
-    "pctChange": 1.62,
+    "pctChange": 1.64,
     "open": 152,
     "high": 154.5,
     "low": 152,
-    "prevClose": 154.5,
+    "prevClose": 152,
     "volume": 93,
     "turnover": "1424.2 萬",
     "tradeValue": 14242108,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 154.5
   },
   "6733": {
     "name": "博晟生醫",
@@ -24412,53 +25732,61 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 24.9,
     "high": 25.15,
     "low": 24.85,
-    "prevClose": 25.1,
+    "prevClose": 24.95,
     "volume": 74,
     "turnover": "183.7 萬",
     "tradeValue": 1836621,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.1
   },
   "6735": {
     "name": "美達科技",
     "price": 67.5,
     "change": 0.7,
-    "pctChange": 1.04,
+    "pctChange": 1.05,
     "open": 66.1,
     "high": 67.8,
     "low": 66.1,
-    "prevClose": 67.5,
+    "prevClose": 66.8,
     "volume": 48,
     "turnover": "324.4 萬",
     "tradeValue": 3243774,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 67.5
   },
   "6739": {
     "name": "竹陞科技",
     "price": 1175,
     "change": 70,
-    "pctChange": 5.96,
+    "pctChange": 6.33,
     "open": 1115,
     "high": 1175,
     "low": 1115,
-    "prevClose": 1175,
+    "prevClose": 1105,
     "volume": 357,
     "turnover": "4.1 億",
     "tradeValue": 411882715,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 1175
   },
   "6741": {
     "name": "91APP*-KY",
     "price": 55.1,
     "change": -0.5,
-    "pctChange": -0.91,
+    "pctChange": -0.9,
     "open": 55.8,
     "high": 55.8,
     "low": 55,
-    "prevClose": 55.1,
+    "prevClose": 55.6,
     "volume": 153,
     "turnover": "841.5 萬",
     "tradeValue": 8415180,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 55.1
   },
   "6742": {
     "code": "6742",
@@ -24498,15 +25826,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "智聯服務",
     "price": 44.5,
     "change": 0.5,
-    "pctChange": 1.12,
+    "pctChange": 1.14,
     "open": 43.8,
     "high": 44.55,
     "low": 43.8,
-    "prevClose": 44.5,
+    "prevClose": 44,
     "volume": 5,
     "turnover": "22.5 萬",
     "tradeValue": 224674,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 44.5
   },
   "6752": {
     "name": "叡揚",
@@ -24516,11 +25846,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 96.2,
     "high": 97.5,
     "low": 96.2,
-    "prevClose": 96.5,
+    "prevClose": 96.2,
     "volume": 7,
     "turnover": "72.3 萬",
     "tradeValue": 722860,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 96.5
   },
   "6753": {
     "code": "6753",
@@ -24594,43 +25926,49 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "穩得",
     "price": 168,
     "change": 3.5,
-    "pctChange": 2.08,
+    "pctChange": 2.13,
     "open": 165.5,
     "high": 169.5,
     "low": 165,
-    "prevClose": 168,
+    "prevClose": 164.5,
     "volume": 168,
     "turnover": "2822.5 萬",
     "tradeValue": 28225066,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 168
   },
   "6762": {
     "name": "達亞",
     "price": 161,
     "change": 5,
-    "pctChange": 3.11,
+    "pctChange": 3.21,
     "open": 153,
     "high": 161,
     "low": 151,
-    "prevClose": 161,
+    "prevClose": 156,
     "volume": 6,
     "turnover": "98.7 萬",
     "tradeValue": 986798,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 161
   },
   "6763": {
     "name": "綠界科技*",
     "price": 41.45,
     "change": 0.25,
-    "pctChange": 0.6,
+    "pctChange": 0.61,
     "open": 41.35,
     "high": 41.9,
     "low": 41.35,
-    "prevClose": 41.45,
+    "prevClose": 41.2,
     "volume": 163,
     "turnover": "676.2 萬",
     "tradeValue": 6762460,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.45
   },
   "6767": {
     "name": "台微醫",
@@ -24640,11 +25978,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 24.45,
     "high": 24.6,
     "low": 24.45,
-    "prevClose": 24.45,
+    "prevClose": 24.6,
     "volume": 10,
     "turnover": "24.7 萬",
     "tradeValue": 246841,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.45
   },
   "6768": {
     "code": "6768",
@@ -24756,25 +26096,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 95.1,
     "high": 95.4,
     "low": 94.2,
-    "prevClose": 94.7,
+    "prevClose": 95.3,
     "volume": 35,
     "turnover": "329.2 萬",
     "tradeValue": 3291679,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 94.7
   },
   "6788": {
     "name": "華景電",
     "price": 360,
     "change": 13.5,
-    "pctChange": 3.75,
+    "pctChange": 3.9,
     "open": 347.5,
     "high": 365.5,
     "low": 347,
-    "prevClose": 360,
+    "prevClose": 346.5,
     "volume": 460,
     "turnover": "1.6 億",
     "tradeValue": 164201994,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 360
   },
   "6789": {
     "code": "6789",
@@ -24818,11 +26162,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 100.5,
     "high": 100.5,
     "low": 100,
-    "prevClose": 100,
+    "prevClose": 100.5,
     "volume": 5,
     "turnover": "54.5 萬",
     "tradeValue": 544725,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 100
   },
   "6792": {
     "code": "6792",
@@ -24904,7 +26250,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 50,
     "turnover": "1345.1 萬",
     "tradeValue": 13451108,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 267
   },
   "6804": {
     "name": "明係",
@@ -24918,7 +26266,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 25,
     "turnover": "45.1 萬",
     "tradeValue": 451265,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.35
   },
   "6805": {
     "code": "6805",
@@ -24958,57 +26308,65 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "宏碁資訊",
     "price": 240,
     "change": -3.5,
-    "pctChange": -1.46,
+    "pctChange": -1.44,
     "open": 244,
     "high": 244,
     "low": 239,
-    "prevClose": 240,
+    "prevClose": 243.5,
     "volume": 179,
     "turnover": "4319.8 萬",
     "tradeValue": 43198114,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 240
   },
   "6821": {
     "name": "聯寶",
     "price": 46.45,
     "change": 4.2,
-    "pctChange": 9.04,
+    "pctChange": 9.94,
     "open": 43,
     "high": 46.45,
     "low": 43,
-    "prevClose": 46.45,
+    "prevClose": 42.25,
     "volume": 623,
     "turnover": "2790.7 萬",
     "tradeValue": 27906793,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 46.45
   },
   "6823": {
     "name": "濾能",
     "price": 61.1,
     "change": 0.4,
-    "pctChange": 0.65,
+    "pctChange": 0.66,
     "open": 61.2,
     "high": 61.3,
     "low": 60.8,
-    "prevClose": 61.1,
+    "prevClose": 60.7,
     "volume": 16,
     "turnover": "96.5 萬",
     "tradeValue": 964673,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 61.1
   },
   "6829": {
     "name": "千附精密",
     "price": 208,
     "change": 3,
-    "pctChange": 1.44,
+    "pctChange": 1.46,
     "open": 205,
     "high": 208.5,
     "low": 205,
-    "prevClose": 208,
+    "prevClose": 205,
     "volume": 306,
     "turnover": "6348.1 萬",
     "tradeValue": 63481473,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 208
   },
   "6830": {
     "code": "6830",
@@ -25099,15 +26457,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "東研信超",
     "price": 98.7,
     "change": -0.6,
-    "pctChange": -0.61,
+    "pctChange": -0.6,
     "open": 99.9,
     "high": 99.9,
     "low": 97.3,
-    "prevClose": 98.7,
+    "prevClose": 99.3,
     "volume": 221,
     "turnover": "2180.1 萬",
     "tradeValue": 21801057,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 98.7
   },
   "6841": {
     "name": "長佳智能",
@@ -25117,11 +26477,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 56.9,
     "high": 57.1,
     "low": 56.2,
-    "prevClose": 56.5,
+    "prevClose": 57,
     "volume": 182,
     "turnover": "1029.2 萬",
     "tradeValue": 10291724,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 56.5
   },
   "6843": {
     "name": "進典",
@@ -25131,11 +26493,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 38,
     "high": 38.85,
     "low": 37.95,
-    "prevClose": 38.6,
+    "prevClose": 38.45,
     "volume": 32,
     "turnover": "122.5 萬",
     "tradeValue": 1224654,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 38.6
   },
   "6844": {
     "name": "諾貝兒",
@@ -25145,11 +26509,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 56.1,
     "high": 57,
     "low": 55.8,
-    "prevClose": 57,
+    "prevClose": 57.4,
     "volume": 11,
     "turnover": "64.2 萬",
     "tradeValue": 642041,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 57
   },
   "6846": {
     "name": "綠茵",
@@ -25159,11 +26525,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 58,
     "high": 58.5,
     "low": 58,
-    "prevClose": 58.5,
+    "prevClose": 58.4,
     "volume": 3,
     "turnover": "18.6 萬",
     "tradeValue": 185894,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 58.5
   },
   "6854": {
     "code": "6854",
@@ -25190,39 +26558,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 113,
     "high": 113.5,
     "low": 113,
-    "prevClose": 113.5,
+    "prevClose": 114,
     "volume": 4,
     "turnover": "45.4 萬",
     "tradeValue": 453500,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 113.5
   },
   "6856": {
     "name": "鑫傳",
     "price": 41.65,
     "change": 0.6,
-    "pctChange": 1.44,
+    "pctChange": 1.46,
     "open": 41.65,
     "high": 41.65,
     "low": 41.65,
-    "prevClose": 41.65,
+    "prevClose": 41.05,
     "volume": 1,
     "turnover": "4.2 萬",
     "tradeValue": 42020,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.65
   },
   "6859": {
     "name": "伯特光",
     "price": 122.5,
     "change": 2,
-    "pctChange": 1.63,
+    "pctChange": 1.66,
     "open": 121,
     "high": 122.5,
     "low": 120.5,
-    "prevClose": 122.5,
+    "prevClose": 120.5,
     "volume": 30,
     "turnover": "369.8 萬",
     "tradeValue": 3698134,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 122.5
   },
   "6861": {
     "code": "6861",
@@ -25287,7 +26661,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 4,
     "turnover": "11.5 萬",
     "tradeValue": 114859,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 27.65
   },
   "6869": {
     "code": "6869",
@@ -25310,15 +26686,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "騰雲",
     "price": 312,
     "change": -2.5,
-    "pctChange": -0.8,
+    "pctChange": -0.79,
     "open": 314,
     "high": 321.5,
     "low": 309.5,
-    "prevClose": 312,
+    "prevClose": 314.5,
     "volume": 87,
     "turnover": "2748.0 萬",
     "tradeValue": 27479590,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 312
   },
   "6872": {
     "name": "浩宇生醫",
@@ -25328,11 +26706,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23.75,
     "high": 23.75,
     "low": 23,
-    "prevClose": 23.1,
+    "prevClose": 23,
     "volume": 83,
     "turnover": "193.1 萬",
     "tradeValue": 1930775,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.1
   },
   "6873": {
     "code": "6873",
@@ -25363,35 +26743,41 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 11,
     "turnover": "77.9 萬",
     "tradeValue": 779115,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 70.4
   },
   "6875": {
     "name": "國邑*",
     "price": 29.9,
     "change": -1.4,
-    "pctChange": -4.68,
+    "pctChange": -4.47,
     "open": 30.9,
     "high": 31.05,
     "low": 29.85,
-    "prevClose": 29.9,
+    "prevClose": 31.3,
     "volume": 653,
     "turnover": "1967.2 萬",
     "tradeValue": 19672206,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 29.9
   },
   "6877": {
     "name": "鏵友益",
     "price": 152,
     "change": 13.5,
-    "pctChange": 8.88,
+    "pctChange": 9.75,
     "open": 152,
     "high": 152,
     "low": 150,
-    "prevClose": 152,
+    "prevClose": 138.5,
     "volume": 361,
     "turnover": "5482.4 萬",
     "tradeValue": 54824240,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 152
   },
   "6881": {
     "name": "潤德",
@@ -25405,7 +26791,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 3,
     "turnover": "66.0 萬",
     "tradeValue": 660070,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 215
   },
   "6884": {
     "name": "海柏特",
@@ -25415,11 +26803,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 30.55,
     "high": 31.35,
     "low": 30.55,
-    "prevClose": 31.35,
+    "prevClose": 31.4,
     "volume": 3,
     "turnover": "9.4 萬",
     "tradeValue": 93659,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 31.35
   },
   "6885": {
     "code": "6885",
@@ -25480,25 +26870,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 357,
     "high": 363.5,
     "low": 357,
-    "prevClose": 363,
+    "prevClose": 360,
     "volume": 32,
     "turnover": "1149.4 萬",
     "tradeValue": 11494440,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 363
   },
   "6895": {
     "name": "宏碩系統",
     "price": 149.5,
     "change": -1.5,
-    "pctChange": -1,
+    "pctChange": -0.99,
     "open": 146,
     "high": 149.5,
     "low": 146,
-    "prevClose": 149.5,
+    "prevClose": 151,
     "volume": 16,
     "turnover": "238.3 萬",
     "tradeValue": 2382555,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 149.5
   },
   "6899": {
     "name": "創為精密",
@@ -25512,7 +26906,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 10,
     "turnover": "49.7 萬",
     "tradeValue": 496608,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 49.5
   },
   "6901": {
     "code": "6901",
@@ -25556,11 +26952,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 316,
     "high": 320.5,
     "low": 315,
-    "prevClose": 317,
+    "prevClose": 316,
     "volume": 224,
     "turnover": "7118.0 萬",
     "tradeValue": 71179721,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 317
   },
   "6904": {
     "name": "伯鑫",
@@ -25574,7 +26972,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 1,
     "turnover": "12.2 萬",
     "tradeValue": 122000,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 122
   },
   "6906": {
     "code": "6906",
@@ -25597,15 +26997,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "雅特力-KY",
     "price": 200.5,
     "change": 2,
-    "pctChange": 1,
+    "pctChange": 1.01,
     "open": 200,
     "high": 206,
     "low": 196,
-    "prevClose": 200.5,
+    "prevClose": 198.5,
     "volume": 2677,
     "turnover": "5.4 億",
     "tradeValue": 538994688,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 200.5
   },
   "6908": {
     "code": "6908",
@@ -25645,29 +27047,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "德鴻",
     "price": 26.25,
     "change": -0.55,
-    "pctChange": -2.1,
+    "pctChange": -2.05,
     "open": 26.2,
     "high": 26.4,
     "low": 26.15,
-    "prevClose": 26.25,
+    "prevClose": 26.8,
     "volume": 8,
     "turnover": "21.9 萬",
     "tradeValue": 218557,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 26.25
   },
   "6913": {
     "name": "鴻呈",
     "price": 130,
     "change": 1,
-    "pctChange": 0.77,
+    "pctChange": 0.78,
     "open": 129,
     "high": 130,
     "low": 129,
-    "prevClose": 130,
+    "prevClose": 129,
     "volume": 105,
     "turnover": "1359.1 萬",
     "tradeValue": 13590984,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 130
   },
   "6914": {
     "code": "6914",
@@ -25758,15 +27164,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "宸曜",
     "price": 212.5,
     "change": -8.5,
-    "pctChange": -4,
+    "pctChange": -3.85,
     "open": 221.5,
     "high": 221.5,
     "low": 212.5,
-    "prevClose": 212.5,
+    "prevClose": 221,
     "volume": 200,
     "turnover": "4294.9 萬",
     "tradeValue": 42949018,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 212.5
   },
   "6923": {
     "code": "6923",
@@ -25806,15 +27214,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "意藍",
     "price": 68.5,
     "change": -3.6,
-    "pctChange": -5.26,
+    "pctChange": -4.99,
     "open": 72.1,
     "high": 72.1,
     "low": 68.5,
-    "prevClose": 68.5,
+    "prevClose": 72.1,
     "volume": 501,
     "turnover": "3492.4 萬",
     "tradeValue": 34923721,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 68.5
   },
   "6928": {
     "code": "6928",
@@ -25837,15 +27247,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "佑全",
     "price": 22.3,
     "change": 0.5,
-    "pctChange": 2.24,
+    "pctChange": 2.29,
     "open": 21.2,
     "high": 22.3,
     "low": 20.95,
-    "prevClose": 22.3,
+    "prevClose": 21.8,
     "volume": 8,
     "turnover": "18.1 萬",
     "tradeValue": 180950,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.3
   },
   "6931": {
     "code": "6931",
@@ -25953,15 +27365,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "圓祥生技",
     "price": 136,
     "change": -7,
-    "pctChange": -5.15,
+    "pctChange": -4.9,
     "open": 140.5,
     "high": 142,
     "low": 132,
-    "prevClose": 136,
+    "prevClose": 143,
     "volume": 632,
     "turnover": "8620.7 萬",
     "tradeValue": 86207204,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 136
   },
   "6947": {
     "code": "6947",
@@ -26035,15 +27449,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "家碩",
     "price": 256,
     "change": 3.5,
-    "pctChange": 1.37,
+    "pctChange": 1.39,
     "open": 255.5,
     "high": 262.5,
     "low": 252.5,
-    "prevClose": 256,
+    "prevClose": 252.5,
     "volume": 263,
     "turnover": "6740.1 萬",
     "tradeValue": 67400806,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 256
   },
   "6955": {
     "code": "6955",
@@ -26100,15 +27516,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "旅天下",
     "price": 47.4,
     "change": -0.25,
-    "pctChange": -0.53,
+    "pctChange": -0.52,
     "open": 47.5,
     "high": 48,
     "low": 47.3,
-    "prevClose": 47.4,
+    "prevClose": 47.65,
     "volume": 35,
     "turnover": "164.9 萬",
     "tradeValue": 1648831,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 47.4
   },
   "6962": {
     "code": "6962",
@@ -26148,15 +27566,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "汎瑋材料",
     "price": 70,
     "change": -1.5,
-    "pctChange": -2.14,
+    "pctChange": -2.1,
     "open": 71.1,
     "high": 71.1,
     "low": 69.1,
-    "prevClose": 70,
+    "prevClose": 71.5,
     "volume": 186,
     "turnover": "1295.1 萬",
     "tradeValue": 12951410,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 70
   },
   "6968": {
     "name": "萬達寵物",
@@ -26166,11 +27586,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 41.5,
     "high": 41.55,
     "low": 40.8,
-    "prevClose": 41.3,
+    "prevClose": 41.45,
     "volume": 47,
     "turnover": "195.4 萬",
     "tradeValue": 1954348,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.3
   },
   "6969": {
     "code": "6969",
@@ -26197,11 +27619,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 23.75,
     "high": 23.75,
     "low": 23.25,
-    "prevClose": 23.45,
+    "prevClose": 23.3,
     "volume": 6,
     "turnover": "14.2 萬",
     "tradeValue": 141723,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 23.45
   },
   "6982": {
     "name": "大井泵浦",
@@ -26211,25 +27635,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 45.4,
     "high": 45.4,
     "low": 44.15,
-    "prevClose": 45,
+    "prevClose": 44.7,
     "volume": 31,
     "turnover": "137.1 萬",
     "tradeValue": 1371242,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 45
   },
   "6983": {
     "name": "華洋精機",
     "price": 355,
     "change": 2,
-    "pctChange": 0.56,
+    "pctChange": 0.57,
     "open": 355,
     "high": 355,
     "low": 349,
-    "prevClose": 355,
+    "prevClose": 353,
     "volume": 15,
     "turnover": "520.8 萬",
     "tradeValue": 5208164,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 355
   },
   "6986": {
     "name": "和迅",
@@ -26243,7 +27671,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 213,
     "turnover": "937.5 萬",
     "tradeValue": 9375319,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 44
   },
   "6988": {
     "code": "6988",
@@ -26291,21 +27721,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 31,
     "turnover": "531.4 萬",
     "tradeValue": 5314106,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 169.5
   },
   "6997": {
     "name": "博弘",
     "price": 68.7,
     "change": 1.7,
-    "pctChange": 2.47,
+    "pctChange": 2.54,
     "open": 69.3,
     "high": 69.3,
     "low": 68.5,
-    "prevClose": 68.7,
+    "prevClose": 67,
     "volume": 4,
     "turnover": "24.5 萬",
     "tradeValue": 245031,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 68.7
   },
   "7402": {
     "name": "邑錡",
@@ -26315,11 +27749,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 100.5,
     "high": 102,
     "low": 99.7,
-    "prevClose": 101,
+    "prevClose": 100.5,
     "volume": 112,
     "turnover": "1127.9 萬",
     "tradeValue": 11278925,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 101
   },
   "7547": {
     "name": "碩網",
@@ -26333,21 +27769,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 116,
     "turnover": "748.3 萬",
     "tradeValue": 7483417,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 64.1
   },
   "7556": {
     "name": "意德士",
     "price": 273,
     "change": 10.5,
-    "pctChange": 3.85,
+    "pctChange": 4,
     "open": 261,
     "high": 273.5,
     "low": 260,
-    "prevClose": 273,
+    "prevClose": 262.5,
     "volume": 94,
     "turnover": "2533.0 萬",
     "tradeValue": 25329726,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 273
   },
   "7610": {
     "code": "7610",
@@ -26387,15 +27827,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "昶瑞機電",
     "price": 68.8,
     "change": 0.6,
-    "pctChange": 0.87,
+    "pctChange": 0.88,
     "open": 69.9,
     "high": 69.9,
     "low": 68,
-    "prevClose": 68.8,
+    "prevClose": 68.2,
     "volume": 22,
     "turnover": "152.2 萬",
     "tradeValue": 1521825,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 68.8
   },
   "7689": {
     "code": "7689",
@@ -26426,7 +27868,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 32,
     "turnover": "653.7 萬",
     "tradeValue": 6537090,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 205
   },
   "7704": {
     "name": "明遠精密",
@@ -26436,11 +27880,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 61.2,
     "high": 61.2,
     "low": 60.6,
-    "prevClose": 61,
+    "prevClose": 61.2,
     "volume": 35,
     "turnover": "213.4 萬",
     "tradeValue": 2134090,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 61
   },
   "7705": {
     "code": "7705",
@@ -26463,29 +27909,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "全家餐飲",
     "price": 91.8,
     "change": -0.4,
-    "pctChange": -0.44,
+    "pctChange": -0.43,
     "open": 92,
     "high": 92,
     "low": 91.8,
-    "prevClose": 91.8,
+    "prevClose": 92.2,
     "volume": 7,
     "turnover": "65.2 萬",
     "tradeValue": 652412,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 91.8
   },
   "7709": {
     "name": "榮田",
     "price": 85.3,
     "change": -0.5,
-    "pctChange": -0.59,
+    "pctChange": -0.58,
     "open": 85.5,
     "high": 87.2,
     "low": 84.2,
-    "prevClose": 85.3,
+    "prevClose": 85.8,
     "volume": 149,
     "turnover": "1275.5 萬",
     "tradeValue": 12754665,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 85.3
   },
   "7711": {
     "code": "7711",
@@ -26508,15 +27958,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "博盛半導體",
     "price": 170.5,
     "change": 1.5,
-    "pctChange": 0.88,
+    "pctChange": 0.89,
     "open": 173.5,
     "high": 176,
     "low": 168,
-    "prevClose": 170.5,
+    "prevClose": 169,
     "volume": 664,
     "turnover": "1.1 億",
     "tradeValue": 113424597,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 170.5
   },
   "7714": {
     "name": "創泓科技",
@@ -26526,11 +27978,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 168,
     "high": 172.5,
     "low": 168,
-    "prevClose": 171,
+    "prevClose": 169.5,
     "volume": 131,
     "turnover": "2238.7 萬",
     "tradeValue": 22386518,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 171
   },
   "7715": {
     "name": "裕山",
@@ -26540,39 +27994,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 28.1,
     "high": 28.35,
     "low": 28.1,
-    "prevClose": 28.25,
+    "prevClose": 28.35,
     "volume": 30,
     "turnover": "85.5 萬",
     "tradeValue": 855420,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.25
   },
   "7716": {
     "name": "昱臺國際",
     "price": 24.45,
     "change": 0.5,
-    "pctChange": 2.04,
+    "pctChange": 2.09,
     "open": 24.45,
     "high": 24.45,
     "low": 24.45,
-    "prevClose": 24.45,
+    "prevClose": 23.95,
     "volume": 2,
     "turnover": "4.1 萬",
     "tradeValue": 40666,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.45
   },
   "7717": {
     "name": "萊德光電-KY",
     "price": 561,
     "change": 10,
-    "pctChange": 1.78,
+    "pctChange": 1.81,
     "open": 553,
     "high": 581,
     "low": 550,
-    "prevClose": 561,
+    "prevClose": 551,
     "volume": 636,
     "turnover": "3.6 億",
     "tradeValue": 358634631,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 561
   },
   "7718": {
     "name": "友鋮",
@@ -26582,11 +28042,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 45.85,
     "high": 45.85,
     "low": 45.85,
-    "prevClose": 45.85,
+    "prevClose": 46,
     "volume": 1,
     "turnover": "4.9 萬",
     "tradeValue": 48610,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 45.85
   },
   "7721": {
     "code": "7721",
@@ -26634,7 +28096,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 45,
     "turnover": "81.3 萬",
     "tradeValue": 813293,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.25
   },
   "7728": {
     "name": "光焱科技",
@@ -26644,11 +28108,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 649,
     "high": 661,
     "low": 635,
-    "prevClose": 645,
+    "prevClose": 649,
     "volume": 45,
     "turnover": "2934.9 萬",
     "tradeValue": 29348709,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 645
   },
   "7730": {
     "code": "7730",
@@ -26688,15 +28154,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "印能科技",
     "price": 2825,
     "change": 30,
-    "pctChange": 1.06,
+    "pctChange": 1.07,
     "open": 2795,
     "high": 2880,
     "low": 2765,
-    "prevClose": 2825,
+    "prevClose": 2795,
     "volume": 231,
     "turnover": "6.5 億",
     "tradeValue": 653153780,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 2825
   },
   "7736": {
     "code": "7736",
@@ -26719,15 +28187,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "東聯互動",
     "price": 155,
     "change": -1,
-    "pctChange": -0.65,
+    "pctChange": -0.64,
     "open": 157.5,
     "high": 157.5,
     "low": 155,
-    "prevClose": 155,
+    "prevClose": 156,
     "volume": 24,
     "turnover": "366.9 萬",
     "tradeValue": 3668619,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 155
   },
   "7740": {
     "code": "7740",
@@ -26750,29 +28220,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "金利食安",
     "price": 25.25,
     "change": 0.25,
-    "pctChange": 0.99,
+    "pctChange": 1,
     "open": 25.15,
     "high": 25.3,
     "low": 25,
-    "prevClose": 25.25,
+    "prevClose": 25,
     "volume": 97,
     "turnover": "244.7 萬",
     "tradeValue": 2446665,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.25
   },
   "7744": {
     "name": "崴寶",
     "price": 527,
     "change": -10,
-    "pctChange": -1.9,
+    "pctChange": -1.86,
     "open": 540,
     "high": 540,
     "low": 522,
-    "prevClose": 527,
+    "prevClose": 537,
     "volume": 94,
     "turnover": "4975.4 萬",
     "tradeValue": 49754087,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 527
   },
   "7747": {
     "name": "昕奇雲端",
@@ -26782,11 +28256,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 112,
     "high": 112,
     "low": 112,
-    "prevClose": 112,
+    "prevClose": 111.5,
     "volume": 301,
     "turnover": "3368.6 萬",
     "tradeValue": 33685725,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 112
   },
   "7749": {
     "code": "7749",
@@ -26826,15 +28302,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "竑騰",
     "price": 1590,
     "change": -40,
-    "pctChange": -2.52,
+    "pctChange": -2.45,
     "open": 1650,
     "high": 1675,
     "low": 1590,
-    "prevClose": 1590,
+    "prevClose": 1630,
     "volume": 193,
     "turnover": "3.1 億",
     "tradeValue": 312524920,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 1590
   },
   "7753": {
     "name": "星亞",
@@ -26848,7 +28326,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 38,
     "turnover": "136.0 萬",
     "tradeValue": 1360290,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 35.7
   },
   "7757": {
     "name": "金色三麥",
@@ -26858,11 +28338,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 88.2,
     "high": 89.3,
     "low": 88.2,
-    "prevClose": 89.1,
+    "prevClose": 89.2,
     "volume": 19,
     "turnover": "171.3 萬",
     "tradeValue": 1713046,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 89.1
   },
   "7760": {
     "code": "7760",
@@ -26906,11 +28388,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 46.15,
     "high": 46.25,
     "low": 46.05,
-    "prevClose": 46.1,
+    "prevClose": 46.3,
     "volume": 11,
     "turnover": "51.5 萬",
     "tradeValue": 515385,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 46.1
   },
   "7768": {
     "code": "7768",
@@ -26950,43 +28434,49 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "君曜",
     "price": 43.35,
     "change": 1.9,
-    "pctChange": 4.38,
+    "pctChange": 4.58,
     "open": 41.45,
     "high": 44,
     "low": 41.45,
-    "prevClose": 43.35,
+    "prevClose": 41.45,
     "volume": 46,
     "turnover": "197.7 萬",
     "tradeValue": 1976963,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 43.35
   },
   "7772": {
     "name": "耀穎",
     "price": 186,
     "change": 2,
-    "pctChange": 1.08,
+    "pctChange": 1.09,
     "open": 183,
     "high": 188.5,
     "low": 183,
-    "prevClose": 186,
+    "prevClose": 184,
     "volume": 184,
     "turnover": "3430.9 萬",
     "tradeValue": 34308806,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 186
   },
   "7777": {
     "name": "能率亞洲",
     "price": 39.2,
     "change": 0.95,
-    "pctChange": 2.42,
+    "pctChange": 2.48,
     "open": 38.3,
     "high": 39.45,
     "low": 37.7,
-    "prevClose": 39.2,
+    "prevClose": 38.25,
     "volume": 2513,
     "turnover": "9764.4 萬",
     "tradeValue": 97643708,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 39.2
   },
   "7780": {
     "code": "7780",
@@ -27017,7 +28507,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 2,
     "turnover": "5.0 萬",
     "tradeValue": 50325,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.15
   },
   "7786": {
     "code": "7786",
@@ -27074,15 +28566,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "安葆",
     "price": 425,
     "change": 4,
-    "pctChange": 0.94,
+    "pctChange": 0.95,
     "open": 429,
     "high": 429,
     "low": 414,
-    "prevClose": 425,
+    "prevClose": 421,
     "volume": 318,
     "turnover": "1.3 億",
     "tradeValue": 133963384,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 425
   },
   "7794": {
     "name": "宏碁智新",
@@ -27092,11 +28586,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 30,
     "high": 30.5,
     "low": 30,
-    "prevClose": 30.2,
+    "prevClose": 30.3,
     "volume": 42,
     "turnover": "127.7 萬",
     "tradeValue": 1277315,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 30.2
   },
   "7795": {
     "code": "7795",
@@ -27157,39 +28653,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 491,
     "high": 491.5,
     "low": 489.5,
-    "prevClose": 489.5,
+    "prevClose": 490,
     "volume": 21,
     "turnover": "1009.7 萬",
     "tradeValue": 10096954,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 489.5
   },
   "7810": {
     "name": "捷創科技",
     "price": 245,
     "change": 10,
-    "pctChange": 4.08,
+    "pctChange": 4.26,
     "open": 233.5,
     "high": 252.5,
     "low": 233.5,
-    "prevClose": 245,
+    "prevClose": 235,
     "volume": 304,
     "turnover": "7455.9 萬",
     "tradeValue": 74558789,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 245
   },
   "7811": {
     "name": "民盛",
     "price": 72.5,
     "change": -1,
-    "pctChange": -1.38,
+    "pctChange": -1.36,
     "open": 71.7,
     "high": 72.5,
     "low": 71.5,
-    "prevClose": 72.5,
+    "prevClose": 73.5,
     "volume": 8,
     "turnover": "58.2 萬",
     "tradeValue": 582070,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 72.5
   },
   "7812": {
     "code": "7812",
@@ -27212,15 +28714,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "海昌生技",
     "price": 28.2,
     "change": -0.2,
-    "pctChange": -0.71,
+    "pctChange": -0.7,
     "open": 28.4,
     "high": 28.6,
     "low": 28.1,
-    "prevClose": 28.2,
+    "prevClose": 28.4,
     "volume": 39,
     "turnover": "111.4 萬",
     "tradeValue": 1113645,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.2
   },
   "7818": {
     "code": "7818",
@@ -27251,21 +28755,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 9,
     "turnover": "30.5 萬",
     "tradeValue": 305210,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 33.7
   },
   "7820": {
     "name": "立盈",
     "price": 112,
     "change": 2,
-    "pctChange": 1.79,
+    "pctChange": 1.82,
     "open": 109,
     "high": 112,
     "low": 109,
-    "prevClose": 112,
+    "prevClose": 110,
     "volume": 7,
     "turnover": "79.9 萬",
     "tradeValue": 798838,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 112
   },
   "7821": {
     "code": "7821",
@@ -27326,11 +28834,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 86.9,
     "high": 88.9,
     "low": 84,
-    "prevClose": 84.9,
+    "prevClose": 85.6,
     "volume": 515,
     "turnover": "4437.3 萬",
     "tradeValue": 44372651,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 84.9
   },
   "7827": {
     "code": "7827",
@@ -27353,15 +28863,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "創新服務",
     "price": 1850,
     "change": -25,
-    "pctChange": -1.35,
+    "pctChange": -1.33,
     "open": 1900,
     "high": 1910,
     "low": 1850,
-    "prevClose": 1850,
+    "prevClose": 1875,
     "volume": 186,
     "turnover": "3.5 億",
     "tradeValue": 347290170,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 1850
   },
   "7835": {
     "code": "7835",
@@ -27388,25 +28900,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 42.5,
     "high": 43,
     "low": 42.5,
-    "prevClose": 42.95,
+    "prevClose": 43,
     "volume": 6,
     "turnover": "27.2 萬",
     "tradeValue": 272303,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 42.95
   },
   "7842": {
     "name": "天能綠電",
     "price": 96.8,
     "change": -0.9,
-    "pctChange": -0.93,
+    "pctChange": -0.92,
     "open": 97,
     "high": 97,
     "low": 96,
-    "prevClose": 96.8,
+    "prevClose": 97.7,
     "volume": 6,
     "turnover": "61.9 萬",
     "tradeValue": 618770,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 96.8
   },
   "7855": {
     "code": "7855",
@@ -27429,15 +28945,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "漢測",
     "price": 4195,
     "change": -105,
-    "pctChange": -2.5,
+    "pctChange": -2.44,
     "open": 4330,
     "high": 4470,
     "low": 4160,
-    "prevClose": 4195,
+    "prevClose": 4300,
     "volume": 460,
     "turnover": "19.8 億",
     "tradeValue": 1975524190,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 4195
   },
   "8011": {
     "code": "8011",
@@ -27494,29 +29012,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "佑華",
     "price": 12.5,
     "change": 0.15,
-    "pctChange": 1.2,
+    "pctChange": 1.21,
     "open": 12.6,
     "high": 12.8,
     "low": 12.4,
-    "prevClose": 12.5,
+    "prevClose": 12.35,
     "volume": 40,
     "turnover": "50.5 萬",
     "tradeValue": 505111,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.5
   },
   "8027": {
     "name": "鈦昇",
     "price": 213.5,
     "change": 4,
-    "pctChange": 1.87,
+    "pctChange": 1.91,
     "open": 210,
     "high": 217,
     "low": 207,
-    "prevClose": 213.5,
+    "prevClose": 209.5,
     "volume": 5425,
     "turnover": "11.5 億",
     "tradeValue": 1152417846,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 213.5
   },
   "8028": {
     "code": "8028",
@@ -27543,11 +29065,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 36.2,
     "high": 36.35,
     "low": 36.05,
-    "prevClose": 36.1,
+    "prevClose": 36.2,
     "volume": 47,
     "turnover": "169.1 萬",
     "tradeValue": 1690746,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 36.1
   },
   "8033": {
     "code": "8033",
@@ -27574,25 +29098,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 20,
     "high": 20.25,
     "low": 19.75,
-    "prevClose": 19.85,
+    "prevClose": 19.95,
     "volume": 58,
     "turnover": "115.5 萬",
     "tradeValue": 1155405,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.85
   },
   "8038": {
     "name": "長園科",
     "price": 34.8,
     "change": 0.95,
-    "pctChange": 2.73,
+    "pctChange": 2.81,
     "open": 33.85,
     "high": 34.85,
     "low": 33.6,
-    "prevClose": 34.8,
+    "prevClose": 33.85,
     "volume": 168,
     "turnover": "575.3 萬",
     "tradeValue": 5752717,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 34.8
   },
   "8039": {
     "code": "8039",
@@ -27619,39 +29147,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 95,
     "high": 97.9,
     "low": 94.8,
-    "prevClose": 95.7,
+    "prevClose": 95.4,
     "volume": 1725,
     "turnover": "1.7 億",
     "tradeValue": 165443324,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 95.7
   },
   "8042": {
     "name": "金山電",
     "price": 121,
     "change": 3,
-    "pctChange": 2.48,
+    "pctChange": 2.54,
     "open": 117.5,
     "high": 124,
     "low": 116,
-    "prevClose": 121,
+    "prevClose": 118,
     "volume": 11091,
     "turnover": "13.4 億",
     "tradeValue": 1342919970,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 121
   },
   "8043": {
     "name": "蜜望實",
     "price": 142,
     "change": 3.5,
-    "pctChange": 2.46,
+    "pctChange": 2.53,
     "open": 139,
     "high": 145.5,
     "low": 137,
-    "prevClose": 142,
+    "prevClose": 138.5,
     "volume": 6188,
     "turnover": "8.8 億",
     "tradeValue": 882561675,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 142
   },
   "8044": {
     "name": "網家",
@@ -27661,11 +29195,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 24.1,
     "high": 24.4,
     "low": 23.9,
-    "prevClose": 24.35,
+    "prevClose": 24.2,
     "volume": 183,
     "turnover": "443.3 萬",
     "tradeValue": 4432597,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.35
   },
   "8045": {
     "code": "8045",
@@ -27705,29 +29241,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "星雲",
     "price": 51.6,
     "change": 0.6,
-    "pctChange": 1.16,
+    "pctChange": 1.18,
     "open": 51.2,
     "high": 51.6,
     "low": 51,
-    "prevClose": 51.6,
+    "prevClose": 51,
     "volume": 163,
     "turnover": "838.0 萬",
     "tradeValue": 8379551,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 51.6
   },
   "8048": {
     "name": "德勝",
     "price": 51.3,
     "change": 0.5,
-    "pctChange": 0.97,
+    "pctChange": 0.98,
     "open": 50.9,
     "high": 51.5,
     "low": 50.6,
-    "prevClose": 51.3,
+    "prevClose": 50.8,
     "volume": 97,
     "turnover": "494.4 萬",
     "tradeValue": 4944314,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 51.3
   },
   "8049": {
     "name": "晶采",
@@ -27737,67 +29277,77 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 24.95,
     "high": 25,
     "low": 24.7,
-    "prevClose": 24.85,
+    "prevClose": 24.8,
     "volume": 126,
     "turnover": "312.1 萬",
     "tradeValue": 3120673,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.85
   },
   "8050": {
     "name": "廣積",
     "price": 62.2,
     "change": -1.2,
-    "pctChange": -1.93,
+    "pctChange": -1.89,
     "open": 63.5,
     "high": 63.5,
     "low": 62,
-    "prevClose": 62.2,
+    "prevClose": 63.4,
     "volume": 1491,
     "turnover": "9306.6 萬",
     "tradeValue": 93066252,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 62.2
   },
   "8054": {
     "name": "安國",
     "price": 89.5,
     "change": -0.3,
-    "pctChange": -0.34,
+    "pctChange": -0.33,
     "open": 89.8,
     "high": 89.8,
     "low": 88.5,
-    "prevClose": 89.5,
+    "prevClose": 89.8,
     "volume": 764,
     "turnover": "6816.5 萬",
     "tradeValue": 68164933,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 89.5
   },
   "8059": {
     "name": "凱碩",
     "price": 18.05,
     "change": 0.5,
-    "pctChange": 2.77,
+    "pctChange": 2.85,
     "open": 17.6,
     "high": 18.3,
     "low": 17.6,
-    "prevClose": 18.05,
+    "prevClose": 17.55,
     "volume": 118,
     "turnover": "213.1 萬",
     "tradeValue": 2130786,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.05
   },
   "8064": {
     "name": "東捷",
     "price": 141.5,
     "change": -2,
-    "pctChange": -1.41,
+    "pctChange": -1.39,
     "open": 144.5,
     "high": 145.5,
     "low": 141.5,
-    "prevClose": 141.5,
+    "prevClose": 143.5,
     "volume": 5330,
     "turnover": "7.6 億",
     "tradeValue": 762480318,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 141.5
   },
   "8066": {
     "name": "來思達",
@@ -27811,21 +29361,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 20,
     "turnover": "29.6 萬",
     "tradeValue": 296376,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.95
   },
   "8067": {
     "name": "志旭",
     "price": 11.8,
     "change": -0.2,
-    "pctChange": -1.69,
+    "pctChange": -1.67,
     "open": 11.8,
     "high": 11.8,
     "low": 11.8,
-    "prevClose": 11.8,
+    "prevClose": 12,
     "volume": 1,
     "turnover": "1.2 萬",
     "tradeValue": 11822,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 11.8
   },
   "8068": {
     "name": "全達",
@@ -27839,7 +29393,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 118,
     "turnover": "210.0 萬",
     "tradeValue": 2100400,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 17.75
   },
   "8069": {
     "name": "元太",
@@ -27849,11 +29405,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 146,
     "high": 146,
     "low": 142.5,
-    "prevClose": 143.5,
+    "prevClose": 144,
     "volume": 5802,
     "turnover": "8.3 億",
     "tradeValue": 833999749,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 143.5
   },
   "8070": {
     "code": "8070",
@@ -27876,15 +29434,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "能率網通",
     "price": 22.4,
     "change": 0.4,
-    "pctChange": 1.79,
+    "pctChange": 1.82,
     "open": 21.95,
     "high": 22.7,
     "low": 21.85,
-    "prevClose": 22.4,
+    "prevClose": 22,
     "volume": 447,
     "turnover": "994.4 萬",
     "tradeValue": 9944086,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.4
   },
   "8072": {
     "code": "8072",
@@ -27907,29 +29467,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "鉅橡",
     "price": 56.9,
     "change": 5.1,
-    "pctChange": 8.96,
+    "pctChange": 9.85,
     "open": 51.9,
     "high": 56.9,
     "low": 51.9,
-    "prevClose": 56.9,
+    "prevClose": 51.8,
     "volume": 1470,
     "turnover": "8173.3 萬",
     "tradeValue": 81733425,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 56.9
   },
   "8076": {
     "name": "伍豐",
     "price": 21.85,
     "change": 0.25,
-    "pctChange": 1.14,
+    "pctChange": 1.16,
     "open": 21.65,
     "high": 22,
     "low": 21.65,
-    "prevClose": 21.85,
+    "prevClose": 21.6,
     "volume": 460,
     "turnover": "1006.2 萬",
     "tradeValue": 10062010,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 21.85
   },
   "8077": {
     "name": "洛碁",
@@ -27939,11 +29503,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 41.2,
     "high": 41.5,
     "low": 41.2,
-    "prevClose": 41.5,
+    "prevClose": 41.8,
     "volume": 2,
     "turnover": "8.3 萬",
     "tradeValue": 82823,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 41.5
   },
   "8081": {
     "code": "8081",
@@ -27966,29 +29532,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "瑞穎",
     "price": 157.5,
     "change": 1,
-    "pctChange": 0.63,
+    "pctChange": 0.64,
     "open": 157,
     "high": 157.5,
     "low": 156,
-    "prevClose": 157.5,
+    "prevClose": 156.5,
     "volume": 58,
     "turnover": "905.0 萬",
     "tradeValue": 9049828,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 157.5
   },
   "8084": {
     "name": "巨虹",
     "price": 21.8,
     "change": -2.4,
-    "pctChange": -11.01,
+    "pctChange": -9.92,
     "open": 21.8,
     "high": 21.8,
     "low": 21.8,
-    "prevClose": 21.8,
+    "prevClose": 24.2,
     "volume": 574,
     "turnover": "1250.6 萬",
     "tradeValue": 12506388,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 21.8
   },
   "8085": {
     "name": "福華",
@@ -27998,53 +29568,61 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 14.85,
     "high": 14.85,
     "low": 14.55,
-    "prevClose": 14.7,
+    "prevClose": 14.6,
     "volume": 145,
     "turnover": "212.8 萬",
     "tradeValue": 2127649,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.7
   },
   "8086": {
     "name": "宏捷科",
     "price": 120,
     "change": 5,
-    "pctChange": 4.17,
+    "pctChange": 4.35,
     "open": 116,
     "high": 120.5,
     "low": 116,
-    "prevClose": 120,
+    "prevClose": 115,
     "volume": 8553,
     "turnover": "10.2 億",
     "tradeValue": 1020183217,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 120
   },
   "8087": {
     "name": "麗升能源",
     "price": 24,
     "change": 0.4,
-    "pctChange": 1.67,
+    "pctChange": 1.69,
     "open": 23.95,
     "high": 24.1,
     "low": 23.45,
-    "prevClose": 24,
+    "prevClose": 23.6,
     "volume": 12,
     "turnover": "28.1 萬",
     "tradeValue": 280611,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24
   },
   "8088": {
     "name": "品安",
     "price": 44.45,
     "change": 0.8,
-    "pctChange": 1.8,
+    "pctChange": 1.83,
     "open": 43.9,
     "high": 45,
     "low": 43.85,
-    "prevClose": 44.45,
+    "prevClose": 43.65,
     "volume": 527,
     "turnover": "2346.4 萬",
     "tradeValue": 23463618,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 44.45
   },
   "8089": {
     "name": "康全電訊",
@@ -28058,35 +29636,41 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 60,
     "turnover": "116.9 萬",
     "tradeValue": 1169042,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.6
   },
   "8091": {
     "name": "翔名",
     "price": 237,
     "change": 21.5,
-    "pctChange": 9.07,
+    "pctChange": 9.98,
     "open": 216.5,
     "high": 237,
     "low": 216.5,
-    "prevClose": 237,
+    "prevClose": 215.5,
     "volume": 738,
     "turnover": "1.7 億",
     "tradeValue": 170628340,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 237
   },
   "8092": {
     "name": "建暐",
     "price": 12.3,
     "change": -0.25,
-    "pctChange": -2.03,
+    "pctChange": -1.99,
     "open": 12.25,
     "high": 12.45,
     "low": 12.25,
-    "prevClose": 12.3,
+    "prevClose": 12.55,
     "volume": 113,
     "turnover": "140.0 萬",
     "tradeValue": 1400417,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 12.3
   },
   "8093": {
     "name": "保銳",
@@ -28100,21 +29684,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 46,
     "turnover": "118.1 萬",
     "tradeValue": 1181397,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.25
   },
   "8096": {
     "name": "擎亞",
     "price": 89,
     "change": 1.5,
-    "pctChange": 1.69,
+    "pctChange": 1.71,
     "open": 88.4,
     "high": 89.3,
     "low": 87.4,
-    "prevClose": 89,
+    "prevClose": 87.5,
     "volume": 2067,
     "turnover": "1.8 億",
     "tradeValue": 182833457,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 89
   },
   "8097": {
     "name": "常珵",
@@ -28124,11 +29712,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 48.55,
     "high": 48.95,
     "low": 48.2,
-    "prevClose": 48.8,
+    "prevClose": 48.55,
     "volume": 110,
     "turnover": "534.3 萬",
     "tradeValue": 5342538,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 48.8
   },
   "8099": {
     "name": "大世科",
@@ -28138,11 +29728,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 60.3,
     "high": 61.7,
     "low": 59.5,
-    "prevClose": 60.4,
+    "prevClose": 60.3,
     "volume": 70,
     "turnover": "423.2 萬",
     "tradeValue": 4231658,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 60.4
   },
   "8101": {
     "code": "8101",
@@ -28165,15 +29757,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "傑霖科技",
     "price": 59.6,
     "change": 0.6,
-    "pctChange": 1.01,
+    "pctChange": 1.02,
     "open": 59,
     "high": 59.6,
     "low": 58.6,
-    "prevClose": 59.6,
+    "prevClose": 59,
     "volume": 11,
     "turnover": "65.0 萬",
     "tradeValue": 650200,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 59.6
   },
   "8103": {
     "code": "8103",
@@ -28230,29 +29824,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "大億金茂",
     "price": 11.95,
     "change": 0.15,
-    "pctChange": 1.26,
+    "pctChange": 1.27,
     "open": 11.85,
     "high": 12,
     "low": 11.8,
-    "prevClose": 11.95,
+    "prevClose": 11.8,
     "volume": 52,
     "turnover": "61.9 萬",
     "tradeValue": 618678,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 11.95
   },
   "8109": {
     "name": "博大",
     "price": 146.5,
     "change": 2,
-    "pctChange": 1.37,
+    "pctChange": 1.38,
     "open": 144.5,
     "high": 148,
     "low": 143.5,
-    "prevClose": 146.5,
+    "prevClose": 144.5,
     "volume": 641,
     "turnover": "9362.1 萬",
     "tradeValue": 93620711,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 146.5
   },
   "8110": {
     "code": "8110",
@@ -28275,15 +29873,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "立碁",
     "price": 85.8,
     "change": 7.8,
-    "pctChange": 9.09,
+    "pctChange": 10,
     "open": 80.1,
     "high": 85.8,
     "low": 80.1,
-    "prevClose": 85.8,
+    "prevClose": 78,
     "volume": 23660,
     "turnover": "19.7 億",
     "tradeValue": 1968946662,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 85.8
   },
   "8112": {
     "code": "8112",
@@ -28323,15 +29923,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "越峰",
     "price": 34.1,
     "change": -0.55,
-    "pctChange": -1.61,
+    "pctChange": -1.59,
     "open": 34.65,
     "high": 35.75,
     "low": 33.45,
-    "prevClose": 34.1,
+    "prevClose": 34.65,
     "volume": 2905,
     "turnover": "1.0 億",
     "tradeValue": 100545887,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 34.1
   },
   "8131": {
     "code": "8131",
@@ -28362,7 +29964,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 381,
     "turnover": "5524.7 萬",
     "tradeValue": 55246881,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 143.5
   },
   "8150": {
     "code": "8150",
@@ -28385,15 +29989,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "博智",
     "price": 323,
     "change": 9.5,
-    "pctChange": 2.94,
+    "pctChange": 3.03,
     "open": 316.5,
     "high": 328.5,
     "low": 313.5,
-    "prevClose": 323,
+    "prevClose": 313.5,
     "volume": 733,
     "turnover": "2.4 億",
     "tradeValue": 235533592,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 323
   },
   "8162": {
     "code": "8162",
@@ -28437,39 +30043,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 20.1,
     "high": 20.7,
     "low": 20.1,
-    "prevClose": 20.65,
+    "prevClose": 20.7,
     "volume": 217,
     "turnover": "442.3 萬",
     "tradeValue": 4422933,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.65
   },
   "8176": {
     "name": "智捷",
     "price": 9.77,
     "change": 0.06,
-    "pctChange": 0.61,
+    "pctChange": 0.62,
     "open": 9.67,
     "high": 9.87,
     "low": 9.63,
-    "prevClose": 9.77,
+    "prevClose": 9.71,
     "volume": 61,
     "turnover": "59.1 萬",
     "tradeValue": 591222,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 9.77
   },
   "8182": {
     "name": "加高",
     "price": 46.4,
     "change": 2.15,
-    "pctChange": 4.63,
+    "pctChange": 4.86,
     "open": 44.7,
     "high": 48.65,
     "low": 44.5,
-    "prevClose": 46.4,
+    "prevClose": 44.25,
     "volume": 7216,
     "turnover": "3.4 億",
     "tradeValue": 342450477,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 46.4
   },
   "8201": {
     "code": "8201",
@@ -28560,29 +30172,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "巨有科技",
     "price": 370,
     "change": 6.5,
-    "pctChange": 1.76,
+    "pctChange": 1.79,
     "open": 363.5,
     "high": 370,
     "low": 351,
-    "prevClose": 370,
+    "prevClose": 363.5,
     "volume": 849,
     "turnover": "3.1 億",
     "tradeValue": 306429752,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 370
   },
   "8234": {
     "name": "新漢",
     "price": 63.3,
     "change": 0.3,
-    "pctChange": 0.47,
+    "pctChange": 0.48,
     "open": 62.8,
     "high": 63.4,
     "low": 62,
-    "prevClose": 63.3,
+    "prevClose": 63,
     "volume": 268,
     "turnover": "1683.6 萬",
     "tradeValue": 16836211,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 63.3
   },
   "8240": {
     "name": "華宏",
@@ -28592,11 +30208,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 59,
     "high": 60.9,
     "low": 58.2,
-    "prevClose": 60.6,
+    "prevClose": 60.2,
     "volume": 2774,
     "turnover": "1.7 億",
     "tradeValue": 166194717,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 60.6
   },
   "8249": {
     "code": "8249",
@@ -28619,15 +30237,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "朋程",
     "price": 153,
     "change": 3.5,
-    "pctChange": 2.29,
+    "pctChange": 2.34,
     "open": 151,
     "high": 155,
     "low": 148.5,
-    "prevClose": 153,
+    "prevClose": 149.5,
     "volume": 497,
     "turnover": "7566.5 萬",
     "tradeValue": 75665215,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 153
   },
   "8261": {
     "code": "8261",
@@ -28667,99 +30287,113 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "全景軟體",
     "price": 62,
     "change": -1.9,
-    "pctChange": -3.06,
+    "pctChange": -2.97,
     "open": 62.1,
     "high": 63.2,
     "low": 61.9,
-    "prevClose": 62,
+    "prevClose": 63.9,
     "volume": 8,
     "turnover": "51.2 萬",
     "tradeValue": 512461,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 62
   },
   "8277": {
     "name": "商丞",
     "price": 15.2,
     "change": -0.3,
-    "pctChange": -1.97,
+    "pctChange": -1.94,
     "open": 15.7,
     "high": 15.7,
     "low": 15,
-    "prevClose": 15.2,
+    "prevClose": 15.5,
     "volume": 114,
     "turnover": "173.3 萬",
     "tradeValue": 1733268,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 15.2
   },
   "8279": {
     "name": "生展",
     "price": 79.5,
     "change": -1.3,
-    "pctChange": -1.64,
+    "pctChange": -1.61,
     "open": 80.6,
     "high": 80.9,
     "low": 79.5,
-    "prevClose": 79.5,
+    "prevClose": 80.8,
     "volume": 20,
     "turnover": "163.2 萬",
     "tradeValue": 1632103,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 79.5
   },
   "8284": {
     "name": "三竹",
     "price": 67.8,
     "change": 0.2,
-    "pctChange": 0.29,
+    "pctChange": 0.3,
     "open": 68,
     "high": 68,
     "low": 67.7,
-    "prevClose": 67.8,
+    "prevClose": 67.6,
     "volume": 7,
     "turnover": "50.2 萬",
     "tradeValue": 502213,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 67.8
   },
   "8289": {
     "name": "泰藝",
     "price": 56.1,
     "change": 5.1,
-    "pctChange": 9.09,
+    "pctChange": 10,
     "open": 53.8,
     "high": 56.1,
     "low": 53.5,
-    "prevClose": 56.1,
+    "prevClose": 51,
     "volume": 1925,
     "turnover": "1.1 億",
     "tradeValue": 106546806,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 56.1
   },
   "8291": {
     "name": "尚茂",
     "price": 28.6,
     "change": 0.25,
-    "pctChange": 0.87,
+    "pctChange": 0.88,
     "open": 28.35,
     "high": 28.6,
     "low": 28,
-    "prevClose": 28.6,
+    "prevClose": 28.35,
     "volume": 18,
     "turnover": "49.9 萬",
     "tradeValue": 499465,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.6
   },
   "8299": {
     "name": "群聯",
     "price": 2095,
     "change": -15,
-    "pctChange": -0.72,
+    "pctChange": -0.71,
     "open": 2130,
     "high": 2140,
     "low": 2085,
-    "prevClose": 2095,
+    "prevClose": 2110,
     "volume": 2181,
     "turnover": "45.8 億",
     "tradeValue": 4578654485,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 2095
   },
   "8341": {
     "code": "8341",
@@ -28790,7 +30424,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 1,
     "turnover": "8.4 萬",
     "tradeValue": 83665,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 83.5
   },
   "8349": {
     "name": "恒耀",
@@ -28800,11 +30436,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 40.5,
     "high": 40.5,
     "low": 40.2,
-    "prevClose": 40.4,
+    "prevClose": 40.5,
     "volume": 58,
     "turnover": "233.9 萬",
     "tradeValue": 2339296,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 40.4
   },
   "8354": {
     "name": "冠好",
@@ -28818,21 +30456,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 54,
     "turnover": "90.3 萬",
     "tradeValue": 903241,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.75
   },
   "8358": {
     "name": "金居",
     "price": 519,
     "change": 14,
-    "pctChange": 2.7,
+    "pctChange": 2.77,
     "open": 514,
     "high": 536,
     "low": 511,
-    "prevClose": 519,
+    "prevClose": 505,
     "volume": 20101,
     "turnover": "105.0 億",
     "tradeValue": 10496579865,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 519
   },
   "8367": {
     "code": "8367",
@@ -28872,15 +30514,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "千附",
     "price": 68.4,
     "change": 0.5,
-    "pctChange": 0.73,
+    "pctChange": 0.74,
     "open": 68,
     "high": 68.7,
     "low": 67.6,
-    "prevClose": 68.4,
+    "prevClose": 67.9,
     "volume": 556,
     "turnover": "3797.9 萬",
     "tradeValue": 37978657,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 68.4
   },
   "8390": {
     "name": "金益鼎",
@@ -28890,11 +30534,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 91.5,
     "high": 91.5,
     "low": 90.4,
-    "prevClose": 90.5,
+    "prevClose": 90.3,
     "volume": 202,
     "turnover": "1832.0 萬",
     "tradeValue": 18320462,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 90.5
   },
   "8401": {
     "name": "白紗科",
@@ -28904,11 +30550,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 22.7,
     "high": 22.8,
     "low": 22.7,
-    "prevClose": 22.8,
+    "prevClose": 22.7,
     "volume": 23,
     "turnover": "53.4 萬",
     "tradeValue": 533535,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.8
   },
   "8403": {
     "name": "盛弘",
@@ -28922,7 +30570,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 43,
     "turnover": "80.9 萬",
     "tradeValue": 809415,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.9
   },
   "8404": {
     "code": "8404",
@@ -28949,11 +30599,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 18.05,
     "high": 18.05,
     "low": 17.95,
-    "prevClose": 18.05,
+    "prevClose": 18,
     "volume": 27,
     "turnover": "48.7 萬",
     "tradeValue": 486590,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18.05
   },
   "8410": {
     "name": "森田",
@@ -28963,11 +30615,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 27.95,
     "high": 28,
     "low": 27.5,
-    "prevClose": 27.7,
+    "prevClose": 27.8,
     "volume": 28,
     "turnover": "77.7 萬",
     "tradeValue": 777315,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 27.7
   },
   "8411": {
     "code": "8411",
@@ -28990,29 +30644,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "大國鋼",
     "price": 35.25,
     "change": -0.3,
-    "pctChange": -0.85,
+    "pctChange": -0.84,
     "open": 35.45,
     "high": 35.5,
     "low": 35.2,
-    "prevClose": 35.25,
+    "prevClose": 35.55,
     "volume": 213,
     "turnover": "752.4 萬",
     "tradeValue": 7523694,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 35.25
   },
   "8416": {
     "name": "實威",
     "price": 171,
     "change": 2,
-    "pctChange": 1.17,
+    "pctChange": 1.18,
     "open": 170.5,
     "high": 171.5,
     "low": 170.5,
-    "prevClose": 171,
+    "prevClose": 169,
     "volume": 10,
     "turnover": "164.0 萬",
     "tradeValue": 1640289,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 171
   },
   "8421": {
     "name": "旭源",
@@ -29026,7 +30684,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 23,
     "turnover": "29.3 萬",
     "tradeValue": 292628,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 13
   },
   "8422": {
     "code": "8422",
@@ -29057,21 +30717,25 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 21,
     "turnover": "38.1 萬",
     "tradeValue": 380520,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 18
   },
   "8424": {
     "name": "惠普",
     "price": 69.6,
     "change": -0.7,
-    "pctChange": -1.01,
+    "pctChange": -1,
     "open": 69.6,
     "high": 69.6,
     "low": 69.6,
-    "prevClose": 69.6,
+    "prevClose": 70.3,
     "volume": 2,
     "turnover": "14.0 萬",
     "tradeValue": 140184,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 69.6
   },
   "8426": {
     "name": "紅木-KY",
@@ -29081,11 +30745,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 20.5,
     "high": 20.6,
     "low": 20.45,
-    "prevClose": 20.6,
+    "prevClose": 20.65,
     "volume": 13,
     "turnover": "26.8 萬",
     "tradeValue": 268493,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.6
   },
   "8429": {
     "code": "8429",
@@ -29108,29 +30774,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "匯鑽科",
     "price": 64.1,
     "change": -0.6,
-    "pctChange": -0.94,
+    "pctChange": -0.93,
     "open": 64.7,
     "high": 65.3,
     "low": 63.4,
-    "prevClose": 64.1,
+    "prevClose": 64.7,
     "volume": 682,
     "turnover": "4375.1 萬",
     "tradeValue": 43751452,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 64.1
   },
   "8432": {
     "name": "東生華",
     "price": 51.1,
     "change": 0.4,
-    "pctChange": 0.78,
+    "pctChange": 0.79,
     "open": 50.6,
     "high": 51.2,
     "low": 50.6,
-    "prevClose": 51.1,
+    "prevClose": 50.7,
     "volume": 39,
     "turnover": "198.5 萬",
     "tradeValue": 1984995,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 51.1
   },
   "8433": {
     "name": "弘帆",
@@ -29144,7 +30814,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 15,
     "turnover": "80.0 萬",
     "tradeValue": 800449,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 52.8
   },
   "8435": {
     "name": "鉅邁",
@@ -29154,39 +30826,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 53,
     "high": 53.3,
     "low": 53,
-    "prevClose": 53.2,
+    "prevClose": 53.3,
     "volume": 12,
     "turnover": "62.1 萬",
     "tradeValue": 621367,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 53.2
   },
   "8436": {
     "name": "大江",
     "price": 104,
     "change": -1,
-    "pctChange": -0.96,
+    "pctChange": -0.95,
     "open": 105,
     "high": 105,
     "low": 104,
-    "prevClose": 104,
+    "prevClose": 105,
     "volume": 493,
     "turnover": "5144.6 萬",
     "tradeValue": 51445786,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 104
   },
   "8437": {
     "name": "大地-KY",
     "price": 10.5,
     "change": -0.1,
-    "pctChange": -0.95,
+    "pctChange": -0.94,
     "open": 10.9,
     "high": 10.95,
     "low": 10.5,
-    "prevClose": 10.5,
+    "prevClose": 10.6,
     "volume": 36,
     "turnover": "38.7 萬",
     "tradeValue": 386658,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 10.5
   },
   "8438": {
     "code": "8438",
@@ -29213,11 +30891,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 20.25,
     "high": 20.4,
     "low": 20.2,
-    "prevClose": 20.25,
+    "prevClose": 20.2,
     "volume": 29,
     "turnover": "59.2 萬",
     "tradeValue": 591609,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 20.25
   },
   "8442": {
     "code": "8442",
@@ -29261,11 +30941,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 85,
     "high": 85,
     "low": 84.5,
-    "prevClose": 84.5,
+    "prevClose": 84.9,
     "volume": 25,
     "turnover": "212.3 萬",
     "tradeValue": 2122524,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 84.5
   },
   "8450": {
     "name": "霹靂",
@@ -29275,11 +30957,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 14.2,
     "high": 14.3,
     "low": 14.05,
-    "prevClose": 14.25,
+    "prevClose": 14.3,
     "volume": 22,
     "turnover": "31.4 萬",
     "tradeValue": 313545,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.25
   },
   "8454": {
     "code": "8454",
@@ -29387,15 +31071,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "納維康",
     "price": 65.3,
     "change": -3.9,
-    "pctChange": -5.97,
+    "pctChange": -5.64,
     "open": 65.5,
     "high": 69.2,
     "low": 64,
-    "prevClose": 65.3,
+    "prevClose": 69.2,
     "volume": 93,
     "turnover": "612.1 萬",
     "tradeValue": 6120867,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 65.3
   },
   "8473": {
     "code": "8473",
@@ -29435,15 +31121,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "創業家",
     "price": 14.05,
     "change": -0.15,
-    "pctChange": -1.07,
+    "pctChange": -1.06,
     "open": 14.2,
     "high": 14.2,
     "low": 14,
-    "prevClose": 14.05,
+    "prevClose": 14.2,
     "volume": 13,
     "turnover": "18.4 萬",
     "tradeValue": 184352,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 14.05
   },
   "8478": {
     "code": "8478",
@@ -29534,15 +31222,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "三貝德",
     "price": 22.25,
     "change": -0.2,
-    "pctChange": -0.9,
+    "pctChange": -0.89,
     "open": 21.85,
     "high": 22.25,
     "low": 21.8,
-    "prevClose": 22.25,
+    "prevClose": 22.45,
     "volume": 61,
     "turnover": "133.4 萬",
     "tradeValue": 1334052,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.25
   },
   "8499": {
     "code": "8499",
@@ -29565,29 +31255,33 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "花王",
     "price": 28.5,
     "change": -0.45,
-    "pctChange": -1.58,
+    "pctChange": -1.55,
     "open": 28.7,
     "high": 28.7,
     "low": 28.4,
-    "prevClose": 28.5,
+    "prevClose": 28.95,
     "volume": 11,
     "turnover": "30.5 萬",
     "tradeValue": 304705,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.5
   },
   "8908": {
     "name": "欣雄",
     "price": 39.8,
     "change": -0.4,
-    "pctChange": -1.01,
+    "pctChange": -1,
     "open": 40.1,
     "high": 40.2,
     "low": 39.75,
-    "prevClose": 39.8,
+    "prevClose": 40.2,
     "volume": 32,
     "turnover": "129.0 萬",
     "tradeValue": 1290141,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 39.8
   },
   "8916": {
     "name": "光隆",
@@ -29597,39 +31291,45 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 41,
     "high": 41,
     "low": 40.8,
-    "prevClose": 40.95,
+    "prevClose": 41,
     "volume": 57,
     "turnover": "231.1 萬",
     "tradeValue": 2311257,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 40.95
   },
   "8921": {
     "name": "沈氏",
     "price": 16.45,
     "change": -0.3,
-    "pctChange": -1.82,
+    "pctChange": -1.79,
     "open": 16,
     "high": 16.5,
     "low": 16,
-    "prevClose": 16.45,
+    "prevClose": 16.75,
     "volume": 3,
     "turnover": "5.1 萬",
     "tradeValue": 50580,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 16.45
   },
   "8924": {
     "name": "大田",
     "price": 49.5,
     "change": -0.4,
-    "pctChange": -0.81,
+    "pctChange": -0.8,
     "open": 49.9,
     "high": 49.9,
     "low": 49.5,
-    "prevClose": 49.5,
+    "prevClose": 49.9,
     "volume": 30,
     "turnover": "149.4 萬",
     "tradeValue": 1493563,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 49.5
   },
   "8926": {
     "code": "8926",
@@ -29656,25 +31356,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 19.2,
     "high": 19.25,
     "low": 18.95,
-    "prevClose": 19.15,
+    "prevClose": 19.1,
     "volume": 48,
     "turnover": "91.0 萬",
     "tradeValue": 909602,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.15
   },
   "8928": {
     "name": "鉅明",
     "price": 22.9,
     "change": -0.1,
-    "pctChange": -0.44,
+    "pctChange": -0.43,
     "open": 22.8,
     "high": 22.9,
     "low": 22.75,
-    "prevClose": 22.9,
+    "prevClose": 23,
     "volume": 4,
     "turnover": "9.6 萬",
     "tradeValue": 95650,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 22.9
   },
   "8929": {
     "name": "富堡",
@@ -29688,7 +31392,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 4,
     "turnover": "4.8 萬",
     "tradeValue": 48317,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 13.1
   },
   "8930": {
     "name": "青鋼",
@@ -29698,11 +31404,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 28.7,
     "high": 28.7,
     "low": 28.5,
-    "prevClose": 28.6,
+    "prevClose": 28.7,
     "volume": 30,
     "turnover": "86.0 萬",
     "tradeValue": 859971,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 28.6
   },
   "8931": {
     "name": "大汽電",
@@ -29712,25 +31420,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 43.1,
     "high": 43.1,
     "low": 42.5,
-    "prevClose": 42.85,
+    "prevClose": 42.65,
     "volume": 13,
     "turnover": "56.4 萬",
     "tradeValue": 563644,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 42.85
   },
   "8932": {
     "name": "智通*",
     "price": 91.1,
     "change": -0.7,
-    "pctChange": -0.77,
+    "pctChange": -0.76,
     "open": 92.3,
     "high": 92.3,
     "low": 90.8,
-    "prevClose": 91.1,
+    "prevClose": 91.8,
     "volume": 1055,
     "turnover": "9630.1 萬",
     "tradeValue": 96301197,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 91.1
   },
   "8933": {
     "name": "愛地雅",
@@ -29740,11 +31452,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 4.5,
     "high": 4.59,
     "low": 4.43,
-    "prevClose": 4.59,
+    "prevClose": 4.6,
     "volume": 45,
     "turnover": "20.4 萬",
     "tradeValue": 204096,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 4.59
   },
   "8935": {
     "name": "邦泰",
@@ -29754,11 +31468,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 19.2,
     "high": 19.2,
     "low": 18.95,
-    "prevClose": 19.2,
+    "prevClose": 19.3,
     "volume": 83,
     "turnover": "157.5 萬",
     "tradeValue": 1574642,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 19.2
   },
   "8936": {
     "name": "國統",
@@ -29768,25 +31484,29 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 52.7,
     "high": 52.8,
     "low": 52.1,
-    "prevClose": 52.3,
+    "prevClose": 52.7,
     "volume": 1128,
     "turnover": "5913.2 萬",
     "tradeValue": 59131809,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 52.3
   },
   "8937": {
     "name": "合騏*",
     "price": 25.2,
     "change": -0.3,
-    "pctChange": -1.19,
+    "pctChange": -1.18,
     "open": 24.85,
     "high": 25.45,
     "low": 24.85,
-    "prevClose": 25.2,
+    "prevClose": 25.5,
     "volume": 54,
     "turnover": "135.6 萬",
     "tradeValue": 1356209,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 25.2
   },
   "8938": {
     "name": "明安",
@@ -29800,7 +31520,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 59,
     "turnover": "310.3 萬",
     "tradeValue": 3102985,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 52.2
   },
   "8940": {
     "code": "8940",
@@ -29827,11 +31549,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 43.25,
     "high": 44,
     "low": 43.25,
-    "prevClose": 44,
+    "prevClose": 43.95,
     "volume": 6,
     "turnover": "26.3 萬",
     "tradeValue": 263144,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 44
   },
   "8942": {
     "name": "森鉅",
@@ -29841,11 +31565,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 40.2,
     "high": 40.2,
     "low": 39.95,
-    "prevClose": 40.05,
+    "prevClose": 40.15,
     "volume": 138,
     "turnover": "553.4 萬",
     "tradeValue": 5533561,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 40.05
   },
   "8996": {
     "code": "8996",
@@ -30556,7 +32282,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 11,
     "turnover": "26.7 萬",
     "tradeValue": 266620,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 24.3
   },
   "9950": {
     "name": "萬國通",
@@ -30566,11 +32294,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 10.15,
     "high": 10.25,
     "low": 10.15,
-    "prevClose": 10.2,
+    "prevClose": 10.25,
     "volume": 12,
     "turnover": "12.2 萬",
     "tradeValue": 122090,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 10.2
   },
   "9951": {
     "name": "皇田",
@@ -30580,11 +32310,13 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "open": 46.7,
     "high": 46.9,
     "low": 46.55,
-    "prevClose": 46.9,
+    "prevClose": 47,
     "volume": 71,
     "turnover": "332.1 萬",
     "tradeValue": 3321150,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 46.9
   },
   "9955": {
     "code": "9955",
@@ -30624,15 +32356,17 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "name": "邁達康",
     "price": 38,
     "change": 0.5,
-    "pctChange": 1.32,
+    "pctChange": 1.33,
     "open": 38,
     "high": 38.2,
     "low": 37.6,
-    "prevClose": 38,
+    "prevClose": 37.5,
     "volume": 1246,
     "turnover": "4584.1 萬",
     "tradeValue": 45840750,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 38
   },
   "9962": {
     "name": "有益",
@@ -30646,7 +32380,9 @@ export const DAILY_TWSE_STOCKS_MAP = {
     "volume": 79,
     "turnover": "82.2 萬",
     "tradeValue": 821994,
-    "market": "上櫃 (TPEx)"
+    "market": "上櫃 (TPEx)",
+    "date": "2026-10-02",
+    "close": 10.35
   },
   "910322": {
     "code": "910322",

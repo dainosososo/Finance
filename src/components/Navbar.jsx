@@ -2,6 +2,45 @@ import React, { useState } from 'react';
 import { TrendingUp, Search, RefreshCw, Github, Zap, ArrowUpRight, ArrowDownRight, X, Bell, Wifi } from 'lucide-react';
 import { DAILY_TWSE_STOCKS_MAP } from '../data/dailyTwseStocksMap';
 
+export const STOCK_SEARCH_ALIASES = {
+  '密望實': '8043',
+  '密望': '8043',
+  '蜜望實': '8043',
+  '世界先進': '5347',
+  '世界': '5347',
+  '群益證': '6005',
+  '群益證券': '6005',
+  '群益': '6005',
+  '台積': '2330',
+  '台積電': '2330',
+  '聯發': '2454',
+  '聯發科': '2454',
+  '鴻海': '2317',
+  '廣達': '2382',
+  '大立光': '3008',
+  '日月光': '3711',
+  '日月光投控': '3711',
+  '聯電': '2303',
+  '威剛': '3260',
+  '日電貿': '3090',
+  '鈊象': '3293',
+  '富邦金': '2881',
+  '富邦金控': '2881',
+  '國泰金': '2882',
+  '國泰金控': '2882',
+  '中信金': '2891',
+  '中信金控': '2891',
+  '玉山金': '2884',
+  '玉山金控': '2884',
+  '元大金': '2885',
+  '元大金控': '2885',
+  '兆豐金': '2886',
+  '兆豐金控': '2886',
+  '開發金': '2883',
+  '凱基金': '2883',
+  '凱基金控': '2883'
+};
+
 export default function Navbar({ 
   onSearch, 
   stockList = [],
@@ -31,14 +70,41 @@ export default function Navbar({
   const searchResults = React.useMemo(() => {
     if (!searchTerm.trim()) return [];
     const term = searchTerm.trim().toLowerCase();
+
+    // 1. 優先檢查別名庫 (如 密望實 -> 8043, 世界先進 -> 5347)
+    const aliasCode = STOCK_SEARCH_ALIASES[searchTerm.trim()];
+    const aliasStock = aliasCode && DAILY_TWSE_STOCKS_MAP[aliasCode] ? [{
+      Code: aliasCode,
+      Name: DAILY_TWSE_STOCKS_MAP[aliasCode].name,
+      ClosingPrice: String(DAILY_TWSE_STOCKS_MAP[aliasCode].price || DAILY_TWSE_STOCKS_MAP[aliasCode].close),
+      Change: String(DAILY_TWSE_STOCKS_MAP[aliasCode].change),
+      PctChange: String(DAILY_TWSE_STOCKS_MAP[aliasCode].pctChange),
+      TradeVolume: String(DAILY_TWSE_STOCKS_MAP[aliasCode].volume * 1000),
+      Sector: DAILY_TWSE_STOCKS_MAP[aliasCode].market || '上市櫃'
+    }] : [];
+
+    // 2. 當前 stockList 匹配
     const hits = (stockList || [])
       .filter(s => (s.Code && s.Code.toLowerCase().includes(term)) || (s.Name && s.Name.toLowerCase().includes(term)));
-    if (hits.length > 0) return hits.slice(0, 8);
 
-    // 全台股 2,248 檔上市櫃股票字典庫即時檢索 (如 3260 威剛、3293 鈊象等)
-    return Object.entries(DAILY_TWSE_STOCKS_MAP)
-      .filter(([code, s]) => code.toLowerCase().includes(term) || s.name.toLowerCase().includes(term))
-      .slice(0, 8)
+    // 3. 全台股 2,248 檔上市櫃字典庫即時檢索 (含精確代號/名稱加權排序)
+    const mapHits = Object.entries(DAILY_TWSE_STOCKS_MAP)
+      .filter(([code, s]) => {
+        const cLower = code.toLowerCase();
+        const nLower = s.name.toLowerCase();
+        return cLower.includes(term) || nLower.includes(term) || term.includes(nLower);
+      })
+      .sort(([c1, s1], [c2, s2]) => {
+        const exact1 = c1.toLowerCase() === term || s1.name.toLowerCase() === term;
+        const exact2 = c2.toLowerCase() === term || s2.name.toLowerCase() === term;
+        if (exact1 && !exact2) return -1;
+        if (!exact1 && exact2) return 1;
+        const start1 = s1.name.toLowerCase().startsWith(term);
+        const start2 = s2.name.toLowerCase().startsWith(term);
+        if (start1 && !start2) return -1;
+        if (!start1 && start2) return 1;
+        return 0;
+      })
       .map(([code, s]) => ({
         Code: code,
         Name: s.name,
@@ -48,6 +114,19 @@ export default function Navbar({
         TradeVolume: String(s.volume * 1000),
         Sector: s.market || '上市櫃'
       }));
+
+    // 合併結果並去重
+    const combined = [...aliasStock, ...hits, ...mapHits];
+    const seen = new Set();
+    const unique = [];
+    for (const item of combined) {
+      if (!seen.has(item.Code)) {
+        seen.add(item.Code);
+        unique.push(item);
+      }
+      if (unique.length >= 8) break;
+    }
+    return unique;
   }, [searchTerm, stockList]);
 
   const handleSearchSubmit = (e) => {
