@@ -44,6 +44,7 @@ import {
   checkQuotesAgainstAlerts 
 } from './services/alertService';
 import { websocketStream } from './services/websocketStreamService';
+import { DAILY_TWSE_STOCKS_MAP } from './data/dailyTwseStocksMap';
 
 // 熱力圖與權值焦點即時輪詢成分股
 export const HOT_HEATMAP_CODES = [
@@ -270,16 +271,81 @@ export default function App() {
   };
 
   // Global search handler
-  const handleSearch = (term) => {
+  const handleSearch = async (term) => {
     if (!term) return;
     const clean = term.trim();
-    const found = dailyStocks.find(s => s.Code?.toLowerCase() === clean.toLowerCase() || s.Name?.toLowerCase() === clean.toLowerCase()) ||
+    let found = dailyStocks.find(s => s.Code?.toLowerCase() === clean.toLowerCase() || s.Name?.toLowerCase() === clean.toLowerCase()) ||
                   dailyStocks.find(s => s.Code?.toLowerCase().includes(clean.toLowerCase()) || s.Name?.toLowerCase().includes(clean.toLowerCase())) ||
                   quotes.find(q => q.symbol?.toLowerCase() === clean.toLowerCase() || q.name?.toLowerCase() === clean.toLowerCase());
 
+    if (!found) {
+      if (clean in DAILY_TWSE_STOCKS_MAP) {
+        const m = DAILY_TWSE_STOCKS_MAP[clean];
+        found = {
+          Code: clean,
+          Name: m.name,
+          ClosingPrice: String(m.price || m.close),
+          Change: String(m.change),
+          PctChange: String(m.pctChange),
+          TradeVolume: String(m.volume * 1000),
+          TradeValue: String(m.tradeValue || 0),
+          open: m.open,
+          high: m.high,
+          low: m.low,
+          prevClose: m.prevClose
+        };
+      } else {
+        const foundCode = Object.keys(DAILY_TWSE_STOCKS_MAP).find(c => DAILY_TWSE_STOCKS_MAP[c].name === clean || DAILY_TWSE_STOCKS_MAP[c].name.includes(clean));
+        if (foundCode) {
+          const m = DAILY_TWSE_STOCKS_MAP[foundCode];
+          found = {
+            Code: foundCode,
+            Name: m.name,
+            ClosingPrice: String(m.price || m.close),
+            Change: String(m.change),
+            PctChange: String(m.pctChange),
+            TradeVolume: String(m.volume * 1000),
+            TradeValue: String(m.tradeValue || 0),
+            open: m.open,
+            high: m.high,
+            low: m.low,
+            prevClose: m.prevClose
+          };
+        }
+      }
+    }
+
     if (found) {
       setSelectedStockModal(found);
-    } else {
+    }
+
+    const targetCode = found ? found.Code : clean;
+    try {
+      const liveRes = await fetchRealtimeQuotes([targetCode]);
+      if (liveRes && liveRes.length > 0 && liveRes[0].price && liveRes[0].price !== '-') {
+        const live = liveRes[0];
+        setSelectedStockModal({
+          Code: live.symbol,
+          Name: live.name || (found ? found.Name : live.symbol),
+          ClosingPrice: live.price,
+          Change: live.change,
+          PctChange: live.pctChange,
+          TradeVolume: live.volume,
+          TradeValue: String(live.tradeValue),
+          TurnoverYi: String(live.turnover),
+          open: live.open,
+          high: live.high,
+          low: live.low,
+          prevClose: live.prevClose
+        });
+        handleAddStock(live.symbol);
+        return;
+      }
+    } catch (e) {
+      console.warn('Realtime search quote fetch error:', e);
+    }
+
+    if (!found) {
       const defaultPrice = clean === '2330' ? '2480.00' : '100.00';
       setSelectedStockModal({ 
         Code: clean, 

@@ -326,7 +326,7 @@ export function getStockDetailData(symbolOrStock) {
   const twseData = DAILY_TWSE_STOCKS_MAP[code];
   const existing = STOCK_PRESETS[code];
 
-  const passedPrice = parseFloat(symbolOrStock?.ClosingPrice || symbolOrStock?.price || twseData?.close || 0);
+  const passedPrice = parseFloat(symbolOrStock?.ClosingPrice || symbolOrStock?.price || twseData?.price || twseData?.close || 0);
   const passedChange = parseFloat(symbolOrStock?.Change !== undefined ? symbolOrStock.Change : (symbolOrStock?.change !== undefined ? symbolOrStock.change : (twseData?.change !== undefined ? twseData.change : 0)));
   const passedOpen = parseFloat(symbolOrStock?.OpeningPrice || symbolOrStock?.open || twseData?.open || 0);
   const passedHigh = parseFloat(symbolOrStock?.HighestPrice || symbolOrStock?.high || twseData?.high || 0);

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TrendingUp, Search, RefreshCw, Github, Zap, ArrowUpRight, ArrowDownRight, X, Bell, Wifi } from 'lucide-react';
+import { DAILY_TWSE_STOCKS_MAP } from '../data/dailyTwseStocksMap';
 
 export default function Navbar({ 
   onSearch, 
@@ -30,9 +31,23 @@ export default function Navbar({
   const searchResults = React.useMemo(() => {
     if (!searchTerm.trim()) return [];
     const term = searchTerm.trim().toLowerCase();
-    return (stockList || [])
-      .filter(s => (s.Code && s.Code.toLowerCase().includes(term)) || (s.Name && s.Name.toLowerCase().includes(term)))
-      .slice(0, 6);
+    const hits = (stockList || [])
+      .filter(s => (s.Code && s.Code.toLowerCase().includes(term)) || (s.Name && s.Name.toLowerCase().includes(term)));
+    if (hits.length > 0) return hits.slice(0, 8);
+
+    // 全台股 2,248 檔上市櫃股票字典庫即時檢索 (如 3260 威剛、3293 鈊象等)
+    return Object.entries(DAILY_TWSE_STOCKS_MAP)
+      .filter(([code, s]) => code.toLowerCase().includes(term) || s.name.toLowerCase().includes(term))
+      .slice(0, 8)
+      .map(([code, s]) => ({
+        Code: code,
+        Name: s.name,
+        ClosingPrice: String(s.price || s.close),
+        Change: String(s.change),
+        PctChange: String(s.pctChange),
+        TradeVolume: String(s.volume * 1000),
+        Sector: s.market || '上市櫃'
+      }));
   }, [searchTerm, stockList]);
 
   const handleSearchSubmit = (e) => {
