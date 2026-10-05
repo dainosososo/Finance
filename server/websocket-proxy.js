@@ -47,10 +47,23 @@ function fetchTwseQuotes(symbols) {
         try {
           const json = JSON.parse(data);
           if (json && json.msgArray) {
-            const mapped = json.msgArray.map(st => {
-              const close = parseFloat(st.z) || parseFloat(st.y) || 0;
+            const mapped = json.msgArray.filter(st => st && st.c).map(st => {
+              let livePrice = null;
+              if (st.z && st.z !== '-') livePrice = parseFloat(st.z);
+              else if (st.trade && st.trade.z && st.trade.z !== '-') livePrice = parseFloat(st.trade.z);
+              else if (st.pz && st.pz !== '-') livePrice = parseFloat(st.pz);
+              else if (st.b && st.b !== '-') {
+                const b0 = parseFloat(st.b.split('_')[0]);
+                if (!isNaN(b0) && b0 > 0) livePrice = b0;
+              }
+              else if (st.a && st.a !== '-') {
+                const a0 = parseFloat(st.a.split('_')[0]);
+                if (!isNaN(a0) && a0 > 0) livePrice = a0;
+              }
+
               const prevClose = parseFloat(st.y) || 0;
-              const change = close - prevClose;
+              const close = (livePrice !== null && !isNaN(livePrice) && livePrice > 0) ? livePrice : prevClose;
+              const change = prevClose > 0 ? close - prevClose : 0;
               const pctChange = prevClose > 0 ? (change / prevClose) * 100 : 0;
               const rawVol = parseFloat(st.v) || 0;
               const estVal = close * rawVol * 1000;

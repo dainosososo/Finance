@@ -96,16 +96,16 @@ export async function fetchDailyClosingPrices() {
  * Multi-layer CORS Proxy Helper with Failover Pool
  * Enables browser to directly fetch from TWSE MIS without being blocked by CORS.
  */
-export async function fetchWithCorsProxy(targetUrl, timeoutMs = 5000) {
+export async function fetchWithCorsProxy(targetUrl, timeoutMs = 6000) {
   const encoded = encodeURIComponent(targetUrl);
   const proxies = [
-    // Proxy 1: corsproxy.io (fast and direct)
-    `https://corsproxy.io/?url=${encoded}`,
-    // Proxy 2: allorigins raw proxy
-    `https://api.allorigins.win/raw?url=${encoded}`,
-    // Proxy 3: local dev Vite proxy if present
+    // Proxy 1: cors.eu.org (verified active and highly responsive for TWSE MIS)
+    `https://cors.eu.org/${targetUrl}`,
+    // Proxy 2: Local dev Vite proxy if present on localhost
     targetUrl.replace('https://mis.twse.com.tw', '/api/twse-mis').replace('https://openapi.twse.com.tw', '/api/twse-open'),
-    // Direct attempt
+    // Proxy 3: allorigins JSON wrapper
+    `https://api.allorigins.win/get?url=${encoded}`,
+    // Proxy 4: Direct attempt
     targetUrl
   ];
 
@@ -118,7 +118,11 @@ export async function fetchWithCorsProxy(targetUrl, timeoutMs = 5000) {
       if (res.ok) {
         const text = await res.text();
         try {
-          return JSON.parse(text);
+          const parsed = JSON.parse(text);
+          if (parsed && typeof parsed.contents === 'string') {
+            try { return JSON.parse(parsed.contents); } catch { /* ignore */ }
+          }
+          return parsed;
         } catch {
           // Some proxies might return text wrapping
           continue;
@@ -133,67 +137,114 @@ export async function fetchWithCorsProxy(targetUrl, timeoutMs = 5000) {
 }
 
 /**
+ * 檢查目前是否為台股正常盤中撮合交易時段 (週一至週五 09:00 ~ 13:30)
+ */
+export function isMarketTradingHours() {
+  const now = new Date();
+  const day = now.getDay();
+  if (day === 0 || day === 6) return false; // 週末休市
+  const mins = now.getHours() * 60 + now.getMinutes();
+  return mins >= 9 * 60 && mins <= 13 * 60 + 30; // 09:00 ~ 13:30
+}
+
+/**
  * Fetch TWSE Real-time stock quotes via CORS Proxy (即時報價)
  * @param {Array<string>} stockCodes Array of stock codes e.g. ['2330', '2317', '2454']
  */
 export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', '0050']) {
-  // Support both TSE (上市) and OTC (上櫃) format
-  const channelQuery = stockCodes.map(code => {
-    // If already prefixed, use as-is
-    if (code.startsWith('tse_') || code.startsWith('otc_')) return `${code}.tw`;
-    return `tse_${code}.tw|otc_${code}.tw`;
-  }).join('|');
+  if (!stockCodes || stockCodes.length === 0) return [];
 
-  const misUrl = `https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=${channelQuery}&_json=1`;
+  // Group into batches of up to 25 to avoid URL length limit on TWSE MIS
+  const batchSize = 25;
+  const batches = [];
+  for (let i = 0; i < stockCodes.length; i += batchSize) {
+    batches.push(stockCodes.slice(i, i + batchSize));
+  }
 
-  try {
-    const data = await fetchWithCorsProxy(misUrl, 6000);
-    if (data && data.msgArray && data.msgArray.length > 0) {
-      return data.msgArray.map(st => {
-        // z = 當盤成交價, y = 昨收價, o = 開盤價, h = 最高價, l = 最低價, v = 成交量 (累積張數)
-        const close = parseFloat(st.z) || parseFloat(st.y) || 0;
-        const prevClose = parseFloat(st.y) || 0;
-        const change = close - prevClose;
-        const pctChange = prevClose > 0 ? (change / prevClose) * 100 : 0;
-        
-        // 即時成交金額計算 (張數 * 1000 * 當前均價或現價 / 1億)
-        const rawVolLots = parseFloat(st.v) || 0; // 單位: 張
-        const estTradeValue = close * rawVolLots * 1000; // 總金額 (元)
-        const turnoverYi = estTradeValue > 0 ? Number((estTradeValue / 100000000).toFixed(1)) : 0;
+  const results = [];
 
-        // 解析即時五檔委買委賣價量
-        const bids = st.b ? st.b.split('_').filter(Boolean).map((p, i) => ({ 
-          price: p, 
-          vol: st.g ? st.g.split('_')[i] : '0' 
-        })) : [];
-        const asks = st.a ? st.a.split('_').filter(Boolean).map((p, i) => ({ 
-          price: p, 
-          vol: st.f ? st.f.split('_')[i] : '0' 
-        })) : [];
+  for (const batch of batches) {
+    // Support both TSE (上市) and OTC (上櫃) format
+    const channelQuery = batch.map(code => {
+      if (code.startsWith('tse_') || code.startsWith('otc_')) return `${code}.tw`;
+      return `tse_${code}.tw|otc_${code}.tw`;
+    }).join('|');
 
-        return {
-          symbol: st.c,
-          name: st.n,
-          fullName: st.nf || `${st.n}股份有限公司`,
-          price: close > 0 ? close.toFixed(2) : (prevClose > 0 ? prevClose.toFixed(2) : '-'),
-          prevClose: prevClose.toFixed(2),
-          open: st.o || prevClose.toFixed(2),
-          high: st.h || prevClose.toFixed(2),
-          low: st.l || prevClose.toFixed(2),
-          volume: st.v || '0',
-          turnover: turnoverYi,
-          tradeValue: estTradeValue,
-          change: change.toFixed(2),
-          pctChange: pctChange.toFixed(2),
-          time: st.t || new Date().toLocaleTimeString('zh-TW', { hour12: false }),
-          bids,
-          asks,
-          isRealtime: true
-        };
-      });
+    const misUrl = `https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=${channelQuery}&_json=1`;
+
+    try {
+      const data = await fetchWithCorsProxy(misUrl, 6000);
+      if (data && data.msgArray && data.msgArray.length > 0) {
+        data.msgArray.forEach(st => {
+          if (!st || !st.c) return; // Skip invalid/empty channels
+
+          // Determine current trade/close price:
+          // Priority: 1. st.z (成交價) 2. st.trade.z 3. st.pz 4. st.b (買一) 5. st.a (賣一) 6. st.y (昨收)
+          let livePrice = null;
+          if (st.z && st.z !== '-') livePrice = parseFloat(st.z);
+          else if (st.trade && st.trade.z && st.trade.z !== '-') livePrice = parseFloat(st.trade.z);
+          else if (st.pz && st.pz !== '-') livePrice = parseFloat(st.pz);
+          else if (st.b && st.b !== '-') {
+            const b0 = parseFloat(st.b.split('_')[0]);
+            if (!isNaN(b0) && b0 > 0) livePrice = b0;
+          }
+          else if (st.a && st.a !== '-') {
+            const a0 = parseFloat(st.a.split('_')[0]);
+            if (!isNaN(a0) && a0 > 0) livePrice = a0;
+          }
+
+          const prevClose = parseFloat(st.y) || 0;
+          const close = (livePrice !== null && !isNaN(livePrice) && livePrice > 0) ? livePrice : prevClose;
+          const change = prevClose > 0 ? (close - prevClose) : 0;
+          const pctChange = prevClose > 0 ? (change / prevClose) * 100 : 0;
+
+          // MIS st.v is already in 張
+          const rawVolLots = parseFloat(st.v) || 0;
+          const estTradeValue = close * rawVolLots * 1000;
+          const turnoverYi = estTradeValue > 0 ? Number((estTradeValue / 100000000).toFixed(1)) : 0;
+
+          const openPrice = (st.o && st.o !== '-') ? parseFloat(st.o) : (close > 0 ? close : prevClose);
+          const highPrice = (st.h && st.h !== '-') ? parseFloat(st.h) : Math.max(openPrice, close);
+          const lowPrice = (st.l && st.l !== '-') ? parseFloat(st.l) : Math.min(openPrice, close);
+
+          // 解析即時五檔委買委賣價量
+          const bids = st.b ? st.b.split('_').filter(Boolean).map((p, i) => ({ 
+            price: p, 
+            vol: st.g ? st.g.split('_')[i] : '0' 
+          })) : [];
+          const asks = st.a ? st.a.split('_').filter(Boolean).map((p, i) => ({ 
+            price: p, 
+            vol: st.f ? st.f.split('_')[i] : '0' 
+          })) : [];
+
+          results.push({
+            symbol: st.c,
+            name: st.n,
+            fullName: st.nf || `${st.n}股份有限公司`,
+            price: close > 0 ? close.toFixed(2) : (prevClose > 0 ? prevClose.toFixed(2) : '-'),
+            prevClose: prevClose.toFixed(2),
+            open: openPrice.toFixed(2),
+            high: highPrice.toFixed(2),
+            low: lowPrice.toFixed(2),
+            volume: String(rawVolLots),
+            turnover: turnoverYi,
+            tradeValue: estTradeValue,
+            change: change.toFixed(2),
+            pctChange: pctChange.toFixed(2),
+            time: st.t || new Date().toLocaleTimeString('zh-TW', { hour12: false }),
+            bids,
+            asks,
+            isRealtime: true
+          });
+        });
+      }
+    } catch (err) {
+      console.warn('Realtime quotes batch fetch error:', err.message);
     }
-  } catch (err) {
-    console.warn('Realtime quotes fetch exception:', err.message);
+  }
+
+  if (results.length > 0) {
+    return results;
   }
 
   // Graceful fallback: Read actual prices and trade values from daily_closing_stocks

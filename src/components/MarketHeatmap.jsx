@@ -103,12 +103,48 @@ const SECTOR_GROUPS = [
 
 export default function MarketHeatmap({ 
   dailyStocks = [], 
+  realtimeQuotes = [],
   onSelectStock 
 }) {
   const [activeView, setActiveView] = useState('SPLIT'); // 'SPLIT', 'TURNOVER', 'SECTOR'
 
-  // Helper: merge real dailyStocks data into a stock entry
-  const mergeRealData = (st, dailyMap) => {
+  // Build a lookup map from realtimeQuotes
+  const realtimeMap = useMemo(() => {
+    const map = new Map();
+    if (realtimeQuotes && realtimeQuotes.length > 0) {
+      realtimeQuotes.forEach(q => {
+        if (q.symbol) map.set(q.symbol, q);
+      });
+    }
+    return map;
+  }, [realtimeQuotes]);
+
+  // Helper: merge real dailyStocks and realtimeQuotes into a stock entry
+  const mergeRealData = (st, dailyMap, realtimeMap) => {
+    const live = realtimeMap ? realtimeMap.get(st.code) : null;
+    if (live && live.isRealtime && live.price !== '-' && parseFloat(live.price) > 0) {
+      const cp = parseFloat(live.price);
+      const chg = parseFloat(live.change) || 0;
+      const pct = parseFloat(live.pctChange) || 0;
+      const vol = parseFloat(live.volume) || 0;
+      const toYi = parseFloat(live.turnover) || (cp * vol * 1000 / 100000000);
+      const turnoverYi = Number(toYi.toFixed(1));
+      
+      return {
+        ...st,
+        price: cp,
+        change: chg,
+        pctChange: pct,
+        isUp: chg >= 0,
+        turnover: turnoverYi > 0 ? turnoverYi : st.turnover,
+        Name: live.name || st.name,
+        Code: st.code,
+        ClosingPrice: String(cp),
+        isLive: true,
+        liveTime: live.time
+      };
+    }
+
     const found = dailyMap.get(st.code);
     if (found) {
       const cp = parseFloat(found.ClosingPrice) || st.price;
@@ -155,25 +191,20 @@ export default function MarketHeatmap({
     return map;
   }, [dailyStocks]);
 
-  // 1. 處理即時成交值熱力圖標的 (取全市場當前成交金額最大的活躍標的)
+  // 1. 處理即時成交值熱力圖標的 (取全市場當前成交金額最大的活躍標的，即時與盤後無縫結合)
   const turnoverStocks = useMemo(() => {
-    const defaultCodes = [
-      '2330', '2454', '2308', '3231', '2303', '2317', '0050', '3481', 
-      '2382', '1519', '3017', '2409', '3008', '2603', '2881', '2882'
-    ];
-
     let combined = [];
 
-    // 若 dailyStocks 存在，優先提取成交金額最高的熱門股
+    // 若 dailyStocks 存在，優先提取成交金額最高的熱門股並融入盤中即時撮合跳動
     if (dailyStocks && dailyStocks.length > 0) {
       const allParsed = dailyStocks.map(d => {
-        const cp = parseFloat(d.ClosingPrice) || 0;
-        const chg = parseFloat(d.Change) || 0;
-        const prev = cp - chg;
-        const pct = prev > 0 ? Number(((chg / prev) * 100).toFixed(2)) : 0;
+        const live = realtimeMap.get(d.Code);
+        const cp = (live && parseFloat(live.price) > 0) ? parseFloat(live.price) : (parseFloat(d.ClosingPrice) || 0);
+        const chg = live ? (parseFloat(live.change) || 0) : (parseFloat(d.Change) || 0);
+        const pct = live ? (parseFloat(live.pctChange) || 0) : (parseFloat(d.PctChange) || 0);
+        const tvYi = (live && parseFloat(live.turnover) > 0) ? parseFloat(live.turnover) : (parseFloat(d.TurnoverYi) || 0);
         const tv = parseFloat(d.TradeValue) || 0;
-        const tvYi = parseFloat(d.TurnoverYi) || 0;
-        const vol = parseFloat(d.TradeVolume) || 0;
+        const vol = live ? parseFloat(live.volume) : (parseFloat(d.TradeVolume) || 0);
         
         let turnoverYi = 0;
         if (tvYi > 0) turnoverYi = tvYi;
@@ -182,16 +213,17 @@ export default function MarketHeatmap({
 
         return {
           code: d.Code,
-          name: d.Name,
+          name: live?.name || d.Name,
           price: cp,
           change: chg,
           pctChange: pct,
           isUp: chg >= 0,
           turnover: turnoverYi,
           sector: d.Sector || '一般產業',
-          Name: d.Name,
+          Name: live?.name || d.Name,
           Code: d.Code,
-          ClosingPrice: String(cp)
+          ClosingPrice: String(cp),
+          isLive: !!live
         };
       }).filter(s => s.price > 0 && !s.code.startsWith('00') && s.turnover > 0);
 
@@ -204,7 +236,7 @@ export default function MarketHeatmap({
       }
     }
 
-    // 若提取數量不足，以 10/2 今日真實熱門成交榜單補齊
+    // 若提取數量不足，以焦點權重標的清單補齊並套用即時盤中資料
     if (combined.length < 10) {
       const baseList = [
         { code: '2327', name: '國巨*', price: 626.0, change: 24.0, pctChange: 3.99, turnover: 644.4, sector: '零組件' },
@@ -224,21 +256,26 @@ export default function MarketHeatmap({
         { code: '2308', name: '台達電', price: 1885.0, change: -20.0, pctChange: -1.05, turnover: 104.0, sector: '零組件' },
         { code: '2317', name: '鴻海', price: 251.0, change: -3.0, pctChange: -1.18, turnover: 71.3, sector: '電腦周邊' }
       ];
-      combined = baseList.map(st => mergeRealData(st, dailyMap));
+      combined = baseList.map(st => mergeRealData(st, dailyMap, realtimeMap));
       combined.sort((a, b) => b.turnover - a.turnover);
     }
 
     return combined;
-  }, [dailyStocks, dailyMap]);
+  }, [dailyStocks, dailyMap, realtimeMap]);
 
   // 2. Also update SECTOR_GROUPS stocks with real data
   const updatedSectorGroups = useMemo(() => {
-    if (dailyMap.size === 0) return SECTOR_GROUPS;
     return SECTOR_GROUPS.map(sec => ({
       ...sec,
-      stocks: sec.stocks.map(st => mergeRealData(st, dailyMap))
+      stocks: sec.stocks.map(st => mergeRealData(st, dailyMap, realtimeMap))
     }));
-  }, [dailyMap]);
+  }, [dailyMap, realtimeMap]);
+
+  const latestLiveTime = useMemo(() => {
+    if (!realtimeQuotes || realtimeQuotes.length === 0) return null;
+    const item = realtimeQuotes.find(q => q.time);
+    return item ? item.time : null;
+  }, [realtimeQuotes]);
 
   // 顏色計算函式 (台灣股市標準: 紅漲綠跌)
   const getHeatmapColor = (pct) => {
@@ -260,11 +297,17 @@ export default function MarketHeatmap({
             <Flame className="w-4 h-4" />
           </div>
           <div>
-            <h2 className="text-sm font-extrabold text-slate-900 tracking-tight flex items-center gap-1.5">
+            <h2 className="text-sm font-extrabold text-slate-900 tracking-tight flex items-center gap-1.5 flex-wrap">
               台股雙熱力圖多區塊觀測站
               <span className="text-[10px] font-mono px-1.5 py-0.2 bg-rose-100 text-rose-700 rounded border border-pink-300 font-semibold">
                 即時成交值 • 產業板塊
               </span>
+              {latestLiveTime && (
+                <span className="text-[10px] font-mono px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-300 font-bold flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+                  盤中即時撮合 ({latestLiveTime})
+                </span>
+              )}
             </h2>
             <p className="text-[11px] text-rose-900/70 mt-0.5">以成交金額權重決定區塊面積，色溫即時反映個股與產業強弱勢多空動能</p>
           </div>

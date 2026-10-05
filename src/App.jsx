@@ -32,6 +32,7 @@ import {
   fetchRealtimeQuotes, 
   fetchTaiexIndex, 
   fetchFscAnnouncements,
+  isMarketTradingHours,
   DEFAULT_WATCHLIST 
 } from './services/twseApi';
 import {
@@ -44,10 +45,19 @@ import {
 } from './services/alertService';
 import { websocketStream } from './services/websocketStreamService';
 
+// 熱力圖與權值焦點即時輪詢成分股
+export const HOT_HEATMAP_CODES = [
+  '2327', '4958', '2330', '2409', '2492', '6274', '2408', '2454', 
+  '6213', '2303', '3105', '3026', '3481', '3017', '2308', '2317', 
+  '8046', '3189', '2382', '2603', '2609', '2615', '2881', '2882', 
+  '2891', '3231', '0050', '3008', '1519'
+];
+
 export default function App() {
   const [dailyStocks, setDailyStocks] = useState([]);
   const [watchlist, setWatchlist] = useState(['2330', '2317', '2454', '0050']);
   const [quotes, setQuotes] = useState([]);
+  const [allLiveQuotes, setAllLiveQuotes] = useState([]);
   const [showAlertsModal, setShowAlertsModal] = useState(false);
   const [showWsModal, setShowWsModal] = useState(false);
   const [wsStatus, setWsStatus] = useState('DISCONNECTED');
@@ -70,10 +80,6 @@ export default function App() {
   const loadData = useCallback(async (forceLive = false) => {
     setIsRefreshing(true);
     try {
-      const HOT_HEATMAP_CODES = [
-        '2330', '2454', '2308', '3231', '2303', '2317', '0050', '3481', 
-        '2382', '1519', '3017', '2409', '3008', '2603', '2881', '2882'
-      ];
       const pollCodes = Array.from(new Set([...watchlist, ...HOT_HEATMAP_CODES]));
 
       const [daily, realtime, taiex, news, postMarket, indNews] = await Promise.all([
@@ -110,6 +116,7 @@ export default function App() {
         }
       }
       if (realtime && realtime.length > 0) {
+        setAllLiveQuotes(realtime);
         setQuotes(realtime.filter(q => watchlist.includes(q.symbol)));
         // 條件警報檢查
         const newly = checkQuotesAgainstAlerts(realtime);
@@ -189,14 +196,9 @@ export default function App() {
   useEffect(() => {
     if (!autoRefresh) return;
     
-    // Core heatmap & weight stocks to keep synchronized in real-time
-    const HOT_HEATMAP_CODES = [
-      '2330', '2454', '2308', '3231', '2303', '2317', '0050', '3481', 
-      '2382', '1519', '3017', '2409', '3008', '2603', '2881', '2882'
-    ];
     const pollCodes = Array.from(new Set([...watchlist, ...HOT_HEATMAP_CODES]));
 
-    const interval = setInterval(async () => {
+    const doPoll = async () => {
       try {
         const [realtime, liveTaiex] = await Promise.all([
           fetchRealtimeQuotes(pollCodes),
@@ -204,6 +206,7 @@ export default function App() {
         ]);
 
         if (realtime && realtime.length > 0) {
+          setAllLiveQuotes(realtime);
           // Update watchlist quotes
           setQuotes(realtime.filter(q => watchlist.includes(q.symbol)));
 
@@ -242,7 +245,11 @@ export default function App() {
       } catch (e) {
         console.warn('Realtime polling error:', e);
       }
-    }, refreshInterval);
+    };
+
+    // 盤中撮合時段 (09:00~13:30) 使用 4 秒高頻極速刷新
+    const intervalTime = isMarketTradingHours() ? 4000 : refreshInterval;
+    const interval = setInterval(doPoll, intervalTime);
 
     return () => clearInterval(interval);
   }, [autoRefresh, refreshInterval, watchlist]);
@@ -330,6 +337,7 @@ export default function App() {
             <div className="space-y-6 animate-fade-in">
               <MarketHeatmap 
                 dailyStocks={dailyStocks}
+                realtimeQuotes={allLiveQuotes}
                 onSelectStock={(st) => setSelectedStockModal(st)}
               />
             </div>

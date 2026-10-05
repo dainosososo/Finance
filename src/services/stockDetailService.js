@@ -446,29 +446,36 @@ export function getStockDetailData(symbolOrStock) {
 }
 
 /**
- * 解析 TWSE 日期格式（支援民國年月日如 1151001、西元年月日如 2026-10-01、10/02 等）
+ * 解析 TWSE 日期格式（支援民國年月日如 1151001、西元年月日如 2026-10-01、10/05 等）
  */
 export function parseTwseDate(twseDateStr) {
-  if (!twseDateStr) return { dateStr: '2026-10-01', timeLabel: '10/01', isToday: false };
+  const now = new Date();
+  const curY = now.getFullYear();
+  const curM = String(now.getMonth() + 1).padStart(2, '0');
+  const curD = String(now.getDate()).padStart(2, '0');
+  const todayStr = `${curY}-${curM}-${curD}`;
+  const todayROC = `${curY - 1911}${curM}${curD}`;
+
+  if (!twseDateStr) return { dateStr: todayStr, timeLabel: `${curM}/${curD} (今)`, isToday: true };
   const s = String(twseDateStr).trim();
-  if (s === '1151002' || s === '2026-10-02' || s === '10/02') {
-    return { dateStr: '2026-10-02', timeLabel: '10/02 (今)', isToday: true };
+  if (s === todayROC || s === todayStr || s === `${curM}/${curD}`) {
+    return { dateStr: todayStr, timeLabel: `${curM}/${curD} (今)`, isToday: true };
   }
   if (s.length === 7) {
     const y = parseInt(s.slice(0, 3), 10) + 1911;
     const m = s.slice(3, 5);
     const d = s.slice(5, 7);
-    const isToday = (m === '10' && d === '02');
+    const isToday = (m === curM && d === curD);
     return { dateStr: `${y}-${m}-${d}`, timeLabel: isToday ? `${m}/${d} (今)` : `${m}/${d}`, isToday };
   }
   if (s.includes('-')) {
     const parts = s.split('-');
     const m = parts[1].padStart(2, '0');
     const d = parts[2].padStart(2, '0');
-    const isToday = (m === '10' && d === '02');
+    const isToday = (m === curM && d === curD);
     return { dateStr: s, timeLabel: isToday ? `${m}/${d} (今)` : `${m}/${d}`, isToday };
   }
-  return { dateStr: '2026-10-01', timeLabel: '10/01', isToday: false };
+  return { dateStr: todayStr, timeLabel: `${curM}/${curD}`, isToday: false };
 }
 
 /**
@@ -682,14 +689,21 @@ function enrichWithCalculatedMetrics(stock) {
       return item;
     });
 
+    const curDateObj = new Date();
+    const curDay = curDateObj.getDay();
+    const curM = String(curDateObj.getMonth() + 1).padStart(2, '0');
+    const curD = String(curDateObj.getDate()).padStart(2, '0');
+    const todayFullDate = `${curDateObj.getFullYear()}-${curM}-${curD}`;
+    const todayTimeLabel = `${curM}/${curD} (今)`;
+
     const lastHistBar = realBars[realBars.length - 1];
-    const hasTodayInHistory = lastHistBar && (lastHistBar.fullDate === '2026-10-02' || lastHistBar.time.includes('10/02'));
+    const hasTodayInHistory = lastHistBar && (lastHistBar.fullDate === todayFullDate);
+    // 若今日為平日（週一至週五）且歷史資料尚未收錄今日，將今日盤中即時最新 K 棒無縫接合
+    const isTradingDayToday = (curDay >= 1 && curDay <= 5);
 
     if (hasTodayInHistory) {
-      // 官方歷史中已收錄 10/02 真實 K 線，直接接合，杜絕重複 10/02 (今)
       chart1M = [...prependedBars, ...realBars];
-    } else if (isToday) {
-      // 歷史僅收錄至 10/01，且今日有即時盤面數據，追加 10/02 (今)
+    } else if (isTradingDayToday || isToday) {
       const prevCloseVal = lastHistBar ? lastHistBar.close : (stock.prevClose || base);
       const todayOpen = Number((stock.open || (stock.price >= prevCloseVal ? prevCloseVal * 1.008 : prevCloseVal * 0.992)).toFixed(2));
       const todayClose = Number(stock.price.toFixed(2));
@@ -699,8 +713,8 @@ function enrichWithCalculatedMetrics(stock) {
       const todayIsUp = todayClose >= todayOpen;
 
       const todayBar = {
-        time: "10/02 (今)",
-        fullDate: "2026-10-02",
+        time: todayTimeLabel,
+        fullDate: todayFullDate,
         open: todayOpen,
         high: todayHigh,
         low: todayLow,
