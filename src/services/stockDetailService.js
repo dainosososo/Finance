@@ -345,9 +345,14 @@ export function getStockDetailData(symbolOrStock) {
   if (!volume || volume <= 0) volume = 1000;
 
   // 嚴格採用真實成交金額（新台幣元），正確換算億/萬
-  let tradeVal = parseFloat(symbolOrStock?.TradeValue || symbolOrStock?.tradeValue || twseData?.tradeValue || 0);
-  if (!tradeVal && passedPrice > 0 && volume > 0) {
+  let tradeVal = 0;
+  if (symbolOrStock?.isRealtime && passedPrice > 0 && volume > 0) {
     tradeVal = passedPrice * volume * 1000;
+  } else {
+    tradeVal = parseFloat(symbolOrStock?.TradeValue || symbolOrStock?.tradeValue || twseData?.tradeValue || 0);
+    if (!tradeVal && passedPrice > 0 && volume > 0) {
+      tradeVal = passedPrice * volume * 1000;
+    }
   }
   const turnover = tradeVal >= 100000000
     ? `${(tradeVal / 100000000).toFixed(1)} 億`
