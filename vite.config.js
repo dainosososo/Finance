@@ -28,6 +28,11 @@ export default defineConfig({
         target: 'https://mis.twse.com.tw',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/twse-mis/, '')
+      },
+      '/api/tpex': {
+        target: 'https://www.tpex.org.tw/openapi',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/tpex/, '')
       }
     }
   }

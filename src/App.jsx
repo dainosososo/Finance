@@ -84,7 +84,7 @@ export default function App() {
       const pollCodes = Array.from(new Set([...watchlist, ...HOT_HEATMAP_CODES]));
 
       const [daily, realtime, taiex, news, postMarket, indNews] = await Promise.all([
-        fetchDailyClosingPrices(),
+        fetchDailyClosingPrices(forceLive),
         fetchRealtimeQuotes(pollCodes),
         fetchTaiexIndex(),
         fetchFscAnnouncements(),

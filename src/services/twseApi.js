@@ -36,9 +36,189 @@ const MOCK_DAILY_STOCKS = [
 ];
 
 /**
- * Fetch TWSE Daily Closing Prices for all listed stocks (每日收盤價)
+ * Normalize a TWSE stock record to standard format
  */
-export async function fetchDailyClosingPrices() {
+function normalizeTwseRecord(stock) {
+  const close = parseFloat(stock.ClosingPrice) || 0;
+  const change = parseFloat(String(stock.Change || '0').replace(/[+,]/g, '')) || 0;
+  const prevClose = close - change;
+  const pctChange = prevClose > 0 ? (change / prevClose) * 100 : 0;
+  const tradeValue = parseFloat(String(stock.TradeValue || '0').replace(/,/g, '')) || 0;
+  const turnoverYi = tradeValue / 100000000;
+  return {
+    ...stock,
+    ClosingPrice: close > 0 ? close.toFixed(2) : (stock.ClosingPrice || 'N/A'),
+    Change: change.toFixed(2),
+    PctChange: pctChange.toFixed(2),
+    TradeVolume: String(stock.TradeVolume || '0').replace(/,/g, ''),
+    TradeValue: String(stock.TradeValue || '0').replace(/,/g, ''),
+    TurnoverYi: turnoverYi.toFixed(1),
+    Sector: stock.Sector || getSectorByCode(stock.Code)
+  };
+}
+
+/**
+ * Normalize a TPEX stock record to standard format
+ */
+function normalizeTpexRecord(s) {
+  const code = s.SecuritiesCompanyCode || '';
+  const close = parseFloat(String(s.Close || '0').replace(/,/g, '')) || 0;
+  const change = parseFloat(String(s.Change || '0').replace(/[+,]/g, '').trim()) || 0;
+  const prevClose = close - change;
+  const pctChange = prevClose > 0 ? (change / prevClose * 100) : 0;
+  const tradeAmt = parseFloat(String(s.TransactionAmount || '0').replace(/,/g, '')) || 0;
+  return {
+    Code: code,
+    Name: s.CompanyName || '',
+    OpeningPrice: String(s.Open || close).replace(/,/g, ''),
+    HighestPrice: String(s.High || close).replace(/,/g, ''),
+    LowestPrice: String(s.Low || close).replace(/,/g, ''),
+    ClosingPrice: close.toFixed(2),
+    Change: change.toFixed(2),
+    PctChange: pctChange.toFixed(2),
+    TradeVolume: String(s.TradingShares || '0').replace(/,/g, ''),
+    TradeValue: String(Math.round(tradeAmt)),
+    TurnoverYi: (tradeAmt / 1e8).toFixed(1),
+    Sector: getSectorByCode(code) + ' (OTC)',
+    Date: s.Date || ''
+  };
+}
+
+/**
+ * 內部方法: 直接從 TWSE Open API + TPEX Open API 拉取最新盤後收盤資料
+ */
+async function _fetchLiveFromTwseAndTpex() {
+  const allStocks = [];
+  const seenCodes = new Set();
+
+  // 1. TWSE 上市
+  const twseDirectUrls = [
+    '/api/twse-open/v1/exchangeReport/STOCK_DAY_ALL',
+    'https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL'
+  ];
+  let twseSuccess = false;
+  for (const url of twseDirectUrls) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+          for (const s of data) {
+            if (s.Code && s.ClosingPrice && parseFloat(s.ClosingPrice) > 0 && !seenCodes.has(s.Code)) {
+              allStocks.push(normalizeTwseRecord(s));
+              seenCodes.add(s.Code);
+            }
+          }
+          console.log(`[TWSE OpenAPI] 取得 ${allStocks.length} 筆上市資料`);
+          twseSuccess = true;
+          break;
+        }
+      }
+    } catch (err) {
+      console.warn(`[TWSE OpenAPI] ${url.slice(0, 55)} 失敗:`, err.message);
+    }
+  }
+
+  // 若直連失敗（如在 GitHub Pages 遭 CORS 阻擋），透過 fetchWithCorsProxy 代理重試
+  if (!twseSuccess) {
+    try {
+      const proxiedData = await fetchWithCorsProxy('https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL', 12000);
+      if (Array.isArray(proxiedData) && proxiedData.length > 0) {
+        for (const s of proxiedData) {
+          if (s.Code && s.ClosingPrice && parseFloat(s.ClosingPrice) > 0 && !seenCodes.has(s.Code)) {
+            allStocks.push(normalizeTwseRecord(s));
+            seenCodes.add(s.Code);
+          }
+        }
+        console.log(`[TWSE OpenAPI Proxy] 代理成功取得 ${allStocks.length} 筆上市資料`);
+      }
+    } catch (err) {
+      console.warn('[TWSE OpenAPI Proxy] 代理獲取失敗:', err.message);
+    }
+  }
+
+  // 2. TPEx 上櫃
+  const tpexDirectUrls = [
+    '/api/tpex/v1/tpex_mainboard_daily_close_quotes',
+    'https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes'
+  ];
+  let tpexSuccess = false;
+  for (const url of tpexDirectUrls) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+          let added = 0;
+          for (const s of data) {
+            const code = s.SecuritiesCompanyCode;
+            const close = parseFloat(String(s.Close || '0').replace(/,/g, ''));
+            if (code && close > 0 && !seenCodes.has(code)) {
+              try {
+                allStocks.push(normalizeTpexRecord(s));
+                seenCodes.add(code);
+                added++;
+              } catch { /* skip invalid */ }
+            }
+          }
+          console.log(`[TPEx OpenAPI] 取得 +${added} 筆上櫃資料，合計 ${allStocks.length} 筆`);
+          tpexSuccess = true;
+          break;
+        }
+      }
+    } catch (err) {
+      console.warn(`[TPEx OpenAPI] ${url.slice(0, 55)} 失敗:`, err.message);
+    }
+  }
+
+  // TPEx 若直連失敗，透過代理重試
+  if (!tpexSuccess) {
+    try {
+      const proxiedTpex = await fetchWithCorsProxy('https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes', 12000);
+      if (Array.isArray(proxiedTpex) && proxiedTpex.length > 0) {
+        let added = 0;
+        for (const s of proxiedTpex) {
+          const code = s.SecuritiesCompanyCode;
+          const close = parseFloat(String(s.Close || '0').replace(/,/g, ''));
+          if (code && close > 0 && !seenCodes.has(code)) {
+            try {
+              allStocks.push(normalizeTpexRecord(s));
+              seenCodes.add(code);
+              added++;
+            } catch { /* skip invalid */ }
+          }
+        }
+        console.log(`[TPEx OpenAPI Proxy] 代理成功取得 +${added} 筆上櫃資料，合計 ${allStocks.length} 筆`);
+      }
+    } catch (err) {
+      console.warn('[TPEx OpenAPI Proxy] 代理獲取失敗:', err.message);
+    }
+  }
+
+  return allStocks;
+}
+
+/**
+ * Fetch TWSE Daily Closing Prices for all listed stocks (每日收盤價)
+ * @param {boolean} forceLive  true = 強制跳過本地快取 JSON，直接向 TWSE+TPEX Open API 拉最新資料
+ */
+export async function fetchDailyClosingPrices(forceLive = false) {
+  // 強制刷新: 跳過本地靜態 JSON，直接向 TWSE+TPEX Open API 拉最新盤後收盤資料
+  if (forceLive) {
+    console.log('[fetchDailyClosingPrices] 強制刷新: 直接請求 TWSE + TPEX Open API');
+    try {
+      const liveResult = await _fetchLiveFromTwseAndTpex();
+      if (liveResult && liveResult.length > 0) {
+        console.log(`[fetchDailyClosingPrices] 強制刷新成功: ${liveResult.length} 筆`);
+        return liveResult;
+      }
+    } catch (err) {
+      console.warn('[fetchDailyClosingPrices] 強制刷新失敗，退回本地快取:', err.message);
+    }
+    console.warn('[fetchDailyClosingPrices] 強制刷新無結果，退回本地快取');
+  }
+
+  // 一般載入: 優先讀本地快取 JSON
   const endpoints = [
     './data/daily_closing_stocks.json',
     '/Finance/data/daily_closing_stocks.json',
