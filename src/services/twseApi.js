@@ -3,6 +3,8 @@
  * Handles data fetching, parsing, and caching for TWSE daily closing prices & MIS real-time quotes.
  */
 
+import { DAILY_TWSE_STOCKS_MAP } from '../data/dailyTwseStocksMap.js';
+
 // Popular Taiwan stock defaults for initial watchlist & index overview
 export const DEFAULT_WATCHLIST = [
   { symbol: '2330', name: '台積電', sector: '半導體' },
@@ -78,15 +80,22 @@ export async function fetchDailyClosingPrices() {
     }
   }
 
-  // Fallback to rich dataset if remote API blocked or offline
-  return MOCK_DAILY_STOCKS.map(stock => {
-    const close = parseFloat(stock.ClosingPrice);
-    const change = parseFloat(stock.Change);
-    const prevClose = close - change;
-    const pctChange = (change / prevClose) * 100;
+  // Fallback to complete 2,267 Taiwan stock dataset from DAILY_TWSE_STOCKS_MAP
+  return Object.values(DAILY_TWSE_STOCKS_MAP).map(stock => {
     return {
-      ...stock,
-      PctChange: pctChange.toFixed(2)
+      Code: stock.code,
+      Name: stock.name,
+      OpeningPrice: typeof stock.open === 'number' ? stock.open.toFixed(2) : String(stock.open),
+      HighestPrice: typeof stock.high === 'number' ? stock.high.toFixed(2) : String(stock.high),
+      LowestPrice: typeof stock.low === 'number' ? stock.low.toFixed(2) : String(stock.low),
+      ClosingPrice: typeof stock.price === 'number' ? stock.price.toFixed(2) : String(stock.price),
+      Change: typeof stock.change === 'number' ? stock.change.toFixed(2) : String(stock.change),
+      PctChange: typeof stock.pctChange === 'number' ? stock.pctChange.toFixed(2) : String(stock.pctChange),
+      TradeVolume: String(Math.round(stock.volume * 1000)),
+      TradeValue: String(Math.round(stock.tradeValue)),
+      TurnoverYi: String(stock.turnover),
+      Sector: stock.market || '上市櫃',
+      Date: '1151005'
     };
   });
 }
@@ -247,84 +256,49 @@ export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', 
     return results;
   }
 
-  // Graceful fallback: Read actual prices and trade values from daily_closing_stocks
-  try {
-    const dailyRes = await fetch('./data/daily_closing_stocks.json');
-    if (dailyRes.ok) {
-      const dailyData = await dailyRes.json();
-      return stockCodes.map(code => {
-        const found = dailyData.find(s => s.Code === code);
-        if (found) {
-          const cp = parseFloat(found.ClosingPrice) || 0;
-          const chg = parseFloat(found.Change) || 0;
-          const prev = cp - chg;
-          const pct = prev > 0 ? (chg / prev) * 100 : 0;
-          const tv = parseFloat(found.TradeValue) || 0;
-          const turnoverYi = tv > 0 ? Number((tv / 100000000).toFixed(1)) : 0;
-          return {
-            symbol: found.Code,
-            name: found.Name,
-            fullName: `${found.Name}股份有限公司`,
-            price: cp.toFixed(2),
-            prevClose: prev.toFixed(2),
-            open: found.OpeningPrice || cp.toFixed(2),
-            high: found.HighestPrice || cp.toFixed(2),
-            low: found.LowestPrice || cp.toFixed(2),
-            volume: found.TradeVolume || '0',
-            turnover: turnoverYi,
-            tradeValue: tv,
-            change: chg.toFixed(2),
-            pctChange: pct.toFixed(2),
-            time: '收盤',
-            bids: [],
-            asks: [],
-            isRealtime: false
-          };
-        }
-        return {
-          symbol: code,
-          name: `股票${code}`,
-          fullName: `股票${code}`,
-          price: '-',
-          prevClose: '-',
-          open: '-',
-          high: '-',
-          low: '-',
-          volume: '0',
-          change: '0.00',
-          pctChange: '0.00',
-          time: '-',
-          bids: [],
-          asks: [],
-          isRealtime: false
-        };
-      });
-    }
-  } catch (err) {
-    console.warn('Daily closing file fallback error:', err.message);
-  }
-
-  // Final fallback to MOCK_DAILY_STOCKS exact values (no random noise)
+  // Graceful fallback: Read actual verified prices from DAILY_TWSE_STOCKS_MAP
   return stockCodes.map(code => {
-    const stock = MOCK_DAILY_STOCKS.find(s => s.Code === code) || { Code: code, Name: `股票${code}`, ClosingPrice: '100.00', Change: '0.00', TradeVolume: '0' };
-    const close = parseFloat(stock.ClosingPrice) || 0;
-    const change = parseFloat(stock.Change) || 0;
-    const prevClose = close - change;
-    const pctChange = prevClose > 0 ? (change / prevClose) * 100 : 0;
-
+    const found = DAILY_TWSE_STOCKS_MAP[code];
+    if (found) {
+      const cp = typeof found.price === 'number' ? found.price : parseFloat(found.price || 0);
+      const chg = typeof found.change === 'number' ? found.change : parseFloat(found.change || 0);
+      const prev = typeof found.prevClose === 'number' ? found.prevClose : (cp - chg);
+      const pct = typeof found.pctChange === 'number' ? found.pctChange : (prev > 0 ? (chg / prev) * 100 : 0);
+      const tv = typeof found.tradeValue === 'number' ? found.tradeValue : parseFloat(found.tradeValue || 0);
+      const turnoverYi = found.turnover || (tv > 0 ? Number((tv / 100000000).toFixed(1)) : 0);
+      return {
+        symbol: found.code,
+        name: found.name,
+        fullName: `${found.name}股份有限公司`,
+        price: cp.toFixed(2),
+        prevClose: prev.toFixed(2),
+        open: typeof found.open === 'number' ? found.open.toFixed(2) : cp.toFixed(2),
+        high: typeof found.high === 'number' ? found.high.toFixed(2) : cp.toFixed(2),
+        low: typeof found.low === 'number' ? found.low.toFixed(2) : cp.toFixed(2),
+        volume: String(Math.round(found.volume)),
+        turnover: turnoverYi,
+        tradeValue: tv,
+        change: chg.toFixed(2),
+        pctChange: pct.toFixed(2),
+        time: '收盤',
+        bids: [],
+        asks: [],
+        isRealtime: false
+      };
+    }
     return {
-      symbol: stock.Code,
-      name: stock.Name,
-      fullName: `${stock.Name}股份有限公司`,
-      price: close.toFixed(2),
-      prevClose: prevClose.toFixed(2),
-      open: stock.OpeningPrice || close.toFixed(2),
-      high: stock.HighestPrice || close.toFixed(2),
-      low: stock.LowestPrice || close.toFixed(2),
-      volume: stock.TradeVolume || '0',
-      change: change.toFixed(2),
-      pctChange: pctChange.toFixed(2),
-      time: '離線收盤',
+      symbol: code,
+      name: `個股 ${code}`,
+      fullName: `個股 ${code} 股份有限公司`,
+      price: '-',
+      prevClose: '-',
+      open: '-',
+      high: '-',
+      low: '-',
+      volume: '0',
+      change: '0.00',
+      pctChange: '0.00',
+      time: '-',
       bids: [],
       asks: [],
       isRealtime: false
