@@ -151,12 +151,12 @@ export default function WebSocketStreamModal({ isOpen, onClose }) {
             </div>
           </div>
 
-          {/* Gateway 配置表單 */}
+          {/* Gateway & Edge Worker 配置表單 */}
           <form onSubmit={handleSaveUrl} className="bg-white p-4 rounded-2xl border border-pink-200 space-y-3">
             <div className="flex items-center justify-between">
               <h3 className="text-xs font-extrabold text-slate-900 flex items-center gap-1.5">
                 <Server className="w-4 h-4 text-emerald-600" />
-                WebSocket Gateway 伺服器端點 (WSS/WS)
+                免伺服器邊緣 API 與 WebSocket Gateway 設定
               </h3>
               <button
                 type="button"
@@ -164,32 +164,59 @@ export default function WebSocketStreamModal({ isOpen, onClose }) {
                 className="text-[11px] text-teal-700 hover:text-teal-900 font-bold flex items-center gap-1"
               >
                 <HelpCircle className="w-3.5 h-3.5" />
-                {showGuide ? '收起啟動教學' : '如何啟動本機轉發伺服器？'}
+                {showGuide ? '收起配置指南' : '如何自建 Cloudflare Worker？'}
               </button>
             </div>
 
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={customUrl}
-                onChange={(e) => setCustomUrl(e.target.value)}
-                placeholder="ws://localhost:8080/ws 或 wss://your-proxy.com"
-                className="flex-1 text-xs font-mono p-2.5 rounded-xl border border-pink-200 focus:outline-none focus:border-emerald-500 bg-[#fffbfc]"
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition shadow-xs"
-              >
-                儲存端點
-              </button>
-              <button
-                type="button"
-                onClick={handleReconnect}
-                className="p-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 rounded-xl transition"
-                title="強制重新連線"
-              >
-                <RotateCcw className="w-4 h-4" />
-              </button>
+            {/* Cloudflare Edge Worker API Gateway */}
+            <div className="space-y-1">
+              <label className="text-[11px] font-bold text-slate-600 flex items-center justify-between">
+                <span>⚡ Cloudflare Edge Worker 網址 (主通道免 CORS 邊緣快取):</span>
+                <span className="text-[10px] text-emerald-600 font-mono font-normal">三級高可用架構 (Edge ➔ Yahoo ➔ 官方收盤)</span>
+              </label>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  defaultValue={typeof window !== 'undefined' ? (localStorage.getItem('twse_custom_edge_gateway') || '') : ''}
+                  onChange={(e) => {
+                    if (typeof window !== 'undefined') {
+                      localStorage.setItem('twse_custom_edge_gateway', e.target.value.trim());
+                    }
+                  }}
+                  placeholder="例: https://twse-proxy.yourname.workers.dev (留空則自動走備援)"
+                  className="flex-1 text-xs font-mono p-2.5 rounded-xl border border-pink-200 focus:outline-none focus:border-emerald-500 bg-[#fffbfc]"
+                />
+              </div>
+            </div>
+
+            {/* WebSocket 本地端點 */}
+            <div className="space-y-1 pt-1">
+              <label className="text-[11px] font-bold text-slate-600 block">
+                🔌 原生 WebSocket 伺服器端點 (逐筆推播專用):
+              </label>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={customUrl}
+                  onChange={(e) => setCustomUrl(e.target.value)}
+                  placeholder="ws://localhost:8080/ws 或 wss://your-proxy.com"
+                  className="flex-1 text-xs font-mono p-2.5 rounded-xl border border-pink-200 focus:outline-none focus:border-emerald-500 bg-[#fffbfc]"
+                />
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition shadow-xs"
+                >
+                  儲存配置
+                </button>
+                <button
+                  type="button"
+                  onClick={handleReconnect}
+                  className="p-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 rounded-xl transition"
+                  title="強制重新連線"
+                >
+                  <RotateCcw className="w-4 h-4" />
+                </button>
+              </div>
             </div>
 
             {/* 展開教學說明 */}

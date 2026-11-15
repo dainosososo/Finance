@@ -4,6 +4,7 @@
  */
 
 import { DAILY_TWSE_STOCKS_MAP } from '../data/dailyTwseStocksMap.js';
+import { fetchBatchYahooQuotes } from './yahooFinanceApi.js';
 
 // Popular Taiwan stock defaults for initial watchlist & index overview
 export const DEFAULT_WATCHLIST = [
@@ -287,11 +288,17 @@ export async function fetchDailyClosingPrices(forceLive = false) {
  */
 export async function fetchWithCorsProxy(targetUrl, timeoutMs = 6000) {
   const encoded = encodeURIComponent(targetUrl);
+  
+  // 自訂或環境中設定的 Edge Worker Gateway (如 Cloudflare Worker)
+  const customEdgeUrl = typeof window !== 'undefined' ? localStorage.getItem('twse_custom_edge_gateway') : null;
+
   const proxies = [
-    // Proxy 1: cors.eu.org (verified active and highly responsive for TWSE MIS)
+    // Proxy 0: 使用者自建或預設的 Edge Serverless Gateway (若有設定)
+    ...(customEdgeUrl ? [`${customEdgeUrl.replace(/\/+$/, '')}/mis?ex_ch=${targetUrl.split('ex_ch=')[1] || ''}`] : []),
+    // Proxy 1: Local dev Vite proxy if present on localhost
+    targetUrl.replace('https://mis.twse.com.tw', '/api/twse-mis').replace('https://openapi.twse.com.tw', '/api/twse-open').replace('https://www.tpex.org.tw/openapi', '/api/tpex'),
+    // Proxy 2: cors.eu.org
     `https://cors.eu.org/${targetUrl}`,
-    // Proxy 2: Local dev Vite proxy if present on localhost
-    targetUrl.replace('https://mis.twse.com.tw', '/api/twse-mis').replace('https://openapi.twse.com.tw', '/api/twse-open'),
     // Proxy 3: allorigins JSON wrapper
     `https://api.allorigins.win/get?url=${encoded}`,
     // Proxy 4: Direct attempt
@@ -313,12 +320,10 @@ export async function fetchWithCorsProxy(targetUrl, timeoutMs = 6000) {
           }
           return parsed;
         } catch {
-          // Some proxies might return text wrapping
           continue;
         }
       }
     } catch {
-      // Try next proxy in the pool
       continue;
     }
   }
@@ -337,13 +342,15 @@ export function isMarketTradingHours() {
 }
 
 /**
- * Fetch TWSE Real-time stock quotes via CORS Proxy (即時報價)
- * @param {Array<string>} stockCodes Array of stock codes e.g. ['2330', '2317', '2454']
+ * Fetch TWSE Real-time stock quotes
+ * 採用三級管道架構:
+ * 1. Edge Serverless / TWSE MIS 即時逐筆撮合通道
+ * 2. 備援通道: Yahoo Finance 即時行情 API (全自動無痛切換)
+ * 3. 官方真實驗證收盤行情保底 (DAILY_TWSE_STOCKS_MAP)
  */
 export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', '0050']) {
   if (!stockCodes || stockCodes.length === 0) return [];
 
-  // Group into batches of up to 25 to avoid URL length limit on TWSE MIS
   const batchSize = 25;
   const batches = [];
   for (let i = 0; i < stockCodes.length; i += batchSize) {
@@ -352,8 +359,8 @@ export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', 
 
   const results = [];
 
+  // 通道 1: TWSE MIS / Edge Proxy 通道
   for (const batch of batches) {
-    // Support both TSE (上市) and OTC (上櫃) format
     const channelQuery = batch.map(code => {
       if (code.startsWith('tse_') || code.startsWith('otc_')) return `${code}.tw`;
       return `tse_${code}.tw|otc_${code}.tw`;
@@ -365,10 +372,8 @@ export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', 
       const data = await fetchWithCorsProxy(misUrl, 6000);
       if (data && data.msgArray && data.msgArray.length > 0) {
         data.msgArray.forEach(st => {
-          if (!st || !st.c) return; // Skip invalid/empty channels
+          if (!st || !st.c) return;
 
-          // Determine current trade/close price:
-          // Priority: 1. st.z (成交價) 2. st.trade.z 3. st.pz 4. st.b (買一) 5. st.a (賣一) 6. st.y (昨收)
           let livePrice = null;
           if (st.z && st.z !== '-') livePrice = parseFloat(st.z);
           else if (st.trade && st.trade.z && st.trade.z !== '-') livePrice = parseFloat(st.trade.z);
@@ -387,7 +392,6 @@ export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', 
           const change = prevClose > 0 ? (close - prevClose) : 0;
           const pctChange = prevClose > 0 ? (change / prevClose) * 100 : 0;
 
-          // MIS st.v is already in 張
           const rawVolLots = parseFloat(st.v) || 0;
           const estTradeValue = close * rawVolLots * 1000;
           const turnoverYi = estTradeValue > 0 ? Number((estTradeValue / 100000000).toFixed(1)) : 0;
@@ -396,7 +400,6 @@ export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', 
           const highPrice = (st.h && st.h !== '-') ? parseFloat(st.h) : Math.max(openPrice, close);
           const lowPrice = (st.l && st.l !== '-') ? parseFloat(st.l) : Math.min(openPrice, close);
 
-          // 解析即時五檔委買委賣價量
           const bids = st.b ? st.b.split('_').filter(Boolean).map((p, i) => ({ 
             price: p, 
             vol: st.g ? st.g.split('_')[i] : '0' 
@@ -436,7 +439,19 @@ export async function fetchRealtimeQuotes(stockCodes = ['2330', '2317', '2454', 
     return results;
   }
 
-  // Graceful fallback: Read actual verified prices from DAILY_TWSE_STOCKS_MAP
+  // 通道 2: Yahoo Finance 第三方穩定即時備援通道
+  try {
+    console.log('[Realtime] TWSE MIS 連線逾時，自動無縫切換至 Yahoo Finance 即時行情備援通道...');
+    const yahooQuotes = await fetchBatchYahooQuotes(stockCodes);
+    if (yahooQuotes && yahooQuotes.length > 0) {
+      console.log(`[Yahoo Finance] 成功取得 ${yahooQuotes.length} 檔即時報價`);
+      return yahooQuotes;
+    }
+  } catch (err) {
+    console.warn('[Yahoo Finance] 備援拉取失敗:', err.message);
+  }
+
+  // 通道 3: 官方真實收盤字典庫保底 (日期 1151113，保證 2330=2350.00，不再有過期假資料)
   return stockCodes.map(code => {
     const found = DAILY_TWSE_STOCKS_MAP[code];
     if (found) {
